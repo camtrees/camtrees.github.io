@@ -2,7 +2,12 @@ title: CAMTREES Database
 description: Everything volunteers and database admins need to know about the CAMTREES Database.
 theme: just-the-docs
 
+# Our GitHub Pages repository
 url: https://camtrees.github.io
 
+# We don't need links to the just-the-docs-template
 # aux_links:
 #   Template Repository: https://github.com/just-the-docs/just-the-docs-template
+
+# Open external links in new tabs
+nav_external_links_new_tab: true
