@@ -37,3 +37,13 @@ We will also keep a master "ToDo Task List" of short term and long term needs an
 Our next step will be to create a skeleton website with lots of empty pages just waiting to be filled with relevant data.
 
 Up first is to investigate the use of Jekyll (and its many available templates) to help transform the website into a more professional design.
+
+----------
+<p>Last Updated: <span id="last-updated"></span></p>
+
+<script>
+  // Get the last modified date from the document
+  const lastMod = document.lastModified;
+  // Display it in the placeholder
+  document.getElementById('last-updated').innerHTML = lastMod;
+</script>
