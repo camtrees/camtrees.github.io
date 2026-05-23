@@ -1,0 +1,1 @@
+---title: Info for Adminslayout: defualt---FILE = {{ page.title }}Just a placeholder for content yet to be written

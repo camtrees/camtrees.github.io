@@ -1,7 +1,7 @@
 ---
-title: SQL for Users
+title: Epicollect for Admins
+parent: Info for Admins
 layout: default
-nav_order: 8
 ---
 
 FILE = {{ page.title }}

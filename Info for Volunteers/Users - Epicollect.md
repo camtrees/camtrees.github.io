@@ -1,7 +1,7 @@
 ---
 title: Epicollect for Users
+parent: Info for Volunteers
 layout: default
-nav_order: 7
 ---
 
 FILE = {{ page.title }}

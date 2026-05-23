@@ -1,7 +1,7 @@
 ---
 title: SQL for Admins
+parent: Info for Admins
 layout: default
-nav_order: 6
 ---
 
 FILE = {{ page.title }}
