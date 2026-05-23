@@ -6,7 +6,7 @@ nav_order: 2
 
 FILE = {{ page.title }}
 
-Things we will want to document in the CAMTREES Database website:
+### Things we will want to document in the CAMTREES Database website:
 
 * How volunteers use the [EpiCollect Phone App](https://five.epicollect.net) to collecct Chestnut Tree data while in the field.
 * Why we host the CAMTREES Database at [Neon.com](https://neon.com). And how admins, and volunteers can access the database.
