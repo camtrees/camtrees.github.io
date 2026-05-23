@@ -1,5 +1,5 @@
 ---
-title: GitHub for Admins
+title: GitHub Pages for Admins
 layout: default
 nav_order: 5
 ---
