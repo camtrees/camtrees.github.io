@@ -1,1 +1,10 @@
----title: Just Testinglayout: defaultnav_order: 6---File = Testing 1{: .warning }This is just a file for testing various stuff.
+---
+title: Just Testing
+layout: default
+nav_order: 6
+---
+
+File = Testing 1
+
+{: .warning }
+This is just a file for testing various stuff.
