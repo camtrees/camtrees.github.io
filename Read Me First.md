@@ -1,5 +1,6 @@
 ---
 title: Read Me First!
+layout: default
 nav_order: 2
 ---
 
