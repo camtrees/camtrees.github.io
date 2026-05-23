@@ -1,7 +1,7 @@
----
-title: Not Really Home!
-layout: home
----
+# ---
+# title: Not Really Home!
+# layout: home
+# ---
 
 File = index.md
 
