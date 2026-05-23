@@ -1,7 +1,8 @@
 ---
 title: CAMTREES Database Home
-layout: default
+layout: home
 nav_order: 1
+description: CAMTREES Database is a PostgreSQL database system created for the Chestnuts Across Maine Folks
 ---
 
 <center>

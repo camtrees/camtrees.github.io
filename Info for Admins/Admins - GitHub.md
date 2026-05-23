@@ -1,7 +1,6 @@
 ---
 title: GitHub for Admins
 parent: Info for Admins
-layout: default
 ---
 
 FILE = {{ page.title }}

@@ -1,7 +1,6 @@
 ---
 title: SQL for Users
 parent: Info for Volunteers
-layout: default
 ---
 
 FILE = {{ page.title }}
