@@ -8,5 +8,11 @@ FILE = {{ page.title }}
 
 Just a placeholder for content yet to be written
 
+{: .note }
+This is a note
+
+{: .caution }
+This is a caution
+
 {: .warning }
-Testing a callout text block
+This is a warning
