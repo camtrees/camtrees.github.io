@@ -11,3 +11,12 @@ url: https://camtrees.github.io
 
 # Open external links in new tabs
 nav_external_links_new_tab: true
+
+# Colors defined for various callout enclosures
+callouts:
+  warning:
+    title: Warning
+    color: red
+
+# Provide a Copy button in code blocks
+enable_copy_code_button: true

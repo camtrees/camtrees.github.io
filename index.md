@@ -1,6 +1,7 @@
 ---
 title: CAMTREES Database Home
 layout: default
+nav_order: 1
 ---
 
 <center>
