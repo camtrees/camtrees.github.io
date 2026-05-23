@@ -1,3 +1,8 @@
+---
+title: CAMTREES Database Home
+layout: home
+---
+
 <center>
 <table border="0" cellpadding="10">
   <tr>
