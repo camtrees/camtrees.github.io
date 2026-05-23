@@ -39,11 +39,11 @@ Our next step will be to create a skeleton website with lots of empty pages just
 Up first is to investigate the use of Jekyll (and its many available templates) to help transform the website into a more professional design.
 
 ----------
-<p>Last Updated: <span id="last-updated"></span></p>
+<p>Page last modified: <span id="last-modified"></span></p>
 
 <script>
-  // Get the last modified date from the document
-  const lastMod = document.lastModified;
-  // Display it in the placeholder
-  document.getElementById('last-updated').innerHTML = lastMod;
+  // Get the last modified date from the document metadata
+  const modifiedDate = document.lastModified;
+  // Display it in the specified span
+  document.getElementById('last-modified').innerHTML = modifiedDate;
 </script>
