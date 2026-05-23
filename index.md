@@ -1,6 +1,6 @@
 ---
 title: CAMTREES Database Home
-layout: default
+layout: home
 ---
 
 <center>
