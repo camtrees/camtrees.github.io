@@ -1,7 +1,5 @@
 # just-the-docs-template (hkr mod)
 
-File = README.md
-
 This is a *bare-minimum* template to create a [Jekyll] site that:
 
 - uses the [Just the Docs] theme;
