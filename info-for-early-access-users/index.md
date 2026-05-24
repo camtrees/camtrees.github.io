@@ -19,4 +19,4 @@ We are in the VERY EARLY days of developing this website. Both the design and th
 We are currently creating a skeleton framework to house the various pages required.
 
 {: .note}
-Our goal is to document this the CAMTREES Database for CAM Volunteers, CAM Staff, and CAMTREES Database Admins.
+Our goal is to document the CAMTREES Database for CAM Volunteers, CAM Staff, and CAMTREES Database Admins.
