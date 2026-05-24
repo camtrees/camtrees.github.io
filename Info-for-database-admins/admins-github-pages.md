@@ -3,7 +3,7 @@ title: GitHub Pages for Admins
 parent: Info for Database Admins
 ---
 
-FILE = {{ page.title }}
+# {{ page.title }}
 
 Just a placeholder for content yet to be written
 
