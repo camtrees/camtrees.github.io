@@ -4,19 +4,14 @@ layout: default
 nav_order: 99
 ---
 
+
 # {{ page.title }}
 
-## 2026-05-23 - Define CHANGELOG format
-
-```
-We will use the following headers...
-
+{% comment %}
+We will use the following headers in this CHANGELOG page...
 ## YYYY-MM-DD - Short description (or maybe just words like: Major Changes, Keep Reading)
-
-### Major Changes
-
-### Minor Changes
-
+### Major Updates
+### Minor Updates
 #### Additions
 #### Bugs Fixed
 #### Corrections
@@ -24,4 +19,17 @@ We will use the following headers...
 #### Documentation
 #### Enhancements
 #### Updates
-```
+{% endcomment %}
+
+
+## 2026-05-20
+### Major Update
+#### Additions
+* Create GitHub Pages repository to house the CAMTREES Database Website
+* We will compose web pages using [Jekyll](https://jekyllrb.com) - a static website generator.
+* Furthermore, we will use the [Just the Docs](https://just-the-docs.com) Jekyll template.
+
+
+## 2026-05-20
+### Major Update
+* Create GitHub Pages repository to house the CAMTREES Database Website

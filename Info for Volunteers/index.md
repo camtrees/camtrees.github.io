@@ -1,6 +1,6 @@
 ---
 title: Info for Volunteers
-nav_order: 4
+nav_order: 3
 ---
 
 FILE = {{ page.title }}
