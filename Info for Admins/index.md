@@ -1,1 +1,9 @@
----title: Info for Adminslayout: defaultnav_order: 3---FILE = {{ page.title }}Just a placeholder for content yet to be written
+---
+title: Info for Admins
+layout: default
+nav_order: 4
+---
+
+FILE = {{ page.title }}
+
+Just a placeholder for content yet to be written
