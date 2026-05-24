@@ -1,14 +1,14 @@
 ---
-title: CHANGELOG
+title: ChangeLog
 layout: default
 nav_order: 99
 ---
 
 # {{ page.title }}
-_Version: 24_
+_Version: 25_
 
 {% comment %}
-Headers we may use in this CHANGELOG page...
+Headers we may use in this ChangeLog page...
 ## YYYY-MM-DD
 #### CAMTREES Database Website
 #### EpiCollect Updates

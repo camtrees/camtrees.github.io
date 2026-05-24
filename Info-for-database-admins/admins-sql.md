@@ -1,6 +1,6 @@
 ---
 title: SQL for Admins
-parent: Info for Admins
+parent: Info for Database Admins
 ---
 
 FILE = {{ page.title }}

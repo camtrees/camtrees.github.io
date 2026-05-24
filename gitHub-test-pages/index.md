@@ -1,6 +1,6 @@
 ---
 title: GitHub Test Pages
-nav_order: 5
+nav_order: 6
 ---
 
 FILE = {{ page.title }}

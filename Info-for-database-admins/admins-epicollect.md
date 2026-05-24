@@ -1,6 +1,6 @@
 ---
-title: Epicollect for Users
-parent: Info for Volunteers
+title: Epicollect for Admins
+parent: Info for Database Admins
 ---
 
 FILE = {{ page.title }}

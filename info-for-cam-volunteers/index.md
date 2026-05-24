@@ -1,6 +1,6 @@
 ---
-title: Info for Admins
-nav_order: 4
+title: Info for CAM Volunteers
+nav_order: 3
 ---
 
 FILE = {{ page.title }}
