@@ -5,15 +5,14 @@ nav_order: 99
 ---
 
 # {{ page.title }}
-_Version: 19_
+_Version: 20_
 
 {% comment %}
 Headers we may use in this CHANGELOG page...
 ## YYYY-MM-DD
 #### CAMTREES Database Website
 #### EpiCollect Updates
-#### Python EpiCollect Import Rain Event Code
-#### Python EpiCollect Import Tree Maintenance Code
+#### Python EpiCollect Import Code
 #### Python EpiCollect Image Downloader Code
 #### SQL Access
 #### SQL Functions
