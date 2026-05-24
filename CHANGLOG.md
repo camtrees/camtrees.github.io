@@ -8,25 +8,29 @@ nav_order: 99
 # {{ page.title }}
 
 {% comment %}
-We will use the following headers in this CHANGELOG page...
-## YYYY-MM-DD - Short description (or maybe just words like: Major Changes, Keep Reading)
-### Major Updates
-### Minor Updates
-#### Additions
-#### Bugs Fixed
-#### Corrections
-#### Deletions
-#### Documentation
-#### Enhancements
-#### Updates
+Headers we may use in this CHANGELOG page...
+## YYYY-MM-DD
+#### CAMTREES Database Website
+#### EpiCollect Updates
+#### Python EpiCollect Import Rain Event Code
+#### Python EpiCollect Import Tree Maintenance Code
+#### Python EpiCollect Image Downloader Code
+#### SQL Access
+#### SQL Functions
+#### SQL Hosting
+#### SQL Tables
+#### SQL Views
+#### GitHub Actions
+#### GitHub Images
 {% endcomment %}
 
 
-## 2026-05-20
-* Create GitHub Pages repository to house the CAMTREES Database Website
-* We will compose web pages using [Jekyll](https://jekyllrb.com) - a static website generator.
-* Furthermore, we will use the [Just the Docs](https://just-the-docs.com) Jekyll template.
+## 2026-05-23
+#### CAMTREES Database Website
+* Using [Jekyll](https://jekyllrb.com) to author pages
+* Using [Just the Docs](https://just-the-docs.com) Jekyll template for all pages
 
 
 ## 2026-05-20
+#### CAMTREES Database Website
 * Create GitHub Pages repository to house this CAMTREES Database Website
