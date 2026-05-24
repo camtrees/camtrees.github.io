@@ -17,4 +17,4 @@ nav_order: 2
 We are in the very early stages of designing this website. We are currently creating a skeleton framework to house the various pages required.
 
 {: .note}
-We hope to document the CAMTREES Database system in fine detail. Both from a volunteer's perspective as well as a database admin's perspective.
+We expect to document this database in fine detail. Both from a volunteer's perspective as well as a database admin's perspective.

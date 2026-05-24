@@ -1,6 +1,8 @@
 title: CAMTREES Database
 description: Everything volunteers and database admins need to know about the CAMTREES Database.
-theme: just-the-docs
+
+# theme: just-the-docs
+remote_theme: just-the-docs/just-the-docs
 
 # Set default values for thiings
 defaults:

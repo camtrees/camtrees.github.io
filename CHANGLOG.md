@@ -23,13 +23,10 @@ We will use the following headers in this CHANGELOG page...
 
 
 ## 2026-05-20
-### Major Update
-#### Additions
 * Create GitHub Pages repository to house the CAMTREES Database Website
 * We will compose web pages using [Jekyll](https://jekyllrb.com) - a static website generator.
 * Furthermore, we will use the [Just the Docs](https://just-the-docs.com) Jekyll template.
 
 
 ## 2026-05-20
-### Major Update
-* Create GitHub Pages repository to house the CAMTREES Database Website
+* Create GitHub Pages repository to house this CAMTREES Database Website
