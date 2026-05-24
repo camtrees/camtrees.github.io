@@ -214,7 +214,7 @@ red
 ***bold + italic***
 {: .label }
 
-### Definition lists can be used with HTML syntax.
+### A definition list using HTML
 
 <dl>
 <dt>Name</dt>		<dd>Godzilla</dd>
@@ -223,7 +223,7 @@ red
 <dt>Color</dt>		<dd>Green</dd>
 </dl>
 
-### A definition list in Markup with blank lines for separation
+### A definition list using Markdown
 Name
 : Godzilla
 
@@ -236,16 +236,6 @@ Birthplace
 Color
 : Green
 
-
-### A definition lists in Markup without blank lines
-Name
-: Godzilla
-Born
-: 1952
-Birthplace
-: Japan
-Color
-: Green
 
 #### Multiple description terms and values
 
@@ -253,28 +243,22 @@ Term
 : Brief description of Term
 
 Longer Term
-: Longer description of Term,
-  possibly more than one line
+: Longer description of Term.
+  Possibly more than one line
+  because we have lots and lots of text
+  and even more text.
 
-Term
-: First description of Term,
-  possibly more than one line
+Another Term with 2 descriptions
+: First description of Term.
 
-: Second description of Term,
-  possibly more than one line
+: Second description of Term.
+  Again, possibly more than one line
+  because we have lots and lots of text
+  and even more text.
 
-Term1
-Term2
-: Single description of Term1 and Term2,
-  possibly more than one line
+A Final Term
+: First description of Last Term.
 
-Term1
-Term2
-: First description of Term1 and Term2,
-  possibly more than one line
-
-: Second description of Term1 and Term2,
-  possibly more than one line
 
 ### More code
 
