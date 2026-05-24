@@ -1,6 +1,5 @@
 ---
 title: GitHub Pages for Admins
-layout: default
 parent: Info for Admins
 ---
 

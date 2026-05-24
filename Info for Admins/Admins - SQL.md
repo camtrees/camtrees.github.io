@@ -1,6 +1,5 @@
 ---
 title: SQL for Admins
-layout: default
 parent: Info for Admins
 ---
 

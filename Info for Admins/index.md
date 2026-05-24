@@ -1,7 +1,6 @@
 ---
 title: Info for Admins
-layout: default
-nav_order: 4
+nav_order: 3
 ---
 
 FILE = {{ page.title }}

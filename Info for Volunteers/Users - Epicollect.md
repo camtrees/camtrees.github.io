@@ -1,6 +1,5 @@
 ---
 title: Epicollect for Users
-layout: default
 parent: Info for Volunteers
 ---
 
