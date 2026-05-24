@@ -2,6 +2,9 @@ title: CAMTREES Database
 description: Everything volunteers and database admins need to know about the CAMTREES Database.
 theme: just-the-docs
 
+# Default layout for pages is the theme named 'default'
+layout: default
+
 # Our GitHub Pages repository
 url: https://camtrees.github.io
 
