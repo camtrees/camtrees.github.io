@@ -6,7 +6,7 @@ nav_order: 99
 
 # {{ page.title }}
 
-# 2026-05-23 - Define the format for our CHANGELOG
+### 2026-05-23 - Define CHANGELOG format
 
 ```
 We will use the following headers...
