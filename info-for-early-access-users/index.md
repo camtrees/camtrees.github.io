@@ -1,5 +1,5 @@
 ---
-title: This Website Under Construction!
+title: Under Construction!
 nav_order: 2
 ---
 
