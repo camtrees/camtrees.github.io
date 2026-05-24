@@ -248,17 +248,15 @@ Longer Term
   because we have lots and lots of text
   and even more text.
 
-Another Term with 2 descriptions
+<br>
+
+A Term with 2 descriptions
 : First description of Term.
 
 : Second description of Term.
   Again, possibly more than one line
   because we have lots and lots of text
   and even more text.
-
-A Final Term
-: First description of Last Term.
-
 
 ### More code
 
