@@ -6,22 +6,22 @@ nav_order: 99
 
 # {{ page.title }}
 
-### 2026-05-23 - Define CHANGELOG format
+## 2026-05-23 - Define CHANGELOG format
 
 ```
 We will use the following headers...
 
-# YYYY-MM-DD - Short description (or maybe just words like: Major Changes, Keep Reading)
+## YYYY-MM-DD - Short description (or maybe just words like: Major Changes, Keep Reading)
 
-## Major Changes
+### Major Changes
 
-## Minor Changes
+### Minor Changes
 
-### Additions
-### Bugs Fixed
-### Corrections
-### Deletions
-### Documentation
-### Enhancements
-### Updates
+#### Additions
+#### Bugs Fixed
+#### Corrections
+#### Deletions
+#### Documentation
+#### Enhancements
+#### Updates
 ```
