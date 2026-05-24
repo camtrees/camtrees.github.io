@@ -29,6 +29,7 @@ Headers we may use in this CHANGELOG page...
 #### CAMTREES Database Website
 * Using [Jekyll](https://jekyllrb.com) to author pages
 * Using [Just the Docs](https://just-the-docs.com) Jekyll template for all pages
+* Begin creating a website skeleton
 
 
 ## 2026-05-20
