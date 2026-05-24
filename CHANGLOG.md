@@ -4,8 +4,8 @@ layout: default
 nav_order: 99
 ---
 
-
 # {{ page.title }}
+_Version: 18_
 
 {% comment %}
 Headers we may use in this CHANGELOG page...
@@ -30,6 +30,7 @@ Headers we may use in this CHANGELOG page...
 * Using [Jekyll](https://jekyllrb.com) to author pages
 * Using [Just the Docs](https://just-the-docs.com) Jekyll template for all pages
 * Begin creating a website skeleton
+* Add version number to this page so we can detect if this site has been rebuilt
 
 
 ## 2026-05-20
