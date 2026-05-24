@@ -223,6 +223,30 @@ red
 <dt>Color</dt>		<dd>Green</dd>
 </dl>
 
+### A definition list in Markup with blank lines for separation
+Name
+: Godzilla
+
+Born
+: 1952
+
+Birthplace
+: Japan
+
+Color
+: Green
+
+
+### A definition lists in Markup without blank lines
+Name
+: Godzilla
+Born
+: 1952
+Birthplace
+: Japan
+Color
+: Green
+
 #### Multiple description terms and values
 
 Term
