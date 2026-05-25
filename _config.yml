@@ -4,7 +4,10 @@ description: Everything volunteers and database admins need to know about the CA
 # theme: just-the-docs
 remote_theme: just-the-docs/just-the-docs
 
-# Set default values for thiings
+# Set the favicon location
+favicon_ico: "/assets/images/website/favicon.ico"
+
+# Set default values for things
 defaults:
   - scope:
       path: "" # an empty string here means all files in the project
