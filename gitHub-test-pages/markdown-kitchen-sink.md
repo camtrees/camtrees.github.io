@@ -318,6 +318,7 @@ graph TD;
 The following uses the [`<details>`](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/organizing-information-with-collapsed-sections) tag to create a collapsed section.
 
 <details markdown="block">
+
 <summary>Shopping list (click me!)</summary>
 
 This is content inside a `<details>` dropdown.
@@ -333,8 +334,3 @@ Another list of items
 - [Links](https://example.com)
 
 </details>
-
-
-> [!dropdown]- Click here to see more about me
-> This text is hidden until you click the arrow!
-> You can put text, images, or even code blocks in here.
