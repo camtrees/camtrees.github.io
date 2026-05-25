@@ -16,4 +16,4 @@ The current pages are:
 
 - ToDo Task List
 	- This will be an ongoing document listing the short, medium, and long term ToDo
-	  items we want to accomplish in the next year or so.
+	  items we hope to accomplish in the next year or so.

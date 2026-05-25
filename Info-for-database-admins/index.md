@@ -5,4 +5,5 @@ nav_order: 5
 
 # {{ page.title }}
 
-Just a placeholder for content yet to be written
+Since this website is in its early design phase,
+this Directory is currently devoid of any content.

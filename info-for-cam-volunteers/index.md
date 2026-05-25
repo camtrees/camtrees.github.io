@@ -8,8 +8,8 @@ nav_order: 3
 This directory holds web pages mostly of interest to CAM Volunteers.
 
 - Epicollect5 for Users
-	- Everything a Volunteer need to know to start using the EpiCollect5 phone app
-	  to collect chestnut tree data.
+	- Everything a Volunteer may wish to know when starting to use the EpiCollect5 phone
+	  app to collect chestnut tree data.
 
 - SQL for Users
 	- Details about where the EpiCollect data goes
