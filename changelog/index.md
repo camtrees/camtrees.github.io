@@ -1,6 +1,5 @@
 ---
 title: ChangeLog
-layout: default
 nav_order: 99
 ---
 
