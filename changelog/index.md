@@ -4,7 +4,7 @@ nav_order: 99
 ---
 
 # {{ page.title }}
-_Version: 25.6_
+_Version: 25.7_
 
 {% comment %}
 Headers we may use in this ChangeLog page...
@@ -22,13 +22,17 @@ Headers we may use in this ChangeLog page...
 ##### GitHub Images
 {% endcomment %}
 
+
 ## 2026-05-25
+##### SQL Views
+- Moved the 'gis_map_view' column in the 'cam_sites' and 'cam_trees' SQL views to the
+  first column so as to make easier the selection of Sites or Trees for map viewing
+
 ##### CAMTREES Database Website
 - Create favicon.ico file
 - Move images directory inside the assets directory
 - Number items in our ToDo list for easier viewing especially on phones
-- Moved the 'gis_map_view' columns in the 'cam_sites' and 'cam_trees' SQL views to the
-  first column to ease selection of sites or trees for map viewing
+
 
 ## 2026-05-24
 ##### CAMTREES Database Website
@@ -36,12 +40,14 @@ Headers we may use in this ChangeLog page...
 - Added initial content to the "Epicollect5 for Users" web page
 - Added initial content to the "DBeaver Access to SQL" web page
 
+
 ## 2026-05-23
 ##### CAMTREES Database Website
 - Using [Jekyll](https://jekyllrb.com) to author pages
 - Using [Just the Docs](https://just-the-docs.com) Jekyll template for all pages
 - Created empty skeleton pages for the website
 - Added a version number to this page so we can detect if GitHub has rebuilt the site
+
 
 ## 2026-05-22
 ##### SQL Tables
@@ -51,6 +57,7 @@ Headers we may use in this ChangeLog page...
 - Site table has two new columns: 'tree_primary_caretaker' and 'tree_secondary_caretaker'.
 	- These values will be used to replace NULL values for the 'primary_caretaker'
 	  or the 'secondary_caretaker' of a tree in the 'cam_trees' view.
+
 
 ## 2026-05-20
 ##### CAMTREES Database Website

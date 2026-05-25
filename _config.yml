@@ -7,14 +7,6 @@ remote_theme: just-the-docs/just-the-docs
 # Set the favicon location
 favicon_ico: "/assets/images/website/favicon.ico"
 
-# Set default values for things
-# defaults:
-#   - scope:
-#       path: "" # an empty string here means all files in the project
-#       type: "pages"
-#     values:
-#       layout: "default"
-
 # Our GitHub Pages repository
 url: https://camtrees.github.io
 
