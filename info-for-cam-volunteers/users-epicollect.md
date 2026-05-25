@@ -5,39 +5,39 @@ parent: Info for CAM Volunteers
 
 # {{ page.title }}
 
-The [EpiCollect5 phone App](https://five.epicollect.net) is a free and easy to use mobile
-data gathering platform created by the [Centre for Genomic Pathogen Surveillance]
-(https://www.pathogensurveillance.net) at Oxford University.
+The [EpiCollect5 phone App](https://five.epicollect.net)
+is a free and easy to use mobile data gathering platform created by the
+[Centre for Genomic Pathogen Surveillance](https://www.pathogensurveillance.net) at Oxford University.
 
 The EpiCollect5 app is currently available for both Android (10+) and iOS (15+).
+
+EpiCollect5 can be used to collect data while out in the field, when you are standing
+right next to the chestnut tree, even if you don't have cell service at the time. If you
+do have cell service, you can upload your data to the EpiCollect servers then. If not, you
+can wait and upload the data at a later time when you have good internet connectivity.
 
 CAM started using the EpiCollect5 phone app about a year ago. The app has been well
 received by Volunteers who find it easy to use. Data is collected when **planting a new
 tree**, and when **recording info on an existing tree**.
 
+Kim Colson has created an extensive
+[CAM EpiCollect5 Quick Reference Guide](https://camtrees.github.io/assets/cam-epicollect5-quick-reference-guide-1.0.pdf)
+which is an easy to follow guide listing how you will use the app in the field.
+
 As you use EpiCollect to collect tree data, you will first enter the CAM Org and Tree Site
-for which you are collecting data. You will then take one of 6 different pathways through
-the app. These are those pathways along with a short description of when you would choose
-a particular path.
+after which you will then take one of 6 different pathways through the app. These are
+those pathways along with a short description of when you would choose a particular path.
 
 | Pathway      | Purpose                                                               |
 | ------------ | --------------------------------------------------------------------- |
 | **PLANT**    | Data collected when planting a new tree                               |
-| **GPS**      | Recording the GPS Location for an existing tree                      |
-| **ONE**      | Recording health data or performing care actions on a single tree    |
+| **GPS**      | Recording the GPS Location for an existing tree                       |
+| **ONE**      | Recording health data or performing care actions on a single tree     |
 | **ALL**      | Recording care actions (water, etc.) performed on ALL trees at a Site |
-| **WildCAM**  | Recording information for a wild tree unknown to TACF                |
-| **WildTACF** | Recording information for a wild tree known to TACF                  |
+| **WildCAM**  | Recording information for a single wild tree unknown to TACF          |
+| **WildTACF** | Recording information for a single wild tree known to TACF            |
 
-EpiCollect5 can be used to collect data while out in the field, when you are standing
-right next to the chestnut tree, even if you don't have any cell service at the time. If
-you do have cell service, you can upload your data to the EpiCollect servers then. If not,
-you can wait and upload the data at a later time when you have good internet connectivity.
-
-Kim Colson has created an extensive easy to follow guide listing how to use the EpiCollect5
-app for each of the six pathways.
-
-This is a list of the 6 EpiCollect pathways and the data collected for each.
+#### Details of the data collected during each of these pathways
 
 1. **PLANT** – Data collected when planting a new tree
 	- CAMorg-Site – The CAMorg and Site where the tree lives.
