@@ -5,14 +5,14 @@ nav_order: 3
 
 # {{ page.title }}
 
-This directory will hold web pages mostly of interest to CAM Volunteers.
-The current pages are:
+This directory holds web pages mostly of interest to CAM Volunteers.
 
-- Epicollect for Users
-	- Right now this is just a skeleton document.
-	- Sometime soon we will add everything a Volunteer would need to know to use
-	  the EpiCollect phone app to collect chestnut tree data.
+- Epicollect5 for Users
+	- Everything a Volunteer need to know to start using the EpiCollect5 phone app
+	  to collect chestnut tree data.
 
 - SQL for Users
 	- Details about where the EpiCollect data goes
 	- And how a volunteer can get access to the data
+	- Right now, the page is just a skeleton waiting for real content to be added at a
+	  later time.
