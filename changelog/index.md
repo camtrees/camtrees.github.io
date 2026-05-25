@@ -28,6 +28,8 @@ Headers we may use in this ChangeLog page...
 - Create favicon.ico file
 - Move images directory inside the assets directory
 - Number items in our ToDo list for easier viewing especially on phones
+- Moved the 'gis_map_view' columns in the 'cam_sites' and 'cam_trees' SQL views to the
+  first column to ease selection of sites or trees for map viewing
 
 ## 2026-05-24
 ##### CAMTREES Database Website
