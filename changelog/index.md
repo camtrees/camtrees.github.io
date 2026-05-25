@@ -5,7 +5,7 @@ nav_order: 99
 ---
 
 # {{ page.title }}
-_Version: 25.1_
+_Version: 25.2_
 
 {% comment %}
 Headers we may use in this ChangeLog page...
@@ -22,6 +22,12 @@ Headers we may use in this ChangeLog page...
 ##### GitHub Actions
 ##### GitHub Images
 {% endcomment %}
+
+## 2026-05-25
+##### CAMTREES Database Website
+- Create favicon.ico file
+- Move images directory inside the assets directory
+- Number items in our ToDo list for easier viewing especially on phones
 
 ## 2026-05-24
 ##### CAMTREES Database Website
