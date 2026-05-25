@@ -31,9 +31,13 @@ parent: Info for CAM Staff
 	- missing_data_trees_with_no_mother_or_father
 <p></p>
 
+2. Work with CAM Staff to complete as much of the 'missing data' as possible.
+	- Go through all the 'missing_data' views in SQL and try to fill in as much
+	  of the missing data as possible.
+<p></p>
 
 #### Soon
-2. Allow CAMOrgs, and Sites to have multiple (as many as desired) contact persons.
+3. Allow CAMOrgs, and Sites to have multiple (as many as desired) contact persons.
 	- Do we need (I think we do) to have a 'contact_comment' field for each CAMorg and
 	  Site contact? For example:
 		- Say Mark McCollough is the contact for the Fort Point State Park. But he is
@@ -49,13 +53,8 @@ parent: Info for CAM Staff
 	- Should verify these (and every other contact) with Eva
 <p></p>
 
-3. Show CAM folks how to access CAMTREES SQL Database using DBeaver
+4. Show CAM folks how to access CAMTREES SQL Database using DBeaver
 	- Document details in a separate website page
-<p></p>
-
-4. Work with CAM Staff to complete as much of the 'missing data' as possible.
-	- Go through all the 'missing_data' views in SQL and try to fill in as much
-	  of the missing data as possible.
 <p></p>
 
 5. Document how to add...
