@@ -12,14 +12,14 @@ parent: Info for CAM Staff
 #### Later (Perhaps a good or next Winter project)
 
 1. Use GitHub as a long term photo repository instead of EpiCollect
-	- Why do this? Because a user must be signed into EpiCollect in order to see
-	  the photos. Furthermore, access the photos outside of a browser won't work
-	  since the EpiCollect project isn't public.
-	- Will require a Python program to download ALL existing photos and thumbnails.
-	  It will be tricky if our Python code is a GitHub action, since it's not a simple
-	  matter for an Action to directly write files into the repository.
-	- Will also require a mod to our Python Import code so that it downloads photos each
-	  time Tree Maintenance data is imported
+	- Why do this? Because now, a user must be signed into EpiCollect to see
+	  the photos. Furthermore, since the EpiCollect project isn't public, access to
+	  the photos outside of a browser won't work.
+	- This will require a Python program to download ALL existing photos and thumbnails.
+	- This will also require a mod to our Python Import code so that photos are
+	  downloaded each time Tree Maintenance data is imported
+	- Python code rewrites will be tricky if the Python code is stored as a GitHub action.
+	  This is due to GitHub Actions not having direct write access into a repository.
 <p></p>
 
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
