@@ -29,15 +29,13 @@ parent: Info for CAM Staff
 #### In Progress
 1. Add additional 'missing_data' views
 	- missing_data_trees_with_no_mother_or_father
-<p></p>
 
-2. Work with CAM Staff to complete as much of the 'missing data' as possible.
+1. Work with CAM Staff to complete as much of the 'missing data' as possible.
 	- Go through all the 'missing_data' views in SQL and try to fill in as much
 	  of the missing data as possible.
-<p></p>
 
 #### Soon
-3. Allow CAMOrgs, and Sites to have multiple (as many as desired) contact persons.
+1. Allow CAMOrgs, and Sites to have multiple (as many as desired) contact persons.
 	- Do we need (I think we do) to have a 'contact_comment' field for each CAMorg and
 	  Site contact? For example:
 		- Say Mark McCollough is the contact for the Fort Point State Park. But he is
@@ -51,18 +49,16 @@ parent: Info for CAM Staff
 		- Andrew Deci
 		- Emily Marshall
 	- Should verify these (and every other contact) with Eva
-<p></p>
 
-4. Show CAM folks how to access CAMTREES SQL Database using DBeaver
+1. Show CAM folks how to access CAMTREES SQL Database using DBeaver
 	- Document details in a separate website page
-<p></p>
 
-5. Document how to add...
-	1. CAMorg
+1. Document how to add...
+	1. A new CAMorg
 		- Code: The CAMorg abbeviation
 		- Name: The CAMorg name
 		- Contact Partner Person(s): The Volunteer Name
-	1. Site
+	1. A new Site
 		- Name: The Site name
 		- Camorg: The CAMorg that the Site is associated with
 		- Town: The town in which the Site is located
@@ -72,13 +68,13 @@ parent: Info for CAM Staff
 		- Primary_Caretaker: The primary caretaker for ALL the trees at the Site
 		- Secondary_Caretaker: The secondary caretaker for ALL the trees at the Site
 		- Hub: In what Hub is the Site contained
-	1. Add the "Camorg - Site Name" combination to EpiCollect
-	1. Hub
+	1. A new 'CAMorg - Site' pair to EpiCollect
+	1. A new Hub
 		- Name: The Hub name
 		- Captain: The Hub captain
 		- Lieutenant: The Hub lieutenant
 		- Site Name: Name of a site that is contained within the Hub
-	1. Volunteer
+	1. A new Volunteer
 		- first_name: first name
 		- last_name: last name
 		- email: email address
@@ -104,7 +100,7 @@ parent: Info for CAM Staff
 
 
 
-##### Long Term Desires
+#### Long Term Desires
 7. Some CAM Staff should have write access to the SQL tables
 	- Would be most helpful to do this through a web browser versus DBeaver or any other
 	  Database Management Tool.
