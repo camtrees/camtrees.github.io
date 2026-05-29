@@ -7,12 +7,12 @@ parent: Info for CAM Staff
 
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-## EpiCollect 2
+## EpiCollect 3
 
 #### Later (Perhaps a good or next Winter project)
-<details markdown="1">
+<details>
 
-<summary markdown="span">1. Use GitHub as a long term photo repository instead of EpiCollect</summary>
+<summary>1. Use GitHub as a long term photo repository instead of EpiCollect</summary>
 
 	- Why do this? Because now, a user must be signed into EpiCollect to see
 	  the photos. Furthermore, since the EpiCollect project isn't public, access to
