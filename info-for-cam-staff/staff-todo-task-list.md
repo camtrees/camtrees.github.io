@@ -10,8 +10,8 @@ parent: Info for CAM Staff
 ## EpiCollect
 
 #### Later (Perhaps a good or next Winter project)
-
-1. Use GitHub as a long term photo repository instead of EpiCollect
+<details>
+<summary>1. Use GitHub as a long term photo repository instead of EpiCollect</summary>
 	- Why do this? Because now, a user must be signed into EpiCollect to see
 	  the photos. Furthermore, since the EpiCollect project isn't public, access to
 	  the photos outside of a browser won't work.
@@ -20,6 +20,8 @@ parent: Info for CAM Staff
 	  downloaded each time Tree Maintenance data is imported
 	- Python code rewrites will be tricky if the Python code is stored as a GitHub action.
 	  This is due to GitHub Actions not having direct write access into a repository.
+</details>
+
 <p></p>
 
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
@@ -27,15 +29,20 @@ parent: Info for CAM Staff
 ## SQL
 
 #### In Progress
-1. Add additional 'missing_data' views
+<details>
+<summary>1. Add additional 'missing_data' views</summary>
 	- missing_data_trees_with_no_mother_or_father
+</details>
 
-1. Work with CAM Staff to complete as much of the 'missing data' as possible.
+<details>
+<summary>1. Work with CAM Staff to complete as much of the 'missing data' as possible.</summary>
 	- Go through all the 'missing_data' views in SQL and try to fill in as much
 	  of the missing data as possible.
+</details>
 
 #### Soon
-1. Allow CAMOrgs, and Sites to have multiple (as many as desired) contact persons.
+<details>
+<summary>1. Allow CAMOrgs, and Sites to have multiple (as many as desired) contact persons.</summary>
 	- Do we need (I think we do) to have a 'contact_comment' field for each CAMorg and
 	  Site contact? For example:
 		- Say Mark McCollough is the contact for the Fort Point State Park. But he is
@@ -49,15 +56,24 @@ parent: Info for CAM Staff
 		- Andrew Deci
 		- Emily Marshall
 	- Should verify these (and every other contact) with Eva
+</details>
 
 1. Show CAM folks how to access CAMTREES SQL Database using DBeaver
 	- Document details in a separate website page
 
 1. Document how to add...
-	1. A new CAMorg
+<details>
+<summary>1. A new CAMorg</summary>
+
+</details>
+
 		- Code: The CAMorg abbeviation
 		- Name: The CAMorg name
 		- Contact Partner Person(s): The Volunteer Name
+<details>
+<summary>XXXXX</summary>
+
+</details>
 	1. A new Site
 		- Name: The Site name
 		- Camorg: The CAMorg that the Site is associated with
@@ -68,12 +84,24 @@ parent: Info for CAM Staff
 		- Primary_Caretaker: The primary caretaker for ALL the trees at the Site
 		- Secondary_Caretaker: The secondary caretaker for ALL the trees at the Site
 		- Hub: In what Hub is the Site contained
+<details>
+<summary>XXXXX</summary>
+
+</details>
 	1. A new 'CAMorg - Site' pair to EpiCollect
+<details>
+<summary>XXXXX</summary>
+
+</details>
 	1. A new Hub
 		- Name: The Hub name
 		- Captain: The Hub captain
 		- Lieutenant: The Hub lieutenant
 		- Site Name: Name of a site that is contained within the Hub
+<details>
+<summary>XXXXX</summary>
+
+</details>
 	1. A new Volunteer
 		- first_name: first name
 		- last_name: last name
