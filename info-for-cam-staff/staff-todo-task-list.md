@@ -12,6 +12,7 @@ parent: Info for CAM Staff
 #### Later (Perhaps a good or next Winter project)
 <details>
 <summary>1. Use GitHub as a long term photo repository instead of EpiCollect</summary>
+
 	- Why do this? Because now, a user must be signed into EpiCollect to see
 	  the photos. Furthermore, since the EpiCollect project isn't public, access to
 	  the photos outside of a browser won't work.
@@ -31,11 +32,13 @@ parent: Info for CAM Staff
 #### In Progress
 <details>
 <summary>1. Add additional 'missing_data' views</summary>
+
 	- missing_data_trees_with_no_mother_or_father
 </details>
 
 <details>
 <summary>1. Work with CAM Staff to complete as much of the 'missing data' as possible.</summary>
+
 	- Go through all the 'missing_data' views in SQL and try to fill in as much
 	  of the missing data as possible.
 </details>
@@ -43,6 +46,7 @@ parent: Info for CAM Staff
 #### Soon
 <details>
 <summary>1. Allow CAMOrgs, and Sites to have multiple (as many as desired) contact persons.</summary>
+
 	- Do we need (I think we do) to have a 'contact_comment' field for each CAMorg and
 	  Site contact? For example:
 		- Say Mark McCollough is the contact for the Fort Point State Park. But he is
