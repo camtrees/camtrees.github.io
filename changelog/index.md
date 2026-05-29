@@ -4,7 +4,7 @@ nav_order: 99
 ---
 
 # {{ page.title }}
-_Version: 29.1_
+_Version: 29.2_
 
 <!-- This content will not appear in the rendered Markdown 
 Headers we may use in this ChangeLog page...
@@ -23,6 +23,10 @@ Headers we may use in this ChangeLog page...
 ##### GitHub Images
 -->
 
+## 2026-05-29
+##### CAMTREES Database Website
+- Add ChangeLog entries (what you see here) that only existed in the previous Excel system
+  and the early SQL system. Now, all ChangeLog entries will be maintained in this website.
 
 ## 2026-05-25
 ##### SQL Views
@@ -34,20 +38,19 @@ Headers we may use in this ChangeLog page...
 - Moved the images directory inside the assets directory
 - Numbered items in our ToDo list for easier viewing especially on phones
 
-
 ## 2026-05-24
 ##### CAMTREES Database Website
-- Moved the content of Kenster's offline ToDo List into the website's ToDo List page
-- Added initial content to the "Epicollect5 for Users" web page
-- Added initial content to the "DBeaver Access to SQL" web page
+- Move the content of Kenster's offline ToDo List into the website's ToDo List page
+- Add initial content to the "Epicollect5 for Users" web page
+- Add initial content to the "DBeaver Access to SQL" web page
 
 
 ## 2026-05-23
 ##### CAMTREES Database Website
 - Now using [Jekyll](https://jekyllrb.com) to author pages
 - Now using [Just the Docs](https://just-the-docs.com) Jekyll template for all pages
-- Created empty skeleton pages for the website
-- Added a version number to this page so we can detect if GitHub has rebuilt the site
+- Create empty skeleton pages for the website
+- Add version number to this page so we can detect if GitHub has rebuilt the site
 
 
 ## 2026-05-22
@@ -60,7 +63,7 @@ Headers we may use in this ChangeLog page...
 	  or the 'secondary_caretaker' of a tree in the 'cam_trees' view.
 
 ## 2026-05-21
-- Changed the 'cam_count_next_tree_number_for_planting' view to show all CAM Orgs. If CAM Org doesn't yet have trees, the next tree num will be 1.
+- Change the 'cam_count_next_tree_number_for_planting' view to show all CAM Orgs. If CAM Org doesn't yet have trees, the next tree num will be 1.
 
 ## 2026-05-20
 ##### SQL Views
@@ -72,7 +75,7 @@ Headers we may use in this ChangeLog page...
 
 ## 2026-05-20
 ##### CAMTREES Database Website
-- Created this GitHub Pages repository to house the CAMTREES Database Website
+- Create this GitHub Pages repository to house the CAMTREES Database Website
 
 ## 2026-04-19
 ##### SQL Tables
@@ -80,7 +83,7 @@ Headers we may use in this ChangeLog page...
 
 ## 2026-04-16
 ##### SQL Tables
-- Deleted 'Waldoboro' Hub
+- Delete 'Waldoboro' Hub
 
 ## 2026-04-16
 ##### GitHub
@@ -92,7 +95,7 @@ Headers we may use in this ChangeLog page...
 
 ## 2026-04-15
 ##### SQL Tables
-- Added two new 2026 sites with all ancillary info (volunteers, etc)
+- Add two new 2026 sites with all ancillary info (volunteers, etc)
 
 ## 2026/03/27
 ##### SQL Tables
@@ -100,15 +103,15 @@ Headers we may use in this ChangeLog page...
 
 ## 2026-03-19
 ##### SQL Views
-- Created 'missing_data_' views
+- Create 'missing_data_' views
 
 ## 2026-03-19
 ##### SQL Tables
-- Changed 'Augusta' hub to 'Winthrop' and added 'Danforth' hub
+- Change 'Augusta' hub to 'Winthrop' and added 'Danforth' hub
 
 ## 2026-03-11
 ##### SQL Tables
-- Added Eva Butler's tree, site, and volunteer data
+- Add Eva Butler's tree, site, and volunteer data
 
 ## 2026-02-23
 ##### SQL Functions
@@ -124,7 +127,7 @@ Headers we may use in this ChangeLog page...
 
 ## 2026/02/18
 ##### SQL Tables
-- Added Mark McCollough tree data
+- Add Mark McCollough tree data
 
 ## 2025/11/15
 ##### SQL Tables
@@ -136,7 +139,7 @@ Headers we may use in this ChangeLog page...
 
 ## 2025/11/06
 ##### EpiCollect Updates
-- Updates for using new EpiCollect "Cam Org - Site" question (includes major VBA code changes as well)
+- Updates for using new EpiCollect "Cam Org - Site" question
 
 ## 2025-11-01
 ##### SQL Tables
@@ -144,16 +147,17 @@ Headers we may use in this ChangeLog page...
 
 ## 2025/10/12
 ##### EpiCollect Updates
-- Changes so EpiCollect Record Type GPS will only prompt for Tree Number, GPS Location, and Notes - required a 3rd EpiCollect Tree Number and GPS Location screensof course, changes to the Excel VBA Import Code
+- Changes so EpiCollect Record Type GPS will only prompt for Tree Number, GPS Location, and Notes
+- This change required a 3rd EpiCollect Tree Number and GPS Location screens
 
 ## 2025/10/04
-##### SQL Tables
-- Updates to allow for WildCAM trees
+##### Excel Tables
+- Allow WildCAM trees
 
 ## 2025/10/04
-##### SQL Tables
+##### Excel Tables
 - Add Lea's data for 2025 plantings
 
 ## 2025/09/06
-##### SQL Tables
+##### Excel Tables
 - Add Watering data from Maggie Lynn's Excel table
