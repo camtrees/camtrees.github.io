@@ -4,7 +4,7 @@ nav_order: 99
 ---
 
 # {{ page.title }}
-_Version: 29.2_
+_Version: 29.3_
 
 <!-- This content will not appear in the rendered Markdown 
 Headers we may use in this ChangeLog page...
@@ -27,6 +27,8 @@ Headers we may use in this ChangeLog page...
 ##### CAMTREES Database Website
 - Add ChangeLog entries (what you see here) that only existed in the previous Excel system
   and the early SQL system. Now, all ChangeLog entries will be maintained in this website.
+- Make ToDO Task List much more readable by making most ToDo items a collapsible entry.
+  Thus, the ToDO details will be hidden unless expanded by the user.
 
 ## 2026-05-25
 ##### SQL Views

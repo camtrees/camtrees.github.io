@@ -56,11 +56,16 @@ Use this code for the collapsible sections
 	- The comment might say: Mark is in Antarctica for the next 3 years so, until
 	  May of 2029, we should reach out to other Fort Point State Park contacts.
 - Once that capability, here is some data that needs to be added...
-- An additional contact for the 'Meddybemps Lake Land Trust' is:
+- An additional contact for the 'Meddybemps Lake Land Trust' CAMorg is:
 	- Brittany Mauricette
-- Additional contacts for the 'Maine Coast Heritage Trust' may be:
+- Additional contacts for the 'Maine Coast Heritage Trust' CAMorg may be:
 	- Andrew Deci
 	- Emily Marshall
+- Additional contacts for the Mt Joy Community Orchard site are:
+	- Eva Barinas eva@cultivatingcommunity.org
+	- Silvan Shawe silvan@cultivatingcommunity.org
+- Additional contact for the North Shore Preserve site is:
+	- Jessie Hallowell jhallowell@nhcshawks.org
 - Should verify these (and every other contact) with Eva
 </details>
 
