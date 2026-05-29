@@ -7,11 +7,12 @@ parent: Info for CAM Staff
 
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-## EpiCollect
+## EpiCollect 2
 
 #### Later (Perhaps a good or next Winter project)
-<details>
-<summary>1. Use GitHub as a long term photo repository instead of EpiCollect</summary>
+<details markdown="1">
+
+<summary markdown="span">1. Use GitHub as a long term photo repository instead of EpiCollect</summary>
 
 	- Why do this? Because now, a user must be signed into EpiCollect to see
 	  the photos. Furthermore, since the EpiCollect project isn't public, access to
@@ -21,6 +22,7 @@ parent: Info for CAM Staff
 	  downloaded each time Tree Maintenance data is imported
 	- Python code rewrites will be tricky if the Python code is stored as a GitHub action.
 	  This is due to GitHub Actions not having direct write access into a repository.
+	  
 </details>
 
 <p></p>
