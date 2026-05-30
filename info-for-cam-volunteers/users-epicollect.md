@@ -9,7 +9,7 @@ The [EpiCollect5 phone App](https://five.epicollect.net)
 is a free and easy to use mobile data gathering platform created by the
 [Centre for Genomic Pathogen Surveillance](https://www.pathogensurveillance.net) at Oxford University.
 
-The EpiCollect5 app is currently available for both Android (10+) and iOS (15+).
+The EpiCollect5 app is currently available for both Android (version 10+) and iOS (version 15+).
 
 EpiCollect5 can be used to collect data while out in the field, when you are standing
 right next to the chestnut tree, even if you don't have cell service at the time. If you
@@ -61,7 +61,7 @@ those pathways along with a short description of when you would choose a particu
 	- CAMorg-Site – The CAMorg and Site where the tree lives.
 	- Tree Number – The tree's three digit number with leading zeroes.
 	- Tree GPS Location – The tree’s longitude and latitude.
-	- Additional Info – Any info you feel like adding regarding the planting.
+	- Additional Info – Any info you feel like adding regarding how to locate the tree.
 
 1. **ONE** – Data collected when recording health data or performing care actions on a single tree
 	- CAMorg-Site – The CAMorg and Site where the tree lives.
@@ -83,7 +83,7 @@ those pathways along with a short description of when you would choose a particu
 1. **ALL** – Data collected when recording care actions (water, etc.) performed on ALL trees at a Site
 	- CAMorg-Site – The CAMorg and Site where the tree lives.
 	- Care Actions – Actions (water, weed, etc.) performed.
-	- Additional Info – Any info you feel like adding regarding the planting.
+	- Additional Info – Any info you feel like adding regarding the trees.
 
 1. **WildCAM** – Data collected when recording information for a wild tree unknown to TACF
 	- Tree GPS Location – The tree’s longitude and latitude.
@@ -102,7 +102,7 @@ those pathways along with a short description of when you would choose a particu
 	- Access Method – Equipment required to harvest or pollinate the tree.
 	- Tree Photos – Two photos of the tree.
 	- Care Actions – Actions (water, weed, etc.) performed.
-	- Additional Info – Any info you feel like adding regarding the planting.
+	- Additional Info – Any info you feel like adding regarding the Wild tree.
 
 1. **WildTACF** – Data collected when recording information for a wild tree known to TACF
 	- Tree ID – ‘ME-‘ followed by two uppercase letters and three digits.
