@@ -4,7 +4,7 @@ nav_order: 99
 ---
 
 # {{ page.title }}
-_Version: 29.3_
+_Version: 30.1_
 
 <!-- This content will not appear in the rendered Markdown 
 Headers we may use in this ChangeLog page...
@@ -27,13 +27,14 @@ Headers we may use in this ChangeLog page...
 ##### CAMTREES Database Website
 - Add ChangeLog entries (what you see here) that only existed in the previous Excel system
   and the early SQL system. Now, all ChangeLog entries will be maintained in this website.
-- Make ToDO Task List much more readable by making most ToDo items a collapsible entry.
-  Thus, the ToDO details will be hidden unless expanded by the user.
+- Make ToDO Task List much more readable by placing most ToDo items inside a collapsible entry.
+  Thus, the ToDO details will be hidden unless expanded by the user. Thus, numbering ToDo items
+  is no longer necessary.
 
 ## 2026-05-25
 ##### SQL Views
 - Moved the 'gis_map_view' column in the 'cam_sites' and 'cam_trees' SQL views to the
-  first column so as to make it easier to select Sites or Trees for viewing on a map
+  first column so it's easier to select Sites or Trees for viewing on a map
 
 ##### CAMTREES Database Website
 - Created favicon's for both browsers and Apple specific devices
