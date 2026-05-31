@@ -6,50 +6,45 @@ parent: Info for CAM Staff
 
 # {{ page.title }}
 
-There are many Database Management Tools which could be used to access the CAMTREES
-PostgreSQL Database:
-- DBeaver
-- pgAdmin
-- Postico
-- TablePlus
+There are many database management tools that can be used to access the CAMTREES PostgreSQL database, including:
 
-Kenster's preferred program is DBeaver because...
-- There is a full functioning FREE Community version of DBeaver.
-- DBeaver can be set to show either a Simple or Advanced view of the database.
-  Most often the Simple view is desirable as it removes much of the complexity inherent
-  to SQL databases.
-- Using GPS Coordinates translated into PostGIS data, DBeaver can display Tree
-  and Site locations on a Map. Individual items on the map can have whatever labels
-  the user wishes to see. Clicking on map items (like a tree) will show all the data
-  associated with either the tree or the site clicked upon.
+* DBeaver
+* pgAdmin
+* Postico
+* TablePlus
 
-#### Things to demo when showing CAM Folks how to use DBeaver
-- Download the [DBeaver Community version](https://dbeaver.io/download/)
-- We need to create a 'connection' to connect to the CAMTREES Database. We need to specify
-  the following fields all of which need to be kept private so they are NOT listed here.
-	```
-		PGHOST     : [private]
-		PGDATABASE : [private]
-		PGUSER     : [private]
-		PGPASSWORD : [private]
-	```
+DBeaver is currently the preferred database management tool for the CAMTREES project for several reasons:
 
-- DBeaver Walkthrough
-	- Using the ER diagram to see what's in each table and the relationship between tables
-	- Difference between Tables and Views
-	- Explaining the 'v_pg...' views (most are only interesting to a Database Admin)
-	- Viewing records
-	- Filtering rows by column values
-	- Rearranging, showing, hiding, and sorting columns
-	- Viewing a single record with the TAB key
-	- How to view Trees and Sites (with labels) on a map
-		- Perhaps particularly nice to show latest health as a label?
-	- Dragging columns into the 'Groups' panel for FREQ and CROSSTAB tables
-	- Helping to fill in missing data using the 'missing_data' views
+* A fully functional and free Community Edition is available.
+* DBeaver can be configured to display either a Simple or Advanced view of the database.
+  In most cases, the Simple view is preferable because it hides much of the complexity
+  inherent in SQL databases.
+* Using GPS coordinates stored as PostGIS data, DBeaver can display tree and site
+  locations on a map. Individual map features can be labeled with any available data.
+  Selecting a tree or site on the map displays the associated database records.
 
-* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+#### Topics to Demonstrate When Introducing DBeaver
 
+1. Download the [DBeaver Community Edition](https://dbeaver.io/download/).
 
+2. Create a database connection to the CAMTREES database. The following connection parameters are required and should be kept private:
 
+   ```text
+   PGHOST     : [private]
+   PGDATABASE : [private]
+   PGUSER     : [private]
+   PGPASSWORD : [private]
+   ```
 
-
+3. DBeaver walkthrough:
+	* Using the Entity Relationship (ER) diagram to understand the database structure and relationships between tables.
+	* Understanding the difference between tables and views.
+	* Explaining the `v_pg...` views (most are primarily of interest to database administrators).
+	* Viewing records.
+	* Filtering rows based on column values.
+	* Rearranging, showing, hiding, and sorting columns.
+	* Viewing a single record using the Tab key.
+	* Displaying trees and sites on a map, including custom labels.
+		* Consider using the latest health status as a map label.
+	* Creating frequency and cross-tabulation summaries by dragging columns into the **Groups** panel.
+	* Using the `missing_data` views to identify and help fill gaps in the dataset.
