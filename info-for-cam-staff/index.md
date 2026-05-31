@@ -18,3 +18,21 @@ The current pages are:
 - ToDo Task List
 	- This will be an ongoing document listing the short, medium, and long term ToDo
 	  items we hope to accomplish in the next year or so.
+	  
+
+# {{ page.title }}
+
+This directory contains web pages that are primarily intended for CAM staff.
+
+The current pages include:
+
+## DBeaver Access to SQL
+
+- Currently, this page provides an overview of the DBeaver application and how it can be
+  used to access the CAMTREES SQL database.
+- In the future, it will include screenshots and detailed instructions for using DBeaver.
+
+## To-Do Task List
+
+- This ongoing document lists the short-, medium-, and long-term tasks and improvements
+  that we hope to accomplish over the coming year.
