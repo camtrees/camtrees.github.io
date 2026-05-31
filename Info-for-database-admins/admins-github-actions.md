@@ -1,7 +1,7 @@
 ---
 title: GitHub Actions for Admins
 layout: default
-parent: Information for Database Admins
+parent: Info for Database Admins
 ---
 
 # {{ page.title }}

@@ -1,7 +1,7 @@
 ---
 title: Epicollect5 for Users
 layout: default
-parent: Information for CAM Volunteers
+parent: Info for CAM Volunteers
 ---
 
 # {{ page.title }}
