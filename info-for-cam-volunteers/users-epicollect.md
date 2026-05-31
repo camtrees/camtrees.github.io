@@ -6,39 +6,39 @@ parent: Info for CAM Volunteers
 
 # {{ page.title }}
 
-The [EpiCollect5 phone App](https://five.epicollect.net)
-is a free and easy to use mobile data gathering platform created by the
-[Centre for Genomic Pathogen Surveillance](https://www.pathogensurveillance.net) at Oxford University.
+The [EpiCollect5 mobile app](https://five.epicollect.net) is a free and easy-to-use
+mobile data collection platform created by the
+[Centre for Genomic Pathogen Surveillance](https://www.pathogensurveillance.net)
+at Oxford University.
 
-The EpiCollect5 app is currently available for both Android (version 10+) and iOS (version 15+).
+The EpiCollect5 app is currently available for Android (version 10+) and iOS (version 15+).
 
-EpiCollect5 can be used to collect data while out in the field, when you are standing
-right next to the chestnut tree, even if you don't have cell service at the time. If you
-do have cell service, you can upload your data to the EpiCollect servers then. If not, you
-can wait and upload the data at a later time when you have good internet connectivity.
+EpiCollect5 can be used to collect data while in the field, even when standing next to a
+chestnut tree without cellular service. If cellular service is available, data can be
+uploaded immediately to the EpiCollect servers. Otherwise, the data can be uploaded later
+when an internet connection becomes available.
 
-CAM started using the EpiCollect5 phone app about a year ago. The app has been well
-received by Volunteers who find it easy to use. Data is collected when **planting a new
-tree**, and when **recording info on an existing tree**.
+CAM began using the EpiCollect5 mobile app about a year ago. The app has been well
+received by volunteers, who find it easy to use. Data is collected when **planting a new
+tree** and when **recording information about an existing tree**.
 
-Kim Colson has created an extensive
-[CAM EpiCollect5 Quick Reference Guide](https://camtrees.github.io/assets/cam-epicollect5-quick-reference-guide-1.0.pdf)
-which is an easy to follow guide listing how you will use the app in the field.
+Kim Colson has created an extensive [CAM EpiCollect5 Quick Reference Guide](https://camtrees.github.io/assets/cam-epicollect5-quick-reference-guide-1.0.pdf),
+which provides easy-to-follow instructions for using the app in the field.
 
-As you use EpiCollect to collect tree data, you will first enter the CAM Org and Tree Site
-after which you will then take one of 6 different pathways through the app. These are
-those pathways along with a short description of when you would choose a particular path.
+When collecting tree data with EpiCollect5, you first select the CAM Organization and Tree
+Site. You then follow one of six available data-entry pathways. The following table
+describes each pathway and its intended use.
 
-| Pathway      | Purpose                                                               |
-| ------------ | --------------------------------------------------------------------- |
-| **PLANT**    | Data collected when planting a new tree                               |
-| **GPS**      | Recording the GPS Location for an existing tree                       |
-| **ONE**      | Recording health data or performing care actions on a single tree     |
-| **ALL**      | Recording care actions (water, etc.) performed on ALL trees at a Site |
-| **WildCAM**  | Recording information for a single wild tree unknown to TACF          |
-| **WildTACF** | Recording information for a single wild tree known to TACF            |
+| Pathway      | Purpose                                                                           |
+| ------------ | --------------------------------------------------------------------------------- |
+| **PLANT**    | Data collected when planting a new tree                                           |
+| **GPS**      | Recording the GPS location of an existing tree                                    |
+| **ONE**      | Recording health data or performing care actions on a single tree                 |
+| **ALL**      | Recording care actions (watering, weeding, etc.) performed on all trees at a site |
+| **WildCAM**  | Recording information about a wild tree not yet known to TACF                     |
+| **WildTACF** | Recording information about a wild tree already known to TACF                     |
 
-#### Details of the data collected during each of these pathways
+#### Details of the Data Collected for Each Pathway
 
 1. **PLANT** – Data collected when planting a new tree
 	- CAMorg-Site – The CAMorg and Site where the tree lives.
