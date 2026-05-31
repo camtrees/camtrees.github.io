@@ -1,7 +1,7 @@
 ---
 title: DBeaver Access to SQL
 layout: default
-parent: Info for CAM Staff
+parent: Information for CAM 
 ---
 
 # {{ page.title }}

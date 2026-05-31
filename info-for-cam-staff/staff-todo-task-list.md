@@ -1,7 +1,7 @@
 ---
 title: ToDo Task List
 layout: default
-parent: Info for CAM Staff
+parent: Information for CAM 
 ---
 
 # {{ page.title }}
