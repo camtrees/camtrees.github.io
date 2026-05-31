@@ -5,24 +5,14 @@ description: CAMTREES Database is a PostgreSQL database system created for the C
 ---
 
 <center>
-<table border="0" cellpadding="10">
-  <tr>
-    <!-- Image on the left -->
-    <td valign="top">
-      <img src="assets/images/website/IMG_20211026_111304191-scaled-chestnutgloves.jpg" alt="Chestnuts in a gloved hand" height="300" width="400">
-    </td>
-    <td valign="center">
-      <center><h2>Chestnuts Across Maine <br> CAMTREES Database</h2></center>
-    </td>
-  </tr>
-</table>
+      <img src="assets/images/website/home-1.png" alt="Girl planting tree, sending data to cloud" height="464" width="846">
 </center>
 
 The CAMTREES Database exists to further the goals of the
 [Chestnut Across Maine (CAM) chapter](https://tacf.org/me/chestnuts-across-maine/) of
 [The American Chestnut Foundation (TACF)](https://tacf.org).
 CAM Volunteers will collect chestnut tree data while in the field after which that data
-will be loaded into an the CAMTREES SQL Database for further analysis and presentation.
+will be loaded into the CAMTREES Database for further analysis and presentation.
 
 Quoting the Chestnuts Across Maine Project website, here is a short blurb describing their project.
 
