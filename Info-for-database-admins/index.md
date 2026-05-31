@@ -1,5 +1,5 @@
 ---
-title: Info for Database Admins
+title: Information for Database Admins
 layout: default
 nav_order: 5
 ---

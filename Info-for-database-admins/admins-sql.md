@@ -1,7 +1,7 @@
 ---
 title: SQL for Admins
 layout: default
-parent: Info for Database Admins
+parent: Information for Database Admins
 ---
 
 # {{ page.title }}
