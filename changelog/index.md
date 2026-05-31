@@ -5,7 +5,7 @@ nav_order: 99
 ---
 
 # {{ page.title }}
-_Version: 31.2_
+_Version: 31.3_
 
 <!-- This content will not appear in the rendered Markdown 
 <details markdown="1">
@@ -33,7 +33,7 @@ Note:
 -->
 
 This changelog documents updates to the CAMTREES Database, and its supporting systems
-(EpiCollect, GitHub, Python, SQL, and this website).
+(EpiCollect, GitHub, Google, Python, SQL, and this website).
 Each entry is grouped by month. Within each month, changes are organized by area.
 
 ---
