@@ -1,19 +1,17 @@
 ---
-title: Info for CAM Volunteers
+title: Information for CAM Volunteers
 layout: default
 nav_order: 3
 ---
 
 # {{ page.title }}
 
-This directory holds web pages mostly of interest to CAM Volunteers.
+This directory contains web pages that are primarily intended for CAM volunteers.
 
-- Epicollect5 for Users
-	- Everything a Volunteer may wish to know when starting to use the EpiCollect5 phone
-	  app to collect chestnut tree data.
+## EpiCollect5 for Users
 
-- SQL for Users
-	- Details about where the EpiCollect data goes
-	- And how a volunteer can get access to the data
-	- Right now, the page is just a skeleton waiting for real content to be added at a
-	  later time.
+Everything a volunteer needs to know to get started using the EpiCollect5 mobile app to collect chestnut tree data in the field.
+
+## SQL for Users
+
+Information about where EpiCollect data is stored and how volunteers can gain access to it.
