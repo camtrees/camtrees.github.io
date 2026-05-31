@@ -1,167 +1,204 @@
 ---
-title: ChangeLog
+title: CAMTREES Database Changelog
 layout: default
 nav_order: 99
 ---
 
 # {{ page.title }}
-_Version: 30.1_
+_Version: 31.1_
 
 <!-- This content will not appear in the rendered Markdown 
-Headers we may use in this ChangeLog page...
-## YYYY-MM-DD
-##### CAMTREES Database Website
-##### EpiCollect Updates
-##### Python EpiCollect Import Code
-##### Python EpiCollect Image Downloader Code
-##### SQL Access
-##### SQL Functions
-##### SQL Hosting
-##### SQL Tables
-##### SQL Views
-##### GitHub
-##### GitHub Actions
-##### GitHub Images
+<details markdown="1">
+<summary markdown="span"><strong>YYYY-MM-DD</strong></summary>
+
+### Area (SQL / Website / EpiCollect)
+### EpiCollect
+### GitHub
+### Python
+### SQL
+### SQL Functions
+### SQL Hosting
+### SQL Tables
+### SQL Views
+### Website
+* Change/Impact/Notes
+
+Note:
+* All timestamps use ISO format (`YYYY-MM-DD`) for consistency.
+* Each entry should be immutable once published.
+* New entries should be appended at the top.
+* Keep descriptions short, factual, and action-oriented.
+
+</details>
 -->
 
-## 2026-05-29
-##### CAMTREES Database Website
-- Add ChangeLog entries (what you see here) that only existed in the previous Excel system
-  and the early SQL system. Now, all ChangeLog entries will be maintained in this website.
-- Make ToDO Task List much more readable by placing most ToDo items inside a collapsible entry.
-  Thus, the ToDO details will be hidden unless expanded by the user. Thus, numbering ToDo items
-  is no longer necessary.
+This changelog documents updates to the CAMTREES Database, and its supporting systems
+(EpiCollect, GitHub, Python, SQL, and this website).
+Each entry is grouped by month. Within each month, changes are organized by area.
 
-## 2026-05-25
-##### SQL Views
-- Moved the 'gis_map_view' column in the 'cam_sites' and 'cam_trees' SQL views to the
-  first column so it's easier to select Sites or Trees for viewing on a map
+---
 
-##### CAMTREES Database Website
-- Created favicon's for both browsers and Apple specific devices
-- Moved the images directory inside the assets directory
-- Numbered items in our ToDo list for easier viewing especially on phones
+## Changelog Entries
 
-## 2026-05-24
-##### CAMTREES Database Website
-- Move the content of Kenster's offline ToDo List into the website's ToDo List page
-- Add initial content to the "Epicollect5 for Users" web page
-- Add initial content to the "DBeaver Access to SQL" web page
+<details markdown="1">
+<summary markdown="span"><strong>2026 May</strong></summary>
 
 
-## 2026-05-23
-##### CAMTREES Database Website
-- Now using [Jekyll](https://jekyllrb.com) to author pages
-- Now using [Just the Docs](https://just-the-docs.com) Jekyll template for all pages
-- Create empty skeleton pages for the website
-- Add version number to this page so we can detect if GitHub has rebuilt the site
+### SQL Tables
+
+* Added site-level caretaker IDs.
+* Removed tree-level primary caretakers in favor of site-level defaults.
+* Added GPS coordinates to Site table for mapping support.
+* Introduced `tree_primary_caretaker` and `tree_secondary_caretaker` fields.
+* Enabled fallback caretaker logic in `cam_trees` view.
+
+### SQL Views
+
+* Added `gis_map_view` column to `cam_sites`.
+* Updated `cam_count_next_tree_number_for_planting` to include all CAM orgs.
+* Default tree numbering now starts at 1 for new orgs.
+* Moved `gis_map_view` to the first column in `cam_sites` and `cam_trees` views to simplify map selection.
+
+### Website Content
+
+* Migrated Kenster’s offline To-Do list into the website.
+* Added initial content for “EpiCollect5 for Users”.
+* Added initial content for “DBeaver Access to SQL”.
+* Added changelog entries previously stored in Excel and early SQL systems.
+
+### Website Infrastructure
+
+* Created GitHub Pages repository for CAMTREES Database site.
+* Adopted [Jekyll](https://jekyllrb.com) for site generation.
+* Adopted the [Just the Docs](https://just-the-docs.com) theme.
+* Created initial skeleton pages.
+* Added version tracking to detect rebuilds.
+* Created favicons for browser and Apple devices.
+* Moved images directory into the assets folder.
+* Improved To-Do list formatting for mobile readability.
+* Improved To-Do Task List readability using collapsible sections, removing the need for numbering.
+
+</details>
+
+---
+
+<details markdown="1">
+<summary markdown="span"><strong>2026 April</strong></summary>
+
+### GitHub
+
+* Created GitHub account (camorgdatabase@gmail.com)
+* Added workflow to sync CAMTREES Neon database between accounts
+
+### SQL Tables
+
+* Added two new 2026 sites with associated data
+* Removed Waldoboro hub
+* Added four `access_` columns to `tree`; updated `cam_trees` and dependent views
+
+</details>
+
+---
 
 
-## 2026-05-22
-##### SQL Tables
-- Site table now has GPS coordinates which allows us to view a Site Map using DBeaver
-  and the 'cam_sites_map' view
-	- Site's GPS coordinates are obtained from the lowest tree number at the site
-- Site table now has two new columns: 'tree_primary_caretaker' and 'tree_secondary_caretaker'
-	- These values will be used to replace NULL values for the 'primary_caretaker'
-	  or the 'secondary_caretaker' of a tree in the 'cam_trees' view.
+<details markdown="1">
+<summary markdown="span"><strong>2026 March</strong></summary>
 
-## 2026-05-21
-- Change the 'cam_count_next_tree_number_for_planting' view to show all CAM Orgs. If CAM Org doesn't yet have trees, the next tree num will be 1.
+### SQL Tables
 
-## 2026-05-20
-##### SQL Views
-- cam_sites view will now contain a gis_map_view column which will show the map position of the lowest tree number at the site.
+* Added two New Hampshire hubs
+* Renamed Augusta hub to Winthrop; added Danforth hub
+* Added Eva Butler’s tree, site, and volunteer data
 
-## 2026-05-20
-##### SQL Tables
-- Add primary_caretaker_id and secondary_caretaker_id to the site table'; remove all primary caretakers from all trees; we will use the site value unless specified for a single tree
+### SQL Views
 
-## 2026-05-20
-##### CAMTREES Database Website
-- Create this GitHub Pages repository to house the CAMTREES Database Website
+* Created `missing_data_` views
 
-## 2026-04-19
-##### SQL Tables
-- Update 'tree' table with four new Access_ columns. Update cam_trees view and all other views depending upon cam_trees view
+</details>
 
-## 2026-04-16
-##### SQL Tables
-- Delete 'Waldoboro' Hub
+---
 
-## 2026-04-16
-##### GitHub
-- Create GitHub account for camorgdatabase@gmail.com
+<details markdown="1">
+<summary markdown="span"><strong>2026 February</strong></summary>
 
-## 2026-04-16
-##### GitHub Actions
-- Create a GitHub Action to copy the Neon camtrees database from ken.rosenberry@gmail.com's project space into cam.org.database@gmail.com Neon project space
+### SQL
 
-## 2026-04-15
-##### SQL Tables
-- Add two new 2026 sites with all ancillary info (volunteers, etc)
+* Settled upon using Neon.com to host the CAMTREES Database (PostGreSQL)
+* Added Mark McCollough tree data
+* Added `camtress_manage_dates` for automated timestamp handling
+* Created function for EpiCollect ALL records
+* Added `date_created` and `date_updated` fields (initialized to 2026-02-01)
 
-## 2026/03/27
-##### SQL Tables
-- Add two New Hampshire Hubs
+</details>
 
-## 2026-03-19
-##### SQL Views
-- Create 'missing_data_' views
+---
 
-## 2026-03-19
-##### SQL Tables
-- Change 'Augusta' hub to 'Winthrop' and added 'Danforth' hub
+<details markdown="1">
+<summary markdown="span"><strong>2026 January</strong></summary>
 
-## 2026-03-11
-##### SQL Tables
-- Add Eva Butler's tree, site, and volunteer data
+### SQL
 
-## 2026-02-23
-##### SQL Functions
-- Create function to process EpiCollect ALL Record_Type data
+* Settled upon using PostGreSQL as the RDBMS
+* Investigate PostGreSQL host platforms
 
-## 2026-02-23
-##### SQL Tables
-- Add date_created and date_updated columns to most tables; set values to '2026-02-01' for all existing records
+</details>
 
-## 2026-02-22
-##### SQL Functions
-- Add camtrees_manage_dates function so some tables can have date_created and date_updated fields
+---
 
-## 2026/02/18
-##### SQL Tables
-- Add Mark McCollough tree data
+<details markdown="1">
+<summary markdown="span"><strong>2025 December</strong></summary>
 
-## 2025/11/15
-##### SQL Tables
-- Add Volunteers Interests Worksheet and Table.
+### SQL
 
-## 2025/11/11
-##### EpiCollect Updates
-- Allow volunteer to enter Rain Event data by Hub as well as by Site
+* Research various SQL Relational DataBase Management Systems (RDBMS)
+* Brainstormed how to convert Excel system into SQL
 
-## 2025/11/06
-##### EpiCollect Updates
-- Updates for using new EpiCollect "Cam Org - Site" question
+</details>
 
-## 2025-11-01
-##### SQL Tables
-- Begin conversion of MS Excel database to PostgreSQL
+---
 
-## 2025/10/12
-##### EpiCollect Updates
-- Changes so EpiCollect Record Type GPS will only prompt for Tree Number, GPS Location, and Notes
-- This change required a 3rd EpiCollect Tree Number and GPS Location screens
+<details markdown="1">
+<summary markdown="span"><strong>2025 November</strong></summary>
 
-## 2025/10/04
-##### Excel Tables
-- Allow WildCAM trees
+### EpiCollect
 
-## 2025/10/04
-##### Excel Tables
-- Add Lea's data for 2025 plantings
+* Enabled Rain Event entry by Hub or Site
+* Updated “Cam Org – Site” question format
 
-## 2025/09/06
-##### Excel Tables
-- Add Watering data from Maggie Lynn's Excel table
+### SQL Tables
+
+* Began migration from Excel to PostgreSQL
+* Added Volunteer Interests table
+
+</details>
+
+---
+
+<details markdown="1">
+<summary markdown="span"><strong>2025 October</strong></summary>
+
+### EpiCollect
+
+* Simplified GPS record fields
+* Added additional GPS/tree-number screens
+
+### Excel
+
+* Enabled WildCAM trees
+* Added Lea’s 2025 planting data
+
+</details>
+
+---
+
+<details markdown="1">
+<summary markdown="span"><strong>2025 September</strong></summary>
+
+### Excel
+
+* Added watering data from Maggie Lynn's spreadsheet
+
+</details>
+
+---
+
