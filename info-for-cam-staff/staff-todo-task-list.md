@@ -24,38 +24,35 @@ Additional details.
 </details>
 -->
 
-## CAMTREES Database Website
-
-<!--------------------------------------------------------------------------------------->
-
-<details markdown="1">
-<summary markdown="span">In Progress: Continue the build-out of the CAMTREES Database website</summary>
-
-**Purpose:**
-Currently in the process of trying to document everything Ken Rosenberry (our current
-database administrator and EpiCollect form designer) knows how to do to keep the
-CAMTREES Database system running.
-
-</details>
-
-
-<!--------------------------------------------------------------------------------------->
-
-<details markdown="1">
-<summary markdown="span">Soon: Get website input from Kim, Eva, Mark et al</summary>
-
-**Purpose:**
-Once this website is more complete, we will need to have CAM staff review it.
-
-</details>
-
-<!--------------------------------------------------------------------------------------->
-
 <p></p>
 
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
 ## EpiCollect
+
+<details markdown="1">
+<summary markdown="span">Soon: Document how to get a list of volunteers with access to EpiCollect</summary>
+
+**Purpose:**
+Volunteers MUST have access to EpiCollect to collect data in the field.
+
+**Tasks:**
+- Go to EpiCollect on the web and login
+- Go to “My Projects”
+- Click the ‘DETAILS’ button for the Tree Maintenance project
+- Click ‘Manage Users’ in the left pane
+- From the ‘Add’ drop down button (click the down arrow), select ‘Export users csv’
+- From your Mac’s downloads folder, double-click the “cam-tree-maintenance_users.zip” file
+- Look inside the extracted “cam-tree-maintenance_users” folder, and open the “all.csv” file
+
+**Notes:**
+- All SQL volunteers should have access to the EpiCollect CAM Tree Maintenance project.
+- Hub Captains, Hub Lieutenants, and some select CAM staff should have access to the 
+  EpiCollect CAM Tree Rain Event project.
+
+</details>
+
+<!--------------------------------------------------------------------------------------->
 
 <details markdown="1">
 <summary markdown="span">Soon: Document how to add a  new 'CAMorg - Site' pair to EpiCollect</summary>
@@ -95,7 +92,7 @@ Would allow users to view photos outside a web browser without having to be logg
 
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-## Python Programming
+## Python
 
 
 <details markdown="1">
@@ -144,7 +141,7 @@ personnel change.
 
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-## CAMTREES Database
+## SQL (CAMTREES Database)
 
 <!--------------------------------------------------------------------------------------->
 
@@ -340,3 +337,33 @@ to the CAMTREES Database would be. So much cleaner and easier to use than DBeave
 
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
+## Website
+
+<!--------------------------------------------------------------------------------------->
+
+<details markdown="1">
+<summary markdown="span">In Progress: Continue the build-out of the CAMTREES Database website</summary>
+
+**Purpose:**
+Currently in the process of trying to document everything Ken Rosenberry (our current
+database administrator and EpiCollect form designer) knows how to do to keep the
+CAMTREES Database system running.
+
+</details>
+
+
+<!--------------------------------------------------------------------------------------->
+
+<details markdown="1">
+<summary markdown="span">Soon: Get website input from Kim, Eva, Mark et al</summary>
+
+**Purpose:**
+Once this website is more complete, we will need to have CAM staff review it.
+
+</details>
+
+<!--------------------------------------------------------------------------------------->
+
+<p></p>
+
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
