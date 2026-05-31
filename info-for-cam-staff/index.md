@@ -1,5 +1,6 @@
 ---
 title: Info for CAM Staff
+layout: default
 nav_order: 4
 ---
 

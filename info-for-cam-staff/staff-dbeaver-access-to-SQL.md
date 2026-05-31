@@ -1,5 +1,6 @@
 ---
 title: DBeaver Access to SQL
+layout: default
 parent: Info for CAM Staff
 ---
 

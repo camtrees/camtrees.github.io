@@ -1,5 +1,6 @@
 ---
 title: Epicollect for Admins
+layout: default
 parent: Info for Database Admins
 ---
 

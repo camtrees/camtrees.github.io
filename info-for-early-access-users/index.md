@@ -1,5 +1,6 @@
 ---
 title: Under Construction!
+layout: default
 nav_order: 2
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: Info for CAM Volunteers
+layout: default
 nav_order: 3
 ---
 
