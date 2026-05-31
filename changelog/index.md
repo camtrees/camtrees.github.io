@@ -40,6 +40,8 @@ Each entry is grouped by month. Within each month, changes are organized by area
 
 ## Changelog Entries
 
+---
+
 <details markdown="1">
 <summary markdown="span"><strong>2026 May</strong></summary>
 
