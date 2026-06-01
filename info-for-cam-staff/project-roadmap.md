@@ -162,6 +162,25 @@ Will assist users to identify and help fill gaps in the data.
 
 <!--------------------------------------------------------------------------------------->
 
+
+<details markdown="1">
+<summary markdown="span">Soon: Add views requested by CAM staff</summary>
+
+**Purpose:**
+Add views that could help CAM staff identify tree issues.
+
+**Possible Views:**
+- tree heights and diameter - with tree age, hub, and site
+- trees in bloom - with hub and site
+- trees producing nuts - with hub and site
+- dead trees - with hub, site, and planting method
+- last 5 dates trees received water 
+
+
+</details>
+
+<!--------------------------------------------------------------------------------------->
+
 <details markdown="1">
 <summary markdown="span">In Progress: Document the process for adding a new CAMorgs, Sites, Hubs, Volunteers, etc</summary>
 
@@ -297,7 +316,7 @@ Perhaps 3 views:
 <summary markdown="span">Future Project: Selected CAM staff members should have controlled write access to database tables</summary>
 
 **Purpose:**
-CaM staff certainly needs to be able to create new volunteers, hubs, CAMorgs, and Sites
+CAM staff needs write access to some CAMTREES Database data.
 
 **Tasks:**
 - Would be most helpful to do this through a web browser versus DBeaver or any other
@@ -312,6 +331,11 @@ CaM staff certainly needs to be able to create new volunteers, hubs, CAMorgs, an
   as the master to using the camorgdatabase@gmail.com as the master
 	- We could then mirror the database from camorgdatabase to ken.rosenberry
   	  instead of our current method
+- Need list of write access capabilities
+	- Create new Volunteers, CAMorgs, Sites, Hubs
+	- Update contact persons in CAMorgs and Sites
+	- Update Hub captains and lieutenants
+	- Update Volunteer info (names, email, phone numbers, hometown, status)
 
 </details>
 
