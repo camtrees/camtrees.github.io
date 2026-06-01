@@ -32,6 +32,32 @@ This web page describes short and long-term projects expected to occur within th
 
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
+## CAM Staff Long-term Desires
+
+<!--------------------------------------------------------------------------------------->
+
+<details markdown="1">
+<summary markdown="span">Not Scheduled: A list of capabilities CAM Staff desire</summary>
+
+**Purpose:**
+This is a list of CAM staff tasks desired to be available or automated
+
+**Tasks:**
+* email volunteers in specific hub(s)
+* list volunteers (name, email, phone) by hub
+
+**Notes:**
+- We do not currently have a means to know or determine in which Hub a volunteers lives
+  or has interest in.
+
+</details>
+
+<!--------------------------------------------------------------------------------------->
+
+<p></p>
+
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
 ## EpiCollect
 
 <details markdown="1">
@@ -174,8 +200,8 @@ Add views that could help CAM staff identify tree issues.
 - trees in bloom - with hub and site
 - trees producing nuts - with hub and site
 - dead trees - with hub, site, and planting method
-- last 5 dates trees received water 
-
+- last 5 dates trees received water
+- sites by year added (this will necessitate creating a new column in the site table)
 
 </details>
 
@@ -395,3 +421,4 @@ Once this website is more complete, we will need to have CAM staff review it.
 <p></p>
 
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
