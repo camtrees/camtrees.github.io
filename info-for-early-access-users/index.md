@@ -8,7 +8,7 @@ nav_order: 2
 
 We are in the very early stages of developing this website. Both the design and the content are still evolving. In the meantime, here are some of the topics and features we expect to include:
 
-- A master To-Do Task List of short- and long-term needs and improvements. This will help everyone involved in the CAMTREES Database project understand current priorities, provide direction, and track progress.
+- A Project Roadmap to help everyone involved in the CAMTREES Database project understand current priorities, provide direction, and track progress.
 - Instructions showing how volunteers use the
 [EpiCollect mobile app](https://five.epicollect.net)
 to collect chestnut tree data in the field.

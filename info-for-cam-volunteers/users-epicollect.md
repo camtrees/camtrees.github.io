@@ -6,12 +6,26 @@ parent: Info for CAM Volunteers
 
 # {{ page.title }}
 
+<center>
+<table border="0" cellpadding="10">
+  <tr>
+    <td valign="top">
+      <img src="../assets/images/website/volunteer-using-epicollect-while-planting-tree.png" alt="volunteer using epicollect while planting a tree" height="500" width="500">
+    </td>
+    <td valign="center">
+      <center><h2>Using the <br> EpiCollect5 <br> Mobile App</h2></center>
+    </td>
+  </tr>
+</table>
+</center>
+
+
 The [EpiCollect5 mobile app](https://five.epicollect.net) is a free and easy-to-use
 mobile data collection platform created by the
 [Centre for Genomic Pathogen Surveillance](https://www.pathogensurveillance.net)
 at Oxford University.
 
-The EpiCollect5 app is currently available for Android (version 10+) and iOS (version 15+).
+The EpiCollect5 app is currently available for iOS (version 15+) and Android (version 10+).
 
 EpiCollect5 can be used to collect data while in the field, even when standing next to a
 chestnut tree without cellular service. If cellular service is available, data can be
@@ -22,7 +36,7 @@ CAM began using the EpiCollect5 mobile app about a year ago. The app has been we
 received by volunteers, who find it easy to use. Data is collected when **planting a new
 tree** and when **recording information about an existing tree**.
 
-Kim Colson has created an extensive [CAM EpiCollect5 Quick Reference Guide](https://camtrees.github.io/assets/cam-epicollect5-quick-reference-guide-1.0.pdf),
+Kim Colson has created an extensive [CAM EpiCollect5 Quick Reference Guide](../assets/cam-epicollect5-quick-reference-guide-1.0.pdf),
 which provides easy-to-follow instructions for using the app in the field.
 
 When collecting tree data with EpiCollect5, you first select the CAM Organization and Tree

@@ -5,7 +5,7 @@ nav_order: 99
 ---
 
 # {{ page.title }}
-_Version: 31.3_
+_Version: June 01.1_
 
 <!-- This content will not appear in the rendered Markdown 
 <details markdown="1">
@@ -62,6 +62,7 @@ Each entry is grouped by month. Within each month, changes are organized by area
 
 ### Website Content
 
+* Added an image to the Epicollect5 for Users page
 * Migrated Kenster’s offline To-Do list into the website.
 * Added initial content for “EpiCollect5 for Users”.
 * Added initial content for “DBeaver Access to SQL”.
@@ -69,6 +70,7 @@ Each entry is grouped by month. Within each month, changes are organized by area
 
 ### Website Infrastructure
 
+* Renamed To-Do Task List page to Project Roadmap
 * Created GitHub Pages repository for CAMTREES Database site.
 * Adopted [Jekyll](https://jekyllrb.com) for site generation.
 * Adopted the [Just the Docs](https://just-the-docs.com) theme.

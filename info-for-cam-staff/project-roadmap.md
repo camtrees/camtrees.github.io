@@ -1,5 +1,5 @@
 ---
-title: ToDo Task List
+title: Project Roadmap
 layout: default
 parent: Info for CAM Staff 
 ---
@@ -23,6 +23,10 @@ Additional details.
 
 </details>
 -->
+
+This web page describes short and long-term projects expected to occur within the next
+8 to 12 months.
+
 
 <p></p>
 
