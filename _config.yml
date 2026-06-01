@@ -4,8 +4,8 @@ description: Everything volunteers and database admins need to know about the CA
 # theme: just-the-docs
 remote_theme: just-the-docs/just-the-docs
 
-# Set the favicon location - not necessary - was for older browsers
-# favicon_ico: "./assets/images/website/favicon.ico"
+# Set the favicon location - not necessary for modern browsers
+# favicon_ico: "./assets/images/website/favicon-256x256.png"
 
 # Our GitHub Pages repository
 url: https://camtrees.github.io
