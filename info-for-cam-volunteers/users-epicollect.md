@@ -21,9 +21,7 @@ parent: Info for CAM Volunteers
 
 
 The [EpiCollect5 mobile app](https://five.epicollect.net) is a free and easy-to-use
-mobile data collection platform created by the
-[Centre for Genomic Pathogen Surveillance](https://www.pathogensurveillance.net)
-at Oxford University.
+mobile data collection platform created by Oxford University.
 
 The EpiCollect5 app is currently available for iOS (version 15+) and Android (version 10+).
 
