@@ -6,14 +6,20 @@ nav_order: 3
 
 # {{ page.title }}
 
-Volunteers are vital to the Chesnuts Across Maine mission. They help with a myriad of duties:
-* Assist in planting trees
-* Water the trees during times of drought
-* Provide periodic tree health assessments
+Volunteers are vital to the Chesnuts Across Maine mission.
+
+Most volunteers assist with
+* Planting trees
+* Watering trees in times of drought
+* Performing periodic tree health assessments
 
 Volunteers will use EpiCollect5, a mobile phone app, to record data while in the field.
 That data will get uploaded to an EpiCollect server. From there, the data will flow into
 the CAMTREES Database system and become available to CAM staff for further analysis.
+
+Another group of volunteers are what is know as *Chestnut Chasers* who are trained
+to help find, revisit and document American chestnuts around the state. These Volunteers
+will also use the EpiCollect5 mobile app to record data about these Wild trees.
 
 ## CAM Volunteer Web Pages
 
