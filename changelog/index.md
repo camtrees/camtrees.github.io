@@ -5,7 +5,7 @@ nav_order: 99
 ---
 
 # {{ page.title }}
-_Version: June 05.1_
+_Version: June 05.2_
 
 <!-- This content will not appear in the rendered Markdown 
 <details markdown="1">

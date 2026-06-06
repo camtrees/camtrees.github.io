@@ -1,5 +1,5 @@
 ---
-title: PostgreSQL for Admins
+title: PostgreSQL
 layout: default
 parent: Info for Database Admins
 ---

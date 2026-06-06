@@ -1,5 +1,5 @@
 ---
-title: Google Services for Admins
+title: Google Services
 layout: default
 parent: Info for Database Admins
 ---

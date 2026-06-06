@@ -1,5 +1,5 @@
 ---
-title: GitHub for Admins
+title: GitHub
 layout: default
 parent: Info for Database Admins
 ---

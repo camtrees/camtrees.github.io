@@ -1,5 +1,5 @@
 ---
-title: Python for Admins
+title: Python
 layout: default
 parent: Info for Database Admins
 ---

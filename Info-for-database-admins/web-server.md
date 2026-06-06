@@ -1,5 +1,5 @@
 ---
-title: Web Server for Admins
+title: Web Server
 layout: default
 parent: Info for Database Admins
 ---

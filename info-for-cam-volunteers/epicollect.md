@@ -1,5 +1,5 @@
 ---
-title: Epicollect5 for Users
+title: Epicollect5
 layout: default
 parent: Info for CAM Volunteers
 ---

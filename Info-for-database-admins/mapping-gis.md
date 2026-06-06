@@ -1,5 +1,5 @@
 ---
-title: Mapping / GIS for Admins
+title: Mapping / GIS
 layout: default
 parent: Info for Database Admins
 ---
