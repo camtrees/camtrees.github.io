@@ -35,6 +35,3 @@ The following excerpt from the Chestnuts Across Maine Project website provides a
 > Our vision is that by 2035 anyone who wishes to see a live American chestnut tree can find one less than an hour drive from home. We will see chestnut trees thriving within a 10 minute walk of every Maine school. We will establish a network of savvy and experienced conservation partners to help us to test the next blight tolerant chestnuts.
 
 > We want to make it easy for TACF members to engage with chestnut restoration wherever they live in Maine. We intend to build communities around groves of chestnuts where Mainers will gather in common cause to benefit the ecological and social wealth of their communities.
-
-{: .note}
-Once completed, the CAMTREES Database website will provide valuable information for both CAM volunteers and database administrators.
