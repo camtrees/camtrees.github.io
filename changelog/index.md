@@ -1,11 +1,11 @@
 ---
 title: CAMTREES Database Changelog
 layout: default
-nav_order: 99
+nav_order: 98
 ---
 
 # {{ page.title }}
-_Version: June 06.1_
+_Version: June 06.2_
 
 <!-- This content will not appear in the rendered Markdown 
 <details markdown="1">
@@ -53,6 +53,10 @@ Each entry is grouped by month. Within each month, changes are organized by area
 ### SQL Tables
 
 * Work with Marc to get MAFP - Field NE of Building Site data imported from EpiCollect
+
+### Website Content
+
+* Created the Using ChatGPT to Create WebSite Illustrations web page 
 
 ### Website Infrastructure
 

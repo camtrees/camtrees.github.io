@@ -27,3 +27,6 @@ vital to supporting CAM's mission.
 All three groups of volunteers will use the EpiCollect5 mobile phone app, to record data.
 That data will get uploaded to an EpiCollect server. From there, the data will flow into
 the CAMTREES Database system and become available to CAM staff for further analysis.
+
+The [CAM Tree Locations](https://www.google.com/maps/d/edit?mid=1BnudQOUMWyFeMCpp1HV90hQPCFrWSx0&ll=44.44387186421211%2C-70.31670421000621&z=9)
+Google Map shows the locations of all CAM Chestnut Trees planted to date. You can click a tree's pin to see more detail for that tree.
