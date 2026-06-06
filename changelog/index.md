@@ -5,7 +5,7 @@ nav_order: 99
 ---
 
 # {{ page.title }}
-_Version: June 01.1_
+_Version: June 05.1_
 
 <!-- This content will not appear in the rendered Markdown 
 <details markdown="1">
@@ -32,13 +32,30 @@ Note:
 </details>
 -->
 
-This changelog documents updates to the CAMTREES Database, and its supporting systems
-(EpiCollect, GitHub, Google, Python, SQL, and this website).
+This changelog documents updates to the CAMTREES Database, and its supporting systems:
+EpiCollect, GitHub, Google, Python, SQL, and this website.
 Each entry is grouped by month. Within each month, changes are organized by area.
 
 ---
 
 ## Changelog Entries
+
+---
+
+<details markdown="1">
+<summary markdown="span"><strong>2026 June</strong></summary>
+
+### SQL Tables
+
+* Work with Marc to get MAFP - Field NE of Building Site data imported from EpiCollect
+
+### Website Infrastructure
+
+* Project Roadmap now listed with Major Headers as Timeline and Sub Headers as Task Category
+* Added ChatGPT generated website illustrations
+* Added Database Admin skeleton pages for EpiCollect, GitHub, PostgreSQL, Python, etc.
+
+</details>
 
 ---
 

@@ -6,6 +6,8 @@ nav_order: 3
 
 # {{ page.title }}
 
+<img src="../assets/images/website/from-volunteer-to-researcher.png" alt="Showing the data flow from field collection to researcher computer" height="464" width="846">
+
 Volunteers are vital to the Chesnuts Across Maine mission.
 
 Most volunteers assist with

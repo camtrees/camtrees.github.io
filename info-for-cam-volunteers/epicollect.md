@@ -10,7 +10,7 @@ parent: Info for CAM Volunteers
 <table border="0" cellpadding="10">
   <tr>
     <td valign="top">
-      <img src="../assets/images/website/volunteer-using-epicollect-while-planting-tree.png" alt="volunteer using epicollect while planting a tree" height="500" width="500">
+      <img src="../assets/images/website/volunteer-using-epicollect.png" alt="Volunteer using EpiCollect while planting a tree" height="627">
     </td>
     <td valign="center">
       <center><h2>Using the <br> EpiCollect5 <br> Mobile App</h2></center>

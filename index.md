@@ -21,7 +21,7 @@ description: CAMTREES Database is a PostgreSQL database system created for the C
 -->
 
 
-<img src="./assets/images/website/home-1.png" alt="Girl planting tree, sending data to cloud" height="464" width="846">
+<img src="./assets/images/website/planting-a-tree.png" alt="Volunteers hiking up a hill to plant a tree" height="464" width="846">
 
 The CAMTREES Database exists to further the goals of the
 [Chestnuts Across Maine (CAM) chapter](https://tacf.org/me/chestnuts-across-maine/) of
