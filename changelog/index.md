@@ -47,7 +47,7 @@ Each entry is grouped by month. Within each month, changes are organized by area
 
 ### Python
 
-* Allow for EpiCollect MAP_INDEX when retrieving data
+* Allow for specification of EpiCollect MAP_INDEX when retrieving data
 
 
 ### SQL Tables
