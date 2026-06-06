@@ -5,7 +5,7 @@ nav_order: 99
 ---
 
 # {{ page.title }}
-_Version: June 05.2_
+_Version: June 06.1_
 
 <!-- This content will not appear in the rendered Markdown 
 <details markdown="1">
@@ -44,6 +44,11 @@ Each entry is grouped by month. Within each month, changes are organized by area
 
 <details markdown="1">
 <summary markdown="span"><strong>2026 June</strong></summary>
+
+### Python
+
+* Allow for EpiCollect MAP_INDEX when retrieving data
+
 
 ### SQL Tables
 
