@@ -30,12 +30,9 @@ chestnut tree without cellular service. If cellular service is available, data c
 uploaded immediately to the EpiCollect servers. Otherwise, the data can be uploaded later
 when an internet connection becomes available.
 
-CAM began using the EpiCollect5 mobile app about a year ago. The app has been well
+CAM began using the EpiCollect5 mobile app in the Spring of 2025. The app has been well
 received by volunteers, who find it easy to use. Data is collected when **planting a new
 tree** and when **recording information about an existing tree**.
-
-Kim Colson has created an extensive [CAM EpiCollect5 Quick Reference Guide](../assets/cam-epicollect5-quick-reference-guide-1.0.pdf),
-which provides easy-to-follow instructions for using the app in the field.
 
 When collecting tree data with EpiCollect5, you first select the CAM Organization and Tree
 Site. You then follow one of six available data-entry pathways. The following table
@@ -49,6 +46,10 @@ describes each pathway and its intended use.
 | **ALL**      | Recording care actions (watering, weeding, etc.) performed on all trees at a site |
 | **WildCAM**  | Recording information about a wild tree not yet known to TACF                     |
 | **WildTACF** | Recording information about a wild tree already known to TACF                     |
+
+Kim Colson has created an extensive [CAM EpiCollect5 Quick Reference Guide](../assets/cam-epicollect5-quick-reference-guide-1.0.pdf),
+which provides easy-to-follow instructions for using the app in the field.
+
 
 #### Details of the Data Collected for Each Pathway
 
