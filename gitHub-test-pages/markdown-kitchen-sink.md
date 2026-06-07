@@ -22,7 +22,7 @@ jtd.addEvent(toggleDarkMode, 'click', function(){
 Text can be **bold**, _italic_, or ~~strikethrough~~.
 
 
-[Link to another page]({% link /about/chatgpt-interaction.md %}).
+[Link to another page]({% link /about/chatgpt-interaction.html %}).
 
 There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
 
