@@ -416,7 +416,7 @@ to the CAMTREES Database would be. So much cleaner and easier to use than DBeave
 	- Quite easy to create a website in very little time
 - Given $$ constraints, research these
 	- <a href="https://www.nocobase.com/en/blog/6-no-code-tools-supporting-postgresql" target="_blank">6 Best No-Code Tools for PostgreSQL</a>
-	- <a href="https://www.appsmith.com" target="_blank">.Appsmith..</a>
+	- <a href="https://www.appsmith.com" target="_blank">Appsmith</a>
 	- <a href="https://teable.ai" target="_blank">Teable</a>
 	- <a href="https://www.youtube.com/watch?v=wE_Oafo1bx0_" target="_blank">UI Bakery</a>
 
