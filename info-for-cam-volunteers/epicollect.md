@@ -20,7 +20,8 @@ parent: Info for CAM Volunteers
 </center>
 
 
-The [EpiCollect5 mobile app](https://five.epicollect.net) is a free and easy-to-use
+The <a href="https://five.epicollect.net" target="_blank">EpiCollect5 mobile app</a>
+is a free and easy-to-use
 mobile data collection platform created by Oxford University.
 
 The EpiCollect5 app is currently available for iOS (version 15+) and Android (version 10+).
@@ -47,7 +48,9 @@ describes each pathway and its intended use.
 | **WildCAM**  | Recording information about a wild tree not yet known to TACF                     |
 | **WildTACF** | Recording information about a wild tree already known to TACF                     |
 
-Kim Colson has created an extensive [CAM EpiCollect5 Quick Reference Guide](../assets/cam-epicollect5-quick-reference-guide-1.0.pdf),
+Kim Colson has created an extensive
+<a href="https://camtrees.github.io/assets/cam-epicollect5-quick-reference-guide-1.0.pdf" target="_blank">
+CAM EpiCollect5 Quick Reference Guide</a>
 which provides easy-to-follow instructions for using the app in the field.
 
 
