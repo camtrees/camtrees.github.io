@@ -25,7 +25,8 @@ DBeaver is currently the preferred database management tool for the CAMTREES pro
 
 #### Topics to Demonstrate When Introducing DBeaver
 
-1. Download the [DBeaver Community Edition](https://dbeaver.io/download/).
+1. Download the
+<a href="https://dbeaver.io/download/" target="_blank">DBeaver Community Edition</a>.
 
 2. Create a database connection to the CAMTREES database. The following connection parameters are required and should be kept private:
 

@@ -98,8 +98,8 @@ Each entry is grouped by month. Within each month, changes are organized by area
 
 * Renamed To-Do Task List page to Project Roadmap
 * Created GitHub Pages repository for CAMTREES Database site.
-* Adopted [Jekyll](https://jekyllrb.com) for site generation.
-* Adopted the [Just the Docs](https://just-the-docs.com) theme.
+* Adopted <a href="https://jekyllrb.com" target="_blank">Jekyll</a> for site generation.
+* Adopted the <a href="https://just-the-docs.com" target="_blank">Just the Docs</a> theme.
 * Created initial skeleton pages.
 * Added version tracking to detect rebuilds.
 * Created favicons for browser and Apple devices.

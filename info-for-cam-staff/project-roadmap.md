@@ -415,10 +415,10 @@ to the CAMTREES Database would be. So much cleaner and easier to use than DBeave
 	- Has nice filtering capabilities of tables (dropdown menus or text filtering)
 	- Quite easy to create a website in very little time
 - Given $$ constraints, research these
-	- [6 Best No-Code Tools for PostgreSQL](https://www.nocobase.com/en/blog/6-no-code-tools-supporting-postgresql)
-	- [Appsmith](https://www.appsmith.com)
-	- [Teable](https://teable.ai)
-	- [UI Bakery](https://www.youtube.com/watch?v=wE_Oafo1bx0_)
+	- <a href="https://www.nocobase.com/en/blog/6-no-code-tools-supporting-postgresql" target="_blank">6 Best No-Code Tools for PostgreSQL</a>
+	- <a href="https://www.appsmith.com" target="_blank">.Appsmith..</a>
+	- <a href="https://teable.ai" target="_blank">Teable</a>
+	- <a href="https://www.youtube.com/watch?v=wE_Oafo1bx0_" target="_blank">UI Bakery</a>
 
 </details>
 
