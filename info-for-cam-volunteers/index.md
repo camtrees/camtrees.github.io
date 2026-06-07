@@ -28,5 +28,5 @@ All three groups of volunteers will use the EpiCollect5 mobile phone app, to rec
 That data will get uploaded to an EpiCollect server. From there, the data will flow into
 the CAMTREES Database system and become available to CAM staff for further analysis.
 
-The [CAM Tree Locations](https://www.google.com/maps/d/edit?mid=1BnudQOUMWyFeMCpp1HV90hQPCFrWSx0&ll=44.44387186421211%2C-70.31670421000621&z=9)
-Google Map shows the locations of all CAM Chestnut Trees planted to date. You can click a tree's pin to see more detail for that tree.
+For a view similar to what the woman pictured above is viewing visit the [CAM Tree Locations](https://www.google.com/maps/d/edit?mid=1BnudQOUMWyFeMCpp1HV90hQPCFrWSx0&ll=44.44387186421211%2C-70.31670421000621&z=9)
+Google Map page. It shows the locations of all CAM Chestnut Trees planted to date. On that page you can click a tree's pin to see more detail for that tree.
