@@ -1,5 +1,6 @@
 ---
 title: Using ChatGPT to Create WebSite Illustrations
+parent: About the CAMTREES Database Website
 nav_order: 97
 ---
 
