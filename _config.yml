@@ -10,6 +10,9 @@ remote_theme: just-the-docs/just-the-docs
 # Our GitHub Pages repository
 url: https://camtrees.github.io
 
+# Open external links in new new tabs
+opens_in_new_tab: true
+
 # We don't want any auxiliary links shown at the top right on all pages
 # aux_links:
 #   Template Repository: https://github.com/just-the-docs/just-the-docs-template
