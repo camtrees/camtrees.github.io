@@ -49,7 +49,8 @@ Additional details.
 # {{ page.title }}
 
 {: .warning }
-Roadmap items are listed in approximate priority order and timing estimates may change as project needs evolve.
+Roadmap items are listed in approximate priority order.
+<br>Timing estimates may change as project needs evolve.
 
 <p></p>
 
