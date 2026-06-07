@@ -5,7 +5,7 @@ nav_order: 98
 ---
 
 # {{ page.title }}
-_Version: June 06.5_
+_Version: June 07 edit # 1_
 
 <!-- This content will not appear in the rendered Markdown 
 <details markdown="1">
@@ -44,6 +44,10 @@ Each entry is grouped by month. Within each month, changes are organized by area
 
 <details markdown="1">
 <summary markdown="span"><strong>2026 June</strong></summary>
+
+### EpiCollect
+
+* Edit CLEW - Franklin Park tree numbers 100 and 200 to be 005 and 006
 
 ### Python
 
