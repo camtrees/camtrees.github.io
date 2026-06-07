@@ -11,7 +11,7 @@ remote_theme: just-the-docs/just-the-docs
 url: https://camtrees.github.io
 
 # Open external links in new new tabs
-opens_in_new_tab: true
+nav_external_links_new_tab: true: true
 
 # We don't want any auxiliary links shown at the top right on all pages
 # aux_links:
