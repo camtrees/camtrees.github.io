@@ -15,5 +15,4 @@ _site/
 vendor/
 
 # Ignore Mac folder view
-.DS_Store
-.DS_Store
+**/.DS_Store
