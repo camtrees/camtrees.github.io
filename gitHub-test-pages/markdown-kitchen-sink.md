@@ -21,7 +21,11 @@ jtd.addEvent(toggleDarkMode, 'click', function(){
 
 Text can be **bold**, _italic_, or ~~strikethrough~~.
 
-[Link to another page]({{site.baseurl}}/about/chatgpt-interaction.md).
+[Link to another page]({{site.baseurl}}/).
+
+<a href="/about/chatgpt-interaction.html">Using ChatGPT to Create WebSite Illustrations</a>
+
+There should be whitespace between paragraphs.
 
 There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
 
