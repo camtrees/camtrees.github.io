@@ -21,9 +21,9 @@ jtd.addEvent(toggleDarkMode, 'click', function(){
 
 Text can be **bold**, _italic_, or ~~strikethrough~~.
 
-[Link to another page]({{site.baseurl}}/).
+[Link to website root]({{site.baseurl}}/).
 
-<a href="/about/chatgpt-interaction.html">Using ChatGPT to Create WebSite Illustrations</a>
+Another Link to: <a href="/about/chatgpt-interaction.html">Using ChatGPT to Create WebSite Illustrations</a>
 
 There should be whitespace between paragraphs.
 
