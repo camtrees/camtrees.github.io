@@ -6,7 +6,7 @@ nav_order: 97
 
 # {{ page.title }}
 
-This is my interaction with ChatGPT to assist with the creation of a set of illustrations used for this CAMTREES Database Website.
+This is my interaction with ChatGPT to assist with the creation of the illustrations used for this CAMTREES Database Website.
 
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 
