@@ -5,10 +5,11 @@ nav_order: 99
 
 # {{ page.title }}
 
-This website was created by [Kenster Rosenberry](mailto:ken.rosenberry@gmail.com).
+This website was created by 
+<a href="https://about.me/kenster/" target="_blank">Kenster Rosenberry</a>.
 Illustrations were conceptualized by Kenster then further refined and brought to
 life by
-<a href="https://chatgpt.com/images/" target="_blank">ChatGPT's Image Generator</a>
+<a href="https://chatgpt.com/images/" target="_blank">ChatGPT's Image Generator</a>.
 
 My experience using ChatGPT to create the illustrations used on this website blew me away!
 I found the experience quite similar to working with a real human designer/artist. What
