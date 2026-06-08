@@ -5,7 +5,7 @@ nav_order: 98
 ---
 
 # {{ page.title }}
-_Version: June 08 edit # 1_
+_Version: June 08 edit # 2_
 
 <!-- This content will not appear in the rendered Markdown 
 <details markdown="1">
@@ -47,7 +47,7 @@ Each entry is grouped by month. Within each month, changes are organized by area
 
 ### EpiCollect
 
-* Edit CLEW - Franklin Park tree numbers 100 and 200 to be 005 and 006
+* Edit CLEW - Franklin Park tree numbers 100 and 200 to be 006 and 005
 
 ### Python
 
@@ -57,6 +57,11 @@ Each entry is grouped by month. Within each month, changes are organized by area
 ### SQL Tables
 
 * Work with Marc to get MAFP - Field NE of Building Site data imported from EpiCollect
+
+### SQL Views
+
+* Added cam_export_tree_parent_type_for_epicollect
+* Added cam_export_volunteer_email_for_epicollect
 
 ### Website Content
 
