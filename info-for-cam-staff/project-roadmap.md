@@ -113,7 +113,6 @@ Website: Document the process for adding a new CAMorgs, Sites, Hubs, Volunteers,
 - Name: The Hub name
 - Captain: The Hub captain
 - Lieutenant: The Hub lieutenant
-- Site Name: Name of a site that is contained within the Hub
 
 **Volunteers:**
 - first_name: first name
