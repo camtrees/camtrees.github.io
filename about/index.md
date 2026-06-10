@@ -3,11 +3,13 @@ title: About the CAMTREES Database Website
 nav_order: 99
 ---
 
+<img src="../assets/images/website/mountainview-placard.png" alt="Image showing CAMTREES Volunteer consulting a Project Roadmap map" height="512" width="768">
+
 # {{ page.title }}
 
 This website was created by 
 <a href="https://about.me/kenster/" target="_blank">Kenster Rosenberry</a>.
-Illustrations were conceptualized by Kenster then further refined and brought to
+Illustrations, like the one you see above, were conceptualized by Kenster then further refined and brought to
 life by
 <a href="https://chatgpt.com/images/" target="_blank">ChatGPT's Image Generator</a>.
 
