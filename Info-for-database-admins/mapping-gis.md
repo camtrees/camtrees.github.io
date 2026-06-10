@@ -8,10 +8,10 @@ parent: Info for Database Admins
 <table border="0" cellpadding="10">
   <tr>
     <td valign="top">
-		<img src="../assets/images/website/puzzle-piece-google-services.png" alt="A Mapping / GIS jigsaw puzzle piece" height="418">
+		<img src="../assets/images/website/puzzle-piece-mapping-gis.png" alt="A Mapping / GIS jigsaw puzzle piece" height="418">
     </td>
     <td valign="center">
-      <center><h2>CAMTREES<br>Database<br>and<br>Mapping / GIS</h2></center>
+      <center><h2>CAMTREES<br>Database<br>and<br>Mapping/GIS</h2></center>
     </td>
   </tr>
 </table>

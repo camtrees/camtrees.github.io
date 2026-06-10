@@ -4,8 +4,10 @@ layout: default
 nav_order: 98
 ---
 
+<img src="../assets/images/website/changelog.png" alt="Image showing CAMTREES Volunteer consulting a Project Roadmap map" height="512" width="768">
+
 # {{ page.title }}
-_Version: June 10 edit # 1_
+_Version: June 10 edit # 2_
 
 <!-- This content will not appear in the rendered Markdown 
 <details markdown="1">
@@ -70,6 +72,7 @@ Each entry is grouped by month. Within each month, changes are organized by area
 
 ### Website Infrastructure
 
+* Added ChatGPT Illustrations for more pages
 * Project Roadmap now listed with Major Headers as Timeline and Sub Headers as Task Category
 * Added ChatGPT generated website illustrations
 * Added Database Admin skeleton pages for EpiCollect, GitHub, PostgreSQL, Python, etc.
