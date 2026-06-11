@@ -1,5 +1,6 @@
 ---
 title: Markdown Kitchen Sink
+layout: default
 parent: GitHub Test Pages
 ---
 

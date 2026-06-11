@@ -1,5 +1,6 @@
 ---
 title: GitHub Test Pages
+layout: default
 nav_order: 6
 ---
 
