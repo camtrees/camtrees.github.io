@@ -1,8 +1,8 @@
 title: CAMTREES Database
 description: Everything volunteers and database admins need to know about the CAMTREES Database.
 
-# theme: just-the-docs
-remote_theme: just-the-docs/just-the-docs
+theme: just-the-docs
+# remote_theme: just-the-docs/just-the-docs
 
 # Set the favicon location - not necessary for modern browsers
 # favicon_ico: "./assets/images/website/favicon-256x256.png"
