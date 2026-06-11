@@ -1,5 +1,6 @@
 ---
 title: About the CAMTREES Database Website
+layout: default
 nav_order: 99
 ---
 
