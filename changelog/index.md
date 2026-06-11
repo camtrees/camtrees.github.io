@@ -7,7 +7,7 @@ nav_order: 98
 <img src="../assets/images/website/changelog.png" alt="Image showing CAMTREES Volunteer consulting a Project Roadmap map" height="512" width="768">
 
 # {{ page.title }}
-_Version: June 10 edit # 2_
+_Version: June 10 edit # 4_
 
 <!-- This content will not appear in the rendered Markdown 
 <details markdown="1">
@@ -49,6 +49,7 @@ Each entry is grouped by month. Within each month, changes are organized by area
 
 ### EpiCollect
 
+* Add "Collect LIVE Data? Just TESTING?" question for WildCAM and WildTACF trees
 * Edit CLEW - Franklin Park tree numbers 100 and 200 to be 006 and 005
 
 ### Python
@@ -68,14 +69,14 @@ Each entry is grouped by month. Within each month, changes are organized by area
 
 ### Website Content
 
-* Created the Using ChatGPT to Create WebSite Illustrations web page 
+* Created the Using ChatGPT to Create WebSite Illustrations web page
 
 ### Website Infrastructure
 
 * Added ChatGPT Illustrations for more pages
 * Project Roadmap now listed with Major Headers as Timeline and Sub Headers as Task Category
 * Added ChatGPT generated website illustrations
-* Added Database Admin skeleton pages for EpiCollect, GitHub, PostgreSQL, Python, etc.
+* Added Database Admin skeleton pages for EpiCollect, GitHub, PostgreSQL, Python, etc
 
 </details>
 
@@ -86,39 +87,39 @@ Each entry is grouped by month. Within each month, changes are organized by area
 
 ### SQL Tables
 
-* Added site-level caretaker IDs.
-* Removed tree-level primary caretakers in favor of site-level defaults.
-* Added GPS coordinates to Site table for mapping support.
-* Introduced `tree_primary_caretaker` and `tree_secondary_caretaker` fields.
-* Enabled fallback caretaker logic in `cam_trees` view.
+* Added site-level caretaker IDs
+* Removed tree-level primary caretakers in favor of site-level defaults
+* Added GPS coordinates to Site table for mapping support
+* Introduced `tree_primary_caretaker` and `tree_secondary_caretaker` fields
+* Enabled fallback caretaker logic in `cam_trees` view
 
 ### SQL Views
 
-* Added `gis_map_view` column to `cam_sites`.
-* Updated `cam_count_next_tree_number_for_planting` to include all CAM orgs.
-* Default tree numbering now starts at 1 for new orgs.
-* Moved `gis_map_view` to the first column in `cam_sites` and `cam_trees` views to simplify map selection.
+* Added `gis_map_view` column to `cam_sites`
+* Updated `cam_count_next_tree_number_for_planting` to include all CAM orgs
+* Default tree numbering now starts at 1 for new orgs
+* Moved `gis_map_view` to the first column in `cam_sites` and `cam_trees` views to simplify map selection
 
 ### Website Content
 
 * Added an image to the Epicollect5 for Users page
-* Migrated Kenster’s offline To-Do list into the website.
-* Added initial content for “EpiCollect5 for Users”.
-* Added initial content for “DBeaver Access to SQL”.
-* Added changelog entries previously stored in Excel and early SQL systems.
+* Migrated Kenster’s offline To-Do list into the website
+* Added initial content for “EpiCollect5 for Users”
+* Added initial content for “DBeaver Access to SQL”
+* Added changelog entries previously stored in Excel and early SQL systems
 
 ### Website Infrastructure
 
 * Renamed To-Do Task List page to Project Roadmap
-* Created GitHub Pages repository for CAMTREES Database site.
-* Adopted <a href="https://jekyllrb.com" target="_blank">Jekyll</a> for site generation.
-* Adopted the <a href="https://just-the-docs.com" target="_blank">Just the Docs</a> theme.
-* Created initial skeleton pages.
-* Added version tracking to detect rebuilds.
-* Created favicons for browser and Apple devices.
-* Moved images directory into the assets folder.
-* Improved To-Do list formatting for mobile readability.
-* Improved To-Do Task List readability using collapsible sections, removing the need for numbering.
+* Created GitHub Pages repository for CAMTREES Database site
+* Adopted <a href="https://jekyllrb.com" target="_blank">Jekyll</a> for site generation
+* Adopted the <a href="https://just-the-docs.com" target="_blank">Just the Docs</a> theme
+* Created initial skeleton pages
+* Added version tracking to detect rebuilds
+* Created favicons for browser and Apple devices
+* Moved images directory into the assets folder
+* Improved To-Do list formatting for mobile readability
+* Improved To-Do Task List readability using collapsible sections, removing the need for numbering
 
 </details>
 
