@@ -12,7 +12,7 @@ This is my interaction with ChatGPT to assist with the creation of the illustrat
 
 **ME:** I would like an illustration to be used for a web page. I want three sections to the drawing. On the left I want woman kneeling next to a newly planted chestnut tree seedling. She is extending her phone towards the base of the tree. A watering can is nearby. A think dashed line/arrow points up to the middle of the drawing which shows a database image in a cloud. And the two words “CAMTREES Database” under the cloud. One word per line. There is another thick dashed line/arrow pointing down to the third part of the image which shows a woman sitting at a desk in front of her computer screen on which there is a map of the state of Maine with dots scattered across the state representing places where trees have been planted.
 
-**NOTE:** My typo for the line on the left, a “think” line instead of a “thin” line. But ChatGPT used a nice “thin” line like I really wanted. Also note I asked for a “thick” line on the right. The first ChatGPT generated image dutifully had a thick line. Which didn’t really work since the line on the left was thin. So, I asked for the thick line to be changed to the same weight as the thin line on the left. This is what ChatGPT then generated. Much more of what I had originally wanted.
+*NOTE:* My typo for the line on the left, a “think” line instead of a “thin” line. But ChatGPT used a nice “thin” line like I really wanted. Also note I asked for a “thick” line on the right. The first ChatGPT generated image dutifully had a thick line. Which didn’t really work since the line on the left was thin. So, I asked for the thick line to be changed to the same weight as the thin line on the left. This is what ChatGPT then generated. Much more of what I had originally wanted.
 
 <img src="../assets/images/website/from-volunteer-to-researcher.png" alt="Showing the data flow from field collection to researcher computer" height="464" width="846">
 
@@ -166,11 +166,11 @@ I'm glad we were able to build such a consistent set of illustrations for the si
 
 Another RoadMap possibility I got when I asked for one…
 
-<img src="../assets/images/website/not-used/web-services-placard.png" alt="Image showing CAMTREES Volunteer consulting a Project Roadmap map" height="512" width="768">
+<img src="../assets/images/website/mountainview-placard.png" alt="Image showing CAMTREES Volunteer consulting a Project Roadmap map" height="512" width="768">
 
-I like this image too. I particularly like the presence of the notepad/pen and binoculars. 
+I like this image too so I decided to use it at the top of the About the CAMTREES Database Website webpage. I particularly like the presence of the notepad/pen and binoculars showing interest documenting the volunteer's surroundings. 
 
-But I really liked the first ‘Roadmap’ illustration even though it evolved from a typo. Maybe I especially like it *because* it sprung to life from a typo!
+But I decided to use the first ‘Roadmap’ illustration even though it evolved from a typo. Maybe I especially like it *because* it sprung to life from a typo!
 
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 
