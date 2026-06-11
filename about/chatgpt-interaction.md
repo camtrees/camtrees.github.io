@@ -141,7 +141,7 @@ I repeated this query for all the other puzzle pieces at the bottom of the jigsa
 
 **ME:** I’d like another illustration for use at the top of a Project Roadmap page. Perhaps a rectangular image would work best. I’d like another illustration image in the same style as our previous images using the same color pallet. And with the same woman volunteer. This time I’d like her to be hiking on a trail with her CAMTREES Volunteer backpack on. She comes to a girl in the trail and she doesn’t know which way to go. So she takes out her CAMTREES Database Project Roadmap map, unfolds it and consults it for confirmation on which direction she will head.
 
-NOTE: When I said that she comes to a “girl in the trail”, I really meant to say she comes to a “fork in the trail”. But I obviously mistyped “fork” and auto-correct changed it to “girl”. Note how close “fork” and “girl” are on the keyboard! But, I actually liked the image of the seasoned volunteer helping the next generation find their way. So, I decided to keep this one as is.
+*NOTE:* When I said that she comes to a “girl in the trail”, I really meant to say she comes to a “fork in the trail”. But I obviously mistyped “fork” and auto-correct changed it to “girl”. Note how close “fork” and “girl” are on the keyboard! But, I actually liked the image of the seasoned volunteer helping the next generation find their way. So, I decided to keep this one as is.
 
 <img src="../assets/images/website/project-roadmap.png" alt="Image showing CAMTREES Volunteer consulting a Project Roadmap map" height="512" width="768">
 
