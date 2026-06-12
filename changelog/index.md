@@ -7,13 +7,13 @@ nav_order: 98
 <img src="../assets/images/website/changelog.png" alt="Image showing CAMTREES Volunteer consulting a Project Roadmap map" height="512" width="768">
 
 # {{ page.title }}
-_Version: June 10 edit # 4_
+_Version: June 12 edit # 1_
 
 <!-- This content will not appear in the rendered Markdown 
 <details markdown="1">
-<summary markdown="span"><strong>YYYY-MM-DD</strong></summary>
+<summary markdown="span"><strong>YYYY Month</strong></summary>
 
-### Area (SQL / Website / EpiCollect)
+### Area (EpiCollect / GitHub / Python / SQL / Website)
 ### EpiCollect
 ### GitHub
 ### Python
@@ -22,13 +22,16 @@ _Version: June 10 edit # 4_
 ### SQL Hosting
 ### SQL Tables
 ### SQL Views
-### Website
+### Website Content
+### Website Infrastructure
+
 * Change/Impact/Notes
 
 Note:
+
 * All timestamps use ISO format (`YYYY-MM-DD`) for consistency.
-* Each entry should be immutable once published.
-* New entries should be appended at the top.
+* Each entry should be mostly immutable once published.
+* New entries should be appended at the top of each section.
 * Keep descriptions short, factual, and action-oriented.
 
 </details>
@@ -56,10 +59,12 @@ Each entry is grouped by month. Within each month, changes are organized by area
 
 * Allow for specification of EpiCollect MAP_INDEX when retrieving data
 
+### SQL Hosting
+* Master CAMTREES Database is now under the CamOrgDatabase@gmail.com Neon User
 
 ### SQL Tables
 
-* Work with Marc to get MAFP - Field NE of Building Site data imported from EpiCollect
+* Worked with Marc to get MAFP - Field NE of Building Site data imported from EpiCollect
 
 ### SQL Views
 
