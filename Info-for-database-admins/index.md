@@ -4,7 +4,7 @@ layout: default
 nav_order: 5
 ---
 
-<img src="../assets/images/website/jigsaw-puzzle.png" alt="Jigsaw puzzle showing cloud services used in the support of the CAMTREES Database Project" height="627" width="1254">
+<img src="../assets/images/website/jigsaw-puzzle.png" alt="Jigsaw puzzle showing cloud services used in the support of the CAMTREES Database Project" height="512" width="828">
 
 # {{ page.title }}
 

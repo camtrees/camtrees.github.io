@@ -4,7 +4,7 @@ layout: default
 nav_order: 99
 ---
 
-<img src="../assets/images/website/mountainview-placard.png" alt="Image showing CAMTREES Volunteer consulting a Project Roadmap map" height="512" width="768">
+<img src="../assets/images/website/mountainview-placard.png" alt="CAMTREE Volunteer consulting a Project Roadmap map" height="512" width="828">
 
 # {{ page.title }}
 
