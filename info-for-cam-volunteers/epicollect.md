@@ -35,9 +35,23 @@ CAM began using the EpiCollect5 mobile app in the Spring of 2025. The app has be
 received by volunteers, who find it easy to use. Data is collected when **planting a new
 tree** and when **recording information about an existing tree**.
 
-When collecting tree data with EpiCollect5, you first select the CAM Organization and Tree
-Site. You then follow one of six available data-entry pathways. The following table
-describes each pathway and its intended use.
+Prior to going out into the field with the EpiCollect5 app, you should follow these steps
+to assure your EpiCollect phone app has the latest form (sets of questions) loaded. It is
+critical to perform these steps when you have internet connectivity.
+
+1. Launch EpiCollect
+1. If you are NOT at the Project Selection Screen that allows you to select the
+   ‘CAM Tree Maintenance’ project
+	* Click the ‘< Projects’ button in the top left of the screen until you get back to
+	  the Project Selection Screen
+1. Click the ‘CAM Tree Maintenance’ project
+	* If you see a dialog that says the project form has been updated, click the ‘OK’
+	  button. Click ‘OK’ again when it tells you that the form has been updated.
+1. Click the ‘< Projects’ button again to go back to the Project Selection screen.
+
+Once out in the field, as you collect tree data with EpiCollect5, you will first select
+the CAM Organization and Tree Site. You will then follow one of six data-entry pathways
+through the app. The following table describes each pathway and its intended use.
 
 | Pathway      | Purpose                                                                           |
 | ------------ | --------------------------------------------------------------------------------- |
@@ -54,7 +68,7 @@ CAM EpiCollect5 Quick Reference Guide</a>
 which provides easy-to-follow instructions for using the app in the field.
 
 
-#### Details of the Data Collected for Each Pathway
+#### Data Collected for Each Pathway
 
 1. **PLANT** – Data collected when planting a new tree
 	- CAMorg-Site – The CAMorg and Site where the tree lives.
