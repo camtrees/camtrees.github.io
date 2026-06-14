@@ -7,7 +7,7 @@ nav_order: 98
 <img src="../assets/images/website/changelog.png" alt="CAMTREE Volunteer consulting a day planner showing the ChangeLog" height="512" width="828">
 
 # {{ page.title }}
-_Version: June 13 edit # 1_
+_Version: June 13 edit # 2_
 
 <!-- This content will not appear in the rendered Markdown 
 <details markdown="1">
@@ -57,6 +57,7 @@ Each entry is grouped by month. Within each month, changes are organized by area
 
 ### Python
 
+* Changes necessitated by removal of location_note from SQL tables_
 * Allow for specification of EpiCollect MAP_INDEX when retrieving data
 
 ### SQL Hosting
@@ -64,6 +65,7 @@ Each entry is grouped by month. Within each month, changes are organized by area
 
 ### SQL Tables
 
+* Remove location_note column; move existing data into access_note column
 * Worked with Marc to get MAFP - Field NE of Building Site data imported from EpiCollect
 
 ### SQL Views
