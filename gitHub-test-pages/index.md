@@ -1,7 +1,7 @@
 ---
 title: GitHub Test Pages
 layout: default
-nav_order: 6
+nav_order: 97
 ---
 
 # {{ page.title }}

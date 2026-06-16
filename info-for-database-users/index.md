@@ -1,7 +1,7 @@
 ---
 title: Info for Database Users
 layout: default
-nav_order: 6
+nav_order: 5
 ---
 
 <img src="../assets/images/website/staff-meeting.png" alt="CAM Staff Meeting" height="512" width="828">
