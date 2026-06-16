@@ -6,23 +6,6 @@ parent: Info for CAM Staff
 
 # {{ page.title }}
 
-There are many database management tools that can be used to access the CAMTREES PostgreSQL database, including:
-
-* DBeaver
-* pgAdmin
-* Postico
-* TablePlus
-
-DBeaver is currently the preferred database management tool for the CAMTREES project for several reasons:
-
-* A fully functional and free Community Edition is available.
-* DBeaver can be configured to display either a Simple or Advanced view of the database.
-  In most cases, the Simple view is preferable because it hides much of the complexity
-  inherent in SQL databases.
-* Using GPS coordinates stored as PostGIS data, DBeaver can display tree and site
-  locations on a map. Individual map features can be labeled with any available data.
-  Selecting a tree or site on the map displays the associated database records.
-
 #### Topics to Demonstrate When Introducing DBeaver
 
 1. Download the
