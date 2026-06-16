@@ -286,16 +286,9 @@ Once this website is more complete, we will need to have CAM staff review it.
 
 
 
-
-
-
-
 <p></p>
 
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
-
-
-
 
 ## Planned (3–6 months)
 
@@ -307,6 +300,19 @@ SQL: Complete as much of the database missing data as possible
 **Purpose:**
 Work with CAM staff to review all the 'missing_data' views in SQL and try to fill in
 as much of the missing data as possible.
+
+</details>
+
+<!--------------------------------------------------------------------------------------->
+
+<details markdown="1">
+<summary markdown="span">
+SQL: Check for inconsistent Plant Dates vs YYYY on Tag
+</summary>
+
+**Purpose:**
+Identify any discrepancies between the year a tree was plantee and the YYYY etched
+into the tree's tag.
 
 </details>
 
@@ -329,8 +335,6 @@ Perhaps 3 views:
 </details>
 
 <!--------------------------------------------------------------------------------------->
-
-
 
 <p></p>
 
