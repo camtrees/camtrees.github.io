@@ -1,10 +1,15 @@
 ---
 title: DBeaver Access to SQL
 layout: default
-parent: Info for CAM Staff 
+parent: Info for Database Users 
 ---
 
 # {{ page.title }}
+
+DBeaver is the recommended desktop GUI Database Administrator Tool for both Mac and
+Windows users. The Community version is free and totally functional. This page will guide
+the Database Administrator when she is helping CAM Staff to install, configure, and 
+navigate the DBeaver application.
 
 #### Topics to Demonstrate When Introducing DBeaver
 
