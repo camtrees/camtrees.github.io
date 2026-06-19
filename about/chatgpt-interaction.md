@@ -208,7 +208,7 @@ Here is a list of tasks you can draw from to add the the day squares.
 * Improved To-Do list formatting for mobile readability.
 * Improved To-Do Task List readability using collapsible sections, removing the need for numbering.
 
-<img src="../assets/images/website/changelog.png" alt="CAMTREE Volunteer consulting a day planner showing the ChangeLog" height="512" width="828">
+<img src="../assets/images/website/not-used/changelog-0.png" alt="CAMTREE Volunteer consulting a day planner showing the ChangeLog" height="512" width="828">
 
 **ME:** Oh my! You never cease to amaze me! That is a thing of beauty!
 
