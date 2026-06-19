@@ -17,7 +17,6 @@ whichever tool we feel most comfortable with.
 * <a href="https://dbeaver.io/download/" target="_blank">DBeaver Community Edition</a>
 * <a href="https://www.pgadmin.org" target="_blank">pgAdmin</a>
 * <a href="https://tableplus.com/" target="_blank">TablePlus</a>
-* <a href="https://eggerapps.at/postico2/" target="_blank">Postico 2</a> - *Mac Only*
 
 DBeaver is the currently recommended tool for several reasons:
 
