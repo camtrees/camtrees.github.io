@@ -7,7 +7,7 @@ nav_order: 98
 <img src="../assets/images/website/changelog.png" alt="CAMTREE Volunteer consulting a day planner showing the ChangeLog" height="512" width="828">
 
 # {{ page.title }}
-_Version: June 15 edit # 4_
+_Version: June 18 edit # 1_
 
 <!-- This content will not appear in the rendered Markdown 
 <details markdown="1">
@@ -76,6 +76,7 @@ Each entry is grouped by month. Within each month, changes are organized by area
 
 ### Website Content
 
+* Created the "Info for Database Admins" page content
 * Created the Using ChatGPT to Create WebSite Illustrations web page
 
 ### Website Infrastructure
