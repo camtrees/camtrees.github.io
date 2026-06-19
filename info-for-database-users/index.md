@@ -12,13 +12,12 @@ There are many database management tools which can be used to access the CAMTREE
 PostgreSQL database. SQL Gui tools are much like email clients. Each of us can pick
 whichever tool we feel most comfortable with.
 
-## Tools available for the Mac and Windows Desktop
+## Tools available for the Desktop
 
-
-* DBeaver
-* pgAdmin
-* Postico
-* TablePlus
+* <a href="https://dbeaver.io/download/" target="_blank">DBeaver Community Edition</a>
+* <a href="https://www.pgadmin.org" target="_blank">pgAdmin</a>
+* <a href="https://tableplus.com/" target="_blank">TablePlus</a>
+* <a href="https://eggerapps.at/postico2/" target="_blank">Postico 2</a> - *Mac Only*
 
 DBeaver is the currently recommended tool for several reasons:
 
@@ -32,7 +31,7 @@ DBeaver is the currently recommended tool for several reasons:
 
 ## Tools available for the iPhone and iPad
 
-* DB Compass for PostgreSQL
+* <a href="https://apps.apple.com/us/app/postgresql-client/id1233662353" target="_blank">DB Compass for PostgreSQL</a>
 
 DB Compass costs a one-time fee of $9.99 for the app which can then be used on both the
 iPhone and iPad. It is a very thorough implementation of a database management tool. The
@@ -42,7 +41,8 @@ connection.
 The iPad version is even better than the iPhone version given the iPad's much larger
 screen real estate.
 
-We recommend anyone making frequent visits to tree sites purchase the app.
+We recommend anyone making frequent visits to tree sites purchase the DB Compass for
+PostgreSQL app.
 
 ## For Android phones
 
