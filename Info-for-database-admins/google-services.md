@@ -47,7 +47,7 @@ One final detail we need for a good succession plan is that all passwords used b
 camorgdatabase@gmail.com user account should be stored in a secure, shared vault
 rather than individual browsers or notebooks.
 For that, we use
-<a href=“https://support.apple.com/en-us/120758” target=“_blank”>Apple’s Shared Group</a>
+<a href="https://support.apple.com/en-us/120758" target="_blank">Apple’s Shared Group</a>
 option in the Password app.
 
 Currently, the following people have access to this shared password group:
@@ -58,7 +58,7 @@ Currently, the following people have access to this shared password group:
 
 **2. Google Groups**
 
-<a href=“https://groups.google.com” target=“_blank”>Google Groups</a>
+<a href="https://groups.google.com" target="_blank">Google Groups</a>
 facilitates collaboration through a centralized shared email address.
 
 Utilizing the camorgdatabase@gmail.com user account, we have established a Google Group
@@ -71,7 +71,7 @@ emails sent to the group prior to their membership.
 
 **3. Google My Maps**
 
-<a href=“https://www.google.com/maps/about/mymaps/“ target=“_blank”>Google My Maps</a>
+<a href="https://www.google.com/maps/about/mymaps/" target="_blank">Google My Maps</a>
 enables the creation of a customized map displaying
 <a href="https://www.google.com/maps/d/edit?mid=1BnudQOUMWyFeMCpp1HV90hQPCFrWSx0&ll=44.44387186421211%2C-70.31670421000621&z=9" target="_blank">CAM Tree Locations</a>
 across Maine.
