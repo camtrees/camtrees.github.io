@@ -156,7 +156,7 @@ Website: Document the process for adding a new CAMorgs, Sites, Hubs, Volunteers,
 
 <details markdown="1">
 <summary markdown="span">
-Website: Continue the build-out of the CAMTREES Database website
+Website: Continue the build-out of the CAMTREES Database Website
 </summary>
 
 **Purpose:**

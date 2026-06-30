@@ -16,13 +16,13 @@ CAMTREES Database technology ecosystem.
 	* Also used by Hub Captains to record rain events
 * **GitHub**
 	* GitHub Actions allows for the automation of a nightly backup of the CAMTREES Database
-	* GitHub Pages hosts the CAMTREES Database website (the one your currently viewing)
+	* GitHub Pages hosts this CAMTREES Database Website
 * **PostgreSQL**
 	* Neon.com hosts the CAMTREES (PostgreSQL) Database
 * **Python**
 	* PyCharm IDE allows us to run programs to import EpiCollect data into our CAMTREES Database
 * **Web Server**
-	* GitHub Pages hosts the CAMTREES Database website (the one your currently viewing)
+	* GitHub Pages hosts this CAMTREES Database Website
 * **Google Services**
 	* Gmail provides the shared email address used to log into all the other cloud services listed here
 	* Google Groups allows for collaboration through a single shared email address

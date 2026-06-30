@@ -1,6 +1,6 @@
 # GitHub Pages
 
-This repository holds files required to build the CAMTREES Database Website.
+This repository holds files required to build this CAMTREES Database Website.
 
 All pages use Jekyll and the 'Just the Docs' Jekyll template.
 
