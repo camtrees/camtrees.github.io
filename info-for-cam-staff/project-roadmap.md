@@ -55,6 +55,29 @@ Roadmap items are listed in approximate priority order. Timing estimates may cha
 
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
+## Critical Fix Required Now
+
+<details markdown="1">
+<summary markdown="span">
+Python/SQL: Need to generate an initial 'good' tree health when a tree is planted.
+</summary>
+
+**Purpose:**
+Obviously, when we plant a new tree, that tree has a health of 'good'.
+
+**Tasks:**
+- Update Python EpiCollect import code as necessary.
+- Within SQL, for each tree, create a new health assessment record showing the tree health
+to be 'good' on the date the tree was planted.
+
+</details>
+
+<!--------------------------------------------------------------------------------------->
+
+<p></p>
+
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
 ## In Progress
 
 <details markdown="1">
@@ -352,9 +375,9 @@ Python: Evaluate cloud-based solutions (such as GitHub Actions) for running Pyth
 
 **Purpose:**
 The Python programs that import records from EpiCollect to the CAMTREES Database are
-currently run on the database administrator's personal computer. This is quite
-undesirable as it does not meet with having a succession plan in place for when
-personnel change. 
+currently run on the database administrator's personal computer. This is quite undesirable
+since it does not meet with having a good continuity plan in place for when personnel
+change. 
 
 **Tasks:**
 - Could create a schedule for running programs automatically but maybe it would be

@@ -43,10 +43,9 @@ Should a new person need to take over as database administrator, we simply reset
 passwords used by the camorgdatabase@gmail.com user account, and the new database
 administrator would be ready to go.
 
-One final detail we need for a good succession plan is that all passwords used by the
-camorgdatabase@gmail.com user account should be stored in a secure, shared vault
-rather than individual browsers or notebooks.
-For that, we use
+One final detail we need for a good continuity plan is that all passwords used by the
+camorgdatabase@gmail.com user account should be stored in a secure, shared vault rather
+than individual browsers or notebooks. For that, we use
 <a href="https://support.apple.com/en-us/120758" target="_blank">Apple’s Shared Group</a>
 option in the Password app.
 
