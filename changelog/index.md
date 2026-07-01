@@ -7,7 +7,7 @@ nav_order: 98
 <img src="../assets/images/website/changelog.png" alt="CAMTREE Volunteer consulting a day planner showing the ChangeLog" height="512" width="828">
 
 # {{ page.title }}
-_Version: June 30 edit # 1_
+_Version: June 30 edit # 2_
 
 <!-- This content will not appear in the rendered Markdown 
 <details markdown="1">
@@ -56,32 +56,31 @@ Each entry is grouped by month. Within each month, changes are organized by area
 * Edit CLEW - Franklin Park tree numbers 100 and 200 to be 006 and 005
 
 ### Python
-
+* Call sql_add_tree_initial_health function to set health of newly planted tree to 'good'
 * Changes necessitated by removal of location_note from SQL tables_
 * Allow for specification of EpiCollect MAP_INDEX when retrieving data
 
 ### SQL Hosting
 * Master CAMTREES Database is now under the CamOrgDatabase@gmail.com Neon User
 
-### SQL Tables
+### SQL Functions
+* Coded sql_add_tree_initial_health function to allow setting of newly planted tree
 
+### SQL Tables
 * Remove location_note column; move existing data into access_note column
 * Worked with Marc to get MAFP - Field NE of Building Site data imported from EpiCollect
 
 ### SQL Views
-
 * Renamed many "cam_..." views to be "data_..."
 * Added cam_export_tree_parent_type_for_epicollect
 * Added cam_export_volunteer_email_for_epicollect
 
 ### Website Content
-
 * Created content for the "Google Services" page
 * Created content for the "Info for Database Admins" page
 * Created the Using ChatGPT to Create WebSite Illustrations web page
 
 ### Website Infrastructure
-
 * Added Info for Database Users section
 * Added more ChatGPT Illustrations and resized all for consistency
 * Project Roadmap now listed with Major Headers as Timeline and Sub Headers as Task Category
