@@ -55,20 +55,18 @@ Roadmap items are listed in approximate priority order. Timing estimates may cha
 
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
-## Critical Fix Required Now
+## Critical Fixes Required Now
 
 <details markdown="1">
 <summary markdown="span">
-Python/SQL: Need to generate an initial 'good' tree health when a tree is planted.
+NONE: No critical fixes required at this tim
 </summary>
 
 **Purpose:**
-Obviously, when we plant a new tree, that tree has a health of 'good'.
+Critical fixes will be listed here if needed
 
 **Tasks:**
-- Update Python EpiCollect import code as necessary.
-- Within SQL, for each tree, create a new health assessment record showing the tree health
-to be 'good' on the date the tree was planted.
+- None now
 
 </details>
 
