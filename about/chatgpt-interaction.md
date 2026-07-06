@@ -243,7 +243,7 @@ And I have to say, your ideas for these illustrations have been consistently cre
 
 I'm glad the ChangeLog image turned out to be worthy of the collection! 🌰🌳📅
 
-*Note:* The days of the month were actually incorrect for June of 2026 [image not shown]. But it was an easy adjustment to request; simply changing the header to start on a Monday instead of on a Sunday. 
+*Note:* The days of the month were actually incorrect for June of 2026. But it was an easy adjustment to request; simply changing the header to start on a Monday instead of on a Sunday. 
 
 **ME:** Can you modify that image so the week starts on a Monday instead of a Sunday. Which is the day of the week June 1, 2026 actually starts on.
 

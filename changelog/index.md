@@ -7,7 +7,7 @@ nav_order: 98
 <img src="../assets/images/website/changelog.png" alt="CAMTREE Volunteer consulting a day planner showing the ChangeLog" height="512" width="828">
 
 # {{ page.title }}
-_Version: July 01 edit # 1_
+_Version: July 06 edit # 1_
 
 <!-- This content will not appear in the rendered Markdown 
 <details markdown="1">
@@ -44,6 +44,22 @@ Each entry is grouped by month. Within each month, changes are organized by area
 ---
 
 ## Changelog Entries
+
+---
+
+<details markdown="1">
+<summary markdown="span"><strong>2026 July</strong></summary>
+
+### EpiCollect
+* Created HKR Tree TAG test project for possible use by Tree-Managers
+
+### GitHub
+* Created new camtrees/codebase to house SQL and Python source code
+
+### Website Content
+* Created content for the GitHub page under the Info for Database Admins hierarchy
+
+</details>
 
 ---
 
