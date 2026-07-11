@@ -7,7 +7,7 @@ nav_order: 98
 <img src="../assets/images/website/changelog.png" alt="CAMTREE Volunteer consulting a day planner showing the ChangeLog" height="512" width="828">
 
 # {{ page.title }}
-_Version: July 06 edit # 1_
+_Version: July 11 edit # 1_
 
 <!-- This content will not appear in the rendered Markdown 
 <details markdown="1">
@@ -55,6 +55,10 @@ Each entry is grouped by month. Within each month, changes are organized by area
 
 ### GitHub
 * Created new camtrees/codebase to house SQL and Python source code
+* Add Python PyCharm Project to camtrees.github.io repository
+
+### Python
+* Using .env file to keep SQL and EpiCollect Connection Parameters and Access Tokens secret
 
 ### Website Content
 * Created content for the GitHub page under the Info for Database Admins hierarchy
