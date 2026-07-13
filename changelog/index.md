@@ -7,7 +7,7 @@ nav_order: 98
 <img src="../assets/images/website/changelog.png" alt="CAMTREE Volunteer consulting a day planner showing the ChangeLog" height="512" width="828">
 
 # {{ page.title }}
-_Version: July 13 edit # 1_
+_Version: July 13 edit # 2_
 
 <!-- This content will not appear in the rendered Markdown 
 <details markdown="1">
@@ -16,6 +16,7 @@ _Version: July 13 edit # 1_
 ### Area (EpiCollect / GitHub / Python / SQL / Website)
 ### EpiCollect
 ### GitHub
+### Google Map
 ### Python
 ### SQL
 ### SQL Functions
@@ -57,8 +58,14 @@ Each entry is grouped by month. Within each month, changes are organized by area
 * Created new camtrees/codebase to house SQL and Python source code
 * Add Python PyCharm Project to camtrees.github.io repository
 
+### Google Map
+* Added each trees height in inches and in human readable form (ft and inches)
+
 ### Python
 * Using .env file to keep SQL and EpiCollect Connection Parameters and Access Tokens secret
+
+### SQL Views
+* Created cam_tree_latest_height view
 
 ### Website Content
 * Created content for the GitHub page under the Info for Database Admins hierarchy
