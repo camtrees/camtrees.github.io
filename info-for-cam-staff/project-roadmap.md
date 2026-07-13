@@ -53,6 +53,8 @@ Roadmap items are listed in approximate priority order. Timing estimates may cha
 
 <p></p>
 
+<!-- This content will not appear in the rendered Markdown 
+
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
 ## Critical Fixes Required Now
@@ -74,9 +76,23 @@ Critical fixes will be listed here if needed
 
 <p></p>
 
+-->
+
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
 ## In Progress
+
+<details markdown="1">
+<summary markdown="span">
+SQL: Add tree's latest height to cam_trees and data_export_google_map_data views
+</summary>
+
+**Purpose:**
+So the trees latest height will show on the Google Map.
+
+</details>
+
+<!--------------------------------------------------------------------------------------->
 
 <details markdown="1">
 <summary markdown="span">
