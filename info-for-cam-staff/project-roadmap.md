@@ -84,18 +84,6 @@ Critical fixes will be listed here if needed
 
 <details markdown="1">
 <summary markdown="span">
-SQL: Add tree's latest height to cam_trees and data_export_google_map_data views
-</summary>
-
-**Purpose:**
-So the trees latest height will show on the Google Map.
-
-</details>
-
-<!--------------------------------------------------------------------------------------->
-
-<details markdown="1">
-<summary markdown="span">
 SQL: Add additional 'missing_data' views
 </summary>
 
