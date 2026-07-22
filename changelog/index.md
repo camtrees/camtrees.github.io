@@ -7,7 +7,7 @@ nav_order: 98
 <img src="../assets/images/website/changelog.png" alt="CAMTREE Volunteer consulting a day planner showing the ChangeLog" height="512" width="828">
 
 # {{ page.title }}
-_Version: July 20 edit # 1_
+_Version: July 22 edit # 1_
 
 <!-- This content will not appear in the rendered Markdown 
 <details markdown="1">
@@ -62,6 +62,7 @@ Each entry is grouped by month. Within each month, changes are organized by area
 * Added each trees height in inches and in human readable form (ft and inches)
 
 ### Python
+* Move non-secret globals from .env file into new config.py file
 * Add capability to use either the Neon CAMTREES master database or the KENSTER backup database
 * Using .env file to keep SQL and EpiCollect Connection Parameters and Access Tokens secret
 
