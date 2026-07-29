@@ -59,7 +59,7 @@ tree's position on the earth's surface.
 will plot the selected points (trees) on a map shown in DBeaver's 'Value' panel.
 
 
-## SQL Code Which Creates the Geography Point for Each Tree
+### SQL Code Which Creates the Geography Point for Each Tree
 
 Each tree's geography point is calculated using the tree's longitude and latitude at the
 time a tree is added to the 'tree' table.
@@ -78,7 +78,7 @@ Here is an incomplete portion of the SQL code that enables this:
 9     );
 ```
 
-## Key Parts of the SQL code (line 5) that creates the geography point
+### Key Parts of the SQL code (line 5) that creates the geography point
 
 **geog:** is the name of the column in the 'tree' table. Just as 'id', 'longitude' and
 'latitude' are also names of other columns.
@@ -96,7 +96,7 @@ coordinate columns (longitude and latitude) and tags it with the correct GPS sys
 **::geography:** Casts that raw point into the geography type so distances are measured in
 real-world meters instead of flat grid units.
 
-## Breakdown of Components
+### Breakdown of Components
 
 **geography vs geometry:** The geography type calculates distances over a 3D sphere (the
 Earth), which gives true measurements in meters. The geometry type (which we are not
@@ -109,9 +109,9 @@ recorded in degrees of longitude and latitude.
 takes a tiny bit of extra disk space, but makes searches and maps run much faster because
 it does not need to re-calculate the point every time you look at it.
 
-## DBeaver Screenshot Showing a Map of Two Tree Locations
+### DBeaver Screenshot Showing a Map of Two Tree Locations
 
-Note: there are two 'POINT's (rows 95 and 100) selected, thus othe map will show only
+Note: there are two 'POINT's (rows 95 and 100) selected, thus the map will show only
 those two trees. Click the map image to see the full sized image in a new browser tab.
 
 <a href="../assets/images/website/dbeaver_tree_map.png" target="_blank"><img src="../assets/images/website/dbeaver_tree_map.png" alt="DBeaver map showing two trees"></a>
