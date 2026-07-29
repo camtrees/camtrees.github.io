@@ -20,7 +20,7 @@ parent: Info for Database Admins
 
 # {{ page.title }}
 
-## Viewing Tree Location on a Map
+## Viewing Tree Locations on a Map
 
 We currently have two methods to view tree locations on a map:
 
@@ -52,11 +52,11 @@ Google Map page. It shows the locations of all CAM Chestnut Trees planted to dat
 extension adds new data types to our database. One of which allows us to plot trees on a
 map.
 
-1. Then, for each tree, we need to calculate a geography point which is a point
-representing the tree's position on the earth's surface.
+1. Then, for each tree, we calculate a geography point. That is a point representing the
+tree's position on the earth's surface.
 
 1. Finally, from within an SQL View of trees, we select one or more geography points. That
-will plot the trees on a map shown in DBeaver's 'Value' panel.
+will plot the selected points (trees) on a map shown in DBeaver's 'Value' panel.
 
 
 ## SQL Code Which Creates the Geography Point for Each Tree
@@ -64,7 +64,7 @@ will plot the trees on a map shown in DBeaver's 'Value' panel.
 Each tree's geography point is calculated using the tree's longitude and latitude at the
 time a tree is added to the 'tree' table.
 
-Here is an incomplete portion of the SQL code to create the 'tree' table:
+Here is an incomplete portion of the SQL code that enables this:
 
 ```
 1 CREATE TABLE tree (
