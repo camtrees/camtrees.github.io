@@ -109,6 +109,9 @@ recorded in degrees of longitude and latitude.
 takes a tiny bit of extra disk space, but makes searches and maps run much faster because
 it does not need to re-calculate the point every time you look at it.
 
-## A DBeaver screenshot showing a map of two tree locations - note two 'POINT's (rows 95 and 100) are selected.
+## DBeaver Screenshot Showing a Map of Two Tree Locations
 
-<img src="../assets/images/website/dbeaver_tree_map.png" alt="DBeaver map showing two trees">
+Note: there are two 'POINT's (rows 95 and 100) selected, thus othe map will show only
+those two trees. Click the map image to see the full sized image in a new browser tab.
+
+<a href="../assets/images/website/dbeaver_tree_map.png" target="_blank"><img src="../assets/images/website/dbeaver_tree_map.png" alt="DBeaver map showing two trees"></a>
