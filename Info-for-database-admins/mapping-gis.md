@@ -61,9 +61,10 @@ will plot the selected points (trees) on a map shown in DBeaver's 'Value' panel.
 ### Here is a DBeaver Screenshot Showing a Map of Two Tree Locations
 
 There are two 'POINT's (rows 95 and 100) selected, thus the map will show only those two
-trees. Click the map image to see the full sized image in a new browser tab.
+trees. 
 
 <a href="../assets/images/website/dbeaver_tree_map.png" target="_blank"><img src="../assets/images/website/dbeaver_tree_map.png" alt="DBeaver map showing two trees"></a>
+*Click the image to view the full sized image in a new browser tab*
 
 ### The SQL Code Which Creates a Geography Point for Each Tree
 
