@@ -111,4 +111,4 @@ it does not need to re-calculate the point every time you look at it.
 
 ## A DBeaver screenshot showing a map of two tree locations - note two 'POINT's (rows 95 and 100) are selected.
 
-<img src="../assets/images/website/dbeaver_tree_map.png" alt="DBeaver map showing two trees" height="833" width="2116">
+<img src="../assets/images/website/dbeaver_tree_map.png" alt="DBeaver map showing two trees">
