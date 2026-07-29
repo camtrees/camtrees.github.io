@@ -78,7 +78,7 @@ Here is an incomplete portion of the SQL code that enables this:
 9     );
 ```
 
-## Key Parts of the SQL code (line 5) shown above to create the geography point
+## Key Parts of the SQL code (line 5) that creates the geography point
 
 **geog:** is the name of the column in the 'tree' table. Just as 'id', 'longitude' and
 'latitude' are also names of other columns.
@@ -108,3 +108,7 @@ recorded in degrees of longitude and latitude.
 **STORED:** Means the database actually writes and keeps this point saved on disk. This
 takes a tiny bit of extra disk space, but makes searches and maps run much faster because
 it does not need to re-calculate the point every time you look at it.
+
+## A DBeaver screenshot showing a map of two tree locations - note two 'POINT's (rows 95 and 100) are selected.
+
+<img src="../assets/images/website/dbeaver_tree_map.png" alt="DBeaver map showing two trees" height="833" width="2116">
