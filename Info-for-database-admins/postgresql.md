@@ -20,8 +20,6 @@ parent: Info for Database Admins
 
 # {{ page.title }}
 
-## PostgreSQL
-
 We are storing our CAMTREES Database in *PostgreSQL* which is a highly
 extensible, open-source (free) relational database management system (RDBMS) renowned for
 its strict SQL compliance. It excels in handling complex data workflows, combining
