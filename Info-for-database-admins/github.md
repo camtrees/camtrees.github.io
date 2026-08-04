@@ -88,6 +88,5 @@ then modify the files locally using whatever text editor you prefer, and then, y
 those file changes back to the GitHub repository.
 
 This is especially useful for maintaining this website using GitHub Pages. Once you edit
-the files locally and push them back to the cloud, GitHub, in the background, regenerates
-your website using the changed files. This backend regeneration of the website usually
-happens in a few minutes.
+the files locally and push them back to the cloud, GitHub regenerates your website
+within a few minutes.

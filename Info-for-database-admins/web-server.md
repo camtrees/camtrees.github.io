@@ -20,4 +20,19 @@ parent: Info for Database Admins
 
 # {{ page.title }}
 
-Just a placeholder for content yet to be written
+## GitHub Pages
+
+This CAMTREES Database Website is hosted using 
+<a href="https://docs.github.com/en/pages" target="_blank">GitHub Pages</a>
+which is an integrated static website hosting service provided within the GitHub
+ecosystem. GitHub Pages simplifies hosting a website through a standard git push process.
+
+## Jekyll and the Just the Docs Theme
+
+Behind the scenes GitHub Pages is powered by
+<a href="https://jekyllrb.com/docs/github-pages/" target="_blank">Jekyll</a>
+which makes use of community-maintained themes that allow for the customization
+of a web site's layout/presentation. This website uses the 
+<a href="https://just-the-docs.com" target="_blank">Just the Docs</a>
+theme which provides a layout that is functional and easy to navigate on both phone-sized
+and desktop-sized screens.
