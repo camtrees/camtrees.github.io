@@ -10,8 +10,8 @@ nav_order: 99
 
 This website was created by 
 <a href="https://about.me/kenster/" target="_blank">Kenster Rosenberry</a>.
-Illustrations, like the one you see above, were conceptualized by Kenster then further refined and brought to
-life by
+Illustrations, like the one you see above, were conceptualized by Kenster then further
+refined and brought to life by
 <a href="https://chatgpt.com/images/" target="_blank">ChatGPT's Image Generator</a>.
 
 My experience using ChatGPT to create the illustrations used on this website blew me away!
