@@ -76,7 +76,6 @@ Critical fixes will be listed here if needed
 
 <p></p>
 
--->
 
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
