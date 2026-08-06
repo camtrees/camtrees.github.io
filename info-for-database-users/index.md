@@ -8,42 +8,65 @@ nav_order: 5
 
 # {{ page.title }}
 
-There are many database management tools which can be used to access the CAMTREES
-PostgreSQL database. SQL Gui tools are much like email clients. Each of us can pick
-whichever tool we feel most comfortable with.
+There are many database management tools that can be used to access the CAMTREES
+PostgreSQL database.
 
-## Tools available for the Desktop
+These tools, often called **SQL GUI clients**, provide a graphical interface for viewing
+data, running SQL commands, and managing database objects. Similar to email clients,
+different users may prefer different tools based on their experience and workflow.
 
-* <a href="https://dbeaver.io/download/" target="_blank">DBeaver Community Edition</a>
-* <a href="https://www.pgadmin.org" target="_blank">pgAdmin</a>
-* <a href="https://tableplus.com/" target="_blank">TablePlus</a>
+The CAMTREES Database is hosted in the cloud, so these tools connect remotely to the
+database rather than storing a copy of the database on the user's computer.
 
-DBeaver is the currently recommended tool for several reasons:
 
-* A fully functional and free Community Edition is available.
-* DBeaver can be configured to display either a Simple or Advanced view of the database.
-  In most cases, the Simple view is preferable because it hides much of the complexity
-  inherent in SQL databases.
-* Using GPS coordinates stored as PostGIS data, DBeaver can display tree and site
-  locations on a map. Individual map features can be labeled with any available data.
-  Selecting a tree or site on the map displays the associated database records.
+The CAMTREES Database does not require everyone to use the same SQL GUI client. Each
+database user may choose the tool that best fits their needs.
 
-## Tools available for the iPhone and iPad
+---
 
-* <a href="https://apps.apple.com/us/app/postgresql-client/id1233662353" target="_blank">DB Compass for PostgreSQL</a>
+## Desktop Tools
 
-DB Compass costs a one-time fee of $9.99 for the app which can then be used on both the
-iPhone and iPad. It is a very thorough implementation of a database management tool. The
-iPhone version is perfect for taking out into the field if you will have an internet
-connection.
+Several SQL GUI clients are available for desktop computers:
 
-The iPad version is even better than the iPhone version given the iPad's much larger
-screen real estate.
+- <a href="https://dbeaver.io/download/" target="_blank">DBeaver Community Edition</a>
+- <a href="https://www.pgadmin.org" target="_blank">pgAdmin</a>
+- <a href="https://tableplus.com/" target="_blank">TablePlus</a>
 
-We recommend anyone making frequent visits to tree sites purchase the DB Compass for
-PostgreSQL app.
+### Recommended Desktop Tool: DBeaver Community Edition
 
-## For Android phones
+<a href="https://dbeaver.io/download/" target="_blank">DBeaver Community Edition</a>
+is currently the recommended SQL GUI client for CAMTREES for several reasons:
 
-Unfortunately, we can't make any suggestions for Android phones or tablets since we don't
-have any experience with those devices.
+- It is fully functional and available at no cost.
+- It can display the database using either a **Simple** view or an **Advanced** view.
+  - The Simple view hides much of the complexity of a PostgreSQL database and is generally
+  easier for occasional users.
+  - The Advanced view provides access to the full database structure for administrators.
+- It supports PostGIS geographic data, allowing tree and site locations to be displayed on
+maps.
+- Map features can be labeled using available database fields.
+- Selecting a tree or site on the map displays the associated database records.
+
+---
+
+## iPhone and iPad Tools
+
+<a href="https://apps.apple.com/us/app/postgresql-client/id1233662353" target="_blank">DB Compass for PostgreSQL</a>
+is available for iPhone and iPad.
+
+DB Compass is a full-featured PostgreSQL management application. It requires a one-time
+purchase ($9.99) and can be used on both iPhone and iPad devices.
+
+The iPhone version is useful for field visits when an Internet connection is available.
+The iPad version provides an improved experience because of the larger screen size, making
+database browsing and record review easier.
+
+For volunteers or staff members who frequently visit tree sites and need mobile access to the CAMTREES Database, DB Compass is a useful option.
+
+---
+
+## Android Phones and Tablets
+
+At this time, CAM does not have enough experience with Android database management applications to recommend a specific tool.
+
+As Android tools are evaluated in the future, this section will be updated with recommendations.

@@ -1,5 +1,5 @@
 ---
-title: Google Services
+title: Google Services and Project Continuity
 layout: default
 parent: Info for Database Admins
 ---
@@ -19,64 +19,72 @@ parent: Info for Database Admins
 
 # {{ page.title }}
 
-Google Services provides three services for the CAMTREES Database project:
+Google provides three services that support the CAMTREES Database project:
 
-**1. A Shared Project Email Address**
+## 1. Shared Project Account
 
-Having a shared project email address
-[camorgdatabase@gmail.com](mailto:camordatabase@gmail.com)
-is crucial. This email address is not used for email communications.
-Instead, it is the email address used to create accounts on all the project’s other cloud
-services.
+A dedicated project account,
+**[camorgdatabase@gmail.com](mailto:camordatabase@gmail.com)**,
+is used as the primary account identity for the CAMTREES project.
 
-Currently, there is a single database administrator (Kenster Rosenberry) who is
-responsible for all aspects of the CAMTREES Database project. However, we do not want any
-cloud services to be tied to Kenster’s personal credentials. If something were to happen
-to Kenster, the project would be locked out of all his accounts, which would be
-disastrous.
+This account is **not used for routine email communication**. Instead, it is used to
+create and manage accounts for the project's other cloud services, including EpiCollect,
+GitHub, Neon, and other services that support the CAMTREES Database.
 
-Therefore, we use the project’s shared camorgdatabase@gmail.com credentials as the user
-account not only for Google, but for all other cloud services that support the CAMTREES
-Database project: EpiCollect, GitHub, Neon, etc.
+Using a dedicated project account is an important part of the project's long-term
+continuity plan. Cloud services should not be tied to the personal credentials of an
+individual administrator. If responsibility for managing the database changes in the
+future, the project should be able to continue without losing access to critical services.
 
-Should a new person need to take over as database administrator, we simply reset all
-passwords used by the camorgdatabase@gmail.com user account, and the new database
-administrator would be ready to go.
+When a new database administrator takes over, the transition process is straightforward:
 
-One final detail we need for a good continuity plan is that all passwords used by the
-camorgdatabase@gmail.com user account should be stored in a secure, shared vault rather
-than individual browsers or notebooks. For that, we use
-<a href="https://support.apple.com/en-us/120758" target="_blank">Apple’s Shared Group</a>
-option in the Password app.
+1. Transfer access to the shared project account.
+2. Update the passwords for the services associated with that account.
+3. Provide the new administrator with access to the required documentation and tools.
 
-Currently, the following people have access to this shared password group:
+To support this continuity plan, all passwords associated with the shared project account
+are stored in a secure shared password vault rather than in individual browsers,
+notebooks, or personal password managers.
 
-* Kenster Rosenberry
-* Kim Colson
+The CAMTREES project uses Apple's
+<a href="https://support.apple.com/en-us/120758" target="_blank">Shared Group</a>
+feature within the Passwords app for this purpose.
 
+Currently, the following people have access to the shared password group:
 
-**2. Google Groups**
+- Kenster Rosenberry
+- Kim Colson
+- Eva Butler
+
+---
+
+## 2. Google Groups
 
 <a href="https://groups.google.com" target="_blank">Google Groups</a>
-facilitates collaboration through a centralized shared email address.
+provides a centralized method for group communication using a shared email address.
 
-Utilizing the camorgdatabase@gmail.com user account, we have established a Google Group
-titled “Cam Tree Hub Captains.” Members of the group can send emails to
-cam-tree-hub-captains@googlegroups.com. Google will subsequently distribute these emails
-to all group members. This approach eliminates the need for individuals to maintain their
-own lists of Hub Captains. Additionally, new users added to the group can review past
-emails sent to the group prior to their membership.
+Using the project account, we created a Google Group named **Cam Tree Hub Captains**.
+Members of this group can send messages to: **cam-tree-hub-captains@googlegroups.com**
 
+Google automatically distributes messages sent to this address to all members of the group.
 
-**3. Google My Maps**
+This approach provides several advantages:
+
+- Individuals do not need to maintain their own separate lists of Hub Captains.
+- Adding or removing members only requires updating the Google Group.
+- New members can review previous group conversations from before they joined.
+
+---
+
+## 3. Google My Maps
 
 <a href="https://www.google.com/maps/about/mymaps/" target="_blank">Google My Maps</a>
-enables the creation of a customized map displaying
+allows CAM to create and share customized maps showing tree locations across Maine.
+
+The current map is available at:
 <a href="https://www.google.com/maps/d/edit?mid=1BnudQOUMWyFeMCpp1HV90hQPCFrWSx0&ll=44.44387186421211%2C-70.31670421000621&z=9" target="_blank">CAM Tree Locations</a>
-across Maine.
 
-We can share a link to this map with CAM Volunteers or any other individuals we deem
-appropriate.
+The map can be shared with CAM volunteers and other individuals as appropriate.
 
-Further details regarding Google My Maps are available in the “Mapping / GIS” web page
-under the “Info for Database Admins” section.
+Additional information about Google My Maps is available on the **Mapping / GIS** page
+under the **Info for Database Admins** section.

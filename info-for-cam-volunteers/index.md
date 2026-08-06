@@ -8,26 +8,47 @@ nav_order: 3
 
 # {{ page.title }}
 
-There are three groups of Chesnuts Across Maine (CAM) Volunteers each of which is
-vital to supporting CAM's mission.
+There are three groups of Chestnuts Across Maine (CAM) volunteers, each playing an
+important role in supporting CAM's mission.
 
-**CAM Volunteers** assist with
-* Planting trees
-* Watering trees in times of drought
-* Performing periodic tree health assessments
+## CAM Volunteers
 
-**Hub Captains** will
-* Help organize the above group of volunteers
-* Record Rain Events throughout the Spring, Summer, and Fall
+CAM Volunteers assist with:
 
-**Chestnut Chasers** who are trained to help find chestnut trees growing in the wild, will
-* Record data upon coming across a newly discovered wild chestnut tree
-* Perform periodic health assessments on previously found wild chestnut trees
+- Planting chestnut trees.
+- Watering trees during periods of drought.
+- Performing periodic tree health assessments.
 
-All three groups of volunteers will use the EpiCollect5 mobile phone app, to record data.
-That data will get uploaded to an EpiCollect server. From there, the data will flow into
-the CAMTREES Database system and become available to CAM staff for further analysis.
+## Hub Captains
 
-For a view similar to what the woman pictured above is viewing visit the
+Hub Captains help coordinate local volunteer activities by:
+
+- Organizing and supporting CAM Volunteers within their area.
+- Recording rainfall events throughout the spring, summer, and fall.
+
+## Chestnut Chasers
+
+Chestnut Chasers are trained volunteers who help locate and document chestnut trees
+growing in the wild. Their responsibilities include:
+
+- Recording data when a newly discovered wild chestnut tree is found.
+- Performing periodic health assessments on previously documented wild chestnut trees.
+
+## Data Collection Process
+
+All three volunteer groups use the
+<a href="https://five.epicollect.net" target="_blank">EpiCollect5</a>
+mobile app to record field data.
+
+Collected data is uploaded to the EpiCollect server and then transferred into the CAMTREES
+Database system, where it becomes available to CAM staff for review, analysis, and
+reporting.
+
+## Viewing Tree Locations
+
+For a view similar to what the volunteer pictured above is seeing, visit the
 <a href="https://www.google.com/maps/d/edit?mid=1BnudQOUMWyFeMCpp1HV90hQPCFrWSx0&ll=44.44387186421211%2C-70.31670421000621&z=9" target="_blank">CAM Tree Locations</a>
-Google Map page. It shows the locations of all CAM Chestnut Trees planted to date. On that page you can click a tree's pin to see more detail for that tree.
+Google Map.
+
+This map displays the locations of all CAM chestnut trees planted to date. Selecting a
+tree marker displays additional information about that individual tree.

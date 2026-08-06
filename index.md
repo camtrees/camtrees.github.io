@@ -23,15 +23,32 @@ description: CAMTREES Database is a PostgreSQL database system created for the C
 
 <img src="./assets/images/website/planting-a-tree.png" alt="Volunteers hiking up a hill to plant a tree" height="512" width="828">
 
-The CAMTREES Database exists to further the goals of the
-<a href="https://tacf.org/me/chestnuts-across-maine/" target="_blank">Chestnuts Across Maine (CAM) chapter</a> of
+
+The CAMTREES Database supports the mission and activities of the
+<a href="https://tacf.org/me/chestnuts-across-maine/" target="_blank">Chestnuts Across Maine (CAM) chapter</a>
+of
 <a href="https://tacf.org" target="_blank">The American Chestnut Foundation (TACF)</a>.
-CAM volunteers collect chestnut tree data in the field, after which the data are loaded into the CAMTREES Database for analysis and reporting.
 
-The following excerpt from the Chestnuts Across Maine Project website provides a brief description of the project:
+CAM volunteers collect chestnut tree information in the field using mobile data collection
+tools. This information is then transferred into the CAMTREES Database, where it is
+organized, analyzed, and used to support reporting, research, and restoration efforts.
 
-> Chestnuts Across Maine (CAM) is an exciting, new initiative of the Maine chapter of The American Chestnut Foundation (TACF). Our chapter is partnering with land trusts, state parks, schools, and town squares in Maine to establish small plantings of American chestnuts on lands open to the public. This is a long-term, multi-generational commitment that achieves many of the goals of TACF.
+The following excerpt from the Chestnuts Across Maine (CAM) Project website provides
+background information about CAM and its mission, which the CAMTREES Database helps
+support:
 
-> Our vision is that by 2035 anyone who wishes to see a live American chestnut tree can find one less than an hour drive from home. We will see chestnut trees thriving within a 10 minute walk of every Maine school. We will establish a network of savvy and experienced conservation partners to help us to test the next blight tolerant chestnuts.
+>Chestnuts Across Maine (CAM) is an exciting, new initiative of the Maine chapter of The
+>American Chestnut Foundation (TACF). Our chapter is partnering with land trusts, state
+>parks, schools, and town squares in Maine to establish small plantings of American
+>chestnuts on lands open to the public. This is a long-term, multi-generational commitment
+>that achieves many of the goals of TACF.
 
-> We want to make it easy for TACF members to engage with chestnut restoration wherever they live in Maine. We intend to build communities around groves of chestnuts where Mainers will gather in common cause to benefit the ecological and social wealth of their communities.
+>Our vision is that by 2035 anyone who wishes to see a live American chestnut tree can
+>find one less than an hour drive from home. We will see chestnut trees thriving within a
+>10 minute walk of every Maine school. We will establish a network of savvy and
+>experienced conservation partners to help us to test the next blight tolerant chestnuts.
+
+>We want to make it easy for TACF members to engage with chestnut restoration wherever
+>they live in Maine. We intend to build communities around groves of chestnuts where
+>Mainers will gather in common cause to benefit the ecological and social wealth of their
+>communities.

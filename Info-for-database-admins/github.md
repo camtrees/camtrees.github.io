@@ -21,72 +21,103 @@ parent: Info for Database Admins
 # {{ page.title }}
 
 <a href="https://github.com" target="_blank">GitHub</a>
-is a cloud-based platform where developers store, manage, and collaborate on software
-projects using the Git version control system. Files are stored in one or more GitHub
-repositories. Each repository is a centralized digital storage space where developers
-store project files and track their full revision history. These repositories serve as the
-core unit of GitHub, allowing teams to collaborate on code, manage issues, and organize
-public or private projects in a cloud-based environment.
+is a cloud-based platform used to store, manage, and collaborate on software projects and
+other digital resources using the Git version control system.
 
-Our CAMTREES GitHub account has three distinct repositories:
+Projects are organized into **repositories**. A repository is a centralized location where
+files are stored, changes are tracked, and previous versions can be reviewed or restored
+when needed.
 
-**Repository #1: camtrees/camtrees.github.io**
+The CAMTREES GitHub account currently contains three repositories:
 
-This repository is used to maintain the CAMTREES Database Website via
-<a href="https://docs.github.com/en/pages" target="_blank">GitHub Pages</a>
-which is an integrated static website hosting service provided within the GitHub
-ecosystem. GitHub Pages simplifies hosting a website through a standard git push process.
-Behind the scenes GitHub Pages is powered by
-<a href="https://jekyllrb.com/docs/github-pages/" target="_blank">Jekyll</a>
-which makes use of community-maintained themes that allow for the customization
-of a web site's layout/presentation. This website uses the 
+---
+
+## Repository #1: `camtrees/camtrees.github.io`
+
+This repository contains the source files used to create and maintain this CAMTREES
+Database website.
+
+The website is hosted using
+<a href="https://docs.github.com/en/pages" target="_blank">GitHub Pages</a>,
+GitHub's built-in hosting service for static websites. Website updates are published
+automatically whenever changes are committed and pushed to the repository.
+
+Behind the scenes, GitHub Pages uses
+<a href="https://jekyllrb.com/docs/github-pages/" target="_blank">Jekyll</a>,
+a static site generator that converts the website's source files into the finished pages
+displayed by visitors.
+
+The CAMTREES website uses the
 <a href="https://just-the-docs.com" target="_blank">Just the Docs</a>
-theme which provides a layout that is functional and easy to navigate on both phone-sized
-and desktop-sized screens.
+theme, which provides a clean, organized layout that works well on both desktop computers
+and mobile devices.
 
+---
 
-**Repository #2: camtrees/github-actions**
+## Repository #2: `camtrees/github-actions`
 
-This repository is used to maintain
-<a href="https://github.com/features/actions" target="_blank">GitHub Actions</a>.
-We currently have only one action that runs nightly at 2:00am. We call this action
-*Create Neon Twin* which is an automation that creates a backup copy of our SQL CAMTREES
-Database. Note: our SQL database is stored in a cloud system called Neon.com, hence the
-name for the action.
+This repository contains the
+<a href="https://github.com/features/actions" target="_blank">GitHub Actions</a>
+used to automate CAMTREES maintenance tasks.
 
-In the future, we will create additional GitHub Actions to help with the automation of
-importing EpiCollect data into the SQL database. Currently, the import procedure entails
-running Python programs on the database administrator's desktop computer. Once we have
-GitHub Actions to assist with that, we will be able to launch those Python programs via a
-web browser connected to the GitHub.com website.
+Currently, there is one active workflow:
 
+**Create Neon Twin**
 
-**Repository #3: camtrees/codebase**
+This workflow runs nightly at 2:00 AM and creates a backup copy of the CAMTREES PostgreSQL
+database hosted by
+<a href="https://neon.com" target="_blank">Neon</a>.
+The name "Create Neon Twin" refers to the creation of this duplicate database copy.
 
-This repository is used to maintain SQL source code which creates our database's Tables,
-Views, Functions, and Triggers. To keep this code current and correct, a database admin
-should always update this code, and then run the updated version within an SQL GUI.
+Future GitHub Actions may automate additional tasks, including importing EpiCollect data
+into the CAMTREES Database.
 
-This repository also houses Python code used to import EpiCollect data into the CAMTREES
-database. These programs cannot run without an auxiliary ".env" file which holds private
-keys required to access both EpiCollect projects and the CAMTREES Database stored at
-Neon.com. Once these Python programs are created as a GitHub Action (see above), our
-private keys will be stored as encrypted GitHub Secrets stored within the repository.
-Until then, the ".env" file is kept private to a very few CAM Staff. The same CAM Staff
-that have access to the Google Account password.
+Currently, the EpiCollect import process requires running Python programs manually on the
+database administrator's computer. Once these processes are converted into GitHub Actions,
+they could be initiated remotely through GitHub rather than requiring direct access to a
+local computer.
 
+---
 
-### How To Best Edit GitHub Files
+## Repository #3: `camtrees/codebase`
 
-While files in GitHub repositories can be directly edited on the GitHub.com website, you
-will probably find it easier to edit files directly on your local desktop computer with
-the help of 
+This repository contains the source code used to create and maintain the CAMTREES Database.
+
+It includes:
+
+- SQL code used to create and modify database tables.
+- SQL views, functions, and triggers.
+- Python programs used to import EpiCollect data into PostgreSQL.
+
+To ensure the database remains accurate and reproducible, database administrators should
+update the SQL source files first and then execute the updated code against the CAMTREES
+Database using an SQL management tool.
+
+The Python import programs require access credentials for both EpiCollect and the CAMTREES
+Database hosted by Neon. These credentials are stored separately from the source code in a
+private `.env` file.
+
+Once these Python programs are converted into GitHub Actions, the required credentials
+will be stored securely as encrypted GitHub Secrets.
+
+Until that transition occurs, the `.env` file remains private and is accessible only to
+authorized CAM staff members who also manage the project's shared cloud accounts.
+
+---
+
+## Recommended Method for Editing GitHub Files
+
+Although GitHub files can be edited directly through the GitHub website, most
+administrators will find it easier to work with files locally using 
 <a href="https://docs.github.com/en/desktop/overview/about-github-desktop" target="_blank">GitHub Desktop</a>.
 
-Using GitHub Desktop, you first 'clone' a GitHub repository to your local computer. You
-then modify the files locally using whatever text editor you prefer, and then, you 'push'
-those file changes back to the GitHub repository.
+The typical workflow is:
 
-This is especially useful for maintaining this website using GitHub Pages. Once you edit
-the files locally and push them back to the cloud, GitHub regenerates your website
-within a few minutes.
+1. Clone the GitHub repository to your local computer.
+2. Edit the files using your preferred editor.
+3. Commit the changes.
+4. Push the changes back to GitHub.
+
+This workflow is especially useful for maintaining the CAMTREES website. After website
+files are pushed back to GitHub, GitHub Pages automatically rebuilds and publishes the
+updated website within a few minutes.

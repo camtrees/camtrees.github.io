@@ -8,6 +8,7 @@ nav_order: 4
 
 # {{ page.title }}
 
-While CAM Staff will be interested in all sections of this CAMTREES Database
-website, they will be particularly interested in the Project Roadmap that is
-under this heading.
+While CAM Staff may find all sections of this CAMTREES Database website useful, the
+**Project Roadmap** is likely to be of particular interest. This section provides an
+overview of planned enhancements, upcoming work, and the future direction of the CAMTREES
+Database system.

@@ -20,22 +20,25 @@ parent: Info for Database Admins
 
 # {{ page.title }}
 
-We are storing our CAMTREES Database in *PostgreSQL* which is a highly
-extensible, open-source (free) relational database management system (RDBMS) renowned for
-its strict SQL compliance. It excels in handling complex data workflows, combining
-enterprise-grade reliability with advanced concurrency and modern data processing.
+We store the CAMTREES Database in **PostgreSQL**, a powerful, open-source (free)
+relational database management system (RDBMS). PostgreSQL is well known for its
+reliability, standards compliance, and extensibility, making it an excellent choice for
+applications that require accurate, long-term data management.
 
-While the PostgreSQL RDBMS software is free, there is a cost associated with hosting our
-CAMTREES Database on a cloud server. Since the CAM organization is a non-revenue
-generating non-profit organization we needed to find a hosting service that is either free
-or fairly inexpensive. 
+Although PostgreSQL itself is free to use, the database must be hosted on a server that is
+accessible over the Internet. Because Chestnuts Across Maine (CAM) is a nonprofit
+organization with limited financial resources, we wanted a hosting solution that was
+either free or very affordable.
 
 ## Neon.com
 
-We have chosen
-<a href="https://neon.com" target="_blank">Neon.com</a>
-as the cloud based PostgreSQL hosting service. Neon pricing is usage-based with no monthly
-minimums. It also offers a Free Tier which is currently sufficient for our needs given the
-modest size of our CAMTREES Database. Should our needs increase, our costs would be kept
-low, likely in the range of $5 or $10 dollars per month.
+The CAMTREES Database is hosted by <a href="https://neon.com" target="_blank">Neon</a>, a
+cloud-based PostgreSQL hosting service.
 
+Neon uses a usage-based pricing model with no monthly minimum charge and offers a generous
+Free Tier. The Free Tier is currently more than sufficient for the size and activity level
+of the CAMTREES Database.
+
+If our storage or usage requirements increase in the future, upgrading to a paid plan is
+straightforward, with expected hosting costs remaining relatively low – likely in the range
+of $5 to $10 per month.

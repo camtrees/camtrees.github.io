@@ -267,7 +267,7 @@ Since I don't have a paid ChatGPT subscription, I am limited to only a couple of
 
 **ChatGPT:** I think there are several directions that would fit very naturally with the visual story you've already built. Since the site is really about volunteers, data collection, stewardship, and technology working together, I'd be inclined to avoid a formal corporate training scene and instead create something that feels collaborative and mission-driven.
 
-*Note:* ChatGPT actually came up with 5 options.
+*Note:* ChatGPT actually came up with 5 options. Unless prefaced by the phrase "*Note:*" all the wording is that of ChatGPT. So, where it says for Option 2, "This might be my favorite", those aren't my words. That is Chat GPT telling me its favorite!
 
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 
@@ -347,7 +347,9 @@ This would make an excellent illustration for a "Project Management" or "Adminis
 
 <img src="../assets/images/website/not-used/staff-meeting-3.png" alt="Staff planning session" height="512" width="828">
 
-*Note:* I rejected this image. Too much of the data is not an accurate reflection of our CAMTREES Database data. I might try and correct the data shown to match our data. Maybe, depending upon what illustrations the other options produce.
+*Note:* I rejected this image. Too much of the data is not an accurate reflection of our
+CAMTREES Database data. I might try and correct the data shown to match our data. Maybe,
+depending upon what illustrations the other options produce.
 
 <p></p>
 
@@ -370,7 +372,7 @@ This one tells a unique story.
 
 Knowledge sharing and volunteer leadership.
 
-*Note:* I haven't yet tried to generate this image.
+<img src="../assets/images/website/train-the-trainer.png" alt="CAM Volunteer is teaching four CAM staff members how to use EpiCollect5" height="512" width="828">
 
 <p></p>
 
@@ -396,7 +398,7 @@ Everyone contributes a different skill, but they are working toward the same goa
 
 This image has a nice symmetry with your earlier hill-climbing volunteer illustration.
 
-*Note:* I haven't yet tried to generate this image.
+<img src="../assets/images/website/camtrees-team.png" alt="CAM staff members gathered outdoors around a mature chestnut tree a Staff planning session" height="512" width="828">
 
 <p></p>
 
@@ -415,7 +417,9 @@ If I were choosing for the website, I'd probably rank them:
 
 The planning-session concept works especially well because it allows you to incorporate several of the illustrations you've already created (the puzzle, roadmap, map, database cloud, etc.) as props within the scene. It almost becomes a visual summary of everything the CAMTREES Database project has accomplished so far.
 
-*ME:* I may further tweak these images or use one of them as is. But I'll wait to see what the two illustrations I haven't yet requested look like.
+*Note:* Having now generated all five Option images, I have chosen to use the The
+"CAMTREES Team" Image for the top of the Information for CAM Staff page.
+
 
 <p></p>
 
@@ -423,6 +427,12 @@ The planning-session concept works especially well because it allows you to inco
 
 ## Final Thoughts
 
-In closing, I found working with ChatGPT to be similar to when I worked with a real live human artist back in the late 80’s and early 90’s. We were working to design flyers for new Apple Macintosh Computer Labs being installed at Penn State University. Just like this project it started with me having some initial thoughts. But the artist changing them into their final *thing of beauty* form that was so much better.
+In closing, I found working with ChatGPT to be similar to when I worked with a real live
+human artist back in the late 80’s and early 90’s. We were working to design flyers for
+new Apple Macintosh Computer Labs being installed at Penn State University. Just like this
+project it started with me having some initial thoughts. But the artist changing them into
+their final *thing of beauty* form that was so much better.
 
-Just like a human artist, ChatGPT took my initial visions and turned them into what you see here. These illustrations touch my heart and give me true joy to behold. I want to jump into the images and participate with what the volunteers are experiencing.
+Just like a human artist, ChatGPT took my initial visions and turned them into what you
+see here. These illustrations touch my heart and give me true joy to behold. I want to
+jump into the images and participate with what the volunteers are experiencing.

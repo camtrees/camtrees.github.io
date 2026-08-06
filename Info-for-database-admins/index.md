@@ -8,31 +8,35 @@ nav_order: 6
 
 # {{ page.title }}
 
-As pictured in the jigsaw puzle above, many cloud services come together to form the
-CAMTREES Database technology ecosystem.
+As illustrated by the jigsaw puzzle above, the CAMTREES Database is built from several
+cloud services and open-source technologies that work together as a single technology
+ecosystem.
 
 * **EpiCollect5**
-	* Used by volunteers to collect tree data while in the field
-	* Also used by Hub Captains to record rain events
+	* Used by volunteers to collect tree data in the field.
+	* Also used by Hub Captains to record rainfall events.
 * **GitHub**
-	* GitHub Actions allows for the automation of a nightly backup of the CAMTREES Database
-	* GitHub Pages hosts this CAMTREES Database Website
+	* Hosts the source code and documentation for the CAMTREES project.
+	* GitHub Actions automatically perform a nightly backup of the CAMTREES Database.
+	* GitHub Pages hosts this website.
 * **PostgreSQL**
-	* Neon.com hosts the CAMTREES (PostgreSQL) Database
+	* Serves as the primary relational database for the CAMTREES project.
+	* The database is hosted by Neon, a cloud-based PostgreSQL hosting service.
 * **Python**
-	* PyCharm IDE allows us to run programs to import EpiCollect data into our CAMTREES Database
+	* Python programs import data collected by EpiCollect into the CAMTREES Database
+	* Development is performed using the PyCharm integrated development environment (IDE)
 * **Web Server**
-	* GitHub Pages hosts this CAMTREES Database Website
+	* GitHub Pages hosts this website.
 * **Google Services**
-	* Gmail provides the shared email address used to log into all the other cloud services listed here
-	* Google Groups allows for collaboration through a single shared email address
-	* Google My Maps allows us to create a custom map showing CAM Tree Locations across Maine
+	* Gmail provides the shared account used to access the project's cloud services.
+	* Google Groups provides a shared email address and facilitates collaboration among volunteers.
+	* Google My Maps allows us to create a custom map showing CAM Tree Locations across Maine.
 * **Mapping / GIS**
 	* PostGIS extends PostgreSQL by adding support for showing data on maps, as well as 
-	  querying geospatial data
-	* Google My Maps allows us to create a publicly available map showing CAM Tree Locations across Maine
-	* DBeaver allows viewing selected tree locations on a map within an SQL GUI client
+	  querying geospatial data.
+	* Google My Maps provides a publicly accessible map of CAM tree locations across Maine.
+	* DBeaver allows database administrators to display selected tree locations directly from the database.
 
-More detailed information on each of these cloud services is provided in the pages under
-the "Info for Database Admins" hierarchy.
+Additional information about each of these technologies is available throughout the Info
+for Database Admins section of this website.
 

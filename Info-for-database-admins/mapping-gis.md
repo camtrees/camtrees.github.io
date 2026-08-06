@@ -22,97 +22,134 @@ parent: Info for Database Admins
 
 ## Viewing Tree Locations on a Map
 
-We currently have two methods to view tree locations on a map:
+The CAMTREES Database currently provides two ways to view tree locations on a map:
 
-* Using a custom Google My Maps - Viewable by anyone
+- **Custom Google My Maps** – Available to anyone with the map link.
+- **DBeaver** – Our recommended desktop database tool, available to authorized CAM staff and volunteers.
 
-* Using DBeaver (our recommended desktop GUI Database Tool) - Viewable by a limited
-number of CAM Staff and Volunteers
+---
 
-### Using a Custom Google My Maps
+## Using a Custom Google My Maps
 
-1. First we create an SQL View that has each tree's Longitude and Latitude. Google will use
-those data to place each tree's pin on the map. When a user clicks a tree's pin an info
-card opens. This card displays the custom title, description, and any additional info (SQL
-table fields) added by the map creator.
+The Google My Maps version of the map is created in three steps:
 
-1. Next, we export the data from the view to a local CSV file on our personal computer.
+1. Create an SQL view containing each tree's latitude and longitude. Google uses these
+coordinates to place a marker for every tree. When a user selects a marker, an information
+card displays the tree's title, description, and any additional fields included in the SQL
+view.
 
-1. Finally, we import the local CSV file into our custom Google map, replacing all the
-existing data for our map.
+2. Export the SQL view to a local CSV file.
+
+3. Import the CSV file into the custom Google My Maps project, replacing the existing tree
+data.
 
 You can view the
 <a href="https://www.google.com/maps/d/edit?mid=1BnudQOUMWyFeMCpp1HV90hQPCFrWSx0&ll=44.44387186421211%2C-70.31670421000621&z=9" target="_blank">CAM Tree Locations</a>
-Google Map page. It shows the locations of all CAM Chestnut Trees planted to date.
+map to see the locations of all chestnut trees planted by CAM to date.
 
+---
 
-### Using DBeaver
+## Using DBeaver
 
-1. First we install the PostGIS PostgreSQL extension into the CAMTREES database. This
-extension adds new data types to our database. One of which allows us to plot trees on a
-map.
+DBeaver can display tree locations directly from the PostgreSQL database using the PostGIS
+extension.
 
-1. Then, for each tree, we calculate a geography point. That is a point representing the
-tree's position on the earth's surface.
+The process consists of three steps:
 
-1. Finally, from within an SQL View of trees, we select one or more geography points. That
-will plot the selected points (trees) on a map shown in DBeaver's 'Value' panel.
+1. Install the PostgreSQL **PostGIS** extension. PostGIS adds geographic data types and
+mapping capabilities to PostgreSQL.
 
-### Here is a DBeaver Screenshot Showing a Map of Two Tree Locations
+2. As each tree is added to the database, calculate and store a geographic point
+representing its location on the Earth's surface.
 
-There are two 'POINT's (rows 95 and 100) selected, thus the map will show only those two
-trees. 
+3. From an SQL query or view, select one or more geography points. DBeaver automatically
+plots the selected trees on an interactive map in its **Value** panel.
+
+---
+
+## Example: Viewing Trees in DBeaver
+
+The screenshot below shows two selected trees (rows **95** and **100**). Because only
+those two rows are selected, only those two tree locations are displayed on the map.
 
 <a href="../assets/images/website/dbeaver_tree_map.png" target="_blank"><img src="../assets/images/website/dbeaver_tree_map.png" alt="DBeaver map showing two trees"></a>
-*Click the image to view the full sized image in a new browser tab*
 
-### The SQL Code Which Creates a Geography Point for Each Tree
+*Click the image to view the full-size version in a new browser tab.*
 
-Each tree's geography point is calculated using the tree's longitude and latitude at the
-time a tree is added to the 'tree' table.
+---
 
-Here is an incomplete portion of the SQL code that creates the 'tree' table:
+## Creating a Geography Point for Each Tree
 
+When a new tree is added to the **tree** table, PostgreSQL automatically calculates and
+stores a geographic point using the tree's longitude and latitude.
+
+The following excerpt from the `tree` table definition shows how this is accomplished:
+
+```sql
+CREATE TABLE tree (
+    id        INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    longitude float8,
+    latitude  float8,
+    geog      geography(Point, 4326)
+              GENERATED ALWAYS AS (
+                  ST_SetSRID(ST_MakePoint(longitude, latitude), 4326)::geography
+              ) STORED,
+    ...
+);
 ```
-1 CREATE TABLE tree (
-2     id        INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-3     longitude float8,
-4     latitude  float8,
-5     geog      geography(Point, 4326) GENERATED ALWAYS AS (ST_SetSRID(ST_MakePoint(longitude, latitude), 4326)::geography) STORED,
-6     . etc
-7     . etc
-8     . etc
-9     );
-```
 
-### Key Parts of the SQL code (line 5) that creates the geography point
+---
 
-**geog:** is the name of the column in the 'tree' table. Just as 'id', 'longitude' and
-'latitude' are also names of other columns.
+## Understanding the Geography Column
 
-**geography(Point, 4326):** Specifies a spherical coordinate data type for a point using
-GPS coordinates (WGS 84, SRID 4326).
+### `geog`
 
-**GENERATED ALWAYS AS (...) STORED:** Tells PostgreSQL to compute the value automatically
-and save it on disk whenever longitude or latitude change.
+The name of the column that stores each tree's geographic location.
 
-**ST_SetSRID(ST_MakePoint(longitude, latitude), 4326):** Creates a raw point from the
-coordinate columns (longitude and latitude) and tags it with the correct GPS system ID
-(4326).
+### `geography(Point, 4326)`
 
-**::geography:** Casts that raw point into the geography type so distances are measured in
-real-world meters instead of flat grid units.
+Defines the column as a geographic point using the **WGS 84** GPS coordinate system (SRID
+4326).
 
-### Breakdown of Components
+### `GENERATED ALWAYS AS (...) STORED`
 
-**geography vs geometry:** The geography type calculates distances over a 3D sphere (the
-Earth), which gives true measurements in meters. The geometry type (which we are not
-using) treats coordinates like a flat piece of paper.
+Tells PostgreSQL to calculate the geography point automatically whenever the tree's
+longitude or latitude changes and then permanently store the calculated value in the
+table.
 
-**4326 (SRID):** The standard ID for WGS 84 GPS coordinates, where coordinates are
-recorded in degrees of longitude and latitude.
+### `ST_SetSRID(ST_MakePoint(longitude, latitude), 4326)`
 
-**STORED:** Means the database actually writes and keeps this point saved on disk. This
-takes a tiny bit of extra disk space, but makes searches and maps run much faster because
-it does not need to re-calculate the point every time you look at it.
+Creates a point from the longitude and latitude values and assigns the correct spatial
+reference identifier (SRID 4326).
 
+### `::geography`
+
+Converts the point into PostgreSQL's **geography** data type, allowing distances and other
+spatial calculations to be performed using the Earth's curved surface rather than a flat
+plane.
+
+---
+
+## Additional Notes
+
+### Geography vs. Geometry
+
+The **geography** data type performs calculations using the Earth's curved surface,
+producing accurate real-world distances measured in meters.
+
+The **geometry** data type, which is not used by CAMTREES, treats coordinates as though
+they exist on a flat surface. While geometry is often faster, geography provides more
+accurate distance calculations for GPS coordinates.
+
+### What Is SRID 4326?
+
+**SRID 4326** identifies the **WGS 84** coordinate system, the worldwide standard used by
+GPS devices. Coordinates are stored as latitude and longitude values measured in degrees.
+
+### Why Use `STORED`?
+
+The `STORED` keyword tells PostgreSQL to save the calculated geography point on disk
+instead of recalculating it every time it is needed.
+
+Although this uses a very small amount of additional storage, it significantly improves
+the performance of spatial queries and map displays.

@@ -4,8 +4,6 @@ layout: default
 parent: Info for CAM Volunteers
 ---
 
-# {{ page.title }}
-
 <center>
 <table border="0" cellpadding="10">
   <tr>
@@ -19,122 +17,178 @@ parent: Info for CAM Volunteers
 </table>
 </center>
 
+# {{ page.title }}
 
-The <a href="https://five.epicollect.net" target="_blank">EpiCollect5 mobile app</a>
-is a free and easy-to-use
-mobile data collection platform created by Oxford University.
+## Overview
 
-The EpiCollect5 app is currently available for iOS (version 15+) and Android (version 10+).
+The <a href="https://five.epicollect.net" target="_blank">EpiCollect5 mobile app</a> is a free, easy-to-use field data collection platform developed by Oxford University.
 
-EpiCollect5 can be used to collect data while in the field, even when standing next to a
-chestnut tree without cellular service. If cellular service is available, data can be
-uploaded immediately to the EpiCollect servers. Otherwise, the data can be uploaded later
-when an internet connection becomes available.
+The app is currently available for:
 
-CAM began using the EpiCollect5 mobile app in the Spring of 2025. The app has been well
-received by volunteers, who find it easy to use. Data is collected when **planting a new
-tree** and when **recording information about an existing tree**.
+- iOS devices (version 15 and newer)
+- Android devices (version 10 and newer)
 
-Prior to going out into the field with the EpiCollect5 app, you should follow these steps
-to assure your EpiCollect phone app has the latest form (sets of questions) loaded. It is
-critical to perform these steps when you have internet connectivity.
+EpiCollect5 allows CAM volunteers to collect tree data while working in the field—even when standing next to a chestnut tree without cellular service.
 
-1. Launch EpiCollect
-1. If you are NOT at the Project Selection Screen that allows you to select the
-   ‘CAM Tree Maintenance’ project
-	* Click the ‘< Projects’ button in the top left of the screen until you get back to
-	  the Project Selection Screen
-1. Click the ‘CAM Tree Maintenance’ project
-	* If you see a dialog that says the project form has been updated, click the ‘OK’
-	  button. Click ‘OK’ again when it tells you that the form has been updated.
-1. Click the ‘< Projects’ button again to go back to the Project Selection screen.
+When an Internet connection is available, collected data can be uploaded immediately to the EpiCollect servers. If no connection is available, data is stored on the phone and uploaded later when Internet access becomes available.
 
-Once out in the field, as you collect tree data with EpiCollect5, you will first select
-the CAM Organization and Tree Site. You will then follow one of six data-entry pathways
-through the app. The following table describes each pathway and its intended use.
+CAM began using EpiCollect5 in spring 2025. Volunteers have found the app easy to use and reliable for collecting information during two primary activities:
 
-| Pathway      | Purpose                                                                           |
-| ------------ | --------------------------------------------------------------------------------- |
-| **PLANT**    | Data collected when planting a new tree                                           |
-| **GPS**      | Recording the GPS location of an existing tree                                    |
-| **ONE**      | Recording health data or performing care actions on a single tree                 |
-| **ALL**      | Recording care actions (watering, weeding, etc.) performed on all trees at a site |
-| **WildCAM**  | Recording information about a wild tree not yet known to TACF                     |
-| **WildTACF** | Recording information about a wild tree already known to TACF                     |
+- Planting new chestnut trees.
+- Recording information about existing trees.
 
-Kim Colson has created an extensive
-<a href="https://camtrees.github.io/assets/cam-epicollect5-quick-reference-guide-1.0.pdf" target="_blank">
-CAM EpiCollect5 Quick Reference Guide</a>
-which provides easy-to-follow instructions for using the app in the field.
+---
 
+## Preparing EpiCollect5 Before Going Into the Field
 
-#### Data Collected for Each Pathway
+Before collecting data in the field, confirm that your EpiCollect5 app has the latest version of the CAM Tree Maintenance form.
 
-1. **PLANT** – Data collected when planting a new tree
-	- CAMorg-Site – The CAMorg and Site where the tree lives.
-	- Tree Number – The tree's three digit number with leading zeroes.
-	- Mother Tree – The tree’s mother.
-	- Mother Tree Other – A mother tree not in our EpiCollect dropdown list.
-	- Father Tree – The tree’s father.
-	- Father Tree Other – A father tree not in our EpiCollect dropdown list.
-	- Parent Tree Note – Additional info regarding the tree’s lineage.
-	- Tree GPS Location – The tree’s longitude and latitude.
-	- Access Path – Wheelchair Accessible Trail, Hiking Trail, Auto Road, etc.
-	- Access Level – Easy, Moderate, or Difficult.
-	- Access Note – Any comment (if helpful) regarding the tree accessibility.
-	- Planting Method – Short Tube, Tall Tube, etc.
-	- Wire Fence – Was a Wire Fence placed around the tree.
-	- Tree Photos – One photo of the tree’s tag, and one photo of the tree.
-	- Care Actions – Actions (water, weed, etc.) performed.
-	- Additional Info – Any info you feel like adding regarding the planting.
+This step must be completed while you have an Internet connection.
 
-1. **GPS** – Data collected when recording the GPS Location for an existing tree
-	- CAMorg-Site – The CAMorg and Site where the tree lives.
-	- Tree Number – The tree's three digit number with leading zeroes.
-	- Tree GPS Location – The tree’s longitude and latitude.
-	- Additional Info – Any info you feel like adding regarding how to locate the tree.
+1. Launch EpiCollect5.
 
-1. **ONE** – Data collected when recording health data or performing care actions on a single tree
-	- CAMorg-Site – The CAMorg and Site where the tree lives.
-	- Tree Number – The tree's three digit number with leading zeroes.
-	- Health – Good, Poor, or Dead.
-	- Height – How tall is the tree (measured in feet and inches).
-	- Diameter – How wide is the tree (in inches) at breast height.
-	- Blight – Does the tree have blight.
-	- Form – Straight or Branching.
-	- Stump Sprouting – Are stump sprouts present.
-	- Catkins – Are catkins present.
-	- Blossoms – Are blossoms present.
-	- Nut Production – None, Some, or Many.
-	- Access Method – Equipment required to harvest or pollinate the tree.
-	- Tree Photos – Two photos of the tree.
-	- Care Actions – Actions (water, weed, etc.) performed.
-	- Additional Info – Any info volunteer feels like adding.
+2. If you are not already on the Project Selection screen:
+   - Tap the **< Projects** button in the upper-left corner until the Project Selection screen appears.
 
-1. **ALL** – Data collected when recording care actions (water, etc.) performed on ALL trees at a Site
-	- CAMorg-Site – The CAMorg and Site where the tree lives.
-	- Care Actions – Actions (water, weed, etc.) performed.
-	- Additional Info – Any info you feel like adding regarding the trees.
+3. Select the **CAM Tree Maintenance** project.
+   - If EpiCollect indicates that the project form has been updated, tap **OK**.
+   - Tap **OK** again after the update is complete.
 
-1. **WildCAM** – Data collected when recording information for a wild tree unknown to TACF
-	- Tree GPS Location – The tree’s longitude and latitude.
-	- Access Path – Wheelchair Accessible Trail, Hiking Trail, Auto Road, etc.
-	- Access Level – Easy, Moderate, or Difficult.
-	- Access Note – Any comment (if helpful) regarding the tree accessibility.
-	- Health – Good, Poor, or Dead.
-	- Height – How tall is the tree (measured in feet and inches).
-	- Diameter – How wide is the tree (in inches) at breast height.
-	- Blight – Does the tree have blight.
-	- Form – Straight or Branching.
-	- Stump Sprouting – Are stump sprouts present.
-	- Catkins – Are catkins present.
-	- Blossoms – Are blossoms present.
-	- Nut Production – None, Some, or Many.
-	- Access Method – Equipment required to harvest or pollinate the tree.
-	- Tree Photos – Two photos of the tree.
-	- Care Actions – Actions (water, weed, etc.) performed.
-	- Additional Info – Any info you feel like adding regarding the Wild tree.
+4. Tap the **< Projects** button again to return to the Project Selection screen.
 
-1. **WildTACF** – Data collected when recording information for a wild tree known to TACF
-	- Tree ID – ‘ME-‘ followed by two uppercase letters and three digits.
-	- All the same data collected for a WildCAM tree in step 5 above.
+Your phone is now ready for field data collection.
+
+---
+
+## Choosing a Data Collection Pathway
+
+When collecting tree information in the field, first select the appropriate:
+
+- **CAM Organization**
+- **Tree Site**
+
+You will then select one of the following six pathways depending on the activity being performed.
+
+| Pathway      | Purpose                                                                  |
+| ------------ | ------------------------------------------------------------------------ |
+| **PLANT**    | Recording information when planting a new tree                           |
+| **GPS**      | Recording the GPS location of an existing tree                           |
+| **ONE**      | Recording health information or performing care actions on a single tree |
+| **ALL**      | Recording care actions performed on all trees at a site                  |
+| **WildCAM**  | Recording information about a wild tree not previously known to TACF     |
+| **WildTACF** | Recording information about a wild tree already known to TACF            |
+
+Kim Colson has created the comprehensive
+<a href="https://camtrees.github.io/assets/cam-epicollect5-quick-reference-guide-1.0.pdf" target="_blank">CAM EpiCollect5 Quick Reference Guide</a>,
+which provides detailed instructions for using the app in the field.
+
+---
+
+# EpiCollect5 Data Fields by Pathway
+
+The following sections describe the information collected through each EpiCollect5 pathway.
+
+<details>
+<summary><strong>PLANT — Planting a New Tree</strong></summary>
+
+Used when recording information about a newly planted tree.
+
+- **CAMorg-Site** — The CAM Organization and Site where the tree lives.
+- **Tree Number** — The tree's three-digit identifier with leading zeroes.
+- **Mother Tree** — The tree's mother.
+- **Mother Tree Other** — A mother tree not included in the EpiCollect selection list.
+- **Father Tree** — The tree's father.
+- **Father Tree Other** — A father tree not included in the EpiCollect selection list.
+- **Parent Tree Note** — Additional information regarding the tree's lineage.
+- **Tree GPS Location** — The tree's GPS coordinates.
+- **Access Path** — Wheelchair-accessible trail, hiking trail, auto road, etc.
+- **Access Level** — Easy, Moderate, or Difficult.
+- **Access Note** — Additional information regarding tree accessibility.
+- **Planting Method** — Short Tube, Tall Tube, etc.
+- **Wire Fence** — Indicates whether a wire fence was placed around the tree.
+- **Tree Photos** — One photo of the tree tag and one photo of the tree.
+- **Care Actions** — Actions performed, such as watering or weeding.
+- **Additional Info** — Any additional planting information.
+
+</details>
+
+<details>
+<summary><strong>GPS — Recording an Existing Tree Location</strong></summary>
+
+Used when recording or updating the GPS location of an existing tree.
+
+- **CAMorg-Site** — The CAM Organization and Site where the tree lives.
+- **Tree Number** — The tree's three-digit identifier with leading zeroes.
+- **Tree GPS Location** — The tree's GPS coordinates.
+- **Additional Info** — Information helpful for locating the tree.
+
+</details>
+
+<details>
+<summary><strong>ONE — Recording Health Data or Care Actions for a Single Tree</strong></summary>
+
+Used when recording health information or performing care actions on one tree.
+
+- **CAMorg-Site** — The CAM Organization and Site where the tree lives.
+- **Tree Number** — The tree's three-digit identifier with leading zeroes.
+- **Health** — Good, Poor, or Dead.
+- **Height** — Tree height measured in feet and inches.
+- **Diameter** — Tree diameter measured at breast height.
+- **Blight** — Whether the tree shows signs of blight.
+- **Form** — Straight or Branching.
+- **Stump Sprouting** — Whether stump sprouts are present.
+- **Catkins** — Whether catkins are present.
+- **Blossoms** — Whether blossoms are present.
+- **Nut Production** — None, Some, or Many.
+- **Access Method** — Equipment required for harvesting or pollination.
+- **Tree Photos** — Two photos of the tree.
+- **Care Actions** — Actions performed, such as watering or weeding.
+- **Additional Info** — Any additional observations.
+
+</details>
+
+<details>
+<summary><strong>ALL — Recording Care Actions for All Trees at a Site</strong></summary>
+
+Used when recording care actions performed on all trees at a site.
+
+- **CAMorg-Site** — The CAM Organization and Site where the trees live.
+- **Care Actions** — Actions performed, such as watering or weeding.
+- **Additional Info** — Any additional information about the trees.
+
+</details>
+
+<details>
+<summary><strong>WildCAM — Recording a Newly Discovered Wild Tree</strong></summary>
+
+Used when recording information about a wild chestnut tree not previously known to TACF.
+
+- **Tree GPS Location** — The tree's GPS coordinates.
+- **Access Path** — Wheelchair-accessible trail, hiking trail, auto road, etc.
+- **Access Level** — Easy, Moderate, or Difficult.
+- **Access Note** — Additional information regarding accessibility.
+- **Health** — Good, Poor, or Dead.
+- **Height** — Tree height measured in feet and inches.
+- **Diameter** — Tree diameter measured at breast height.
+- **Blight** — Whether the tree shows signs of blight.
+- **Form** — Straight or Branching.
+- **Stump Sprouting** — Whether stump sprouts are present.
+- **Catkins** — Whether catkins are present.
+- **Blossoms** — Whether blossoms are present.
+- **Nut Production** — None, Some, or Many.
+- **Access Method** — Equipment required for harvesting or pollination.
+- **Tree Photos** — Two photos of the tree.
+- **Care Actions** — Actions performed.
+- **Additional Info** — Any additional information about the wild tree.
+
+</details>
+
+<details>
+<summary><strong>WildTACF — Recording a Known TACF Wild Tree</strong></summary>
+
+Used when recording information about a wild tree already known to TACF.
+
+- **Tree ID** — The TACF identifier (for example, ME-XX###).
+- All other information collected for a WildCAM tree.
+
+</details>
