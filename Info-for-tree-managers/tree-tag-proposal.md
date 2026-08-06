@@ -46,7 +46,7 @@ health assessments, and location, is stored in the CAMTREES Database.
 
 ## Definitions
 
-#### Tree Manager
+### Tree Manager
 
 A **Tree Manager** is the person who either:
 
@@ -59,7 +59,7 @@ The Tree Manager is responsible for:
 - Producing the metal tree tag
 - Recording the tree's mother and father in EpiCollect
 
-#### TAG-ID
+### TAG-ID
 
 Every tree is assigned a unique **TAG-ID**. For example: **MAM-0048**
 
@@ -72,7 +72,7 @@ The TAG-ID consists of:
 Each Tree Manager maintains an independent numbering sequence beginning with **0001** and
 increasing by one for each seedling they manage.
 
-#### Tree Planter
+### Tree Planter
 
 A **Tree Planter** is a CAM volunteer who plants a tagged seedling at a planting site.
 
@@ -232,7 +232,7 @@ The illustration above shows an example of this proposed tag design.
 
 ## Frequently Asked Questions
 
-#### Why are the Tree Manager's initials included in the TAG-ID?
+### Why are the Tree Manager's initials included in the TAG-ID?
 
 Including the Tree Manager's initials is fundamental to this proposal.
 
@@ -246,7 +246,7 @@ individual's sequence is needed.
 Regardless of how many Tree Managers participate, or how many seedlings each receives,
 assigning the next TAG-ID remains simple and predictable.
 
-#### How can I remember the last sequence number I used?
+### How can I remember the last sequence number I used?
 
 Whenever you create a batch of tree tags, make **one additional tag** using the next
 sequence number.
@@ -256,7 +256,7 @@ Store this unused tag with your supply of blank tags.
 The extra tag serves as a permanent reminder of the next TAG-ID to use, eliminating the
 need to keep a separate written record.
 
-#### Will trees at a site still be numbered sequentially?
+### Will trees at a site still be numbered sequentially?
 
 No.
 
@@ -267,7 +267,7 @@ Under the current system, numbering is sequential within a CAM Organization — 
 an individual planting site. Whether trees at a particular site have consecutive numbers
 is simply a coincidence.
 
-#### When should I create the tree tags?
+### When should I create the tree tags?
 
 There are two good options:
 
