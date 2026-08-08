@@ -93,22 +93,23 @@ The following sections describe the information collected through each EpiCollec
 
 Used when recording information about a newly planted tree.
 
-- **CAMorg-Site** — The CAM Organization and Site where the tree lives.
-- **Tree Number** — The tree's three-digit identifier with leading zeroes.
-- **Mother Tree** — The tree's mother.
-- **Mother Tree Other** — A mother tree not included in the EpiCollect selection list.
-- **Father Tree** — The tree's father.
-- **Father Tree Other** — A father tree not included in the EpiCollect selection list.
-- **Parent Tree Note** — Additional information regarding the tree's lineage.
-- **Tree GPS Location** — The tree's GPS coordinates.
-- **Access Path** — Wheelchair-accessible trail, hiking trail, auto road, etc.
-- **Access Level** — Easy, Moderate, or Difficult.
-- **Access Note** — Additional information regarding tree accessibility.
-- **Planting Method** — Short Tube, Tall Tube, etc.
-- **Wire Fence** — Indicates whether a wire fence was placed around the tree.
-- **Tree Photos** — One photo of the tree tag and one photo of the tree.
-- **Care Actions** — Actions performed, such as watering or weeding.
-- **Additional Info** — Any additional planting information.
+* **CAMorg-Site** — The CAM Organization and Site where the tree lives.
+* **Tree Number** — The tree's three-digit identifier with leading zeroes.
+
+* **Mother Tree** — The tree's mother.
+* **Mother Tree Other** — A mother tree not included in the EpiCollect selection list.
+* **Father Tree** — The tree's father.
+* **Father Tree Other** — A father tree not included in the EpiCollect selection list.
+* **Parent Tree Note** — Additional information regarding the tree's lineage.
+* **Tree GPS Location** — The tree's GPS coordinates.
+* **Access Path** — Wheelchair-accessible trail, hiking trail, auto road, etc.
+* **Access Level** — Easy, Moderate, or Difficult.
+* **Access Note** — Additional information regarding tree accessibility.
+* **Planting Method** — Short Tube, Tall Tube, etc.
+* **Wire Fence** — Indicates whether a wire fence was placed around the tree.
+* **Tree Photos** — One photo of the tree tag and one photo of the tree.
+* **Care Actions** — Actions performed, such as watering or weeding.
+* **Additional Info** — Any additional planting information.
 
 </details>
 
