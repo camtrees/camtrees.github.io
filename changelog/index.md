@@ -7,7 +7,7 @@ nav_order: 98
 <img src="../assets/images/website/changelog.png" alt="CAMTREE Volunteer consulting a day planner showing the ChangeLog" height="512" width="828">
 
 # {{ page.title }}
-_Version: August 5 edit # 1_
+_Version: August 8 edit # 1_
 
 <!-- This content will not appear in the rendered Markdown 
 <details markdown="1">
@@ -70,6 +70,7 @@ Each entry is grouped by month. Within each month, changes are organized by area
 * Created cam_tree_latest_height view
 
 ### Website Content
+* Added the CAMTREES Entity Relationship Diagram and table description to the PostGreSQL page
 * Had ChatGPT review most pages
 * Added a Tree Tag Proposal for sharing with Mark, Eva, Lea, and Kim
 * Created content for the 'PostgreSQL' page under the Info for Database Admins hierarchy
