@@ -425,9 +425,7 @@ The planning-session concept works especially well because it allows you to inco
 
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 
-I also needed an illustration of a **Tree Manager** preparing tags for chestnut seedlings. 
-
-Next up, I wanted an illustration for the top of the "Info for CAM Staff" webpage. I didn't have much of a vision to what I really wanted, so I pretty much turned over the reins to ChatGPT.
+I also needed an illustration of a Tree Manager preparing tags for chestnut seedlings. 
 
 **ME:** I would like a new image using our same woman volunteer. Using the same color pallet  as for the previous images. This time she is sitting at a table preparing metal tags for 4 or 5 chestnut seedlings (also shown on the table) which will soon be planted. All of the metal tags are blank except for the tag she is working on. She is etching the following onto the tag: “HKR-0015”. That text appears  horizontally, left justified on the tag. And the text “2026” appears vertically along the right side of the tag. The ”2026” text would be rotated 90 degrees counterclockwise. Her CAMTREES coffee mug should also be on the table along with whatever else you think would be appropriate.
 
