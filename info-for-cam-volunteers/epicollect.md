@@ -64,8 +64,8 @@ Your phone is now ready for field data collection.
 
 When collecting tree information in the field, first select the appropriate:
 
-	<li><strong> CAM Organization**
-	<li><strong> Tree Site**
+* **CAM Organization**
+* **Tree Site**
 
 You will then select one of the following six pathways depending on the activity being performed.
 
@@ -88,119 +88,118 @@ which provides detailed instructions for using the app in the field.
 
 The following sections describe the information collected through each EpiCollect5 pathway.
 
-<details>
-<summary><strong>PLANT — Planting a New Tree</strong></summary>
+<details markdown="1">
+<summary markdown="span"><strong>PLANT — Planting a New Tree</strong></summary>
+
 
 Used when recording information about a newly planted tree.
 
-<ul>
-	<li><strong> CAMorg-Site</strong> — The CAM Organization and Site where the tree lives.</li>
-	<li><strong> Tree Number</strong> — The tree's three-digit identifier with leading zeroes.</li>
-	<li><strong> Mother Tree</strong> — The tree's mother.</li>
-	<li><strong> Mother Tree Other</strong> — A mother tree not included in the EpiCollect selection list.</li>
-	<li><strong> Father Tree</strong> — The tree's father.</li>
-	<li><strong> Father Tree Other</strong> — A father tree not included in the EpiCollect selection list.</li>
-	<li><strong> Parent Tree Note</strong> — Additional information regarding the tree's lineage.</li>
-	<li><strong> Tree GPS Location</strong> — The tree's GPS coordinates.</li>
-	<li><strong> Access Path</strong> — Wheelchair-accessible trail, hiking trail, auto road, etc.</li>
-	<li><strong> Access Level</strong> — Easy, Moderate, or Difficult.</li>
-	<li><strong> Access Note</strong> — Additional information regarding tree accessibility.</li>
-	<li><strong> Planting Method</strong> — Short Tube, Tall Tube, etc.</li>
-	<li><strong> Wire Fence</strong> — Indicates whether a wire fence was placed around the tree.</li>
-	<li><strong> Tree Photos</strong> — One photo of the tree tag and one photo of the tree.</li>
-	<li><strong> Care Actions</strong> — Actions performed, such as watering or weeding.</li>
-	<li><strong> Additional Info</strong> — Any additional planting information.</li>
-</ul>
+* **CAMorg-Site** — The CAM Organization and Site where the tree lives.
+* **Tree Number** — The tree's three-digit identifier with leading zeroes.
+* **Mother Tree** — The tree's mother.
+* **Mother Tree Other** — A mother tree not included in the EpiCollect selection list.
+* **Father Tree** — The tree's father.
+* **Father Tree Other** — A father tree not included in the EpiCollect selection list.
+* **Parent Tree Note** — Additional information regarding the tree's lineage.
+* **Tree GPS Location** — The tree's GPS coordinates.
+* **Access Path** — Wheelchair-accessible trail, hiking trail, auto road, etc.
+* **Access Level** — Easy, Moderate, or Difficult.
+* **Access Note** — Additional information regarding tree accessibility.
+* **Planting Method** — Short Tube, Tall Tube, etc.
+* **Wire Fence** — Indicates whether a wire fence was placed around the tree.
+* **Tree Photos** — One photo of the tree tag and one photo of the tree.
+* **Care Actions** — Actions performed, such as watering or weeding.
+* **Additional Info** — Any additional planting information.
 
 </details>
 
-<details>
-<summary><strong>GPS — Recording an Existing Tree Location</strong></summary>
+
+<details markdown="1">
+<summary markdown="span"><strong>GPS — Recording an Existing Tree Location</strong></summary>
+
 
 Used when recording or updating the GPS location of an existing tree.
 
-<ul>
-	<li><strong> CAMorg-Site</strong> — The CAM Organization and Site where the tree lives.</li>
-	<li><strong> Tree Number</strong> — The tree's three-digit identifier with leading zeroes.</li>
-	<li><strong> Tree GPS Location</strong> — The tree's GPS coordinates.</li>
-	<li><strong> Additional Info</strong> — Information helpful for locating the tree.</li>
-</ul>
+* **CAMorg-Site** — The CAM Organization and Site where the tree lives.
+* **Tree Number** — The tree's three-digit identifier with leading zeroes.
+* **Tree GPS Location** — The tree's GPS coordinates.
+* **Additional Info** — Information helpful for locating the tree.
 
 </details>
 
-<details>
-<summary><strong>ONE — Recording Health Data or Care Actions for a Single Tree</strong></summary>
+
+<details markdown="1">
+<summary markdown="span"><strong>ONE — Recording Health Data or Care Actions for a Single Tree</strong></summary>
+
 
 Used when recording health information or performing care actions on one tree.
 
-<ul>
-	<li><strong> CAMorg-Site</strong> — The CAM Organization and Site where the tree lives.</li>
-	<li><strong> Tree Number</strong> — The tree's three-digit identifier with leading zeroes.</li>
-	<li><strong> Health</strong> — Good, Poor, or Dead.</li>
-	<li><strong> Height</strong> — Tree height measured in feet and inches.</li>
-	<li><strong> Diameter</strong> — Tree diameter measured at breast height.</li>
-	<li><strong> Blight</strong> — Whether the tree shows signs of blight.</li>
-	<li><strong> Form</strong> — Straight or Branching.</li>
-	<li><strong> Stump Sprouting</strong> — Whether stump sprouts are present.</li>
-	<li><strong> Catkins</strong> — Whether catkins are present.</li>
-	<li><strong> Blossoms</strong> — Whether blossoms are present.</li>
-	<li><strong> Nut Production</strong> — None, Some, or Many.</li>
-	<li><strong> Access Method</strong> — Equipment required for harvesting or pollination.</li>
-	<li><strong> Tree Photos</strong> — Two photos of the tree.</li>
-	<li><strong> Care Actions</strong> — Actions performed, such as watering or weeding.</li>
-	<li><strong> Additional Info</strong> — Any additional observations.</li>
-</ul>
+* **CAMorg-Site** — The CAM Organization and Site where the tree lives.
+* **Tree Number** — The tree's three-digit identifier with leading zeroes.
+* **Health** — Good, Poor, or Dead.
+* **Height** — Tree height measured in feet and inches.
+* **Diameter** — Tree diameter measured at breast height.
+* **Blight** — Whether the tree shows signs of blight.
+* **Form** — Straight or Branching.
+* **Stump Sprouting** — Whether stump sprouts are present.
+* **Catkins** — Whether catkins are present.
+* **Blossoms** — Whether blossoms are present.
+* **Nut Production** — None, Some, or Many.
+* **Access Method** — Equipment required for harvesting or pollination.
+* **Tree Photos** — Two photos of the tree.
+* **Care Actions** — Actions performed, such as watering or weeding.
+* **Additional Info** — Any additional observations.
 
 </details>
 
-<details>
-<summary><strong>ALL — Recording Care Actions for All Trees at a Site</strong></summary>
+
+<details markdown="1">
+<summary markdown="span"><strong>ALL — Recording Care Actions for All Trees at a Site</strong></summary>
+
 
 Used when recording care actions performed on all trees at a site.
 
-<ul>
-	<li><strong> CAMorg-Site</strong> — The CAM Organization and Site where the trees live.</li>
-	<li><strong> Care Actions</strong> — Actions performed, such as watering or weeding.</li>
-	<li><strong> Additional Info</strong> — Any additional information about the trees.</li>
-</ul>
+* **CAMorg-Site** — The CAM Organization and Site where the trees live.
+* **Care Actions** — Actions performed, such as watering or weeding.
+* **Additional Info** — Any additional information about the trees.
 
 </details>
 
-<details>
-<summary><strong>WildCAM — Recording a Newly Discovered Wild Tree</strong></summary>
+
+<details markdown="1">
+<summary markdown="span"><strong>WildCAM — Recording a Newly Discovered Wild Tree</strong></summary>
+
 
 Used when recording information about a wild chestnut tree not previously known to TACF.
 
-<ul>
-	<li><strong> Tree GPS Location</strong> — The tree's GPS coordinates.</li>
-	<li><strong> Access Path</strong> — Wheelchair-accessible trail, hiking trail, auto road, etc.</li>
-	<li><strong> Access Level</strong> — Easy, Moderate, or Difficult.</li>
-	<li><strong> Access Note</strong> — Additional information regarding accessibility.</li>
-	<li><strong> Health</strong> — Good, Poor, or Dead.</li>
-	<li><strong> Height</strong> — Tree height measured in feet and inches.</li>
-	<li><strong> Diameter</strong> — Tree diameter measured at breast height.</li>
-	<li><strong> Blight</strong> — Whether the tree shows signs of blight.</li>
-	<li><strong> Form</strong> — Straight or Branching.</li>
-	<li><strong> Stump Sprouting</strong> — Whether stump sprouts are present.</li>
-	<li><strong> Catkins</strong> — Whether catkins are present.</li>
-	<li><strong> Blossoms</strong> — Whether blossoms are present.</li>
-	<li><strong> Nut Production</strong> — None, Some, or Many.</li>
-	<li><strong> Access Method</strong> — Equipment required for harvesting or pollination.</li>
-	<li><strong> Tree Photos</strong> — Two photos of the tree.</li>
-	<li><strong> Care Actions</strong> — Actions performed.</li>
-	<li><strong> Additional Info</strong> — Any additional information about the wild tree.</li>
-</ul>
+* **Tree GPS Location** — The tree's GPS coordinates.
+* **Access Path** — Wheelchair-accessible trail, hiking trail, auto road, etc.
+* **Access Level** — Easy, Moderate, or Difficult.
+* **Access Note** — Additional information regarding accessibility.
+* **Health** — Good, Poor, or Dead.
+* **Height** — Tree height measured in feet and inches.
+* **Diameter** — Tree diameter measured at breast height.
+* **Blight** — Whether the tree shows signs of blight.
+* **Form** — Straight or Branching.
+* **Stump Sprouting** — Whether stump sprouts are present.
+* **Catkins** — Whether catkins are present.
+* **Blossoms** — Whether blossoms are present.
+* **Nut Production** — None, Some, or Many.
+* **Access Method** — Equipment required for harvesting or pollination.
+* **Tree Photos** — Two photos of the tree.
+* **Care Actions** — Actions performed.
+* **Additional Info** — Any additional information about the wild tree.
 
 </details>
 
-<details>
-<summary><strong>WildTACF — Recording a Known TACF Wild Tree</strong></summary>
+
+<details markdown="1">
+<summary markdown="span"><strong>WildTACF — Recording a Known TACF Wild Tree</strong></summary>
+
 
 Used when recording information about a wild tree already known to TACF.
 
-<ul>
-	<li><strong> Tree ID</strong> — The TACF identifier (for example, ME-XX###).</li>
-	<li>All other information collected for a WildCAM tree.</li>
-</ul>
+* **Tree ID** — The TACF identifier (for example, ME-XX###).
+All other information collected for a WildCAM tree.
 
 </details>
