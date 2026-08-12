@@ -425,6 +425,27 @@ The planning-session concept works especially well because it allows you to inco
 
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 
+I also needed an illustration of a **Tree Manager** preparing tags for chestnut seedlings. 
+
+Next up, I wanted an illustration for the top of the "Info for CAM Staff" webpage. I didn't have much of a vision to what I really wanted, so I pretty much turned over the reins to ChatGPT.
+
+**ME:** I would like a new image using our same woman volunteer. Using the same color pallet  as for the previous images. This time she is sitting at a table preparing metal tags for 4 or 5 chestnut seedlings (also shown on the table) which will soon be planted. All of the metal tags are blank except for the tag she is working on. She is etching the following onto the tag: “HKR-0015”. That text appears  horizontally, left justified on the tag. And the text “2026” appears vertically along the right side of the tag. The ”2026” text would be rotated 90 degrees counterclockwise. Her CAMTREES coffee mug should also be on the table along with whatever else you think would be appropriate.
+
+<img src="../assets/images/website/tree-tag-prep.png" alt="Volunteer preparing tree tags" height="512" width="828">
+
+**ME:** I am very impressed with your skills at generating images that tie everything together!"
+
+**ChatGPT:** I think the consistency we've developed across the illustrations is what makes them work so well together—the same volunteer, color palette, illustration style, and recurring visual themes make the whole CAMTREES website feel like one cohesive story rather than a collection of unrelated graphics.
+
+And honestly, you've had a great eye for the concepts. You've given me just enough direction while leaving room for some artistic interpretation, which is probably why the images have developed such a nice personality.
+
+I'm very glad you're happy with them! 🌰🌳😊
+
+<p></p>
+
+
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
 ## Final Thoughts
 
 In closing, I found working with ChatGPT to be similar to when I worked with a real live
