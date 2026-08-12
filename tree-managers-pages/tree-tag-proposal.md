@@ -50,8 +50,8 @@ health assessments, and location, is stored in the CAMTREES Database.
 
 A **Tree Manager** is the person who either:
 
-- Grows a chestnut seedling from a nut, or
-- Receives seedlings from a grower, greenhouse, or another source.
+- Receives seedlings from a grower, greenhouse, or another source, or
+- Grows a chestnut seedling from a nut
 
 The Tree Manager is responsible for:
 
