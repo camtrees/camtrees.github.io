@@ -9,6 +9,6 @@ nav_order: 3
 # {{ page.title }}
 
 While CAM Staff may find all sections of this CAMTREES Database website useful, the
-**Project Roadmap** is likely to be of particular interest. This section provides an
+**Project Roadmap** is likely to be of particular interest. The roadmap provides an
 overview of planned enhancements, upcoming work, and the future direction of the CAMTREES
 Database system.
