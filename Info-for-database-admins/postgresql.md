@@ -58,10 +58,10 @@ The color of the SQL tables' headers in the ER Diagram indicates the type and pu
 <details markdown="1">
 <summary markdown="span"><strong>Green Tables — The four main tables containing tree related data</strong></summary>
 
-* tree — All the CAM planted trees or Wild trees under observation
-* tree_photo — Photos of the trees. The actual photos are stored in EpiCollect. We compute the URL necessary to view the tree. NOTE: You MUST BE LOGGED INTO EpiCOllect to view the photos.
-* tree_care_action — Care actions performed on trees
-* tree_health_assessment — Tree measurements and observations to access the health of the tree
+* **tree** — All the CAM planted trees or Wild trees under observation
+* **tree_photo** — Photos of the trees. The actual photos are stored in EpiCollect. We compute the URL necessary to view the tree. NOTE: You MUST BE LOGGED INTO EpiCOllect to view the photos.
+* **tree_care_action** — Care actions performed on trees
+* **tree_health_assessment** — Tree measurements and observations to access the health of the tree
 
 </details>
 
