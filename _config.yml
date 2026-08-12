@@ -33,4 +33,8 @@ callouts:
 enable_copy_code_button: true
 
 # Allow the use of mermaid files
-mermaid: true
+mermaid:
+  # Version of mermaid library
+  # Pick an available version from https://cdn.jsdelivr.net/npm/mermaid/
+  version: "11.16.1"
+
