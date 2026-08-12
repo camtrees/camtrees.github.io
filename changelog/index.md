@@ -7,7 +7,7 @@ nav_order: 98
 <img src="../assets/images/website/changelog.png" alt="CAMTREE Volunteer consulting a day planner showing the ChangeLog" height="512" width="828">
 
 # {{ page.title }}
-_Version: August 11 edit # 1_
+_Version: August 11 edit # 2_
 
 <!-- This content will not appear in the rendered Markdown 
 <details markdown="1">
@@ -52,11 +52,10 @@ Each entry is grouped by month. Within each month, changes are organized by area
 <summary markdown="span"><strong>2026 August</strong></summary>
 
 ### Website Content
-* Added SQL Views to the PostGreSQL page
-* Added SQL Tables and SQL Views to the PostGreSQL page
+* Added SQL Tables, Views, and Functions to the PostGreSQL page
 * Added the CAMTREES Entity Relationship Diagram and table description to the PostGreSQL page
 * Had ChatGPT review most pages
-* Added a Tree Tag Proposal for sharing with Mark, Eva, Lea, and Kim
+* Added a Proposed Tree Tagging System for sharing with Mark, Eva, Lea, and Kim
 
 </details>
 
