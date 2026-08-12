@@ -61,7 +61,7 @@ The color of the SQL tables' headers in the ER Diagram indicates the type and pu
 * **tree** — All the CAM planted trees or Wild trees under observation
 * **tree_photo** — Photos of the trees. The actual photos are stored in EpiCollect. We compute the URL necessary to view the tree. NOTE: You MUST BE LOGGED INTO EpiCOllect to view the photos.
 * **tree_care_action** — Care actions performed on trees
-* **tree_health_assessment** — Tree measurements and observations to access the health of the tree
+* **tree_health_assessment** — Tree measurements and observations to assess the health of the tree
 
 </details>
 
