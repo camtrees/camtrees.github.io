@@ -7,7 +7,7 @@ nav_order: 98
 <img src="../assets/images/website/changelog.png" alt="CAMTREE Volunteer consulting a day planner showing the ChangeLog" height="512" width="828">
 
 # {{ page.title }}
-_Version: August 11 edit # 2_
+_Version: August 11 edit # 3_
 
 <!-- This content will not appear in the rendered Markdown 
 <details markdown="1">
@@ -26,14 +26,14 @@ _Version: August 11 edit # 2_
 ### Website Content
 ### Website Infrastructure
 
-* Change/Impact/Notes
+- Change/Impact/Notes
 
 Note:
 
-* All timestamps use ISO format (`YYYY-MM-DD`) for consistency.
-* Each entry should be mostly immutable once published.
-* New entries should be appended at the top of each section.
-* Keep descriptions short, factual, and action-oriented.
+- All timestamps use ISO format (`YYYY-MM-DD`) for consistency.
+- Each entry should be mostly immutable once published.
+- New entries should be appended at the top of each section.
+- Keep descriptions short, factual, and action-oriented.
 
 </details>
 -->
@@ -52,10 +52,10 @@ Each entry is grouped by month. Within each month, changes are organized by area
 <summary markdown="span"><strong>2026 August</strong></summary>
 
 ### Website Content
-* Added SQL Tables, Views, and Functions to the PostGreSQL page
-* Added the CAMTREES Entity Relationship Diagram and table description to the PostGreSQL page
-* Had ChatGPT review most pages
-* Added a Proposed Tree Tagging System for sharing with Mark, Eva, Lea, and Kim
+- Added SQL Tables, Views, and Functions to the PostGreSQL page
+- Added the CAMTREES Entity Relationship Diagram and table description to the PostGreSQL page
+- Had ChatGPT review most pages
+- Added a Proposed Tree Tagging System for sharing with Mark, Eva, Lea, and Kim
 
 </details>
 
@@ -65,26 +65,26 @@ Each entry is grouped by month. Within each month, changes are organized by area
 <summary markdown="span"><strong>2026 July</strong></summary>
 
 ### EpiCollect
-* Created HKR Tree TAG test project for possible use by Tree-Managers
+- Created HKR Tree TAG test project for possible use by Tree-Managers
 
 ### GitHub
-* Created new camtrees/codebase to house SQL and Python source code
-* Add Python PyCharm Project to camtrees.github.io repository
+- Created new camtrees/codebase to house SQL and Python source code
+- Add Python PyCharm Project to camtrees.github.io repository
 
 ### Google Map
-* Added each trees height in inches and in human readable form (ft and inches)
+- Added each trees height in inches and in human readable form (ft and inches)
 
 ### Python
-* Move non-secret globals from .env file into new config.py file
-* Add capability to use either the Neon CAMTREES master database or the KENSTER backup database
-* Using .env file to keep SQL and EpiCollect Connection Parameters and Access Tokens secret
+- Move non-secret globals from .env file into new config.py file
+- Add capability to use either the Neon CAMTREES master database or the KENSTER backup database
+- Using .env file to keep SQL and EpiCollect Connection Parameters and Access Tokens secret
 
 ### SQL Views
-* Created cam_tree_latest_height view
+- Created cam_tree_latest_height view
 
 ### Website Content
-* Created content for the 'PostgreSQL' page under the Info for Database Admins hierarchy
-* Created content for the GitHub page under the Info for Database Admins hierarchy
+- Created content for the 'PostgreSQL' page under the Info for Database Admins hierarchy
+- Created content for the GitHub page under the Info for Database Admins hierarchy
 
 </details>
 
@@ -95,40 +95,40 @@ Each entry is grouped by month. Within each month, changes are organized by area
 
 ### EpiCollect
 
-* Add "Collect LIVE Data? Just TESTING?" question for WildCAM and WildTACF trees
-* Edit CLEW - Franklin Park tree numbers 100 and 200 to be 006 and 005
+- Add "Collect LIVE Data? Just TESTING?" question for WildCAM and WildTACF trees
+- Edit CLEW - Franklin Park tree numbers 100 and 200 to be 006 and 005
 
 ### Python
-* Call sql_add_tree_initial_health function to set health of newly planted tree to 'good'
-* Changes necessitated by removal of location_note from SQL tables_
-* Allow for specification of EpiCollect MAP_INDEX when retrieving data
+- Call sql_add_tree_initial_health function to set health of newly planted tree to 'good'
+- Changes necessitated by removal of location_note from SQL tables_
+- Allow for specification of EpiCollect MAP_INDEX when retrieving data
 
 ### SQL Hosting
-* Master CAMTREES Database is now under the CamOrgDatabase@gmail.com Neon User
+- Master CAMTREES Database is now under the CamOrgDatabase@gmail.com Neon User
 
 ### SQL Functions
-* Coded sql_add_tree_initial_health function to allow setting of newly planted tree
+- Coded sql_add_tree_initial_health function to allow setting of newly planted tree
 
 ### SQL Tables
-* Remove location_note column; move existing data into access_note column
-* Worked with Marc to get MAFP - Field NE of Building Site data imported from EpiCollect
+- Remove location_note column; move existing data into access_note column
+- Worked with Marc to get MAFP - Field NE of Building Site data imported from EpiCollect
 
 ### SQL Views
-* Renamed many "cam_..." views to be "data_..."
-* Added cam_export_tree_parent_type_for_epicollect
-* Added cam_export_volunteer_email_for_epicollect
+- Renamed many "cam_..." views to be "data_..."
+- Added cam_export_tree_parent_type_for_epicollect
+- Added cam_export_volunteer_email_for_epicollect
 
 ### Website Content
-* Created content for the "Google Services" page
-* Created content for the "Info for Database Admins" page
-* Created the Using ChatGPT to Create WebSite Illustrations web page
+- Created content for the "Google Services" page
+- Created content for the "Info for Database Admins" page
+- Created the Using ChatGPT to Create WebSite Illustrations web page
 
 ### Website Infrastructure
-* Added Info for Database Users section
-* Added more ChatGPT Illustrations and resized all for consistency
-* Project Roadmap now listed with Major Headers as Timeline and Sub Headers as Task Category
-* Added ChatGPT generated website illustrations
-* Added Database Admin skeleton pages for EpiCollect, GitHub, PostgreSQL, Python, etc
+- Added Info for Database Users section
+- Added more ChatGPT Illustrations and resized all for consistency
+- Project Roadmap now listed with Major Headers as Timeline and Sub Headers as Task Category
+- Added ChatGPT generated website illustrations
+- Added Database Admin skeleton pages for EpiCollect, GitHub, PostgreSQL, Python, etc
 
 </details>
 
@@ -139,39 +139,39 @@ Each entry is grouped by month. Within each month, changes are organized by area
 
 ### SQL Tables
 
-* Added site-level caretaker IDs
-* Removed tree-level primary caretakers in favor of site-level defaults
-* Added GPS coordinates to Site table for mapping support
-* Introduced `tree_primary_caretaker` and `tree_secondary_caretaker` fields
-* Enabled fallback caretaker logic in `cam_trees` view
+- Added site-level caretaker IDs
+- Removed tree-level primary caretakers in favor of site-level defaults
+- Added GPS coordinates to Site table for mapping support
+- Introduced `tree_primary_caretaker` and `tree_secondary_caretaker` fields
+- Enabled fallback caretaker logic in `cam_trees` view
 
 ### SQL Views
 
-* Added `gis_map_view` column to `cam_sites`
-* Updated `cam_count_next_tree_number_for_planting` to include all CAM orgs
-* Default tree numbering now starts at 1 for new orgs
-* Moved `gis_map_view` to the first column in `cam_sites` and `cam_trees` views to simplify map selection
+- Added `gis_map_view` column to `cam_sites`
+- Updated `cam_count_next_tree_number_for_planting` to include all CAM orgs
+- Default tree numbering now starts at 1 for new orgs
+- Moved `gis_map_view` to the first column in `cam_sites` and `cam_trees` views to simplify map selection
 
 ### Website Content
 
-* Added an image to the Epicollect5 for Users page
-* Migrated Kenster’s offline To-Do list into the website
-* Added initial content for “EpiCollect5 for Users”
-* Added initial content for “DBeaver Access to SQL”
-* Added changelog entries previously stored in Excel and early SQL systems
+- Added an image to the Epicollect5 for Users page
+- Migrated Kenster’s offline To-Do list into the website
+- Added initial content for “EpiCollect5 for Users”
+- Added initial content for “DBeaver Access to SQL”
+- Added changelog entries previously stored in Excel and early SQL systems
 
 ### Website Infrastructure
 
-* Renamed To-Do Task List page to Project Roadmap
-* Created GitHub Pages repository for CAMTREES Database site
-* Adopted <a href="https://jekyllrb.com" target="_blank">Jekyll</a> for site generation
-* Adopted the <a href="https://just-the-docs.com" target="_blank">Just the Docs</a> theme
-* Created initial skeleton pages
-* Added version tracking to detect rebuilds
-* Created favicons for browser and Apple devices
-* Moved images directory into the assets folder
-* Improved To-Do list formatting for mobile readability
-* Improved To-Do Task List readability using collapsible sections, removing the need for numbering
+- Renamed To-Do Task List page to Project Roadmap
+- Created GitHub Pages repository for CAMTREES Database site
+- Adopted <a href="https://jekyllrb.com" target="_blank">Jekyll</a> for site generation
+- Adopted the <a href="https://just-the-docs.com" target="_blank">Just the Docs</a> theme
+- Created initial skeleton pages
+- Added version tracking to detect rebuilds
+- Created favicons for browser and Apple devices
+- Moved images directory into the assets folder
+- Improved To-Do list formatting for mobile readability
+- Improved To-Do Task List readability using collapsible sections, removing the need for numbering
 
 </details>
 
@@ -182,14 +182,14 @@ Each entry is grouped by month. Within each month, changes are organized by area
 
 ### GitHub
 
-* Created GitHub account (camorgdatabase@gmail.com)
-* Added workflow to sync CAMTREES Neon database between accounts
+- Created GitHub account (camorgdatabase@gmail.com)
+- Added workflow to sync CAMTREES Neon database between accounts
 
 ### SQL Tables
 
-* Added two new 2026 sites with associated data
-* Removed Waldoboro hub
-* Added four `access_` columns to `tree`; updated `cam_trees` and dependent views
+- Added two new 2026 sites with associated data
+- Removed Waldoboro hub
+- Added four `access_` columns to `tree`; updated `cam_trees` and dependent views
 
 </details>
 
@@ -200,13 +200,13 @@ Each entry is grouped by month. Within each month, changes are organized by area
 
 ### SQL Tables
 
-* Added two New Hampshire hubs
-* Renamed Augusta hub to Winthrop; added Danforth hub
-* Added Eva Butler’s tree, site, and volunteer data
+- Added two New Hampshire hubs
+- Renamed Augusta hub to Winthrop; added Danforth hub
+- Added Eva Butler’s tree, site, and volunteer data
 
 ### SQL Views
 
-* Created `missing_data_` views
+- Created `missing_data_` views
 
 </details>
 
@@ -217,11 +217,11 @@ Each entry is grouped by month. Within each month, changes are organized by area
 
 ### SQL
 
-* Settled upon using Neon.com to host the CAMTREES Database (PostGreSQL)
-* Added Mark McCollough tree data
-* Added `camtress_manage_dates` for automated timestamp handling
-* Created function for EpiCollect ALL records
-* Added `date_created` and `date_updated` fields (initialized to 2026-02-01)
+- Settled upon using Neon.com to host the CAMTREES Database (PostGreSQL)
+- Added Mark McCollough tree data
+- Added `camtress_manage_dates` for automated timestamp handling
+- Created function for EpiCollect ALL records
+- Added `date_created` and `date_updated` fields (initialized to 2026-02-01)
 
 </details>
 
@@ -232,8 +232,8 @@ Each entry is grouped by month. Within each month, changes are organized by area
 
 ### SQL
 
-* Settled upon using PostGreSQL as the RDBMS
-* Investigate PostGreSQL host platforms
+- Settled upon using PostGreSQL as the RDBMS
+- Investigate PostGreSQL host platforms
 
 </details>
 
@@ -244,8 +244,8 @@ Each entry is grouped by month. Within each month, changes are organized by area
 
 ### SQL
 
-* Research various SQL Relational DataBase Management Systems (RDBMS)
-* Brainstormed how to convert Excel system into SQL
+- Research various SQL Relational DataBase Management Systems (RDBMS)
+- Brainstormed how to convert Excel system into SQL
 
 </details>
 
@@ -256,13 +256,13 @@ Each entry is grouped by month. Within each month, changes are organized by area
 
 ### EpiCollect
 
-* Enabled Rain Event entry by Hub or Site
-* Updated “Cam Org – Site” question format
+- Enabled Rain Event entry by Hub or Site
+- Updated “Cam Org – Site” question format
 
 ### SQL Tables
 
-* Began migration from Excel to PostgreSQL
-* Added Volunteer Interests table
+- Began migration from Excel to PostgreSQL
+- Added Volunteer Interests table
 
 </details>
 
@@ -273,13 +273,13 @@ Each entry is grouped by month. Within each month, changes are organized by area
 
 ### EpiCollect
 
-* Simplified GPS record fields
-* Added additional GPS/tree-number screens
+- Simplified GPS record fields
+- Added additional GPS/tree-number screens
 
 ### Excel
 
-* Enabled WildCAM trees
-* Added Lea’s 2025 planting data
+- Enabled WildCAM trees
+- Added Lea’s 2025 planting data
 
 </details>
 
@@ -290,7 +290,7 @@ Each entry is grouped by month. Within each month, changes are organized by area
 
 ### Excel
 
-* Added watering data from Maggie Lynn's spreadsheet
+- Added watering data from Maggie Lynn's spreadsheet
 
 </details>
 

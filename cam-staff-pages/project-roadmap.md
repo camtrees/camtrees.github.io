@@ -34,8 +34,8 @@ Grouping: Title
 Short description.
 
 **Tasks:**
-* Item 1
-* Item 2
+- Item 1
+- Item 2
 
 **Notes:**
 Additional details.
@@ -491,8 +491,8 @@ Have a way to identify which volunteers are interested in activities BY Hub. And
 a way to email only those volunteers interested in activities within a certain Hub.
 
 **Tasks:**
-* Email volunteers in specific hub(s)
-* List volunteers (name, email, phone) by hub
+- Email volunteers in specific hub(s)
+- List volunteers (name, email, phone) by hub
 
 **Notes:**
 - We do not currently have a means to know or determine in which Hub a volunteer lives
