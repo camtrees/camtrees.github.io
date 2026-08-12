@@ -32,3 +32,5 @@ callouts:
 # Provide a Copy button in code blocks
 enable_copy_code_button: true
 
+#Allow the use of mermaid files
+mermaid: true
