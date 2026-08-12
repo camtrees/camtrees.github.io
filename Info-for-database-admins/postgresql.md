@@ -55,8 +55,8 @@ of $5 to $10 per month.
 
 The color of the SQL tables' headers in the ER Diagram indicates the type and purpose of the tables.
 
-<details>
-<summary><strong>Green Tables — The four main tables containing tree related data</strong></summary>
+<details markdown="1">
+<details markdown="1"><strong>Green Tables — The four main tables containing tree related data</strong></summary>
 
 <ul>
 	<li><strong>tree</strong> — All the CAM planted trees or Wild trees under observation</li>
@@ -68,8 +68,8 @@ The color of the SQL tables' headers in the ER Diagram indicates the type and pu
 </details>
 
 
-<details>
-<summary><strong>Cyan Tables — Organizational tables</strong></summary>
+<details markdown="1">
+<details markdown="1"><strong>Cyan Tables — Organizational tables</strong></summary>
 
 These tables are also Lookup Tables
 
@@ -83,8 +83,8 @@ These tables are also Lookup Tables
 </details>
 
 
-<details>
-<summary><strong>Yellow Tables — SQL join tables</strong></summary>
+<details markdown="1">
+<details markdown="1"><strong>Yellow Tables — SQL join tables</strong></summary>
 
 <ul>
 	<li><strong>site_hub</strong> — Sites contained in each hub</li>
@@ -95,8 +95,8 @@ These tables are also Lookup Tables
 </details>
 
 
-<details>
-<summary><strong>Purple Tables — Lookup tables that link to a other tables via a foreign key relationship</strong></summary>
+<details markdown="1">
+<details markdown="1"><strong>Purple Tables — Lookup tables that link to a other tables via a foreign key relationship</strong></summary>
 
 <ul>
 	<li><strong>epicollect_record_type</strong> — EpiCollect record types (path the volunteer takes trhough the iPhone app)</li>
@@ -119,8 +119,8 @@ These tables are also Lookup Tables
 </details>
 
 
-<details>
-<summary><strong>Orange Tables — Independent tables not linked to any other tables</strong></summary>
+<details markdown="1">
+<details markdown="1"><strong>Orange Tables — Independent tables not linked to any other tables</strong></summary>
 
 <ul>
 	<li><strong>docs_web_link</strong> — Helpful web links</li>
@@ -134,8 +134,8 @@ These tables are also Lookup Tables
 
 ### SQL Views
 
-<details>
-<summary><strong>'Earliest' and 'Latest' Views</strong></summary>
+<details markdown="1">
+<details markdown="1"><strong>'Earliest' and 'Latest' Views</strong></summary>
 
 <ul>
 	<li><strong>cam_tree_latest_health</strong> - Show latest tree_health</li>
@@ -148,8 +148,8 @@ These tables are also Lookup Tables
 </details>
 
 
-<details>
-<summary><strong>'CAM' Views - Views for which CAM Staff will be most interested</strong></summary>
+<details markdown="1">
+<details markdown="1"><strong>'CAM' Views - Views for which CAM Staff will be most interested</strong></summary>
 
 <ul>
 	<li><strong>cam_hubs</strong> - Hub regions as defined by Eva Butler</li>
@@ -171,8 +171,8 @@ These tables are also Lookup Tables
 </details>
 
 
-<details>
-<summary><strong>'Count' Views - Frequency counts of various values</strong></summary>
+<details markdown="1">
+<details markdown="1"><strong>'Count' Views - Frequency counts of various values</strong></summary>
 
 <ul>
 	<li><strong>data_count_next_tree_number_for_planting</strong> - Show the NEXT CamOrg tree number to be used when planting new trees</li>
@@ -185,8 +185,8 @@ These tables are also Lookup Tables
 </details>
 
 
-<details>
-<summary><strong>'Crosstab' Views - Statistical tables that display the relationship between two or more categorical variable</strong></summary>
+<details markdown="1">
+<details markdown="1"><strong>'Crosstab' Views - Statistical tables that display the relationship between two or more categorical variable</strong></summary>
 
 <ul>
 	<li><strong>data_crosstab_care_action_by_record_type</strong> - Crosstab of Tree Care Action BY EpiCollect Record Type</li>
@@ -197,8 +197,8 @@ These tables are also Lookup Tables
 </details>
 
 
-<details>
-<summary><strong>'Distance' Views - Shows the distance between trees</strong></summary>
+<details markdown="1">
+<details markdown="1"><strong>'Distance' Views - Shows the distance between trees</strong></summary>
 
 <ul>
 	<li><strong>data_distance_between_all_trees</strong> - Show tree to tree distance (in meters and miles) for all trees</li>
@@ -209,8 +209,8 @@ These tables are also Lookup Tables
 </details>
 
 
-<details>
-<summary><strong>'Duplicate' Views - Duplicate records in tables</strong></summary>
+<details markdown="1">
+<details markdown="1"><strong>'Duplicate' Views - Duplicate records in tables</strong></summary>
 
 <ul>
 	<li><strong>data_duplicate_tree_care_actions</strong> - Duplicate tree_care_action records (if any)</li>
@@ -220,8 +220,8 @@ These tables are also Lookup Tables
 </details>
 
 
-<details>
-<summary><strong>'Error' Views - Tables with missing data</strong></summary>
+<details markdown="1">
+<details markdown="1"><strong>'Error' Views - Tables with missing data</strong></summary>
 
 <ul>
 	<li><strong>data_error_hubs_with_no_captain</strong> - Hubs with no captain (If any)</li>
@@ -248,8 +248,8 @@ These tables are also Lookup Tables
 </details>
 
 
-<details>
-<summary><strong>'Export' Views - For exporting data to EpiCollect or Google Maps</strong></summary>
+<details markdown="1">
+<details markdown="1"><strong>'Export' Views - For exporting data to EpiCollect or Google Maps</strong></summary>
 
 <ul>
 	<li><strong>data_export_epicollect_tree_parent_type</strong> - Export tree_parent_type as CSV file to load into EpiCollect CAM Tree Maintenance form</li>
@@ -260,8 +260,8 @@ These tables are also Lookup Tables
 </details>
 
 
-<details>
-<summary><strong>'Site Visit' Views - Useful for printing prior to a Site visit</strong></summary>
+<details markdown="1">
+<details markdown="1"><strong>'Site Visit' Views - Useful for printing prior to a Site visit</strong></summary>
 
 <ul>
 	<li><strong>data_site_visit</strong> - Show data useful to have printed for when a volunteer performs a site visit</li>
@@ -270,8 +270,8 @@ These tables are also Lookup Tables
 </details>
 
 
-<details>
-<summary><strong>'Kenster' Views - Database Admin views</strong></summary>
+<details markdown="1">
+<details markdown="1"><strong>'Kenster' Views - Database Admin views</strong></summary>
 
 <ul>
 	<li><strong>user_hkr_tree_photos_for_tag_info_editing</strong> - Tree photos with our EpiCollect link and tag_info for easy Kenster editing</li>
@@ -282,8 +282,8 @@ These tables are also Lookup Tables
 
 ### SQL Functions
 
-<details>
-<summary><strong>'Add' Functions - Called from Python to insert data into SQL tables</strong></summary>
+<details markdown="1">
+<details markdown="1"><strong>'Add' Functions - Called from Python to insert data into SQL tables</strong></summary>
 
 <ul>
 	<li><strong>camtrees_add_care_action</strong> - Add a tree_care_action from an EpiCollect 'ONE', 'ALL', or 'RAIN' record</li>
@@ -296,8 +296,8 @@ These tables are also Lookup Tables
 </details>
 
 
-<details>
-<summary><strong>'Count' Functions - Used by Views to count records in Tables and Views</strong></summary>
+<details markdown="1">
+<details markdown="1"><strong>'Count' Functions - Used by Views to count records in Tables and Views</strong></summary>
 
 <ul>
 	<li><strong>camtrees_count_table_rows</strong> - Assists with counting rows in Tables</li>
@@ -307,8 +307,8 @@ These tables are also Lookup Tables
 </details>
 
 
-<details>
-<summary><strong>'Distance' Functions - Used by views to calculate tree distances</strong></summary>
+<details markdown="1">
+<details markdown="1"><strong>'Distance' Functions - Used by views to calculate tree distances</strong></summary>
 
 <ul>
 	<li><strong>camtrees_get_distance_to_closest_wildcam_tree</strong> - Get the distance (in meters) to the closest WildCAM tree</li>
@@ -317,8 +317,8 @@ These tables are also Lookup Tables
 </details>
 
 
-<details>
-<summary><strong>'Date' Functions - Add date_created and date_updated values to tables</strong></summary>
+<details markdown="1">
+<details markdown="1"><strong>'Date' Functions - Add date_created and date_updated values to tables</strong></summary>
 
 <ul>
 	<li><strong>camtrees_manage_dates</strong> - Add a date_created on INSERT and date_updated on UPDATE</li>
@@ -327,8 +327,8 @@ These tables are also Lookup Tables
 </details>
 
 
-<details>
-<summary><strong>'Interrogate' Functions - Called from Python to test certain conditions</strong></summary>
+<details markdown="1">
+<details markdown="1"><strong>'Interrogate' Functions - Called from Python to test certain conditions</strong></summary>
 
 <ul>
 	<li><strong>camtrees_tree_exists</strong> - Determine if a tree already exists in the 'tree' table</li>
@@ -338,25 +338,13 @@ These tables are also Lookup Tables
 </details>
 
 
-<details>
-<summary><strong>'Update' Functions - Called from Python to Update tree column values</strong></summary>
+<details markdown="1">
+<details markdown="1"><strong>'Update' Functions - Called from Python to Update tree column values</strong></summary>
 
 <ul>
 	<li><strong>camtrees_update_access_method</strong> - Update a tree's access_method</li>
 	<li><strong>camtrees_update_tree_form</strong> - Update a tree's form</li>
 	<li><strong>camtrees_update_tree_gps</strong> - Update a tree's GPS data. Append new access_note data to existing access_note</li>
 </ul>
-
-</details>
-
-
-
-
-<details markdown="1">
-<summary markdown="span"><strong>Testing Again</strong></summary>
-
-* camtrees_update_access_method - Update a tree's access_method
-* camtrees_update_tree_form - Update a tree's form
-* camtrees_update_tree_gps - Update a tree's GPS data. Append new access_note data to existing access_note
 
 </details>
