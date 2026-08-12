@@ -1,7 +1,7 @@
 ---
 title: Epicollect5
 layout: default
-parent: Info for CAM Volunteers
+parent: CAM Volunteers Pages
 ---
 
 <center>

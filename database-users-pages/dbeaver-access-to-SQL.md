@@ -1,7 +1,7 @@
 ---
 title: DBeaver Access to SQL
 layout: default
-parent: Info for Database Users 
+parent: Database Users Pages 
 ---
 
 # {{ page.title }}

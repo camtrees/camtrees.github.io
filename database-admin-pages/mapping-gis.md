@@ -1,7 +1,7 @@
 ---
 title: Mapping / GIS
 layout: default
-parent: Info for Database Admins
+parent: Database Admin Pages
 ---
 
 <center>

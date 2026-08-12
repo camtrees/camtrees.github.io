@@ -1,7 +1,7 @@
 ---
 title: About the CAMTREES Database Website
 layout: default
-nav_order: 99
+nav_order: 97
 ---
 
 <img src="../assets/images/website/mountainview-placard.png" alt="CAMTREE Volunteer consulting a Project Roadmap map" height="512" width="828">

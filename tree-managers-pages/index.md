@@ -1,7 +1,7 @@
 ---
-title: Info for Tree Managers
+title: Tree Managers Pages
 layout: default
-nav_order: 6
+nav_order: 7
 ---
 
 # {{ page.title }}

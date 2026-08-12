@@ -1,7 +1,7 @@
 ---
-title: Info for CAM Staff
+title: CAM Staff Pages
 layout: default
-nav_order: 4
+nav_order: 3
 ---
 
 <img src="../assets/images/website/camtrees-team.png" alt="CAM Staff Meeting" height="512" width="828">

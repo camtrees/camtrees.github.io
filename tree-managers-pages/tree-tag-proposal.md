@@ -1,7 +1,7 @@
 ---
 title: Proposed Tree Tagging System
 layout: default
-parent: Info for Tree Managers
+parent: Tree Managers Pages
 ---
 
 <img src="../assets/images/website/tree-tag-prep.png" alt="Volunteer preparing tree tags" height="512" width="828">

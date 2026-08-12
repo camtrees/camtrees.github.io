@@ -1,7 +1,7 @@
 ---
 title: Google Services and Project Continuity
 layout: default
-parent: Info for Database Admins
+parent: Database Admin Pages
 ---
 
 <center>
