@@ -322,7 +322,7 @@ The following uses the [`<details>`](https://docs.github.com/en/get-started/writ
 
 <details markdown="block">
 
-<summary>**Shopppppping list (click me!)**</summary>
+<summary>Shopping list (click me!)</summary>
 
 This is content inside a `<details>` dropdown.
 
