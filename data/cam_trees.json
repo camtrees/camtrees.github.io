@@ -1,8 +1,9 @@
 {
-"records": [
+"public_cam_trees": [
 	{
 		"site" : "Arundel Municipal Building",
 		"tree_id" : "001",
+		"cam_org" : "Arundel",
 		"hub" : "Sanford",
 		"date_planted_or_observed(wild)" : "2026-06-14",
 		"planted_by" : "Ethan Davis",
@@ -31,6 +32,7 @@
 	{
 		"site" : "Arundel Municipal Building",
 		"tree_id" : "002",
+		"cam_org" : "Arundel",
 		"hub" : "Sanford",
 		"date_planted_or_observed(wild)" : "2026-06-14",
 		"planted_by" : "Ethan Davis",
@@ -59,6 +61,7 @@
 	{
 		"site" : "Arundel Municipal Building",
 		"tree_id" : "003",
+		"cam_org" : "Arundel",
 		"hub" : "Sanford",
 		"date_planted_or_observed(wild)" : "2026-06-14",
 		"planted_by" : "Ethan Davis",
@@ -87,6 +90,7 @@
 	{
 		"site" : "Arundel Municipal Building",
 		"tree_id" : "004",
+		"cam_org" : "Arundel",
 		"hub" : "Sanford",
 		"date_planted_or_observed(wild)" : "2026-06-14",
 		"planted_by" : "Ethan Davis",
@@ -115,6 +119,7 @@
 	{
 		"site" : "BaldPate",
 		"tree_id" : "031",
+		"cam_org" : "LELT",
 		"hub" : "Bridgton",
 		"date_planted_or_observed(wild)" : "2026-06-26",
 		"planted_by" : "Jacob Schor",
@@ -143,6 +148,7 @@
 	{
 		"site" : "BaldPate",
 		"tree_id" : "032",
+		"cam_org" : "LELT",
 		"hub" : "Bridgton",
 		"date_planted_or_observed(wild)" : "2026-06-26",
 		"planted_by" : "Jacob Schor",
@@ -171,6 +177,7 @@
 	{
 		"site" : "BaldPate",
 		"tree_id" : "034",
+		"cam_org" : "LELT",
 		"hub" : "Bridgton",
 		"date_planted_or_observed(wild)" : "2026-06-26",
 		"planted_by" : "Jacob Schor",
@@ -199,6 +206,7 @@
 	{
 		"site" : "BaldPate",
 		"tree_id" : "035",
+		"cam_org" : "LELT",
 		"hub" : "Bridgton",
 		"date_planted_or_observed(wild)" : "2026-06-26",
 		"planted_by" : "Jacob Schor",
@@ -227,6 +235,7 @@
 	{
 		"site" : "BaldPate",
 		"tree_id" : "036",
+		"cam_org" : "LELT",
 		"hub" : "Bridgton",
 		"date_planted_or_observed(wild)" : "2026-06-26",
 		"planted_by" : "Kim Colson",
@@ -255,6 +264,7 @@
 	{
 		"site" : "Bangor High School",
 		"tree_id" : "001",
+		"cam_org" : "BHSSEC",
 		"hub" : "Orono",
 		"date_planted_or_observed(wild)" : "2024-06-10",
 		"planted_by" : "Mark McCollough",
@@ -283,6 +293,7 @@
 	{
 		"site" : "Bangor High School",
 		"tree_id" : "002",
+		"cam_org" : "BHSSEC",
 		"hub" : "Orono",
 		"date_planted_or_observed(wild)" : "2024-06-10",
 		"planted_by" : "Mark McCollough",
@@ -311,6 +322,7 @@
 	{
 		"site" : "Bangor High School",
 		"tree_id" : "003",
+		"cam_org" : "BHSSEC",
 		"hub" : "Orono",
 		"date_planted_or_observed(wild)" : "2024-06-10",
 		"planted_by" : "Mark McCollough",
@@ -339,6 +351,7 @@
 	{
 		"site" : "Bangor High School",
 		"tree_id" : "004",
+		"cam_org" : "BHSSEC",
 		"hub" : "Orono",
 		"date_planted_or_observed(wild)" : "2024-06-10",
 		"planted_by" : "Mark McCollough",
@@ -367,6 +380,7 @@
 	{
 		"site" : "Bangor High School",
 		"tree_id" : "005",
+		"cam_org" : "BHSSEC",
 		"hub" : "Orono",
 		"date_planted_or_observed(wild)" : "2024-06-10",
 		"planted_by" : "Mark McCollough",
@@ -395,6 +409,7 @@
 	{
 		"site" : "BBA Chestnut Orchard",
 		"tree_id" : "001",
+		"cam_org" : "BBA",
 		"hub" : "Manchester NH",
 		"date_planted_or_observed(wild)" : "2025-07-16",
 		"planted_by" : "Kim Colson",
@@ -423,6 +438,7 @@
 	{
 		"site" : "BBA Chestnut Orchard",
 		"tree_id" : "002",
+		"cam_org" : "BBA",
 		"hub" : "Manchester NH",
 		"date_planted_or_observed(wild)" : "2025-07-16",
 		"planted_by" : "Kim Colson",
@@ -451,6 +467,7 @@
 	{
 		"site" : "BBA Chestnut Orchard",
 		"tree_id" : "003",
+		"cam_org" : "BBA",
 		"hub" : "Manchester NH",
 		"date_planted_or_observed(wild)" : "2025-07-16",
 		"planted_by" : "Kim Colson",
@@ -479,6 +496,7 @@
 	{
 		"site" : "Biddeford Community Garden at Rotary Park",
 		"tree_id" : "001",
+		"cam_org" : "EGP",
 		"hub" : "Sanford",
 		"date_planted_or_observed(wild)" : "2026-06-14",
 		"planted_by" : "Ethan Davis",
@@ -507,6 +525,7 @@
 	{
 		"site" : "Biddeford Community Garden at Rotary Park",
 		"tree_id" : "002",
+		"cam_org" : "EGP",
 		"hub" : "Sanford",
 		"date_planted_or_observed(wild)" : "2026-06-17",
 		"planted_by" : "Ethan Davis",
@@ -535,6 +554,7 @@
 	{
 		"site" : "Biddeford Community Garden at Rotary Park",
 		"tree_id" : "004",
+		"cam_org" : "EGP",
 		"hub" : "Sanford",
 		"date_planted_or_observed(wild)" : "2026-06-17",
 		"planted_by" : "Ethan Davis",
@@ -563,6 +583,7 @@
 	{
 		"site" : "Biddeford Community Garden at Rotary Park",
 		"tree_id" : "005",
+		"cam_org" : "EGP",
 		"hub" : "Sanford",
 		"date_planted_or_observed(wild)" : "2026-06-17",
 		"planted_by" : "Ethan Davis",
@@ -591,6 +612,7 @@
 	{
 		"site" : "Blueberry Cove 4-H Camp",
 		"tree_id" : "001",
+		"cam_org" : "BC4H",
 		"hub" : "Warren",
 		"date_planted_or_observed(wild)" : "2024-05-24",
 		"planted_by" : "Eva Butler",
@@ -619,6 +641,7 @@
 	{
 		"site" : "Blueberry Cove 4-H Camp",
 		"tree_id" : "002",
+		"cam_org" : "BC4H",
 		"hub" : "Warren",
 		"date_planted_or_observed(wild)" : "2024-05-24",
 		"planted_by" : "Eva Butler",
@@ -647,6 +670,7 @@
 	{
 		"site" : "Blueberry Cove 4-H Camp",
 		"tree_id" : "003",
+		"cam_org" : "BC4H",
 		"hub" : "Warren",
 		"date_planted_or_observed(wild)" : "2024-05-24",
 		"planted_by" : "Eva Butler",
@@ -675,6 +699,7 @@
 	{
 		"site" : "Blueberry Cove 4-H Camp",
 		"tree_id" : "004",
+		"cam_org" : "BC4H",
 		"hub" : "Warren",
 		"date_planted_or_observed(wild)" : "2024-05-24",
 		"planted_by" : "Eva Butler",
@@ -703,6 +728,7 @@
 	{
 		"site" : "Blueberry Cove 4-H Camp",
 		"tree_id" : "005",
+		"cam_org" : "BC4H",
 		"hub" : "Warren",
 		"date_planted_or_observed(wild)" : "2024-05-24",
 		"planted_by" : "Eva Butler",
@@ -731,6 +757,7 @@
 	{
 		"site" : "Brewer Community School",
 		"tree_id" : "007",
+		"cam_org" : "BLTBrewer",
 		"hub" : "Orono",
 		"date_planted_or_observed(wild)" : "2025-07-01",
 		"planted_by" : "Mark McCollough",
@@ -759,6 +786,7 @@
 	{
 		"site" : "Brewer Community School",
 		"tree_id" : "008",
+		"cam_org" : "BLTBrewer",
 		"hub" : "Orono",
 		"date_planted_or_observed(wild)" : "2025-07-01",
 		"planted_by" : "Mark McCollough",
@@ -787,6 +815,7 @@
 	{
 		"site" : "Brewer Community School",
 		"tree_id" : "009",
+		"cam_org" : "BLTBrewer",
 		"hub" : "Orono",
 		"date_planted_or_observed(wild)" : "2025-07-01",
 		"planted_by" : "Mark McCollough",
@@ -815,6 +844,7 @@
 	{
 		"site" : "Brewer Community School",
 		"tree_id" : "010",
+		"cam_org" : "BLTBrewer",
 		"hub" : "Orono",
 		"date_planted_or_observed(wild)" : "2025-07-01",
 		"planted_by" : "Mark McCollough",
@@ -843,6 +873,7 @@
 	{
 		"site" : "Brewer Municipal Pool and Playground",
 		"tree_id" : "005",
+		"cam_org" : "BLTBrewer",
 		"hub" : "Orono",
 		"date_planted_or_observed(wild)" : "2025-07-01",
 		"planted_by" : "Mark McCollough",
@@ -871,6 +902,7 @@
 	{
 		"site" : "Brewer Municipal Pool and Playground",
 		"tree_id" : "006",
+		"cam_org" : "BLTBrewer",
 		"hub" : "Orono",
 		"date_planted_or_observed(wild)" : "2025-07-01",
 		"planted_by" : "Mark McCollough",
@@ -899,6 +931,7 @@
 	{
 		"site" : "Brewer Municipal Pool and Playground",
 		"tree_id" : "013",
+		"cam_org" : "BLTBrewer",
 		"hub" : "Orono",
 		"date_planted_or_observed(wild)" : "2026-05-15",
 		"planted_by" : "Mark McCollough",
@@ -927,6 +960,7 @@
 	{
 		"site" : "Brewer Municipal Pool and Playground",
 		"tree_id" : "014",
+		"cam_org" : "BLTBrewer",
 		"hub" : "Orono",
 		"date_planted_or_observed(wild)" : "2026-05-15",
 		"planted_by" : "Mark McCollough",
@@ -955,6 +989,7 @@
 	{
 		"site" : "Brewer Municipal Pool and Playground",
 		"tree_id" : "015",
+		"cam_org" : "BLTBrewer",
 		"hub" : "Orono",
 		"date_planted_or_observed(wild)" : "2026-05-15",
 		"planted_by" : "Mark McCollough",
@@ -983,6 +1018,7 @@
 	{
 		"site" : "Brewer Municipal Pool and Playground",
 		"tree_id" : "017",
+		"cam_org" : "BLTBrewer",
 		"hub" : "Orono",
 		"date_planted_or_observed(wild)" : "2026-05-15",
 		"planted_by" : "Mark McCollough",
@@ -1011,6 +1047,7 @@
 	{
 		"site" : "Brewer Public Safety",
 		"tree_id" : "018",
+		"cam_org" : "BLTBrewer",
 		"hub" : "Orono",
 		"date_planted_or_observed(wild)" : "2026-05-15",
 		"planted_by" : "Mark McCollough",
@@ -1039,6 +1076,7 @@
 	{
 		"site" : "Brewer Public Safety",
 		"tree_id" : "019",
+		"cam_org" : "BLTBrewer",
 		"hub" : "Orono",
 		"date_planted_or_observed(wild)" : "2026-05-15",
 		"planted_by" : "Mark McCollough",
@@ -1067,6 +1105,7 @@
 	{
 		"site" : "Brewer Public Safety",
 		"tree_id" : "020",
+		"cam_org" : "BLTBrewer",
 		"hub" : "Orono",
 		"date_planted_or_observed(wild)" : "2026-05-15",
 		"planted_by" : "Mark McCollough",
@@ -1095,6 +1134,7 @@
 	{
 		"site" : "Brewer Public Safety",
 		"tree_id" : "021",
+		"cam_org" : "BLTBrewer",
 		"hub" : "Orono",
 		"date_planted_or_observed(wild)" : "2026-05-15",
 		"planted_by" : "Mark McCollough",
@@ -1123,6 +1163,7 @@
 	{
 		"site" : "Camp Pondicherry",
 		"tree_id" : "001",
+		"cam_org" : "POND",
 		"hub" : "Bridgton",
 		"date_planted_or_observed(wild)" : "2026-05-27",
 		"planted_by" : "Kim Colson",
@@ -1151,6 +1192,7 @@
 	{
 		"site" : "Camp Pondicherry",
 		"tree_id" : "002",
+		"cam_org" : "POND",
 		"hub" : "Bridgton",
 		"date_planted_or_observed(wild)" : "2026-05-27",
 		"planted_by" : "Kim Colson",
@@ -1179,6 +1221,7 @@
 	{
 		"site" : "Camp Pondicherry",
 		"tree_id" : "003",
+		"cam_org" : "POND",
 		"hub" : "Bridgton",
 		"date_planted_or_observed(wild)" : "2026-05-27",
 		"planted_by" : "Kim Colson",
@@ -1207,6 +1250,7 @@
 	{
 		"site" : "Camp Pondicherry",
 		"tree_id" : "004",
+		"cam_org" : "POND",
 		"hub" : "Bridgton",
 		"date_planted_or_observed(wild)" : "2026-05-27",
 		"planted_by" : "Kim Colson",
@@ -1235,6 +1279,7 @@
 	{
 		"site" : "Camp Pondicherry",
 		"tree_id" : "005",
+		"cam_org" : "POND",
 		"hub" : "Bridgton",
 		"date_planted_or_observed(wild)" : "2026-05-27",
 		"planted_by" : "Kim Colson",
@@ -1263,6 +1308,7 @@
 	{
 		"site" : "Campus",
 		"tree_id" : "001",
+		"cam_org" : "UMG",
 		"hub" : "Sanford",
 		"date_planted_or_observed(wild)" : "2026-06-05",
 		"planted_by" : "Aaron Witham",
@@ -1291,6 +1337,7 @@
 	{
 		"site" : "Campus",
 		"tree_id" : "002",
+		"cam_org" : "UMG",
 		"hub" : "Sanford",
 		"date_planted_or_observed(wild)" : "2026-06-05",
 		"planted_by" : "Aaron Witham",
@@ -1319,6 +1366,7 @@
 	{
 		"site" : "Campus",
 		"tree_id" : "003",
+		"cam_org" : "UMG",
 		"hub" : "Sanford",
 		"date_planted_or_observed(wild)" : "2026-06-05",
 		"planted_by" : "Aaron Witham",
@@ -1347,6 +1395,7 @@
 	{
 		"site" : "Campus",
 		"tree_id" : "004",
+		"cam_org" : "UMG",
 		"hub" : "Sanford",
 		"date_planted_or_observed(wild)" : "2026-06-05",
 		"planted_by" : "Aaron Witham",
@@ -1375,6 +1424,7 @@
 	{
 		"site" : "Campus",
 		"tree_id" : "005",
+		"cam_org" : "UMG",
 		"hub" : "Sanford",
 		"date_planted_or_observed(wild)" : "2026-06-05",
 		"planted_by" : "Aaron Witham",
@@ -1403,6 +1453,7 @@
 	{
 		"site" : "Chadbourne Field",
 		"tree_id" : "001",
+		"cam_org" : "GWRLT",
 		"hub" : "Sanford",
 		"date_planted_or_observed(wild)" : "2025-06-13",
 		"planted_by" : "K. Lea Sewell",
@@ -1431,6 +1482,7 @@
 	{
 		"site" : "Chadbourne Field",
 		"tree_id" : "002",
+		"cam_org" : "GWRLT",
 		"hub" : "Sanford",
 		"date_planted_or_observed(wild)" : "2025-06-13",
 		"planted_by" : "K. Lea Sewell",
@@ -1459,6 +1511,7 @@
 	{
 		"site" : "Chadbourne Field",
 		"tree_id" : "003",
+		"cam_org" : "GWRLT",
 		"hub" : "Sanford",
 		"date_planted_or_observed(wild)" : "2025-06-13",
 		"planted_by" : "K. Lea Sewell",
@@ -1487,6 +1540,7 @@
 	{
 		"site" : "Chadbourne Field",
 		"tree_id" : "004",
+		"cam_org" : "GWRLT",
 		"hub" : "Sanford",
 		"date_planted_or_observed(wild)" : "2025-06-13",
 		"planted_by" : "K. Lea Sewell",
@@ -1515,6 +1569,7 @@
 	{
 		"site" : "Chadbourne Field",
 		"tree_id" : "005",
+		"cam_org" : "GWRLT",
 		"hub" : "Sanford",
 		"date_planted_or_observed(wild)" : "2025-06-13",
 		"planted_by" : "K. Lea Sewell",
@@ -1543,6 +1598,7 @@
 	{
 		"site" : "Chadbourne Field",
 		"tree_id" : "006",
+		"cam_org" : "GWRLT",
 		"hub" : "Sanford",
 		"date_planted_or_observed(wild)" : "2025-06-13",
 		"planted_by" : "K. Lea Sewell",
@@ -1571,6 +1627,7 @@
 	{
 		"site" : "Chadbourne Field",
 		"tree_id" : "007",
+		"cam_org" : "GWRLT",
 		"hub" : "Sanford",
 		"date_planted_or_observed(wild)" : "2025-06-13",
 		"planted_by" : "K. Lea Sewell",
@@ -1599,6 +1656,7 @@
 	{
 		"site" : "Chestnut Street Park",
 		"tree_id" : "001",
+		"cam_org" : "CAUB",
 		"hub" : "Freeport",
 		"date_planted_or_observed(wild)" : "2026-06-03",
 		"planted_by" : "Dave Griswold",
@@ -1627,6 +1685,7 @@
 	{
 		"site" : "Chestnut Street Park",
 		"tree_id" : "002",
+		"cam_org" : "CAUB",
 		"hub" : "Freeport",
 		"date_planted_or_observed(wild)" : "2026-06-03",
 		"planted_by" : "Dave Griswold",
@@ -1655,6 +1714,7 @@
 	{
 		"site" : "Chestnut Street Park",
 		"tree_id" : "003",
+		"cam_org" : "CAUB",
 		"hub" : "Freeport",
 		"date_planted_or_observed(wild)" : "2026-06-03",
 		"planted_by" : "Dave Griswold",
@@ -1683,6 +1743,7 @@
 	{
 		"site" : "Chestnut Street Park",
 		"tree_id" : "004",
+		"cam_org" : "CAUB",
 		"hub" : "Freeport",
 		"date_planted_or_observed(wild)" : "2026-06-03",
 		"planted_by" : "Dave Griswold",
@@ -1711,6 +1772,7 @@
 	{
 		"site" : "Chestnut Street Park",
 		"tree_id" : "005",
+		"cam_org" : "CAUB",
 		"hub" : "Freeport",
 		"date_planted_or_observed(wild)" : "2026-06-03",
 		"planted_by" : "Dave Griswold",
@@ -1739,6 +1801,7 @@
 	{
 		"site" : "Chestnut Street Park",
 		"tree_id" : "006",
+		"cam_org" : "CAUB",
 		"hub" : "Freeport",
 		"date_planted_or_observed(wild)" : "2026-06-03",
 		"planted_by" : "Dave Griswold",
@@ -1767,6 +1830,7 @@
 	{
 		"site" : "Chestnut Street Park",
 		"tree_id" : "007",
+		"cam_org" : "CAUB",
 		"hub" : "Freeport",
 		"date_planted_or_observed(wild)" : "2026-06-03",
 		"planted_by" : "Dave Griswold",
@@ -1795,6 +1859,7 @@
 	{
 		"site" : "Chestnut Street Park",
 		"tree_id" : "008",
+		"cam_org" : "CAUB",
 		"hub" : "Freeport",
 		"date_planted_or_observed(wild)" : "2026-06-03",
 		"planted_by" : "Dave Griswold",
@@ -1823,6 +1888,7 @@
 	{
 		"site" : "Chestnut Street Park",
 		"tree_id" : "009",
+		"cam_org" : "CAUB",
 		"hub" : "Freeport",
 		"date_planted_or_observed(wild)" : "2026-06-03",
 		"planted_by" : "Dave Griswold",
@@ -1851,6 +1917,7 @@
 	{
 		"site" : "Chestnut Street Park",
 		"tree_id" : "010",
+		"cam_org" : "CAUB",
 		"hub" : "Freeport",
 		"date_planted_or_observed(wild)" : "2026-06-03",
 		"planted_by" : "Dave Griswold",
@@ -1879,6 +1946,7 @@
 	{
 		"site" : "Corinna Village Green",
 		"tree_id" : "001",
+		"cam_org" : "CORINNA",
 		"hub" : "Hartland",
 		"date_planted_or_observed(wild)" : "2026-06-17",
 		"planted_by" : "Eva Butler",
@@ -1907,6 +1975,7 @@
 	{
 		"site" : "Corinna Village Green",
 		"tree_id" : "002",
+		"cam_org" : "CORINNA",
 		"hub" : "Hartland",
 		"date_planted_or_observed(wild)" : "2026-06-17",
 		"planted_by" : "Eva Butler",
@@ -1935,6 +2004,7 @@
 	{
 		"site" : "Corinna Village Green",
 		"tree_id" : "003",
+		"cam_org" : "CORINNA",
 		"hub" : "Hartland",
 		"date_planted_or_observed(wild)" : "2026-06-17",
 		"planted_by" : "Eva Butler",
@@ -1963,6 +2033,7 @@
 	{
 		"site" : "Corinna Village Green",
 		"tree_id" : "004",
+		"cam_org" : "CORINNA",
 		"hub" : "Hartland",
 		"date_planted_or_observed(wild)" : "2026-06-17",
 		"planted_by" : "Eva Butler",
@@ -1991,6 +2062,7 @@
 	{
 		"site" : "Corinna Village Green",
 		"tree_id" : "005",
+		"cam_org" : "CORINNA",
 		"hub" : "Hartland",
 		"date_planted_or_observed(wild)" : "2026-06-17",
 		"planted_by" : "Eva Butler",
@@ -2019,6 +2091,7 @@
 	{
 		"site" : "Corinna Village Green",
 		"tree_id" : "006",
+		"cam_org" : "CORINNA",
 		"hub" : "Hartland",
 		"date_planted_or_observed(wild)" : "2026-06-17",
 		"planted_by" : "Eva Butler",
@@ -2047,6 +2120,7 @@
 	{
 		"site" : "Cornerspring Montessori School",
 		"tree_id" : "001",
+		"cam_org" : "CSMS",
 		"hub" : "Searsport",
 		"date_planted_or_observed(wild)" : "2025-05-07",
 		"planted_by" : "Eva Butler",
@@ -2075,6 +2149,7 @@
 	{
 		"site" : "Cornerspring Montessori School",
 		"tree_id" : "002",
+		"cam_org" : "CSMS",
 		"hub" : "Searsport",
 		"date_planted_or_observed(wild)" : "2025-05-07",
 		"planted_by" : "Eva Butler",
@@ -2103,6 +2178,7 @@
 	{
 		"site" : "Cousins River Fields & Marsh Preserve",
 		"tree_id" : "001",
+		"cam_org" : "MCHT",
 		"hub" : "Freeport",
 		"date_planted_or_observed(wild)" : "2024-06-14",
 		"planted_by" : "Eva Butler",
@@ -2131,6 +2207,7 @@
 	{
 		"site" : "Cousins River Fields & Marsh Preserve",
 		"tree_id" : "002",
+		"cam_org" : "MCHT",
 		"hub" : "Freeport",
 		"date_planted_or_observed(wild)" : "2024-06-14",
 		"planted_by" : "Eva Butler",
@@ -2159,6 +2236,7 @@
 	{
 		"site" : "Cousins River Fields & Marsh Preserve",
 		"tree_id" : "003",
+		"cam_org" : "MCHT",
 		"hub" : "Freeport",
 		"date_planted_or_observed(wild)" : "2024-06-14",
 		"planted_by" : "Eva Butler",
@@ -2187,6 +2265,7 @@
 	{
 		"site" : "Cousins River Fields & Marsh Preserve",
 		"tree_id" : "004",
+		"cam_org" : "MCHT",
 		"hub" : "Freeport",
 		"date_planted_or_observed(wild)" : "2024-06-14",
 		"planted_by" : "Eva Butler",
@@ -2215,6 +2294,7 @@
 	{
 		"site" : "Cousins River Fields & Marsh Preserve",
 		"tree_id" : "005",
+		"cam_org" : "MCHT",
 		"hub" : "Freeport",
 		"date_planted_or_observed(wild)" : "2024-06-14",
 		"planted_by" : "Eva Butler",
@@ -2243,6 +2323,7 @@
 	{
 		"site" : "Cousins River Fields & Marsh Preserve",
 		"tree_id" : "006",
+		"cam_org" : "MCHT",
 		"hub" : "Freeport",
 		"date_planted_or_observed(wild)" : "2024-06-14",
 		"planted_by" : "Eva Butler",
@@ -2271,6 +2352,7 @@
 	{
 		"site" : "Cousins River Fields & Marsh Preserve",
 		"tree_id" : "007",
+		"cam_org" : "MCHT",
 		"hub" : "Freeport",
 		"date_planted_or_observed(wild)" : "2024-06-14",
 		"planted_by" : "Eva Butler",
@@ -2299,6 +2381,7 @@
 	{
 		"site" : "Cousins River Fields & Marsh Preserve",
 		"tree_id" : "008",
+		"cam_org" : "MCHT",
 		"hub" : "Freeport",
 		"date_planted_or_observed(wild)" : "2024-06-14",
 		"planted_by" : "Eva Butler",
@@ -2327,6 +2410,7 @@
 	{
 		"site" : "Cousins River Fields & Marsh Preserve",
 		"tree_id" : "009",
+		"cam_org" : "MCHT",
 		"hub" : "Freeport",
 		"date_planted_or_observed(wild)" : "2024-06-14",
 		"planted_by" : "Eva Butler",
@@ -2355,6 +2439,7 @@
 	{
 		"site" : "Cousins River Fields & Marsh Preserve",
 		"tree_id" : "010",
+		"cam_org" : "MCHT",
 		"hub" : "Freeport",
 		"date_planted_or_observed(wild)" : "2024-06-14",
 		"planted_by" : "Eva Butler",
@@ -2383,6 +2468,7 @@
 	{
 		"site" : "Cousins River Fields & Marsh Preserve",
 		"tree_id" : "011",
+		"cam_org" : "MCHT",
 		"hub" : "Freeport",
 		"date_planted_or_observed(wild)" : "2026-07-17",
 		"planted_by" : "Eva Butler",
@@ -2411,6 +2497,7 @@
 	{
 		"site" : "Cousins River Fields & Marsh Preserve",
 		"tree_id" : "012",
+		"cam_org" : "MCHT",
 		"hub" : "Freeport",
 		"date_planted_or_observed(wild)" : "2026-07-17",
 		"planted_by" : "Eva Butler",
@@ -2439,6 +2526,7 @@
 	{
 		"site" : "Cousins River Fields & Marsh Preserve",
 		"tree_id" : "013",
+		"cam_org" : "MCHT",
 		"hub" : "Freeport",
 		"date_planted_or_observed(wild)" : "2026-07-17",
 		"planted_by" : "Eva Butler",
@@ -2467,6 +2555,7 @@
 	{
 		"site" : "Crooked River Forest",
 		"tree_id" : "016",
+		"cam_org" : "LELT",
 		"hub" : "Bridgton",
 		"date_planted_or_observed(wild)" : "2025-06-21",
 		"planted_by" : "Kim Colson",
@@ -2495,6 +2584,7 @@
 	{
 		"site" : "Crooked River Forest",
 		"tree_id" : "024",
+		"cam_org" : "LELT",
 		"hub" : "Bridgton",
 		"date_planted_or_observed(wild)" : "2025-06-21",
 		"planted_by" : "Kim Colson",
@@ -2523,6 +2613,7 @@
 	{
 		"site" : "Crooked River Forest",
 		"tree_id" : "026",
+		"cam_org" : "LELT",
 		"hub" : "Bridgton",
 		"date_planted_or_observed(wild)" : "2025-06-21",
 		"planted_by" : "Kim Colson",
@@ -2551,6 +2642,7 @@
 	{
 		"site" : "Crooked River Forest",
 		"tree_id" : "027",
+		"cam_org" : "LELT",
 		"hub" : "Bridgton",
 		"date_planted_or_observed(wild)" : "2025-06-21",
 		"planted_by" : "Kim Colson",
@@ -2579,6 +2671,7 @@
 	{
 		"site" : "Crooked River Forest",
 		"tree_id" : "029",
+		"cam_org" : "LELT",
 		"hub" : "Bridgton",
 		"date_planted_or_observed(wild)" : "2025-06-21",
 		"planted_by" : "Kim Colson",
@@ -2607,6 +2700,7 @@
 	{
 		"site" : "Crooked River Forest",
 		"tree_id" : "030",
+		"cam_org" : "LELT",
 		"hub" : "Bridgton",
 		"date_planted_or_observed(wild)" : "2025-06-21",
 		"planted_by" : "Kim Colson",
@@ -2635,6 +2729,7 @@
 	{
 		"site" : "Dead River Trailhead Capstone Trail",
 		"tree_id" : "007",
+		"cam_org" : "GPMLT",
 		"hub" : "Ellsworth",
 		"date_planted_or_observed(wild)" : "2025-06-29",
 		"planted_by" : "Mark McCollough",
@@ -2663,6 +2758,7 @@
 	{
 		"site" : "Dead River Trailhead Capstone Trail",
 		"tree_id" : "008",
+		"cam_org" : "GPMLT",
 		"hub" : "Ellsworth",
 		"date_planted_or_observed(wild)" : "2025-06-29",
 		"planted_by" : "Mark McCollough",
@@ -2691,6 +2787,7 @@
 	{
 		"site" : "Dead River Trailhead Capstone Trail",
 		"tree_id" : "009",
+		"cam_org" : "GPMLT",
 		"hub" : "Ellsworth",
 		"date_planted_or_observed(wild)" : "2025-06-29",
 		"planted_by" : "Mark McCollough",
@@ -2719,6 +2816,7 @@
 	{
 		"site" : "Dead River Trailhead Capstone Trail",
 		"tree_id" : "010",
+		"cam_org" : "GPMLT",
 		"hub" : "Ellsworth",
 		"date_planted_or_observed(wild)" : "2025-06-29",
 		"planted_by" : "Mark McCollough",
@@ -2747,6 +2845,7 @@
 	{
 		"site" : "Dead River Trailhead Capstone Trail",
 		"tree_id" : "013",
+		"cam_org" : "GPMLT",
 		"hub" : "Ellsworth",
 		"date_planted_or_observed(wild)" : "2026-06-25",
 		"planted_by" : "Mark McCollough",
@@ -2775,6 +2874,7 @@
 	{
 		"site" : "Dead River Trailhead Log Landing",
 		"tree_id" : "001",
+		"cam_org" : "GPMLT",
 		"hub" : "Ellsworth",
 		"date_planted_or_observed(wild)" : "2025-06-29",
 		"planted_by" : "Mark McCollough",
@@ -2803,6 +2903,7 @@
 	{
 		"site" : "Dead River Trailhead Log Landing",
 		"tree_id" : "002",
+		"cam_org" : "GPMLT",
 		"hub" : "Ellsworth",
 		"date_planted_or_observed(wild)" : "2025-06-29",
 		"planted_by" : "Mark McCollough",
@@ -2831,6 +2932,7 @@
 	{
 		"site" : "Dead River Trailhead Log Landing",
 		"tree_id" : "003",
+		"cam_org" : "GPMLT",
 		"hub" : "Ellsworth",
 		"date_planted_or_observed(wild)" : "2025-06-29",
 		"planted_by" : "Mark McCollough",
@@ -2859,6 +2961,7 @@
 	{
 		"site" : "Dead River Trailhead Log Landing",
 		"tree_id" : "004",
+		"cam_org" : "GPMLT",
 		"hub" : "Ellsworth",
 		"date_planted_or_observed(wild)" : "2025-06-29",
 		"planted_by" : "Mark McCollough",
@@ -2887,6 +2990,7 @@
 	{
 		"site" : "Dead River Trailhead Log Landing",
 		"tree_id" : "005",
+		"cam_org" : "GPMLT",
 		"hub" : "Ellsworth",
 		"date_planted_or_observed(wild)" : "2025-06-29",
 		"planted_by" : "Mark McCollough",
@@ -2915,6 +3019,7 @@
 	{
 		"site" : "Dead River Trailhead Log Landing",
 		"tree_id" : "006",
+		"cam_org" : "GPMLT",
 		"hub" : "Ellsworth",
 		"date_planted_or_observed(wild)" : "2025-06-29",
 		"planted_by" : "Mark McCollough",
@@ -2943,6 +3048,7 @@
 	{
 		"site" : "Dead River Trailhead Log Landing",
 		"tree_id" : "011",
+		"cam_org" : "GPMLT",
 		"hub" : "Ellsworth",
 		"date_planted_or_observed(wild)" : "2026-06-25",
 		"planted_by" : "Mark McCollough",
@@ -2971,6 +3077,7 @@
 	{
 		"site" : "Dead River Trailhead Log Landing",
 		"tree_id" : "012",
+		"cam_org" : "GPMLT",
 		"hub" : "Ellsworth",
 		"date_planted_or_observed(wild)" : "2026-06-25",
 		"planted_by" : "Mark McCollough",
@@ -2999,6 +3106,7 @@
 	{
 		"site" : "Erickson Fields Preserve",
 		"tree_id" : "001",
+		"cam_org" : "MCHT",
 		"hub" : "Searsport",
 		"date_planted_or_observed(wild)" : "2026-06-12",
 		"planted_by" : "Eva Butler",
@@ -3027,6 +3135,7 @@
 	{
 		"site" : "Erickson Fields Preserve",
 		"tree_id" : "002",
+		"cam_org" : "MCHT",
 		"hub" : "Searsport",
 		"date_planted_or_observed(wild)" : "2026-06-12",
 		"planted_by" : "Eva Butler",
@@ -3055,6 +3164,7 @@
 	{
 		"site" : "Erickson Fields Preserve",
 		"tree_id" : "003",
+		"cam_org" : "MCHT",
 		"hub" : "Searsport",
 		"date_planted_or_observed(wild)" : "2026-06-12",
 		"planted_by" : "Eva Butler",
@@ -3083,6 +3193,7 @@
 	{
 		"site" : "Erickson Fields Preserve",
 		"tree_id" : "004",
+		"cam_org" : "MCHT",
 		"hub" : "Searsport",
 		"date_planted_or_observed(wild)" : "2026-06-12",
 		"planted_by" : "Eva Butler",
@@ -3111,6 +3222,7 @@
 	{
 		"site" : "Erickson Fields Preserve",
 		"tree_id" : "005",
+		"cam_org" : "MCHT",
 		"hub" : "Searsport",
 		"date_planted_or_observed(wild)" : "2026-06-12",
 		"planted_by" : "Eva Butler",
@@ -3139,6 +3251,7 @@
 	{
 		"site" : "Field NE of Main Building",
 		"tree_id" : "004",
+		"cam_org" : "MAFP",
 		"hub" : "Orono",
 		"date_planted_or_observed(wild)" : "2024-05-17",
 		"planted_by" : "Mark McCollough",
@@ -3167,6 +3280,7 @@
 	{
 		"site" : "Field NE of Main Building",
 		"tree_id" : "005",
+		"cam_org" : "MAFP",
 		"hub" : "Orono",
 		"date_planted_or_observed(wild)" : "2024-05-17",
 		"planted_by" : "Mark McCollough",
@@ -3195,6 +3309,7 @@
 	{
 		"site" : "Field NE of Main Building",
 		"tree_id" : "006",
+		"cam_org" : "MAFP",
 		"hub" : "Orono",
 		"date_planted_or_observed(wild)" : "2021-06-01",
 		"planted_by" : "Mark McCollough",
@@ -3223,6 +3338,7 @@
 	{
 		"site" : "Field NE of Main Building",
 		"tree_id" : "007",
+		"cam_org" : "MAFP",
 		"hub" : "Orono",
 		"date_planted_or_observed(wild)" : "2024-05-17",
 		"planted_by" : "Mark McCollough",
@@ -3251,6 +3367,7 @@
 	{
 		"site" : "Field NE of Main Building",
 		"tree_id" : "008",
+		"cam_org" : "MAFP",
 		"hub" : "Orono",
 		"date_planted_or_observed(wild)" : "2024-05-17",
 		"planted_by" : "Mark McCollough",
@@ -3279,6 +3396,7 @@
 	{
 		"site" : "Field NE of Main Building",
 		"tree_id" : "009",
+		"cam_org" : "MAFP",
 		"hub" : "Orono",
 		"date_planted_or_observed(wild)" : "2024-05-17",
 		"planted_by" : "Mark McCollough",
@@ -3307,6 +3425,7 @@
 	{
 		"site" : "Field NE of Main Building",
 		"tree_id" : "015",
+		"cam_org" : "MAFP",
 		"hub" : "Orono",
 		"date_planted_or_observed(wild)" : "2026-05-30",
 		"planted_by" : "Mark McCollough",
@@ -3335,6 +3454,7 @@
 	{
 		"site" : "Field NE of Main Building",
 		"tree_id" : "016",
+		"cam_org" : "MAFP",
 		"hub" : "Orono",
 		"date_planted_or_observed(wild)" : "2026-05-30",
 		"planted_by" : "Mark McCollough",
@@ -3363,6 +3483,7 @@
 	{
 		"site" : "Field NE of Main Building",
 		"tree_id" : "017",
+		"cam_org" : "MAFP",
 		"hub" : "Orono",
 		"date_planted_or_observed(wild)" : "2026-05-30",
 		"planted_by" : "Mark McCollough",
@@ -3391,6 +3512,7 @@
 	{
 		"site" : "Field NE of Main Building",
 		"tree_id" : "018",
+		"cam_org" : "MAFP",
 		"hub" : "Orono",
 		"date_planted_or_observed(wild)" : "2026-05-30",
 		"planted_by" : "Mark McCollough",
@@ -3419,6 +3541,7 @@
 	{
 		"site" : "Field NE of Main Building",
 		"tree_id" : "019",
+		"cam_org" : "MAFP",
 		"hub" : "Orono",
 		"date_planted_or_observed(wild)" : "2026-05-30",
 		"planted_by" : "Mark McCollough",
@@ -3447,6 +3570,7 @@
 	{
 		"site" : "Field NE of Main Building",
 		"tree_id" : "020",
+		"cam_org" : "MAFP",
 		"hub" : "Orono",
 		"date_planted_or_observed(wild)" : "2025-06-01",
 		"planted_by" : "Mark McCollough",
@@ -3475,6 +3599,7 @@
 	{
 		"site" : "Field NE of Main Building",
 		"tree_id" : "021",
+		"cam_org" : "MAFP",
 		"hub" : "Orono",
 		"date_planted_or_observed(wild)" : "2025-06-01",
 		"planted_by" : "Mark McCollough",
@@ -3503,6 +3628,7 @@
 	{
 		"site" : "Field NE of Main Building",
 		"tree_id" : "022",
+		"cam_org" : "MAFP",
 		"hub" : "Orono",
 		"date_planted_or_observed(wild)" : "2025-06-01",
 		"planted_by" : "Mark McCollough",
@@ -3531,6 +3657,7 @@
 	{
 		"site" : "Field NE of Main Building",
 		"tree_id" : "023",
+		"cam_org" : "MAFP",
 		"hub" : "Orono",
 		"date_planted_or_observed(wild)" : "2026-05-30",
 		"planted_by" : "Mark McCollough",
@@ -3559,6 +3686,7 @@
 	{
 		"site" : "Field NE of Main Building",
 		"tree_id" : "025",
+		"cam_org" : "MAFP",
 		"hub" : "Orono",
 		"date_planted_or_observed(wild)" : "2026-05-30",
 		"planted_by" : "Mark McCollough",
@@ -3587,6 +3715,7 @@
 	{
 		"site" : "Field NE of Main Building",
 		"tree_id" : "026",
+		"cam_org" : "MAFP",
 		"hub" : "Orono",
 		"date_planted_or_observed(wild)" : "2025-06-01",
 		"planted_by" : "Mark McCollough",
@@ -3615,6 +3744,7 @@
 	{
 		"site" : "Field NE of Main Building",
 		"tree_id" : "027",
+		"cam_org" : "MAFP",
 		"hub" : "Orono",
 		"date_planted_or_observed(wild)" : "2025-06-01",
 		"planted_by" : "Mark McCollough",
@@ -3643,6 +3773,7 @@
 	{
 		"site" : "Field NE of Main Building",
 		"tree_id" : "028",
+		"cam_org" : "MAFP",
 		"hub" : "Orono",
 		"date_planted_or_observed(wild)" : "2025-06-01",
 		"planted_by" : "Mark McCollough",
@@ -3671,6 +3802,7 @@
 	{
 		"site" : "Field NE of Main Building",
 		"tree_id" : "029",
+		"cam_org" : "MAFP",
 		"hub" : "Orono",
 		"date_planted_or_observed(wild)" : "2026-05-30",
 		"planted_by" : "Mark McCollough",
@@ -3699,6 +3831,7 @@
 	{
 		"site" : "Field NE of Main Building",
 		"tree_id" : "030",
+		"cam_org" : "MAFP",
 		"hub" : "Orono",
 		"date_planted_or_observed(wild)" : "2026-05-30",
 		"planted_by" : "Mark McCollough",
@@ -3727,6 +3860,7 @@
 	{
 		"site" : "Field NE of Main Building",
 		"tree_id" : "031",
+		"cam_org" : "MAFP",
 		"hub" : "Orono",
 		"date_planted_or_observed(wild)" : "2025-06-01",
 		"planted_by" : "Mark McCollough",
@@ -3755,6 +3889,7 @@
 	{
 		"site" : "Field NE of Main Building",
 		"tree_id" : "032",
+		"cam_org" : "MAFP",
 		"hub" : "Orono",
 		"date_planted_or_observed(wild)" : "2026-05-30",
 		"planted_by" : "Mark McCollough",
@@ -3783,6 +3918,7 @@
 	{
 		"site" : "Field NE of Main Building",
 		"tree_id" : "033",
+		"cam_org" : "MAFP",
 		"hub" : "Orono",
 		"date_planted_or_observed(wild)" : "2026-06-05",
 		"planted_by" : "Mark McCollough",
@@ -3811,6 +3947,7 @@
 	{
 		"site" : "Field NE of Main Building",
 		"tree_id" : "034",
+		"cam_org" : "MAFP",
 		"hub" : "Orono",
 		"date_planted_or_observed(wild)" : "2026-06-05",
 		"planted_by" : "Mark McCollough",
@@ -3839,6 +3976,7 @@
 	{
 		"site" : "Field NE of Main Building",
 		"tree_id" : "035",
+		"cam_org" : "MAFP",
 		"hub" : "Orono",
 		"date_planted_or_observed(wild)" : "2026-06-05",
 		"planted_by" : "Mark McCollough",
@@ -3867,6 +4005,7 @@
 	{
 		"site" : "Field NE of Main Building",
 		"tree_id" : "036",
+		"cam_org" : "MAFP",
 		"hub" : "Orono",
 		"date_planted_or_observed(wild)" : "2026-06-05",
 		"planted_by" : "Mark McCollough",
@@ -3895,6 +4034,7 @@
 	{
 		"site" : "Fort Point State Park",
 		"tree_id" : "001",
+		"cam_org" : "FTPTSP",
 		"hub" : "Searsport",
 		"date_planted_or_observed(wild)" : "2026-06-07",
 		"planted_by" : "Mark McCollough",
@@ -3923,6 +4063,7 @@
 	{
 		"site" : "Fort Point State Park",
 		"tree_id" : "002",
+		"cam_org" : "FTPTSP",
 		"hub" : "Searsport",
 		"date_planted_or_observed(wild)" : "2026-06-07",
 		"planted_by" : "Mark McCollough",
@@ -3951,6 +4092,7 @@
 	{
 		"site" : "Fort Point State Park",
 		"tree_id" : "003",
+		"cam_org" : "FTPTSP",
 		"hub" : "Searsport",
 		"date_planted_or_observed(wild)" : "2026-06-07",
 		"planted_by" : "Mark McCollough",
@@ -3979,6 +4121,7 @@
 	{
 		"site" : "Fort Point State Park",
 		"tree_id" : "004",
+		"cam_org" : "FTPTSP",
 		"hub" : "Searsport",
 		"date_planted_or_observed(wild)" : "2026-06-07",
 		"planted_by" : "Mark McCollough",
@@ -4007,6 +4150,7 @@
 	{
 		"site" : "Fort Point State Park",
 		"tree_id" : "005",
+		"cam_org" : "FTPTSP",
 		"hub" : "Searsport",
 		"date_planted_or_observed(wild)" : "2026-06-07",
 		"planted_by" : "Mark McCollough",
@@ -4035,6 +4179,7 @@
 	{
 		"site" : "Fort Point State Park",
 		"tree_id" : "006",
+		"cam_org" : "FTPTSP",
 		"hub" : "Searsport",
 		"date_planted_or_observed(wild)" : "2026-06-07",
 		"planted_by" : "Mark McCollough",
@@ -4063,6 +4208,7 @@
 	{
 		"site" : "Fort Point State Park",
 		"tree_id" : "007",
+		"cam_org" : "FTPTSP",
 		"hub" : "Searsport",
 		"date_planted_or_observed(wild)" : "2026-06-07",
 		"planted_by" : "Mark McCollough",
@@ -4091,6 +4237,7 @@
 	{
 		"site" : "Fort Point State Park",
 		"tree_id" : "008",
+		"cam_org" : "FTPTSP",
 		"hub" : "Searsport",
 		"date_planted_or_observed(wild)" : "2026-06-07",
 		"planted_by" : "Mark McCollough",
@@ -4119,6 +4266,7 @@
 	{
 		"site" : "Fort Point State Park",
 		"tree_id" : "009",
+		"cam_org" : "FTPTSP",
 		"hub" : "Searsport",
 		"date_planted_or_observed(wild)" : "2026-06-07",
 		"planted_by" : "Mark McCollough",
@@ -4147,6 +4295,7 @@
 	{
 		"site" : "Fort Point State Park",
 		"tree_id" : "010",
+		"cam_org" : "FTPTSP",
 		"hub" : "Searsport",
 		"date_planted_or_observed(wild)" : "2026-06-07",
 		"planted_by" : "Mark McCollough",
@@ -4175,6 +4324,7 @@
 	{
 		"site" : "Franklin Pasture",
 		"tree_id" : "001",
+		"cam_org" : "CLEW",
 		"hub" : "Freeport",
 		"date_planted_or_observed(wild)" : "2026-06-05",
 		"planted_by" : "Dave Griswold",
@@ -4203,6 +4353,7 @@
 	{
 		"site" : "Franklin Pasture",
 		"tree_id" : "002",
+		"cam_org" : "CLEW",
 		"hub" : "Freeport",
 		"date_planted_or_observed(wild)" : "2026-06-05",
 		"planted_by" : "Dave Griswold",
@@ -4231,6 +4382,7 @@
 	{
 		"site" : "Franklin Pasture",
 		"tree_id" : "003",
+		"cam_org" : "CLEW",
 		"hub" : "Freeport",
 		"date_planted_or_observed(wild)" : "2026-06-05",
 		"planted_by" : "Dave Griswold",
@@ -4259,6 +4411,7 @@
 	{
 		"site" : "Franklin Pasture",
 		"tree_id" : "004",
+		"cam_org" : "CLEW",
 		"hub" : "Freeport",
 		"date_planted_or_observed(wild)" : "2026-06-05",
 		"planted_by" : "Dave Griswold",
@@ -4287,6 +4440,7 @@
 	{
 		"site" : "Franklin Pasture",
 		"tree_id" : "005",
+		"cam_org" : "CLEW",
 		"hub" : "Freeport",
 		"date_planted_or_observed(wild)" : "2026-06-05",
 		"planted_by" : "Dave Griswold",
@@ -4315,6 +4469,7 @@
 	{
 		"site" : "Franklin Pasture",
 		"tree_id" : "006",
+		"cam_org" : "CLEW",
 		"hub" : "Freeport",
 		"date_planted_or_observed(wild)" : "2026-06-05",
 		"planted_by" : "Dave Griswold",
@@ -4343,6 +4498,7 @@
 	{
 		"site" : "Franklin Pasture",
 		"tree_id" : "007",
+		"cam_org" : "CLEW",
 		"hub" : "Freeport",
 		"date_planted_or_observed(wild)" : "2026-06-05",
 		"planted_by" : "Dave Griswold",
@@ -4371,6 +4527,7 @@
 	{
 		"site" : "Franklin Pasture",
 		"tree_id" : "008",
+		"cam_org" : "CLEW",
 		"hub" : "Freeport",
 		"date_planted_or_observed(wild)" : "2026-06-05",
 		"planted_by" : "Dave Griswold",
@@ -4399,6 +4556,7 @@
 	{
 		"site" : "Franklin Pasture",
 		"tree_id" : "009",
+		"cam_org" : "CLEW",
 		"hub" : "Freeport",
 		"date_planted_or_observed(wild)" : "2026-06-05",
 		"planted_by" : "Dave Griswold",
@@ -4427,6 +4585,7 @@
 	{
 		"site" : "Franklin Pasture",
 		"tree_id" : "010",
+		"cam_org" : "CLEW",
 		"hub" : "Freeport",
 		"date_planted_or_observed(wild)" : "2026-06-05",
 		"planted_by" : "Dave Griswold",
@@ -4455,6 +4614,7 @@
 	{
 		"site" : "Hackers Hill",
 		"tree_id" : "011",
+		"cam_org" : "LELT",
 		"hub" : "Bridgton",
 		"date_planted_or_observed(wild)" : "2025-06-21",
 		"planted_by" : "Kim Colson",
@@ -4483,6 +4643,7 @@
 	{
 		"site" : "Hackers Hill",
 		"tree_id" : "023",
+		"cam_org" : "LELT",
 		"hub" : "Bridgton",
 		"date_planted_or_observed(wild)" : "2025-06-21",
 		"planted_by" : "Kim Colson",
@@ -4511,6 +4672,7 @@
 	{
 		"site" : "Hackers Hill",
 		"tree_id" : "025",
+		"cam_org" : "LELT",
 		"hub" : "Bridgton",
 		"date_planted_or_observed(wild)" : "2025-06-21",
 		"planted_by" : "Kim Colson",
@@ -4539,6 +4701,7 @@
 	{
 		"site" : "Hebron Station School",
 		"tree_id" : "001",
+		"cam_org" : "HSS",
 		"hub" : "Bridgton",
 		"date_planted_or_observed(wild)" : "2025-05-27",
 		"planted_by" : "Sarah Otterson",
@@ -4567,6 +4730,7 @@
 	{
 		"site" : "Hebron Station School",
 		"tree_id" : "002",
+		"cam_org" : "HSS",
 		"hub" : "Bridgton",
 		"date_planted_or_observed(wild)" : "2025-05-27",
 		"planted_by" : "Sarah Otterson",
@@ -4595,6 +4759,7 @@
 	{
 		"site" : "Hebron Station School",
 		"tree_id" : "003",
+		"cam_org" : "HSS",
 		"hub" : "Bridgton",
 		"date_planted_or_observed(wild)" : "2025-05-27",
 		"planted_by" : "Sarah Otterson",
@@ -4623,6 +4788,7 @@
 	{
 		"site" : "Hurricane Valley Farm",
 		"tree_id" : "001",
+		"cam_org" : "FLT",
 		"hub" : "Freeport",
 		"date_planted_or_observed(wild)" : "2026-05-21",
 		"planted_by" : "Jack  Kennel",
@@ -4651,6 +4817,7 @@
 	{
 		"site" : "Hurricane Valley Farm",
 		"tree_id" : "002",
+		"cam_org" : "FLT",
 		"hub" : "Freeport",
 		"date_planted_or_observed(wild)" : "2026-05-21",
 		"planted_by" : "Jack  Kennel",
@@ -4679,6 +4846,7 @@
 	{
 		"site" : "Hurricane Valley Farm",
 		"tree_id" : "003",
+		"cam_org" : "FLT",
 		"hub" : "Freeport",
 		"date_planted_or_observed(wild)" : "2026-05-21",
 		"planted_by" : "Jack  Kennel",
@@ -4707,6 +4875,7 @@
 	{
 		"site" : "Hurricane Valley Farm",
 		"tree_id" : "004",
+		"cam_org" : "FLT",
 		"hub" : "Freeport",
 		"date_planted_or_observed(wild)" : "2026-06-03",
 		"planted_by" : "Jack  Kennel",
@@ -4735,6 +4904,7 @@
 	{
 		"site" : "Hurricane Valley Farm",
 		"tree_id" : "005",
+		"cam_org" : "FLT",
 		"hub" : "Freeport",
 		"date_planted_or_observed(wild)" : "2026-06-03",
 		"planted_by" : "Jack  Kennel",
@@ -4763,6 +4933,7 @@
 	{
 		"site" : "Hurricane Valley Farm",
 		"tree_id" : "006",
+		"cam_org" : "FLT",
 		"hub" : "Freeport",
 		"date_planted_or_observed(wild)" : "2026-06-03",
 		"planted_by" : "Jack  Kennel",
@@ -4791,6 +4962,7 @@
 	{
 		"site" : "Indian Trail Park",
 		"tree_id" : "001",
+		"cam_org" : "BLTBrewer",
 		"hub" : "Orono",
 		"date_planted_or_observed(wild)" : "2025-07-01",
 		"planted_by" : "Mark McCollough",
@@ -4819,6 +4991,7 @@
 	{
 		"site" : "Indian Trail Park",
 		"tree_id" : "002",
+		"cam_org" : "BLTBrewer",
 		"hub" : "Orono",
 		"date_planted_or_observed(wild)" : "2025-07-01",
 		"planted_by" : "Mark McCollough",
@@ -4847,6 +5020,7 @@
 	{
 		"site" : "Indian Trail Park",
 		"tree_id" : "003",
+		"cam_org" : "BLTBrewer",
 		"hub" : "Orono",
 		"date_planted_or_observed(wild)" : "2025-07-01",
 		"planted_by" : "Mark McCollough",
@@ -4875,6 +5049,7 @@
 	{
 		"site" : "Indian Trail Park",
 		"tree_id" : "004",
+		"cam_org" : "BLTBrewer",
 		"hub" : "Orono",
 		"date_planted_or_observed(wild)" : "2025-07-01",
 		"planted_by" : "Mark McCollough",
@@ -4903,6 +5078,7 @@
 	{
 		"site" : "Indian Trail Park",
 		"tree_id" : "011",
+		"cam_org" : "BLTBrewer",
 		"hub" : "Orono",
 		"date_planted_or_observed(wild)" : "2026-05-15",
 		"planted_by" : "Mark McCollough",
@@ -4931,6 +5107,7 @@
 	{
 		"site" : "Indian Trail Park",
 		"tree_id" : "012",
+		"cam_org" : "BLTBrewer",
 		"hub" : "Orono",
 		"date_planted_or_observed(wild)" : "2026-05-15",
 		"planted_by" : "Mark McCollough",
@@ -4959,6 +5136,7 @@
 	{
 		"site" : "Lowd Environmental Reserve",
 		"tree_id" : "007",
+		"cam_org" : "SSMWLT",
 		"hub" : "Sanford",
 		"date_planted_or_observed(wild)" : "2024-06-09",
 		"planted_by" : "K. Lea Sewell",
@@ -4987,6 +5165,7 @@
 	{
 		"site" : "Lowd Environmental Reserve",
 		"tree_id" : "008",
+		"cam_org" : "SSMWLT",
 		"hub" : "Sanford",
 		"date_planted_or_observed(wild)" : "2024-06-09",
 		"planted_by" : "K. Lea Sewell",
@@ -5015,6 +5194,7 @@
 	{
 		"site" : "Lowd Environmental Reserve",
 		"tree_id" : "009",
+		"cam_org" : "SSMWLT",
 		"hub" : "Sanford",
 		"date_planted_or_observed(wild)" : "2024-06-09",
 		"planted_by" : "K. Lea Sewell",
@@ -5043,6 +5223,7 @@
 	{
 		"site" : "Lowd Environmental Reserve",
 		"tree_id" : "010",
+		"cam_org" : "SSMWLT",
 		"hub" : "Sanford",
 		"date_planted_or_observed(wild)" : "2024-06-09",
 		"planted_by" : "K. Lea Sewell",
@@ -5071,6 +5252,7 @@
 	{
 		"site" : "Maine Youth Fish and Game Club",
 		"tree_id" : "001",
+		"cam_org" : "MYFGC",
 		"hub" : "Orono",
 		"date_planted_or_observed(wild)" : "2025-07-10",
 		"planted_by" : "Mark McCollough",
@@ -5099,6 +5281,7 @@
 	{
 		"site" : "Maine Youth Fish and Game Club",
 		"tree_id" : "002",
+		"cam_org" : "MYFGC",
 		"hub" : "Orono",
 		"date_planted_or_observed(wild)" : "2025-07-10",
 		"planted_by" : "Mark McCollough",
@@ -5127,6 +5310,7 @@
 	{
 		"site" : "Maine Youth Fish and Game Club",
 		"tree_id" : "003",
+		"cam_org" : "MYFGC",
 		"hub" : "Orono",
 		"date_planted_or_observed(wild)" : "2025-07-10",
 		"planted_by" : "Mark McCollough",
@@ -5155,6 +5339,7 @@
 	{
 		"site" : "Maine Youth Fish and Game Club",
 		"tree_id" : "004",
+		"cam_org" : "MYFGC",
 		"hub" : "Orono",
 		"date_planted_or_observed(wild)" : "2025-07-10",
 		"planted_by" : "Mark McCollough",
@@ -5183,6 +5368,7 @@
 	{
 		"site" : "Maine Youth Fish and Game Club",
 		"tree_id" : "005",
+		"cam_org" : "MYFGC",
 		"hub" : "Orono",
 		"date_planted_or_observed(wild)" : "2025-07-10",
 		"planted_by" : "Mark McCollough",
@@ -5211,6 +5397,7 @@
 	{
 		"site" : "Maine Youth Fish and Game Club",
 		"tree_id" : "006",
+		"cam_org" : "MYFGC",
 		"hub" : "Orono",
 		"date_planted_or_observed(wild)" : "2025-07-10",
 		"planted_by" : "Mark McCollough",
@@ -5239,6 +5426,7 @@
 	{
 		"site" : "Maine Youth Fish and Game Club",
 		"tree_id" : "007",
+		"cam_org" : "MYFGC",
 		"hub" : "Orono",
 		"date_planted_or_observed(wild)" : "2025-07-10",
 		"planted_by" : "Mark McCollough",
@@ -5267,6 +5455,7 @@
 	{
 		"site" : "Maine Youth Fish and Game Club",
 		"tree_id" : "008",
+		"cam_org" : "MYFGC",
 		"hub" : "Orono",
 		"date_planted_or_observed(wild)" : "2025-07-10",
 		"planted_by" : "Mark McCollough",
@@ -5295,6 +5484,7 @@
 	{
 		"site" : "Maine Youth Fish and Game Club",
 		"tree_id" : "009",
+		"cam_org" : "MYFGC",
 		"hub" : "Orono",
 		"date_planted_or_observed(wild)" : "2025-07-10",
 		"planted_by" : "Mark McCollough",
@@ -5323,6 +5513,7 @@
 	{
 		"site" : "Maine Youth Fish and Game Club",
 		"tree_id" : "010",
+		"cam_org" : "MYFGC",
 		"hub" : "Orono",
 		"date_planted_or_observed(wild)" : "2025-07-10",
 		"planted_by" : "Mark McCollough",
@@ -5351,6 +5542,7 @@
 	{
 		"site" : "Mary Snow School",
 		"tree_id" : "001",
+		"cam_org" : "MAFP",
 		"hub" : "Orono",
 		"date_planted_or_observed(wild)" : "2024-06-13",
 		"planted_by" : "Mark McCollough",
@@ -5379,6 +5571,7 @@
 	{
 		"site" : "Mary Snow School",
 		"tree_id" : "002",
+		"cam_org" : "MAFP",
 		"hub" : "Orono",
 		"date_planted_or_observed(wild)" : "2024-06-13",
 		"planted_by" : "Mark McCollough",
@@ -5407,6 +5600,7 @@
 	{
 		"site" : "Mary Snow School",
 		"tree_id" : "003",
+		"cam_org" : "MAFP",
 		"hub" : "Orono",
 		"date_planted_or_observed(wild)" : "2024-06-13",
 		"planted_by" : "Mark McCollough",
@@ -5435,6 +5629,7 @@
 	{
 		"site" : "Mayberry Hill",
 		"tree_id" : "007",
+		"cam_org" : "LELT",
 		"hub" : "Bridgton",
 		"date_planted_or_observed(wild)" : "2024-07-25",
 		"planted_by" : "Kim Colson",
@@ -5463,6 +5658,7 @@
 	{
 		"site" : "Mayberry Hill",
 		"tree_id" : "008",
+		"cam_org" : "LELT",
 		"hub" : "Bridgton",
 		"date_planted_or_observed(wild)" : "2024-07-25",
 		"planted_by" : "Kim Colson",
@@ -5491,6 +5687,7 @@
 	{
 		"site" : "Mayberry Hill",
 		"tree_id" : "009",
+		"cam_org" : "LELT",
 		"hub" : "Bridgton",
 		"date_planted_or_observed(wild)" : "2024-07-25",
 		"planted_by" : "Kim Colson",
@@ -5519,6 +5716,7 @@
 	{
 		"site" : "Mayberry Hill",
 		"tree_id" : "010",
+		"cam_org" : "LELT",
 		"hub" : "Bridgton",
 		"date_planted_or_observed(wild)" : "2024-07-25",
 		"planted_by" : "Kim Colson",
@@ -5547,6 +5745,7 @@
 	{
 		"site" : "Mayberry Hill",
 		"tree_id" : "012",
+		"cam_org" : "LELT",
 		"hub" : "Bridgton",
 		"date_planted_or_observed(wild)" : "2025-06-21",
 		"planted_by" : "Kim Colson",
@@ -5575,6 +5774,7 @@
 	{
 		"site" : "Mayberry Hill",
 		"tree_id" : "013",
+		"cam_org" : "LELT",
 		"hub" : "Bridgton",
 		"date_planted_or_observed(wild)" : "2025-06-21",
 		"planted_by" : "Kim Colson",
@@ -5603,6 +5803,7 @@
 	{
 		"site" : "Mayberry Hill",
 		"tree_id" : "014",
+		"cam_org" : "LELT",
 		"hub" : "Bridgton",
 		"date_planted_or_observed(wild)" : "2025-06-21",
 		"planted_by" : "Kim Colson",
@@ -5631,6 +5832,7 @@
 	{
 		"site" : "Mayberry Hill",
 		"tree_id" : "015",
+		"cam_org" : "LELT",
 		"hub" : "Bridgton",
 		"date_planted_or_observed(wild)" : "2025-06-21",
 		"planted_by" : "Kim Colson",
@@ -5659,6 +5861,7 @@
 	{
 		"site" : "Mayberry Hill",
 		"tree_id" : "017",
+		"cam_org" : "LELT",
 		"hub" : "Bridgton",
 		"date_planted_or_observed(wild)" : "2025-06-21",
 		"planted_by" : "Kim Colson",
@@ -5687,6 +5890,7 @@
 	{
 		"site" : "Mayberry Hill",
 		"tree_id" : "018",
+		"cam_org" : "LELT",
 		"hub" : "Bridgton",
 		"date_planted_or_observed(wild)" : "2025-06-21",
 		"planted_by" : "Kim Colson",
@@ -5715,6 +5919,7 @@
 	{
 		"site" : "Mayberry Hill",
 		"tree_id" : "019",
+		"cam_org" : "LELT",
 		"hub" : "Bridgton",
 		"date_planted_or_observed(wild)" : "2025-06-21",
 		"planted_by" : "Kim Colson",
@@ -5743,6 +5948,7 @@
 	{
 		"site" : "Mayberry Hill",
 		"tree_id" : "020",
+		"cam_org" : "LELT",
 		"hub" : "Bridgton",
 		"date_planted_or_observed(wild)" : "2025-06-21",
 		"planted_by" : "Kim Colson",
@@ -5771,6 +5977,7 @@
 	{
 		"site" : "Mayberry Hill",
 		"tree_id" : "022",
+		"cam_org" : "LELT",
 		"hub" : "Bridgton",
 		"date_planted_or_observed(wild)" : "2025-06-21",
 		"planted_by" : "Kim Colson",
@@ -5799,6 +6006,7 @@
 	{
 		"site" : "Mayberry Hill",
 		"tree_id" : "028",
+		"cam_org" : "LELT",
 		"hub" : "Bridgton",
 		"date_planted_or_observed(wild)" : "2025-06-21",
 		"planted_by" : "Kim Colson",
@@ -5827,6 +6035,7 @@
 	{
 		"site" : "Mt Joy Community Orchard",
 		"tree_id" : "001",
+		"cam_org" : "MJCO",
 		"hub" : "Freeport",
 		"date_planted_or_observed(wild)" : "2024-09-14",
 		"planted_by" : "Eva Butler",
@@ -5855,6 +6064,7 @@
 	{
 		"site" : "Mt Joy Community Orchard",
 		"tree_id" : "002",
+		"cam_org" : "MJCO",
 		"hub" : "Freeport",
 		"date_planted_or_observed(wild)" : "2024-09-14",
 		"planted_by" : "Eva Butler",
@@ -5883,6 +6093,7 @@
 	{
 		"site" : "Mt Joy Community Orchard",
 		"tree_id" : "003",
+		"cam_org" : "MJCO",
 		"hub" : "Freeport",
 		"date_planted_or_observed(wild)" : "2024-09-14",
 		"planted_by" : "Eva Butler",
@@ -5911,6 +6122,7 @@
 	{
 		"site" : "Mt Joy Community Orchard",
 		"tree_id" : "004",
+		"cam_org" : "MJCO",
 		"hub" : "Freeport",
 		"date_planted_or_observed(wild)" : "2024-09-14",
 		"planted_by" : "Eva Butler",
@@ -5939,6 +6151,7 @@
 	{
 		"site" : "Mt Joy Community Orchard",
 		"tree_id" : "005",
+		"cam_org" : "MJCO",
 		"hub" : "Freeport",
 		"date_planted_or_observed(wild)" : "2024-09-14",
 		"planted_by" : "Eva Butler",
@@ -5967,6 +6180,7 @@
 	{
 		"site" : "Mt Joy Community Orchard",
 		"tree_id" : "006",
+		"cam_org" : "MJCO",
 		"hub" : "Freeport",
 		"date_planted_or_observed(wild)" : "2024-09-14",
 		"planted_by" : "Eva Butler",
@@ -5995,6 +6209,7 @@
 	{
 		"site" : "Mt Joy Community Orchard",
 		"tree_id" : "007",
+		"cam_org" : "MJCO",
 		"hub" : "Freeport",
 		"date_planted_or_observed(wild)" : "2024-09-14",
 		"planted_by" : "Eva Butler",
@@ -6023,6 +6238,7 @@
 	{
 		"site" : "Mt Joy Community Orchard",
 		"tree_id" : "008",
+		"cam_org" : "MJCO",
 		"hub" : "Freeport",
 		"date_planted_or_observed(wild)" : "2024-09-14",
 		"planted_by" : "Eva Butler",
@@ -6051,6 +6267,7 @@
 	{
 		"site" : "Murray Point Road",
 		"tree_id" : "001",
+		"cam_org" : "MLLT",
 		"hub" : "Princeton",
 		"date_planted_or_observed(wild)" : "2026-05-22",
 		"planted_by" : "Eva Butler",
@@ -6079,6 +6296,7 @@
 	{
 		"site" : "Murray Point Road",
 		"tree_id" : "003",
+		"cam_org" : "MLLT",
 		"hub" : "Princeton",
 		"date_planted_or_observed(wild)" : "2026-05-22",
 		"planted_by" : "Eva Butler",
@@ -6107,6 +6325,7 @@
 	{
 		"site" : "Murray Point Road",
 		"tree_id" : "004",
+		"cam_org" : "MLLT",
 		"hub" : "Princeton",
 		"date_planted_or_observed(wild)" : "2026-05-22",
 		"planted_by" : "Eva Butler",
@@ -6135,6 +6354,7 @@
 	{
 		"site" : "Murray Point Road",
 		"tree_id" : "005",
+		"cam_org" : "MLLT",
 		"hub" : "Princeton",
 		"date_planted_or_observed(wild)" : "2026-05-22",
 		"planted_by" : "Eva Butler",
@@ -6163,6 +6383,7 @@
 	{
 		"site" : "Murray Point Road",
 		"tree_id" : "006",
+		"cam_org" : "MLLT",
 		"hub" : "Princeton",
 		"date_planted_or_observed(wild)" : "2026-05-22",
 		"planted_by" : "Eva Butler",
@@ -6191,6 +6412,7 @@
 	{
 		"site" : "Murray Point Road",
 		"tree_id" : "007",
+		"cam_org" : "MLLT",
 		"hub" : "Princeton",
 		"date_planted_or_observed(wild)" : "2026-05-22",
 		"planted_by" : "Eva Butler",
@@ -6219,6 +6441,7 @@
 	{
 		"site" : "Murray Point Road",
 		"tree_id" : "008",
+		"cam_org" : "MLLT",
 		"hub" : "Princeton",
 		"date_planted_or_observed(wild)" : "2026-05-22",
 		"planted_by" : "Eva Butler",
@@ -6247,6 +6470,7 @@
 	{
 		"site" : "Murray Point Road",
 		"tree_id" : "009",
+		"cam_org" : "MLLT",
 		"hub" : "Princeton",
 		"date_planted_or_observed(wild)" : "2026-05-22",
 		"planted_by" : "Eva Butler",
@@ -6275,6 +6499,7 @@
 	{
 		"site" : "Murray Point Road",
 		"tree_id" : "010",
+		"cam_org" : "MLLT",
 		"hub" : "Princeton",
 		"date_planted_or_observed(wild)" : "2026-05-22",
 		"planted_by" : "Eva Butler",
@@ -6303,6 +6528,7 @@
 	{
 		"site" : "Murray Point Road",
 		"tree_id" : "011",
+		"cam_org" : "MLLT",
 		"hub" : "Princeton",
 		"date_planted_or_observed(wild)" : "2026-05-22",
 		"planted_by" : "Eva Butler",
@@ -6331,6 +6557,7 @@
 	{
 		"site" : "Murray Point Road",
 		"tree_id" : "012",
+		"cam_org" : "MLLT",
 		"hub" : "Princeton",
 		"date_planted_or_observed(wild)" : "2026-05-22",
 		"planted_by" : "Eva Butler",
@@ -6359,6 +6586,7 @@
 	{
 		"site" : "Murray Point Road",
 		"tree_id" : "013",
+		"cam_org" : "MLLT",
 		"hub" : "Princeton",
 		"date_planted_or_observed(wild)" : "2026-05-22",
 		"planted_by" : "Eva Butler",
@@ -6387,6 +6615,7 @@
 	{
 		"site" : "Murray Point Road",
 		"tree_id" : "014",
+		"cam_org" : "MLLT",
 		"hub" : "Princeton",
 		"date_planted_or_observed(wild)" : "2026-05-22",
 		"planted_by" : "Eva Butler",
@@ -6415,6 +6644,7 @@
 	{
 		"site" : "Murray Point Road",
 		"tree_id" : "015",
+		"cam_org" : "MLLT",
 		"hub" : "Princeton",
 		"date_planted_or_observed(wild)" : "2026-05-22",
 		"planted_by" : "Eva Butler",
@@ -6443,6 +6673,7 @@
 	{
 		"site" : "Murray Point Road",
 		"tree_id" : "016",
+		"cam_org" : "MLLT",
 		"hub" : "Princeton",
 		"date_planted_or_observed(wild)" : "2026-05-22",
 		"planted_by" : "Eva Butler",
@@ -6471,6 +6702,7 @@
 	{
 		"site" : "Murray Point Road",
 		"tree_id" : "017",
+		"cam_org" : "MLLT",
 		"hub" : "Princeton",
 		"date_planted_or_observed(wild)" : "2026-05-22",
 		"planted_by" : "Eva Butler",
@@ -6499,6 +6731,7 @@
 	{
 		"site" : "Murray Point Road",
 		"tree_id" : "018",
+		"cam_org" : "MLLT",
 		"hub" : "Princeton",
 		"date_planted_or_observed(wild)" : "2026-05-22",
 		"planted_by" : "Eva Butler",
@@ -6527,6 +6760,7 @@
 	{
 		"site" : "Murray Point Road",
 		"tree_id" : "019",
+		"cam_org" : "MLLT",
 		"hub" : "Princeton",
 		"date_planted_or_observed(wild)" : "2026-05-22",
 		"planted_by" : "Eva Butler",
@@ -6555,6 +6789,7 @@
 	{
 		"site" : "Murray Point Road",
 		"tree_id" : "020",
+		"cam_org" : "MLLT",
 		"hub" : "Princeton",
 		"date_planted_or_observed(wild)" : "2026-05-22",
 		"planted_by" : "Eva Butler",
@@ -6583,6 +6818,7 @@
 	{
 		"site" : "Murray Point Road",
 		"tree_id" : "021",
+		"cam_org" : "MLLT",
 		"hub" : "Princeton",
 		"date_planted_or_observed(wild)" : "2026-05-22",
 		"planted_by" : "Eva Butler",
@@ -6611,6 +6847,7 @@
 	{
 		"site" : "Murray Point Road",
 		"tree_id" : "022",
+		"cam_org" : "MLLT",
 		"hub" : "Princeton",
 		"date_planted_or_observed(wild)" : "2026-05-22",
 		"planted_by" : "Eva Butler",
@@ -6639,6 +6876,7 @@
 	{
 		"site" : "Murray Point Road",
 		"tree_id" : "024",
+		"cam_org" : "MLLT",
 		"hub" : "Princeton",
 		"date_planted_or_observed(wild)" : "2026-05-22",
 		"planted_by" : "Eva Butler",
@@ -6667,6 +6905,7 @@
 	{
 		"site" : "Murray Point Road",
 		"tree_id" : "025",
+		"cam_org" : "MLLT",
 		"hub" : "Princeton",
 		"date_planted_or_observed(wild)" : "2026-05-22",
 		"planted_by" : "Eva Butler",
@@ -6695,6 +6934,7 @@
 	{
 		"site" : "Murray Point Road",
 		"tree_id" : "027",
+		"cam_org" : "MLLT",
 		"hub" : "Princeton",
 		"date_planted_or_observed(wild)" : "2026-05-22",
 		"planted_by" : "Eva Butler",
@@ -6723,6 +6963,7 @@
 	{
 		"site" : "Murray Point Road",
 		"tree_id" : "028",
+		"cam_org" : "MLLT",
 		"hub" : "Princeton",
 		"date_planted_or_observed(wild)" : "2026-05-22",
 		"planted_by" : "Eva Butler",
@@ -6751,6 +6992,7 @@
 	{
 		"site" : "Murray Point Road",
 		"tree_id" : "029",
+		"cam_org" : "MLLT",
 		"hub" : "Princeton",
 		"date_planted_or_observed(wild)" : "2026-05-22",
 		"planted_by" : "Eva Butler",
@@ -6779,6 +7021,7 @@
 	{
 		"site" : "Murray Point Road",
 		"tree_id" : "030",
+		"cam_org" : "MLLT",
 		"hub" : "Princeton",
 		"date_planted_or_observed(wild)" : "2026-05-22",
 		"planted_by" : "Eva Butler",
@@ -6807,6 +7050,7 @@
 	{
 		"site" : "North Shore Preserve",
 		"tree_id" : "001",
+		"cam_org" : "NHCP",
 		"hub" : "Warren",
 		"date_planted_or_observed(wild)" : "2025-06-05",
 		"planted_by" : "Eva Butler",
@@ -6835,6 +7079,7 @@
 	{
 		"site" : "North Shore Preserve",
 		"tree_id" : "002",
+		"cam_org" : "NHCP",
 		"hub" : "Warren",
 		"date_planted_or_observed(wild)" : "2025-06-05",
 		"planted_by" : "Eva Butler",
@@ -6863,6 +7108,7 @@
 	{
 		"site" : "North Shore Preserve",
 		"tree_id" : "003",
+		"cam_org" : "NHCP",
 		"hub" : "Warren",
 		"date_planted_or_observed(wild)" : "2025-06-05",
 		"planted_by" : "Eva Butler",
@@ -6891,6 +7137,7 @@
 	{
 		"site" : "North Shore Preserve",
 		"tree_id" : "004",
+		"cam_org" : "NHCP",
 		"hub" : "Warren",
 		"date_planted_or_observed(wild)" : "2025-06-05",
 		"planted_by" : "Eva Butler",
@@ -6919,6 +7166,7 @@
 	{
 		"site" : "North Shore Preserve",
 		"tree_id" : "005",
+		"cam_org" : "NHCP",
 		"hub" : "Warren",
 		"date_planted_or_observed(wild)" : "2025-06-05",
 		"planted_by" : "Eva Butler",
@@ -6947,6 +7195,7 @@
 	{
 		"site" : "North Shore Preserve",
 		"tree_id" : "006",
+		"cam_org" : "NHCP",
 		"hub" : "Warren",
 		"date_planted_or_observed(wild)" : "2025-06-05",
 		"planted_by" : "Eva Butler",
@@ -6975,6 +7224,7 @@
 	{
 		"site" : "North Shore Preserve",
 		"tree_id" : "007",
+		"cam_org" : "NHCP",
 		"hub" : "Warren",
 		"date_planted_or_observed(wild)" : "2025-06-05",
 		"planted_by" : "Eva Butler",
@@ -7003,6 +7253,7 @@
 	{
 		"site" : "North Shore Preserve",
 		"tree_id" : "008",
+		"cam_org" : "NHCP",
 		"hub" : "Warren",
 		"date_planted_or_observed(wild)" : "2025-06-05",
 		"planted_by" : "Eva Butler",
@@ -7031,6 +7282,7 @@
 	{
 		"site" : "North Shore Preserve",
 		"tree_id" : "009",
+		"cam_org" : "NHCP",
 		"hub" : "Warren",
 		"date_planted_or_observed(wild)" : "2025-06-05",
 		"planted_by" : "Eva Butler",
@@ -7059,6 +7311,7 @@
 	{
 		"site" : "North Shore Preserve",
 		"tree_id" : "010",
+		"cam_org" : "NHCP",
 		"hub" : "Warren",
 		"date_planted_or_observed(wild)" : "2025-06-05",
 		"planted_by" : "Eva Butler",
@@ -7087,6 +7340,7 @@
 	{
 		"site" : "Orono High School",
 		"tree_id" : "001",
+		"cam_org" : "ORONO",
 		"hub" : "Orono",
 		"date_planted_or_observed(wild)" : "2026-05-21",
 		"planted_by" : "Eva Butler",
@@ -7115,6 +7369,7 @@
 	{
 		"site" : "Orono High School",
 		"tree_id" : "002",
+		"cam_org" : "ORONO",
 		"hub" : "Orono",
 		"date_planted_or_observed(wild)" : "2026-05-21",
 		"planted_by" : "Eva Butler",
@@ -7143,6 +7398,7 @@
 	{
 		"site" : "Orono High School",
 		"tree_id" : "003",
+		"cam_org" : "ORONO",
 		"hub" : "Orono",
 		"date_planted_or_observed(wild)" : "2026-05-21",
 		"planted_by" : "Eva Butler",
@@ -7171,6 +7427,7 @@
 	{
 		"site" : "Orono High School",
 		"tree_id" : "004",
+		"cam_org" : "ORONO",
 		"hub" : "Orono",
 		"date_planted_or_observed(wild)" : "2026-05-21",
 		"planted_by" : "Eva Butler",
@@ -7199,6 +7456,7 @@
 	{
 		"site" : "Orono High School",
 		"tree_id" : "005",
+		"cam_org" : "ORONO",
 		"hub" : "Orono",
 		"date_planted_or_observed(wild)" : "2026-05-21",
 		"planted_by" : "Eva Butler",
@@ -7227,6 +7485,7 @@
 	{
 		"site" : "Orono High School",
 		"tree_id" : "006",
+		"cam_org" : "ORONO",
 		"hub" : "Orono",
 		"date_planted_or_observed(wild)" : "2026-05-21",
 		"planted_by" : "Eva Butler",
@@ -7255,6 +7514,7 @@
 	{
 		"site" : "Orono High School",
 		"tree_id" : "007",
+		"cam_org" : "ORONO",
 		"hub" : "Orono",
 		"date_planted_or_observed(wild)" : "2026-05-21",
 		"planted_by" : "Eva Butler",
@@ -7283,6 +7543,7 @@
 	{
 		"site" : "Orono High School",
 		"tree_id" : "008",
+		"cam_org" : "ORONO",
 		"hub" : "Orono",
 		"date_planted_or_observed(wild)" : "2026-05-21",
 		"planted_by" : "Eva Butler",
@@ -7311,6 +7572,7 @@
 	{
 		"site" : "Orono High School",
 		"tree_id" : "009",
+		"cam_org" : "ORONO",
 		"hub" : "Orono",
 		"date_planted_or_observed(wild)" : "2026-05-21",
 		"planted_by" : "Eva Butler",
@@ -7339,6 +7601,7 @@
 	{
 		"site" : "Orono High School",
 		"tree_id" : "010",
+		"cam_org" : "ORONO",
 		"hub" : "Orono",
 		"date_planted_or_observed(wild)" : "2026-05-21",
 		"planted_by" : "Eva Butler",
@@ -7367,6 +7630,7 @@
 	{
 		"site" : "Peabody Fitch Woods",
 		"tree_id" : "001",
+		"cam_org" : "LELT",
 		"hub" : "Bridgton",
 		"date_planted_or_observed(wild)" : "2024-07-24",
 		"planted_by" : "Marji Berkman",
@@ -7395,6 +7659,7 @@
 	{
 		"site" : "Peabody Fitch Woods",
 		"tree_id" : "002",
+		"cam_org" : "LELT",
 		"hub" : "Bridgton",
 		"date_planted_or_observed(wild)" : "2024-07-24",
 		"planted_by" : "Marji Berkman",
@@ -7423,6 +7688,7 @@
 	{
 		"site" : "Peabody Fitch Woods",
 		"tree_id" : "003",
+		"cam_org" : "LELT",
 		"hub" : "Bridgton",
 		"date_planted_or_observed(wild)" : "2024-07-24",
 		"planted_by" : "Marji Berkman",
@@ -7451,6 +7717,7 @@
 	{
 		"site" : "Peabody Fitch Woods",
 		"tree_id" : "004",
+		"cam_org" : "LELT",
 		"hub" : "Bridgton",
 		"date_planted_or_observed(wild)" : "2024-07-24",
 		"planted_by" : "Marji Berkman",
@@ -7479,6 +7746,7 @@
 	{
 		"site" : "Peabody Fitch Woods",
 		"tree_id" : "005",
+		"cam_org" : "LELT",
 		"hub" : "Bridgton",
 		"date_planted_or_observed(wild)" : "2024-07-24",
 		"planted_by" : "Marji Berkman",
@@ -7507,6 +7775,7 @@
 	{
 		"site" : "Peabody Fitch Woods",
 		"tree_id" : "006",
+		"cam_org" : "LELT",
 		"hub" : "Bridgton",
 		"date_planted_or_observed(wild)" : "2024-07-24",
 		"planted_by" : "Marji Berkman",
@@ -7535,6 +7804,7 @@
 	{
 		"site" : "Peabody Fitch Woods",
 		"tree_id" : "021",
+		"cam_org" : "LELT",
 		"hub" : "Bridgton",
 		"date_planted_or_observed(wild)" : "2025-06-21",
 		"planted_by" : "Marji Berkman",
@@ -7563,6 +7833,7 @@
 	{
 		"site" : "PVT FAR Moosehorn",
 		"tree_id" : "001",
+		"cam_org" : "PVT FAR",
 		"hub" : "Lincoln",
 		"date_planted_or_observed(wild)" : "2023-07-29",
 		"planted_by" : "Heidi Farber",
@@ -7591,6 +7862,7 @@
 	{
 		"site" : "PVT FAR Moosehorn",
 		"tree_id" : "002",
+		"cam_org" : "PVT FAR",
 		"hub" : "Lincoln",
 		"date_planted_or_observed(wild)" : "2023-07-29",
 		"planted_by" : "Heidi Farber",
@@ -7619,6 +7891,7 @@
 	{
 		"site" : "PVT FAR Moosehorn",
 		"tree_id" : "003",
+		"cam_org" : "PVT FAR",
 		"hub" : "Lincoln",
 		"date_planted_or_observed(wild)" : "2023-07-29",
 		"planted_by" : "Heidi Farber",
@@ -7647,6 +7920,7 @@
 	{
 		"site" : "PVT FAR Moosehorn",
 		"tree_id" : "004",
+		"cam_org" : "PVT FAR",
 		"hub" : "Lincoln",
 		"date_planted_or_observed(wild)" : "2023-07-29",
 		"planted_by" : "Heidi Farber",
@@ -7675,6 +7949,7 @@
 	{
 		"site" : "PVT FAR Moosehorn",
 		"tree_id" : "005",
+		"cam_org" : "PVT FAR",
 		"hub" : "Lincoln",
 		"date_planted_or_observed(wild)" : "2023-07-29",
 		"planted_by" : "Heidi Farber",
@@ -7703,6 +7978,7 @@
 	{
 		"site" : "PVT FAR Moosehorn",
 		"tree_id" : "006",
+		"cam_org" : "PVT FAR",
 		"hub" : "Lincoln",
 		"date_planted_or_observed(wild)" : "2026-05-21",
 		"planted_by" : "Heidi Farber",
@@ -7731,6 +8007,7 @@
 	{
 		"site" : "PVT FAR Moosehorn",
 		"tree_id" : "007",
+		"cam_org" : "PVT FAR",
 		"hub" : "Lincoln",
 		"date_planted_or_observed(wild)" : "2023-07-29",
 		"planted_by" : "Heidi Farber",
@@ -7759,6 +8036,7 @@
 	{
 		"site" : "PVT FAR Moosehorn",
 		"tree_id" : "008",
+		"cam_org" : "PVT FAR",
 		"hub" : "Lincoln",
 		"date_planted_or_observed(wild)" : "2026-05-21",
 		"planted_by" : "Heidi Farber",
@@ -7787,6 +8065,7 @@
 	{
 		"site" : "PVT FAR Moosehorn",
 		"tree_id" : "009",
+		"cam_org" : "PVT FAR",
 		"hub" : "Lincoln",
 		"date_planted_or_observed(wild)" : "2023-07-29",
 		"planted_by" : "Heidi Farber",
@@ -7815,6 +8094,7 @@
 	{
 		"site" : "PVT KLC House",
 		"tree_id" : "001",
+		"cam_org" : "PVT KLC",
 		"hub" : "Bridgton",
 		"date_planted_or_observed(wild)" : "2025-05-30",
 		"planted_by" : "Kim Colson",
@@ -7843,6 +8123,7 @@
 	{
 		"site" : "PVT KLC House",
 		"tree_id" : "002",
+		"cam_org" : "PVT KLC",
 		"hub" : "Bridgton",
 		"date_planted_or_observed(wild)" : "2025-05-30",
 		"planted_by" : "Kim Colson",
@@ -7871,6 +8152,7 @@
 	{
 		"site" : "PVT KLC House",
 		"tree_id" : "003",
+		"cam_org" : "PVT KLC",
 		"hub" : "Bridgton",
 		"date_planted_or_observed(wild)" : "2025-05-30",
 		"planted_by" : "Kim Colson",
@@ -7899,6 +8181,7 @@
 	{
 		"site" : "PVT KLC House",
 		"tree_id" : "004",
+		"cam_org" : "PVT KLC",
 		"hub" : "Bridgton",
 		"date_planted_or_observed(wild)" : "2025-05-30",
 		"planted_by" : "Kim Colson",
@@ -7927,6 +8210,7 @@
 	{
 		"site" : "PVT KLC House",
 		"tree_id" : "005",
+		"cam_org" : "PVT KLC",
 		"hub" : "Bridgton",
 		"date_planted_or_observed(wild)" : "2025-05-30",
 		"planted_by" : "Kim Colson",
@@ -7955,6 +8239,7 @@
 	{
 		"site" : "PVT KLC House",
 		"tree_id" : "006",
+		"cam_org" : "PVT KLC",
 		"hub" : "Bridgton",
 		"date_planted_or_observed(wild)" : "2025-05-30",
 		"planted_by" : "Kim Colson",
@@ -7983,6 +8268,7 @@
 	{
 		"site" : "PVT KLC House",
 		"tree_id" : "007",
+		"cam_org" : "PVT KLC",
 		"hub" : "Bridgton",
 		"date_planted_or_observed(wild)" : "2025-05-30",
 		"planted_by" : "Kim Colson",
@@ -8011,6 +8297,7 @@
 	{
 		"site" : "PVT KLC House",
 		"tree_id" : "008",
+		"cam_org" : "PVT KLC",
 		"hub" : "Bridgton",
 		"date_planted_or_observed(wild)" : "2025-05-30",
 		"planted_by" : "Kim Colson",
@@ -8039,6 +8326,7 @@
 	{
 		"site" : "PVT KLC House",
 		"tree_id" : "009",
+		"cam_org" : "PVT KLC",
 		"hub" : "Bridgton",
 		"date_planted_or_observed(wild)" : "2025-05-30",
 		"planted_by" : "Kim Colson",
@@ -8067,6 +8355,7 @@
 	{
 		"site" : "PVT KLC House",
 		"tree_id" : "010",
+		"cam_org" : "PVT KLC",
 		"hub" : "Bridgton",
 		"date_planted_or_observed(wild)" : "2026-06-26",
 		"planted_by" : "Kim Colson",
@@ -8095,6 +8384,7 @@
 	{
 		"site" : "PVT KLC House",
 		"tree_id" : "011",
+		"cam_org" : "PVT KLC",
 		"hub" : "Bridgton",
 		"date_planted_or_observed(wild)" : "2026-06-26",
 		"planted_by" : "Kim Colson",
@@ -8123,6 +8413,7 @@
 	{
 		"site" : "PVT KLC House",
 		"tree_id" : "012",
+		"cam_org" : "PVT KLC",
 		"hub" : "Bridgton",
 		"date_planted_or_observed(wild)" : "2026-06-26",
 		"planted_by" : "Kim Colson",
@@ -8151,6 +8442,7 @@
 	{
 		"site" : "PVT KLC House",
 		"tree_id" : "013",
+		"cam_org" : "PVT KLC",
 		"hub" : "Bridgton",
 		"date_planted_or_observed(wild)" : "2026-06-26",
 		"planted_by" : "Kim Colson",
@@ -8179,6 +8471,7 @@
 	{
 		"site" : "PVT RWB Parkland",
 		"tree_id" : "001",
+		"cam_org" : "PVT RWB",
 		"hub" : "Bridgton",
 		"date_planted_or_observed(wild)" : "2023-11-01",
 		"planted_by" : "Rebecca Buyers",
@@ -8207,6 +8500,7 @@
 	{
 		"site" : "PVT RWB Parkland",
 		"tree_id" : "002",
+		"cam_org" : "PVT RWB",
 		"hub" : "Bridgton",
 		"date_planted_or_observed(wild)" : "2023-11-01",
 		"planted_by" : "Rebecca Buyers",
@@ -8235,6 +8529,7 @@
 	{
 		"site" : "PVT RWB Parkland",
 		"tree_id" : "003",
+		"cam_org" : "PVT RWB",
 		"hub" : "Bridgton",
 		"date_planted_or_observed(wild)" : "2023-11-01",
 		"planted_by" : "Rebecca Buyers",
@@ -8263,6 +8558,7 @@
 	{
 		"site" : "PVT RWB Parkland",
 		"tree_id" : "004",
+		"cam_org" : "PVT RWB",
 		"hub" : "Bridgton",
 		"date_planted_or_observed(wild)" : "2023-11-01",
 		"planted_by" : "Rebecca Buyers",
@@ -8291,6 +8587,7 @@
 	{
 		"site" : "PVT RWB Parkland",
 		"tree_id" : "005",
+		"cam_org" : "PVT RWB",
 		"hub" : "Bridgton",
 		"date_planted_or_observed(wild)" : "2023-11-01",
 		"planted_by" : "Rebecca Buyers",
@@ -8319,6 +8616,7 @@
 	{
 		"site" : "PVT RWB Parkland",
 		"tree_id" : "006",
+		"cam_org" : "PVT RWB",
 		"hub" : "Bridgton",
 		"date_planted_or_observed(wild)" : "2023-11-01",
 		"planted_by" : "Rebecca Buyers",
@@ -8347,6 +8645,7 @@
 	{
 		"site" : "Shepard’s Farm Preserve",
 		"tree_id" : "001",
+		"cam_org" : "WFLT",
 		"hub" : "Bethel",
 		"date_planted_or_observed(wild)" : "2026-05-20",
 		"planted_by" : "Es Sweeney",
@@ -8375,6 +8674,7 @@
 	{
 		"site" : "Shepard’s Farm Preserve",
 		"tree_id" : "002",
+		"cam_org" : "WFLT",
 		"hub" : "Bethel",
 		"date_planted_or_observed(wild)" : "2026-05-20",
 		"planted_by" : "Es Sweeney",
@@ -8403,6 +8703,7 @@
 	{
 		"site" : "Shepard’s Farm Preserve",
 		"tree_id" : "003",
+		"cam_org" : "WFLT",
 		"hub" : "Bethel",
 		"date_planted_or_observed(wild)" : "2026-05-20",
 		"planted_by" : "Es Sweeney",
@@ -8431,6 +8732,7 @@
 	{
 		"site" : "SLSP Boat Ramp",
 		"tree_id" : "013",
+		"cam_org" : "SLSP",
 		"hub" : "Bridgton",
 		"date_planted_or_observed(wild)" : "2025-05-31",
 		"planted_by" : "Kim Colson",
@@ -8459,6 +8761,7 @@
 	{
 		"site" : "SLSP Boat Ramp",
 		"tree_id" : "014",
+		"cam_org" : "SLSP",
 		"hub" : "Bridgton",
 		"date_planted_or_observed(wild)" : "2025-05-31",
 		"planted_by" : "Kim Colson",
@@ -8487,6 +8790,7 @@
 	{
 		"site" : "SLSP Boat Ramp",
 		"tree_id" : "018",
+		"cam_org" : "SLSP",
 		"hub" : "Bridgton",
 		"date_planted_or_observed(wild)" : "2025-05-31",
 		"planted_by" : "Kim Colson",
@@ -8515,6 +8819,7 @@
 	{
 		"site" : "SLSP Boat Ramp",
 		"tree_id" : "020",
+		"cam_org" : "SLSP",
 		"hub" : "Bridgton",
 		"date_planted_or_observed(wild)" : "2025-05-31",
 		"planted_by" : "Kim Colson",
@@ -8543,6 +8848,7 @@
 	{
 		"site" : "SLSP New Gate",
 		"tree_id" : "001",
+		"cam_org" : "SLSP",
 		"hub" : "Bridgton",
 		"date_planted_or_observed(wild)" : "2025-05-31",
 		"planted_by" : "Kim Colson",
@@ -8571,6 +8877,7 @@
 	{
 		"site" : "SLSP New Gate",
 		"tree_id" : "002",
+		"cam_org" : "SLSP",
 		"hub" : "Bridgton",
 		"date_planted_or_observed(wild)" : "2025-05-31",
 		"planted_by" : "Kim Colson",
@@ -8599,6 +8906,7 @@
 	{
 		"site" : "SLSP New Gate",
 		"tree_id" : "003",
+		"cam_org" : "SLSP",
 		"hub" : "Bridgton",
 		"date_planted_or_observed(wild)" : "2025-05-31",
 		"planted_by" : "Kim Colson",
@@ -8627,6 +8935,7 @@
 	{
 		"site" : "SLSP New Gate",
 		"tree_id" : "004",
+		"cam_org" : "SLSP",
 		"hub" : "Bridgton",
 		"date_planted_or_observed(wild)" : "2025-05-31",
 		"planted_by" : "Kim Colson",
@@ -8655,6 +8964,7 @@
 	{
 		"site" : "SLSP New Gate",
 		"tree_id" : "005",
+		"cam_org" : "SLSP",
 		"hub" : "Bridgton",
 		"date_planted_or_observed(wild)" : "2025-05-31",
 		"planted_by" : "Kim Colson",
@@ -8683,6 +8993,7 @@
 	{
 		"site" : "SLSP New Gate",
 		"tree_id" : "006",
+		"cam_org" : "SLSP",
 		"hub" : "Bridgton",
 		"date_planted_or_observed(wild)" : "2025-05-31",
 		"planted_by" : "Kim Colson",
@@ -8711,6 +9022,7 @@
 	{
 		"site" : "SLSP New Gate",
 		"tree_id" : "007",
+		"cam_org" : "SLSP",
 		"hub" : "Bridgton",
 		"date_planted_or_observed(wild)" : "2025-05-31",
 		"planted_by" : "Kim Colson",
@@ -8739,6 +9051,7 @@
 	{
 		"site" : "SLSP New Gate",
 		"tree_id" : "008",
+		"cam_org" : "SLSP",
 		"hub" : "Bridgton",
 		"date_planted_or_observed(wild)" : "2025-05-31",
 		"planted_by" : "Kim Colson",
@@ -8767,6 +9080,7 @@
 	{
 		"site" : "SLSP New Gate",
 		"tree_id" : "009",
+		"cam_org" : "SLSP",
 		"hub" : "Bridgton",
 		"date_planted_or_observed(wild)" : "2025-05-31",
 		"planted_by" : "Kim Colson",
@@ -8795,6 +9109,7 @@
 	{
 		"site" : "SLSP New Gate",
 		"tree_id" : "010",
+		"cam_org" : "SLSP",
 		"hub" : "Bridgton",
 		"date_planted_or_observed(wild)" : "2025-05-31",
 		"planted_by" : "Kim Colson",
@@ -8823,6 +9138,7 @@
 	{
 		"site" : "SLSP New Gate",
 		"tree_id" : "011",
+		"cam_org" : "SLSP",
 		"hub" : "Bridgton",
 		"date_planted_or_observed(wild)" : "2025-05-31",
 		"planted_by" : "Kim Colson",
@@ -8851,6 +9167,7 @@
 	{
 		"site" : "SLSP New Gate",
 		"tree_id" : "012",
+		"cam_org" : "SLSP",
 		"hub" : "Bridgton",
 		"date_planted_or_observed(wild)" : "2025-05-31",
 		"planted_by" : "Kim Colson",
@@ -8879,6 +9196,7 @@
 	{
 		"site" : "SLSP New Gate",
 		"tree_id" : "015",
+		"cam_org" : "SLSP",
 		"hub" : "Bridgton",
 		"date_planted_or_observed(wild)" : "2025-05-31",
 		"planted_by" : "Kim Colson",
@@ -8907,6 +9225,7 @@
 	{
 		"site" : "SLSP New Gate",
 		"tree_id" : "016",
+		"cam_org" : "SLSP",
 		"hub" : "Bridgton",
 		"date_planted_or_observed(wild)" : "2025-05-31",
 		"planted_by" : "Kim Colson",
@@ -8935,6 +9254,7 @@
 	{
 		"site" : "SLSP New Gate",
 		"tree_id" : "017",
+		"cam_org" : "SLSP",
 		"hub" : "Bridgton",
 		"date_planted_or_observed(wild)" : "2025-05-31",
 		"planted_by" : "Kim Colson",
@@ -8963,6 +9283,7 @@
 	{
 		"site" : "SLSP New Gate",
 		"tree_id" : "019",
+		"cam_org" : "SLSP",
 		"hub" : "Bridgton",
 		"date_planted_or_observed(wild)" : "2025-05-31",
 		"planted_by" : "Kim Colson",
@@ -8991,6 +9312,7 @@
 	{
 		"site" : "Tidal Falls Preserve",
 		"tree_id" : "001",
+		"cam_org" : "FBCLT",
 		"hub" : "Ellsworth",
 		"date_planted_or_observed(wild)" : "2024-06-14",
 		"planted_by" : "Mark McCollough",
@@ -9019,6 +9341,7 @@
 	{
 		"site" : "Tidal Falls Preserve",
 		"tree_id" : "002",
+		"cam_org" : "FBCLT",
 		"hub" : "Ellsworth",
 		"date_planted_or_observed(wild)" : "2024-06-14",
 		"planted_by" : "Mark McCollough",
@@ -9047,6 +9370,7 @@
 	{
 		"site" : "Tidal Falls Preserve",
 		"tree_id" : "003",
+		"cam_org" : "FBCLT",
 		"hub" : "Ellsworth",
 		"date_planted_or_observed(wild)" : "2024-06-14",
 		"planted_by" : "Mark McCollough",
@@ -9075,6 +9399,7 @@
 	{
 		"site" : "Tidal Falls Preserve",
 		"tree_id" : "004",
+		"cam_org" : "FBCLT",
 		"hub" : "Ellsworth",
 		"date_planted_or_observed(wild)" : "2024-06-14",
 		"planted_by" : "Mark McCollough",
@@ -9103,6 +9428,7 @@
 	{
 		"site" : "Tidal Falls Preserve",
 		"tree_id" : "005",
+		"cam_org" : "FBCLT",
 		"hub" : "Ellsworth",
 		"date_planted_or_observed(wild)" : "2024-06-14",
 		"planted_by" : "Mark McCollough",
@@ -9131,6 +9457,7 @@
 	{
 		"site" : "Tidal Falls Preserve",
 		"tree_id" : "006",
+		"cam_org" : "FBCLT",
 		"hub" : "Ellsworth",
 		"date_planted_or_observed(wild)" : "2024-06-14",
 		"planted_by" : "Mark McCollough",
@@ -9159,6 +9486,7 @@
 	{
 		"site" : "Tidal Falls Preserve",
 		"tree_id" : "007",
+		"cam_org" : "FBCLT",
 		"hub" : "Ellsworth",
 		"date_planted_or_observed(wild)" : "2026-06-26",
 		"planted_by" : "Mark McCollough",
@@ -9187,6 +9515,7 @@
 	{
 		"site" : "Tidal Falls Preserve",
 		"tree_id" : "008",
+		"cam_org" : "FBCLT",
 		"hub" : "Ellsworth",
 		"date_planted_or_observed(wild)" : "2026-06-26",
 		"planted_by" : "Mark McCollough",
@@ -9215,6 +9544,7 @@
 	{
 		"site" : "Tidal Waters Preserve",
 		"tree_id" : "008",
+		"cam_org" : "GWRLT",
 		"hub" : "Sanford",
 		"date_planted_or_observed(wild)" : "2025-06-14",
 		"planted_by" : "K. Lea Sewell",
@@ -9243,6 +9573,7 @@
 	{
 		"site" : "Tidal Waters Preserve",
 		"tree_id" : "009",
+		"cam_org" : "GWRLT",
 		"hub" : "Sanford",
 		"date_planted_or_observed(wild)" : "2025-06-13",
 		"planted_by" : "K. Lea Sewell",
@@ -9271,6 +9602,7 @@
 	{
 		"site" : "Tidal Waters Preserve",
 		"tree_id" : "010",
+		"cam_org" : "GWRLT",
 		"hub" : "Sanford",
 		"date_planted_or_observed(wild)" : "2025-06-14",
 		"planted_by" : "K. Lea Sewell",
@@ -9299,6 +9631,7 @@
 	{
 		"site" : "Virginia Morin Field",
 		"tree_id" : "001",
+		"cam_org" : "SSMWLT",
 		"hub" : "Sanford",
 		"date_planted_or_observed(wild)" : "2024-06-09",
 		"planted_by" : "K. Lea Sewell",
@@ -9327,6 +9660,7 @@
 	{
 		"site" : "Virginia Morin Field",
 		"tree_id" : "002",
+		"cam_org" : "SSMWLT",
 		"hub" : "Sanford",
 		"date_planted_or_observed(wild)" : "2024-06-09",
 		"planted_by" : "K. Lea Sewell",
@@ -9355,6 +9689,7 @@
 	{
 		"site" : "Virginia Morin Field",
 		"tree_id" : "003",
+		"cam_org" : "SSMWLT",
 		"hub" : "Sanford",
 		"date_planted_or_observed(wild)" : "2024-06-09",
 		"planted_by" : "K. Lea Sewell",
@@ -9383,6 +9718,7 @@
 	{
 		"site" : "Virginia Morin Field",
 		"tree_id" : "004",
+		"cam_org" : "SSMWLT",
 		"hub" : "Sanford",
 		"date_planted_or_observed(wild)" : "2024-06-09",
 		"planted_by" : "K. Lea Sewell",
@@ -9411,6 +9747,7 @@
 	{
 		"site" : "Virginia Morin Field",
 		"tree_id" : "005",
+		"cam_org" : "SSMWLT",
 		"hub" : "Sanford",
 		"date_planted_or_observed(wild)" : "2024-06-09",
 		"planted_by" : "K. Lea Sewell",
@@ -9439,6 +9776,7 @@
 	{
 		"site" : "Virginia Morin Field",
 		"tree_id" : "006",
+		"cam_org" : "SSMWLT",
 		"hub" : "Sanford",
 		"date_planted_or_observed(wild)" : "2024-06-09",
 		"planted_by" : "K. Lea Sewell",
@@ -9467,6 +9805,7 @@
 	{
 		"site" : "Virginia Morin Field",
 		"tree_id" : "011",
+		"cam_org" : "SSMWLT",
 		"hub" : "Sanford",
 		"date_planted_or_observed(wild)" : "2025-05-17",
 		"planted_by" : "K. Lea Sewell",
@@ -9495,6 +9834,7 @@
 	{
 		"site" : "Virginia Morin Field",
 		"tree_id" : "012",
+		"cam_org" : "SSMWLT",
 		"hub" : "Sanford",
 		"date_planted_or_observed(wild)" : "2025-05-17",
 		"planted_by" : "K. Lea Sewell",
@@ -9523,6 +9863,7 @@
 	{
 		"site" : "Virginia Morin Field",
 		"tree_id" : "013",
+		"cam_org" : "SSMWLT",
 		"hub" : "Sanford",
 		"date_planted_or_observed(wild)" : "2025-05-17",
 		"planted_by" : "K. Lea Sewell",
@@ -9551,6 +9892,7 @@
 	{
 		"site" : "West of Main Building",
 		"tree_id" : "001",
+		"cam_org" : "MAFP",
 		"hub" : "Orono",
 		"date_planted_or_observed(wild)" : "2024-05-17",
 		"planted_by" : "Mark McCollough",
@@ -9579,6 +9921,7 @@
 	{
 		"site" : "West of Main Building",
 		"tree_id" : "002",
+		"cam_org" : "MAFP",
 		"hub" : "Orono",
 		"date_planted_or_observed(wild)" : "2024-05-17",
 		"planted_by" : "Mark McCollough",
@@ -9607,6 +9950,7 @@
 	{
 		"site" : "West of Main Building",
 		"tree_id" : "003",
+		"cam_org" : "MAFP",
 		"hub" : "Orono",
 		"date_planted_or_observed(wild)" : "2024-05-17",
 		"planted_by" : "Mark McCollough",
@@ -9635,6 +9979,7 @@
 	{
 		"site" : "West of Main Building",
 		"tree_id" : "012",
+		"cam_org" : "MAFP",
 		"hub" : "Orono",
 		"date_planted_or_observed(wild)" : "2026-05-29",
 		"planted_by" : "Mark McCollough",
@@ -9663,6 +10008,7 @@
 	{
 		"site" : "West of Main Building",
 		"tree_id" : "013",
+		"cam_org" : "MAFP",
 		"hub" : "Orono",
 		"date_planted_or_observed(wild)" : "2026-05-29",
 		"planted_by" : "Mark McCollough",
@@ -9691,6 +10037,7 @@
 	{
 		"site" : "West of Main Building",
 		"tree_id" : "014",
+		"cam_org" : "MAFP",
 		"hub" : "Orono",
 		"date_planted_or_observed(wild)" : "2026-05-29",
 		"planted_by" : "Mark McCollough",
@@ -9719,6 +10066,7 @@
 	{
 		"site" : "Wild tree KNOWN to TACF",
 		"tree_id" : "ME-BR004",
+		"cam_org" : "WildTACF",
 		"hub" : null,
 		"date_planted_or_observed(wild)" : "2026-04-26",
 		"planted_by" : "Kim Colson",
@@ -9747,6 +10095,7 @@
 	{
 		"site" : "Wild tree KNOWN to TACF",
 		"tree_id" : "ME-FP001",
+		"cam_org" : "WildTACF",
 		"hub" : null,
 		"date_planted_or_observed(wild)" : "2026-06-07",
 		"planted_by" : "Mark McCollough",
@@ -9775,6 +10124,7 @@
 	{
 		"site" : "Wild tree KNOWN to TACF",
 		"tree_id" : "ME-FP002",
+		"cam_org" : "WildTACF",
 		"hub" : null,
 		"date_planted_or_observed(wild)" : "2026-06-07",
 		"planted_by" : "Mark McCollough",
@@ -9803,6 +10153,7 @@
 	{
 		"site" : "Wild tree KNOWN to TACF",
 		"tree_id" : "ME-HA111",
+		"cam_org" : "WildTACF",
 		"hub" : null,
 		"date_planted_or_observed(wild)" : "2026-06-15",
 		"planted_by" : "Mark McCollough",
@@ -9831,6 +10182,7 @@
 	{
 		"site" : "Wild tree KNOWN to TACF",
 		"tree_id" : "ME-HA222",
+		"cam_org" : "WildTACF",
 		"hub" : null,
 		"date_planted_or_observed(wild)" : "2026-06-15",
 		"planted_by" : "Mark McCollough",
@@ -9859,6 +10211,7 @@
 	{
 		"site" : "Wild tree KNOWN to TACF",
 		"tree_id" : "ME-RD001",
+		"cam_org" : "WildTACF",
 		"hub" : null,
 		"date_planted_or_observed(wild)" : "2026-06-16",
 		"planted_by" : "Mark McCollough",
@@ -9887,6 +10240,7 @@
 	{
 		"site" : "Wild tree UNKNOWN to TACF",
 		"tree_id" : "-70.716516 43.997666",
+		"cam_org" : "WildCAM",
 		"hub" : null,
 		"date_planted_or_observed(wild)" : "2025-10-03",
 		"planted_by" : "Kim Colson",
@@ -9915,6 +10269,7 @@
 	{
 		"site" : "Wolfe's Neck Center for Ag & Env",
 		"tree_id" : "001",
+		"cam_org" : "WNC",
 		"hub" : "Freeport",
 		"date_planted_or_observed(wild)" : "2025-07-02",
 		"planted_by" : "Eva Butler",
@@ -9943,6 +10298,7 @@
 	{
 		"site" : "Wolfe's Neck Center for Ag & Env",
 		"tree_id" : "002",
+		"cam_org" : "WNC",
 		"hub" : "Freeport",
 		"date_planted_or_observed(wild)" : "2025-07-02",
 		"planted_by" : "Eva Butler",
@@ -9971,6 +10327,7 @@
 	{
 		"site" : "Wolfe's Neck Center for Ag & Env",
 		"tree_id" : "003",
+		"cam_org" : "WNC",
 		"hub" : "Freeport",
 		"date_planted_or_observed(wild)" : "2025-07-02",
 		"planted_by" : "Eva Butler",
@@ -9999,6 +10356,7 @@
 	{
 		"site" : "Wolfe's Neck Center for Ag & Env",
 		"tree_id" : "004",
+		"cam_org" : "WNC",
 		"hub" : "Freeport",
 		"date_planted_or_observed(wild)" : "2025-07-02",
 		"planted_by" : "Eva Butler",
@@ -10027,6 +10385,7 @@
 	{
 		"site" : "Wolfe's Neck Center for Ag & Env",
 		"tree_id" : "005",
+		"cam_org" : "WNC",
 		"hub" : "Freeport",
 		"date_planted_or_observed(wild)" : "2025-07-02",
 		"planted_by" : "Eva Butler",
