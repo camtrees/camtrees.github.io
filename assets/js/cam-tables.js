@@ -43,7 +43,7 @@
     try { config = JSON.parse(configElement.textContent); }
     catch (_) { root.textContent = 'This table configuration could not be loaded.'; return; }
 
-    const { columns, pageSize = 25 } = config;
+    const { columns, pageSize = 100 } = config;
     const table = root.querySelector('[data-cam-table-table]');
     const head = table.tHead; const body = table.tBodies[0];
     const search = root.querySelector('[data-cam-table-search]');
