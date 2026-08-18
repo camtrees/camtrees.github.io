@@ -1,0 +1,57 @@
+<section class="cam-table" data-cam-table data-source="{{ '/data/cam_trees.json' | relative_url }}">
+  <div class="cam-table__controls">
+    <label>
+      Search all trees
+      <input type="search" autocomplete="off" data-cam-table-search>
+    </label>
+    <p aria-live="polite" data-cam-table-summary></p>
+  </div>
+
+  <div class="cam-table__scroll" tabindex="0">
+    <table data-cam-table-table>
+      <caption class="sr-only">CAMTREES public data</caption>
+      <thead></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <nav class="cam-table__pagination" aria-label="CAMTREES table pages" data-cam-table-pagination></nav>
+
+  <script type="application/json" data-cam-table-config>
+    {
+      "pageSize": 25,
+      "columns": [
+        {"key":"site","label":"Site","type":"text"},
+        {"key":"tree_id","label":"Tree ID","type":"text"},
+        {"key":"cam_org","label":"CAM Organization","type":"text"},
+        {"key":"hub","label":"Hub","type":"text"},
+        {"key":"date_planted_or_observed(wild)","label":"Date Planted / Observed","type":"date"},
+        {"key":"planted_by","label":"Planted By","type":"text"},
+        {"key":"primary_caretaker","label":"Primary Caretaker","type":"text"},
+        {"key":"secondary_caretaker","label":"Secondary Caretaker","type":"text"},
+        {"key":"latest_health","label":"Latest Health","type":"text"},
+        {"key":"latest_health_date","label":"Latest Health Date","type":"date"},
+        {"key":"latest_height_in_inches","label":"Latest Height","type":"number"},
+        {"key":"latest_height_date","label":"Latest Height Date","type":"date"},
+        {"key":"latest_water_date","label":"Latest Water Date","type":"date"},
+        {"key":"elevation_in_feet","label":"Elevation","type":"number"},
+        {"key":"access_path","label":"Access Path","type":"text"},
+        {"key":"access_level","label":"Access Level","type":"text"},
+        {"key":"access_method","label":"Access Method","type":"text"},
+        {"key":"access_note","label":"Access Note","type":"text"},
+        {"key":"form","label":"Form","type":"text"},
+        {"key":"planting_method","label":"Planting Method","type":"text"},
+        {"key":"wire_fence","label":"Wire Fence","type":"boolean"},
+        {"key":"mother_tree","label":"Mother Tree","type":"text"},
+        {"key":"mother_tree_other","label":"Mother Tree (Other)","type":"text"},
+        {"key":"father_tree","label":"Father Tree","type":"text"},
+        {"key":"father_tree_other","label":"Father Tree (Other)","type":"text"},
+        {"key":"parent_tree_note","label":"Parent Tree Note","type":"text"},
+        {"key":"note","label":"Note","type":"text"}
+      ]
+    }
+  </script>
+</section>
+
+<link rel="stylesheet" href="{{ '/assets/css/cam-tables.css' | relative_url }}">
+<script defer src="{{ '/assets/js/cam-tables.js' | relative_url }}"></script>

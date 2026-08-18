@@ -7,7 +7,7 @@ nav_order: 98
 <img src="../assets/images/website/changelog.png" alt="CAMTREE Volunteer consulting a day planner showing the ChangeLog" height="512" width="828">
 
 # {{ page.title }}
-_Version: August 11 edit # 3_
+_Version: August 18 edit # 1_
 
 <!-- This content will not appear in the rendered Markdown 
 <details markdown="1">
@@ -83,6 +83,7 @@ Each entry is grouped by month. Within each month, changes are organized by area
 - Created cam_tree_latest_height view
 
 ### Website Content
+- 1st attempt to provide an SQL View as an HTML table (with search and filter options)
 - Created content for the 'PostgreSQL' page under the Info for Database Admins hierarchy
 - Created content for the GitHub page under the Info for Database Admins hierarchy
 

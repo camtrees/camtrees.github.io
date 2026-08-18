@@ -1,0 +1,23 @@
+/* Small component-specific additions; typography and most table styling come from Just the Docs. */
+.cam-table__controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  gap: 1rem 2rem;
+  margin: 1.5rem 0 1rem;
+}
+
+.cam-table__controls label { display: grid; gap: .25rem; font-weight: 600; }
+.cam-table__controls input { min-width: min(22rem, 80vw); }
+.cam-table__controls p { margin: 0; }
+.cam-table__scroll { overflow-x: auto; }
+.cam-table__scroll table { min-width: max-content; }
+.cam-table__scroll th { vertical-align: top; white-space: normal; }
+.cam-table__scroll th button { padding: 0; color: inherit; font: inherit; font-weight: 600; text-align: left; background: transparent; border: 0; cursor: pointer; }
+.cam-table__scroll th button::after { content: ' ↕'; font-weight: normal; }
+.cam-table__scroll th button[aria-sort="ascending"]::after { content: ' ↑'; }
+.cam-table__scroll th button[aria-sort="descending"]::after { content: ' ↓'; }
+.cam-table__scroll th input, .cam-table__scroll th select { box-sizing: border-box; width: 100%; min-width: 9rem; margin-top: .5rem; font: inherit; font-weight: normal; }
+.cam-table__empty { text-align: center; }
+.cam-table__pagination { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem; margin: 1rem 0; }
+.cam-table__pagination p { margin: 0 .25rem; }
