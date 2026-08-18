@@ -2,7 +2,6 @@
 title: CAM Trees
 layout: default
 parent: Database Tables
-permalink: /cam-trees/
 ---
 
 # {{ page.title }}
