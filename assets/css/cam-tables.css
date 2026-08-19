@@ -19,6 +19,7 @@
   border-collapse: separate;
   border-spacing: 0;
 }
+.cam-table__scroll { --cam-table-first-column-width: 12rem; }
 .cam-table__scroll th {
   position: sticky;
   top: 0;
@@ -31,10 +32,23 @@
 .cam-table__scroll td:first-child {
   position: sticky;
   left: 0;
+  width: var(--cam-table-first-column-width);
+  min-width: var(--cam-table-first-column-width);
+  max-width: var(--cam-table-first-column-width);
+  overflow-wrap: anywhere;
   background-color: #e8f5e9;
 }
 .cam-table__scroll td:first-child { z-index: 1; }
 .cam-table__scroll th:first-child { z-index: 3; }
+.cam-table__scroll th:nth-child(2),
+.cam-table__scroll td:nth-child(2) {
+  position: sticky;
+  left: var(--cam-table-first-column-width);
+  background-color: #e8f5e9;
+  box-shadow: 1px 0 0 #c8ddc9;
+}
+.cam-table__scroll td:nth-child(2) { z-index: 1; }
+.cam-table__scroll th:nth-child(2) { z-index: 2; }
 .cam-table__scroll th button { padding: 0; color: inherit; font: inherit; font-weight: 600; text-align: left; background: transparent; border: 0; cursor: pointer; }
 .cam-table__scroll th button::after { content: ' ↕'; font-weight: normal; }
 .cam-table__scroll th button[aria-sort="ascending"]::after { content: ' ↑'; }
