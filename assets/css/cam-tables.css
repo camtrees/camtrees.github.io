@@ -64,7 +64,7 @@
 .cam-table__scroll th button::after { content: ' ↕'; font-weight: normal; }
 .cam-table__scroll th button[aria-sort="ascending"]::after { content: ' ↑'; }
 .cam-table__scroll th button[aria-sort="descending"]::after { content: ' ↓'; }
-.cam-table__scroll th input, .cam-table__scroll th select { box-sizing: border-box; width: 100%; min-width: 9rem; margin-top: .5rem; font: inherit; font-weight: normal; }
+.cam-table__scroll th input, .cam-table__scroll th select { box-sizing: border-box; width: 100%; min-width: 5rem; margin-top: .5rem; font: inherit; font-weight: normal; }
 .cam-table__empty { text-align: center; }
 .cam-table__pagination { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem; margin: 1rem 0; }
 .cam-table__pagination p { margin: 0 .25rem; }
