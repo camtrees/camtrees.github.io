@@ -7,7 +7,7 @@ nav_order: 98
 <img src="../assets/images/website/changelog.png" alt="CAMTREE Volunteer consulting a day planner showing the ChangeLog" height="512" width="828">
 
 # {{ page.title }}
-_Version: August 18 edit # 6_
+_Version: August 19 edit # 1_
 
 <!-- This content will not appear in the rendered Markdown 
 <details markdown="1">
@@ -52,6 +52,7 @@ Each entry is grouped by month. Within each month, changes are organized by area
 <summary markdown="span"><strong>2026 August</strong></summary>
 
 ### Website Content
+- Added CAM Sites to the Database Table hierarchy
 - Created a prototype CAM Trees SQL Table under the 'Database Tables' website section
 - Created new 'Database Tables' section
 - Added SQL Tables, Views, and Functions to the PostGreSQL page
