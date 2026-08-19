@@ -55,6 +55,11 @@
   position: relative;
   z-index: 1;
 }
+.cam-table__scroll tbody tr:nth-child(odd) td { background-color: #ffffff; }
+.cam-table__scroll tbody tr:nth-child(even) td { background-color: #e8f5e9; }
+/* Sticky cells need the same stripe as the rest of their row. */
+.cam-table__scroll tbody tr:nth-child(odd) td:nth-child(-n + 2) { background-color: #ffffff; }
+.cam-table__scroll tbody tr:nth-child(even) td:nth-child(-n + 2) { background-color: #e8f5e9; }
 .cam-table__scroll th button { padding: 0; color: inherit; font: inherit; font-weight: 600; text-align: left; background: transparent; border: 0; cursor: pointer; }
 .cam-table__scroll th button::after { content: ' ↕'; font-weight: normal; }
 .cam-table__scroll th button[aria-sort="ascending"]::after { content: ' ↑'; }
