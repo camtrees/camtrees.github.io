@@ -17,6 +17,6 @@ Use the **Filter ...** boxes beneath a column name to narrow results.
 
 Click a **Column Heading** to sort it in ascending order; click it again to sort in descending order.
 
-*Results are shown 100 records at a time.*
+*Results are shown 1000 records at a time.*
 
 {% include cam_trees_table.html %}
