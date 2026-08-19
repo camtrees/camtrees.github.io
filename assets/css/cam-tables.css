@@ -12,7 +12,22 @@
 .cam-table__controls p { margin: 0; }
 .cam-table__scroll { overflow-x: auto; }
 .cam-table__scroll table { min-width: max-content; }
-.cam-table__scroll th { vertical-align: top; white-space: normal; }
+.cam-table__scroll th {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  vertical-align: top;
+  white-space: normal;
+  background-color: #e8f5e9;
+}
+.cam-table__scroll th:first-child,
+.cam-table__scroll td:first-child {
+  position: sticky;
+  left: 0;
+  background-color: #e8f5e9;
+}
+.cam-table__scroll td:first-child { z-index: 1; }
+.cam-table__scroll th:first-child { z-index: 3; }
 .cam-table__scroll th button { padding: 0; color: inherit; font: inherit; font-weight: 600; text-align: left; background: transparent; border: 0; cursor: pointer; }
 .cam-table__scroll th button::after { content: ' ↕'; font-weight: normal; }
 .cam-table__scroll th button[aria-sort="ascending"]::after { content: ' ↑'; }
