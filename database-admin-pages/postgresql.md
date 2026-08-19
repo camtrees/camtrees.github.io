@@ -225,9 +225,10 @@ These tables are also Lookup Tables
 
 
 <details markdown="1">
-<summary markdown="span"><strong>'Public' Views - Sanitized (no email addresses) Views</strong></summary>
+<summary markdown="span"><strong>'Public' Views - Sanitized (no email addresses) and reduced 'cam_' Views</strong></summary>
 
-- **public_trees** - The master list of all tree
+- **public_sites** - The public cam_trees view
+- **public_trees** - The public cam_sites view
 
 </details>
 
