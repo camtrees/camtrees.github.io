@@ -225,6 +225,14 @@ These tables are also Lookup Tables
 
 
 <details markdown="1">
+<summary markdown="span"><strong>'Public' Views - Sanitized (no email addresses) Views</strong></summary>
+
+- **public_trees** - The master list of all tree
+
+</details>
+
+
+<details markdown="1">
 <summary markdown="span"><strong>'Export' Views - For exporting data to EpiCollect or Google Maps</strong></summary>
 
 - **data_export_epicollect_tree_parent_type** - Export tree_parent_type as CSV file to load into EpiCollect CAM Tree Maintenance form
