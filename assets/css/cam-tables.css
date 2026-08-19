@@ -10,8 +10,15 @@
 .cam-table__controls label { display: grid; gap: .25rem; font-weight: 600; }
 .cam-table__controls input { min-width: min(22rem, 80vw); }
 .cam-table__controls p { margin: 0; }
-.cam-table__scroll { overflow-x: auto; }
-.cam-table__scroll table { min-width: max-content; }
+.cam-table__scroll {
+  max-height: 70vh;
+  overflow: auto;
+}
+.cam-table__scroll table {
+  min-width: max-content;
+  border-collapse: separate;
+  border-spacing: 0;
+}
 .cam-table__scroll th {
   position: sticky;
   top: 0;
