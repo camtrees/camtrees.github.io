@@ -49,8 +49,9 @@
     const search = root.querySelector('[data-cam-table-search]');
     const summary = root.querySelector('[data-cam-table-summary]');
     const pagination = root.querySelector('[data-cam-table-pagination]');
+    const printButton = root.querySelector('[data-cam-table-print]');
     const filters = new Map();
-    let rows = []; let currentPage = 1; let sortKey = columns[0].key; let sortDirection = 'asc';
+    let rows = []; let currentPage = 1; let sortKey = columns[0].key; let sortDirection = 'asc'; let printing = false;
 
     function filteredRows() {
       const globalTerm = normalise(search.value);
@@ -64,14 +65,18 @@
       });
     }
 
-    function render() {
+    function sortedRows() {
       const sorted = filteredRows();
       const sortColumn = columns.find((column) => column.key === sortKey);
-      sorted.sort((a, b) => (sortDirection === 'asc' ? 1 : -1) * compareRows(a, b, sortColumn));
+      return sorted.sort((a, b) => (sortDirection === 'asc' ? 1 : -1) * compareRows(a, b, sortColumn));
+    }
+
+    function render() {
+      const sorted = sortedRows();
       const pages = Math.max(1, Math.ceil(sorted.length / pageSize));
       currentPage = Math.min(currentPage, pages);
       const first = (currentPage - 1) * pageSize;
-      const shown = sorted.slice(first, first + pageSize);
+      const shown = printing ? sorted : sorted.slice(first, first + pageSize);
 
       body.replaceChildren();
       if (!shown.length) {
@@ -87,7 +92,7 @@
       summary.textContent = sorted.length ? `Showing ${first + 1}–${Math.min(first + pageSize, sorted.length)} of ${sorted.length} records` : '0 records';
       head.querySelectorAll('button[data-sort-key]').forEach((button) => button.setAttribute('aria-sort', button.dataset.sortKey === sortKey ? (sortDirection === 'asc' ? 'ascending' : 'descending') : 'none'));
       pagination.replaceChildren();
-      if (pages > 1) {
+      if (!printing && pages > 1) {
         const previous = document.createElement('button'); previous.type = 'button'; previous.textContent = 'Previous'; previous.disabled = currentPage === 1; previous.addEventListener('click', () => { currentPage -= 1; render(); });
         const label = document.createElement('p'); label.textContent = `Page ${currentPage} of ${pages}`;
         const next = document.createElement('button'); next.type = 'button'; next.textContent = 'Next'; next.disabled = currentPage === pages; next.addEventListener('click', () => { currentPage += 1; render(); });
@@ -104,6 +109,16 @@
       const filter = createFilter(column, refreshFromFirstPage); filters.set(column.key, filter); cell.append(button, filter); headerRow.append(cell);
     });
     head.append(headerRow); search.addEventListener('input', refreshFromFirstPage);
+    if (printButton) {
+      printButton.addEventListener('click', () => {
+        printing = true;
+        render();
+        requestAnimationFrame(() => window.print());
+      });
+      window.addEventListener('afterprint', () => {
+        if (printing) { printing = false; render(); }
+      });
+    }
 
     fetch(root.dataset.source, { credentials: 'same-origin' })
       .then((response) => response.ok ? response.json() : Promise.reject(new Error(`HTTP ${response.status}`)))
