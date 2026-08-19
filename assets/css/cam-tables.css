@@ -19,7 +19,7 @@
   border-collapse: separate;
   border-spacing: 0;
 }
-.cam-table__scroll { --cam-table-first-column-width: 12rem; }
+.cam-table__scroll { --cam-table-first-column-width: 24rem; }
 .cam-table__scroll th {
   position: sticky;
   top: 0;
