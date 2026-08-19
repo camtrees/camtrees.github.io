@@ -8,7 +8,7 @@ parent: Database Tables
 
 {: .warning }
 This SQL Table is a **PROTOTYPE**. Table data is not yet refreshed nightly; it's
-as it existed Wednesday, August 19th, 2026.
+a snapshot as of Monday, August 3rd, 2026.
 
 Use the **Search all trees** box to find trees across all fields.
 
