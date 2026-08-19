@@ -7,7 +7,7 @@ parent: Database Tables
 # {{ page.title }}
 
 {: .warning }
-This CAM Trees SQL Table is a **PROTOTYPE**. Table data is not yet refreshed nightly; it's
+This SQL Table is a **PROTOTYPE**. Table data is not yet refreshed nightly; it's
 as it existed Monday, August 3rd, 2026. The table width and columns shown are not as
 useful as they could be.
 
