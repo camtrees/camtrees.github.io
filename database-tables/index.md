@@ -9,8 +9,8 @@ nav_order: 7
 This website section contains various CAMTREES Database SQL Tables. 
 
 {: .note }
-The Database Tables are still in development. All SQL Tables are snapshots as of Monday,
-August 3rd.
+The Database Tables are still in development.<br>
+All SQL Tables are snapshots as of Monday, August 3rd.
 
 Next steps are:
 
