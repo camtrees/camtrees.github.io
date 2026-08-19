@@ -14,6 +14,7 @@ Next steps are:
 
 - Create an automated Python script to nightly refresh table data
 - Redesign the table to be more useful
+- Make more SQL Tables (Cam Orgs, Sites, Hubs) available
 
 {: .warning }
 For security, this website will never connect directly to the CAMTREES Database. Rather,
