@@ -1,6 +1,6 @@
 ---
 title: CAM Trees
-layout: default
+layout: minimal
 parent: Database Tables
 ---
 

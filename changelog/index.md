@@ -7,7 +7,7 @@ nav_order: 98
 <img src="../assets/images/website/changelog.png" alt="CAMTREE Volunteer consulting a day planner showing the ChangeLog" height="512" width="828">
 
 # {{ page.title }}
-_Version: August 18 edit # 5_
+_Version: August 18 edit # 6_
 
 <!-- This content will not appear in the rendered Markdown 
 <details markdown="1">
