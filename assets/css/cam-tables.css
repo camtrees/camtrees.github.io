@@ -72,9 +72,15 @@
 @media print {
   @page { size: landscape; margin: .4in; }
 
-  .cam-table__controls { margin: 0 0 .5rem; }
-  .cam-table__controls label,
-  [data-cam-table-print],
+  body * { visibility: hidden; }
+  .cam-table,
+  .cam-table * { visibility: visible; }
+  .cam-table {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+  }
+  .cam-table__controls,
   .cam-table__pagination,
   .cam-table__scroll th input,
   .cam-table__scroll th select { display: none !important; }
