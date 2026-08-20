@@ -227,8 +227,8 @@ These tables are also Lookup Tables
 <details markdown="1">
 <summary markdown="span"><strong>'Public' Views - Sanitized (no email addresses) and reduced 'cam_' Views</strong></summary>
 
-- **public_sites** - The public cam_trees view
-- **public_trees** - The public cam_sites view
+- **public_cam_sites** - The public cam_trees view
+- **public_cam_trees** - The public cam_sites view
 
 </details>
 
