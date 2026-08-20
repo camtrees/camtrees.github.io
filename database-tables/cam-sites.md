@@ -6,7 +6,7 @@ parent: Database Tables
 
 # {{ page.title }}
 
-*Test Version: 7*
+*Test Version: 8*
 
 {: .warning }
 This SQL Table is a **PROTOTYPE**. Table data is not yet refreshed nightly; it's

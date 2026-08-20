@@ -113,7 +113,9 @@
       printButton.addEventListener('click', () => {
         printing = true;
         render();
-        requestAnimationFrame(() => window.print());
+        // Keep this synchronous with the click: some browsers block print
+        // dialogs that are opened after an animation frame or timeout.
+        window.print();
       });
       window.addEventListener('afterprint', () => {
         if (printing) { printing = false; render(); }
