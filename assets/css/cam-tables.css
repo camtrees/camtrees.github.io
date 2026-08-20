@@ -89,6 +89,12 @@
     background: transparent !important;
     box-shadow: none !important;
   }
+  .cam-table__scroll th:first-child,
+  .cam-table__scroll td:first-child {
+    width: 1.25in !important;
+    min-width: 1.25in !important;
+    overflow-wrap: normal;
+  }
   .cam-table__scroll tr { break-inside: avoid; }
   .cam-table__scroll thead { display: table-header-group; }
 }
