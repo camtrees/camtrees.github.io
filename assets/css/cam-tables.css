@@ -68,3 +68,27 @@
 .cam-table__empty { text-align: center; }
 .cam-table__pagination { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem; margin: 1rem 0; }
 .cam-table__pagination p { margin: 0 .25rem; }
+
+@media print {
+  @page { size: landscape; margin: .4in; }
+
+  .cam-table__controls { margin: 0 0 .5rem; }
+  .cam-table__controls label,
+  [data-cam-table-print],
+  .cam-table__pagination,
+  .cam-table__scroll th input,
+  .cam-table__scroll th select { display: none !important; }
+  .cam-table__scroll { max-height: none; overflow: visible; }
+  .cam-table__scroll table { width: 100%; min-width: 0; font-size: 8pt; border-collapse: collapse; }
+  .cam-table__scroll th,
+  .cam-table__scroll td {
+    position: static !important;
+    width: auto !important;
+    min-width: 0 !important;
+    max-width: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+  .cam-table__scroll tr { break-inside: avoid; }
+  .cam-table__scroll thead { display: table-header-group; }
+}
