@@ -2,6 +2,7 @@
 
 This repository holds files required to build this CAMTREES Database Website.
 
-All pages use Jekyll and the 'Just the Docs' Jekyll template.
+Pages use Jekyll and the 'Just the Docs' Jekyll template.
 
-Only CAMTREES Database Admins will be interested in this repository.
+Except for Database Tables pages. Those use a 'nil' layout so the html table is as large
+as possible.
