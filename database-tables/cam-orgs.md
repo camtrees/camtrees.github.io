@@ -7,8 +7,7 @@ parent: Database Tables
 # {{ page.title }}
 
 {: .warning }
-This SQL Table is a **PROTOTYPE**. Table data is not yet refreshed nightly; it's
-a snapshot as of Monday, August 20th, 2026.
+This SQL Table is a **PROTOTYPE**; it's data is a snapshot as of Monday, August 20th, 2026.
 
 Use the **Search all trees** box to find trees across all fields.
 
