@@ -4,6 +4,7 @@
   const normalise = (value) => String(value ?? '').trim().toLocaleLowerCase();
   const rawValue = (row, key) => String(row[key] ?? '').trim();
   const yesNoValue = (value) => ['true', 't', 'yes', 'y', '1'].includes(normalise(value)) ? 'Yes' : ['false', 'f', 'no', 'n', '0'].includes(normalise(value)) ? 'No' : '';
+  let dialogNumber = 0;
 
   function displayValue(row, column) {
     const value = rawValue(row, column.key);
@@ -37,6 +38,40 @@
     return filter;
   }
 
+  function createRecordDialog(columns) {
+    dialogNumber += 1;
+    const dialog = document.createElement('dialog');
+    dialog.className = 'cam-record-dialog';
+    const title = document.createElement('h2');
+    title.id = `cam-record-dialog-title-${dialogNumber}`;
+    title.textContent = 'Record details';
+    const close = document.createElement('button');
+    close.type = 'button'; close.className = 'cam-record-dialog__close'; close.textContent = 'Close';
+    const header = document.createElement('div');
+    header.className = 'cam-record-dialog__header'; header.append(title, close);
+    const details = document.createElement('dl');
+    details.className = 'cam-record-dialog__details';
+    dialog.setAttribute('aria-labelledby', title.id); dialog.append(header, details); document.body.append(dialog);
+
+    const closeDialog = () => {
+      if (typeof dialog.close === 'function') dialog.close();
+      else dialog.removeAttribute('open');
+    };
+    close.addEventListener('click', closeDialog);
+    dialog.addEventListener('click', (event) => { if (event.target === dialog) closeDialog(); });
+
+    return (record) => {
+      details.replaceChildren();
+      columns.forEach((column) => {
+        const label = document.createElement('dt'); label.textContent = column.label;
+        const value = document.createElement('dd'); value.textContent = displayValue(record, column) || '—';
+        details.append(label, value);
+      });
+      if (typeof dialog.showModal === 'function') dialog.showModal();
+      else dialog.setAttribute('open', '');
+    };
+  }
+
   function initialise(root) {
     const configElement = root.querySelector('[data-cam-table-config]');
     let config;
@@ -51,6 +86,7 @@
     const pagination = root.querySelector('[data-cam-table-pagination]');
     const printButton = root.querySelector('[data-cam-table-print]');
     const filters = new Map();
+    const openRecordDialog = createRecordDialog(columns);
     let rows = []; let currentPage = 1; let sortKey = columns[0].key; let sortDirection = 'asc'; let printing = false;
 
     function filteredRows() {
@@ -80,11 +116,17 @@
 
       body.replaceChildren();
       if (!shown.length) {
-        const cell = document.createElement('td'); cell.colSpan = columns.length; cell.className = 'cam-table__empty'; cell.textContent = 'No records match the current filters.';
+        const cell = document.createElement('td'); cell.colSpan = columns.length + 1; cell.className = 'cam-table__empty'; cell.textContent = 'No records match the current filters.';
         const row = document.createElement('tr'); row.append(cell); body.append(row);
       } else {
         shown.forEach((item) => {
           const row = document.createElement('tr');
+          const actionCell = document.createElement('td');
+          const viewButton = document.createElement('button');
+          viewButton.type = 'button'; viewButton.className = 'cam-table__view-record'; viewButton.title = 'View record'; viewButton.setAttribute('aria-label', 'View record details');
+          const icon = document.createElement('span'); icon.setAttribute('aria-hidden', 'true'); icon.textContent = '👁';
+          const label = document.createElement('span'); label.className = 'cam-table__view-label'; label.textContent = 'View record';
+          viewButton.append(icon, label); viewButton.addEventListener('click', () => openRecordDialog(item)); actionCell.append(viewButton); row.append(actionCell);
           columns.forEach((column) => { const cell = document.createElement('td'); cell.textContent = displayValue(item, column) || '—'; row.append(cell); });
           body.append(row);
         });
@@ -102,6 +144,7 @@
 
     function refreshFromFirstPage() { currentPage = 1; render(); }
     const headerRow = document.createElement('tr');
+    const actionHeader = document.createElement('th'); actionHeader.scope = 'col'; actionHeader.textContent = 'View Record'; headerRow.append(actionHeader);
     columns.forEach((column) => {
       const cell = document.createElement('th'); cell.scope = 'col';
       const button = document.createElement('button'); button.type = 'button'; button.textContent = column.label; button.dataset.sortKey = column.key;
