@@ -6,13 +6,14 @@ nav_order: 7
 
 # {{ page.title }}
 
-*Test Version: 1*
 
 This website section contains various CAMTREES Database SQL Tables. 
 
 {: .note }
 The Database Tables are still in development.<br>
-All SQL Tables are snapshots as of Monday, August 3rd.
+All SQL Tables are snapshots as of Monday, August 3rd.<br>
+*Test Version: 2*
+
 
 Next steps are:
 

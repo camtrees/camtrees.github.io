@@ -95,6 +95,7 @@
     min-width: 1.25in !important;
     overflow-wrap: normal;
   }
+  .cam-table__scroll tbody td { border-bottom: 1px solid #999; }
   .cam-table__scroll tr { break-inside: avoid; }
   .cam-table__scroll thead { display: table-header-group; }
 }
