@@ -1,0 +1,129 @@
+#!/usr/bin/env python3
+"""Export approved public database views to static JSON files.
+
+Add a new entry to EXPORTS when another public view is ready.  Keeping the
+allow-list here avoids accepting arbitrary table or SQL names from input.
+"""
+
+from __future__ import annotations
+
+import json
+import os
+from datetime import date, datetime
+from decimal import Decimal
+from pathlib import Path
+from typing import Any
+
+import psycopg
+from psycopg.rows import dict_row
+
+
+ROOT = Path(__file__).resolve().parents[1]
+
+CAM_TREE_COLUMNS = (
+    "site",
+    "tree_id",
+    "cam_org",
+    "hub",
+    "date_planted_or_observed(wild)",
+    "planted_by",
+    "primary_caretaker",
+    "secondary_caretaker",
+    "latest_health",
+    "latest_health_date",
+    "latest_height_in_inches",
+    "latest_height",
+    "latest_height_date",
+    "latest_water_date",
+    "elevation_in_feet",
+    "access_path",
+    "access_level",
+    "access_method",
+    "access_note",
+    "form",
+    "planting_method",
+    "wire_fence",
+    "mother_tree",
+    "mother_tree_other",
+    "father_tree",
+    "father_tree_other",
+    "parent_tree_note",
+    "note",
+)
+
+CAM_SITE_COLUMNS = (
+    "site",
+    "org_code",
+    "organization",
+    "town",
+    "site_location",
+    "location_note",
+    "contact",
+    "primary_caretaker",
+    "secondary_caretaker",
+)
+
+# View and output are deliberately hard-coded.  Do not put credentials in a
+# site configuration file or client-side JavaScript.
+EXPORTS = (
+    {
+        "name": "cam_trees",
+        "view": "public_cam_trees",
+        "columns": CAM_TREE_COLUMNS,
+        "output": ROOT / "data" / "cam_trees.json",
+        "order_by": '"site", "tree_id", "cam_org", "hub"',
+    },
+    {
+        "name": "cam_sites",
+        "view": "public_cam_sites",
+        "columns": CAM_SITE_COLUMNS,
+        "output": ROOT / "data" / "cam_sites.json",
+        "order_by": '"org_code", "site"',
+    },
+)
+
+
+def json_default(value: Any) -> str | float:
+    if isinstance(value, (date, datetime)):
+        return value.isoformat()
+    if isinstance(value, Decimal):
+        return float(value)
+    raise TypeError(f"{type(value).__name__} is not JSON serializable")
+
+
+def export_data(database_url: str, export: dict[str, Any]) -> None:
+    columns = export["columns"]
+    quoted_columns = ", ".join(f'"{column}"' for column in columns)
+    query = (
+        f"SELECT {quoted_columns} FROM {export['view']} "
+        f"ORDER BY {export['order_by']}"
+    )
+
+    with psycopg.connect(database_url, row_factory=dict_row) as connection:
+        with connection.cursor() as cursor:
+            cursor.execute(query)
+            records = [dict(row) for row in cursor.fetchall()]
+
+    payload = {"records": records}
+    output = Path(export["output"])
+    output.parent.mkdir(parents=True, exist_ok=True)
+    temporary_output = output.with_suffix(".json.tmp")
+    temporary_output.write_text(
+        json.dumps(payload, default=json_default, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+    )
+    temporary_output.replace(output)
+    print(f"Exported {len(records)} records to {output.relative_to(ROOT)}")
+
+
+def main() -> None:
+    database_url = os.environ.get("NEON_DATABASE_URL")
+    if not database_url:
+        raise SystemExit("NEON_DATABASE_URL is required (configure it as a GitHub Actions secret).")
+
+    for export in EXPORTS:
+        export_data(database_url, export)
+
+
+if __name__ == "__main__":
+    main()
