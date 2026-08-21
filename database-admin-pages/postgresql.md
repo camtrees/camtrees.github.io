@@ -225,10 +225,13 @@ These tables are also Lookup Tables
 
 
 <details markdown="1">
-<summary markdown="span"><strong>'Public' Views - Sanitized (no email addresses) and reduced 'cam_' Views</strong></summary>
+<summary markdown="span"><strong>'Public' Views - Sanitized (no email addresses) and reduced columns</strong></summary>
 
+- **public_cam_hubs** - The public cam_hubs view
+- **public_cam_orgs** - The public cam_organizations view
 - **public_cam_sites** - The public cam_trees view
 - **public_cam_trees** - The public cam_sites view
+- **public_site_visit** - A view showing Tree data useful to have printed when a performing a site visit
 
 </details>
 
@@ -239,14 +242,6 @@ These tables are also Lookup Tables
 - **data_export_epicollect_tree_parent_type** - Export tree_parent_type as CSV file to load into EpiCollect CAM Tree Maintenance form
 - **data_export_epicollect_volunteer_email** - Export volunteer_email as CSV file to load into EpiCollect CAM Tree Maintenance form
 - **data_export_google_map_data** - Export Google Map Data as CSV file and load into Google Maps
-
-</details>
-
-
-<details markdown="1">
-<summary markdown="span"><strong>'Site Visit' Views - Useful for printing prior to a Site visit</strong></summary>
-
-- **data_site_visit** - Show data useful to have printed for when a volunteer performs a site visit
 
 </details>
 
