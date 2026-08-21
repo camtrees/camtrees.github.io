@@ -63,6 +63,34 @@ CAM_SITE_COLUMNS = (
     "secondary_caretaker",
 )
 
+CAM_ORG_COLUMNS = (
+    "org_code",
+    "organization",
+    "contact",
+)
+
+CAM_HUB_COLUMNS = (
+    "hub",
+    "captain",
+    "lieutenant",
+)
+
+SITE_VISIT_COLUMNS = (
+    "Site",
+    "Tree ID",
+    "Date Planted",
+    "Health",
+    "Access Path",
+    "Access Level",
+    "GPS Locked",
+    "Planting Method",
+    "Wire Fence",
+    "Mother Tree",
+    "Father Tree",
+    "Parent Tree Note",
+    "Note",
+)
+
 # View and output are deliberately hard-coded.  Do not put credentials in a
 # site configuration file or client-side JavaScript.
 EXPORTS = (
@@ -79,6 +107,27 @@ EXPORTS = (
         "columns": CAM_SITE_COLUMNS,
         "output": ROOT / "data" / "cam_sites.json",
         "order_by": '"org_code", "site"',
+    },
+    {
+        "name": "cam_orgs",
+        "view": "public_cam_orgs",
+        "columns": CAM_ORG_COLUMNS,
+        "output": ROOT / "data" / "cam_orgs.json",
+        "order_by": '"organization"',
+    },
+    {
+        "name": "cam_hubs",
+        "view": "public_cam_hubs",
+        "columns": CAM_HUB_COLUMNS,
+        "output": ROOT / "data" / "cam_hubs.json",
+        "order_by": '"hub"',
+    },
+    {
+        "name": "site_visit",
+        "view": "public_site_visit",
+        "columns": SITE_VISIT_COLUMNS,
+        "output": ROOT / "data" / "site_visit.json",
+        "order_by": '"Site", "Tree ID"',
     },
 )
 

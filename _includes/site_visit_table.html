@@ -1,0 +1,44 @@
+<section class="cam-table" data-cam-table data-source="{{ '/data/site_visit.json' | relative_url }}">
+  <div class="cam-table__controls">
+    <label>
+      Search all site-visit records
+      <input type="search" autocomplete="off" data-cam-table-search>
+    </label>
+    <button type="button" data-cam-table-print>Print filtered site-visit records</button>
+    <p aria-live="polite" data-cam-table-summary></p>
+  </div>
+
+  <div class="cam-table__scroll" tabindex="0">
+    <table data-cam-table-table>
+      <caption class="sr-only">Site Visit records</caption>
+      <thead></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <nav class="cam-table__pagination" aria-label="Site Visit table pages" data-cam-table-pagination></nav>
+
+  <script type="application/json" data-cam-table-config>
+    {
+      "pageSize": 1000,
+      "columns": [
+        {"key":"Site","label":"Site","type":"text"},
+        {"key":"Tree ID","label":"Tree ID","type":"text"},
+        {"key":"Date Planted","label":"Date Planted","type":"date"},
+        {"key":"Health","label":"Health","type":"text"},
+        {"key":"Access Path","label":"Access Path","type":"text"},
+        {"key":"Access Level","label":"Access Level","type":"text"},
+        {"key":"GPS Locked","label":"GPS Locked","type":"boolean"},
+        {"key":"Planting Method","label":"Planting Method","type":"text"},
+        {"key":"Wire Fence","label":"Wire Fence","type":"boolean"},
+        {"key":"Mother Tree","label":"Mother Tree","type":"text"},
+        {"key":"Father Tree","label":"Father Tree","type":"text"},
+        {"key":"Parent Tree Note","label":"Parent Tree Note","type":"text"},
+        {"key":"Note","label":"Note","type":"text"}
+      ]
+    }
+  </script>
+</section>
+
+<link rel="stylesheet" href="{{ '/assets/css/cam-tables.css' | relative_url }}?v=20260820-record-6">
+<script defer src="{{ '/assets/js/cam-tables.js' | relative_url }}?v=20260820-record-6"></script>
