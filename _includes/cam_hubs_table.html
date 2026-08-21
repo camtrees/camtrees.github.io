@@ -1,0 +1,34 @@
+<section class="cam-table" data-cam-table data-source="{{ '/data/cam_hubs.json' | relative_url }}">
+  <div class="cam-table__controls">
+    <label>
+      Search all hubs
+      <input type="search" autocomplete="off" data-cam-table-search>
+    </label>
+    <button type="button" data-cam-table-print>Print filtered hubs</button>
+    <p aria-live="polite" data-cam-table-summary></p>
+  </div>
+
+  <div class="cam-table__scroll" tabindex="0">
+    <table data-cam-table-table>
+      <caption class="sr-only">CAM Hubs</caption>
+      <thead></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <nav class="cam-table__pagination" aria-label="CAM hubs table pages" data-cam-table-pagination></nav>
+
+  <script type="application/json" data-cam-table-config>
+    {
+      "pageSize": 1000,
+      "columns": [
+        {"key":"hub","label":"Hub","type":"text"},
+        {"key":"captain","label":"Captain","type":"text"},
+        {"key":"lieutenant","label":"Lieutenant","type":"text"}
+      ]
+    }
+  </script>
+</section>
+
+<link rel="stylesheet" href="{{ '/assets/css/cam-tables.css' | relative_url }}?v=20260820-record-6">
+<script defer src="{{ '/assets/js/cam-tables.js' | relative_url }}?v=20260820-record-6"></script>

@@ -11,7 +11,7 @@ This website section contains various CAMTREES Database SQL Tables.
 
 {: .note }
 The Database Tables are still in development.<br>
-*Test Version: 5*
+*Test Version: 6*
 
 Next step:
 - Create an automated Python script to refresh table data nightly

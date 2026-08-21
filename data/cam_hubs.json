@@ -1,0 +1,103 @@
+{
+  "records": []
+	{
+		"hub" : "Bethel",
+		"captain" : "Rebecca Buyers",
+		"lieutenant" : null
+	},
+	{
+		"hub" : "Bridgton",
+		"captain" : "Kim Colson",
+		"lieutenant" : "Rebecca Buyers"
+	},
+	{
+		"hub" : "Danforth",
+		"captain" : null,
+		"lieutenant" : null
+	},
+	{
+		"hub" : "Ellsworth",
+		"captain" : null,
+		"lieutenant" : null
+	},
+	{
+		"hub" : "Exeter NH",
+		"captain" : null,
+		"lieutenant" : null
+	},
+	{
+		"hub" : "Farmington",
+		"captain" : null,
+		"lieutenant" : null
+	},
+	{
+		"hub" : "Freeport",
+		"captain" : "Jack  Kennel",
+		"lieutenant" : null
+	},
+	{
+		"hub" : "Hartland",
+		"captain" : null,
+		"lieutenant" : null
+	},
+	{
+		"hub" : "Lincoln",
+		"captain" : "Heidi Farber",
+		"lieutenant" : null
+	},
+	{
+		"hub" : "Machias",
+		"captain" : null,
+		"lieutenant" : null
+	},
+	{
+		"hub" : "Manchester NH",
+		"captain" : null,
+		"lieutenant" : null
+	},
+	{
+		"hub" : "Monson",
+		"captain" : null,
+		"lieutenant" : null
+	},
+	{
+		"hub" : "New Sweden",
+		"captain" : null,
+		"lieutenant" : null
+	},
+	{
+		"hub" : "Orono",
+		"captain" : null,
+		"lieutenant" : null
+	},
+	{
+		"hub" : "Princeton",
+		"captain" : null,
+		"lieutenant" : null
+	},
+	{
+		"hub" : "Sanford",
+		"captain" : "K. Lea Sewell",
+		"lieutenant" : null
+	},
+	{
+		"hub" : "Searsport",
+		"captain" : null,
+		"lieutenant" : null
+	},
+	{
+		"hub" : "Smyrna Mills",
+		"captain" : null,
+		"lieutenant" : null
+	},
+	{
+		"hub" : "Warren",
+		"captain" : null,
+		"lieutenant" : null
+	},
+	{
+		"hub" : "Winthrop",
+		"captain" : null,
+		"lieutenant" : null
+	}
+]}
