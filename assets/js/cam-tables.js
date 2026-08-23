@@ -76,7 +76,7 @@
     };
   }
 
-  function createMapDialog() {
+  function createMapDialog(openRecordDialog) {
     const dialog = document.createElement('dialog');
     dialog.className = 'cam-map-dialog';
     const title = document.createElement('h2'); title.textContent = 'Map View';
@@ -123,7 +123,21 @@
       points.forEach((point) => {
         const popup = document.createElement('div');
         const site = document.createElement('strong'); site.textContent = rawValue(point.record, 'site') || 'Unknown site';
-        popup.append(site, document.createElement('br'), document.createTextNode(`Tree ID: ${rawValue(point.record, 'tree_id') || '—'}`));
+        const detailButton = document.createElement('button');
+        detailButton.type = 'button'; detailButton.className = 'cam-map-dialog__record-button'; detailButton.textContent = 'View full record';
+        detailButton.addEventListener('click', () => {
+          map.closePopup();
+          openRecordDialog(point.record);
+        });
+        popup.append(
+          site,
+          document.createElement('br'),
+          document.createTextNode(`Tree ID: ${rawValue(point.record, 'tree_id') || '—'}`),
+          document.createElement('br'),
+          document.createTextNode(`Health: ${rawValue(point.record, 'latest_health') || '—'}`),
+          document.createElement('br'),
+          detailButton
+        );
         window.L.circleMarker([point.latitude, point.longitude], { radius: 7, color: '#2f6b3a', fillColor: '#5eaa6c', fillOpacity: .9, weight: 1.5 })
           .bindPopup(popup).addTo(markers);
       });
@@ -156,7 +170,7 @@
     const mapButton = root.querySelector('[data-cam-table-map]');
     const filters = new Map();
     const openRecordDialog = createRecordDialog(columns);
-    const openMapDialog = mapButton ? createMapDialog() : null;
+    const openMapDialog = mapButton ? createMapDialog(openRecordDialog) : null;
     let rows = []; let currentPage = 1; let sortKey = columns[0].key; let sortDirection = 'asc'; let printing = false;
 
     function filteredRows() {

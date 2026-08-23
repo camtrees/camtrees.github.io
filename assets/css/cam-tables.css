@@ -94,6 +94,7 @@
 .cam-map-dialog__close { font: inherit; }
 .cam-map-dialog__status { margin: 0; padding: .5rem 1rem; font-size: .9rem; }
 .cam-map-dialog__map { height: calc(100% - 7.2rem); min-height: 20rem; }
+.cam-map-dialog__record-button { margin-top: .5rem; font: inherit; }
 .cam-table__scroll th button { padding: 0; color: inherit; font: inherit; font-weight: 600; text-align: left; background: transparent; border: 0; cursor: pointer; }
 .cam-table__scroll th button::after { content: ' ↕'; font-weight: normal; }
 .cam-table__scroll th button[aria-sort="ascending"]::after { content: ' ↑'; }
