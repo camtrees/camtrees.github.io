@@ -91,6 +91,10 @@ SITE_VISIT_COLUMNS = (
     "Note",
 )
 
+PARENT_TREE_COLUMNS = (
+    "parent_tree",
+)
+
 # View and output are deliberately hard-coded.  Do not put credentials in a
 # site configuration file or client-side JavaScript.
 EXPORTS = (
@@ -128,6 +132,13 @@ EXPORTS = (
         "columns": SITE_VISIT_COLUMNS,
         "output": ROOT / "data" / "site_visit.json",
         "order_by": '"Site", "Tree ID"',
+    },
+    {
+        "name": "parent_trees",
+        "view": "public_parent_trees",
+        "columns": PARENT_TREE_COLUMNS,
+        "output": ROOT / "data" / "parent_trees.json",
+        "order_by": '"parent_tree"',
     },
 )
 
