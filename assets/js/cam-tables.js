@@ -126,12 +126,14 @@
       });
       status.textContent = `${points.length} of ${records.length} filtered tree${records.length === 1 ? '' : 's'} mapped.`;
       showDialog(dialog);
-      requestAnimationFrame(() => {
-        map.invalidateSize();
-        if (points.length === 1) map.setView([points[0].latitude, points[0].longitude], 17);
-        else if (points.length > 1) map.fitBounds(points.map((point) => [point.latitude, point.longitude]), { padding: [24, 24], maxZoom: 17 });
-        else map.setView([45.25, -69.45], 6);
-      });
+      requestAnimationFrame(() => requestAnimationFrame(() => {
+        map.invalidateSize({ animate: false, pan: false });
+        if (points.length === 1) map.setView([points[0].latitude, points[0].longitude], 17, { animate: false });
+        else if (points.length > 1) map.fitBounds(points.map((point) => [point.latitude, point.longitude]), { padding: [24, 24], maxZoom: 17, animate: false });
+        else map.setView([45.25, -69.45], 6, { animate: false });
+        // Safari can finish sizing a dialog after the first two paint frames.
+        window.setTimeout(() => map.invalidateSize({ animate: false, pan: false }), 150);
+      }));
     };
   }
 
