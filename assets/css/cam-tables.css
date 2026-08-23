@@ -86,6 +86,13 @@
 .cam-record-dialog__details { display: grid; grid-template-columns: minmax(10rem, max-content) minmax(0, 1fr); gap: .6rem 1rem; margin: 0; padding: 1rem; }
 .cam-record-dialog__details dt { font-weight: 700; }
 .cam-record-dialog__details dd { margin: 0; overflow-wrap: anywhere; }
+.cam-map-dialog { width: min(64rem, calc(100vw - 2rem)); max-width: 64rem; height: min(80vh, 48rem); padding: 0; overflow: hidden; color: inherit; background: #fff; border: 1px solid #5b765c; border-radius: .3rem; }
+.cam-map-dialog::backdrop { background: rgb(0 0 0 / 35%); }
+.cam-map-dialog__header { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: .8rem 1rem; background: #e8f5e9; border-bottom: 1px solid #c8ddc9; }
+.cam-map-dialog__header h2 { margin: 0; font-size: 1.25rem; }
+.cam-map-dialog__close { font: inherit; }
+.cam-map-dialog__status { margin: 0; padding: .5rem 1rem; font-size: .9rem; }
+.cam-map-dialog__map { height: calc(100% - 7.2rem); min-height: 20rem; }
 .cam-table__scroll th button { padding: 0; color: inherit; font: inherit; font-weight: 600; text-align: left; background: transparent; border: 0; cursor: pointer; }
 .cam-table__scroll th button::after { content: ' ↕'; font-weight: normal; }
 .cam-table__scroll th button[aria-sort="ascending"]::after { content: ' ↑'; }
@@ -132,6 +139,7 @@
     box-shadow: none !important;
   }
   .cam-record-dialog,
+  .cam-map-dialog,
   .cam-table__scroll th:first-child,
   .cam-table__scroll td:first-child { display: none !important; }
   .cam-table__scroll th:nth-child(2),

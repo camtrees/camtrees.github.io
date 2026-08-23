@@ -35,6 +35,8 @@ CAM_TREE_COLUMNS = (
     "latest_height",
     "latest_height_date",
     "latest_water_date",
+    "longitude",
+    "latitude",
     "elevation_in_feet",
     "access_path",
     "access_level",
