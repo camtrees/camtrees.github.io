@@ -115,8 +115,11 @@
         return;
       }
       markers.clearLayers();
-      const points = records.map((record) => ({ record, latitude: Number(record.latitude), longitude: Number(record.longitude) }))
-        .filter((point) => Number.isFinite(point.latitude) && Number.isFinite(point.longitude) && Math.abs(point.latitude) <= 90 && Math.abs(point.longitude) <= 180);
+      const points = records.map((record) => {
+        const latitudeValue = rawValue(record, 'latitude');
+        const longitudeValue = rawValue(record, 'longitude');
+        return { record, latitudeValue, longitudeValue, latitude: Number(latitudeValue), longitude: Number(longitudeValue) };
+      }).filter((point) => point.latitudeValue && point.longitudeValue && Number.isFinite(point.latitude) && Number.isFinite(point.longitude) && Math.abs(point.latitude) <= 90 && Math.abs(point.longitude) <= 180);
       points.forEach((point) => {
         const popup = document.createElement('div');
         const site = document.createElement('strong'); site.textContent = rawValue(point.record, 'site') || 'Unknown site';
