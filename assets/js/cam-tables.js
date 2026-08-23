@@ -103,10 +103,32 @@
       try {
         if (!map) {
           map = window.L.map(canvas);
-          window.L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          const streetLayer = window.L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 19,
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-          }).addTo(map);
+          });
+          const satelliteLayer = window.L.tileLayer('https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer/tile/{z}/{y}/{x}', {
+            maxNativeZoom: 16,
+            maxZoom: 19,
+            attribution: 'USGS The National Map'
+          });
+          const topoLayer = window.L.tileLayer('https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/tile/{z}/{y}/{x}', {
+            maxNativeZoom: 16,
+            maxZoom: 19,
+            attribution: 'USGS The National Map'
+          });
+          const imageryTopoLayer = window.L.tileLayer('https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryTopo/MapServer/tile/{z}/{y}/{x}', {
+            maxNativeZoom: 15,
+            maxZoom: 19,
+            attribution: 'USGS The National Map'
+          });
+          streetLayer.addTo(map);
+          window.L.control.layers({
+            Street: streetLayer,
+            Satellite: satelliteLayer,
+            Topographic: topoLayer,
+            'Satellite + Labels': imageryTopoLayer
+          }, null, { collapsed: true, position: 'topright' }).addTo(map);
           markers = window.L.layerGroup().addTo(map);
         }
       } catch (_) {
