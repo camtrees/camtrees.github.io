@@ -6,6 +6,11 @@
   const yesNoValue = (value) => ['true', 't', 'yes', 'y', '1'].includes(normalise(value)) ? 'Yes' : ['false', 'f', 'no', 'n', '0'].includes(normalise(value)) ? 'No' : '';
   let dialogNumber = 0;
 
+  function showDialog(dialog) {
+    if (typeof dialog.showModal === 'function' && !dialog.open) dialog.showModal();
+    else dialog.setAttribute('open', '');
+  }
+
   function displayValue(row, column) {
     const value = rawValue(row, column.key);
     return column.type === 'boolean' ? yesNoValue(value) : value;
@@ -67,8 +72,66 @@
         const value = document.createElement('dd'); value.textContent = displayValue(record, column) || '—';
         details.append(label, value);
       });
-      if (typeof dialog.showModal === 'function') dialog.showModal();
-      else dialog.setAttribute('open', '');
+      showDialog(dialog);
+    };
+  }
+
+  function createMapDialog() {
+    const dialog = document.createElement('dialog');
+    dialog.className = 'cam-map-dialog';
+    const title = document.createElement('h2'); title.textContent = 'Map View';
+    const close = document.createElement('button'); close.type = 'button'; close.className = 'cam-map-dialog__close'; close.textContent = 'Close';
+    const header = document.createElement('div'); header.className = 'cam-map-dialog__header'; header.append(title, close);
+    const status = document.createElement('p'); status.className = 'cam-map-dialog__status'; status.setAttribute('aria-live', 'polite');
+    const canvas = document.createElement('div'); canvas.className = 'cam-map-dialog__map'; canvas.setAttribute('aria-label', 'Map of filtered trees');
+    dialog.append(header, status, canvas); document.body.append(dialog);
+
+    const closeDialog = () => {
+      if (typeof dialog.close === 'function') dialog.close();
+      else dialog.removeAttribute('open');
+    };
+    close.addEventListener('click', closeDialog);
+    dialog.addEventListener('click', (event) => { if (event.target === dialog) closeDialog(); });
+
+    let map; let markers;
+    return (records) => {
+      if (!window.L) {
+        status.textContent = 'The map library could not be loaded. Check that your browser can load unpkg.com.';
+        showDialog(dialog);
+        return;
+      }
+      try {
+        if (!map) {
+          map = window.L.map(canvas);
+          window.L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+          }).addTo(map);
+          markers = window.L.layerGroup().addTo(map);
+        }
+      } catch (_) {
+        status.textContent = 'The map could not be initialized.';
+        showDialog(dialog);
+        return;
+      }
+      markers.clearLayers();
+      const points = records.map((record) => ({ record, latitude: Number(record.latitude), longitude: Number(record.longitude) }))
+        .filter((point) => Number.isFinite(point.latitude) && Number.isFinite(point.longitude) && Math.abs(point.latitude) <= 90 && Math.abs(point.longitude) <= 180);
+      points.forEach((point) => {
+        const popup = document.createElement('div');
+        const site = document.createElement('strong'); site.textContent = rawValue(point.record, 'site') || 'Unknown site';
+        popup.append(site, document.createElement('br'), document.createTextNode(`Tree ID: ${rawValue(point.record, 'tree_id') || '—'}`));
+        window.L.circleMarker([point.latitude, point.longitude], { radius: 7, color: '#2f6b3a', fillColor: '#5eaa6c', fillOpacity: .9, weight: 1.5 })
+          .bindPopup(popup).addTo(markers);
+      });
+      status.textContent = `${points.length} of ${records.length} filtered tree${records.length === 1 ? '' : 's'} mapped.`;
+      showDialog(dialog);
+      requestAnimationFrame(() => {
+        map.invalidateSize();
+        if (points.length === 1) map.setView([points[0].latitude, points[0].longitude], 17);
+        else if (points.length > 1) map.fitBounds(points.map((point) => [point.latitude, point.longitude]), { padding: [24, 24], maxZoom: 17 });
+        else map.setView([45.25, -69.45], 6);
+      });
     };
   }
 
@@ -85,8 +148,10 @@
     const summary = root.querySelector('[data-cam-table-summary]');
     const pagination = root.querySelector('[data-cam-table-pagination]');
     const printButton = root.querySelector('[data-cam-table-print]');
+    const mapButton = root.querySelector('[data-cam-table-map]');
     const filters = new Map();
     const openRecordDialog = createRecordDialog(columns);
+    const openMapDialog = mapButton ? createMapDialog() : null;
     let rows = []; let currentPage = 1; let sortKey = columns[0].key; let sortDirection = 'asc'; let printing = false;
 
     function filteredRows() {
@@ -152,6 +217,7 @@
       const filter = createFilter(column, refreshFromFirstPage); filters.set(column.key, filter); cell.append(button, filter); headerRow.append(cell);
     });
     head.append(headerRow); search.addEventListener('input', refreshFromFirstPage);
+    if (mapButton) mapButton.addEventListener('click', () => openMapDialog(filteredRows()));
     if (printButton) {
       printButton.addEventListener('click', () => {
         printing = true;

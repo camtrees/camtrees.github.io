@@ -87,6 +87,7 @@
 .cam-record-dialog__details dt { font-weight: 700; }
 .cam-record-dialog__details dd { margin: 0; overflow-wrap: anywhere; }
 .cam-map-dialog { width: min(64rem, calc(100vw - 2rem)); max-width: 64rem; height: min(80vh, 48rem); padding: 0; overflow: hidden; color: inherit; background: #fff; border: 1px solid #5b765c; border-radius: .3rem; }
+.cam-map-dialog[open] { position: fixed; inset: 10vh 1rem auto; margin: auto; }
 .cam-map-dialog::backdrop { background: rgb(0 0 0 / 35%); }
 .cam-map-dialog__header { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: .8rem 1rem; background: #e8f5e9; border-bottom: 1px solid #c8ddc9; }
 .cam-map-dialog__header h2 { margin: 0; font-size: 1.25rem; }
