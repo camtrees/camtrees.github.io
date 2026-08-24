@@ -9,7 +9,9 @@
 		"location_note" : null,
 		"contact" : "Ethan Davis",
 		"primary_caretaker" : "Ethan Davis",
-		"secondary_caretaker" : null
+		"secondary_caretaker" : null,
+		"longitude" : -70.530968,
+		"latitude" : 43.423529
 	},
 	{
 		"site" : "BBA Chestnut Orchard",
@@ -20,7 +22,9 @@
 		"location_note" : null,
 		"contact" : "Kim Colson",
 		"primary_caretaker" : "Brandon Rackliff",
-		"secondary_caretaker" : null
+		"secondary_caretaker" : null,
+		"longitude" : -71.607087,
+		"latitude" : 42.72077
 	},
 	{
 		"site" : "Blueberry Cove 4-H Camp",
@@ -31,7 +35,9 @@
 		"location_note" : null,
 		"contact" : "Ryan Leshane",
 		"primary_caretaker" : "Joshua Waguli",
-		"secondary_caretaker" : null
+		"secondary_caretaker" : null,
+		"longitude" : null,
+		"latitude" : null
 	},
 	{
 		"site" : "Bangor High School",
@@ -42,7 +48,9 @@
 		"location_note" : "In front of main entrance",
 		"contact" : "Chris Packard",
 		"primary_caretaker" : "Mark McCollough",
-		"secondary_caretaker" : null
+		"secondary_caretaker" : null,
+		"longitude" : -68.781597,
+		"latitude" : 44.830207
 	},
 	{
 		"site" : "Brewer Community School",
@@ -53,7 +61,9 @@
 		"location_note" : null,
 		"contact" : "Linda Johns",
 		"primary_caretaker" : "Mark McCollough",
-		"secondary_caretaker" : null
+		"secondary_caretaker" : null,
+		"longitude" : -68.768581,
+		"latitude" : 44.776417
 	},
 	{
 		"site" : "Brewer Municipal Pool and Playground",
@@ -64,7 +74,9 @@
 		"location_note" : null,
 		"contact" : "Linda Johns",
 		"primary_caretaker" : "Mark McCollough",
-		"secondary_caretaker" : null
+		"secondary_caretaker" : null,
+		"longitude" : -68.754578,
+		"latitude" : 44.786437
 	},
 	{
 		"site" : "Brewer Public Safety",
@@ -75,7 +87,9 @@
 		"location_note" : null,
 		"contact" : "Linda Johns",
 		"primary_caretaker" : null,
-		"secondary_caretaker" : null
+		"secondary_caretaker" : null,
+		"longitude" : -68.760282,
+		"latitude" : 44.780352
 	},
 	{
 		"site" : "Indian Trail Park",
@@ -86,7 +100,9 @@
 		"location_note" : null,
 		"contact" : "Linda Johns",
 		"primary_caretaker" : "Mark McCollough",
-		"secondary_caretaker" : null
+		"secondary_caretaker" : null,
+		"longitude" : -68.751496,
+		"latitude" : 44.803393
 	},
 	{
 		"site" : "Chestnut Street Park",
@@ -97,7 +113,9 @@
 		"location_note" : null,
 		"contact" : "Noel Skelton",
 		"primary_caretaker" : "Noel Skelton",
-		"secondary_caretaker" : null
+		"secondary_caretaker" : null,
+		"longitude" : -70.23151,
+		"latitude" : 44.103168
 	},
 	{
 		"site" : "Franklin Pasture",
@@ -108,7 +126,9 @@
 		"location_note" : null,
 		"contact" : "Steve Murch",
 		"primary_caretaker" : "Steve Murch",
-		"secondary_caretaker" : null
+		"secondary_caretaker" : null,
+		"longitude" : -70.207221,
+		"latitude" : 44.092848
 	},
 	{
 		"site" : "Corinna Village Green",
@@ -119,7 +139,9 @@
 		"location_note" : null,
 		"contact" : "Emillie Lemire",
 		"primary_caretaker" : null,
-		"secondary_caretaker" : null
+		"secondary_caretaker" : null,
+		"longitude" : -69.261109,
+		"latitude" : 44.922051
 	},
 	{
 		"site" : "Cornerspring Montessori School",
@@ -130,7 +152,9 @@
 		"location_note" : null,
 		"contact" : "Susan Beamer",
 		"primary_caretaker" : "Susan Therio",
-		"secondary_caretaker" : null
+		"secondary_caretaker" : null,
+		"longitude" : -69.0027,
+		"latitude" : 44.4066
 	},
 	{
 		"site" : "Biddeford Community Garden at Rotary Park",
@@ -141,7 +165,9 @@
 		"location_note" : null,
 		"contact" : "Ethan Davis",
 		"primary_caretaker" : "Ethan Davis",
-		"secondary_caretaker" : null
+		"secondary_caretaker" : null,
+		"longitude" : -70.477758,
+		"latitude" : 43.499015
 	},
 	{
 		"site" : "Jordan Homestead Preserve",
@@ -152,7 +178,9 @@
 		"location_note" : null,
 		"contact" : "Mary Blackstone",
 		"primary_caretaker" : null,
-		"secondary_caretaker" : null
+		"secondary_caretaker" : null,
+		"longitude" : null,
+		"latitude" : null
 	},
 	{
 		"site" : "Tidal Falls Preserve",
@@ -163,7 +191,9 @@
 		"location_note" : null,
 		"contact" : "Austin Schuver",
 		"primary_caretaker" : "Mark McCollough",
-		"secondary_caretaker" : null
+		"secondary_caretaker" : null,
+		"longitude" : -68.222698,
+		"latitude" : 44.519957
 	},
 	{
 		"site" : "Hurricane Valley Farm",
@@ -174,7 +204,9 @@
 		"location_note" : null,
 		"contact" : "Brian Kriebel",
 		"primary_caretaker" : "Jack  Kennel",
-		"secondary_caretaker" : null
+		"secondary_caretaker" : null,
+		"longitude" : -70.303896,
+		"latitude" : 43.787119
 	},
 	{
 		"site" : "Fort Point State Park",
@@ -185,7 +217,9 @@
 		"location_note" : null,
 		"contact" : "Josh Kenney",
 		"primary_caretaker" : null,
-		"secondary_caretaker" : null
+		"secondary_caretaker" : null,
+		"longitude" : -68.812878,
+		"latitude" : 44.467632
 	},
 	{
 		"site" : "Dead River Trailhead Capstone Trail",
@@ -196,7 +230,9 @@
 		"location_note" : null,
 		"contact" : "Malcolm Richardson",
 		"primary_caretaker" : "Mark McCollough",
-		"secondary_caretaker" : null
+		"secondary_caretaker" : null,
+		"longitude" : -68.688195,
+		"latitude" : 44.595476
 	},
 	{
 		"site" : "Dead River Trailhead Log Landing",
@@ -207,7 +243,9 @@
 		"location_note" : null,
 		"contact" : "Malcolm Richardson",
 		"primary_caretaker" : "Mark McCollough",
-		"secondary_caretaker" : null
+		"secondary_caretaker" : null,
+		"longitude" : -68.691242,
+		"latitude" : 44.596314
 	},
 	{
 		"site" : "Chadbourne Field",
@@ -218,7 +256,9 @@
 		"location_note" : null,
 		"contact" : "K. Lea Sewell",
 		"primary_caretaker" : null,
-		"secondary_caretaker" : null
+		"secondary_caretaker" : null,
+		"longitude" : -70.81036,
+		"latitude" : 43.22125
 	},
 	{
 		"site" : "Tidal Waters Preserve",
@@ -229,7 +269,9 @@
 		"location_note" : null,
 		"contact" : "K. Lea Sewell",
 		"primary_caretaker" : null,
-		"secondary_caretaker" : null
+		"secondary_caretaker" : null,
+		"longitude" : -70.81076,
+		"latitude" : 43.19583
 	},
 	{
 		"site" : "Hebron Station School",
@@ -240,7 +282,9 @@
 		"location_note" : null,
 		"contact" : "Sarah Otterson",
 		"primary_caretaker" : "Sarah Otterson",
-		"secondary_caretaker" : null
+		"secondary_caretaker" : null,
+		"longitude" : -70.348,
+		"latitude" : 44.230916
 	},
 	{
 		"site" : "BaldPate",
@@ -251,7 +295,9 @@
 		"location_note" : null,
 		"contact" : "Jacob Schor",
 		"primary_caretaker" : "Jacob Schor",
-		"secondary_caretaker" : null
+		"secondary_caretaker" : null,
+		"longitude" : -70.70759,
+		"latitude" : 43.954305
 	},
 	{
 		"site" : "Crooked River Forest",
@@ -262,7 +308,9 @@
 		"location_note" : null,
 		"contact" : "Marji Berkman",
 		"primary_caretaker" : "Maggie Lynn",
-		"secondary_caretaker" : null
+		"secondary_caretaker" : null,
+		"longitude" : -70.612179,
+		"latitude" : 44.080578
 	},
 	{
 		"site" : "Hackers Hill",
@@ -273,7 +321,9 @@
 		"location_note" : null,
 		"contact" : "Amy Brown",
 		"primary_caretaker" : "Kim Colson",
-		"secondary_caretaker" : null
+		"secondary_caretaker" : null,
+		"longitude" : -70.5298,
+		"latitude" : 43.96585
 	},
 	{
 		"site" : "Mayberry Hill",
@@ -284,7 +334,9 @@
 		"location_note" : null,
 		"contact" : "Marji Berkman",
 		"primary_caretaker" : "Kim Colson",
-		"secondary_caretaker" : null
+		"secondary_caretaker" : null,
+		"longitude" : -70.5074,
+		"latitude" : 44.02598
 	},
 	{
 		"site" : "Peabody Fitch Woods",
@@ -295,7 +347,9 @@
 		"location_note" : null,
 		"contact" : "Marji Berkman",
 		"primary_caretaker" : "Marji Berkman",
-		"secondary_caretaker" : null
+		"secondary_caretaker" : null,
+		"longitude" : -70.723473,
+		"latitude" : 43.982604
 	},
 	{
 		"site" : "Field NE of Main Building",
@@ -306,7 +360,9 @@
 		"location_note" : null,
 		"contact" : "Melissa Gallagher",
 		"primary_caretaker" : "Mark McCollough",
-		"secondary_caretaker" : null
+		"secondary_caretaker" : null,
+		"longitude" : -68.725901,
+		"latitude" : 44.739708
 	},
 	{
 		"site" : "Mary Snow School",
@@ -317,7 +373,9 @@
 		"location_note" : null,
 		"contact" : "Melissa Gallagher",
 		"primary_caretaker" : "Mark McCollough",
-		"secondary_caretaker" : null
+		"secondary_caretaker" : null,
+		"longitude" : -68.771242,
+		"latitude" : 44.817278
 	},
 	{
 		"site" : "West of Main Building",
@@ -328,7 +386,9 @@
 		"location_note" : null,
 		"contact" : "Melissa Gallagher",
 		"primary_caretaker" : "Mark McCollough",
-		"secondary_caretaker" : null
+		"secondary_caretaker" : null,
+		"longitude" : -68.728359,
+		"latitude" : 44.738636
 	},
 	{
 		"site" : "Cousins River Fields & Marsh Preserve",
@@ -339,7 +399,9 @@
 		"location_note" : "Grove near parking & kiosk, open field next to woods",
 		"contact" : "Andrew Deci",
 		"primary_caretaker" : "Martha Spiess",
-		"secondary_caretaker" : null
+		"secondary_caretaker" : null,
+		"longitude" : -70.156688,
+		"latitude" : 43.821519
 	},
 	{
 		"site" : "Erickson Fields Preserve",
@@ -350,7 +412,9 @@
 		"location_note" : null,
 		"contact" : "Emily Marshall",
 		"primary_caretaker" : null,
-		"secondary_caretaker" : null
+		"secondary_caretaker" : null,
+		"longitude" : -69.101058,
+		"latitude" : 44.176243
 	},
 	{
 		"site" : "Mt Joy Community Orchard",
@@ -361,7 +425,9 @@
 		"location_note" : null,
 		"contact" : "Aaron Parker",
 		"primary_caretaker" : "Aaron Parker",
-		"secondary_caretaker" : null
+		"secondary_caretaker" : null,
+		"longitude" : -70.254222,
+		"latitude" : 43.67071
 	},
 	{
 		"site" : "Murray Point Road",
@@ -372,7 +438,9 @@
 		"location_note" : null,
 		"contact" : "Cary James",
 		"primary_caretaker" : null,
-		"secondary_caretaker" : null
+		"secondary_caretaker" : null,
+		"longitude" : -67.395736,
+		"latitude" : 45.101619
 	},
 	{
 		"site" : "Maine Youth Fish and Game Club",
@@ -383,7 +451,9 @@
 		"location_note" : null,
 		"contact" : "Morgin Cleary",
 		"primary_caretaker" : "Mark McCollough",
-		"secondary_caretaker" : null
+		"secondary_caretaker" : null,
+		"longitude" : -68.453169,
+		"latitude" : 44.971438
 	},
 	{
 		"site" : "North Shore Preserve",
@@ -394,7 +464,9 @@
 		"location_note" : null,
 		"contact" : "John Stevens",
 		"primary_caretaker" : "Paul Jessen",
-		"secondary_caretaker" : null
+		"secondary_caretaker" : null,
+		"longitude" : null,
+		"latitude" : null
 	},
 	{
 		"site" : "Orono High School",
@@ -405,7 +477,9 @@
 		"location_note" : null,
 		"contact" : "Megan Hess",
 		"primary_caretaker" : null,
-		"secondary_caretaker" : null
+		"secondary_caretaker" : null,
+		"longitude" : -68.677491,
+		"latitude" : 44.883166
 	},
 	{
 		"site" : "Camp Pondicherry",
@@ -416,7 +490,9 @@
 		"location_note" : null,
 		"contact" : "Jeremy Bates",
 		"primary_caretaker" : null,
-		"secondary_caretaker" : null
+		"secondary_caretaker" : null,
+		"longitude" : -70.714028,
+		"latitude" : 43.997138
 	},
 	{
 		"site" : "PVT FAR Moosehorn",
@@ -427,7 +503,9 @@
 		"location_note" : null,
 		"contact" : "Heidi Farber",
 		"primary_caretaker" : null,
-		"secondary_caretaker" : null
+		"secondary_caretaker" : null,
+		"longitude" : -68.233151,
+		"latitude" : 45.338346
 	},
 	{
 		"site" : "PVT KLC House",
@@ -438,7 +516,9 @@
 		"location_note" : null,
 		"contact" : "Kim Colson",
 		"primary_caretaker" : "Kim Colson",
-		"secondary_caretaker" : null
+		"secondary_caretaker" : null,
+		"longitude" : -70.6119,
+		"latitude" : 43.9125
 	},
 	{
 		"site" : "PVT KLC Log Landing",
@@ -449,7 +529,9 @@
 		"location_note" : null,
 		"contact" : "Kim Colson",
 		"primary_caretaker" : null,
-		"secondary_caretaker" : null
+		"secondary_caretaker" : null,
+		"longitude" : null,
+		"latitude" : null
 	},
 	{
 		"site" : "PVT RWB Parkland",
@@ -460,7 +542,9 @@
 		"location_note" : null,
 		"contact" : "Rebecca Buyers",
 		"primary_caretaker" : null,
-		"secondary_caretaker" : null
+		"secondary_caretaker" : null,
+		"longitude" : -70.796294,
+		"latitude" : 44.123565
 	},
 	{
 		"site" : "SLSP Boat Ramp",
@@ -471,7 +555,9 @@
 		"location_note" : null,
 		"contact" : "Suz Miller",
 		"primary_caretaker" : "Suz Miller",
-		"secondary_caretaker" : "Deb Keef"
+		"secondary_caretaker" : "Deb Keef",
+		"longitude" : -70.5719,
+		"latitude" : 43.91648
 	},
 	{
 		"site" : "SLSP New Gate",
@@ -482,7 +568,9 @@
 		"location_note" : null,
 		"contact" : "Suz Miller",
 		"primary_caretaker" : "Suz Miller",
-		"secondary_caretaker" : "Deb Keef"
+		"secondary_caretaker" : "Deb Keef",
+		"longitude" : -70.56958,
+		"latitude" : 43.91626
 	},
 	{
 		"site" : "Lowd Environmental Reserve",
@@ -493,7 +581,9 @@
 		"location_note" : null,
 		"contact" : "K. Lea Sewell",
 		"primary_caretaker" : null,
-		"secondary_caretaker" : null
+		"secondary_caretaker" : null,
+		"longitude" : -70.8025,
+		"latitude" : 43.459166
 	},
 	{
 		"site" : "Virginia Morin Field",
@@ -504,7 +594,9 @@
 		"location_note" : null,
 		"contact" : "K. Lea Sewell",
 		"primary_caretaker" : null,
-		"secondary_caretaker" : null
+		"secondary_caretaker" : null,
+		"longitude" : -70.746111,
+		"latitude" : 43.408333
 	},
 	{
 		"site" : "Campus",
@@ -515,7 +607,9 @@
 		"location_note" : null,
 		"contact" : "Aaron Witham",
 		"primary_caretaker" : null,
-		"secondary_caretaker" : null
+		"secondary_caretaker" : null,
+		"longitude" : -70.452469,
+		"latitude" : 43.680226
 	},
 	{
 		"site" : "Shepard’s Farm Preserve",
@@ -526,7 +620,9 @@
 		"location_note" : null,
 		"contact" : "Es Sweeney",
 		"primary_caretaker" : null,
-		"secondary_caretaker" : null
+		"secondary_caretaker" : null,
+		"longitude" : -70.56432,
+		"latitude" : 44.220851
 	},
 	{
 		"site" : "Wild tree UNKNOWN to TACF",
@@ -537,7 +633,9 @@
 		"location_note" : null,
 		"contact" : "Eva Butler",
 		"primary_caretaker" : null,
-		"secondary_caretaker" : null
+		"secondary_caretaker" : null,
+		"longitude" : null,
+		"latitude" : null
 	},
 	{
 		"site" : "Wild tree KNOWN to TACF",
@@ -548,7 +646,9 @@
 		"location_note" : null,
 		"contact" : "Deni Ranguelova",
 		"primary_caretaker" : null,
-		"secondary_caretaker" : null
+		"secondary_caretaker" : null,
+		"longitude" : null,
+		"latitude" : null
 	},
 	{
 		"site" : "Wolfe's Neck Center for Ag & Env",
@@ -559,6 +659,8 @@
 		"location_note" : null,
 		"contact" : "Melody Larson",
 		"primary_caretaker" : null,
-		"secondary_caretaker" : null
+		"secondary_caretaker" : null,
+		"longitude" : -70.073759,
+		"latitude" : 43.829871
 	}
 ]}

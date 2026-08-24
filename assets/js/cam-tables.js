@@ -76,14 +76,21 @@
     };
   }
 
-  function createMapDialog(openRecordDialog) {
+  function createMapDialog(openRecordDialog, mapConfig = {}) {
+    const singular = mapConfig.singular || 'tree';
+    const plural = mapConfig.plural || `${singular}s`;
+    const popupTitleKey = mapConfig.popupTitleKey || 'site';
+    const popupFields = mapConfig.popupFields || [
+      { key: 'tree_id', label: 'Tree ID' },
+      { key: 'latest_health', label: 'Health' }
+    ];
     const dialog = document.createElement('dialog');
     dialog.className = 'cam-map-dialog';
     const title = document.createElement('h2'); title.textContent = 'Map View';
     const close = document.createElement('button'); close.type = 'button'; close.className = 'cam-map-dialog__close'; close.textContent = 'Close';
     const header = document.createElement('div'); header.className = 'cam-map-dialog__header'; header.append(title, close);
     const status = document.createElement('p'); status.className = 'cam-map-dialog__status'; status.setAttribute('aria-live', 'polite');
-    const canvas = document.createElement('div'); canvas.className = 'cam-map-dialog__map'; canvas.setAttribute('aria-label', 'Map of filtered trees');
+    const canvas = document.createElement('div'); canvas.className = 'cam-map-dialog__map'; canvas.setAttribute('aria-label', `Map of filtered ${plural}`);
     dialog.append(header, status, canvas); document.body.append(dialog);
 
     const closeDialog = () => {
@@ -144,26 +151,25 @@
       }).filter((point) => point.latitudeValue && point.longitudeValue && Number.isFinite(point.latitude) && Number.isFinite(point.longitude) && Math.abs(point.latitude) <= 90 && Math.abs(point.longitude) <= 180);
       points.forEach((point) => {
         const popup = document.createElement('div');
-        const site = document.createElement('strong'); site.textContent = rawValue(point.record, 'site') || 'Unknown site';
+        const title = document.createElement('strong'); title.textContent = rawValue(point.record, popupTitleKey) || `Unknown ${singular}`;
         const detailButton = document.createElement('button');
         detailButton.type = 'button'; detailButton.className = 'cam-map-dialog__record-button'; detailButton.textContent = 'View full record';
         detailButton.addEventListener('click', () => {
           map.closePopup();
           openRecordDialog(point.record);
         });
-        popup.append(
-          site,
-          document.createElement('br'),
-          document.createTextNode(`Tree ID: ${rawValue(point.record, 'tree_id') || '—'}`),
-          document.createElement('br'),
-          document.createTextNode(`Health: ${rawValue(point.record, 'latest_health') || '—'}`),
-          document.createElement('br'),
-          detailButton
-        );
+        popup.append(title);
+        popupFields.forEach((field) => {
+          popup.append(
+            document.createElement('br'),
+            document.createTextNode(`${field.label}: ${rawValue(point.record, field.key) || '—'}`)
+          );
+        });
+        popup.append(document.createElement('br'), detailButton);
         window.L.circleMarker([point.latitude, point.longitude], { radius: 7, color: '#2f6b3a', fillColor: '#5eaa6c', fillOpacity: .9, weight: 1.5 })
           .bindPopup(popup).addTo(markers);
       });
-      status.textContent = `${points.length} of ${records.length} filtered tree${records.length === 1 ? '' : 's'} mapped.`;
+      status.textContent = `${points.length} of ${records.length} filtered ${records.length === 1 ? singular : plural} mapped.`;
       showDialog(dialog);
       requestAnimationFrame(() => requestAnimationFrame(() => {
         map.invalidateSize({ animate: false, pan: false });
@@ -192,7 +198,7 @@
     const mapButton = root.querySelector('[data-cam-table-map]');
     const filters = new Map();
     const openRecordDialog = createRecordDialog(columns);
-    const openMapDialog = mapButton ? createMapDialog(openRecordDialog) : null;
+    const openMapDialog = mapButton ? createMapDialog(openRecordDialog, config.map) : null;
     let rows = []; let currentPage = 1; let sortKey = columns[0].key; let sortDirection = 'asc'; let printing = false;
 
     function filteredRows() {
