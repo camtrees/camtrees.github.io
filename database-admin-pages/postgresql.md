@@ -231,7 +231,8 @@ These tables are also Lookup Tables
 - **public_cam_orgs** - The public cam_organizations view
 - **public_cam_sites** - The public cam_trees view
 - **public_cam_trees** - The public cam_sites view
-- **public_site_visit** - A view showing Tree data useful to have printed when a performing a site visit
+- **public_parent_trees** - A list of all possible parent (mother and father) trees
+- **public_site_visit** - A view showing Tree data useful to have printed when performing a site visit
 
 </details>
 
