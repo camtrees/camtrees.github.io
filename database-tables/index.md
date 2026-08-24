@@ -6,16 +6,14 @@ nav_order: 7
 
 # {{ page.title }}
 
-
-This website section contains various CAMTREES Database SQL Tables. 
+This website section contains various CAMTREES Database SQL Tables.
 
 {: .note }
-The Database Tables are still in development.<br>
-*Test Version: 6*
+Database Tables are still in development.<br>
 
-Next step:
+Step required before full production:
 - Create an automated Python script to refresh table data nightly
 
 {: .warning }
 For security, this website will never connect directly to the CAMTREES Database. Rather,
-a secure Python script will regenerate the tables nightly.
+a secure Python script will regenerate the necessary tables each night.
