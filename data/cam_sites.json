@@ -4,6 +4,7 @@
 		"site" : "Arundel Municipal Building",
 		"org_code" : "Arundel",
 		"organization" : "Town of Arundel",
+		"site_url" : "https:\/\/arundelmaine.org\/",
 		"town" : "Arundel",
 		"site_location" : "257 Limerick Rd",
 		"location_note" : null,
@@ -11,13 +12,13 @@
 		"primary_caretaker" : "Ethan Davis",
 		"secondary_caretaker" : null,
 		"longitude" : -70.530968,
-		"latitude" : 43.423529,
-		"site_url" : "https:\/\/arundelmaine.org\/"
+		"latitude" : 43.423529
 	},
 	{
 		"site" : "BBA Chestnut Orchard",
 		"org_code" : "BBA",
 		"organization" : "Beaver Brook Association",
+		"site_url" : "https:\/\/www.beaverbrook.org",
 		"town" : "Hollis",
 		"site_location" : null,
 		"location_note" : null,
@@ -25,13 +26,13 @@
 		"primary_caretaker" : "Brandon Rackliff",
 		"secondary_caretaker" : null,
 		"longitude" : -71.607087,
-		"latitude" : 42.72077,
-		"site_url" : "https:\/\/www.beaverbrook.org"
+		"latitude" : 42.72077
 	},
 	{
 		"site" : "Blueberry Cove 4-H Camp",
 		"org_code" : "BC4H",
 		"organization" : "Blueberry Cove 4-H Camp",
+		"site_url" : "https:\/\/extension.umaine.edu\/tanglewood\/blueberry-cove-tenants-harbor\/",
 		"town" : "St. George",
 		"site_location" : "22 Blueberry Cove Road",
 		"location_note" : null,
@@ -39,13 +40,13 @@
 		"primary_caretaker" : "Joshua Waguli",
 		"secondary_caretaker" : null,
 		"longitude" : null,
-		"latitude" : null,
-		"site_url" : "https:\/\/extension.umaine.edu\/tanglewood\/blueberry-cove-tenants-harbor\/"
+		"latitude" : null
 	},
 	{
 		"site" : "Bangor High School",
 		"org_code" : "BHSSEC",
 		"organization" : "Bangor High School Student Environmental Club",
+		"site_url" : "https:\/\/www.bangor.k12.pa.us",
 		"town" : "Bangor",
 		"site_location" : "885 Broadway",
 		"location_note" : "In front of main entrance",
@@ -53,13 +54,13 @@
 		"primary_caretaker" : "Mark McCollough",
 		"secondary_caretaker" : null,
 		"longitude" : -68.781597,
-		"latitude" : 44.830207,
-		"site_url" : "https:\/\/www.bangor.k12.pa.us"
+		"latitude" : 44.830207
 	},
 	{
 		"site" : "Brewer Community School",
 		"org_code" : "BLTBrewer",
 		"organization" : "Brewer Land Trust City of Brewer",
+		"site_url" : "https:\/\/www.breweredu.org\/o\/brewer-community-school",
 		"town" : "Brewer",
 		"site_location" : "92 Pendleton Street",
 		"location_note" : null,
@@ -67,13 +68,13 @@
 		"primary_caretaker" : "Mark McCollough",
 		"secondary_caretaker" : null,
 		"longitude" : -68.768581,
-		"latitude" : 44.776417,
-		"site_url" : "https:\/\/www.breweredu.org\/o\/brewer-community-school"
+		"latitude" : 44.776417
 	},
 	{
 		"site" : "Brewer Municipal Pool and Playground",
 		"org_code" : "BLTBrewer",
 		"organization" : "Brewer Land Trust City of Brewer",
+		"site_url" : "https:\/\/brewerme.myrec.com\/info\/facilities\/details.aspx?FacilityID=14703",
 		"town" : "Brewer",
 		"site_location" : "318 Wilson Street",
 		"location_note" : null,
@@ -81,13 +82,13 @@
 		"primary_caretaker" : "Mark McCollough",
 		"secondary_caretaker" : null,
 		"longitude" : -68.754578,
-		"latitude" : 44.786437,
-		"site_url" : "https:\/\/brewerme.myrec.com\/info\/facilities\/details.aspx?FacilityID=14703"
+		"latitude" : 44.786437
 	},
 	{
 		"site" : "Brewer Public Safety",
 		"org_code" : "BLTBrewer",
 		"organization" : "Brewer Land Trust City of Brewer",
+		"site_url" : "https:\/\/www.wbrcae.com\/project\/brewer-public-safety-building\/",
 		"town" : "Brewer",
 		"site_location" : null,
 		"location_note" : null,
@@ -95,13 +96,13 @@
 		"primary_caretaker" : null,
 		"secondary_caretaker" : null,
 		"longitude" : -68.760282,
-		"latitude" : 44.780352,
-		"site_url" : "https:\/\/www.wbrcae.com\/project\/brewer-public-safety-building\/"
+		"latitude" : 44.780352
 	},
 	{
 		"site" : "Indian Trail Park",
 		"org_code" : "BLTBrewer",
 		"organization" : "Brewer Land Trust City of Brewer",
+		"site_url" : "https:\/\/www.brewerlandtrust.org\/nature-areas\/view\/indian-trail-park",
 		"town" : "Brewer",
 		"site_location" : "14 Indian Trail Lane",
 		"location_note" : null,
@@ -109,13 +110,13 @@
 		"primary_caretaker" : "Mark McCollough",
 		"secondary_caretaker" : null,
 		"longitude" : -68.751496,
-		"latitude" : 44.803393,
-		"site_url" : "https:\/\/www.brewerlandtrust.org\/nature-areas\/view\/indian-trail-park"
+		"latitude" : 44.803393
 	},
 	{
 		"site" : "Chestnut Street Park",
 		"org_code" : "CAUB",
 		"organization" : "City of Auburn",
+		"site_url" : "https:\/\/www.auburnmaine.gov\/departments\/parks\/chestnut_street_park.php",
 		"town" : "Auburn",
 		"site_location" : "24 Chestnut Street",
 		"location_note" : null,
@@ -123,13 +124,13 @@
 		"primary_caretaker" : "Noel Skelton",
 		"secondary_caretaker" : null,
 		"longitude" : -70.23151,
-		"latitude" : 44.103168,
-		"site_url" : "https:\/\/www.auburnmaine.gov\/departments\/parks\/chestnut_street_park.php"
+		"latitude" : 44.103168
 	},
 	{
 		"site" : "Franklin Pasture",
 		"org_code" : "CLEW",
 		"organization" : "City of Lewiston",
+		"site_url" : "https:\/\/lewistonme.myrec.com\/info\/facilities\/details.aspx?FacilityID=14698",
 		"town" : "Lewiston",
 		"site_location" : "156 East Avenue",
 		"location_note" : null,
@@ -137,13 +138,13 @@
 		"primary_caretaker" : "Steve Murch",
 		"secondary_caretaker" : null,
 		"longitude" : -70.207221,
-		"latitude" : 44.092848,
-		"site_url" : "https:\/\/lewistonme.myrec.com\/info\/facilities\/details.aspx?FacilityID=14698"
+		"latitude" : 44.092848
 	},
 	{
 		"site" : "Corinna Village Green",
 		"org_code" : "CORINNA",
 		"organization" : "Town of Corinna",
+		"site_url" : "https:\/\/corinna.govoffice.com",
 		"town" : "Corinna",
 		"site_location" : "Main Street (ME-7) and Levi Stewart Drive",
 		"location_note" : null,
@@ -151,13 +152,13 @@
 		"primary_caretaker" : null,
 		"secondary_caretaker" : null,
 		"longitude" : -69.261109,
-		"latitude" : 44.922051,
-		"site_url" : "https:\/\/corinna.govoffice.com"
+		"latitude" : 44.922051
 	},
 	{
 		"site" : "Cornerspring Montessori School",
 		"org_code" : "CSMS",
 		"organization" : "Cornerspring Montessori School",
+		"site_url" : "https:\/\/cornerspringmontessori.com",
 		"town" : "Belfast",
 		"site_location" : "256 Congress Street",
 		"location_note" : null,
@@ -165,13 +166,13 @@
 		"primary_caretaker" : "Susan Therio",
 		"secondary_caretaker" : null,
 		"longitude" : -69.0027,
-		"latitude" : 44.4066,
-		"site_url" : "https:\/\/cornerspringmontessori.com"
+		"latitude" : 44.4066
 	},
 	{
 		"site" : "Biddeford Community Garden at Rotary Park",
 		"org_code" : "EGP",
 		"organization" : "Ethan's Group Project",
+		"site_url" : "https:\/\/biddefordcommunitygardens.org\/our-gardens\/rotary-park\/",
 		"town" : "Biddeford",
 		"site_location" : "550 Main Street",
 		"location_note" : null,
@@ -179,13 +180,13 @@
 		"primary_caretaker" : "Ethan Davis",
 		"secondary_caretaker" : null,
 		"longitude" : -70.477758,
-		"latitude" : 43.499015,
-		"site_url" : "https:\/\/biddefordcommunitygardens.org\/our-gardens\/rotary-park\/"
+		"latitude" : 43.499015
 	},
 	{
 		"site" : "Jordan Homestead Preserve",
 		"org_code" : "FBCLT",
 		"organization" : "Frenchman’s Bay Conservancy Land Trust",
+		"site_url" : "https:\/\/frenchmanbay.org\/preserve\/jordan-homestead\/",
 		"town" : "Ellsworth",
 		"site_location" : "Bayside Road",
 		"location_note" : null,
@@ -193,13 +194,13 @@
 		"primary_caretaker" : null,
 		"secondary_caretaker" : null,
 		"longitude" : null,
-		"latitude" : null,
-		"site_url" : "https:\/\/frenchmanbay.org\/preserve\/jordan-homestead\/"
+		"latitude" : null
 	},
 	{
 		"site" : "Tidal Falls Preserve",
 		"org_code" : "FBCLT",
 		"organization" : "Frenchman’s Bay Conservancy Land Trust",
+		"site_url" : "https:\/\/frenchmanbay.org\/preserve\/tidal-falls\/",
 		"town" : "Hancock",
 		"site_location" : "72 Tidal Falls Road",
 		"location_note" : null,
@@ -207,13 +208,13 @@
 		"primary_caretaker" : "Mark McCollough",
 		"secondary_caretaker" : null,
 		"longitude" : -68.222698,
-		"latitude" : 44.519957,
-		"site_url" : "https:\/\/frenchmanbay.org\/preserve\/tidal-falls\/"
+		"latitude" : 44.519957
 	},
 	{
 		"site" : "Hurricane Valley Farm",
 		"org_code" : "FLT",
 		"organization" : "Falmouth Land Trust",
+		"site_url" : "https:\/\/falmouthlandtrust.org\/hvf",
 		"town" : "Falmouth",
 		"site_location" : "459 Gray Road",
 		"location_note" : null,
@@ -221,13 +222,13 @@
 		"primary_caretaker" : "Jack  Kennel",
 		"secondary_caretaker" : null,
 		"longitude" : -70.303896,
-		"latitude" : 43.787119,
-		"site_url" : "https:\/\/falmouthlandtrust.org\/hvf"
+		"latitude" : 43.787119
 	},
 	{
 		"site" : "Fort Point State Park",
 		"org_code" : "FTPTSP",
 		"organization" : "Fort Point State Park",
+		"site_url" : "https:\/\/www.maine.gov\/dacf\/parksearch\/PropertyGuides\/PDF_GUIDE\/fort-point.pdf",
 		"town" : "Stockton Springs",
 		"site_location" : "207 Lighthouse Road",
 		"location_note" : null,
@@ -235,13 +236,13 @@
 		"primary_caretaker" : null,
 		"secondary_caretaker" : null,
 		"longitude" : -68.812878,
-		"latitude" : 44.467632,
-		"site_url" : "https:\/\/www.maine.gov\/dacf\/parksearch\/PropertyGuides\/PDF_GUIDE\/fort-point.pdf"
+		"latitude" : 44.467632
 	},
 	{
 		"site" : "Dead River Trailhead Capstone Trail",
 		"org_code" : "GPMLT",
 		"organization" : "Great Pond Mountain Land Trust",
+		"site_url" : "https:\/\/www.greatpondtrust.org\/wildland-maps-guidelines\/",
 		"town" : "Orland",
 		"site_location" : "24 Don Fish Trail",
 		"location_note" : null,
@@ -249,13 +250,13 @@
 		"primary_caretaker" : "Mark McCollough",
 		"secondary_caretaker" : null,
 		"longitude" : -68.688195,
-		"latitude" : 44.595476,
-		"site_url" : "https:\/\/www.greatpondtrust.org\/wildland-maps-guidelines\/"
+		"latitude" : 44.595476
 	},
 	{
 		"site" : "Dead River Trailhead Log Landing",
 		"org_code" : "GPMLT",
 		"organization" : "Great Pond Mountain Land Trust",
+		"site_url" : "https:\/\/www.greatpondtrust.org\/wildland-maps-guidelines\/",
 		"town" : "Orland",
 		"site_location" : "70 Don Fish Trail",
 		"location_note" : null,
@@ -263,13 +264,13 @@
 		"primary_caretaker" : "Mark McCollough",
 		"secondary_caretaker" : null,
 		"longitude" : -68.691242,
-		"latitude" : 44.596314,
-		"site_url" : "https:\/\/www.greatpondtrust.org\/wildland-maps-guidelines\/"
+		"latitude" : 44.596314
 	},
 	{
 		"site" : "Chadbourne Field",
 		"org_code" : "GWRLT",
 		"organization" : "Great Works Regional Land Trust",
+		"site_url" : "https:\/\/gwrlt.org",
 		"town" : "South Berwick",
 		"site_location" : "46 Vine Street",
 		"location_note" : null,
@@ -277,13 +278,13 @@
 		"primary_caretaker" : null,
 		"secondary_caretaker" : null,
 		"longitude" : -70.81036,
-		"latitude" : 43.22125,
-		"site_url" : "https:\/\/gwrlt.org"
+		"latitude" : 43.22125
 	},
 	{
 		"site" : "Tidal Waters Preserve",
 		"org_code" : "GWRLT",
 		"organization" : "Great Works Regional Land Trust",
+		"site_url" : "https:\/\/gwrlt.org\/salmon-falls-tidal-waters\/",
 		"town" : "South Berwick",
 		"site_location" : "Adjacent to 174 Oldfields Road",
 		"location_note" : null,
@@ -291,13 +292,13 @@
 		"primary_caretaker" : null,
 		"secondary_caretaker" : null,
 		"longitude" : -70.81076,
-		"latitude" : 43.19583,
-		"site_url" : "https:\/\/gwrlt.org\/salmon-falls-tidal-waters\/"
+		"latitude" : 43.19583
 	},
 	{
 		"site" : "Hebron Station School",
 		"org_code" : "HSS",
 		"organization" : "Hebron Station School",
+		"site_url" : "https:\/\/www.msad17.org\/o\/hebron-station-school",
 		"town" : "Hebron",
 		"site_location" : null,
 		"location_note" : null,
@@ -305,13 +306,13 @@
 		"primary_caretaker" : "Sarah Otterson",
 		"secondary_caretaker" : null,
 		"longitude" : -70.348,
-		"latitude" : 44.230916,
-		"site_url" : "https:\/\/www.msad17.org\/o\/hebron-station-school"
+		"latitude" : 44.230916
 	},
 	{
 		"site" : "BaldPate",
 		"org_code" : "LELT",
 		"organization" : "Loon Echo Land Trust",
+		"site_url" : "https:\/\/www.lelt.org\/bald-pate-mountain",
 		"town" : "Bridgton",
 		"site_location" : null,
 		"location_note" : null,
@@ -319,13 +320,13 @@
 		"primary_caretaker" : "Jacob Schor",
 		"secondary_caretaker" : null,
 		"longitude" : -70.70759,
-		"latitude" : 43.954305,
-		"site_url" : "https:\/\/www.lelt.org\/bald-pate-mountain"
+		"latitude" : 43.954305
 	},
 	{
 		"site" : "Crooked River Forest",
 		"org_code" : "LELT",
 		"organization" : "Loon Echo Land Trust",
+		"site_url" : "https:\/\/www.lelt.org\/crooked-river-forest",
 		"town" : "Harrison",
 		"site_location" : null,
 		"location_note" : null,
@@ -333,13 +334,13 @@
 		"primary_caretaker" : "Maggie Lynn",
 		"secondary_caretaker" : null,
 		"longitude" : -70.612179,
-		"latitude" : 44.080578,
-		"site_url" : "https:\/\/www.lelt.org\/crooked-river-forest"
+		"latitude" : 44.080578
 	},
 	{
 		"site" : "Hackers Hill",
 		"org_code" : "LELT",
 		"organization" : "Loon Echo Land Trust",
+		"site_url" : "https:\/\/www.lelt.org\/hackers-hill-preserve",
 		"town" : "Casco",
 		"site_location" : null,
 		"location_note" : null,
@@ -347,13 +348,13 @@
 		"primary_caretaker" : "Kim Colson",
 		"secondary_caretaker" : null,
 		"longitude" : -70.5298,
-		"latitude" : 43.96585,
-		"site_url" : "https:\/\/www.lelt.org\/hackers-hill-preserve"
+		"latitude" : 43.96585
 	},
 	{
 		"site" : "Mayberry Hill",
 		"org_code" : "LELT",
 		"organization" : "Loon Echo Land Trust",
+		"site_url" : "https:\/\/www.lelt.org\/mayberry-hill-preserve",
 		"town" : "Casco",
 		"site_location" : null,
 		"location_note" : null,
@@ -361,13 +362,13 @@
 		"primary_caretaker" : "Kim Colson",
 		"secondary_caretaker" : null,
 		"longitude" : -70.5074,
-		"latitude" : 44.02598,
-		"site_url" : "https:\/\/www.lelt.org\/mayberry-hill-preserve"
+		"latitude" : 44.02598
 	},
 	{
 		"site" : "Peabody Fitch Woods",
 		"org_code" : "LELT",
 		"organization" : "Loon Echo Land Trust",
+		"site_url" : "https:\/\/www.lelt.org\/peabody-fitch-woods",
 		"town" : "Bridgton",
 		"site_location" : null,
 		"location_note" : null,
@@ -375,13 +376,13 @@
 		"primary_caretaker" : "Marji Berkman",
 		"secondary_caretaker" : null,
 		"longitude" : -70.723473,
-		"latitude" : 43.982604,
-		"site_url" : "https:\/\/www.lelt.org\/peabody-fitch-woods"
+		"latitude" : 43.982604
 	},
 	{
 		"site" : "Field NE of Main Building",
 		"org_code" : "MAFP",
 		"organization" : "Maine Audubon Fields Pond",
+		"site_url" : "https:\/\/maineaudubon.org\/visit\/fields-pond\/",
 		"town" : "Holden",
 		"site_location" : "216 Fields Pond Road",
 		"location_note" : null,
@@ -389,13 +390,13 @@
 		"primary_caretaker" : "Mark McCollough",
 		"secondary_caretaker" : null,
 		"longitude" : -68.725901,
-		"latitude" : 44.739708,
-		"site_url" : "https:\/\/maineaudubon.org\/visit\/fields-pond\/"
+		"latitude" : 44.739708
 	},
 	{
 		"site" : "Mary Snow School",
 		"org_code" : "MAFP",
 		"organization" : "Maine Audubon Fields Pond",
+		"site_url" : "https:\/\/marysnow.bangorschools.net",
 		"town" : "Bangor",
 		"site_location" : "Milford Street Extension",
 		"location_note" : null,
@@ -403,13 +404,13 @@
 		"primary_caretaker" : "Mark McCollough",
 		"secondary_caretaker" : null,
 		"longitude" : -68.771242,
-		"latitude" : 44.817278,
-		"site_url" : "https:\/\/marysnow.bangorschools.net"
+		"latitude" : 44.817278
 	},
 	{
 		"site" : "West of Main Building",
 		"org_code" : "MAFP",
 		"organization" : "Maine Audubon Fields Pond",
+		"site_url" : "https:\/\/maineaudubon.org\/visit\/fields-pond\/",
 		"town" : "Holden",
 		"site_location" : "216 Fields Pond Road",
 		"location_note" : null,
@@ -417,13 +418,13 @@
 		"primary_caretaker" : "Mark McCollough",
 		"secondary_caretaker" : null,
 		"longitude" : -68.728359,
-		"latitude" : 44.738636,
-		"site_url" : "https:\/\/maineaudubon.org\/visit\/fields-pond\/"
+		"latitude" : 44.738636
 	},
 	{
 		"site" : "Cousins River Fields & Marsh Preserve",
 		"org_code" : "MCHT",
 		"organization" : "Maine Coast Heritage Trust",
+		"site_url" : "https:\/\/www.mcht.org\/preserve\/cousins-river-fields-marsh\/",
 		"town" : "Yarmouth",
 		"site_location" : "Granite Street",
 		"location_note" : "Grove near parking & kiosk, open field next to woods",
@@ -431,13 +432,13 @@
 		"primary_caretaker" : "Martha Spiess",
 		"secondary_caretaker" : null,
 		"longitude" : -70.156688,
-		"latitude" : 43.821519,
-		"site_url" : "https:\/\/www.mcht.org\/preserve\/cousins-river-fields-marsh\/"
+		"latitude" : 43.821519
 	},
 	{
 		"site" : "Erickson Fields Preserve",
 		"org_code" : "MCHT",
 		"organization" : "Maine Coast Heritage Trust",
+		"site_url" : "https:\/\/www.mcht.org\/preserve\/erickson-fields\/",
 		"town" : "Rockport",
 		"site_location" : "90 Beech Hill Road",
 		"location_note" : null,
@@ -445,13 +446,13 @@
 		"primary_caretaker" : null,
 		"secondary_caretaker" : null,
 		"longitude" : -69.101058,
-		"latitude" : 44.176243,
-		"site_url" : "https:\/\/www.mcht.org\/preserve\/erickson-fields\/"
+		"latitude" : 44.176243
 	},
 	{
 		"site" : "Mt Joy Community Orchard",
 		"org_code" : "MJCO",
 		"organization" : "Mt Joy Community Orchard",
+		"site_url" : "https:\/\/mountjoyorchard.wixsite.com\/mtjoy",
 		"town" : "Portland",
 		"site_location" : "151-223 Washington Avenue",
 		"location_note" : null,
@@ -459,13 +460,13 @@
 		"primary_caretaker" : "Aaron Parker",
 		"secondary_caretaker" : null,
 		"longitude" : -70.254222,
-		"latitude" : 43.67071,
-		"site_url" : "https:\/\/mountjoyorchard.wixsite.com\/mtjoy"
+		"latitude" : 43.67071
 	},
 	{
 		"site" : "Murray Point Road",
 		"org_code" : "MLLT",
 		"organization" : "Meddybemps Lake Land Trust",
+		"site_url" : "https:\/\/www.meddybempsme.org\/post\/our-first-trails",
 		"town" : "Baileyville",
 		"site_location" : "Murray Point Road",
 		"location_note" : null,
@@ -473,13 +474,13 @@
 		"primary_caretaker" : null,
 		"secondary_caretaker" : null,
 		"longitude" : -67.395736,
-		"latitude" : 45.101619,
-		"site_url" : "https:\/\/www.meddybempsme.org\/post\/our-first-trails"
+		"latitude" : 45.101619
 	},
 	{
 		"site" : "Maine Youth Fish and Game Club",
 		"org_code" : "MYFGC",
 		"organization" : "Maine Youth Fish and Game Club",
+		"site_url" : "https:\/\/www.maineyouthfishandgame.org",
 		"town" : "Milford",
 		"site_location" : "Stud Mill Road",
 		"location_note" : null,
@@ -487,13 +488,13 @@
 		"primary_caretaker" : "Mark McCollough",
 		"secondary_caretaker" : null,
 		"longitude" : -68.453169,
-		"latitude" : 44.971438,
-		"site_url" : "https:\/\/www.maineyouthfishandgame.org"
+		"latitude" : 44.971438
 	},
 	{
 		"site" : "North Shore Preserve",
 		"org_code" : "NHCP",
 		"organization" : "North Haven Conservation Partners",
+		"site_url" : "https:\/\/northhavenconservation.org\/caring-for-land\/conservation-properties\/",
 		"town" : "North Haven",
 		"site_location" : null,
 		"location_note" : null,
@@ -501,13 +502,13 @@
 		"primary_caretaker" : "Paul Jessen",
 		"secondary_caretaker" : null,
 		"longitude" : null,
-		"latitude" : null,
-		"site_url" : "https:\/\/northhavenconservation.org\/caring-for-land\/conservation-properties\/"
+		"latitude" : null
 	},
 	{
 		"site" : "Orono High School",
 		"org_code" : "ORONO",
 		"organization" : "City of Orono",
+		"site_url" : "https:\/\/www.oronoschools.org",
 		"town" : "Orono",
 		"site_location" : "14 Goodridge Drive",
 		"location_note" : null,
@@ -515,13 +516,13 @@
 		"primary_caretaker" : null,
 		"secondary_caretaker" : null,
 		"longitude" : -68.677491,
-		"latitude" : 44.883166,
-		"site_url" : "https:\/\/www.oronoschools.org"
+		"latitude" : 44.883166
 	},
 	{
 		"site" : "Camp Pondicherry",
 		"org_code" : "POND",
 		"organization" : "Camp Pondicherry",
+		"site_url" : "https:\/\/www.girlscoutsofmaine.org\/en\/members\/for-girl-scouts\/camp-and-outdoors\/camp-properties-and-rentals\/camp-pondicherry.html",
 		"town" : "Bridgton",
 		"site_location" : "85 Camp Pondicherry Road",
 		"location_note" : null,
@@ -529,13 +530,13 @@
 		"primary_caretaker" : null,
 		"secondary_caretaker" : null,
 		"longitude" : -70.714028,
-		"latitude" : 43.997138,
-		"site_url" : "https:\/\/www.girlscoutsofmaine.org\/en\/members\/for-girl-scouts\/camp-and-outdoors\/camp-properties-and-rentals\/camp-pondicherry.html"
+		"latitude" : 43.997138
 	},
 	{
 		"site" : "PVT FAR Moosehorn",
 		"org_code" : "PVT FAR",
 		"organization" : "Private Land FAR",
+		"site_url" : null,
 		"town" : "Lee",
 		"site_location" : null,
 		"location_note" : null,
@@ -543,13 +544,13 @@
 		"primary_caretaker" : null,
 		"secondary_caretaker" : null,
 		"longitude" : -68.233151,
-		"latitude" : 45.338346,
-		"site_url" : null
+		"latitude" : 45.338346
 	},
 	{
 		"site" : "PVT KLC House",
 		"org_code" : "PVT KLC",
 		"organization" : "Private Land KLC",
+		"site_url" : null,
 		"town" : "Sebago",
 		"site_location" : null,
 		"location_note" : null,
@@ -557,13 +558,13 @@
 		"primary_caretaker" : "Kim Colson",
 		"secondary_caretaker" : null,
 		"longitude" : -70.6119,
-		"latitude" : 43.9125,
-		"site_url" : null
+		"latitude" : 43.9125
 	},
 	{
 		"site" : "PVT KLC Log Landing",
 		"org_code" : "PVT KLC",
 		"organization" : "Private Land KLC",
+		"site_url" : null,
 		"town" : "Sebago",
 		"site_location" : null,
 		"location_note" : null,
@@ -571,13 +572,13 @@
 		"primary_caretaker" : null,
 		"secondary_caretaker" : null,
 		"longitude" : null,
-		"latitude" : null,
-		"site_url" : null
+		"latitude" : null
 	},
 	{
 		"site" : "PVT RWB Parkland",
 		"org_code" : "PVT RWB",
 		"organization" : "Private Land RWB",
+		"site_url" : null,
 		"town" : "Swanville",
 		"site_location" : null,
 		"location_note" : null,
@@ -585,13 +586,13 @@
 		"primary_caretaker" : null,
 		"secondary_caretaker" : null,
 		"longitude" : -70.796294,
-		"latitude" : 44.123565,
-		"site_url" : null
+		"latitude" : 44.123565
 	},
 	{
 		"site" : "SLSP Boat Ramp",
 		"org_code" : "SLSP",
 		"organization" : "Sebago Lake State Park",
+		"site_url" : "https:\/\/www.maine.gov\/dacf\/parks\/trail_activities\/sebago_lake_trail_conditions.shtml",
 		"town" : "Casco",
 		"site_location" : null,
 		"location_note" : null,
@@ -599,13 +600,13 @@
 		"primary_caretaker" : "Suz Miller",
 		"secondary_caretaker" : "Deb Keef",
 		"longitude" : -70.5719,
-		"latitude" : 43.91648,
-		"site_url" : "https:\/\/www.maine.gov\/dacf\/parks\/trail_activities\/sebago_lake_trail_conditions.shtml"
+		"latitude" : 43.91648
 	},
 	{
 		"site" : "SLSP New Gate",
 		"org_code" : "SLSP",
 		"organization" : "Sebago Lake State Park",
+		"site_url" : "https:\/\/www.maine.gov\/dacf\/parks\/trail_activities\/sebago_lake_trail_conditions.shtml",
 		"town" : "Casco",
 		"site_location" : null,
 		"location_note" : null,
@@ -613,13 +614,13 @@
 		"primary_caretaker" : "Suz Miller",
 		"secondary_caretaker" : "Deb Keef",
 		"longitude" : -70.56958,
-		"latitude" : 43.91626,
-		"site_url" : "https:\/\/www.maine.gov\/dacf\/parks\/trail_activities\/sebago_lake_trail_conditions.shtml"
+		"latitude" : 43.91626
 	},
 	{
 		"site" : "Lowd Environmental Reserve",
 		"org_code" : "SSMWLT",
 		"organization" : "Sanford Springvale Mousam Way Land Trust",
+		"site_url" : "https:\/\/mousamwaylandtrust.org\/2022\/12\/12\/lowd-environmental-reserve\/",
 		"town" : "Ogunquit",
 		"site_location" : "102 Oak Street",
 		"location_note" : null,
@@ -627,13 +628,13 @@
 		"primary_caretaker" : null,
 		"secondary_caretaker" : null,
 		"longitude" : -70.8025,
-		"latitude" : 43.459166,
-		"site_url" : "https:\/\/mousamwaylandtrust.org\/2022\/12\/12\/lowd-environmental-reserve\/"
+		"latitude" : 43.459166
 	},
 	{
 		"site" : "Virginia Morin Field",
 		"org_code" : "SSMWLT",
 		"organization" : "Sanford Springvale Mousam Way Land Trust",
+		"site_url" : "https:\/\/www.sweatmorinhomestead.org\/about\/virginia-h-morin-preserve",
 		"town" : "Sanford",
 		"site_location" : "346 School Street",
 		"location_note" : null,
@@ -641,13 +642,13 @@
 		"primary_caretaker" : null,
 		"secondary_caretaker" : null,
 		"longitude" : -70.746111,
-		"latitude" : 43.408333,
-		"site_url" : "https:\/\/www.sweatmorinhomestead.org\/about\/virginia-h-morin-preserve"
+		"latitude" : 43.408333
 	},
 	{
 		"site" : "Campus",
 		"org_code" : "UMG",
 		"organization" : "University of Southern Maine",
+		"site_url" : "https:\/\/usm.maine.edu",
 		"town" : "Gorham",
 		"site_location" : null,
 		"location_note" : null,
@@ -655,13 +656,13 @@
 		"primary_caretaker" : null,
 		"secondary_caretaker" : null,
 		"longitude" : -70.452469,
-		"latitude" : 43.680226,
-		"site_url" : "https:\/\/usm.maine.edu"
+		"latitude" : 43.680226
 	},
 	{
 		"site" : "Shepard’s Farm Preserve",
 		"org_code" : "WFLT",
 		"organization" : "Western Foothills Land Trust",
+		"site_url" : "https:\/\/www.wfltmaine.org\/witt-shephards",
 		"town" : "Norway",
 		"site_location" : null,
 		"location_note" : null,
@@ -669,13 +670,13 @@
 		"primary_caretaker" : null,
 		"secondary_caretaker" : null,
 		"longitude" : -70.56432,
-		"latitude" : 44.220851,
-		"site_url" : "https:\/\/www.wfltmaine.org\/witt-shephards"
+		"latitude" : 44.220851
 	},
 	{
 		"site" : "Wild tree UNKNOWN to TACF",
 		"org_code" : "WildCAM",
 		"organization" : "Chestnuts Across Maine",
+		"site_url" : "https:\/\/tacf.org\/find-wild-american-chestnuts\/",
 		"town" : null,
 		"site_location" : "",
 		"location_note" : null,
@@ -683,13 +684,13 @@
 		"primary_caretaker" : null,
 		"secondary_caretaker" : null,
 		"longitude" : null,
-		"latitude" : null,
-		"site_url" : "https:\/\/tacf.org\/find-wild-american-chestnuts\/"
+		"latitude" : null
 	},
 	{
 		"site" : "Wild tree KNOWN to TACF",
 		"org_code" : "WildTACF",
 		"organization" : "The American Chestnut Foundation",
+		"site_url" : "https:\/\/tacf.org\/find-wild-american-chestnuts\/",
 		"town" : null,
 		"site_location" : "",
 		"location_note" : null,
@@ -697,13 +698,13 @@
 		"primary_caretaker" : null,
 		"secondary_caretaker" : null,
 		"longitude" : null,
-		"latitude" : null,
-		"site_url" : "https:\/\/tacf.org\/find-wild-american-chestnuts\/"
+		"latitude" : null
 	},
 	{
 		"site" : "Wolfe's Neck Center for Ag & Env",
 		"org_code" : "WNC",
 		"organization" : "Wolfe’s Neck Center for Agriculture & the Environment",
+		"site_url" : "https:\/\/www.wolfesneck.org",
 		"town" : "Freeport",
 		"site_location" : "184 Burnett Road",
 		"location_note" : null,
@@ -711,7 +712,6 @@
 		"primary_caretaker" : null,
 		"secondary_caretaker" : null,
 		"longitude" : -70.073759,
-		"latitude" : 43.829871,
-		"site_url" : "https:\/\/www.wolfesneck.org"
+		"latitude" : 43.829871
 	}
 ]}
