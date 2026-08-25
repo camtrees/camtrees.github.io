@@ -11,7 +11,8 @@
 		"primary_caretaker" : "Ethan Davis",
 		"secondary_caretaker" : null,
 		"longitude" : -70.530968,
-		"latitude" : 43.423529
+		"latitude" : 43.423529,
+		"site_url" : "https:\/\/arundelmaine.org\/"
 	},
 	{
 		"site" : "BBA Chestnut Orchard",
@@ -24,7 +25,8 @@
 		"primary_caretaker" : "Brandon Rackliff",
 		"secondary_caretaker" : null,
 		"longitude" : -71.607087,
-		"latitude" : 42.72077
+		"latitude" : 42.72077,
+		"site_url" : "https:\/\/www.beaverbrook.org"
 	},
 	{
 		"site" : "Blueberry Cove 4-H Camp",
@@ -37,7 +39,8 @@
 		"primary_caretaker" : "Joshua Waguli",
 		"secondary_caretaker" : null,
 		"longitude" : null,
-		"latitude" : null
+		"latitude" : null,
+		"site_url" : "https:\/\/extension.umaine.edu\/tanglewood\/blueberry-cove-tenants-harbor\/"
 	},
 	{
 		"site" : "Bangor High School",
@@ -50,7 +53,8 @@
 		"primary_caretaker" : "Mark McCollough",
 		"secondary_caretaker" : null,
 		"longitude" : -68.781597,
-		"latitude" : 44.830207
+		"latitude" : 44.830207,
+		"site_url" : "https:\/\/www.bangor.k12.pa.us"
 	},
 	{
 		"site" : "Brewer Community School",
@@ -63,7 +67,8 @@
 		"primary_caretaker" : "Mark McCollough",
 		"secondary_caretaker" : null,
 		"longitude" : -68.768581,
-		"latitude" : 44.776417
+		"latitude" : 44.776417,
+		"site_url" : "https:\/\/www.breweredu.org\/o\/brewer-community-school"
 	},
 	{
 		"site" : "Brewer Municipal Pool and Playground",
@@ -76,7 +81,8 @@
 		"primary_caretaker" : "Mark McCollough",
 		"secondary_caretaker" : null,
 		"longitude" : -68.754578,
-		"latitude" : 44.786437
+		"latitude" : 44.786437,
+		"site_url" : "https:\/\/brewerme.myrec.com\/info\/facilities\/details.aspx?FacilityID=14703"
 	},
 	{
 		"site" : "Brewer Public Safety",
@@ -89,7 +95,8 @@
 		"primary_caretaker" : null,
 		"secondary_caretaker" : null,
 		"longitude" : -68.760282,
-		"latitude" : 44.780352
+		"latitude" : 44.780352,
+		"site_url" : "https:\/\/www.wbrcae.com\/project\/brewer-public-safety-building\/"
 	},
 	{
 		"site" : "Indian Trail Park",
@@ -102,7 +109,8 @@
 		"primary_caretaker" : "Mark McCollough",
 		"secondary_caretaker" : null,
 		"longitude" : -68.751496,
-		"latitude" : 44.803393
+		"latitude" : 44.803393,
+		"site_url" : "https:\/\/www.brewerlandtrust.org\/nature-areas\/view\/indian-trail-park"
 	},
 	{
 		"site" : "Chestnut Street Park",
@@ -115,7 +123,8 @@
 		"primary_caretaker" : "Noel Skelton",
 		"secondary_caretaker" : null,
 		"longitude" : -70.23151,
-		"latitude" : 44.103168
+		"latitude" : 44.103168,
+		"site_url" : "https:\/\/www.auburnmaine.gov\/departments\/parks\/chestnut_street_park.php"
 	},
 	{
 		"site" : "Franklin Pasture",
@@ -128,7 +137,8 @@
 		"primary_caretaker" : "Steve Murch",
 		"secondary_caretaker" : null,
 		"longitude" : -70.207221,
-		"latitude" : 44.092848
+		"latitude" : 44.092848,
+		"site_url" : "https:\/\/lewistonme.myrec.com\/info\/facilities\/details.aspx?FacilityID=14698"
 	},
 	{
 		"site" : "Corinna Village Green",
@@ -141,7 +151,8 @@
 		"primary_caretaker" : null,
 		"secondary_caretaker" : null,
 		"longitude" : -69.261109,
-		"latitude" : 44.922051
+		"latitude" : 44.922051,
+		"site_url" : "https:\/\/corinna.govoffice.com"
 	},
 	{
 		"site" : "Cornerspring Montessori School",
@@ -154,7 +165,8 @@
 		"primary_caretaker" : "Susan Therio",
 		"secondary_caretaker" : null,
 		"longitude" : -69.0027,
-		"latitude" : 44.4066
+		"latitude" : 44.4066,
+		"site_url" : "https:\/\/cornerspringmontessori.com"
 	},
 	{
 		"site" : "Biddeford Community Garden at Rotary Park",
@@ -167,7 +179,8 @@
 		"primary_caretaker" : "Ethan Davis",
 		"secondary_caretaker" : null,
 		"longitude" : -70.477758,
-		"latitude" : 43.499015
+		"latitude" : 43.499015,
+		"site_url" : "https:\/\/biddefordcommunitygardens.org\/our-gardens\/rotary-park\/"
 	},
 	{
 		"site" : "Jordan Homestead Preserve",
@@ -180,7 +193,8 @@
 		"primary_caretaker" : null,
 		"secondary_caretaker" : null,
 		"longitude" : null,
-		"latitude" : null
+		"latitude" : null,
+		"site_url" : "https:\/\/frenchmanbay.org\/preserve\/jordan-homestead\/"
 	},
 	{
 		"site" : "Tidal Falls Preserve",
@@ -193,7 +207,8 @@
 		"primary_caretaker" : "Mark McCollough",
 		"secondary_caretaker" : null,
 		"longitude" : -68.222698,
-		"latitude" : 44.519957
+		"latitude" : 44.519957,
+		"site_url" : "https:\/\/frenchmanbay.org\/preserve\/tidal-falls\/"
 	},
 	{
 		"site" : "Hurricane Valley Farm",
@@ -206,7 +221,8 @@
 		"primary_caretaker" : "Jack  Kennel",
 		"secondary_caretaker" : null,
 		"longitude" : -70.303896,
-		"latitude" : 43.787119
+		"latitude" : 43.787119,
+		"site_url" : "https:\/\/falmouthlandtrust.org\/hvf"
 	},
 	{
 		"site" : "Fort Point State Park",
@@ -219,7 +235,8 @@
 		"primary_caretaker" : null,
 		"secondary_caretaker" : null,
 		"longitude" : -68.812878,
-		"latitude" : 44.467632
+		"latitude" : 44.467632,
+		"site_url" : "https:\/\/www.maine.gov\/dacf\/parksearch\/PropertyGuides\/PDF_GUIDE\/fort-point.pdf"
 	},
 	{
 		"site" : "Dead River Trailhead Capstone Trail",
@@ -232,7 +249,8 @@
 		"primary_caretaker" : "Mark McCollough",
 		"secondary_caretaker" : null,
 		"longitude" : -68.688195,
-		"latitude" : 44.595476
+		"latitude" : 44.595476,
+		"site_url" : "https:\/\/www.greatpondtrust.org\/wildland-maps-guidelines\/"
 	},
 	{
 		"site" : "Dead River Trailhead Log Landing",
@@ -245,7 +263,8 @@
 		"primary_caretaker" : "Mark McCollough",
 		"secondary_caretaker" : null,
 		"longitude" : -68.691242,
-		"latitude" : 44.596314
+		"latitude" : 44.596314,
+		"site_url" : "https:\/\/www.greatpondtrust.org\/wildland-maps-guidelines\/"
 	},
 	{
 		"site" : "Chadbourne Field",
@@ -258,7 +277,8 @@
 		"primary_caretaker" : null,
 		"secondary_caretaker" : null,
 		"longitude" : -70.81036,
-		"latitude" : 43.22125
+		"latitude" : 43.22125,
+		"site_url" : "https:\/\/gwrlt.org"
 	},
 	{
 		"site" : "Tidal Waters Preserve",
@@ -271,7 +291,8 @@
 		"primary_caretaker" : null,
 		"secondary_caretaker" : null,
 		"longitude" : -70.81076,
-		"latitude" : 43.19583
+		"latitude" : 43.19583,
+		"site_url" : "https:\/\/gwrlt.org\/salmon-falls-tidal-waters\/"
 	},
 	{
 		"site" : "Hebron Station School",
@@ -284,7 +305,8 @@
 		"primary_caretaker" : "Sarah Otterson",
 		"secondary_caretaker" : null,
 		"longitude" : -70.348,
-		"latitude" : 44.230916
+		"latitude" : 44.230916,
+		"site_url" : "https:\/\/www.msad17.org\/o\/hebron-station-school"
 	},
 	{
 		"site" : "BaldPate",
@@ -297,7 +319,8 @@
 		"primary_caretaker" : "Jacob Schor",
 		"secondary_caretaker" : null,
 		"longitude" : -70.70759,
-		"latitude" : 43.954305
+		"latitude" : 43.954305,
+		"site_url" : "https:\/\/www.lelt.org\/bald-pate-mountain"
 	},
 	{
 		"site" : "Crooked River Forest",
@@ -310,7 +333,8 @@
 		"primary_caretaker" : "Maggie Lynn",
 		"secondary_caretaker" : null,
 		"longitude" : -70.612179,
-		"latitude" : 44.080578
+		"latitude" : 44.080578,
+		"site_url" : "https:\/\/www.lelt.org\/crooked-river-forest"
 	},
 	{
 		"site" : "Hackers Hill",
@@ -323,7 +347,8 @@
 		"primary_caretaker" : "Kim Colson",
 		"secondary_caretaker" : null,
 		"longitude" : -70.5298,
-		"latitude" : 43.96585
+		"latitude" : 43.96585,
+		"site_url" : "https:\/\/www.lelt.org\/hackers-hill-preserve"
 	},
 	{
 		"site" : "Mayberry Hill",
@@ -336,7 +361,8 @@
 		"primary_caretaker" : "Kim Colson",
 		"secondary_caretaker" : null,
 		"longitude" : -70.5074,
-		"latitude" : 44.02598
+		"latitude" : 44.02598,
+		"site_url" : "https:\/\/www.lelt.org\/mayberry-hill-preserve"
 	},
 	{
 		"site" : "Peabody Fitch Woods",
@@ -349,7 +375,8 @@
 		"primary_caretaker" : "Marji Berkman",
 		"secondary_caretaker" : null,
 		"longitude" : -70.723473,
-		"latitude" : 43.982604
+		"latitude" : 43.982604,
+		"site_url" : "https:\/\/www.lelt.org\/peabody-fitch-woods"
 	},
 	{
 		"site" : "Field NE of Main Building",
@@ -362,7 +389,8 @@
 		"primary_caretaker" : "Mark McCollough",
 		"secondary_caretaker" : null,
 		"longitude" : -68.725901,
-		"latitude" : 44.739708
+		"latitude" : 44.739708,
+		"site_url" : "https:\/\/maineaudubon.org\/visit\/fields-pond\/"
 	},
 	{
 		"site" : "Mary Snow School",
@@ -375,7 +403,8 @@
 		"primary_caretaker" : "Mark McCollough",
 		"secondary_caretaker" : null,
 		"longitude" : -68.771242,
-		"latitude" : 44.817278
+		"latitude" : 44.817278,
+		"site_url" : "https:\/\/marysnow.bangorschools.net"
 	},
 	{
 		"site" : "West of Main Building",
@@ -388,7 +417,8 @@
 		"primary_caretaker" : "Mark McCollough",
 		"secondary_caretaker" : null,
 		"longitude" : -68.728359,
-		"latitude" : 44.738636
+		"latitude" : 44.738636,
+		"site_url" : "https:\/\/maineaudubon.org\/visit\/fields-pond\/"
 	},
 	{
 		"site" : "Cousins River Fields & Marsh Preserve",
@@ -401,7 +431,8 @@
 		"primary_caretaker" : "Martha Spiess",
 		"secondary_caretaker" : null,
 		"longitude" : -70.156688,
-		"latitude" : 43.821519
+		"latitude" : 43.821519,
+		"site_url" : "https:\/\/www.mcht.org\/preserve\/cousins-river-fields-marsh\/"
 	},
 	{
 		"site" : "Erickson Fields Preserve",
@@ -414,7 +445,8 @@
 		"primary_caretaker" : null,
 		"secondary_caretaker" : null,
 		"longitude" : -69.101058,
-		"latitude" : 44.176243
+		"latitude" : 44.176243,
+		"site_url" : "https:\/\/www.mcht.org\/preserve\/erickson-fields\/"
 	},
 	{
 		"site" : "Mt Joy Community Orchard",
@@ -427,7 +459,8 @@
 		"primary_caretaker" : "Aaron Parker",
 		"secondary_caretaker" : null,
 		"longitude" : -70.254222,
-		"latitude" : 43.67071
+		"latitude" : 43.67071,
+		"site_url" : "https:\/\/mountjoyorchard.wixsite.com\/mtjoy"
 	},
 	{
 		"site" : "Murray Point Road",
@@ -440,7 +473,8 @@
 		"primary_caretaker" : null,
 		"secondary_caretaker" : null,
 		"longitude" : -67.395736,
-		"latitude" : 45.101619
+		"latitude" : 45.101619,
+		"site_url" : "https:\/\/www.meddybempsme.org\/post\/our-first-trails"
 	},
 	{
 		"site" : "Maine Youth Fish and Game Club",
@@ -453,7 +487,8 @@
 		"primary_caretaker" : "Mark McCollough",
 		"secondary_caretaker" : null,
 		"longitude" : -68.453169,
-		"latitude" : 44.971438
+		"latitude" : 44.971438,
+		"site_url" : "https:\/\/www.maineyouthfishandgame.org"
 	},
 	{
 		"site" : "North Shore Preserve",
@@ -466,7 +501,8 @@
 		"primary_caretaker" : "Paul Jessen",
 		"secondary_caretaker" : null,
 		"longitude" : null,
-		"latitude" : null
+		"latitude" : null,
+		"site_url" : "https:\/\/northhavenconservation.org\/caring-for-land\/conservation-properties\/"
 	},
 	{
 		"site" : "Orono High School",
@@ -479,7 +515,8 @@
 		"primary_caretaker" : null,
 		"secondary_caretaker" : null,
 		"longitude" : -68.677491,
-		"latitude" : 44.883166
+		"latitude" : 44.883166,
+		"site_url" : "https:\/\/www.oronoschools.org"
 	},
 	{
 		"site" : "Camp Pondicherry",
@@ -492,7 +529,8 @@
 		"primary_caretaker" : null,
 		"secondary_caretaker" : null,
 		"longitude" : -70.714028,
-		"latitude" : 43.997138
+		"latitude" : 43.997138,
+		"site_url" : "https:\/\/www.girlscoutsofmaine.org\/en\/members\/for-girl-scouts\/camp-and-outdoors\/camp-properties-and-rentals\/camp-pondicherry.html"
 	},
 	{
 		"site" : "PVT FAR Moosehorn",
@@ -505,7 +543,8 @@
 		"primary_caretaker" : null,
 		"secondary_caretaker" : null,
 		"longitude" : -68.233151,
-		"latitude" : 45.338346
+		"latitude" : 45.338346,
+		"site_url" : null
 	},
 	{
 		"site" : "PVT KLC House",
@@ -518,7 +557,8 @@
 		"primary_caretaker" : "Kim Colson",
 		"secondary_caretaker" : null,
 		"longitude" : -70.6119,
-		"latitude" : 43.9125
+		"latitude" : 43.9125,
+		"site_url" : null
 	},
 	{
 		"site" : "PVT KLC Log Landing",
@@ -531,7 +571,8 @@
 		"primary_caretaker" : null,
 		"secondary_caretaker" : null,
 		"longitude" : null,
-		"latitude" : null
+		"latitude" : null,
+		"site_url" : null
 	},
 	{
 		"site" : "PVT RWB Parkland",
@@ -544,7 +585,8 @@
 		"primary_caretaker" : null,
 		"secondary_caretaker" : null,
 		"longitude" : -70.796294,
-		"latitude" : 44.123565
+		"latitude" : 44.123565,
+		"site_url" : null
 	},
 	{
 		"site" : "SLSP Boat Ramp",
@@ -557,7 +599,8 @@
 		"primary_caretaker" : "Suz Miller",
 		"secondary_caretaker" : "Deb Keef",
 		"longitude" : -70.5719,
-		"latitude" : 43.91648
+		"latitude" : 43.91648,
+		"site_url" : "https:\/\/www.maine.gov\/dacf\/parks\/trail_activities\/sebago_lake_trail_conditions.shtml"
 	},
 	{
 		"site" : "SLSP New Gate",
@@ -570,7 +613,8 @@
 		"primary_caretaker" : "Suz Miller",
 		"secondary_caretaker" : "Deb Keef",
 		"longitude" : -70.56958,
-		"latitude" : 43.91626
+		"latitude" : 43.91626,
+		"site_url" : "https:\/\/www.maine.gov\/dacf\/parks\/trail_activities\/sebago_lake_trail_conditions.shtml"
 	},
 	{
 		"site" : "Lowd Environmental Reserve",
@@ -583,7 +627,8 @@
 		"primary_caretaker" : null,
 		"secondary_caretaker" : null,
 		"longitude" : -70.8025,
-		"latitude" : 43.459166
+		"latitude" : 43.459166,
+		"site_url" : "https:\/\/mousamwaylandtrust.org\/2022\/12\/12\/lowd-environmental-reserve\/"
 	},
 	{
 		"site" : "Virginia Morin Field",
@@ -596,7 +641,8 @@
 		"primary_caretaker" : null,
 		"secondary_caretaker" : null,
 		"longitude" : -70.746111,
-		"latitude" : 43.408333
+		"latitude" : 43.408333,
+		"site_url" : "https:\/\/www.sweatmorinhomestead.org\/about\/virginia-h-morin-preserve"
 	},
 	{
 		"site" : "Campus",
@@ -609,7 +655,8 @@
 		"primary_caretaker" : null,
 		"secondary_caretaker" : null,
 		"longitude" : -70.452469,
-		"latitude" : 43.680226
+		"latitude" : 43.680226,
+		"site_url" : "https:\/\/usm.maine.edu"
 	},
 	{
 		"site" : "Shepard’s Farm Preserve",
@@ -622,7 +669,8 @@
 		"primary_caretaker" : null,
 		"secondary_caretaker" : null,
 		"longitude" : -70.56432,
-		"latitude" : 44.220851
+		"latitude" : 44.220851,
+		"site_url" : "https:\/\/www.wfltmaine.org\/witt-shephards"
 	},
 	{
 		"site" : "Wild tree UNKNOWN to TACF",
@@ -635,7 +683,8 @@
 		"primary_caretaker" : null,
 		"secondary_caretaker" : null,
 		"longitude" : null,
-		"latitude" : null
+		"latitude" : null,
+		"site_url" : "https:\/\/tacf.org\/find-wild-american-chestnuts\/"
 	},
 	{
 		"site" : "Wild tree KNOWN to TACF",
@@ -648,7 +697,8 @@
 		"primary_caretaker" : null,
 		"secondary_caretaker" : null,
 		"longitude" : null,
-		"latitude" : null
+		"latitude" : null,
+		"site_url" : "https:\/\/tacf.org\/find-wild-american-chestnuts\/"
 	},
 	{
 		"site" : "Wolfe's Neck Center for Ag & Env",
@@ -661,6 +711,7 @@
 		"primary_caretaker" : null,
 		"secondary_caretaker" : null,
 		"longitude" : -70.073759,
-		"latitude" : 43.829871
+		"latitude" : 43.829871,
+		"site_url" : "https:\/\/www.wolfesneck.org"
 	}
 ]}
