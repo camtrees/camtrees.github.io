@@ -16,6 +16,32 @@
     return column.type === 'boolean' ? yesNoValue(value) : value;
   }
 
+  function safeWebUrl(value) {
+    try {
+      const url = new URL(value);
+      return ['https:', 'http:'].includes(url.protocol) ? url.href : '';
+    } catch (_) {
+      return '';
+    }
+  }
+
+  function appendValue(container, row, column) {
+    const value = displayValue(row, column);
+    const url = column.type === 'url' ? safeWebUrl(value) : '';
+    if (url) {
+      const link = document.createElement('a');
+      link.className = 'cam-table__url';
+      link.href = url;
+      link.target = '_blank';
+      link.rel = 'noopener noreferrer';
+      link.textContent = column.linkLabel || value;
+      link.setAttribute('aria-label', `${column.linkLabel || column.label} (opens in a new tab)`);
+      container.append(link);
+    } else {
+      container.textContent = value || '—';
+    }
+  }
+
   function compareRows(left, right, column) {
     const a = rawValue(left, column.key);
     const b = rawValue(right, column.key);
@@ -69,7 +95,7 @@
       details.replaceChildren();
       columns.forEach((column) => {
         const label = document.createElement('dt'); label.textContent = column.label;
-        const value = document.createElement('dd'); value.textContent = displayValue(record, column) || '—';
+        const value = document.createElement('dd'); appendValue(value, record, column);
         details.append(label, value);
       });
       showDialog(dialog);
@@ -239,7 +265,7 @@
           const icon = document.createElement('span'); icon.setAttribute('aria-hidden', 'true'); icon.textContent = '👁';
           const label = document.createElement('span'); label.className = 'cam-table__view-label'; label.textContent = 'View record';
           viewButton.append(icon, label); viewButton.addEventListener('click', () => openRecordDialog(item)); actionCell.append(viewButton); row.append(actionCell);
-          columns.forEach((column) => { const cell = document.createElement('td'); cell.textContent = displayValue(item, column) || '—'; row.append(cell); });
+          columns.forEach((column) => { const cell = document.createElement('td'); appendValue(cell, item, column); row.append(cell); });
           body.append(row);
         });
       }

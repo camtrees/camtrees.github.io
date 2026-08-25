@@ -65,6 +65,7 @@ CAM_SITE_COLUMNS = (
     "secondary_caretaker",
     "longitude",
     "latitude",
+    "site_url",
 )
 
 CAM_ORG_COLUMNS = (

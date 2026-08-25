@@ -78,6 +78,8 @@
 .cam-table__view-record { padding: .2rem .4rem; color: inherit; font: inherit; background: transparent; border: 1px solid currentColor; border-radius: .2rem; cursor: pointer; }
 .cam-table__view-record:hover, .cam-table__view-record:focus { background-color: #d5ebd6; }
 .cam-table__view-label { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+.cam-table__url { display: inline-block; padding: .2rem .5rem; color: inherit; font: inherit; text-decoration: none; background: #e8f5e9; border: 1px solid currentColor; border-radius: .2rem; }
+.cam-table__url:hover, .cam-table__url:focus { background-color: #d5ebd6; text-decoration: underline; }
 .cam-record-dialog { width: min(42rem, calc(100vw - 2rem)); max-width: 42rem; max-height: 80vh; padding: 0; overflow: auto; color: inherit; background: #fff; border: 1px solid #5b765c; border-radius: .3rem; }
 .cam-record-dialog::backdrop { background: rgb(0 0 0 / 35%); }
 .cam-record-dialog__header { position: sticky; top: 0; display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 1rem; background: #e8f5e9; border-bottom: 1px solid #c8ddc9; }
