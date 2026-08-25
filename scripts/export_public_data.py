@@ -57,6 +57,7 @@ CAM_SITE_COLUMNS = (
     "site",
     "org_code",
     "organization",
+    "site_url",
     "town",
     "site_location",
     "location_note",
@@ -65,7 +66,6 @@ CAM_SITE_COLUMNS = (
     "secondary_caretaker",
     "longitude",
     "latitude",
-    "site_url",
 )
 
 CAM_ORG_COLUMNS = (
