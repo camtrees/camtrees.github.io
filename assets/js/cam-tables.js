@@ -113,6 +113,10 @@
     const markerStyleKey = mapConfig.markerStyleKey || '';
     const markerStyles = mapConfig.markerStyles || {};
     const defaultMarkerStyle = mapConfig.defaultMarkerStyle || { order: -1, color: '#2f6b3a', fillColor: '#5eaa6c' };
+    const legendEntries = Object.values(markerStyles)
+      .concat(defaultMarkerStyle.label ? [defaultMarkerStyle] : [])
+      .filter((style) => style.label)
+      .sort((left, right) => (left.legendOrder ?? left.order) - (right.legendOrder ?? right.order));
     const dialog = document.createElement('dialog');
     dialog.className = 'cam-map-dialog';
     const title = document.createElement('h2'); title.textContent = 'Map View';
@@ -165,6 +169,31 @@
             Topographic: topoLayer,
             'Satellite + Labels': imageryTopoLayer
           }, null, { collapsed: true, position: 'topright' }).addTo(map);
+          if (legendEntries.length) {
+            const legend = window.L.control({ position: 'bottomright' });
+            legend.onAdd = () => {
+              const container = document.createElement('div');
+              container.className = 'cam-map-legend';
+              container.setAttribute('role', 'group');
+              container.setAttribute('aria-label', mapConfig.legendTitle || 'Map legend');
+              const heading = document.createElement('strong');
+              heading.textContent = mapConfig.legendTitle || 'Legend';
+              const list = document.createElement('ul');
+              legendEntries.forEach((style) => {
+                const item = document.createElement('li');
+                const swatch = document.createElement('span');
+                swatch.className = 'cam-map-legend__swatch';
+                swatch.style.backgroundColor = style.fillColor;
+                swatch.style.borderColor = style.color;
+                swatch.setAttribute('aria-hidden', 'true');
+                item.append(swatch, document.createTextNode(style.label));
+                list.append(item);
+              });
+              container.append(heading, list);
+              return container;
+            };
+            legend.addTo(map);
+          }
           markers = window.L.layerGroup().addTo(map);
         }
       } catch (_) {

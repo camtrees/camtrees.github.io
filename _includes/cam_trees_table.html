@@ -31,12 +31,13 @@
           {"key":"latest_health","label":"Health"}
         ],
         "markerStyleKey": "latest_health",
-        "defaultMarkerStyle": {"order":-1,"color":"#555555","fillColor":"#8E8E8E"},
+        "legendTitle": "Tree Health",
+        "defaultMarkerStyle": {"label":"Missing","legendOrder":4,"order":-1,"color":"#555555","fillColor":"#8E8E8E"},
         "markerStyles": {
-          "good": {"order":0,"color":"#2f6b3a","fillColor":"#5eaa6c"},
-          "dormant": {"order":1,"color":"#245a8d","fillColor":"#4f9bd8"},
-          "poor": {"order":2,"color":"#806800","fillColor":"#f2d64b"},
-          "dead": {"order":3,"color":"#8b1e1e","fillColor":"#d94343"}
+          "good": {"label":"Good","legendOrder":0,"order":0,"color":"#2f6b3a","fillColor":"#5eaa6c"},
+          "dormant": {"label":"Dormant","legendOrder":1,"order":1,"color":"#245a8d","fillColor":"#4f9bd8"},
+          "poor": {"label":"Poor","legendOrder":2,"order":2,"color":"#806800","fillColor":"#f2d64b"},
+          "dead": {"label":"Dead","legendOrder":3,"order":3,"color":"#8b1e1e","fillColor":"#d94343"}
         }
       },
       "columns": [
@@ -76,6 +77,6 @@
 </section>
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
-<link rel="stylesheet" href="{{ '/assets/css/cam-tables.css' | relative_url }}?v=20260825-health-16">
+<link rel="stylesheet" href="{{ '/assets/css/cam-tables.css' | relative_url }}?v=20260825-legend-17">
 <script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-<script defer src="{{ '/assets/js/cam-tables.js' | relative_url }}?v=20260825-health-16"></script>
+<script defer src="{{ '/assets/js/cam-tables.js' | relative_url }}?v=20260825-legend-17"></script>

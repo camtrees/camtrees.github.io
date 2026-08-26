@@ -97,6 +97,11 @@
 .cam-map-dialog__status { margin: 0; padding: .5rem 1rem; font-size: .9rem; }
 .cam-map-dialog__map { height: calc(100% - 7.2rem); min-height: 20rem; }
 .cam-map-dialog__record-button { margin-top: .5rem; font: inherit; }
+.cam-map-legend { padding: .5rem .65rem; color: #222; background: rgb(255 255 255 / 92%); border: 1px solid #777; border-radius: .25rem; box-shadow: 0 1px 5px rgb(0 0 0 / 30%); }
+.cam-map-legend strong { display: block; margin-bottom: .25rem; }
+.cam-map-legend ul { margin: 0; padding: 0; list-style: none; }
+.cam-map-legend li { display: flex; align-items: center; gap: .4rem; margin: .15rem 0; white-space: nowrap; }
+.cam-map-legend__swatch { display: inline-block; width: .8rem; height: .8rem; border: 2px solid; border-radius: 50%; }
 .cam-table__scroll th button { padding: 0; color: inherit; font: inherit; font-weight: 600; text-align: left; background: transparent; border: 0; cursor: pointer; }
 .cam-table__scroll th button::after { content: ' ↕'; font-weight: normal; }
 .cam-table__scroll th button[aria-sort="ascending"]::after { content: ' ↑'; }
