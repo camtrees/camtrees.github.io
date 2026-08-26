@@ -1,4 +1,6 @@
+<!-- CAM Trees shell; JavaScript builds its headings and rows from public JSON. -->
 <section class="cam-table" data-cam-table data-source="{{ '/data/cam_trees.json' | relative_url }}">
+  <!-- These controls act on all filtered records, not only the visible page. -->
   <div class="cam-table__controls">
     <label>
       Search all trees
@@ -10,6 +12,7 @@
     <p aria-live="polite" data-cam-table-summary></p>
   </div>
 
+  <!-- Scrollable region for the generated table and its sticky headings. -->
   <div class="cam-table__scroll" tabindex="0">
     <table data-cam-table-table>
       <caption class="sr-only">CAM Trees</caption>
@@ -18,8 +21,10 @@
     </table>
   </div>
 
+  <!-- JavaScript adds Previous and Next buttons here when needed. -->
   <nav class="cam-table__pagination" aria-label="CAM TREES table pages" data-cam-table-pagination></nav>
 
+  <!-- Settings consumed by cam-tables.js. Keep this block as valid JSON. -->
   <script type="application/json" data-cam-table-config>
     {
       "pageSize": 1000,
@@ -78,7 +83,9 @@
   </script>
 </section>
 
+<!-- Leaflet supplies the map; each integrity value must match its file version. -->
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+<!-- Shared table assets; the query value prevents stale browser caches. -->
 <link rel="stylesheet" href="{{ '/assets/css/cam-tables.css' | relative_url }}?v=20260826-csv-18">
 <script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <script defer src="{{ '/assets/js/cam-tables.js' | relative_url }}?v=20260826-csv-18"></script>

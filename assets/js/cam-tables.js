@@ -1,11 +1,13 @@
 (() => {
   'use strict';
 
+  // Convert database values into consistent strings for searching and display.
   const normalise = (value) => String(value ?? '').trim().toLocaleLowerCase();
   const rawValue = (row, key) => String(row[key] ?? '').trim();
   const yesNoValue = (value) => ['true', 't', 'yes', 'y', '1'].includes(normalise(value)) ? 'Yes' : ['false', 'f', 'no', 'n', '0'].includes(normalise(value)) ? 'No' : '';
   let dialogNumber = 0;
 
+  // Open an HTML dialog, with a fallback for browsers lacking showModal().
   function showDialog(dialog) {
     if (typeof dialog.showModal === 'function' && !dialog.open) dialog.showModal();
     else dialog.setAttribute('open', '');
@@ -16,6 +18,7 @@
     return column.type === 'boolean' ? yesNoValue(value) : value;
   }
 
+  // Permit only normal web addresses before turning database text into a link.
   function safeWebUrl(value) {
     try {
       const url = new URL(value);
@@ -25,6 +28,7 @@
     }
   }
 
+  // Add either plain text or a safe new-tab website link to a table cell.
   function appendValue(container, row, column) {
     const value = displayValue(row, column);
     const url = column.type === 'url' ? safeWebUrl(value) : '';
@@ -42,6 +46,7 @@
     }
   }
 
+  // Compare two records using the data type declared in the table configuration.
   function compareRows(left, right, column) {
     const a = rawValue(left, column.key);
     const b = rawValue(right, column.key);
@@ -52,10 +57,12 @@
     return a.localeCompare(b, undefined, { numeric: false, sensitivity: 'base' });
   }
 
+  // Quote a value according to CSV rules, including embedded quotation marks.
   function csvCell(value) {
     return `"${String(value ?? '').replace(/"/g, '""')}"`;
   }
 
+  // Build a UTF-8 CSV file in the browser and start the user's download.
   function downloadCsv(records, columns, filename) {
     const lines = [
       columns.map((column) => csvCell(column.label)).join(','),
@@ -72,6 +79,7 @@
     window.setTimeout(() => URL.revokeObjectURL(url), 0);
   }
 
+  // Boolean fields use an All/Yes/No menu; other fields use a search box.
   function createFilter(column, refresh) {
     if (column.type === 'boolean') {
       const filter = document.createElement('select');
@@ -89,6 +97,7 @@
     return filter;
   }
 
+  // Create one reusable dialog that displays a selected row vertically.
   function createRecordDialog(columns) {
     dialogNumber += 1;
     const dialog = document.createElement('dialog');
@@ -122,7 +131,9 @@
     };
   }
 
+  // Create the Leaflet dialog used by any table with map configuration.
   function createMapDialog(openRecordDialog, mapConfig = {}) {
+    // Defaults preserve the original CAM Trees behavior when options are omitted.
     const singular = mapConfig.singular || 'tree';
     const plural = mapConfig.plural || `${singular}s`;
     const popupTitleKey = mapConfig.popupTitleKey || 'site';
@@ -137,6 +148,8 @@
       .concat(defaultMarkerStyle.label ? [defaultMarkerStyle] : [])
       .filter((style) => style.label)
       .sort((left, right) => (left.legendOrder ?? left.order) - (right.legendOrder ?? right.order));
+
+    // Build the dialog once; its markers and status are refreshed each time it opens.
     const dialog = document.createElement('dialog');
     dialog.className = 'cam-map-dialog';
     const title = document.createElement('h2'); title.textContent = 'Map View';
@@ -162,6 +175,7 @@
       }
       try {
         if (!map) {
+          // Initialize Leaflet only on the first click and offer four base maps.
           map = window.L.map(canvas);
           const streetLayer = window.L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 19,
@@ -189,6 +203,8 @@
             Topographic: topoLayer,
             'Satellite + Labels': imageryTopoLayer
           }, null, { collapsed: true, position: 'topright' }).addTo(map);
+
+          // Generate the health legend from the same styles used by the markers.
           if (legendEntries.length) {
             const legend = window.L.control({ position: 'bottomright' });
             legend.onAdd = () => {
@@ -222,6 +238,8 @@
         return;
       }
       markers.clearLayers();
+
+      // Discard missing or invalid coordinates and choose each marker's style.
       const points = records.map((record, sourceIndex) => {
         const latitudeValue = rawValue(record, 'latitude');
         const longitudeValue = rawValue(record, 'longitude');
@@ -229,7 +247,10 @@
         const markerStyle = markerStyles[styleName] || defaultMarkerStyle;
         return { record, sourceIndex, markerStyle, latitudeValue, longitudeValue, latitude: Number(latitudeValue), longitude: Number(longitudeValue) };
       }).filter((point) => point.latitudeValue && point.longitudeValue && Number.isFinite(point.latitude) && Number.isFinite(point.longitude) && Math.abs(point.latitude) <= 90 && Math.abs(point.longitude) <= 180)
+        // Later health groups are drawn last so their overlapping pins stay visible.
         .sort((left, right) => (left.markerStyle.order - right.markerStyle.order) || (left.sourceIndex - right.sourceIndex));
+
+      // Create each marker popup without inserting untrusted database HTML.
       points.forEach((point) => {
         const popup = document.createElement('div');
         const title = document.createElement('strong'); title.textContent = rawValue(point.record, popupTitleKey) || `Unknown ${singular}`;
@@ -258,6 +279,8 @@
       });
       status.textContent = `${points.length} of ${records.length} filtered ${records.length === 1 ? singular : plural} mapped.`;
       showDialog(dialog);
+
+      // Wait for the dialog to receive its final size before fitting the map.
       requestAnimationFrame(() => requestAnimationFrame(() => {
         map.invalidateSize({ animate: false, pan: false });
         if (points.length === 1) map.setView([points[0].latitude, points[0].longitude], 17, { animate: false });
@@ -269,7 +292,9 @@
     };
   }
 
+  // Turn one data-cam-table section and its JSON configuration into a table.
   function initialise(root) {
+    // Read the table-specific columns, filenames, and optional map settings.
     const configElement = root.querySelector('[data-cam-table-config]');
     let config;
     try { config = JSON.parse(configElement.textContent); }
@@ -289,6 +314,7 @@
     const openMapDialog = mapButton ? createMapDialog(openRecordDialog, config.map) : null;
     let rows = []; let currentPage = 1; let sortKey = columns[0].key; let sortDirection = 'asc'; let printing = false;
 
+    // Apply the global search and every active column filter simultaneously.
     function filteredRows() {
       const globalTerm = normalise(search.value);
       return rows.filter((row) => {
@@ -301,12 +327,14 @@
       });
     }
 
+    // Sort a fresh filtered array without changing the original JSON records.
     function sortedRows() {
       const sorted = filteredRows();
       const sortColumn = columns.find((column) => column.key === sortKey);
       return sorted.sort((a, b) => (sortDirection === 'asc' ? 1 : -1) * compareRows(a, b, sortColumn));
     }
 
+    // Redraw the visible page, record count, sort indicators, and pagination.
     function render() {
       const sorted = sortedRows();
       const pages = Math.max(1, Math.ceil(sorted.length / pageSize));
@@ -342,7 +370,10 @@
       }
     }
 
+    // Changing a search, filter, or sort always returns the user to page one.
     function refreshFromFirstPage() { currentPage = 1; render(); }
+
+    // Build the sortable heading row and one filter control per data column.
     const headerRow = document.createElement('tr');
     const actionHeader = document.createElement('th'); actionHeader.scope = 'col'; actionHeader.textContent = 'View Record'; headerRow.append(actionHeader);
     columns.forEach((column) => {
@@ -352,6 +383,8 @@
       const filter = createFilter(column, refreshFromFirstPage); filters.set(column.key, filter); cell.append(button, filter); headerRow.append(cell);
     });
     head.append(headerRow); search.addEventListener('input', refreshFromFirstPage);
+
+    // Map, CSV, and print actions all operate on the current filtered records.
     if (mapButton) mapButton.addEventListener('click', () => openMapDialog(filteredRows()));
     if (csvButton) csvButton.addEventListener('click', () => downloadCsv(sortedRows(), columns, config.csvFilename || 'table.csv'));
     if (printButton) {
@@ -367,6 +400,7 @@
       });
     }
 
+    // Fetch only the public static JSON file; the browser never contacts Neon.
     fetch(root.dataset.source, { credentials: 'same-origin' })
       .then((response) => response.ok ? response.json() : Promise.reject(new Error(`HTTP ${response.status}`)))
       .then((payload) => {
@@ -377,5 +411,6 @@
       .catch(() => { summary.textContent = 'The table data is temporarily unavailable.'; });
   }
 
+  // A page may contain one or more independently configured public tables.
   document.querySelectorAll('[data-cam-table]').forEach(initialise);
 })();

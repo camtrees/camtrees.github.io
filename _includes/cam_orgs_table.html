@@ -1,4 +1,6 @@
+<!-- CAM Organizations shell; JavaScript builds the table from public JSON. -->
 <section class="cam-table" data-cam-table data-source="{{ '/data/cam_orgs.json' | relative_url }}">
+  <!-- Search, print, and CSV actions use the complete filtered result set. -->
   <div class="cam-table__controls">
     <label>
       Search all organizations
@@ -9,6 +11,7 @@
     <p aria-live="polite" data-cam-table-summary></p>
   </div>
 
+  <!-- Scrollable region for the generated headings and data rows. -->
   <div class="cam-table__scroll" tabindex="0">
     <table data-cam-table-table>
       <caption class="sr-only">CAM Organizations</caption>
@@ -17,8 +20,10 @@
     </table>
   </div>
 
+  <!-- Pagination controls are inserted here only when needed. -->
   <nav class="cam-table__pagination" aria-label="CAM organizations table pages" data-cam-table-pagination></nav>
 
+  <!-- Settings consumed by cam-tables.js. Keep this block as valid JSON. -->
   <script type="application/json" data-cam-table-config>
     {
       "pageSize": 1000,
@@ -32,5 +37,6 @@
   </script>
 </section>
 
+<!-- Shared table assets; the query value prevents stale browser caches. -->
 <link rel="stylesheet" href="{{ '/assets/css/cam-tables.css' | relative_url }}?v=20260826-csv-18">
 <script defer src="{{ '/assets/js/cam-tables.js' | relative_url }}?v=20260826-csv-18"></script>
