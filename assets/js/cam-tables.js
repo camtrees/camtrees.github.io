@@ -308,9 +308,13 @@
           if (hasThemeSelector) {
             const themeControl = window.L.control({ position: 'bottomleft' });
             themeControl.onAdd = () => {
-              const container = document.createElement('fieldset');
+              const container = document.createElement('div');
               container.className = 'cam-map-theme';
-              const heading = document.createElement('legend');
+              container.setAttribute('role', 'radiogroup');
+              container.setAttribute('aria-label', 'Color pins by');
+              // A normal heading stays inside the panel; fieldset legends can
+              // straddle the border differently across Safari and Chrome.
+              const heading = document.createElement('strong');
               heading.textContent = 'Color pins by';
               container.append(heading);
               themeKeys.forEach((key) => {

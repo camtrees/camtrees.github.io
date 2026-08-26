@@ -127,7 +127,7 @@
 
 /* Theme selector shown over the lower-left corner when a map has multiple color schemes. */
 .cam-map-theme { min-width: 8.5rem; margin: 0; padding: .5rem .65rem; color: #222; background: rgb(255 255 255 / 92%); border: 1px solid #777; border-radius: .25rem; box-shadow: 0 1px 5px rgb(0 0 0 / 30%); }
-.cam-map-theme legend { padding: 0; font-weight: 700; }
+.cam-map-theme strong { display: block; margin-bottom: .25rem; font-weight: 700; }
 .cam-map-theme label { display: flex; align-items: center; gap: .35rem; margin-top: .25rem; white-space: nowrap; }
 .cam-map-theme input { margin: 0; }
 
