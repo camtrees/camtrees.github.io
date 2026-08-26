@@ -110,6 +110,9 @@
       { key: 'tree_id', label: 'Tree ID' },
       { key: 'latest_health', label: 'Health' }
     ];
+    const markerStyleKey = mapConfig.markerStyleKey || '';
+    const markerStyles = mapConfig.markerStyles || {};
+    const defaultMarkerStyle = mapConfig.defaultMarkerStyle || { order: -1, color: '#2f6b3a', fillColor: '#5eaa6c' };
     const dialog = document.createElement('dialog');
     dialog.className = 'cam-map-dialog';
     const title = document.createElement('h2'); title.textContent = 'Map View';
@@ -170,11 +173,14 @@
         return;
       }
       markers.clearLayers();
-      const points = records.map((record) => {
+      const points = records.map((record, sourceIndex) => {
         const latitudeValue = rawValue(record, 'latitude');
         const longitudeValue = rawValue(record, 'longitude');
-        return { record, latitudeValue, longitudeValue, latitude: Number(latitudeValue), longitude: Number(longitudeValue) };
-      }).filter((point) => point.latitudeValue && point.longitudeValue && Number.isFinite(point.latitude) && Number.isFinite(point.longitude) && Math.abs(point.latitude) <= 90 && Math.abs(point.longitude) <= 180);
+        const styleName = markerStyleKey ? normalise(rawValue(record, markerStyleKey)) : '';
+        const markerStyle = markerStyles[styleName] || defaultMarkerStyle;
+        return { record, sourceIndex, markerStyle, latitudeValue, longitudeValue, latitude: Number(latitudeValue), longitude: Number(longitudeValue) };
+      }).filter((point) => point.latitudeValue && point.longitudeValue && Number.isFinite(point.latitude) && Number.isFinite(point.longitude) && Math.abs(point.latitude) <= 90 && Math.abs(point.longitude) <= 180)
+        .sort((left, right) => (left.markerStyle.order - right.markerStyle.order) || (left.sourceIndex - right.sourceIndex));
       points.forEach((point) => {
         const popup = document.createElement('div');
         const title = document.createElement('strong'); title.textContent = rawValue(point.record, popupTitleKey) || `Unknown ${singular}`;
@@ -192,7 +198,13 @@
           );
         });
         popup.append(document.createElement('br'), detailButton);
-        window.L.circleMarker([point.latitude, point.longitude], { radius: 7, color: '#2f6b3a', fillColor: '#5eaa6c', fillOpacity: .9, weight: 1.5 })
+        window.L.circleMarker([point.latitude, point.longitude], {
+          radius: 7,
+          color: point.markerStyle.color,
+          fillColor: point.markerStyle.fillColor,
+          fillOpacity: .9,
+          weight: 1.5
+        })
           .bindPopup(popup).addTo(markers);
       });
       status.textContent = `${points.length} of ${records.length} filtered ${records.length === 1 ? singular : plural} mapped.`;
