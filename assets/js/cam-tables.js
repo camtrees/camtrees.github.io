@@ -52,6 +52,26 @@
     return a.localeCompare(b, undefined, { numeric: false, sensitivity: 'base' });
   }
 
+  function csvCell(value) {
+    return `"${String(value ?? '').replace(/"/g, '""')}"`;
+  }
+
+  function downloadCsv(records, columns, filename) {
+    const lines = [
+      columns.map((column) => csvCell(column.label)).join(','),
+      ...records.map((record) => columns.map((column) => csvCell(displayValue(record, column))).join(','))
+    ];
+    const blob = new Blob([`\uFEFF${lines.join('\r\n')}\r\n`], { type: 'text/csv;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = filename;
+    document.body.append(link);
+    link.click();
+    link.remove();
+    window.setTimeout(() => URL.revokeObjectURL(url), 0);
+  }
+
   function createFilter(column, refresh) {
     if (column.type === 'boolean') {
       const filter = document.createElement('select');
@@ -262,6 +282,7 @@
     const summary = root.querySelector('[data-cam-table-summary]');
     const pagination = root.querySelector('[data-cam-table-pagination]');
     const printButton = root.querySelector('[data-cam-table-print]');
+    const csvButton = root.querySelector('[data-cam-table-csv]');
     const mapButton = root.querySelector('[data-cam-table-map]');
     const filters = new Map();
     const openRecordDialog = createRecordDialog(columns);
@@ -332,6 +353,7 @@
     });
     head.append(headerRow); search.addEventListener('input', refreshFromFirstPage);
     if (mapButton) mapButton.addEventListener('click', () => openMapDialog(filteredRows()));
+    if (csvButton) csvButton.addEventListener('click', () => downloadCsv(sortedRows(), columns, config.csvFilename || 'table.csv'));
     if (printButton) {
       printButton.addEventListener('click', () => {
         printing = true;

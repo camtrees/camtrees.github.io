@@ -5,6 +5,7 @@
       <input type="search" autocomplete="off" data-cam-table-search>
     </label>
     <button type="button" data-cam-table-print>Print filtered organizations</button>
+    <button type="button" data-cam-table-csv>Export as CSV</button>
     <p aria-live="polite" data-cam-table-summary></p>
   </div>
 
@@ -21,6 +22,7 @@
   <script type="application/json" data-cam-table-config>
     {
       "pageSize": 1000,
+      "csvFilename": "cam-orgs.csv",
       "columns": [
         {"key":"org_code","label":"Organization Code","type":"text"},
         {"key":"organization","label":"Organization","type":"text"},
@@ -30,5 +32,5 @@
   </script>
 </section>
 
-<link rel="stylesheet" href="{{ '/assets/css/cam-tables.css' | relative_url }}?v=20260823-map-13">
-<script defer src="{{ '/assets/js/cam-tables.js' | relative_url }}?v=20260823-map-13"></script>
+<link rel="stylesheet" href="{{ '/assets/css/cam-tables.css' | relative_url }}?v=20260826-csv-18">
+<script defer src="{{ '/assets/js/cam-tables.js' | relative_url }}?v=20260826-csv-18"></script>
