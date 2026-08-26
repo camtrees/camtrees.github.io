@@ -129,6 +129,7 @@ These tables are also Lookup Tables
 
 - **cam_tree_latest_health** - Show latest tree_health
 - **cam_tree_latest_height** - Show latest tree_height
+- **cam_tree_latest_nuts** - Show latest tree_nuts
 - **cam_tree_latest_water** - Show most recent date trees have been watered
 - **cam_tree_photos_earliest_photos** - Show all photos from the first date on which a tree had any photos taken
 - **cam_tree_photos_latest_photos** - Show all photos from the latest date on which a tree had any photos taken

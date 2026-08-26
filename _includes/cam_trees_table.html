@@ -24,7 +24,8 @@
   <!-- JavaScript adds Previous and Next buttons here when needed. -->
   <nav class="cam-table__pagination" aria-label="CAM TREES table pages" data-cam-table-pagination></nav>
 
-  <!-- Settings consumed by cam-tables.js. Keep this block as valid JSON. -->
+  <!-- Settings consumed by cam-tables.js. Health is the default map theme; the
+       Nuts Present theme includes only Some and Many. Keep this as valid JSON. -->
   <script type="application/json" data-cam-table-config>
     {
       "pageSize": 1000,
@@ -35,16 +36,35 @@
         "popupTitleKey": "site",
         "popupFields": [
           {"key":"tree_id","label":"Tree ID"},
-          {"key":"latest_health","label":"Health"}
+          {"key":"latest_health","label":"Health"},
+          {"key":"nuts_present","label":"Nuts Present"}
         ],
-        "markerStyleKey": "latest_health",
-        "legendTitle": "Tree Health",
-        "defaultMarkerStyle": {"label":"Unknown","legendOrder":4,"order":-1,"color":"#555555","fillColor":"#8E8E8E"},
-        "markerStyles": {
-          "good": {"label":"Good","legendOrder":0,"order":0,"color":"#2f6b3a","fillColor":"#5eaa6c"},
-          "dormant": {"label":"Dormant","legendOrder":1,"order":1,"color":"#245a8d","fillColor":"#4f9bd8"},
-          "poor": {"label":"Poor","legendOrder":2,"order":2,"color":"#806800","fillColor":"#f2d64b"},
-          "dead": {"label":"Dead","legendOrder":3,"order":3,"color":"#8b1e1e","fillColor":"#d94343"}
+        "defaultTheme": "health",
+        "themes": {
+          "health": {
+            "label": "Tree Health",
+            "legendTitle": "Tree Health",
+            "markerStyleKey": "latest_health",
+            "defaultMarkerStyle": {"label":"Unknown","legendOrder":4,"order":-1,"color":"#555555","fillColor":"#8E8E8E"},
+            "markerStyles": {
+              "good": {"label":"Good","legendOrder":0,"order":0,"color":"#2f6b3a","fillColor":"#5eaa6c"},
+              "dormant": {"label":"Dormant","legendOrder":1,"order":1,"color":"#245a8d","fillColor":"#4f9bd8"},
+              "poor": {"label":"Poor","legendOrder":2,"order":2,"color":"#806800","fillColor":"#f2d64b"},
+              "dead": {"label":"Dead","legendOrder":3,"order":3,"color":"#8b1e1e","fillColor":"#d94343"}
+            }
+          },
+          "nuts": {
+            "label": "Nuts Present",
+            "legendTitle": "Nuts Present",
+            "markerStyleKey": "nuts_present",
+            "includeValues": ["some", "many"],
+            "statusSuffix": "with Some or Many nuts present and valid coordinates mapped.",
+            "defaultMarkerStyle": {"order":-1,"color":"#555555","fillColor":"#8E8E8E"},
+            "markerStyles": {
+              "some": {"label":"Some","legendOrder":0,"order":0,"color":"#8A5700","fillColor":"#E69F00"},
+              "many": {"label":"Many","legendOrder":1,"order":1,"color":"#4A2A10","fillColor":"#7A4A21"}
+            }
+          }
         }
       },
       "columns": [
@@ -62,6 +82,8 @@
         {"key":"latest_height","label":"Latest Height","type":"text"},
         {"key":"latest_height_date","label":"Latest Height Date","type":"date"},
         {"key":"latest_water_date","label":"Latest Water Date","type":"date"},
+        {"key":"nuts_present","label":"Nuts Present","type":"text"},
+        {"key":"latest_nuts_date","label":"Latest Nuts Date","type":"date"},
         {"key":"longitude","label":"Longitude","type":"number"},
         {"key":"latitude","label":"Latitude","type":"number"},
         {"key":"elevation_in_feet","label":"Elevation","type":"number"},
@@ -86,6 +108,6 @@
 <!-- Leaflet supplies the map; each integrity value must match its file version. -->
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
 <!-- Shared table assets; the query value prevents stale browser caches. -->
-<link rel="stylesheet" href="{{ '/assets/css/cam-tables.css' | relative_url }}?v=20260826-csv-18">
+<link rel="stylesheet" href="{{ '/assets/css/cam-tables.css' | relative_url }}?v=20260826-nuts-19">
 <script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-<script defer src="{{ '/assets/js/cam-tables.js' | relative_url }}?v=20260826-csv-18"></script>
+<script defer src="{{ '/assets/js/cam-tables.js' | relative_url }}?v=20260826-nuts-19"></script>

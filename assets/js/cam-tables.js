@@ -133,7 +133,7 @@
 
   // Create the Leaflet dialog used by any table with map configuration.
   function createMapDialog(openRecordDialog, mapConfig = {}) {
-    // Defaults preserve the original CAM Trees behavior when options are omitted.
+    // General table and popup settings are shared by every map theme.
     const singular = mapConfig.singular || 'tree';
     const plural = mapConfig.plural || `${singular}s`;
     const popupTitleKey = mapConfig.popupTitleKey || 'site';
@@ -141,15 +141,26 @@
       { key: 'tree_id', label: 'Tree ID' },
       { key: 'latest_health', label: 'Health' }
     ];
-    const markerStyleKey = mapConfig.markerStyleKey || '';
-    const markerStyles = mapConfig.markerStyles || {};
-    const defaultMarkerStyle = mapConfig.defaultMarkerStyle || { order: -1, color: '#2f6b3a', fillColor: '#5eaa6c' };
-    const legendEntries = Object.values(markerStyles)
-      .concat(defaultMarkerStyle.label ? [defaultMarkerStyle] : [])
-      .filter((style) => style.label)
-      .sort((left, right) => (left.legendOrder ?? left.order) - (right.legendOrder ?? right.order));
+
+    // Older single-theme configurations still work for tables such as CAM Sites.
+    const legacyTheme = {
+      label: mapConfig.legendTitle || 'Legend',
+      markerStyleKey: mapConfig.markerStyleKey || '',
+      markerStyles: mapConfig.markerStyles || {},
+      defaultMarkerStyle: mapConfig.defaultMarkerStyle || { order: -1, color: '#2f6b3a', fillColor: '#5eaa6c' }
+    };
+    const themes = mapConfig.themes || { default: legacyTheme };
+    const themeKeys = Object.keys(themes);
+    const defaultThemeKey = themes[mapConfig.defaultTheme] ? mapConfig.defaultTheme : themeKeys[0];
+    const hasThemeSelector = themeKeys.length > 1;
+    const hasLegend = themeKeys.some((key) => {
+      const theme = themes[key];
+      return Object.values(theme.markerStyles || {}).some((style) => style.label) || theme.defaultMarkerStyle?.label;
+    });
 
     // Build the dialog once; its markers and status are refreshed each time it opens.
+    dialogNumber += 1;
+    const themeControlName = `cam-map-theme-${dialogNumber}`;
     const dialog = document.createElement('dialog');
     dialog.className = 'cam-map-dialog';
     const title = document.createElement('h2'); title.textContent = 'Map View';
@@ -166,7 +177,96 @@
     close.addEventListener('click', closeDialog);
     dialog.addEventListener('click', (event) => { if (event.target === dialog) closeDialog(); });
 
-    let map; let markers;
+    let map; let markers; let legendHeading; let legendList;
+    let activeThemeKey = defaultThemeKey;
+    let currentRecords = [];
+    const themeInputs = new Map();
+
+    // Refresh the legend whenever the user changes the marker-color theme.
+    function updateLegend(theme) {
+      if (!legendHeading || !legendList) return;
+      const defaultStyle = theme.defaultMarkerStyle || legacyTheme.defaultMarkerStyle;
+      const entries = Object.values(theme.markerStyles || {})
+        .concat(defaultStyle.label ? [defaultStyle] : [])
+        .filter((style) => style.label)
+        .sort((left, right) => (left.legendOrder ?? left.order) - (right.legendOrder ?? right.order));
+      legendHeading.textContent = theme.legendTitle || theme.label || 'Legend';
+      legendList.replaceChildren();
+      entries.forEach((style) => {
+        const item = document.createElement('li');
+        const swatch = document.createElement('span');
+        swatch.className = 'cam-map-legend__swatch';
+        swatch.style.backgroundColor = style.fillColor;
+        swatch.style.borderColor = style.color;
+        swatch.setAttribute('aria-hidden', 'true');
+        item.append(swatch, document.createTextNode(style.label));
+        legendList.append(item);
+      });
+    }
+
+    // Redraw the same table-filtered records using the selected map theme.
+    function drawMap(records) {
+      const theme = themes[activeThemeKey];
+      const markerStyleKey = theme.markerStyleKey || '';
+      const markerStyles = theme.markerStyles || {};
+      const defaultMarkerStyle = theme.defaultMarkerStyle || legacyTheme.defaultMarkerStyle;
+      const includeValues = (theme.includeValues || []).map(normalise);
+      markers.clearLayers();
+      map.closePopup();
+      updateLegend(theme);
+
+      // Discard invalid coordinates and, when configured, unwanted theme values.
+      const points = records.map((record, sourceIndex) => {
+        const latitudeValue = rawValue(record, 'latitude');
+        const longitudeValue = rawValue(record, 'longitude');
+        const styleName = markerStyleKey ? normalise(rawValue(record, markerStyleKey)) : '';
+        const markerStyle = markerStyles[styleName] || defaultMarkerStyle;
+        return { record, sourceIndex, styleName, markerStyle, latitudeValue, longitudeValue, latitude: Number(latitudeValue), longitude: Number(longitudeValue) };
+      }).filter((point) => (!includeValues.length || includeValues.includes(point.styleName)) && point.latitudeValue && point.longitudeValue && Number.isFinite(point.latitude) && Number.isFinite(point.longitude) && Math.abs(point.latitude) <= 90 && Math.abs(point.longitude) <= 180)
+        // Later groups are drawn last so their overlapping pins stay visible.
+        .sort((left, right) => (left.markerStyle.order - right.markerStyle.order) || (left.sourceIndex - right.sourceIndex));
+
+      // Create each marker popup without inserting untrusted database HTML.
+      points.forEach((point) => {
+        const popup = document.createElement('div');
+        const popupTitle = document.createElement('strong'); popupTitle.textContent = rawValue(point.record, popupTitleKey) || `Unknown ${singular}`;
+        const detailButton = document.createElement('button');
+        detailButton.type = 'button'; detailButton.className = 'cam-map-dialog__record-button'; detailButton.textContent = 'View full record';
+        detailButton.addEventListener('click', () => {
+          map.closePopup();
+          openRecordDialog(point.record);
+        });
+        popup.append(popupTitle);
+        popupFields.forEach((field) => {
+          popup.append(
+            document.createElement('br'),
+            document.createTextNode(`${field.label}: ${rawValue(point.record, field.key) || '—'}`)
+          );
+        });
+        popup.append(document.createElement('br'), detailButton);
+        window.L.circleMarker([point.latitude, point.longitude], {
+          radius: 7,
+          color: point.markerStyle.color,
+          fillColor: point.markerStyle.fillColor,
+          fillOpacity: .9,
+          weight: 1.5
+        }).bindPopup(popup).addTo(markers);
+      });
+
+      const noun = records.length === 1 ? singular : plural;
+      status.textContent = `${points.length} of ${records.length} filtered ${noun} ${theme.statusSuffix || 'mapped.'}`;
+
+      // Wait for the dialog to receive its final size before fitting the map.
+      requestAnimationFrame(() => requestAnimationFrame(() => {
+        map.invalidateSize({ animate: false, pan: false });
+        if (points.length === 1) map.setView([points[0].latitude, points[0].longitude], 17, { animate: false });
+        else if (points.length > 1) map.fitBounds(points.map((point) => [point.latitude, point.longitude]), { padding: [24, 24], maxZoom: 17, animate: false });
+        else map.setView([45.25, -69.45], 6, { animate: false });
+        // Safari can finish sizing a dialog after the first two paint frames.
+        window.setTimeout(() => map.invalidateSize({ animate: false, pan: false }), 150);
+      }));
+    }
+
     return (records) => {
       if (!window.L) {
         status.textContent = 'The map library could not be loaded. Check that your browser can load unpkg.com.';
@@ -204,28 +304,45 @@
             'Satellite + Labels': imageryTopoLayer
           }, null, { collapsed: true, position: 'topright' }).addTo(map);
 
-          // Generate the health legend from the same styles used by the markers.
-          if (legendEntries.length) {
+          // Let users switch thematic coloring without opening another map.
+          if (hasThemeSelector) {
+            const themeControl = window.L.control({ position: 'bottomleft' });
+            themeControl.onAdd = () => {
+              const container = document.createElement('fieldset');
+              container.className = 'cam-map-theme';
+              const heading = document.createElement('legend');
+              heading.textContent = 'Color pins by';
+              container.append(heading);
+              themeKeys.forEach((key) => {
+                const label = document.createElement('label');
+                const input = document.createElement('input');
+                input.type = 'radio'; input.name = themeControlName; input.value = key;
+                input.addEventListener('change', () => {
+                  if (!input.checked) return;
+                  activeThemeKey = key;
+                  drawMap(currentRecords);
+                });
+                themeInputs.set(key, input);
+                label.append(input, document.createTextNode(themes[key].label || key));
+                container.append(label);
+              });
+              window.L.DomEvent.disableClickPropagation(container);
+              return container;
+            };
+            themeControl.addTo(map);
+          }
+
+          // The legend contents change to match the active marker-color theme.
+          if (hasLegend) {
             const legend = window.L.control({ position: 'bottomright' });
             legend.onAdd = () => {
               const container = document.createElement('div');
               container.className = 'cam-map-legend';
               container.setAttribute('role', 'group');
-              container.setAttribute('aria-label', mapConfig.legendTitle || 'Map legend');
-              const heading = document.createElement('strong');
-              heading.textContent = mapConfig.legendTitle || 'Legend';
-              const list = document.createElement('ul');
-              legendEntries.forEach((style) => {
-                const item = document.createElement('li');
-                const swatch = document.createElement('span');
-                swatch.className = 'cam-map-legend__swatch';
-                swatch.style.backgroundColor = style.fillColor;
-                swatch.style.borderColor = style.color;
-                swatch.setAttribute('aria-hidden', 'true');
-                item.append(swatch, document.createTextNode(style.label));
-                list.append(item);
-              });
-              container.append(heading, list);
+              container.setAttribute('aria-label', 'Map legend');
+              legendHeading = document.createElement('strong');
+              legendList = document.createElement('ul');
+              container.append(legendHeading, legendList);
               return container;
             };
             legend.addTo(map);
@@ -237,58 +354,13 @@
         showDialog(dialog);
         return;
       }
-      markers.clearLayers();
 
-      // Discard missing or invalid coordinates and choose each marker's style.
-      const points = records.map((record, sourceIndex) => {
-        const latitudeValue = rawValue(record, 'latitude');
-        const longitudeValue = rawValue(record, 'longitude');
-        const styleName = markerStyleKey ? normalise(rawValue(record, markerStyleKey)) : '';
-        const markerStyle = markerStyles[styleName] || defaultMarkerStyle;
-        return { record, sourceIndex, markerStyle, latitudeValue, longitudeValue, latitude: Number(latitudeValue), longitude: Number(longitudeValue) };
-      }).filter((point) => point.latitudeValue && point.longitudeValue && Number.isFinite(point.latitude) && Number.isFinite(point.longitude) && Math.abs(point.latitude) <= 90 && Math.abs(point.longitude) <= 180)
-        // Later health groups are drawn last so their overlapping pins stay visible.
-        .sort((left, right) => (left.markerStyle.order - right.markerStyle.order) || (left.sourceIndex - right.sourceIndex));
-
-      // Create each marker popup without inserting untrusted database HTML.
-      points.forEach((point) => {
-        const popup = document.createElement('div');
-        const title = document.createElement('strong'); title.textContent = rawValue(point.record, popupTitleKey) || `Unknown ${singular}`;
-        const detailButton = document.createElement('button');
-        detailButton.type = 'button'; detailButton.className = 'cam-map-dialog__record-button'; detailButton.textContent = 'View full record';
-        detailButton.addEventListener('click', () => {
-          map.closePopup();
-          openRecordDialog(point.record);
-        });
-        popup.append(title);
-        popupFields.forEach((field) => {
-          popup.append(
-            document.createElement('br'),
-            document.createTextNode(`${field.label}: ${rawValue(point.record, field.key) || '—'}`)
-          );
-        });
-        popup.append(document.createElement('br'), detailButton);
-        window.L.circleMarker([point.latitude, point.longitude], {
-          radius: 7,
-          color: point.markerStyle.color,
-          fillColor: point.markerStyle.fillColor,
-          fillOpacity: .9,
-          weight: 1.5
-        })
-          .bindPopup(popup).addTo(markers);
-      });
-      status.textContent = `${points.length} of ${records.length} filtered ${records.length === 1 ? singular : plural} mapped.`;
+      // Every opening starts from the configured default (Tree Health for CAM Trees).
+      currentRecords = records;
+      activeThemeKey = defaultThemeKey;
+      themeInputs.forEach((input, key) => { input.checked = key === activeThemeKey; });
       showDialog(dialog);
-
-      // Wait for the dialog to receive its final size before fitting the map.
-      requestAnimationFrame(() => requestAnimationFrame(() => {
-        map.invalidateSize({ animate: false, pan: false });
-        if (points.length === 1) map.setView([points[0].latitude, points[0].longitude], 17, { animate: false });
-        else if (points.length > 1) map.fitBounds(points.map((point) => [point.latitude, point.longitude]), { padding: [24, 24], maxZoom: 17, animate: false });
-        else map.setView([45.25, -69.45], 6, { animate: false });
-        // Safari can finish sizing a dialog after the first two paint frames.
-        window.setTimeout(() => map.invalidateSize({ animate: false, pan: false }), 150);
-      }));
+      drawMap(currentRecords);
     };
   }
 
