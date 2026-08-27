@@ -139,13 +139,22 @@
 .cam-map-legend__swatch { display: inline-block; width: .8rem; height: .8rem; border: 2px solid; border-radius: 50%; }
 
 /* Sortable column headings and their ascending/descending indicators. */
-.cam-table__scroll th button { padding: 0; color: inherit; font: inherit; font-weight: 600; text-align: left; background: transparent; border: 0; cursor: pointer; }
-.cam-table__scroll th button::after { content: ' ↕'; font-weight: normal; }
-.cam-table__scroll th button[aria-sort="ascending"]::after { content: ' ↑'; }
-.cam-table__scroll th button[aria-sort="descending"]::after { content: ' ↓'; }
+.cam-table__scroll th > button[data-sort-key] { padding: 0; color: inherit; font: inherit; font-weight: 600; text-align: left; background: transparent; border: 0; cursor: pointer; }
+.cam-table__scroll th > button[data-sort-key]::after { content: ' ↕'; font-weight: normal; }
+.cam-table__scroll th > button[data-sort-key][aria-sort="ascending"]::after { content: ' ↑'; }
+.cam-table__scroll th > button[data-sort-key][aria-sort="descending"]::after { content: ' ↓'; }
 
 /* Column-specific search and Yes/No filter controls. */
 .cam-table__scroll th input, .cam-table__scroll th select { box-sizing: border-box; width: 100%; min-width: 5rem; margin-top: .5rem; font: inherit; font-weight: normal; }
+
+/* Checkbox dropdown used when one column permits several simultaneous values. */
+.cam-table__multi-filter { position: relative; min-width: 8rem; margin-top: .5rem; font-weight: normal; }
+.cam-table__multi-filter summary { padding: .2rem .35rem; background: #fff; border: 1px solid #777; border-radius: .2rem; cursor: pointer; }
+.cam-table__multi-filter-options { position: absolute; top: calc(100% + .2rem); left: 0; z-index: 20; min-width: 11rem; max-height: 16rem; padding: .5rem; overflow: auto; color: #222; background: #fff; border: 1px solid #777; border-radius: .2rem; box-shadow: 0 2px 8px rgb(0 0 0 / 25%); }
+.cam-table__multi-filter-options label { display: flex; align-items: center; gap: .4rem; margin-bottom: .3rem; white-space: nowrap; }
+.cam-table__multi-filter-options input { width: auto !important; min-width: 0 !important; margin: 0 !important; }
+.cam-table__multi-filter-options button { width: 100%; margin-top: .25rem; padding: .2rem .35rem; color: inherit; font: inherit; font-weight: normal; background: #e8f5e9; border: 1px solid #777; border-radius: .2rem; cursor: pointer; }
+.cam-table__multi-filter-options button:hover, .cam-table__multi-filter-options button:focus { background: #d5ebd6; }
 .cam-table__empty { text-align: center; }
 
 /* Previous/next controls shown when filtered results span multiple pages. */
@@ -169,7 +178,8 @@
   .cam-table__controls,
   .cam-table__pagination,
   .cam-table__scroll th input,
-  .cam-table__scroll th select { display: none !important; }
+  .cam-table__scroll th select,
+  .cam-table__multi-filter { display: none !important; }
   .cam-table__scroll { max-height: none; overflow: visible; }
   /* Restore normal table layout so all filtered rows and columns can print. */
   .cam-table__scroll table {

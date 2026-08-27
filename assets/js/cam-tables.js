@@ -79,8 +79,61 @@
     window.setTimeout(() => URL.revokeObjectURL(url), 0);
   }
 
-  // Boolean fields use an All/Yes/No menu; other fields use a search box.
+  // Build a checkbox menu whose choices are populated from the downloaded JSON.
+  function createMultiFilter(column, refresh) {
+    const filter = document.createElement('details');
+    filter.className = 'cam-table__multi-filter';
+    const summary = document.createElement('summary');
+    const options = document.createElement('div');
+    options.className = 'cam-table__multi-filter-options';
+    const choices = document.createElement('div');
+    const clear = document.createElement('button');
+    clear.type = 'button'; clear.textContent = 'Clear selections';
+    options.append(choices, clear); filter.append(summary, options);
+    const selectedValues = new Set();
+
+    // An empty selection means All; otherwise values use exact OR matching.
+    const updateSummary = () => {
+      const text = selectedValues.size ? `${selectedValues.size} selected` : 'All';
+      summary.textContent = text;
+      summary.setAttribute('aria-label', `Filter ${column.label}: ${text}`);
+    };
+    filter.matchesValue = (value) => !selectedValues.size || selectedValues.has(normalise(value));
+    filter.populateOptions = (records) => {
+      const uniqueValues = new Map();
+      records.forEach((record) => {
+        const value = displayValue(record, column);
+        if (value && !uniqueValues.has(normalise(value))) uniqueValues.set(normalise(value), value);
+      });
+      choices.replaceChildren();
+      [...uniqueValues].sort((left, right) => left[1].localeCompare(right[1], undefined, { sensitivity: 'base' })).forEach(([value, labelText]) => {
+        const label = document.createElement('label');
+        const checkbox = document.createElement('input');
+        checkbox.type = 'checkbox'; checkbox.value = value;
+        checkbox.addEventListener('change', () => {
+          if (checkbox.checked) selectedValues.add(value);
+          else selectedValues.delete(value);
+          updateSummary();
+          refresh();
+        });
+        label.append(checkbox, document.createTextNode(labelText));
+        choices.append(label);
+      });
+    };
+    clear.addEventListener('click', () => {
+      selectedValues.clear();
+      choices.querySelectorAll('input[type="checkbox"]').forEach((checkbox) => { checkbox.checked = false; });
+      updateSummary();
+      refresh();
+    });
+    updateSummary();
+    return filter;
+  }
+
+  // Boolean fields use All/Yes/No, configured multi-filters use checkboxes,
+  // and all remaining columns use a normal search box.
   function createFilter(column, refresh) {
+    if (column.filter === 'multi') return createMultiFilter(column, refresh);
     if (column.type === 'boolean') {
       const filter = document.createElement('select');
       filter.setAttribute('aria-label', `Filter ${column.label}`);
@@ -177,20 +230,23 @@
     close.addEventListener('click', closeDialog);
     dialog.addEventListener('click', (event) => { if (event.target === dialog) closeDialog(); });
 
-    let map; let markers; let legendHeading; let legendList;
+    let map; let markers; let legendContainer; let legendHeading; let legendList;
     let activeThemeKey = defaultThemeKey;
     let currentRecords = [];
     const themeInputs = new Map();
 
     // Refresh the legend whenever the user changes the marker-color theme.
-    function updateLegend(theme) {
+    function updateLegend(theme, points) {
       if (!legendHeading || !legendList) return;
       const defaultStyle = theme.defaultMarkerStyle || legacyTheme.defaultMarkerStyle;
+      const plottedStyles = new Set(points.map((point) => point.markerStyle));
       const entries = Object.values(theme.markerStyles || {})
         .concat(defaultStyle.label ? [defaultStyle] : [])
-        .filter((style) => style.label)
+        // Only explain colors that are actually visible in the current map.
+        .filter((style) => style.label && plottedStyles.has(style))
         .sort((left, right) => (left.legendOrder ?? left.order) - (right.legendOrder ?? right.order));
       legendHeading.textContent = theme.legendTitle || theme.label || 'Legend';
+      legendContainer.hidden = !entries.length;
       legendList.replaceChildren();
       entries.forEach((style) => {
         const item = document.createElement('li');
@@ -213,7 +269,6 @@
       const includeValues = (theme.includeValues || []).map(normalise);
       markers.clearLayers();
       map.closePopup();
-      updateLegend(theme);
 
       // Discard invalid coordinates and, when configured, unwanted theme values.
       const points = records.map((record, sourceIndex) => {
@@ -225,6 +280,9 @@
       }).filter((point) => (!includeValues.length || includeValues.includes(point.styleName)) && point.latitudeValue && point.longitudeValue && Number.isFinite(point.latitude) && Number.isFinite(point.longitude) && Math.abs(point.latitude) <= 90 && Math.abs(point.longitude) <= 180)
         // Later groups are drawn last so their overlapping pins stay visible.
         .sort((left, right) => (left.markerStyle.order - right.markerStyle.order) || (left.sourceIndex - right.sourceIndex));
+
+      // The legend describes only marker categories present after filtering.
+      updateLegend(theme, points);
 
       // Create each marker popup without inserting untrusted database HTML.
       points.forEach((point) => {
@@ -340,14 +398,14 @@
           if (hasLegend) {
             const legend = window.L.control({ position: 'bottomright' });
             legend.onAdd = () => {
-              const container = document.createElement('div');
-              container.className = 'cam-map-legend';
-              container.setAttribute('role', 'group');
-              container.setAttribute('aria-label', 'Map legend');
+              legendContainer = document.createElement('div');
+              legendContainer.className = 'cam-map-legend';
+              legendContainer.setAttribute('role', 'group');
+              legendContainer.setAttribute('aria-label', 'Map legend');
               legendHeading = document.createElement('strong');
               legendList = document.createElement('ul');
-              container.append(legendHeading, legendList);
-              return container;
+              legendContainer.append(legendHeading, legendList);
+              return legendContainer;
             };
             legend.addTo(map);
           }
@@ -397,6 +455,7 @@
         if (globalTerm && !columns.some((column) => normalise(displayValue(row, column)).includes(globalTerm))) return false;
         return [...filters].every(([key, filter]) => {
           const column = columns.find((item) => item.key === key);
+          if (filter.matchesValue) return filter.matchesValue(displayValue(row, column));
           const filterValue = normalise(filter.value);
           return !filterValue || normalise(displayValue(row, column)).includes(filterValue);
         });
@@ -482,6 +541,8 @@
       .then((payload) => {
         const records = Array.isArray(payload) ? payload : payload.records;
         rows = Array.isArray(records) ? records : [];
+        // Multi-select options come from the complete JSON dataset.
+        filters.forEach((filter) => { if (filter.populateOptions) filter.populateOptions(rows); });
         render();
       })
       .catch(() => { summary.textContent = 'The table data is temporarily unavailable.'; });
