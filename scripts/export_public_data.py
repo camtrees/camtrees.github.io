@@ -103,6 +103,12 @@ PARENT_TREE_COLUMNS = (
     "parent_tree",
 )
 
+# Public Sites in Hubs rows contain one site-to-hub association per record.
+SITES_HUBS_COLUMNS = (
+    "site",
+    "hub",
+)
+
 # View and output are deliberately hard-coded.  Do not put credentials in a
 # site configuration file or client-side JavaScript.
 EXPORTS = (
@@ -147,6 +153,14 @@ EXPORTS = (
         "columns": PARENT_TREE_COLUMNS,
         "output": ROOT / "data" / "parent_trees.json",
         "order_by": '"parent_tree"',
+    },
+    {
+        # Keep this public view name synchronized with the database definition.
+        "name": "sites_hubs",
+        "view": "public_sites_hubs",
+        "columns": SITES_HUBS_COLUMNS,
+        "output": ROOT / "data" / "sites_hubs.json",
+        "order_by": '"site", "hub"',
     },
 )
 

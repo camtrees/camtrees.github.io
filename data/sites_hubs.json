@@ -1,0 +1,199 @@
+{
+"records": [
+	{
+		"site" : "Arundel Municipal Building",
+		"hub" : "Sanford"
+	},
+	{
+		"site" : "BaldPate",
+		"hub" : "Bridgton"
+	},
+	{
+		"site" : "Bangor High School",
+		"hub" : "Orono"
+	},
+	{
+		"site" : "BBA Chestnut Orchard",
+		"hub" : "Manchester NH"
+	},
+	{
+		"site" : "Biddeford Community Garden at Rotary Park",
+		"hub" : "Sanford"
+	},
+	{
+		"site" : "Blueberry Cove 4-H Camp",
+		"hub" : "Warren"
+	},
+	{
+		"site" : "Brewer Community School",
+		"hub" : "Orono"
+	},
+	{
+		"site" : "Brewer Municipal Pool and Playground",
+		"hub" : "Orono"
+	},
+	{
+		"site" : "Brewer Public Safety",
+		"hub" : "Orono"
+	},
+	{
+		"site" : "Camp Pondicherry",
+		"hub" : "Bridgton"
+	},
+	{
+		"site" : "Campus",
+		"hub" : "Sanford"
+	},
+	{
+		"site" : "Chadbourne Field",
+		"hub" : "Sanford"
+	},
+	{
+		"site" : "Chestnut Street Park",
+		"hub" : "Freeport"
+	},
+	{
+		"site" : "Corinna Village Green",
+		"hub" : "Hartland"
+	},
+	{
+		"site" : "Cornerspring Montessori School",
+		"hub" : "Searsport"
+	},
+	{
+		"site" : "Cousins River Fields & Marsh Preserve",
+		"hub" : "Freeport"
+	},
+	{
+		"site" : "Crooked River Forest",
+		"hub" : "Bridgton"
+	},
+	{
+		"site" : "Dead River Trailhead Capstone Trail",
+		"hub" : "Ellsworth"
+	},
+	{
+		"site" : "Dead River Trailhead Log Landing",
+		"hub" : "Ellsworth"
+	},
+	{
+		"site" : "Erickson Fields Preserve",
+		"hub" : "Searsport"
+	},
+	{
+		"site" : "Field NE of Main Building",
+		"hub" : "Orono"
+	},
+	{
+		"site" : "Fort Point State Park",
+		"hub" : "Searsport"
+	},
+	{
+		"site" : "Franklin Pasture",
+		"hub" : "Freeport"
+	},
+	{
+		"site" : "Hackers Hill",
+		"hub" : "Bridgton"
+	},
+	{
+		"site" : "Hebron Station School",
+		"hub" : "Bridgton"
+	},
+	{
+		"site" : "Hurricane Valley Farm",
+		"hub" : "Freeport"
+	},
+	{
+		"site" : "Indian Trail Park",
+		"hub" : "Orono"
+	},
+	{
+		"site" : "Jordan Homestead Preserve",
+		"hub" : "Ellsworth"
+	},
+	{
+		"site" : "Lowd Environmental Reserve",
+		"hub" : "Sanford"
+	},
+	{
+		"site" : "Maine Youth Fish and Game Club",
+		"hub" : "Orono"
+	},
+	{
+		"site" : "Mary Snow School",
+		"hub" : "Orono"
+	},
+	{
+		"site" : "Mayberry Hill",
+		"hub" : "Bridgton"
+	},
+	{
+		"site" : "Mt Joy Community Orchard",
+		"hub" : "Freeport"
+	},
+	{
+		"site" : "Murray Point Road",
+		"hub" : "Princeton"
+	},
+	{
+		"site" : "North Shore Preserve",
+		"hub" : "Warren"
+	},
+	{
+		"site" : "Orono High School",
+		"hub" : "Orono"
+	},
+	{
+		"site" : "Peabody Fitch Woods",
+		"hub" : "Bridgton"
+	},
+	{
+		"site" : "PVT FAR Moosehorn",
+		"hub" : "Lincoln"
+	},
+	{
+		"site" : "PVT KLC House",
+		"hub" : "Bridgton"
+	},
+	{
+		"site" : "PVT KLC Log Landing",
+		"hub" : "Bridgton"
+	},
+	{
+		"site" : "PVT RWB Parkland",
+		"hub" : "Bridgton"
+	},
+	{
+		"site" : "Shepard’s Farm Preserve",
+		"hub" : "Bethel"
+	},
+	{
+		"site" : "SLSP Boat Ramp",
+		"hub" : "Bridgton"
+	},
+	{
+		"site" : "SLSP New Gate",
+		"hub" : "Bridgton"
+	},
+	{
+		"site" : "Tidal Falls Preserve",
+		"hub" : "Ellsworth"
+	},
+	{
+		"site" : "Tidal Waters Preserve",
+		"hub" : "Sanford"
+	},
+	{
+		"site" : "Virginia Morin Field",
+		"hub" : "Sanford"
+	},
+	{
+		"site" : "West of Main Building",
+		"hub" : "Orono"
+	},
+	{
+		"site" : "Wolfe's Neck Center for Ag & Env",
+		"hub" : "Freeport"
+	}
+]}

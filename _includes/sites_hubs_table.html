@@ -1,0 +1,41 @@
+<!-- Sites in Hubs shell; JavaScript builds the table from public JSON. -->
+<section class="cam-table" data-cam-table data-source="{{ '/data/sites_hubs.json' | relative_url }}">
+  <!-- Search, print, and CSV actions use the complete filtered result set. -->
+  <div class="cam-table__controls">
+    <label>
+      Search all sites in hubs
+      <input type="search" autocomplete="off" data-cam-table-search>
+    </label>
+    <button type="button" data-cam-table-print>Print filtered sites in hubs</button>
+    <button type="button" data-cam-table-csv>Export as CSV</button>
+    <p aria-live="polite" data-cam-table-summary></p>
+  </div>
+
+  <!-- Scrollable region for the generated headings and data rows. -->
+  <div class="cam-table__scroll" tabindex="0">
+    <table data-cam-table-table>
+      <caption class="sr-only">Sites in Hubs</caption>
+      <thead></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <!-- Pagination controls are inserted here only when needed. -->
+  <nav class="cam-table__pagination" aria-label="Sites in Hubs table pages" data-cam-table-pagination></nav>
+
+  <!-- Settings consumed by cam-tables.js. Keep this block as valid JSON. -->
+  <script type="application/json" data-cam-table-config>
+    {
+      "pageSize": 1000,
+      "csvFilename": "sites-in-hubs.csv",
+      "columns": [
+        {"key":"site","label":"Site","type":"text"},
+        {"key":"hub","label":"Hub","type":"text"}
+      ]
+    }
+  </script>
+</section>
+
+<!-- Shared table assets; the query value prevents stale browser caches. -->
+<link rel="stylesheet" href="{{ '/assets/css/cam-tables.css' | relative_url }}?v=20260826-nuts-20">
+<script defer src="{{ '/assets/js/cam-tables.js' | relative_url }}?v=20260826-nuts-20"></script>
