@@ -243,7 +243,6 @@ These tables are also Lookup Tables
 
 - **data_export_epicollect_tree_parent_type** - Export tree_parent_type as CSV file to load into EpiCollect CAM Tree Maintenance form
 - **data_export_epicollect_volunteer_email** - Export volunteer_email as CSV file to load into EpiCollect CAM Tree Maintenance form
-- **data_export_google_map_data** - Export Google Map Data as CSV file and load into Google Maps
 
 </details>
 
