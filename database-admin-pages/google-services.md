@@ -74,17 +74,3 @@ This approach provides several advantages:
 - Adding or removing members only requires updating the Google Group.
 - New members can review previous group conversations from before they joined.
 
----
-
-## 3. Google My Maps
-
-<a href="https://www.google.com/maps/about/mymaps/" target="_blank">Google My Maps</a>
-allows CAM to create and share customized maps showing tree locations across Maine.
-
-The current map is available at:
-<a href="https://www.google.com/maps/d/edit?mid=1BnudQOUMWyFeMCpp1HV90hQPCFrWSx0&ll=44.44387186421211%2C-70.31670421000621&z=9" target="_blank">CAM Tree Locations</a>
-
-The map can be shared with CAM volunteers and other individuals as appropriate.
-
-Additional information about Google My Maps is available on the **Mapping / GIS** page
-under the **Info for Database Admins** section.

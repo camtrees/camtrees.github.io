@@ -24,28 +24,16 @@ parent: Database Admin Pages
 
 The CAMTREES Database currently provides two ways to view tree locations on a map:
 
-- **Custom Google My Maps** – Available to anyone with the map link.
-- **DBeaver** – Our recommended desktop database tool, available to authorized CAM staff and volunteers.
+- **On the CAM Trees web page** – Available to everyone within this web page.
+- **DBeaver** – Access is restricted to authorized CAM staff and volunteers.
 
 ---
 
-## Using a Custom Google My Maps
+## Using the CAM Trees web page
 
-The Google My Maps version of the map is created in three steps:
-
-1. Create an SQL view containing each tree's latitude and longitude. Google uses these
-coordinates to place a marker for every tree. When a user selects a marker, an information
-card displays the tree's title, description, and any additional fields included in the SQL
-view.
-
-2. Export the SQL view to a local CSV file.
-
-3. Import the CSV file into the custom Google My Maps project, replacing the existing tree
-data.
-
-You can view the
-<a href="https://www.google.com/maps/d/edit?mid=1BnudQOUMWyFeMCpp1HV90hQPCFrWSx0&ll=44.44387186421211%2C-70.31670421000621&z=9" target="_blank">CAM Tree Locations</a>
-map to see the locations of all chestnut trees planted by CAM to date.
+To view the map locations of all CAM planted chestnut trees thusfar, visit the
+<a href="https://camtrees.github.io/database-tables/cam-trees.html" target="_blank">CAM Trees</a>
+web page and click the 'Map filtered trees' button.
 
 ---
 

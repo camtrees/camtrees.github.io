@@ -47,8 +47,8 @@ reporting.
 ## Viewing Tree Locations
 
 For a view similar to what the volunteer pictured above is seeing, visit the
-<a href="https://www.google.com/maps/d/edit?mid=1BnudQOUMWyFeMCpp1HV90hQPCFrWSx0&ll=44.44387186421211%2C-70.31670421000621&z=9" target="_blank">CAM Tree Locations</a>
-Google Map.
+<a href="https://camtrees.github.io/database-tables/cam-trees.html" target="_blank">CAM Trees</a>
+web page and click the 'Map filtered trees' button.
 
 This map displays the locations of all CAM chestnut trees planted to date. Selecting a
 tree marker displays additional information about that individual tree.
