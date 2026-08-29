@@ -189,6 +189,7 @@
     // General table and popup settings are shared by every map theme.
     const singular = mapConfig.singular || 'tree';
     const plural = mapConfig.plural || `${singular}s`;
+    const overlayConfigs = Array.isArray(mapConfig.overlays) ? mapConfig.overlays : [];
     const popupTitleKey = mapConfig.popupTitleKey || 'site';
     const popupFields = mapConfig.popupFields || [
       { key: 'tree_id', label: 'Tree ID' },
@@ -355,12 +356,42 @@
             attribution: 'USGS The National Map'
           });
           streetLayer.addTo(map);
-          window.L.control.layers({
+          const layerControl = window.L.control.layers({
             Street: streetLayer,
             Satellite: satelliteLayer,
             Topographic: topoLayer,
             'Satellite + Labels': imageryTopoLayer
           }, null, { collapsed: true, position: 'topright' }).addTo(map);
+
+          // Load optional same-site GeoJSON overlays into a pane below the
+          // table record markers. Merely registering an overlay does not turn
+          // it on, so Hub Areas remains unchecked when the map opens.
+          if (overlayConfigs.length) {
+            map.createPane('camReferenceOverlay');
+            map.getPane('camReferenceOverlay').style.zIndex = 350;
+            overlayConfigs.forEach((overlayConfig) => {
+              const overlayLayer = window.L.geoJSON(null, {
+                pane: 'camReferenceOverlay',
+                style: { color: '#356b44', weight: 2.5, opacity: .85 },
+                pointToLayer: (_feature, latlng) => window.L.circleMarker(latlng, {
+                  pane: 'camReferenceOverlay',
+                  radius: 4,
+                  color: '#274f32',
+                  fillColor: '#8fc99a',
+                  fillOpacity: .9,
+                  weight: 1.5
+                })
+              });
+              fetch(overlayConfig.url, { credentials: 'same-origin' })
+                .then((response) => response.ok ? response.json() : Promise.reject(new Error(`HTTP ${response.status}`)))
+                .then((geoJson) => {
+                  overlayLayer.addData(geoJson);
+                  layerControl.addOverlay(overlayLayer, overlayConfig.label);
+                })
+                // A failed optional overlay must not prevent the record map.
+                .catch(() => { console.warn(`Map overlay could not be loaded: ${overlayConfig.label}`); });
+            });
+          }
 
           // Let users switch thematic coloring without opening another map.
           if (hasThemeSelector) {
