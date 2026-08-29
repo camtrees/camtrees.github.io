@@ -235,6 +235,7 @@
     let activeThemeKey = defaultThemeKey;
     let currentRecords = [];
     const themeInputs = new Map();
+    const defaultOverlayLayers = [];
 
     // Refresh the legend whenever the user changes the marker-color theme.
     function updateLegend(theme, points) {
@@ -364,8 +365,8 @@
           }, null, { collapsed: true, position: 'topright' }).addTo(map);
 
           // Load optional same-site GeoJSON overlays into a pane below the
-          // table record markers. Merely registering an overlay does not turn
-          // it on, so Hub Areas remains unchecked when the map opens.
+          // table record markers. Each table decides whether an overlay is
+          // initially checked through its showByDefault configuration.
           if (overlayConfigs.length) {
             map.createPane('camReferenceOverlay');
             map.getPane('camReferenceOverlay').style.zIndex = 350;
@@ -402,6 +403,10 @@
                 .then((geoJson) => {
                   overlayLayer.addData(geoJson);
                   layerControl.addOverlay(overlayLayer, overlayConfig.label);
+                  if (overlayConfig.showByDefault) {
+                    defaultOverlayLayers.push(overlayLayer);
+                    overlayLayer.addTo(map);
+                  }
                 })
                 // A failed optional overlay must not prevent the record map.
                 .catch(() => { console.warn(`Map overlay could not be loaded: ${overlayConfig.label}`); });
@@ -467,6 +472,8 @@
       currentRecords = records;
       activeThemeKey = defaultThemeKey;
       themeInputs.forEach((input, key) => { input.checked = key === activeThemeKey; });
+      // Restore table-specific default overlays whenever a map is reopened.
+      defaultOverlayLayers.forEach((overlayLayer) => overlayLayer.addTo(map));
       showDialog(dialog);
       drawMap(currentRecords);
     };

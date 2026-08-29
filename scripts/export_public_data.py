@@ -81,6 +81,9 @@ CAM_HUB_COLUMNS = (
     "hub",
     "captain",
     "lieutenant",
+    # Hub coordinates support the filtered CAM Hubs map.
+    "longitude",
+    "latitude",
 )
 
 SITE_VISIT_COLUMNS = (
