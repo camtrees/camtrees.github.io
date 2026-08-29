@@ -190,7 +190,7 @@
     dialog.className = 'cam-record-dialog';
     const title = document.createElement('h2');
     title.id = `cam-record-dialog-title-${dialogNumber}`;
-    title.textContent = 'Record Details';
+    title.textContent = 'Record details';
     const close = document.createElement('button');
     close.type = 'button'; close.className = 'cam-record-dialog__close'; close.textContent = 'Close';
     const header = document.createElement('div');
@@ -264,7 +264,7 @@
     close.addEventListener('click', closeDialog);
     dialog.addEventListener('click', (event) => { if (event.target === dialog) closeDialog(); });
 
-    let map; let markers; let legendContainer; let legendHeading; let legendList;
+    let map; let markers; let legendContainer; let legendHeading; let legendList; let userLocationLayer;
     let activeThemeKey = defaultThemeKey;
     let currentRecords = [];
     const themeInputs = new Map();
@@ -410,6 +410,78 @@
             Topographic: topoLayer,
             'Satellite + Labels': imageryTopoLayer
           }, null, { collapsed: true, position: 'topright' }).addTo(map);
+
+          // Place a browser-geolocation button directly below Leaflet's zoom
+          // buttons. Location access is requested only when the user clicks.
+          const locationControl = window.L.control({ position: 'topleft' });
+          locationControl.onAdd = () => {
+            const container = document.createElement('div');
+            container.className = 'leaflet-bar cam-map-location';
+            const button = document.createElement('button');
+            button.type = 'button';
+            button.className = 'cam-map-location__button';
+            button.textContent = '⌖';
+            button.title = 'Center map on your location';
+            button.setAttribute('aria-label', 'Center map on your location');
+            container.append(button);
+            window.L.DomEvent.disableClickPropagation(container);
+            window.L.DomEvent.disableScrollPropagation(container);
+
+            const reportLocation = (message) => {
+              const tableStatus = status.textContent.replace(/ Location:.*$/, '');
+              status.textContent = `${tableStatus} Location: ${message}`;
+            };
+            button.addEventListener('click', () => {
+              if (!navigator.geolocation) {
+                reportLocation('not supported by this browser.');
+                return;
+              }
+              button.disabled = true;
+              button.title = 'Finding your location…';
+              reportLocation('finding…');
+              navigator.geolocation.getCurrentPosition((position) => {
+                const latlng = [position.coords.latitude, position.coords.longitude];
+                if (userLocationLayer) userLocationLayer.clearLayers();
+                else userLocationLayer = window.L.layerGroup().addTo(map);
+
+                // The blue dot identifies the reported position; the lighter
+                // circle communicates the browser's estimated accuracy.
+                window.L.circle(latlng, {
+                  radius: position.coords.accuracy,
+                  color: '#1769aa',
+                  fillColor: '#64b5f6',
+                  fillOpacity: .14,
+                  weight: 1
+                }).addTo(userLocationLayer);
+                window.L.circleMarker(latlng, {
+                  radius: 7,
+                  color: '#fff',
+                  fillColor: '#1769aa',
+                  fillOpacity: 1,
+                  weight: 2
+                }).bindPopup('Your approximate location').addTo(userLocationLayer);
+                map.setView(latlng, Math.max(map.getZoom(), 15), { animate: false });
+                button.disabled = false;
+                button.title = 'Center map on your location';
+                reportLocation('found.');
+              }, (error) => {
+                const messages = {
+                  1: 'permission was denied.',
+                  2: 'could not be determined.',
+                  3: 'request timed out.'
+                };
+                button.disabled = false;
+                button.title = 'Center map on your location';
+                reportLocation(messages[error.code] || 'could not be determined.');
+              }, {
+                enableHighAccuracy: true,
+                timeout: 10000,
+                maximumAge: 60000
+              });
+            });
+            return container;
+          };
+          locationControl.addTo(map);
 
           // Load optional same-site GeoJSON overlays into a pane below the
           // table record markers. Each table decides whether an overlay is
