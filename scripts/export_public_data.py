@@ -23,8 +23,9 @@ ROOT = Path(__file__).resolve().parents[1]
 CAM_TREE_COLUMNS = (
     "site",
     "tree_id",
-    "cam_org",
+    "town",
     "hub",
+    "cam_org",
     "date_planted_or_observed(wild)",
     "planted_by",
     "primary_caretaker",
@@ -120,7 +121,7 @@ EXPORTS = (
         "view": "public_cam_trees",
         "columns": CAM_TREE_COLUMNS,
         "output": ROOT / "data" / "cam_trees.json",
-        "order_by": '"site", "tree_id", "cam_org", "hub"',
+        "order_by": '"site", "tree_id"',
     },
     {
         "name": "cam_sites",
