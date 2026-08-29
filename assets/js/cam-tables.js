@@ -28,6 +28,26 @@
     }
   }
 
+  // Use one shared icon builder so Hub records and Hub reference points have
+  // the same black triangle and permanently visible name.
+  function createHubTriangleIcon(labelText) {
+    const content = document.createElement('div');
+    content.className = 'cam-hub-center-marker';
+    const triangle = document.createElement('span');
+    triangle.className = 'cam-hub-center-marker__triangle';
+    triangle.setAttribute('aria-hidden', 'true');
+    const label = document.createElement('span');
+    label.className = 'cam-hub-center-marker__label';
+    label.textContent = labelText || 'Hub';
+    content.append(triangle, label);
+    return window.L.divIcon({
+      className: 'cam-hub-center-icon',
+      html: content,
+      iconSize: [160, 32],
+      iconAnchor: [80, 5]
+    });
+  }
+
   // Add either plain text or a safe new-tab website link to a table cell.
   function appendValue(container, row, column) {
     const value = displayValue(row, column);
@@ -304,13 +324,20 @@
           );
         });
         popup.append(document.createElement('br'), detailButton);
-        window.L.circleMarker([point.latitude, point.longitude], {
-          radius: 7,
-          color: point.markerStyle.color,
-          fillColor: point.markerStyle.fillColor,
-          fillOpacity: .9,
-          weight: 1.5
-        }).bindPopup(popup).addTo(markers);
+        // CAM Hubs uses the same labeled triangle as the Hub reference layer.
+        // Other tables retain their color-coded circular record markers.
+        const marker = mapConfig.recordMarkerType === 'hubTriangle'
+          ? window.L.marker([point.latitude, point.longitude], {
+              icon: createHubTriangleIcon(rawValue(point.record, popupTitleKey) || 'Hub')
+            })
+          : window.L.circleMarker([point.latitude, point.longitude], {
+              radius: 7,
+              color: point.markerStyle.color,
+              fillColor: point.markerStyle.fillColor,
+              fillOpacity: .9,
+              weight: 1.5
+            });
+        marker.bindPopup(popup).addTo(markers);
       });
 
       const noun = records.length === 1 ? singular : plural;
@@ -371,32 +398,20 @@
             map.createPane('camReferenceOverlay');
             map.getPane('camReferenceOverlay').style.zIndex = 350;
             overlayConfigs.forEach((overlayConfig) => {
+              // A table may limit an overlay to selected GeoJSON feature
+              // types. CAM Hubs uses this to toggle boundary lines alone.
+              const featureTypes = Array.isArray(overlayConfig.featureTypes) ? overlayConfig.featureTypes : [];
               const overlayLayer = window.L.geoJSON(null, {
                 pane: 'camReferenceOverlay',
                 style: { color: '#356b44', weight: 2.5, opacity: .85 },
+                filter: (feature) => !featureTypes.length || featureTypes.includes(feature.properties?.feature_type),
                 // Hub centers use noninteractive black triangles with their
                 // names directly below; record markers retain all popups.
-                pointToLayer: (feature, latlng) => {
-                  const content = document.createElement('div');
-                  content.className = 'cam-hub-center-marker';
-                  const triangle = document.createElement('span');
-                  triangle.className = 'cam-hub-center-marker__triangle';
-                  triangle.setAttribute('aria-hidden', 'true');
-                  const label = document.createElement('span');
-                  label.className = 'cam-hub-center-marker__label';
-                  label.textContent = feature.properties?.Name || 'Hub';
-                  content.append(triangle, label);
-                  return window.L.marker(latlng, {
+                pointToLayer: (feature, latlng) => window.L.marker(latlng, {
                     pane: 'camReferenceOverlay',
                     interactive: false,
-                    icon: window.L.divIcon({
-                      className: 'cam-hub-center-icon',
-                      html: content,
-                      iconSize: [160, 32],
-                      iconAnchor: [80, 5]
-                    })
-                  });
-                }
+                    icon: createHubTriangleIcon(feature.properties?.Name || 'Hub')
+                  })
               });
               fetch(overlayConfig.url, { credentials: 'same-origin' })
                 .then((response) => response.ok ? response.json() : Promise.reject(new Error(`HTTP ${response.status}`)))
