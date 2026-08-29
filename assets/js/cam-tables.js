@@ -373,14 +373,29 @@
               const overlayLayer = window.L.geoJSON(null, {
                 pane: 'camReferenceOverlay',
                 style: { color: '#356b44', weight: 2.5, opacity: .85 },
-                pointToLayer: (_feature, latlng) => window.L.circleMarker(latlng, {
-                  pane: 'camReferenceOverlay',
-                  radius: 4,
-                  color: '#274f32',
-                  fillColor: '#8fc99a',
-                  fillOpacity: .9,
-                  weight: 1.5
-                })
+                // Hub centers use noninteractive black triangles with their
+                // names directly below; record markers retain all popups.
+                pointToLayer: (feature, latlng) => {
+                  const content = document.createElement('div');
+                  content.className = 'cam-hub-center-marker';
+                  const triangle = document.createElement('span');
+                  triangle.className = 'cam-hub-center-marker__triangle';
+                  triangle.setAttribute('aria-hidden', 'true');
+                  const label = document.createElement('span');
+                  label.className = 'cam-hub-center-marker__label';
+                  label.textContent = feature.properties?.Name || 'Hub';
+                  content.append(triangle, label);
+                  return window.L.marker(latlng, {
+                    pane: 'camReferenceOverlay',
+                    interactive: false,
+                    icon: window.L.divIcon({
+                      className: 'cam-hub-center-icon',
+                      html: content,
+                      iconSize: [160, 32],
+                      iconAnchor: [80, 5]
+                    })
+                  });
+                }
               });
               fetch(overlayConfig.url, { credentials: 'same-origin' })
                 .then((response) => response.ok ? response.json() : Promise.reject(new Error(`HTTP ${response.status}`)))

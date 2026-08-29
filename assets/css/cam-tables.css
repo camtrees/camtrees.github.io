@@ -138,6 +138,12 @@
 .cam-map-legend li { display: flex; align-items: center; gap: .4rem; margin: .15rem 0; white-space: nowrap; }
 .cam-map-legend__swatch { display: inline-block; width: .8rem; height: .8rem; border: 2px solid; border-radius: 50%; }
 
+/* Hub overlay centers use compact black triangles with permanent names below. */
+.cam-hub-center-icon { background: transparent; border: 0; }
+.cam-hub-center-marker { display: flex; flex-direction: column; align-items: center; width: 160px; color: #111; font-size: .7rem; font-weight: 700; line-height: 1.1; text-align: center; pointer-events: none; }
+.cam-hub-center-marker__triangle { width: 0; height: 0; border-right: 5px solid transparent; border-bottom: 9px solid #000; border-left: 5px solid transparent; }
+.cam-hub-center-marker__label { margin-top: 2px; white-space: nowrap; text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff; }
+
 /* Sortable column headings and their ascending/descending indicators. */
 .cam-table__scroll th > button[data-sort-key] { padding: 0; color: inherit; font: inherit; font-weight: 600; text-align: left; background: transparent; border: 0; cursor: pointer; }
 .cam-table__scroll th > button[data-sort-key]::after { content: ' ↕'; font-weight: normal; }
