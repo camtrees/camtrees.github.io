@@ -144,6 +144,10 @@
 .cam-hub-center-marker__triangle { width: 0; height: 0; border-right: 5px solid transparent; border-bottom: 9px solid #000; border-left: 5px solid transparent; }
 .cam-hub-center-marker__label { margin-top: 2px; white-space: nowrap; text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff; }
 
+/* Square record pins used by maps such as CAM Sites. */
+.cam-map-square-icon { background: transparent; border: 0; }
+.cam-map-square-marker { display: block; box-sizing: border-box; width: 14px; height: 14px; border: 1.5px solid #4d0048; }
+
 /* Sortable column headings and their ascending/descending indicators. */
 .cam-table__scroll th > button[data-sort-key] { padding: 0; color: inherit; font: inherit; font-weight: 600; text-align: left; background: transparent; border: 0; cursor: pointer; }
 .cam-table__scroll th > button[data-sort-key]::after { content: ' ↕'; font-weight: normal; }

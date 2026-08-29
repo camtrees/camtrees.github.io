@@ -48,6 +48,19 @@
     });
   }
 
+  // Create a compact square marker whose fill can be configured per table.
+  function createSquareMarkerIcon(fillColor) {
+    const square = document.createElement('span');
+    square.className = 'cam-map-square-marker';
+    square.style.backgroundColor = fillColor;
+    return window.L.divIcon({
+      className: 'cam-map-square-icon',
+      html: square,
+      iconSize: [14, 14],
+      iconAnchor: [7, 7]
+    });
+  }
+
   // Add either plain text or a safe new-tab website link to a table cell.
   function appendValue(container, row, column) {
     const value = displayValue(row, column);
@@ -324,19 +337,26 @@
           );
         });
         popup.append(document.createElement('br'), detailButton);
-        // CAM Hubs uses the same labeled triangle as the Hub reference layer.
-        // Other tables retain their color-coded circular record markers.
-        const marker = mapConfig.recordMarkerType === 'hubTriangle'
-          ? window.L.marker([point.latitude, point.longitude], {
-              icon: createHubTriangleIcon(rawValue(point.record, popupTitleKey) || 'Hub')
-            })
-          : window.L.circleMarker([point.latitude, point.longitude], {
+        // Hubs use labeled triangles, Sites use configured squares, and
+        // tables without a special setting retain circular record markers.
+        let marker;
+        if (mapConfig.recordMarkerType === 'hubTriangle') {
+          marker = window.L.marker([point.latitude, point.longitude], {
+            icon: createHubTriangleIcon(rawValue(point.record, popupTitleKey) || 'Hub')
+          });
+        } else if (mapConfig.recordMarkerType === 'square') {
+          marker = window.L.marker([point.latitude, point.longitude], {
+            icon: createSquareMarkerIcon(mapConfig.recordMarkerFillColor || point.markerStyle.fillColor)
+          });
+        } else {
+          marker = window.L.circleMarker([point.latitude, point.longitude], {
               radius: 7,
               color: point.markerStyle.color,
               fillColor: point.markerStyle.fillColor,
               fillOpacity: .9,
               weight: 1.5
-            });
+          });
+        }
         marker.bindPopup(popup).addTo(markers);
       });
 
