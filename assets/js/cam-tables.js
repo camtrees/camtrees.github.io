@@ -190,7 +190,7 @@
     dialog.className = 'cam-record-dialog';
     const title = document.createElement('h2');
     title.id = `cam-record-dialog-title-${dialogNumber}`;
-    title.textContent = 'Record details';
+    title.textContent = 'Record Details';
     const close = document.createElement('button');
     close.type = 'button'; close.className = 'cam-record-dialog__close'; close.textContent = 'Close';
     const header = document.createElement('div');
