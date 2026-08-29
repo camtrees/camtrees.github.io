@@ -1,7 +1,7 @@
 ---
 title: CAM Volunteers Pages
 layout: default
-nav_order: 4
+nav_order: 5
 ---
 
 <img src="../assets/images/website/from-volunteer-to-researcher.png" alt="Showing the data flow from field collection to researcher computer" height="512" width="828">
