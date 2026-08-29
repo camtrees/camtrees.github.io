@@ -5729,22 +5729,6 @@
     {
       "type": "Feature",
       "properties": {
-        "Name": "Coastal Downeast - No-Grow Zone",
-        "Description": "",
-        "feature_type": "center",
-        "center_method": "polygon_centroid"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -67.45123694571551,
-          44.72582082439583
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "Name": "Machias",
         "Description": "",
         "feature_type": "center",
