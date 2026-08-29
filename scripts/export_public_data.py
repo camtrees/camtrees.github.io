@@ -59,10 +59,11 @@ CAM_TREE_COLUMNS = (
 
 CAM_SITE_COLUMNS = (
     "site",
+    "town",
+    "hub",
     "org_code",
     "organization",
     "site_url",
-    "town",
     "site_location",
     "location_note",
     "contact",
