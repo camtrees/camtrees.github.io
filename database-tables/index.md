@@ -15,7 +15,7 @@ Within each table, you can:
 - Use the **"Search all ..."** box to filter records across all fields.
 - Use the **"Filter ..."** box under each column heading to further narrow results.
 - Click a **Column Heading** to sort it in ascending order; click it again to sort in descending order.
-- Refresh the webpage to clear all filters and search terms.
+- **Refresh the webpage** to clear all filters and search terms.
 
 You can also:
 - Click the **"Print filtered ..."** button to print the table records. Most tables will print
@@ -31,6 +31,6 @@ Tables will show 1000 records per page. All tables currently have fewer than 500
 so only one page for now.
 
 
-{: .warning }
+{: .note }
 For security, this website will never connect directly to the CAMTREES Database. Rather, a
 secure Python script will (soon!) regenerate the necessary tables each night.
