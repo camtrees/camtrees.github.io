@@ -1,7 +1,7 @@
 ---
 title: Using ChatGPT to Create WebSite Illustrations
 layout: default
-parent: About the CAMTREES Database Website
+parent: About This Website
 ---
 
 # {{ page.title }}
