@@ -1,5 +1,5 @@
 ---
-title: CAMTREES Database Changelog
+title: Changelog
 layout: default
 nav_order: 98
 ---
