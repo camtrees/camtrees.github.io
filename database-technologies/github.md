@@ -1,7 +1,7 @@
 ---
 title: GitHub
 layout: default
-parent: Database Admin Pages
+parent: Database Technologies
 ---
 
 <center>

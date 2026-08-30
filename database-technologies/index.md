@@ -1,5 +1,5 @@
 ---
-title: Database Admin Pages
+title: Database Technologies
 layout: default
 nav_order: 6
 ---

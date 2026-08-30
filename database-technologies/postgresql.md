@@ -1,7 +1,7 @@
 ---
 title: PostgreSQL
 layout: default
-parent: Database Admin Pages
+parent: Database Technologies
 ---
 
 <center>
