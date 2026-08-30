@@ -7,7 +7,7 @@ nav_order: 98
 <img src="../assets/images/website/changelog.png" alt="CAMTREE Volunteer consulting a day planner showing the ChangeLog" height="512" width="828">
 
 # {{ page.title }}
-_Version: August 29 edit # 1_
+_Version: August 30 edit # 1_
 
 <!-- This content will not appear in the rendered Markdown 
 <details markdown="1">
@@ -52,6 +52,12 @@ Each entry is grouped by month. Within each month, changes are organized by area
 <summary markdown="span"><strong>2026 August</strong></summary>
 
 ### Website Content
+- Added user-location control to CAM Hubs, CAM Sites, and CAM Trees maps just under the zoom in and zoom out control
+- Expanded columns shown when clicking a pin on the CAM Sites map.
+- Added Town column to the CAM Trees Database Table
+- Add Hub Areas Overlay to CAM Hubs, CAM Sites, and CAM Trees maps
+- Added Hub column to the CAM Sites Database Table
+- Standardize pin types (circle, square, triangle) across all maps
 - Added 'Map filtered ...' buttons to the CAM Hubs, CAM Sites, and CAM Trees Database Tables
 - Added CAM Hubs, CAM Orgs, CAM Sites, Parent Trees, Site Visit, and Site in Hubs tables to the Database Table hierarchy
 - Created a CAM Trees SQL Table under the 'Database Tables' website section
