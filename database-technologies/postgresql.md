@@ -211,13 +211,13 @@ These tables are also Lookup Tables
 - **data_error_sites_with_no_site_url** - Sites with no URL
 - **data_error_sites_with_no_trees** - Sites with no trees
 - **data_error_trees_with_gps_approximated** - Trees with estimated longitude and latitude data
-- **data_error_trees_with_no_elevation** - Trees with missing elevation
-- **data_error_trees_with_no_gps** - Trees with missing longitude and latitude data
-- **data_error_trees_with_no_mother_or_father** - Trees with missing parents
+- **data_error_trees_with_no_elevation** - Trees with no elevation
+- **data_error_trees_with_no_gps** - Trees with no longitude and latitude data
+- **data_error_trees_with_no_mother_or_father** - Trees with no mother or no father tree
+- **data_error_trees_with_no_planting_method** - Trees with no planting method
 - **data_error_trees_with_no_primary_caretaker** - Trees with no primary caretaker
 - **data_error_trees_with_no_tag_info** - Trees with no tag_info
-- **data_error_trees_with_no_tag_photo** - Trees with missing tag photo
-- **data_error_trees_with_planting_method_unknown** - Trees with unknown planting method
+- **data_error_trees_with_no_tag_photo** - Trees with no tag photo
 - **data_error_volunteers_with_no_email** - Volunteers with temporary (non-valid) email addresses
 - **data_error_volunteers_with_no_hometown** - Volunteers with no home town
 - **data_error_volunteers_with_no_phone** - Volunteers with no known phone number
