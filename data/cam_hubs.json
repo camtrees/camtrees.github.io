@@ -29,6 +29,142 @@
 		"latitude" : 44.51239558814957
 	},
 	{
+		"hub" : "Farmington",
+		"captain" : null,
+		"lieutenant" : null,
+		"longitude" : -70.32139051406519,
+		"latitude" : 44.87251975385488
+	},
+	{
+		"hub" : "Freeport",
+		"captain" : "Jack  Kennel",
+		"lieutenant" : null,
+		"longitude" : -70.0671898429698,
+		"latitude" : 43.83025515192756
+	},
+	{
+		"hub" : "Hartland",
+		"captain" : null,
+		"lieutenant" : null,
+		"longitude" : -69.58716703748492,
+		"latitude" : 44.832410354884715
+	},
+	{
+		"hub" : "Lincoln",
+		"captain" : "Heidi Farber",
+		"lieutenant" : null,
+		"longitude" : -68.57342971354787,
+		"latitude" : 45.42688109438034
+	},
+	{
+		"hub" : "Machias",
+		"captain" : null,
+		"lieutenant" : null,
+		"longitude" : -67.44682765358912,
+		"latitude" : 44.717079160057345
+	},
+	{
+		"hub" : "Manchester NH",
+		"captain" : null,
+		"lieutenant" : null,
+		"longitude" : -71.4500040129,
+		"latitude" : 43.0124023091
+	},
+	{
+		"hub" : "Monson",
+		"captain" : null,
+		"lieutenant" : null,
+		"longitude" : -69.39089650743418,
+		"latitude" : 45.362971322771145
+	},
+	{
+		"hub" : "New Sweden",
+		"captain" : null,
+		"lieutenant" : null,
+		"longitude" : -68.24212212756733,
+		"latitude" : 46.87890270014688
+	},
+	{
+		"hub" : "Orono",
+		"captain" : null,
+		"lieutenant" : null,
+		"longitude" : -68.80531345750981,
+		"latitude" : 44.952806660203926
+	},
+	{
+		"hub" : "Princeton",
+		"captain" : null,
+		"lieutenant" : null,
+		"longitude" : -67.850214774583,
+		"latitude" : 45.05912230295809
+	},
+	{
+		"hub" : "Sanford",
+		"captain" : "K. Lea Sewell",
+		"lieutenant" : null,
+		"longitude" : -70.67962524072189,
+		"latitude" : 43.39885070258357
+	},
+	{
+		"hub" : "Searsport",
+		"captain" : null,
+		"lieutenant" : null,
+		"longitude" : -69.05398318130756,
+		"latitude" : 44.42810795231932
+	},
+	{
+		"hub" : "Smyrna Mills",
+		"captain" : null,
+		"lieutenant" : null,
+		"longitude" : -68.17332863042489,
+		"latitude" : 46.22426859107942
+	},
+	{
+		"hub" : "Warren",
+		"captain" : null,
+		"lieutenant" : null,
+		"longitude" : -69.27906772113514,
+		"latitude" : 43.99436629783834
+	},
+	{
+		"hub" : "Winthrop",
+		"captain" : null,
+		"lieutenant" : null,
+		"longitude" : -69.94379442339829,
+		"latitude" : 44.358672992949614
+	}
+]}
+{
+"records": [
+	{
+		"hub" : "Bethel",
+		"captain" : "Rebecca Buyers",
+		"lieutenant" : null,
+		"longitude" : -70.75914998355786,
+		"latitude" : 44.44287582660856
+	},
+	{
+		"hub" : "Bridgton",
+		"captain" : "Kim Colson",
+		"lieutenant" : "Marji Berkman",
+		"longitude" : -70.658227080842,
+		"latitude" : 43.965489986535104
+	},
+	{
+		"hub" : "Danforth",
+		"captain" : null,
+		"lieutenant" : null,
+		"longitude" : -68.01704407791256,
+		"latitude" : 45.71827412550028
+	},
+	{
+		"hub" : "Ellsworth",
+		"captain" : null,
+		"lieutenant" : null,
+		"longitude" : -68.26943146648092,
+		"latitude" : 44.51239558814957
+	},
+	{
 		"hub" : "Exeter NH",
 		"captain" : null,
 		"lieutenant" : null,
