@@ -8,10 +8,20 @@ on:
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
+
+# Prevent simultaneous Pages deployments while allowing a deployment already
+# in progress to finish safely.
+concurrency:
+  group: pages
+  cancel-in-progress: false
 
 jobs:
   export:
     runs-on: ubuntu-latest
+    outputs:
+      data_changed: ${{ steps.commit-data.outputs.data_changed }}
     # Scheduled workflows only run from the default branch.  This also prevents
     # an untrusted pull request from receiving the repository secret.
     if: github.event_name != 'pull_request'
@@ -35,10 +45,12 @@ jobs:
         run: python scripts/export_public_data.py
 
       - name: Commit refreshed public data
+        id: commit-data
         run: |
           # Keep this list synchronized with the outputs in export_public_data.py.
           if git diff --quiet -- data/cam_trees.json data/cam_sites.json data/cam_orgs.json data/cam_hubs.json data/site_visit.json data/parent_trees.json data/sites_hubs.json; then
             echo "No public data changes to commit."
+            echo "data_changed=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
           git config user.name "github-actions[bot]"
@@ -46,3 +58,36 @@ jobs:
           git add data/cam_trees.json data/cam_sites.json data/cam_orgs.json data/cam_hubs.json data/site_visit.json data/parent_trees.json data/sites_hubs.json
           git commit -m "chore: refresh public CAM data"
           git push
+          echo "data_changed=true" >> "$GITHUB_OUTPUT"
+
+      # A push made with GITHUB_TOKEN does not trigger another workflow. Build
+      # the refreshed Jekyll site here so the new JSON reaches GitHub Pages.
+      - name: Configure GitHub Pages
+        if: steps.commit-data.outputs.data_changed == 'true'
+        uses: actions/configure-pages@v5
+
+      - name: Build the Jekyll site
+        if: steps.commit-data.outputs.data_changed == 'true'
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./
+          destination: ./_site
+
+      - name: Upload the GitHub Pages artifact
+        if: steps.commit-data.outputs.data_changed == 'true'
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: ./_site
+
+  deploy:
+    name: Deploy refreshed data to GitHub Pages
+    if: needs.export.outputs.data_changed == 'true'
+    needs: export
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
