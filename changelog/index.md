@@ -7,7 +7,7 @@ nav_order: 98
 <img src="../assets/images/website/changelog.png" alt="CAMTREE Volunteer consulting a day planner showing the ChangeLog" height="512" width="828">
 
 # {{ page.title }}
-_Version: August 31 edit # 1_
+_Version: September 04 edit # 1_
 
 <!-- This content will not appear in the rendered Markdown 
 <details markdown="1">
@@ -45,6 +45,16 @@ Each entry is grouped by month. Within each month, changes are organized by area
 ---
 
 ## Changelog Entries
+
+---
+
+<details markdown="1">
+<summary markdown="span"><strong>2026 September</strong></summary>
+
+### GitHub
+- Create GitHub Action which uses Python to export SQL tables to JSON files used for the Database Tables section of this website
+
+</details>
 
 ---
 
