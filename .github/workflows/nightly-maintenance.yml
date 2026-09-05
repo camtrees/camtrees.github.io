@@ -110,36 +110,19 @@ jobs:
 
       # A push made with GITHUB_TOKEN does not trigger another workflow. Build
       # the refreshed Jekyll site here so the new JSON reaches GitHub Pages.
-      # Just the Docs is not bundled with jekyll-build-pages, so install the
-      # repository's Gemfile dependencies before running Jekyll directly.
-      - name: Set up Ruby
+      # The committed Gemfile and Gemfile.lock define the complete site build.
+      - name: Set up Ruby and install site dependencies
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.3'
-
-      - name: Install Jekyll and the Just the Docs theme
-        run: |
-          # Prefer the repository's pinned dependencies when it has a Gemfile.
-          # The fallback keeps this workflow usable for a minimal site that
-          # declares `theme: just-the-docs` without committing a Gemfile.
-          if [[ -f Gemfile ]]; then
-            bundle install
-          else
-            gem install jekyll -v "~> 4.4.1" --no-document
-            gem install just-the-docs -v "0.12.0" --no-document
-          fi
+          bundler-cache: true
 
       - name: Configure GitHub Pages
         id: pages
         uses: actions/configure-pages@v6
 
       - name: Build the Jekyll site
-        run: |
-          if [[ -f Gemfile ]]; then
-            bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
-          else
-            jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
-          fi
+        run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: production
 

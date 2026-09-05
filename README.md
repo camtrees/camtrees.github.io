@@ -41,8 +41,8 @@ same private-export/public-JSON pattern.
 The nightly export workflow also builds and deploys the Jekyll site in the same
 workflow: GitHub does not start a second workflow from the data commit created
 with its built-in `GITHUB_TOKEN`. The build installs the repository's Gemfile
-dependencies so the Just the Docs theme is available. For a minimal repository
-without a Gemfile, it installs pinned Jekyll and Just the Docs versions directly.
+dependencies using the committed lockfile, so the pinned Just the Docs theme and
+the rest of the tested dependency set are available reproducibly.
 The Pages build runs even when no exported data changes, allowing a manual run
 to repair or repeat a previous failed deployment. Its GitHub-maintained action
 versions target the current Node.js 24 Actions runtime.
