@@ -204,9 +204,9 @@ def export_data(database_url: str, export: dict[str, Any]) -> None:
 
 
 def main() -> None:
-    database_url = os.environ.get("NEON_DATABASE_URL")
+    database_url = os.environ.get("CAMTREES_READ_URL")
     if not database_url:
-        raise SystemExit("NEON_DATABASE_URL is required (configure it as a GitHub Actions secret).")
+        raise SystemExit("CAMTREES_READ_URL is required (configure it as a GitHub Actions secret).")
 
     for export in EXPORTS:
         export_data(database_url, export)
