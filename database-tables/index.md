@@ -6,9 +6,8 @@ nav_order: 3
 
 # {{ page.title }}
 
-The database tables in this section are currently under development. All data shown
-reflects a snapshot taken on August 30, 2026. These tables will transition to live
-production status once nightly data refreshes are implemented. (Coming soon!)
+The database tables in this section are now in *live production* mode. Tables are
+refreshed each morning, usually between the hours of 3 and 6am. 
 
 ### Available Tables
 
