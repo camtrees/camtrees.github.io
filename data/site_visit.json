@@ -753,7 +753,7 @@
     {
       "Site": "Chadbourne Field",
       "Tree ID": "000",
-      "Date Planted": "2026-09-01",
+      "Date Planted": "2022-06-06",
       "Health": "good",
       "Access Path": "auto road",
       "Access Level": "easy",
@@ -763,7 +763,7 @@
       "Mother Tree": null,
       "Father Tree": null,
       "Parent Tree Note": "planted 06 Jun 2022",
-      "Note": "orig CENTER treeT Chadbourne, located between trees 1 & 7"
+      "Note": ""
     },
     {
       "Site": "Chadbourne Field",
@@ -875,14 +875,14 @@
       "Tree ID": "222",
       "Date Planted": "2026-06-13",
       "Health": "good",
-      "Access Path": null,
-      "Access Level": null,
+      "Access Path": "auto road",
+      "Access Level": "easy",
       "GPS Locked": true,
-      "Planting Method": null,
-      "Wire Fence": null,
+      "Planting Method": "short tube",
+      "Wire Fence": true,
       "Mother Tree": "Mt Agamenticus Summit",
       "Father Tree": "Cataloochie #273, Maggie Valley, NC",
-      "Parent Tree Note": null,
+      "Parent Tree Note": "father tree planted in Mass orchard (Brian McClain)\n",
       "Note": "Entered by Kenster as proxy for K. Lea Sewell"
     },
     {
