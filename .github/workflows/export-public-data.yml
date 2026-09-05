@@ -39,7 +39,7 @@ jobs:
 
       - name: Export public data
         env:
-          NEON_DATABASE_URL: ${{ secrets.CAMTREES_READ_URL }}
+          CAMTREES_READ_URL: ${{ secrets.CAMTREES_READ_URL }}
         run: python scripts/export_public_data.py
 
       - name: Commit refreshed public data
