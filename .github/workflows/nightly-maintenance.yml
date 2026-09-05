@@ -1,0 +1,161 @@
+name: Nightly CAM maintenance and public export
+
+on:
+  schedule:
+    # Nightly at 03:20 UTC.
+    - cron: '20 3 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+# Prevent simultaneous Pages deployments while allowing a deployment already
+# in progress to finish safely.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    # Scheduled workflows only run from the default branch.  This also prevents
+    # an untrusted pull request from receiving the repository secret.
+    if: github.event_name != 'pull_request'
+    steps:
+      - name: Check out the site
+        uses: actions/checkout@v7
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: |
+            scripts/requirements-export.txt
+            scripts/requirements-maintenance.txt
+
+      - name: Install Python dependencies
+        run: |
+          pip install -r scripts/requirements-export.txt
+          pip install -r scripts/requirements-maintenance.txt
+
+      # Each maintenance program writes its standard output and errors to a
+      # separate timestamped log. The programs run in this order so all database
+      # changes are complete before the public JSON snapshot is generated.
+      - name: Prepare nightly maintenance run
+        id: nightly
+        shell: bash
+        run: |
+          mkdir -p outputs/nightly "${{ runner.temp }}/epicollect-tokens"
+          echo "timestamp=$(date -u +'%Y-%m-%dT%H-%M-%SZ')" >> "$GITHUB_OUTPUT"
+
+      - name: Import EpiCollect rain-event data
+        env:
+          CAMTREES_WRITE_URL: ${{ secrets.CAMTREES_WRITE_URL }}
+          RAIN_CLIENT_SECRET: ${{ secrets.RAIN_CLIENT_SECRET }}
+          USE_CAMTREES_DATABASE: 'true'
+          EPICOLLECT_TOKEN_DIR: ${{ runner.temp }}/epicollect-tokens
+        run: >-
+          python -u scripts/RUN_Import_EpiCollect_Rain_Event_Data.py
+          > "outputs/nightly/${{ steps.nightly.outputs.timestamp }}_rain-event.log" 2>&1
+
+      - name: Import EpiCollect tree-maintenance data
+        env:
+          CAMTREES_WRITE_URL: ${{ secrets.CAMTREES_WRITE_URL }}
+          MAINT_CLIENT_SECRET: ${{ secrets.MAINT_CLIENT_SECRET }}
+          USE_CAMTREES_DATABASE: 'true'
+          EPICOLLECT_TOKEN_DIR: ${{ runner.temp }}/epicollect-tokens
+        run: >-
+          python -u scripts/RUN_Import_EpiCollect_Tree_Maint_Data.py
+          > "outputs/nightly/${{ steps.nightly.outputs.timestamp }}_tree-maintenance.log" 2>&1
+
+      - name: Set missing tree elevations
+        env:
+          CAMTREES_WRITE_URL: ${{ secrets.CAMTREES_WRITE_URL }}
+          USE_CAMTREES_DATABASE: 'true'
+        run: >-
+          python -u scripts/RUN_Set_Tree_Elevation_Data.py
+          > "outputs/nightly/${{ steps.nightly.outputs.timestamp }}_tree-elevation.log" 2>&1
+
+      # Preserve available logs even when a maintenance step fails. Logs are not
+      # committed because they may contain private EpiCollect record details.
+      - name: Upload nightly maintenance logs
+        if: always()
+        uses: actions/upload-artifact@v6
+        with:
+          name: nightly-maintenance-${{ steps.nightly.outputs.timestamp }}
+          path: outputs/nightly/*.log
+          if-no-files-found: warn
+          retention-days: 30
+
+      - name: Export public data
+        env:
+          CAMTREES_READ_URL: ${{ secrets.CAMTREES_READ_URL }}
+        run: python scripts/export_public_data.py
+
+      - name: Commit refreshed public data
+        run: |
+          # Keep this list synchronized with the outputs in export_public_data.py.
+          if git diff --quiet -- data/cam_trees.json data/cam_sites.json data/cam_orgs.json data/cam_hubs.json data/site_visit.json data/parent_trees.json data/sites_hubs.json; then
+            echo "No public data changes to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/cam_trees.json data/cam_sites.json data/cam_orgs.json data/cam_hubs.json data/site_visit.json data/parent_trees.json data/sites_hubs.json
+          git commit -m "chore: refresh public CAM data"
+          git push
+
+      # A push made with GITHUB_TOKEN does not trigger another workflow. Build
+      # the refreshed Jekyll site here so the new JSON reaches GitHub Pages.
+      # Just the Docs is not bundled with jekyll-build-pages, so install the
+      # repository's Gemfile dependencies before running Jekyll directly.
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.3'
+
+      - name: Install Jekyll and the Just the Docs theme
+        run: |
+          # Prefer the repository's pinned dependencies when it has a Gemfile.
+          # The fallback keeps this workflow usable for a minimal site that
+          # declares `theme: just-the-docs` without committing a Gemfile.
+          if [[ -f Gemfile ]]; then
+            bundle install
+          else
+            gem install jekyll -v "~> 4.4.1" --no-document
+            gem install just-the-docs -v "0.12.0" --no-document
+          fi
+
+      - name: Configure GitHub Pages
+        id: pages
+        uses: actions/configure-pages@v6
+
+      - name: Build the Jekyll site
+        run: |
+          if [[ -f Gemfile ]]; then
+            bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
+          else
+            jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
+          fi
+        env:
+          JEKYLL_ENV: production
+
+      - name: Upload the GitHub Pages artifact
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: ./_site
+
+  deploy:
+    name: Deploy refreshed data to GitHub Pages
+    needs: export
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5

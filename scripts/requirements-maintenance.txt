@@ -1,0 +1,9 @@
+# Packages used by the three nightly database-maintenance programs and their
+# shared helper modules. psycopg's binary extra avoids system-level PostgreSQL
+# build requirements on a fresh GitHub-hosted runner.
+psycopg[binary]>=3.2,<4
+python-dotenv>=1,<2
+pandas>=2.2,<3
+tabulate>=0.9,<1
+pyepicollect
+pyhigh
