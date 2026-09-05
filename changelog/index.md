@@ -7,7 +7,7 @@ nav_order: 98
 <img src="../assets/images/website/changelog.png" alt="CAMTREE Volunteer consulting a day planner showing the ChangeLog" height="512" width="828">
 
 # {{ page.title }}
-_Version: September 04 edit # 2_
+_Version: September 05 edit # 1_
 
 <!-- This content will not appear in the rendered Markdown 
 <details markdown="1">
@@ -52,7 +52,8 @@ Each entry is grouped by month. Within each month, changes are organized by area
 <summary markdown="span"><strong>2026 September</strong></summary>
 
 ### GitHub
-- Added GitHub Action to, each morning, export JSON files used by Database Tables files
+- Added GitHub Action (Nightly-Maintenance.yml) to Import EpiCollect data, Update tree
+elevations, and export JSON files used by the website Database Tables
 
 ### Website Content
 - Database Tables landing page indicates tables are in *live production* mode
