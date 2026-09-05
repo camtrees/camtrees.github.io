@@ -72,8 +72,8 @@
     },
     {
       "hub": "Monson",
-      "captain": "Kenster Rosenberry",
-      "lieutenant": "Kenster Rosenberry",
+      "captain": null,
+      "lieutenant": null,
       "longitude": -69.39089650743418,
       "latitude": 45.362971322771145
     },
