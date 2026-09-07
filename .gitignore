@@ -14,6 +14,15 @@ _site/
 .bundle/
 vendor/
 
+#Ignore EpiCollect access tokens
+Python/epicollect_cam_tree_maintenance_access_token
+Python/epicollect_cam_tree_rain_event_access_token
+
 # Ignore Mac folder view
 **/.DS_Store
+
+#Ignore Python and PyCharm items
+/scripts/.env
 /scripts/__pycache__
+/scripts/.idea
+
