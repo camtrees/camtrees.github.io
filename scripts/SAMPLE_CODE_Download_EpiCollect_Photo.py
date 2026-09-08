@@ -6,9 +6,13 @@
 ## Author   : Ken Rosenberry <ken.rosenberry@gmail.com>
 ##
 ## Revised  : 2026-07-11 Initial Version
+##          : 2026-09-07 Updates for hkr and ChatGPT code revisions
 ##########################################################################################
 
-from dotenv import load_dotenv
+# load globals from config.py file
+from config import *
+
+# from dotenv import load_dotenv
 import os
 
 import requests
@@ -23,11 +27,19 @@ epicollect_attribs = {
     # ------------------------------------------------------------------------------------------
     # Get EpiCollect project access tokens
     # ------------------------------------------------------------------------------------------
-    'CLIENT_ID': os.getenv("MAINT_CLIENT_ID"),
-    'CLIENT_SECRET': os.getenv("MAINT_CLIENT_SECRET"),
-    'PROJECT_SLUG': os.getenv("MAINT_PROJECT_SLUG"),
-    'ACCESS_TOKEN': 'MAINT_ACCESS_TOKEN'
-    }
+    # 'CLIENT_ID': os.getenv("MAINT_CLIENT_ID"),
+    # 'CLIENT_SECRET': os.getenv("MAINT_CLIENT_SECRET"),
+    # 'PROJECT_SLUG': os.getenv("MAINT_PROJECT_SLUG"),
+    # 'ACCESS_TOKEN': 'MAINT_ACCESS_TOKEN',
+    'CLIENT_ID': MAINT_CLIENT_ID,
+    'CLIENT_SECRET': MAINT_CLIENT_SECRET,
+    'PROJECT_NAME': MAINT_PROJECT_NAME,
+    'PROJECT_SLUG': MAINT_PROJECT_SLUG,
+    # ------------------------------------------------------------------------------------------
+    # File that stores our access_token
+    # ------------------------------------------------------------------------------------------
+    'TOKEN_FILE': 'epicollect_cam_tree_maintenance_access_token'
+}
 
 
 # PHOTO_NAME = 'ed45b058-aa0c-4fa5-845b-3873ae3bbdb2_1763582909.jpg'
