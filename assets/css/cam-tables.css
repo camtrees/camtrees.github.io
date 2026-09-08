@@ -13,6 +13,35 @@
 .cam-table__controls input { min-width: min(22rem, 80vw); }
 .cam-table__controls p { margin: 0; }
 
+/* Make the primary table actions easy to see and select. Their light-green
+   fill matches the green rows used by the table's zebra striping. */
+.cam-table__controls button[data-cam-table-print],
+.cam-table__controls button[data-cam-table-csv],
+.cam-table__controls button[data-cam-table-map] {
+  padding: .6rem 1rem;
+  color: inherit;
+  font: inherit;
+  font-weight: 600;
+  background-color: #e8f5e9;
+  border: 1px solid #5b765c;
+  border-radius: .3rem;
+  cursor: pointer;
+}
+
+.cam-table__controls button[data-cam-table-print]:hover,
+.cam-table__controls button[data-cam-table-print]:focus,
+.cam-table__controls button[data-cam-table-csv]:hover,
+.cam-table__controls button[data-cam-table-csv]:focus,
+.cam-table__controls button[data-cam-table-map]:hover,
+.cam-table__controls button[data-cam-table-map]:focus {
+  background-color: #d5ebd6;
+}
+
+.cam-table__controls button:disabled {
+  cursor: not-allowed;
+  opacity: .6;
+}
+
 /* Keep large tables within the viewport and allow scrolling in both directions. */
 .cam-table__scroll {
   max-height: 70vh;
