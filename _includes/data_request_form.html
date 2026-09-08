@@ -1,0 +1,89 @@
+{% comment %}
+Reusable form renderer for pages under New Data Requests.
+
+The calling page supplies a form definition from _data/request_forms.yml. The
+same Google Apps Script endpoint can distinguish forms by the hidden
+request_type value. Supported field types are ordinary HTML input types,
+textarea, and select.
+{% endcomment %}
+<link rel="stylesheet" href="{{ '/assets/css/cam-requests.css' | relative_url }}">
+
+{% assign request_endpoint = include.form.endpoint | default: site.google_apps_script_web_app_url | default: '' %}
+
+<p>Fields marked with an asterisk are required.</p>
+
+{% if request_endpoint == blank %}
+<div class="cam-request-form__notice" role="status">
+  <strong>Setup notice:</strong> This form is awaiting connection to the
+  CAMTREES request service and cannot yet be submitted.
+</div>
+{% endif %}
+
+<!-- The form posts directly to Google Apps Script. No database or email
+     credentials are stored here or sent to the visitor's browser. -->
+<form
+  class="cam-request-form"
+  method="post"
+  action="{% if request_endpoint != blank %}{{ request_endpoint | escape }}{% else %}#{% endif %}"
+>
+  <!-- This value lets one Apps Script endpoint route several request forms. -->
+  <input type="hidden" name="request_type" value="{{ include.form.request_type | escape }}">
+
+  {% for section in include.form.sections %}
+  <fieldset>
+    <legend>{{ section.legend | escape }}</legend>
+
+    {% for field in section.fields %}
+      {% assign field_id = include.form.request_type | append: '-' | append: field.name %}
+    <label for="{{ field_id | escape }}">
+      {{ field.label | escape }}{% if field.required %} <span aria-hidden="true">*</span>{% endif %}
+    </label>
+
+      {% if field.type == 'textarea' %}
+    <textarea
+      id="{{ field_id | escape }}"
+      name="{{ field.name | escape }}"
+      rows="{{ field.rows | default: 4 }}"
+      {% if field.maxlength %}maxlength="{{ field.maxlength }}"{% endif %}
+      {% if field.placeholder %}placeholder="{{ field.placeholder | escape }}"{% endif %}
+      {% if field.required %}required{% endif %}
+    ></textarea>
+      {% elsif field.type == 'select' %}
+    <select
+      id="{{ field_id | escape }}"
+      name="{{ field.name | escape }}"
+      {% if field.required %}required{% endif %}
+    >
+        {% if field.placeholder %}<option value="">{{ field.placeholder | escape }}</option>{% endif %}
+        {% for option in field.options %}
+      <option value="{{ option.value | default: option.label | escape }}">{{ option.label | escape }}</option>
+        {% endfor %}
+    </select>
+      {% else %}
+    <input
+      id="{{ field_id | escape }}"
+      name="{{ field.name | escape }}"
+      type="{{ field.type | default: 'text' | escape }}"
+      {% if field.maxlength %}maxlength="{{ field.maxlength }}"{% endif %}
+      {% if field.autocomplete %}autocomplete="{{ field.autocomplete | escape }}"{% endif %}
+      {% if field.placeholder %}placeholder="{{ field.placeholder | escape }}"{% endif %}
+      {% if field.required %}required{% endif %}
+    >
+      {% endif %}
+
+      {% if field.help %}<small class="cam-request-form__help">{{ field.help | escape }}</small>{% endif %}
+    {% endfor %}
+  </fieldset>
+  {% endfor %}
+
+  <!-- This honeypot is hidden from people. The receiving Apps Script should
+       silently discard a submission when this field contains a value. -->
+  <div class="cam-request-form__honeypot" aria-hidden="true">
+    <label for="{{ include.form.request_type | escape }}-website">Website</label>
+    <input id="{{ include.form.request_type | escape }}-website" name="website" type="text" tabindex="-1" autocomplete="off">
+  </div>
+
+  <button type="submit"{% if request_endpoint == blank %} disabled aria-disabled="true"{% endif %}>
+    {{ include.form.submit_label | default: 'Submit Request' | escape }}
+  </button>
+</form>

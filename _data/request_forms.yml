@@ -1,0 +1,63 @@
+# Definitions used by the reusable data-request form include. To add another
+# request type, copy this structure under a new key and reference that key from
+# a short Markdown page in new-data-requests/.
+new_site:
+  request_type: new_site
+  submit_label: Submit Site Request
+  sections:
+    - legend: Proposed site
+      fields:
+        - name: site_name
+          label: Site Name
+          type: text
+          maxlength: 200
+          required: true
+        - name: town
+          label: Town
+          type: text
+          maxlength: 200
+          autocomplete: address-level2
+        - name: organization_code
+          label: Organization Code
+          type: text
+          maxlength: 100
+        - name: organization
+          label: Organization
+          type: text
+          maxlength: 200
+          autocomplete: organization
+        - name: site_location
+          label: Site Location
+          type: text
+          maxlength: 500
+          placeholder: Street address or a brief location description
+        - name: location_note
+          label: Location Note
+          type: textarea
+          rows: 4
+          maxlength: 2000
+          placeholder: Directions or details that would help identify the site
+    - legend: Requestor
+      fields:
+        - name: contact_name
+          label: Contact Name
+          type: text
+          maxlength: 200
+          autocomplete: name
+          required: true
+        - name: contact_email
+          label: Contact Email
+          type: email
+          maxlength: 320
+          autocomplete: email
+          required: true
+        - name: contact_phone
+          label: Contact Phone
+          type: tel
+          maxlength: 100
+          autocomplete: tel
+        - name: comments
+          label: Additional Comments
+          type: textarea
+          rows: 6
+          maxlength: 5000

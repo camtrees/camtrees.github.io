@@ -10,6 +10,11 @@ theme: just-the-docs
 # Our GitHub Pages repository
 url: https://camtrees.github.io
 
+# Public endpoint that receives New Site requests. Paste the deployed Google
+# Apps Script web-app URL here after its permissions have been configured.
+# This URL identifies the endpoint; it is not a password or secret credential.
+google_apps_script_web_app_url: "https://script.google.com/macros/s/AKfycbzCAhZUW1zw7CsWDRXxtd-HmJlK8BHc5_3TIOW2jzz1I5wCPWzLLpTKB4ZIAgYrxPyOzA/exec"
+
 # We don't want any auxiliary links shown at the top right on all pages
 # aux_links:
 #   Template Repository: https://github.com/just-the-docs/just-the-docs-template
@@ -37,4 +42,3 @@ mermaid:
   # Version of mermaid library
   # Pick an available version from https://cdn.jsdelivr.net/npm/mermaid/
   version: "11.16.1"
-

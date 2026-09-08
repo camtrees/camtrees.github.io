@@ -114,3 +114,19 @@ control always shows filtered Hubs as clickable black triangles with permanent
 Hub-name labels and Captain and Lieutenant details. The Hub Areas checkbox
 controls only the green boundary outlines and starts enabled. The Trees and
 Sites maps continue to open with their complete Hub Areas overlay disabled.
+
+## New data request forms
+
+Pages under `new-data-requests/` use the shared `_includes/data_request_form.html`
+renderer. Form sections and fields are defined in `_data/request_forms.yml`, so a
+new request page needs only a new YAML definition and a short Markdown page that
+passes that definition to the include. The renderer supports standard HTML input
+types, text areas, and select lists, and supplies the shared endpoint, required-
+field display, disabled setup state, and spam honeypot automatically.
+
+Every form sends a hidden `request_type` value. The Google Apps Script endpoint
+should use that value to select the correct validation rules, email subject, and
+message layout as more request types are added. Configure the deployed endpoint
+once with `google_apps_script_web_app_url` in `_config.yml`. The deployable
+server-side source and setup instructions are maintained in
+`google-apps-script/data-request-handler/`.

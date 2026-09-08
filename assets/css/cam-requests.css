@@ -1,0 +1,98 @@
+/* Form additions for CAMTREES data-request pages. Colors and typography follow
+   the same understated green styling used by the database tables. */
+
+.cam-request-form {
+  max-width: 48rem;
+  margin: 1.5rem 0;
+}
+
+/* Explain why Submit is unavailable before the public endpoint is configured. */
+.cam-request-form__notice {
+  max-width: 48rem;
+  margin: 1rem 0;
+  padding: .8rem 1rem;
+  background: #e8f5e9;
+  border-left: .25rem solid #5b765c;
+}
+
+/* Group related questions without introducing a separate visual framework. */
+.cam-request-form fieldset {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: .4rem;
+  margin: 0 0 1.5rem;
+  padding: 1rem;
+  border: 1px solid #c8ddc9;
+  border-radius: .3rem;
+}
+
+.cam-request-form legend {
+  padding: 0 .35rem;
+  font-weight: 700;
+}
+
+.cam-request-form label {
+  margin-top: .55rem;
+  font-weight: 600;
+}
+
+/* Give every field a comfortable target while inheriting the site's typeface. */
+.cam-request-form input,
+.cam-request-form textarea,
+.cam-request-form select {
+  box-sizing: border-box;
+  width: 100%;
+  padding: .6rem .75rem;
+  color: inherit;
+  font: inherit;
+  background: #fff;
+  border: 1px solid #777;
+  border-radius: .3rem;
+}
+
+.cam-request-form textarea {
+  resize: vertical;
+}
+
+.cam-request-form input:focus,
+.cam-request-form textarea:focus,
+.cam-request-form select:focus {
+  outline: 2px solid #5b765c;
+  outline-offset: 1px;
+}
+
+.cam-request-form__help {
+  display: block;
+  margin-bottom: .25rem;
+}
+
+/* Match the submit action to the green buttons and zebra stripes on tables. */
+.cam-request-form button[type="submit"] {
+  padding: .7rem 1.1rem;
+  color: inherit;
+  font: inherit;
+  font-weight: 700;
+  background-color: #e8f5e9;
+  border: 1px solid #5b765c;
+  border-radius: .3rem;
+  cursor: pointer;
+}
+
+.cam-request-form button[type="submit"]:hover,
+.cam-request-form button[type="submit"]:focus {
+  background-color: #d5ebd6;
+}
+
+.cam-request-form button[type="submit"]:disabled {
+  cursor: not-allowed;
+  opacity: .6;
+}
+
+/* Move the bot-trap field off screen without exposing it to keyboard users. */
+.cam-request-form__honeypot {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
