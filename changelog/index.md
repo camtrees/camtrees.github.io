@@ -7,7 +7,7 @@ nav_order: 98
 <img src="../assets/images/website/changelog.png" alt="CAMTREE Volunteer consulting a day planner showing the ChangeLog" height="512" width="828">
 
 # {{ page.title }}
-_Version: September 05 edit # 1_
+_Version: September 07 edit # 1_
 
 <!-- This content will not appear in the rendered Markdown 
 <details markdown="1">
@@ -56,6 +56,7 @@ Each entry is grouped by month. Within each month, changes are organized by area
 elevations, and export JSON files used by the website Database Tables
 
 ### Website Content
+- Bigger colored buttons in the Database Tables
 - Database Tables landing page indicates tables are in *live production* mode
 </details>
 
