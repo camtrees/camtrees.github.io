@@ -7,7 +7,7 @@ nav_order: 98
 <img src="../assets/images/website/changelog.png" alt="CAMTREE Volunteer consulting a day planner showing the ChangeLog" height="512" width="828">
 
 # {{ page.title }}
-_Version: September 07 edit # 1_
+_Version: September 07 edit # 2_
 
 <!-- This content will not appear in the rendered Markdown 
 <details markdown="1">
@@ -54,6 +54,9 @@ Each entry is grouped by month. Within each month, changes are organized by area
 ### GitHub
 - Added GitHub Action (Nightly-Maintenance.yml) to Import EpiCollect data, Update tree
 elevations, and export JSON files used by the website Database Tables
+
+### Python
+- Moved all code from 'codebase' repository to 'camtrees.github.io' repository
 
 ### Website Content
 - Bigger colored buttons in the Database Tables
