@@ -14,14 +14,22 @@ _site/
 .bundle/
 vendor/
 
-#Ignore EpiCollect access tokens
-**/epicollect_cam_tree_*_access_token
+# EpiCollect access tokens are short-lived credentials, but they should still
+# remain outside source control and the public GitHub Pages site.
+epicollect_*_access_token
+scripts/epicollect_*_access_token
 
 # Ignore Mac folder view
 **/.DS_Store
 
+# Nightly maintenance logs can contain private EpiCollect record details. The
+# workflow uploads them as temporary Actions artifacts instead of committing them.
+outputs/nightly/*.log
+
 #Ignore Python and PyCharm items
-/scripts/.env
 /scripts/__pycache__
+/scripts/.env
 /scripts/.idea
 
+# Ignore automatically generated Python bytecode and extension files
+*.py[cod]
