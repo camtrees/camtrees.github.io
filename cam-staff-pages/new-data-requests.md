@@ -7,7 +7,7 @@ parent: CAM Staff Pages
 # {{ page.title }}
 
 Use the pages in this section to request a new Cam Org, Hub, Parent Tree, Site, or
-Volunteer be added to the CAMTREES Database.
+Volunteer to be added to the CAMTREES Database.
 
 New data requests will be sent to the CAMTREES Database Administrator.
 Submitting a request does not add information directly to the CAMTREES database.

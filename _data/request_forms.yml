@@ -12,26 +12,31 @@ new_site:
           type: text
           maxlength: 200
           required: true
+          placeholder: Name of the new site
         - name: hub
           label: Hub
           type: text
           maxlength: 200
           required: true
+          placeholder: Hub within which the new site resides
         - name: organization_code
           label: Organization Code
           type: text
           maxlength: 100
           required: true
+          placeholder: CAM Org code under which the new site will fall under
         - name: organization_name
           label: Organization Name
           type: text
           maxlength: 200
           required: true
+          placeholder: CAM Org name under which the new site will fall under
         - name: town
           label: Town
           type: text
           maxlength: 200
           required: true
+          placeholder: Town where the new site is located
         - name: site_location
           label: Site Location
           type: text
@@ -47,31 +52,38 @@ new_site:
           type: text
           maxlength: 200
           required: true
+          placeholder: Name of the site contact person
         - name: contact_email
           label: Contact Email
           type: email
           maxlength: 320
           required: true
+          placeholder: Email address of the sote contact person
         - name: site_url
           label: Site URL
           type: url
           maxlength: 500
+          placeholder: Web address of the site
         - name: primary_caretaker_name
           label: Primary Caretaker Name
           type: text
           maxlength: 200
+          placeholder: Name of the primary caretaker of the trees at the site
         - name: primary_caretaker_email
           label: Primary Caretaker Email
           type: email
           maxlength: 320
+          placeholder: Email address of the primary caretaker of the trees at the site
         - name: secondary_caretaker_name
           label: Secondary Caretaker Name
           type: text
           maxlength: 200
+          placeholder: Name of the secondary caretaker of the trees at the site
         - name: secondary_caretaker_email
           label: Secondary Caretaker Email
           type: email
           maxlength: 320
+          placeholder: Email address of the secondary caretaker of the trees at the site
     - legend: Requested By...
       fields:
         - name: name
@@ -80,17 +92,20 @@ new_site:
           maxlength: 200
           required: true
           autocomplete: text
+          placeholder: Your name
         - name: email
           label: Requestor's Email
           type: email
           maxlength: 320
           required: true
           autocomplete: email
+          placeholder: Your email address
         - name: phone
           label: Requestor's Phone
           type: tel
           maxlength: 100
           autocomplete: tel
+          placeholder: Your phone number
         - name: comments
           label: Additional Comments
           type: text

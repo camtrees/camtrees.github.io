@@ -58,7 +58,28 @@ Currently, the following people have access to the shared password group:
 
 ---
 
-## 2. Google Groups
+## 2. Google Apps Script
+
+<a href="https://script.google.com/home" target="_blank">Google Apps Script</a>
+allows us to receive data from a user completed HTML Form requesting new data to be added
+to the CAMTREES Database. We currently have forms that request a new:
+- Site
+- Cam Org
+- Hub
+- Parent Tree
+- Volunteer
+
+Once the CAM Staff user completes the appropriate HTML Form, the form data is sent to a
+Google JavaScript App which will:
+- Receive the submitted form.
+- Validate required fields.
+- Reject obvious automated spam.
+- Send an email from the CAM organization’s Google account to the Database Administrator.
+- Return a success or error response to the user.
+
+---
+
+## 3. Google Groups
 
 <a href="https://groups.google.com" target="_blank">Google Groups</a>
 provides a centralized method for group communication using a shared email address.

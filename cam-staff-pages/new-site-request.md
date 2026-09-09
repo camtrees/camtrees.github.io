@@ -7,9 +7,8 @@ grand_parent: CAM Staff Pages
 
 # {{ page.title }}
 
-Use this form to request a new CAM planting or observation site. The CAMTREES
-Database Administrator will review the information before anything is added to
-the database.
+Use this form to request a new CAM planting site. The CAMTREES Database Administrator will
+review the information before anything is added to the database.
 
 {% comment %}
 The questions and labels live in _data/request_forms.yml. Keeping this page
