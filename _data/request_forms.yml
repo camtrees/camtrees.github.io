@@ -4,6 +4,7 @@
 new_site:
   request_type: new_site
   submit_label: Submit Site Request
+  include_requested_by: true
   sections:
     - legend: Proposed Site...
       fields:
@@ -84,29 +85,39 @@ new_site:
           type: email
           maxlength: 320
           placeholder: Email address of the secondary caretaker of the trees at the site
-    - legend: Requested By...
+new_hub:
+  request_type: new_hub
+  submit_label: Submit Hub Request
+  include_requested_by: true
+  sections:
+    - legend: Proposed Hub...
       fields:
-        - name: name
-          label: Requestor's Name
+        - name: hub_name
+          label: Hub Name
           type: text
           maxlength: 200
           required: true
-          autocomplete: text
-          placeholder: Your name
-        - name: email
-          label: Requestor's Email
+          placeholder: Name of the new hub
+        - name: captain_name
+          label: Captain Name
+          type: text
+          maxlength: 200
+          required: true
+          placeholder: Name of the Hub Captain
+        - name: captain_email
+          label: Captain Email
           type: email
           maxlength: 320
-          required: true
           autocomplete: email
-          placeholder: Your email address
-        - name: phone
-          label: Requestor's Phone
-          type: tel
-          maxlength: 100
-          autocomplete: tel
-          placeholder: Your phone number
-        - name: comments
-          label: Additional Comments
+          required: true
+          placeholder: Email address of the Hub Captain
+        - name: lieutenant_name
+          label: Lieutenant Name
           type: text
-          maxlength: 1000
+          maxlength: 200
+          placeholder: Name of the Hub Lieutenant, if known
+        - name: lieutenant_email
+          label: Lieutenant Email
+          type: email
+          maxlength: 320
+          placeholder: Email address of the Hub Lieutenant, if known

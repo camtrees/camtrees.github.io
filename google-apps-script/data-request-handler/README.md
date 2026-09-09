@@ -32,6 +32,10 @@ Adding a form requires changes in both locations:
 2. Add the same request type and an explicit field allow-list to
    `REQUEST_DEFINITIONS` in `Code.gs`.
 
+Forms that set `include_requested_by: true` automatically append the common
+section from `_data/request_form_sections.yml`. In `Code.gs`, append the matching
+`REQUESTOR_FIELDS` array and use `requestor_email` as `replyToField`.
+
 The duplication is deliberate. The YAML controls what the browser displays,
 while `Code.gs` independently controls what the server accepts and emails.
 Never trust additional field names submitted by a browser.

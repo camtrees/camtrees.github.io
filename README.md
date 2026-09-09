@@ -124,6 +124,11 @@ passes that definition to the include. The renderer supports standard HTML input
 types, text areas, and select lists, and supplies the shared endpoint, required-
 field display, disabled setup state, and spam honeypot automatically.
 
+The common Requested By section is defined once in
+`_data/request_form_sections.yml`. A form appends it by setting
+`include_requested_by: true`; its server-side counterpart is the shared
+`REQUESTOR_FIELDS` list in `Code.gs`.
+
 Every form sends a hidden `request_type` value. The Google Apps Script endpoint
 should use that value to select the correct validation rules, email subject, and
 message layout as more request types are added. Configure the deployed endpoint

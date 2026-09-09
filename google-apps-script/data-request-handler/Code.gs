@@ -13,12 +13,22 @@
  * Keeping a separate server-side list is intentional: browser-submitted field
  * names cannot be trusted, even though the page has its own YAML definition.
  */
+// These fields are appended to request types that need requestor information.
+// The browser form mirrors them from _data/request_form_sections.yml.
+const REQUESTOR_FIELDS = Object.freeze([
+  { name: 'requestor_name', label: "Requestor's Name", maximumLength: 200 },
+  { name: 'requestor_email', label: "Requestor's Email", maximumLength: 320 },
+  { name: 'requestor_phone', label: "Requestor's Phone", maximumLength: 100 },
+  { name: 'comments', label: 'Additional Comments', maximumLength: 1000 }
+]);
+
 const REQUEST_DEFINITIONS = Object.freeze({
   new_site: {
     label: 'New Site',
     subjectField: 'site_name',
-    requiredFields: ['site_name', 'hub', 'organization_code', 'organization_name', 'town', 'contact_name', 'contact_email', 'name', 'email'],
-    replyToField: 'email',
+    requiredFields: ['site_name', 'hub', 'organization_code', 'organization_name', 'town', 'contact_name', 'contact_email', 'requestor_name', 'requestor_email'],
+    replyToField: 'requestor_email',
+    emailFields: ['contact_email', 'primary_caretaker_email', 'secondary_caretaker_email', 'requestor_email'],
     fields: [
       { name: 'site_name', label: 'Site Name', maximumLength: 200 },
       { name: 'hub', label: 'Hub', maximumLength: 200 },
@@ -33,12 +43,22 @@ const REQUEST_DEFINITIONS = Object.freeze({
       { name: 'primary_caretaker_name', label: 'Primary Caretaker Name', maximumLength: 200 },
       { name: 'primary_caretaker_email', label: 'Primary Caretaker Email', maximumLength: 320 },
       { name: 'secondary_caretaker_name', label: 'Secondary Caretaker Name', maximumLength: 200 },
-      { name: 'secondary_caretaker_email', label: 'Secondary Caretaker Email', maximumLength: 320 },
-      { name: 'name', label: "Requestor's Name", maximumLength: 200 },
-      { name: 'email', label: "Requestor's Email", maximumLength: 320 },
-      { name: 'phone', label: "Requestor's Phone", maximumLength: 100 },
-      { name: 'comments', label: 'Additional Comments', maximumLength: 1000 }
-    ]
+      { name: 'secondary_caretaker_email', label: 'Secondary Caretaker Email', maximumLength: 320 }
+    ].concat(REQUESTOR_FIELDS)
+  },
+  new_hub: {
+    label: 'New Hub',
+    subjectField: 'hub_name',
+    requiredFields: ['hub_name', 'captain_name', 'captain_email', 'requestor_name', 'requestor_email'],
+    replyToField: 'requestor_email',
+    emailFields: ['captain_email', 'lieutenant_email', 'requestor_email'],
+    fields: [
+      { name: 'hub_name', label: 'Hub Name', maximumLength: 200 },
+      { name: 'captain_name', label: 'Captain Name', maximumLength: 200 },
+      { name: 'captain_email', label: 'Captain Email', maximumLength: 320 },
+      { name: 'lieutenant_name', label: 'Lieutenant Name', maximumLength: 200 },
+      { name: 'lieutenant_email', label: 'Lieutenant Email', maximumLength: 320 }
+    ].concat(REQUESTOR_FIELDS)
   }
 });
 
@@ -157,6 +177,13 @@ function validateRequest(definition, request) {
   ) {
     throw new Error('The requestor email address is invalid.');
   }
+
+  // Validate optional email fields only when the user supplied a value.
+  (definition.emailFields || []).forEach(function(fieldName) {
+    if (request[fieldName] && !isValidEmail(request[fieldName])) {
+      throw new Error('An email address is invalid: ' + fieldName);
+    }
+  });
 }
 
 

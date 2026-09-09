@@ -4,7 +4,7 @@ Reusable form renderer for pages under New Data Requests.
 The calling page supplies a form definition from _data/request_forms.yml. The
 same Google Apps Script endpoint can distinguish forms by the hidden
 request_type value. Supported field types are ordinary HTML input types,
-textarea, and select.
+textarea, and select. Forms can also append centrally defined shared sections.
 {% endcomment %}
 <link rel="stylesheet" href="{{ '/assets/css/cam-requests.css' | relative_url }}">
 
@@ -29,7 +29,12 @@ textarea, and select.
   <!-- This value lets one Apps Script endpoint route several request forms. -->
   <input type="hidden" name="request_type" value="{{ include.form.request_type | escape }}">
 
-  {% for section in include.form.sections %}
+  {% assign form_sections = include.form.sections %}
+  {% if include.form.include_requested_by %}
+    {% assign form_sections = form_sections | concat: site.data.request_form_sections.requested_by %}
+  {% endif %}
+
+  {% for section in form_sections %}
   <fieldset>
     <legend>{{ section.legend | escape }}</legend>
 

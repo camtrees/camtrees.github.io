@@ -1,0 +1,29 @@
+# Sections shared by more than one New Data Request form. Forms opt into the
+# Requested By section with `include_requested_by: true` in request_forms.yml.
+requested_by:
+  - legend: Requested By...
+    fields:
+      - name: requestor_name
+        label: Requestor's Name
+        type: text
+        maxlength: 200
+        required: true
+        autocomplete: name
+        placeholder: Your name
+      - name: requestor_email
+        label: Requestor's Email
+        type: email
+        maxlength: 320
+        required: true
+        autocomplete: email
+        placeholder: Your email address
+      - name: requestor_phone
+        label: Requestor's Phone
+        type: tel
+        maxlength: 100
+        autocomplete: tel
+        placeholder: Your phone number
+      - name: comments
+        label: Additional Comments
+        type: text
+        maxlength: 1000
