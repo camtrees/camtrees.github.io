@@ -5,10 +5,25 @@ new_site:
   request_type: new_site
   submit_label: Submit Site Request
   sections:
-    - legend: Proposed site
+    - legend: Proposed Site...
       fields:
         - name: site_name
           label: Site Name
+          type: text
+          maxlength: 200
+          required: true
+        - name: hub
+          label: Hub
+          type: text
+          maxlength: 200
+          required: true
+        - name: organization_code
+          label: Organization Code
+          type: text
+          maxlength: 100
+          required: true
+        - name: organization_name
+          label: Organization Name
           type: text
           maxlength: 200
           required: true
@@ -16,16 +31,7 @@ new_site:
           label: Town
           type: text
           maxlength: 200
-          autocomplete: address-level2
-        - name: organization_code
-          label: Organization Code
-          type: text
-          maxlength: 100
-        - name: organization
-          label: Organization
-          type: text
-          maxlength: 200
-          autocomplete: organization
+          required: true
         - name: site_location
           label: Site Location
           type: text
@@ -33,31 +39,59 @@ new_site:
           placeholder: Street address or a brief location description
         - name: location_note
           label: Location Note
-          type: textarea
-          rows: 4
-          maxlength: 2000
+          type: text
+          maxlength: 1000
           placeholder: Directions or details that would help identify the site
-    - legend: Requestor
-      fields:
         - name: contact_name
           label: Contact Name
           type: text
           maxlength: 200
-          autocomplete: name
           required: true
         - name: contact_email
           label: Contact Email
           type: email
           maxlength: 320
-          autocomplete: email
           required: true
-        - name: contact_phone
-          label: Contact Phone
+        - name: site_url
+          label: Site URL
+          type: url
+          maxlength: 500
+        - name: primary_caretaker_name
+          label: Primary Caretaker Name
+          type: text
+          maxlength: 200
+        - name: primary_caretaker_email
+          label: Primary Caretaker Email
+          type: email
+          maxlength: 320
+        - name: secondary_caretaker_name
+          label: Secondary Caretaker Name
+          type: text
+          maxlength: 200
+        - name: secondary_caretaker_email
+          label: Secondary Caretaker Email
+          type: email
+          maxlength: 320
+    - legend: Requested By...
+      fields:
+        - name: name
+          label: Name
+          type: text
+          maxlength: 200
+          required: true
+          autocomplete: text
+        - name: email
+          label: Email
+          type: email
+          maxlength: 320
+          required: true
+          autocomplete: email
+        - name: phone
+          label: Phone
           type: tel
           maxlength: 100
           autocomplete: tel
         - name: comments
           label: Additional Comments
-          type: textarea
-          rows: 6
-          maxlength: 5000
+          type: text
+          maxlength: 1000

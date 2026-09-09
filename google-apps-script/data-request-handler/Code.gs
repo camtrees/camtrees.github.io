@@ -17,19 +17,27 @@ const REQUEST_DEFINITIONS = Object.freeze({
   new_site: {
     label: 'New Site',
     subjectField: 'site_name',
-    requiredFields: ['site_name', 'contact_name', 'contact_email'],
-    replyToField: 'contact_email',
+    requiredFields: ['site_name', 'hub', 'organization_code', 'organization_name', 'town', 'contact_name', 'contact_email', 'name', 'email'],
+    replyToField: 'email',
     fields: [
       { name: 'site_name', label: 'Site Name', maximumLength: 200 },
-      { name: 'town', label: 'Town', maximumLength: 200 },
+      { name: 'hub', label: 'Hub', maximumLength: 200 },
       { name: 'organization_code', label: 'Organization Code', maximumLength: 100 },
-      { name: 'organization', label: 'Organization', maximumLength: 200 },
+      { name: 'organization_name', label: 'Organization Name', maximumLength: 200 },
+      { name: 'town', label: 'Town', maximumLength: 200 },
       { name: 'site_location', label: 'Site Location', maximumLength: 500 },
-      { name: 'location_note', label: 'Location Note', maximumLength: 2000 },
+      { name: 'location_note', label: 'Location Note', maximumLength: 1000 },
       { name: 'contact_name', label: 'Contact Name', maximumLength: 200 },
       { name: 'contact_email', label: 'Contact Email', maximumLength: 320 },
-      { name: 'contact_phone', label: 'Contact Phone', maximumLength: 100 },
-      { name: 'comments', label: 'Additional Comments', maximumLength: 5000 }
+      { name: 'site_url', label: 'Site URL', maximumLength: 500 },
+      { name: 'primary_caretaker_name', label: 'Primary Caretaker Name', maximumLength: 200 },
+      { name: 'primary_caretaker_email', label: 'Primary Caretaker Email', maximumLength: 320 },
+      { name: 'secondary_caretaker_name', label: 'Secondary Caretaker Name', maximumLength: 200 },
+      { name: 'secondary_caretaker_email', label: 'Secondary Caretaker Email', maximumLength: 320 },
+      { name: 'name', label: 'Name', maximumLength: 200 },
+      { name: 'email', label: 'Email', maximumLength: 320 },
+      { name: 'phone', label: 'Phone', maximumLength: 100 },
+      { name: 'comments', label: 'Additional Comments', maximumLength: 1000 }
     ]
   }
 });
