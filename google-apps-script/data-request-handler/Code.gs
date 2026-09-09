@@ -34,9 +34,9 @@ const REQUEST_DEFINITIONS = Object.freeze({
       { name: 'primary_caretaker_email', label: 'Primary Caretaker Email', maximumLength: 320 },
       { name: 'secondary_caretaker_name', label: 'Secondary Caretaker Name', maximumLength: 200 },
       { name: 'secondary_caretaker_email', label: 'Secondary Caretaker Email', maximumLength: 320 },
-      { name: 'name', label: 'Name', maximumLength: 200 },
-      { name: 'email', label: 'Email', maximumLength: 320 },
-      { name: 'phone', label: 'Phone', maximumLength: 100 },
+      { name: 'name', label: 'Your Name', maximumLength: 200 },
+      { name: 'email', label: 'Your Email', maximumLength: 320 },
+      { name: 'phone', label: 'Your Phone', maximumLength: 100 },
       { name: 'comments', label: 'Additional Comments', maximumLength: 1000 }
     ]
   }
@@ -170,12 +170,12 @@ function buildTextBody(definition, request, requestId, submittedAt) {
   ];
 
   definition.fields.forEach(function(field) {
-    lines.push(field.label + ': ' + displayValue(request[field.name]));
+    lines.push(field.label + ' : ' + displayValue(request[field.name]));
   });
 
   lines.push('');
-  lines.push('Request ID: ' + requestId);
-  lines.push('Submitted: ' + submittedAt);
+  lines.push('Request ID : ' + requestId);
+  lines.push('Submitted : ' + submittedAt);
   return lines.join('\n');
 }
 
@@ -208,7 +208,7 @@ function emailRow(label, value) {
     '<tr>',
     '<th align="left" valign="top" ',
     'style="border:1px solid #cccccc;background:#e8f5e9">',
-    escapeHtml(label),
+    escapeHtml(label) + ' :',
     '</th>',
     '<td style="border:1px solid #cccccc">',
     escapeHtml(value).replace(/\n/g, '<br>'),
