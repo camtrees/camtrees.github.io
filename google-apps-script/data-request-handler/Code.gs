@@ -392,6 +392,9 @@ function resultPage(title, message) {
 
   return HtmlService.createHtmlOutput([
     '<!doctype html><html lang="en"><head>',
+    // Apps Script displays HtmlService output in a sandboxed iframe. Make the
+    // return link replace the full browser page instead of only that iframe.
+    '<base target="_top">',
     '<meta charset="utf-8">',
     '<meta name="viewport" content="width=device-width,initial-scale=1">',
     '<title>' + escapeHtml(title) + '</title>',
@@ -403,7 +406,7 @@ function resultPage(title, message) {
     '</style></head><body>',
     '<h1>' + escapeHtml(title) + '</h1>',
     '<p>' + escapeHtml(message) + '</p>',
-    '<a href="' + escapeHtml(returnUrl) + '">Return to the CAMTREES website</a>',
+    '<a target="_top" href="' + escapeHtml(returnUrl) + '">Return to the CAMTREES website</a>',
     '</body></html>'
   ].join(''));
 }

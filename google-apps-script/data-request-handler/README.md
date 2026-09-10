@@ -24,6 +24,11 @@ by GitHub Actions, while this code is deployed and executed by Google.
 Do not use the test `/dev` URL in `_config.yml`; it is intended only for script
 editors and is not the public deployment.
 
+The success page's return link deliberately targets the top-level browser
+window. Apps Script serves HTML responses inside a sandboxed iframe; without
+that target, the CAMTREES site can be loaded inside the Apps Script page and a
+second form submission may stop at the `/exec` URL.
+
 ## Adding another request type
 
 Adding a form requires changes in both locations:
