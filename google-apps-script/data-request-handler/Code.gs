@@ -49,7 +49,7 @@ const REQUEST_DEFINITIONS = Object.freeze({
   new_hub: {
     label: 'New Hub',
     subjectField: 'hub_name',
-    requiredFields: ['hub_name', 'captain_name', 'captain_email', 'requestor_name', 'requestor_email'],
+    requiredFields: ['hub_name', 'requestor_name', 'requestor_email'],
     replyToField: 'requestor_email',
     emailFields: ['captain_email', 'lieutenant_email', 'requestor_email'],
     fields: [
@@ -58,6 +58,35 @@ const REQUEST_DEFINITIONS = Object.freeze({
       { name: 'captain_email', label: 'Captain Email', maximumLength: 320 },
       { name: 'lieutenant_name', label: 'Lieutenant Name', maximumLength: 200 },
       { name: 'lieutenant_email', label: 'Lieutenant Email', maximumLength: 320 }
+    ].concat(REQUESTOR_FIELDS)
+  },
+  new_cam_org: {
+    label: 'New Cam Org',
+    subjectField: 'cam_org_code',
+    requiredFields: ['cam_org_code', 'cam_org_name', 'cam_org_contact_name', 'cam_org_contact_email', 'requestor_name', 'requestor_email'],
+    replyToField: 'requestor_email',
+    emailFields: ['cam_org_contact_email', 'requestor_email'],
+    fields: [
+      { name: 'cam_org_code', label: 'Cam Org Code', maximumLength: 100 },
+      { name: 'cam_org_name', label: 'Cam Org Name', maximumLength: 200 },
+      { name: 'cam_org_contact_name', label: 'Cam Org Contact Name', maximumLength: 200 },
+      { name: 'cam_org_contact_email', label: 'Cam Org Contact Email', maximumLength: 320 }
+    ].concat(REQUESTOR_FIELDS)
+  },
+  new_volunteer: {
+    label: 'New Volunteer',
+    subjectField: 'volunteer_name',
+    requiredFields: ['volunteer_name', 'volunteer_email', 'requestor_name', 'requestor_email'],
+    replyToField: 'requestor_email',
+    emailFields: ['volunteer_email', 'requestor_email'],
+    fields: [
+      { name: 'volunteer_name', label: 'Volunteer Name', maximumLength: 200 },
+      { name: 'volunteer_email', label: 'Volunteer Email', maximumLength: 320 },
+      { name: 'cell_phone', label: 'Cell Phone', maximumLength: 100 },
+      { name: 'home_phone', label: 'Home Phone', maximumLength: 100 },
+      { name: 'work_phone', label: 'Work Phone', maximumLength: 100 },
+      { name: 'job_title', label: 'Job Title', maximumLength: 200 },
+      { name: 'hometown', label: 'Hometown', maximumLength: 200 }
     ].concat(REQUESTOR_FIELDS)
   }
 });

@@ -59,7 +59,7 @@ new_site:
           type: email
           maxlength: 320
           required: true
-          placeholder: Email address of the sote contact person
+          placeholder: Email address of the site contact person
         - name: site_url
           label: Site URL
           type: url
@@ -102,22 +102,97 @@ new_hub:
           label: Captain Name
           type: text
           maxlength: 200
-          required: true
           placeholder: Name of the Hub Captain
         - name: captain_email
           label: Captain Email
           type: email
           maxlength: 320
           autocomplete: email
-          required: true
           placeholder: Email address of the Hub Captain
         - name: lieutenant_name
           label: Lieutenant Name
           type: text
           maxlength: 200
-          placeholder: Name of the Hub Lieutenant, if known
+          placeholder: Name of the Hub Lieutenant
         - name: lieutenant_email
           label: Lieutenant Email
           type: email
           maxlength: 320
-          placeholder: Email address of the Hub Lieutenant, if known
+          placeholder: Email address of the Hub Lieutenant
+
+new_cam_org:
+  request_type: new_cam_org
+  submit_label: Submit Cam Org Request
+  include_requested_by: true
+  sections:
+    - legend: Proposed Cam Org...
+      fields:
+        - name: cam_org_code
+          label: Cam Org Code
+          type: text
+          maxlength: 100
+          required: true
+          placeholder: Code for the new Cam Org
+        - name: cam_org_name
+          label: Cam Org Name
+          type: text
+          maxlength: 200
+          required: true
+          placeholder: Name of the new Cam Org
+        - name: cam_org_contact_name
+          label: Cam Org Contact Name
+          type: text
+          maxlength: 200
+          required: true
+          placeholder: Name of the Cam Org contact person
+        - name: cam_org_contact_email
+          label: Cam Org Contact Email
+          type: email
+          maxlength: 320
+          required: true
+          placeholder: Email address of the Cam Org contact person
+
+new_volunteer:
+  request_type: new_volunteer
+  submit_label: Submit Volunteer Request
+  include_requested_by: true
+  sections:
+    - legend: Proposed Volunteer...
+      fields:
+        - name: volunteer_name
+          label: Volunteer Name
+          type: text
+          maxlength: 200
+          required: true
+          placeholder: Name of the new volunteer
+        - name: volunteer_email
+          label: Volunteer Email
+          type: email
+          maxlength: 320
+          required: true
+          placeholder: Email address of the new volunteer
+        - name: cell_phone
+          label: Cell Phone
+          type: tel
+          maxlength: 100
+          placeholder: Cell phone number of the new volunteer
+        - name: home_phone
+          label: Home Phone
+          type: tel
+          maxlength: 100
+          placeholder: Home phone number of the new volunteer
+        - name: work_phone
+          label: Work Phone
+          type: tel
+          maxlength: 100
+          placeholder: Work phone number of the new volunteer
+        - name: job_title
+          label: Job Title
+          type: text
+          maxlength: 200
+          placeholder: Job title of the new volunteer
+        - name: hometown
+          label: Hometown
+          type: text
+          maxlength: 200
+          placeholder: Hometown of the new volunteer

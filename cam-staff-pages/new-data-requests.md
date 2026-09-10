@@ -21,4 +21,4 @@ New Data Request pages are still under development. Please wait before using the
 - **New Hub** – Request a new Hub be added to CAMTREES.
 - **New Parent Tree** – Request a new Parent Tree be added to CAMTREES.
 - **New Site** – Request a new planting site be added to CAMTREES.
-- **New Volunteeer** – Request a new Volunteeer be added to CAMTREES.
+- **New Volunteer** – Request a new Volunteer be added to CAMTREES.
