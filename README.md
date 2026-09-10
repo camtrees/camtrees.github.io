@@ -94,13 +94,13 @@ the unique values in the downloaded JSON. Selected values use OR logic within
 that column and remain combined with all other filters. Map legends show only
 the marker categories actually plotted after filtering and coordinate checks.
 
-The CAM Trees and CAM Sites maps load `data/hub-areas.geojson` as an optional
-Hub Areas overlay in the Leaflet layer control. It is off by default and is
-drawn beneath the record markers without tooltips or popups. Its center points
-are interior polygon centers shown as small black triangles with permanent
-Hub-name labels. The overlay contains 19 adjoining, non-overlapping Hub
-boundaries with one merged Warren area; the Coastal Downeast no-grow zone is
-intentionally excluded.
+The CAM Trees and CAM Sites maps load `data/hub-areas.geojson` as a Hub Areas
+overlay in the Leaflet layer control. It opens enabled on CAM Sites and disabled
+on CAM Trees, and is drawn beneath the record markers without tooltips or
+popups. Its center points are interior polygon centers shown as small black
+triangles with permanent Hub-name labels. The overlay contains 19 adjoining,
+non-overlapping Hub boundaries with one merged Warren area; the Coastal Downeast
+no-grow zone is intentionally excluded.
 
 CAM Sites records are shown with square map pins filled with `#f000e0`. This
 table-specific marker setting does not affect CAM Trees or CAM Hubs markers.
@@ -113,7 +113,7 @@ The CAM Hubs export includes `longitude` and `latitude`. Its Map filtered hubs
 control always shows filtered Hubs as clickable black triangles with permanent
 Hub-name labels and Captain and Lieutenant details. The Hub Areas checkbox
 controls only the green boundary outlines and starts enabled. The Trees and
-Sites maps continue to open with their complete Hub Areas overlay disabled.
+Sites maps open with Hub Areas disabled and enabled, respectively.
 
 ## New data request forms
 
