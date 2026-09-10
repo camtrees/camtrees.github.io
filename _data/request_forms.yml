@@ -196,3 +196,17 @@ new_volunteer:
           type: text
           maxlength: 200
           placeholder: Hometown of the new volunteer
+
+new_parent_tree:
+  request_type: new_parent_tree
+  submit_label: Submit Parent Tree Request
+  include_requested_by: true
+  sections:
+    - legend: Proposed Parent Tree...
+      fields:
+        - name: parent_tree
+          label: Parent Tree
+          type: text
+          maxlength: 200
+          required: true
+          placeholder: Name of the new Parent Tree

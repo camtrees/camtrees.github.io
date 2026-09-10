@@ -95,6 +95,17 @@ const REQUEST_DEFINITIONS = Object.freeze({
       { name: 'job_title', label: 'Job Title', maximumLength: 200 },
       { name: 'hometown', label: 'Hometown', maximumLength: 200 }
     ].concat(REQUESTOR_FIELDS)
+  },
+  new_parent_tree: {
+    label: 'New Parent Tree',
+    subjectField: 'parent_tree',
+    additionalFooter: 'Please add the new Parent Tree to the appropriate EpiCollect project(s).',
+    requiredFields: ['parent_tree', 'requestor_name', 'requestor_email'],
+    replyToField: 'requestor_email',
+    emailFields: ['requestor_email'],
+    fields: [
+      { name: 'parent_tree', label: 'Parent Tree', maximumLength: 200 }
+    ].concat(REQUESTOR_FIELDS)
   }
 });
 
