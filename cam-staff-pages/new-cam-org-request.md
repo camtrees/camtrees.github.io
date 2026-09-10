@@ -1,5 +1,5 @@
 ---
-title: New Cam Org
+title: New Cam Org Request
 layout: default
 parent: New Data Requests
 grand_parent: CAM Staff Pages
