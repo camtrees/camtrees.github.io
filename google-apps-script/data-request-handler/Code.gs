@@ -233,6 +233,10 @@ function buildTextBody(definition, request, requestId, submittedAt) {
   ];
 
   definition.fields.forEach(function(field) {
+    // Visually separate the reusable requestor details from record-specific data.
+    if (field.name === 'requestor_name') {
+      lines.push('');
+    }
     lines.push(field.label + ' : ' + displayValue(request[field.name]));
   });
 
@@ -253,8 +257,14 @@ function buildTextBody(definition, request, requestId, submittedAt) {
  * Build the formatted table shown by HTML-capable email clients.
  */
 function buildHtmlBody(definition, request, requestId, submittedAt) {
-  const rows = definition.fields.map(function(field) {
-    return emailRow(field.label, displayValue(request[field.name]));
+  const rows = [];
+
+  definition.fields.forEach(function(field) {
+    // Introduce the reusable requestor details with a compact section heading.
+    if (field.name === 'requestor_name') {
+      rows.push(emailSectionRow('Requested By...'));
+    }
+    rows.push(emailRow(field.label, displayValue(request[field.name])));
   });
 
   rows.push(emailRow('Request ID', requestId));
@@ -285,6 +295,21 @@ function emailFooterLines(definition) {
     lines.push(definition.additionalFooter);
   }
   return lines;
+}
+
+
+/**
+ * Create a compact heading that spans both columns of the HTML email table.
+ */
+function emailSectionRow(label) {
+  return [
+    '<tr>',
+    '<th colspan="2" align="left" ',
+    'style="padding-top:1rem;border-bottom:1px solid #5b765c;font-size:.95rem">',
+    escapeHtml(label),
+    '</th>',
+    '</tr>'
+  ].join('');
 }
 
 
