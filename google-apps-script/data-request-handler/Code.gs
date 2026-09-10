@@ -22,10 +22,15 @@ const REQUESTOR_FIELDS = Object.freeze([
   { name: 'comments', label: 'Additional Comments', maximumLength: 1000 }
 ]);
 
+// This reminder appears at the bottom of every New Data Request email.
+const COMMON_EMAIL_FOOTER =
+  'Please review this New Data Request before adding it to the CAMTREES SQL Database.';
+
 const REQUEST_DEFINITIONS = Object.freeze({
   new_site: {
     label: 'New Site',
     subjectField: 'site_name',
+    additionalFooter: "Please add a 'CAM Org - Site Name' record to both the 'CAM Trees Maintenance' and 'CAM Trees Rain Event' EpiCollect projects.",
     requiredFields: ['site_name', 'hub', 'organization_code', 'organization_name', 'town', 'contact_name', 'contact_email', 'requestor_name', 'requestor_email'],
     replyToField: 'requestor_email',
     emailFields: ['contact_email', 'primary_caretaker_email', 'secondary_caretaker_email', 'requestor_email'],
@@ -49,6 +54,7 @@ const REQUEST_DEFINITIONS = Object.freeze({
   new_hub: {
     label: 'New Hub',
     subjectField: 'hub_name',
+    additionalFooter: "Please add the Captain and Lieutenant to the 'Google Hub Captains' group and the EpiCollect 'CAM Trees Rain Event' project as a collaborator.",
     requiredFields: ['hub_name', 'requestor_name', 'requestor_email'],
     replyToField: 'requestor_email',
     emailFields: ['captain_email', 'lieutenant_email', 'requestor_email'],
@@ -76,6 +82,7 @@ const REQUEST_DEFINITIONS = Object.freeze({
   new_volunteer: {
     label: 'New Volunteer',
     subjectField: 'volunteer_name',
+    additionalFooter: "Please add the New Volunteer to the 'CAM Tree Maintenance' project as a collaborator.",
     requiredFields: ['volunteer_name', 'volunteer_email', 'requestor_name', 'requestor_email'],
     replyToField: 'requestor_email',
     emailFields: ['volunteer_email', 'requestor_email'],
@@ -232,6 +239,12 @@ function buildTextBody(definition, request, requestId, submittedAt) {
   lines.push('');
   lines.push('Request ID : ' + requestId);
   lines.push('Submitted : ' + submittedAt);
+
+  // Put the common review reminder and any request-specific action at the end.
+  lines.push('');
+  emailFooterLines(definition).forEach(function(line) {
+    lines.push(line);
+  });
   return lines.join('\n');
 }
 
@@ -247,12 +260,31 @@ function buildHtmlBody(definition, request, requestId, submittedAt) {
   rows.push(emailRow('Request ID', requestId));
   rows.push(emailRow('Submitted', submittedAt));
 
+  const footerParagraphs = emailFooterLines(definition).map(function(line) {
+    return '<p style="margin:.5rem 0">' + escapeHtml(line) + '</p>';
+  });
+
   return [
     '<h2>CAMTREES ' + escapeHtml(definition.label) + ' Request</h2>',
     '<table cellpadding="6" cellspacing="0" style="border-collapse:collapse">',
     rows.join(''),
-    '</table>'
+    '</table>',
+    '<div style="margin-top:1rem;padding-top:.5rem;border-top:1px solid #cccccc">',
+    footerParagraphs.join(''),
+    '</div>'
   ].join('');
+}
+
+
+/**
+ * Return the universal footer followed by an optional request-specific action.
+ */
+function emailFooterLines(definition) {
+  const lines = [COMMON_EMAIL_FOOTER];
+  if (definition.additionalFooter) {
+    lines.push(definition.additionalFooter);
+  }
+  return lines;
 }
 
 

@@ -40,6 +40,10 @@ The duplication is deliberate. The YAML controls what the browser displays,
 while `Code.gs` independently controls what the server accepts and emails.
 Never trust additional field names submitted by a browser.
 
+`COMMON_EMAIL_FOOTER` is appended to every request email. A request definition
+can also provide `additionalFooter` for instructions that apply only to that
+request type. Both footer levels are included in the plain-text and HTML email.
+
 After changing `Code.gs`, create a new Apps Script deployment version (or edit
 the existing deployment to use the new version). Merely saving source changes
 does not update an existing public deployment.
