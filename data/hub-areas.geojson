@@ -9,7 +9,7 @@
       "Removed unused altitude coordinates so all coordinates are two-dimensional longitude and latitude.",
       "Retained the merged Warren area and its single repositioned center.",
       "Excluded the Coastal Downeast no-grow zone, which is absent from the revised KMZ.",
-      "Moved the complete straight Ellsworth-Searsport boundary west: its southern endpoint now follows the existing coastal arc at [-68.6515256582, 44.3994341515], and its northern Ellsworth-Searsport-Orono junction is [-68.7040132456, 44.6350724503]. The adjoining boundary segments share these endpoints, preserving the original combined coverage without gaps or overlaps and placing both Dead River Trailhead sites inside Ellsworth."
+      "Moved the complete straight Ellsworth-Searsport boundary west: its southern endpoint follows the existing coastal arc at [-68.6515256582, 44.3994341515], and its northern Ellsworth-Searsport-Orono junction is [-68.7762243637, 44.6350724503]. The straight boundary passes immediately west of the Orland village reference point. The adjoining boundary segments share these endpoints, preserving the original combined coverage without gaps or overlaps and placing both Dead River Trailhead sites inside Ellsworth."
     ],
     "current_contents": "19 Hub boundary features and 19 corresponding center Points.",
     "feature_properties": {
@@ -1811,7 +1811,7 @@
             44.7429241686
           ],
           [
-            -68.7040132456,
+            -68.7762243637,
             44.6350724503
           ],
           [
@@ -1872,7 +1872,7 @@
             44.8517171351
           ],
           [
-            -68.7040132456,
+            -68.7762243637,
             44.6350724503
           ],
           [
@@ -2150,7 +2150,7 @@
             44.3994341515
           ],
           [
-            -68.7040132456,
+            -68.7762243637,
             44.6350724503
           ],
           [
