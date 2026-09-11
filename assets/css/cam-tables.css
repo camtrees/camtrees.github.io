@@ -202,6 +202,9 @@
 .cam-table__multi-filter { position: relative; min-width: 8rem; margin-top: .5rem; font-weight: normal; }
 .cam-table__multi-filter summary { padding: .2rem .35rem; background: #fff; border: 1px solid #777; border-radius: .2rem; cursor: pointer; }
 .cam-table__multi-filter-options { position: absolute; top: calc(100% + .2rem); left: 0; z-index: 20; min-width: 11rem; max-height: 16rem; padding: .5rem; overflow: auto; color: #222; background: #fff; border: 1px solid #777; border-radius: .2rem; box-shadow: 0 2px 8px rgb(0 0 0 / 25%); }
+/* An open menu is moved under the page body so the table's scrolling region
+   cannot crop it when filtering leaves only a few visible rows. */
+.cam-table__multi-filter-options--portal { position: fixed; z-index: 1000; box-sizing: border-box; }
 .cam-table__multi-filter-options label { display: flex; align-items: center; gap: .4rem; margin-bottom: .3rem; white-space: nowrap; }
 .cam-table__multi-filter-options input { width: auto !important; min-width: 0 !important; margin: 0 !important; }
 .cam-table__multi-filter-options button { width: 100%; margin-top: .25rem; padding: .2rem .35rem; color: inherit; font: inherit; font-weight: normal; background: #e8f5e9; border: 1px solid #777; border-radius: .2rem; cursor: pointer; }

@@ -125,8 +125,61 @@
     const choices = document.createElement('div');
     const clear = document.createElement('button');
     clear.type = 'button'; clear.textContent = 'Clear selections';
+    options.setAttribute('role', 'group');
+    options.setAttribute('aria-label', `${column.label} filter choices`);
     options.append(choices, clear); filter.append(summary, options);
     const selectedValues = new Set();
+
+    // Place an open menu at page level so a short or horizontally scrolled
+    // table cannot clip its choices. Fixed positioning keeps it aligned with
+    // the filter button while any ancestor scroll containers move.
+    const positionOptions = () => {
+      if (!filter.open || options.parentElement !== document.body) return;
+      const gap = 4;
+      const edge = 8;
+      const summaryRect = summary.getBoundingClientRect();
+      const menuWidth = Math.min(Math.max(summaryRect.width, 176), window.innerWidth - (edge * 2));
+      const roomBelow = window.innerHeight - summaryRect.bottom - gap - edge;
+      const roomAbove = summaryRect.top - gap - edge;
+      const placeBelow = roomBelow >= Math.min(256, roomAbove);
+      const availableHeight = Math.max(80, placeBelow ? roomBelow : roomAbove);
+
+      options.style.width = `${menuWidth}px`;
+      options.style.maxHeight = `${Math.min(256, availableHeight)}px`;
+      options.style.left = `${Math.min(Math.max(edge, summaryRect.left), window.innerWidth - menuWidth - edge)}px`;
+      if (placeBelow) {
+        options.style.top = `${summaryRect.bottom + gap}px`;
+        options.style.bottom = 'auto';
+      } else {
+        options.style.top = 'auto';
+        options.style.bottom = `${window.innerHeight - summaryRect.top + gap}px`;
+      }
+    };
+
+    const restoreOptions = () => {
+      if (options.parentElement === document.body) filter.append(options);
+      options.classList.remove('cam-table__multi-filter-options--portal');
+      options.removeAttribute('style');
+    };
+
+    filter.addEventListener('toggle', () => {
+      if (filter.open) {
+        document.body.append(options);
+        options.classList.add('cam-table__multi-filter-options--portal');
+        positionOptions();
+      } else restoreOptions();
+    });
+    window.addEventListener('resize', positionOptions);
+    document.addEventListener('scroll', positionOptions, true);
+    document.addEventListener('pointerdown', (event) => {
+      if (filter.open && !filter.contains(event.target) && !options.contains(event.target)) filter.open = false;
+    });
+    document.addEventListener('keydown', (event) => {
+      if (filter.open && event.key === 'Escape') {
+        filter.open = false;
+        summary.focus();
+      }
+    });
 
     // An empty selection means All; otherwise values use exact OR matching.
     const updateSummary = () => {
