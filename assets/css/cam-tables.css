@@ -150,10 +150,11 @@
 .cam-record-dialog__details dt { font-weight: 700; }
 .cam-record-dialog__details dd { margin: 0; overflow-wrap: anywhere; }
 /* Keep record navigation visible in a green footer while details scroll. */
-.cam-record-dialog__footer { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: .75rem; padding: .75rem 1rem; background: #e8f5e9; border-top: 1px solid #c8ddc9; }
-.cam-record-dialog__footer button { padding: .35rem .6rem; color: inherit; font: inherit; background: #fff; border: 1px solid #5b765c; border-radius: .25rem; cursor: pointer; }
+.cam-record-dialog__footer { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: .75rem; padding: .75rem 1rem; font-weight: 700; background: #e8f5e9; border-top: 1px solid #c8ddc9; }
+.cam-record-dialog__footer button { width: max-content; padding: .35rem .6rem; color: inherit; font: inherit; background: #fff4c2; border: 1px solid #9a8433; border-radius: .25rem; cursor: pointer; }
+.cam-record-dialog__footer button:first-child { justify-self: start; }
 .cam-record-dialog__footer button:last-child { justify-self: end; }
-.cam-record-dialog__footer button:hover:not(:disabled), .cam-record-dialog__footer button:focus:not(:disabled) { background: #d5ebd6; }
+.cam-record-dialog__footer button:hover:not(:disabled), .cam-record-dialog__footer button:focus:not(:disabled) { background: #ffe99a; }
 .cam-record-dialog__footer button:disabled { cursor: not-allowed; opacity: .5; }
 .cam-record-dialog__position { font-size: .9rem; text-align: center; white-space: nowrap; }
 
