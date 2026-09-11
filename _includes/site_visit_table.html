@@ -23,21 +23,22 @@
   <!-- Pagination controls are inserted here only when needed. -->
   <nav class="cam-table__pagination" aria-label="Site Visit table pages" data-cam-table-pagination></nav>
 
-  <!-- Settings consumed by cam-tables.js. Keep this block as valid JSON. -->
+  <!-- Settings consumed by cam-tables.js. The populated multi-select filters
+       obtain their choices from the Site Visit JSON. Keep this as valid JSON. -->
   <script type="application/json" data-cam-table-config>
     {
       "pageSize": 1000,
       "csvFilename": "site-visits.csv",
       "columns": [
-        {"key":"Site","label":"Site","type":"text"},
+        {"key":"Site","label":"Site","type":"text","filter":"multi"},
         {"key":"Tree ID","label":"Tree ID","type":"text"},
         {"key":"Date Planted","label":"Date Planted","type":"date"},
-        {"key":"Health","label":"Health","type":"text"},
-        {"key":"Access Path","label":"Access Path","type":"text"},
-        {"key":"Access Level","label":"Access Level","type":"text"},
-        {"key":"GPS Locked","label":"GPS Locked","type":"boolean"},
-        {"key":"Planting Method","label":"Planting Method","type":"text"},
-        {"key":"Wire Fence","label":"Wire Fence","type":"boolean"},
+        {"key":"Health","label":"Health","type":"text","filter":"multi"},
+        {"key":"Access Path","label":"Access Path","type":"text","filter":"multi"},
+        {"key":"Access Level","label":"Access Level","type":"text","filter":"multi"},
+        {"key":"GPS Locked","label":"GPS Locked","type":"boolean","filter":"multi"},
+        {"key":"Planting Method","label":"Planting Method","type":"text","filter":"multi"},
+        {"key":"Wire Fence","label":"Wire Fence","type":"boolean","filter":"multi"},
         {"key":"Mother Tree","label":"Mother Tree","type":"text"},
         {"key":"Father Tree","label":"Father Tree","type":"text"},
         {"key":"Parent Tree Note","label":"Parent Tree Note","type":"text"},
