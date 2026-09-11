@@ -24,8 +24,12 @@ Within each table, you can:
 
 - Use the **"Search all ..."** box to filter records across all fields.
 - Use the **"Filter ..."** box under each column heading to further narrow results.
-- Click a **Column Heading** to sort the table in ascending order by the values in that
-column; click the column heading again to sort in descending order.
+- Click a **Column Heading** to make it the primary ascending sort; click that heading
+again to sort it in descending order. Blank values always appear after populated values.
+- To sort by multiple columns, click the least important column first and the most
+important column last. For example, click **Site** and then **Hub** to sort primarily by
+Hub and secondarily by Site. The number beside each sort arrow shows its priority, with
+1 being the primary sort.
 - **Refresh the webpage** to clear all filters and search terms.
 
 You can also:

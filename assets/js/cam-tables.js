@@ -79,15 +79,18 @@
     }
   }
 
-  // Compare two records using the data type declared in the table configuration.
-  function compareRows(left, right, column) {
+  // Compare two records using the configured type and direction. Missing values
+  // always sort last; their position does not reverse for descending order.
+  function compareRows(left, right, column, direction) {
     const a = rawValue(left, column.key);
     const b = rawValue(right, column.key);
     if (!a || !b) return a ? -1 : b ? 1 : 0;
-    if (column.type === 'number') return Number(a) - Number(b);
-    if (column.type === 'date') return Date.parse(a) - Date.parse(b);
+    let comparison;
+    if (column.type === 'number') comparison = Number(a) - Number(b);
+    else if (column.type === 'date') comparison = Date.parse(a) - Date.parse(b);
     // Tree ID is explicitly text, so numeric collation is intentionally disabled.
-    return a.localeCompare(b, undefined, { numeric: false, sensitivity: 'base' });
+    else comparison = a.localeCompare(b, undefined, { numeric: false, sensitivity: 'base' });
+    return direction === 'asc' ? comparison : -comparison;
   }
 
   // Quote a value according to CSV rules, including embedded quotation marks.
@@ -606,7 +609,10 @@
     const filters = new Map();
     const openRecordDialog = createRecordDialog(columns);
     const openMapDialog = mapButton ? createMapDialog(openRecordDialog, config.map) : null;
-    let rows = []; let currentPage = 1; let sortKey = columns[0].key; let sortDirection = 'asc'; let printing = false;
+    let rows = []; let currentPage = 1; let printing = false;
+    // Each newly selected column becomes the primary key. Older selections stay
+    // in order as tie-breakers, enabling secondary-first, primary-second sorting.
+    let sortCriteria = [{ key: columns[0].key, direction: 'asc' }];
 
     // Apply the global search and every active column filter simultaneously.
     function filteredRows() {
@@ -625,8 +631,14 @@
     // Sort a fresh filtered array without changing the original JSON records.
     function sortedRows() {
       const sorted = filteredRows();
-      const sortColumn = columns.find((column) => column.key === sortKey);
-      return sorted.sort((a, b) => (sortDirection === 'asc' ? 1 : -1) * compareRows(a, b, sortColumn));
+      return sorted.sort((left, right) => {
+        for (const criterion of sortCriteria) {
+          const column = columns.find((item) => item.key === criterion.key);
+          const comparison = compareRows(left, right, column, criterion.direction);
+          if (comparison) return comparison;
+        }
+        return 0;
+      });
     }
 
     // Redraw the visible page, record count, sort indicators, and pagination.
@@ -655,7 +667,24 @@
         });
       }
       summary.textContent = sorted.length ? `Showing ${first + 1}–${Math.min(first + pageSize, sorted.length)} of ${sorted.length} records` : '0 records';
-      head.querySelectorAll('button[data-sort-key]').forEach((button) => button.setAttribute('aria-sort', button.dataset.sortKey === sortKey ? (sortDirection === 'asc' ? 'ascending' : 'descending') : 'none'));
+      // Show every active sort key and its priority. aria-sort identifies only
+      // the primary key, while the button label describes all tie-breakers.
+      head.querySelectorAll('button[data-sort-key]').forEach((button) => {
+        const priority = sortCriteria.findIndex((criterion) => criterion.key === button.dataset.sortKey);
+        if (priority < 0) {
+          button.setAttribute('aria-sort', 'none');
+          delete button.dataset.sortDirection;
+          delete button.dataset.sortPriority;
+          button.setAttribute('aria-label', `${button.textContent}: not sorted`);
+          return;
+        }
+        const criterion = sortCriteria[priority];
+        const direction = criterion.direction === 'asc' ? 'ascending' : 'descending';
+        button.setAttribute('aria-sort', priority === 0 ? direction : 'other');
+        button.dataset.sortDirection = direction;
+        button.dataset.sortPriority = String(priority + 1);
+        button.setAttribute('aria-label', `${button.textContent}: ${direction}, sort priority ${priority + 1}`);
+      });
       pagination.replaceChildren();
       if (!printing && pages > 1) {
         const previous = document.createElement('button'); previous.type = 'button'; previous.textContent = 'Previous'; previous.disabled = currentPage === 1; previous.addEventListener('click', () => { currentPage -= 1; render(); });
@@ -674,7 +703,21 @@
     columns.forEach((column) => {
       const cell = document.createElement('th'); cell.scope = 'col';
       const button = document.createElement('button'); button.type = 'button'; button.textContent = column.label; button.dataset.sortKey = column.key;
-      button.addEventListener('click', () => { sortDirection = sortKey === column.key && sortDirection === 'asc' ? 'desc' : 'asc'; sortKey = column.key; refreshFromFirstPage(); });
+      button.addEventListener('click', () => {
+        const existing = sortCriteria.findIndex((criterion) => criterion.key === column.key);
+        if (existing === 0) {
+          // Clicking the primary heading again reverses only its direction.
+          sortCriteria[0].direction = sortCriteria[0].direction === 'asc' ? 'desc' : 'asc';
+        } else if (existing > 0) {
+          // Promote an existing tie-breaker without discarding its direction.
+          const [criterion] = sortCriteria.splice(existing, 1);
+          sortCriteria.unshift(criterion);
+        } else {
+          // A newly clicked heading starts ascending and becomes the primary key.
+          sortCriteria.unshift({ key: column.key, direction: 'asc' });
+        }
+        refreshFromFirstPage();
+      });
       const filter = createFilter(column, refreshFromFirstPage); filters.set(column.key, filter); cell.append(button, filter); headerRow.append(cell);
     });
     head.append(headerRow); search.addEventListener('input', refreshFromFirstPage);

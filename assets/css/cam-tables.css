@@ -192,8 +192,8 @@
 /* Sortable column headings and their ascending/descending indicators. */
 .cam-table__scroll th > button[data-sort-key] { padding: 0; color: inherit; font: inherit; font-weight: 600; text-align: left; background: transparent; border: 0; cursor: pointer; }
 .cam-table__scroll th > button[data-sort-key]::after { content: ' ↕'; font-weight: normal; }
-.cam-table__scroll th > button[data-sort-key][aria-sort="ascending"]::after { content: ' ↑'; }
-.cam-table__scroll th > button[data-sort-key][aria-sort="descending"]::after { content: ' ↓'; }
+.cam-table__scroll th > button[data-sort-key][data-sort-direction="ascending"]::after { content: ' ↑' attr(data-sort-priority); }
+.cam-table__scroll th > button[data-sort-key][data-sort-direction="descending"]::after { content: ' ↓' attr(data-sort-priority); }
 
 /* Column-specific search and Yes/No filter controls. */
 .cam-table__scroll th input, .cam-table__scroll th select { box-sizing: border-box; width: 100%; min-width: 5rem; margin-top: .5rem; font: inherit; font-weight: normal; }
