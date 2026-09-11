@@ -23,7 +23,9 @@ carry with you on a site visit
 Within each table, you can:
 
 - Use the **"Search all ..."** box to filter records across all fields.
-- Use the **"Filter ..."** box under each column heading to further narrow results.
+- Use the **"Filter ..."** box under a column heading to further narrow results. Some
+columns provide an **All** dropdown populated from the table data; open it to select one
+or more exact values. Filters from multiple columns work together.
 - Click a **Column Heading** to make it the primary ascending sort; click that heading
 again to sort it in descending order. Blank values always appear after populated values.
 - To sort by multiple columns, click the least important column first and the most

@@ -95,10 +95,11 @@ control can switch to Nuts Present coloring; that theme maps only trees whose
 `nuts_present` value is `some` or `many`. Switching themes does not change the
 table's active searches or column filters.
 
-The CAM Trees Latest Health column uses a checkbox multi-filter populated from
-the unique values in the downloaded JSON. Selected values use OR logic within
-that column and remain combined with all other filters. Map legends show only
-the marker categories actually plotted after filtering and coordinate checks.
+Selected CAM Trees columns use checkbox multi-filters populated from the unique
+values in the downloaded JSON. Selected values use OR logic within one column
+and remain combined with all other column filters. Boolean values such as Wire
+Fence are displayed as Yes and No. Map legends show only the marker categories
+actually plotted after filtering and coordinate checks.
 
 The CAM Trees and CAM Sites maps load `data/hub-areas.geojson` as a Hub Areas
 overlay in the Leaflet layer control. It opens enabled on CAM Sites and disabled
