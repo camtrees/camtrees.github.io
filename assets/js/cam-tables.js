@@ -239,8 +239,9 @@
     return filter;
   }
 
-  // Create one reusable dialog that displays a selected row vertically.
-  function createRecordDialog(columns) {
+  // Create one reusable dialog that displays a selected row vertically and
+  // navigates through the table's complete current filtered-and-sorted list.
+  function createRecordDialog(columns, getRecords) {
     dialogNumber += 1;
     const dialog = document.createElement('dialog');
     dialog.className = 'cam-record-dialog';
@@ -253,7 +254,35 @@
     header.className = 'cam-record-dialog__header'; header.append(title, close);
     const details = document.createElement('dl');
     details.className = 'cam-record-dialog__details';
-    dialog.setAttribute('aria-labelledby', title.id); dialog.append(header, details); document.body.append(dialog);
+    const previous = document.createElement('button');
+    previous.type = 'button'; previous.className = 'cam-record-dialog__previous'; previous.textContent = '‹ Previous Record';
+    const position = document.createElement('span');
+    position.className = 'cam-record-dialog__position'; position.setAttribute('aria-live', 'polite');
+    const next = document.createElement('button');
+    next.type = 'button'; next.className = 'cam-record-dialog__next'; next.textContent = 'Next Record ›';
+    const footer = document.createElement('div');
+    footer.className = 'cam-record-dialog__footer'; footer.append(previous, position, next);
+    dialog.setAttribute('aria-labelledby', title.id); dialog.append(header, details, footer); document.body.append(dialog);
+
+    let currentRecords = [];
+    let currentIndex = -1;
+
+    // Replace the vertical details without closing and reopening the dialog.
+    const showRecordAt = (index) => {
+      if (index < 0 || index >= currentRecords.length) return;
+      currentIndex = index;
+      const record = currentRecords[currentIndex];
+      details.replaceChildren();
+      columns.forEach((column) => {
+        const label = document.createElement('dt'); label.textContent = column.label;
+        const value = document.createElement('dd'); appendValue(value, record, column);
+        details.append(label, value);
+      });
+      details.scrollTop = 0;
+      previous.disabled = currentIndex === 0;
+      next.disabled = currentIndex === currentRecords.length - 1;
+      position.textContent = `Record ${currentIndex + 1} of ${currentRecords.length}`;
+    };
 
     const closeDialog = () => {
       if (typeof dialog.close === 'function') dialog.close();
@@ -261,14 +290,24 @@
     };
     close.addEventListener('click', closeDialog);
     dialog.addEventListener('click', (event) => { if (event.target === dialog) closeDialog(); });
+    previous.addEventListener('click', () => showRecordAt(currentIndex - 1));
+    next.addEventListener('click', () => showRecordAt(currentIndex + 1));
+    dialog.addEventListener('keydown', (event) => {
+      if (event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
+      if (event.key === 'ArrowLeft' && !previous.disabled) {
+        event.preventDefault(); showRecordAt(currentIndex - 1);
+      } else if (event.key === 'ArrowRight' && !next.disabled) {
+        event.preventDefault(); showRecordAt(currentIndex + 1);
+      }
+    });
 
     return (record) => {
-      details.replaceChildren();
-      columns.forEach((column) => {
-        const label = document.createElement('dt'); label.textContent = column.label;
-        const value = document.createElement('dd'); appendValue(value, record, column);
-        details.append(label, value);
-      });
+      currentRecords = getRecords();
+      currentIndex = currentRecords.indexOf(record);
+      // Map callers normally pass the same record objects as the table. Keep a
+      // safe one-record fallback in case a future caller supplies another object.
+      if (currentIndex < 0) { currentRecords = [record]; currentIndex = 0; }
+      showRecordAt(currentIndex);
       showDialog(dialog);
     };
   }
@@ -660,7 +699,7 @@
     const csvButton = root.querySelector('[data-cam-table-csv]');
     const mapButton = root.querySelector('[data-cam-table-map]');
     const filters = new Map();
-    const openRecordDialog = createRecordDialog(columns);
+    const openRecordDialog = createRecordDialog(columns, sortedRows);
     const openMapDialog = mapButton ? createMapDialog(openRecordDialog, config.map) : null;
     let rows = []; let currentPage = 1; let printing = false;
     // Each newly selected column becomes the primary key. Older selections stay

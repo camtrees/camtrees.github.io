@@ -140,15 +140,27 @@
 .cam-table__url { display: inline-block; padding: .2rem .5rem; color: inherit; font: inherit; text-decoration: none; background: #e8f5e9; border: 1px solid currentColor; border-radius: .2rem; }
 .cam-table__url:hover, .cam-table__url:focus { background-color: #d5ebd6; text-decoration: underline; }
 
-/* Scrollable dialog that pivots one table row into a label/value list. */
-.cam-record-dialog { width: min(42rem, calc(100vw - 2rem)); max-width: 42rem; max-height: 80vh; padding: 0; overflow: auto; color: inherit; background: #fff; border: 1px solid #5b765c; border-radius: .3rem; }
+/* Dialog that pivots one table row into a scrollable label/value list. */
+.cam-record-dialog { width: min(42rem, calc(100vw - 2rem)); max-width: 42rem; max-height: 80vh; padding: 0; overflow: hidden; color: inherit; background: #fff; border: 1px solid #5b765c; border-radius: .3rem; }
 .cam-record-dialog::backdrop { background: rgb(0 0 0 / 35%); }
-.cam-record-dialog__header { position: sticky; top: 0; display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 1rem; background: #e8f5e9; border-bottom: 1px solid #c8ddc9; }
+.cam-record-dialog__header { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 1rem; background: #e8f5e9; border-bottom: 1px solid #c8ddc9; }
 .cam-record-dialog__header h2 { margin: 0; font-size: 1.25rem; }
 .cam-record-dialog__close { font: inherit; }
-.cam-record-dialog__details { display: grid; grid-template-columns: minmax(10rem, max-content) minmax(0, 1fr); gap: .6rem 1rem; margin: 0; padding: 1rem; }
+.cam-record-dialog__details { display: grid; grid-template-columns: minmax(10rem, max-content) minmax(0, 1fr); gap: .6rem 1rem; max-height: calc(80vh - 9rem); margin: 0; padding: 1rem; overflow: auto; }
 .cam-record-dialog__details dt { font-weight: 700; }
 .cam-record-dialog__details dd { margin: 0; overflow-wrap: anywhere; }
+/* Keep record navigation visible in a green footer while details scroll. */
+.cam-record-dialog__footer { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: .75rem; padding: .75rem 1rem; background: #e8f5e9; border-top: 1px solid #c8ddc9; }
+.cam-record-dialog__footer button { padding: .35rem .6rem; color: inherit; font: inherit; background: #fff; border: 1px solid #5b765c; border-radius: .25rem; cursor: pointer; }
+.cam-record-dialog__footer button:last-child { justify-self: end; }
+.cam-record-dialog__footer button:hover:not(:disabled), .cam-record-dialog__footer button:focus:not(:disabled) { background: #d5ebd6; }
+.cam-record-dialog__footer button:disabled { cursor: not-allowed; opacity: .5; }
+.cam-record-dialog__position { font-size: .9rem; text-align: center; white-space: nowrap; }
+
+@media (max-width: 34rem) {
+  .cam-record-dialog__footer { grid-template-columns: 1fr 1fr; }
+  .cam-record-dialog__position { grid-column: 1 / -1; grid-row: 1; }
+}
 
 /* Large modal dialog that contains the Leaflet map. */
 .cam-map-dialog { width: min(64rem, calc(100vw - 2rem)); max-width: 64rem; height: min(80vh, 48rem); padding: 0; overflow: hidden; color: inherit; background: #fff; border: 1px solid #5b765c; border-radius: .3rem; }
