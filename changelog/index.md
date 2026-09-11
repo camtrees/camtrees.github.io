@@ -7,7 +7,7 @@ nav_order: 98
 <img src="../assets/images/website/changelog.png" alt="CAMTREE Volunteer consulting a day planner showing the ChangeLog" height="512" width="828">
 
 # {{ page.title }}
-_Version: September 11 edit # 1_
+_Version: September 11 edit # 2_
 
 <!-- This content will not appear in the rendered Markdown 
 <details markdown="1">
@@ -59,6 +59,7 @@ elevations, and export JSON files used by the website Database Tables
 - Moved all code from 'codebase' repository to 'camtrees.github.io' repository
 
 ### Website Content
+- Add dropdown filters to Database Tables
 - Changed column sorting algorithm for all Database Tables
 - Added New Data Requests section under the CAM Staff Pages
 - Bigger colored buttons in the Database Tables
