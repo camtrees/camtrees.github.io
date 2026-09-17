@@ -7,7 +7,7 @@ nav_order: 98
 <img src="../assets/images/website/changelog.png" alt="CAMTREE Volunteer consulting a day planner showing the ChangeLog" height="512" width="828">
 
 # {{ page.title }}
-_Version: September 12 edit # 1_
+_Version: September 16 edit # 1_
 
 <!-- This content will not appear in the rendered Markdown 
 <details markdown="1">
@@ -50,6 +50,9 @@ Each entry is grouped by month. Within each month, changes are organized by area
 
 <details markdown="1">
 <summary markdown="span"><strong>2026 September</strong></summary>
+
+### EpiCollect
+- Created new *CAM Chestnut Chasers* project
 
 ### GitHub
 - Added GitHub Action (Nightly-Maintenance.yml) to Import EpiCollect data, Update tree
