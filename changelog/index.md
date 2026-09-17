@@ -58,6 +58,9 @@ Each entry is grouped by month. Within each month, changes are organized by area
 - Added GitHub Action (Nightly-Maintenance.yml) to Import EpiCollect data, Update tree
 elevations, and export JSON files used by the website Database Tables
 
+### Google Map
+- Deleted *CAM Trees Locations* Google Map - same service now provided by the Database Tables in this website
+
 ### Python
 - Moved all code from 'codebase' repository to 'camtrees.github.io' repository
 
