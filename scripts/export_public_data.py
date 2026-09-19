@@ -39,8 +39,8 @@ CAM_TREE_COLUMNS = (
     # These fields drive the CAM Trees table column and Nuts Present map theme.
     "nuts_present",
     "latest_nuts_date",
-    "longitude",
     "latitude",
+    "longitude",
     "elevation_in_feet",
     "access_path",
     "access_level",
