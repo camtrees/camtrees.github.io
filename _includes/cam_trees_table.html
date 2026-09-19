@@ -88,6 +88,8 @@
         {"key":"latest_water_date","label":"Latest Water Date","type":"date"},
         {"key":"nuts_present","label":"Nuts Present","type":"text","filter":"multi"},
         {"key":"latest_nuts_date","label":"Latest Nuts Date","type":"date"},
+        {"key":"google_maps","label":"Google Maps","type":"map-link","provider":"google","linkLabel":"Google Maps","locationLabelKeys":["site","tree_id"],"sortable":false,"filter":false,"includeInCsv":false},
+        {"key":"apple_maps","label":"Apple Maps","type":"map-link","provider":"apple","linkLabel":"Apple Maps","locationLabelKeys":["site","tree_id"],"sortable":false,"filter":false,"includeInCsv":false},
         {"key":"latitude","label":"Latitude","type":"number"},
         {"key":"longitude","label":"Longitude","type":"number"},
         {"key":"elevation_in_feet","label":"Elevation","type":"number"},
@@ -114,4 +116,4 @@
 <!-- Shared table assets; the query value prevents stale browser caches. -->
 <link rel="stylesheet" href="{{ '/assets/css/cam-tables.css' | relative_url }}?v=20260911-record-navigation-3">
 <script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-<script defer src="{{ '/assets/js/cam-tables.js' | relative_url }}?v=20260911-record-navigation-3"></script>
+<script defer src="{{ '/assets/js/cam-tables.js' | relative_url }}?v=20260919-coordinate-map-links-1"></script>

@@ -28,6 +28,34 @@
     }
   }
 
+  // Build presentation-only map links from a record's coordinates. These URLs
+  // are never stored in PostgreSQL or the exported public JSON.
+  function coordinateMapUrl(row, column) {
+    const latitudeValue = rawValue(row, column.latitudeKey || 'latitude');
+    const longitudeValue = rawValue(row, column.longitudeKey || 'longitude');
+    const latitude = Number(latitudeValue);
+    const longitude = Number(longitudeValue);
+    if (!latitudeValue || !longitudeValue || !Number.isFinite(latitude) || !Number.isFinite(longitude)
+      || Math.abs(latitude) > 90 || Math.abs(longitude) > 180) return '';
+
+    const coordinates = `${latitudeValue},${longitudeValue}`;
+    const label = (column.locationLabelKeys || ['site', 'tree_id'])
+      .map((key) => rawValue(row, key)).filter(Boolean).join(' – ');
+    if (column.provider === 'google') {
+      const url = new URL('https://www.google.com/maps/search/');
+      url.searchParams.set('api', '1');
+      url.searchParams.set('query', coordinates);
+      return url.href;
+    }
+    if (column.provider === 'apple') {
+      const url = new URL('https://maps.apple.com/');
+      url.searchParams.set('ll', coordinates);
+      if (label) url.searchParams.set('q', label);
+      return url.href;
+    }
+    return '';
+  }
+
   // Use one shared icon builder so Hub records and Hub reference points have
   // the same black triangle and permanently visible name.
   function createHubTriangleIcon(labelText) {
@@ -61,10 +89,11 @@
     });
   }
 
-  // Add either plain text or a safe new-tab website link to a table cell.
+  // Add plain text, a stored website URL, or a generated coordinate map link.
   function appendValue(container, row, column) {
     const value = displayValue(row, column);
-    const url = column.type === 'url' ? safeWebUrl(value) : '';
+    const url = column.type === 'url' ? safeWebUrl(value)
+      : column.type === 'map-link' ? coordinateMapUrl(row, column) : '';
     if (url) {
       const link = document.createElement('a');
       link.className = 'cam-table__url';
@@ -789,34 +818,46 @@
     // Changing a search, filter, or sort always returns the user to page one.
     function refreshFromFirstPage() { currentPage = 1; render(); }
 
-    // Build the sortable heading row and one filter control per data column.
+    // Build headings and filters. Presentation-only columns such as generated
+    // map links can opt out of sorting and filtering.
     const headerRow = document.createElement('tr');
     const actionHeader = document.createElement('th'); actionHeader.scope = 'col'; actionHeader.textContent = 'View Record'; headerRow.append(actionHeader);
     columns.forEach((column) => {
       const cell = document.createElement('th'); cell.scope = 'col';
-      const button = document.createElement('button'); button.type = 'button'; button.textContent = column.label; button.dataset.sortKey = column.key;
-      button.addEventListener('click', () => {
-        const existing = sortCriteria.findIndex((criterion) => criterion.key === column.key);
-        if (existing === 0) {
-          // Clicking the primary heading again reverses only its direction.
-          sortCriteria[0].direction = sortCriteria[0].direction === 'asc' ? 'desc' : 'asc';
-        } else if (existing > 0) {
-          // Promote an existing tie-breaker without discarding its direction.
-          const [criterion] = sortCriteria.splice(existing, 1);
-          sortCriteria.unshift(criterion);
-        } else {
-          // A newly clicked heading starts ascending and becomes the primary key.
-          sortCriteria.unshift({ key: column.key, direction: 'asc' });
-        }
-        refreshFromFirstPage();
-      });
-      const filter = createFilter(column, refreshFromFirstPage); filters.set(column.key, filter); cell.append(button, filter); headerRow.append(cell);
+      if (column.sortable === false) {
+        const label = document.createElement('span'); label.className = 'cam-table__column-label'; label.textContent = column.label; cell.append(label);
+      } else {
+        const button = document.createElement('button'); button.type = 'button'; button.textContent = column.label; button.dataset.sortKey = column.key;
+        button.addEventListener('click', () => {
+          const existing = sortCriteria.findIndex((criterion) => criterion.key === column.key);
+          if (existing === 0) {
+            // Clicking the primary heading again reverses only its direction.
+            sortCriteria[0].direction = sortCriteria[0].direction === 'asc' ? 'desc' : 'asc';
+          } else if (existing > 0) {
+            // Promote an existing tie-breaker without discarding its direction.
+            const [criterion] = sortCriteria.splice(existing, 1);
+            sortCriteria.unshift(criterion);
+          } else {
+            // A newly clicked heading starts ascending and becomes the primary key.
+            sortCriteria.unshift({ key: column.key, direction: 'asc' });
+          }
+          refreshFromFirstPage();
+        });
+        cell.append(button);
+      }
+      if (column.filter !== false) {
+        const filter = createFilter(column, refreshFromFirstPage); filters.set(column.key, filter); cell.append(filter);
+      }
+      headerRow.append(cell);
     });
     head.append(headerRow); search.addEventListener('input', refreshFromFirstPage);
 
     // Map, CSV, and print actions all operate on the current filtered records.
     if (mapButton) mapButton.addEventListener('click', () => openMapDialog(filteredRows()));
-    if (csvButton) csvButton.addEventListener('click', () => downloadCsv(sortedRows(), columns, config.csvFilename || 'table.csv'));
+    if (csvButton) csvButton.addEventListener('click', () => {
+      const csvColumns = columns.filter((column) => column.includeInCsv !== false);
+      downloadCsv(sortedRows(), csvColumns, config.csvFilename || 'table.csv');
+    });
     if (printButton) {
       printButton.addEventListener('click', () => {
         printing = true;
