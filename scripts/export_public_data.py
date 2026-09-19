@@ -69,8 +69,8 @@ CAM_SITE_COLUMNS = (
     "contact",
     "primary_caretaker",
     "secondary_caretaker",
-    "longitude",
     "latitude",
+    "longitude",
 )
 
 CAM_ORG_COLUMNS = (
@@ -84,8 +84,8 @@ CAM_HUB_COLUMNS = (
     "captain",
     "lieutenant",
     # Hub coordinates support the filtered CAM Hubs map.
-    "longitude",
     "latitude",
+    "longitude",
 )
 
 SITE_VISIT_COLUMNS = (
