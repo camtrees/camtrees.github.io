@@ -12,13 +12,13 @@ refreshed each morning, usually between the hours of 3 and 6am.
 ### Available Tables
 
 - <a href="https://camtrees.github.io/database-tables/cam-hubs.html">**CAM Hubs**</a> – Hubs with their Captain and Lieutenant
-- **CAM Orgs** – CAM Organizations with the Contact person for each
-- **CAM Sites** – Site info where trees have been planted
-- **CAM Trees** – Master list of all trees planted by CAM
-- **Parent Trees** – Trees used as Mother and Father trees 
-- **Site Visit** – A subset of the columns in the CAM Trees table useful to print and
+- <a href="https://camtrees.github.io/database-tables/cam-orgs.html">**CAM Orgs**</a> – CAM Organizations with the Contact person for each
+- <a href="https://camtrees.github.io/database-tables/cam-sites.html">**CAM Sites**</a> – Site info where trees have been planted
+- <a href="https://camtrees.github.io/database-tables/cam-trees.html">**CAM Trees**</a> – Master list of all trees planted by CAM
+- <a href="https://camtrees.github.io/database-tables/parent-trees.html">**Parent Trees**</a> – Trees used as Mother and Father trees 
+- <a href="https://camtrees.github.io/database-tables/site-visit.html">**Site Visit**</a> – A subset of the columns in the CAM Trees table useful to print and
 carry with you on a site visit
-- **Sites in Hubs** – To which Hub each of the Sites 'belongs'
+- <a href="https://camtrees.github.io/database-tables/sites-in-hubs.html">**Sites in Hubs**</a> – To which Hub each of the Sites 'belongs'
 
 Within each table, you can:
 
