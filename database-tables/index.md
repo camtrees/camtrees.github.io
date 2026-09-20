@@ -11,7 +11,7 @@ refreshed each morning, usually between the hours of 3 and 6am.
 
 ### Available Tables
 
-- **CAM Hubs** – Hubs with their Captain and Lieutenant
+- <a href="https://camtrees.github.io/database-tables/cam-hubs.html">**CAM Hubs**</a> – Hubs with their Captain and Lieutenant
 - **CAM Orgs** – CAM Organizations with the Contact person for each
 - **CAM Sites** – Site info where trees have been planted
 - **CAM Trees** – Master list of all trees planted by CAM
