@@ -65,6 +65,8 @@ elevations, and export JSON files used by the website Database Tables
 - Moved all code from 'codebase' repository to 'camtrees.github.io' repository
 
 ### Website Content
+- Added Goolge Map and Apple Map to CAM Trees Database Table
+- Swapped Latitude and Longitude in all Database Tables
 - Used QGIS Mac app to reposition hub-areas.geojson Hub Boundaries used for Database Tables
 - Add dropdown filters to Database Tables
 - Changed column sorting algorithm for all Database Tables
