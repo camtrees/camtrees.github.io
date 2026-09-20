@@ -81,7 +81,7 @@ Google JavaScript App which will:
 
 ## 3. Google Groups
 
-<a href="https://groups.google.com" target="_blank">Google Groups</a>
+<a href="https://support.google.com/groups/answer/46601?hl=en" target="_blank">Google Groups</a>
 provides a centralized method for group communication using a shared email address.
 
 Using the project account, we created a Google Group named **Cam Tree Hub Captains**.
