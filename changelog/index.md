@@ -7,7 +7,7 @@ nav_order: 98
 <img src="../assets/images/website/changelog.png" alt="CAMTREE Volunteer consulting a day planner showing the ChangeLog" height="512" width="828">
 
 # {{ page.title }}
-_Version: September 16 edit # 1_
+_Version: September 21 edit # 1_
 
 <!-- This content will not appear in the rendered Markdown 
 <details markdown="1">
@@ -65,6 +65,7 @@ elevations, and export JSON files used by the website Database Tables
 - Moved all code from 'codebase' repository to 'camtrees.github.io' repository
 
 ### Website Content
+- Added Print Record button to the Record Details Database Tables Popup window
 - Added Goolge Map and Apple Map to CAM Trees Database Table
 - Swapped Latitude and Longitude in all Database Tables
 - Used QGIS Mac app to reposition hub-areas.geojson Hub Boundaries used for Database Tables
