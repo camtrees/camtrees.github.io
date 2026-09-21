@@ -360,6 +360,8 @@
       if (currentIndex < 0) { currentRecords = [record]; currentIndex = 0; }
       showRecordAt(currentIndex);
       showDialog(dialog);
+      // Make Close the initial keyboard action, rather than Print Record.
+      close.focus({ preventScroll: true });
     };
   }
 
