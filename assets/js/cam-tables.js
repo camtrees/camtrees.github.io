@@ -276,11 +276,15 @@
     dialog.className = 'cam-record-dialog';
     const title = document.createElement('h2');
     title.id = `cam-record-dialog-title-${dialogNumber}`;
-    title.textContent = 'Record details';
+    title.textContent = 'Record Details';
     const close = document.createElement('button');
     close.type = 'button'; close.className = 'cam-record-dialog__close'; close.textContent = 'Close';
+    const print = document.createElement('button');
+    print.type = 'button'; print.className = 'cam-record-dialog__print'; print.textContent = 'Print Record';
+    const headerActions = document.createElement('div');
+    headerActions.className = 'cam-record-dialog__header-actions'; headerActions.append(print, close);
     const header = document.createElement('div');
-    header.className = 'cam-record-dialog__header'; header.append(title, close);
+    header.className = 'cam-record-dialog__header'; header.append(title, headerActions);
     const details = document.createElement('dl');
     details.className = 'cam-record-dialog__details';
     const previous = document.createElement('button');
@@ -292,6 +296,12 @@
     const footer = document.createElement('div');
     footer.className = 'cam-record-dialog__footer'; footer.append(previous, position, next);
     dialog.setAttribute('aria-labelledby', title.id); dialog.append(header, details, footer); document.body.append(dialog);
+
+    // A separate print copy avoids printing the dialog's scroll viewport and
+    // keeps the existing filtered-table print mode unchanged.
+    const printSheet = document.createElement('section');
+    printSheet.className = 'cam-record-print';
+    document.body.append(printSheet);
 
     let currentRecords = [];
     let currentIndex = -1;
@@ -318,6 +328,18 @@
       else dialog.removeAttribute('open');
     };
     close.addEventListener('click', closeDialog);
+    print.addEventListener('click', () => {
+      const printTitle = document.createElement('h1');
+      printTitle.textContent = 'Record Details';
+      printSheet.replaceChildren(printTitle, details.cloneNode(true));
+      document.body.classList.add('cam-print-record');
+      // Keep print() inside the click handler for Safari's user-gesture rule.
+      window.print();
+    });
+    window.addEventListener('afterprint', () => {
+      document.body.classList.remove('cam-print-record');
+      printSheet.replaceChildren();
+    });
     dialog.addEventListener('click', (event) => { if (event.target === dialog) closeDialog(); });
     previous.addEventListener('click', () => showRecordAt(currentIndex - 1));
     next.addEventListener('click', () => showRecordAt(currentIndex + 1));
@@ -779,9 +801,9 @@
           const row = document.createElement('tr');
           const actionCell = document.createElement('td');
           const viewButton = document.createElement('button');
-          viewButton.type = 'button'; viewButton.className = 'cam-table__view-record'; viewButton.title = 'View record'; viewButton.setAttribute('aria-label', 'View record details');
+          viewButton.type = 'button'; viewButton.className = 'cam-table__view-record'; viewButton.title = 'View Record'; viewButton.setAttribute('aria-label', 'View record details');
           const icon = document.createElement('span'); icon.setAttribute('aria-hidden', 'true'); icon.textContent = '👁';
-          const label = document.createElement('span'); label.className = 'cam-table__view-label'; label.textContent = 'View record';
+          const label = document.createElement('span'); label.className = 'cam-table__view-label'; label.textContent = 'View Record';
           viewButton.append(icon, label); viewButton.addEventListener('click', () => openRecordDialog(item)); actionCell.append(viewButton); row.append(actionCell);
           columns.forEach((column) => { const cell = document.createElement('td'); appendValue(cell, item, column); row.append(cell); });
           body.append(row);

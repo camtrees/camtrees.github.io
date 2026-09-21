@@ -145,7 +145,9 @@
 .cam-record-dialog::backdrop { background: rgb(0 0 0 / 35%); }
 .cam-record-dialog__header { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 1rem; background: #e8f5e9; border-bottom: 1px solid #c8ddc9; }
 .cam-record-dialog__header h2 { margin: 0; font-size: 1.25rem; }
-.cam-record-dialog__close { font: inherit; }
+.cam-record-dialog__header-actions { display: flex; align-items: center; flex-wrap: wrap; justify-content: flex-end; gap: .5rem; }
+.cam-record-dialog__header-actions button { padding: .3rem .55rem; color: #315d38; font: inherit; white-space: nowrap; background: #fff; border: 1px solid #5b765c; border-radius: .25rem; cursor: pointer; }
+.cam-record-dialog__header-actions button:hover, .cam-record-dialog__header-actions button:focus { background: #d5ebd6; }
 .cam-record-dialog__details { display: grid; grid-template-columns: minmax(10rem, max-content) minmax(0, 1fr); gap: .6rem 1rem; max-height: calc(80vh - 9rem); margin: 0; padding: 1rem; overflow: auto; }
 .cam-record-dialog__details dt { font-weight: 700; }
 .cam-record-dialog__details dd { margin: 0; overflow-wrap: anywhere; }
@@ -157,6 +159,8 @@
 .cam-record-dialog__footer button:hover:not(:disabled), .cam-record-dialog__footer button:focus:not(:disabled) { background: #ffe99a; }
 .cam-record-dialog__footer button:disabled { cursor: not-allowed; opacity: .5; }
 .cam-record-dialog__position { font-size: .9rem; text-align: center; white-space: nowrap; }
+/* Filled only while a single record is being sent to the printer. */
+.cam-record-print { display: none; }
 
 @media (max-width: 34rem) {
   .cam-record-dialog__footer { grid-template-columns: 1fr 1fr; }
@@ -286,4 +290,25 @@
   .cam-table__scroll tbody tr,
   .cam-table__scroll tbody td { border-bottom: 1px solid #555 !important; }
   .cam-table__scroll tr { break-inside: avoid; }
+
+  /* Record printing uses a separate, unscrolled view of the current popup row. */
+  body.cam-print-record > :not(.cam-record-print) { display: none !important; }
+  body.cam-print-record .cam-table { display: none !important; }
+  body.cam-print-record .cam-record-print,
+  body.cam-print-record .cam-record-print * { visibility: visible !important; }
+  body.cam-print-record .cam-record-print {
+    display: block !important;
+    position: static;
+    width: 100%;
+    color: #000;
+  }
+  body.cam-print-record .cam-record-print h1 { margin: 0 0 1rem; font-size: 16pt; }
+  body.cam-print-record .cam-record-print .cam-record-dialog__details {
+    max-height: none;
+    overflow: visible;
+    padding: 0;
+    gap: .35rem 1rem;
+    font-size: 10pt;
+  }
+  body.cam-print-record .cam-record-print .cam-table__url { padding: 0; border: 0; background: transparent; }
 }
