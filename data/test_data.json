@@ -1,0 +1,40 @@
+{
+  "records": [
+    {
+      "user_name": "Buster",
+      "phone_number": {
+        "nonce": "dmRaPfMmYmQ2kmuX",
+        "ciphertext": "UfqlGsqJZ2OY0+neLDabyfD2sAjiAsjDgFs="
+      }
+    },
+    {
+      "user_name": "Ken",
+      "phone_number": {
+        "nonce": "3xljdjL5XC4PrLDP",
+        "ciphertext": "hXIG08G9x7xbakaLNRbDi2A7sm8AKfWsd5E="
+      }
+    },
+    {
+      "user_name": "Kim",
+      "phone_number": {
+        "nonce": "zTVJX9ZG5Z9FtyOD",
+        "ciphertext": "hIgfl5NWdlK7BXAxOUHEO1GU7Be6dOMIqMY="
+      }
+    }
+  ],
+  "encryption": {
+    "version": 1,
+    "algorithm": "AES-256-GCM",
+    "kdf": "PBKDF2-SHA-256",
+    "iterations": 310000,
+    "salt": "ob2gk0Z9yIy+30OqV9jknA==",
+    "columns": [
+      "phone_number"
+    ],
+    "context": "test_data",
+    "check": {
+      "nonce": "VpJ9UvCQSiD+Eocr",
+      "ciphertext": "/kXXsR8uTPmpptXdiYbBygxAMOExAdRp+0hOqd/F63tYzQ=="
+    }
+  }
+}
