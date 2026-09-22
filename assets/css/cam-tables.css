@@ -9,6 +9,11 @@
   margin: 1.5rem 0 1rem;
 }
 
+/* Protected tables place the key controls above search, print, and CSV.
+   Each row can wrap independently on narrow screens. */
+.cam-table__controls--protected { display: grid; align-items: stretch; gap: 1rem; }
+.cam-table__control-row { display: flex; flex-wrap: wrap; align-items: end; gap: 1rem 2rem; }
+
 .cam-table__controls label { display: grid; gap: .25rem; font-weight: 600; }
 .cam-table__controls [data-cam-table-key-group][hidden] { display: none !important; }
 .cam-table__controls input[data-cam-table-search] {
