@@ -14,6 +14,8 @@
   }
 
   function displayValue(row, column) {
+    // Never turn the public ciphertext object into a searchable string.
+    if (column.encrypted && row[column.key] && typeof row[column.key] === 'object') return 'Encrypted…';
     const value = rawValue(row, column.key);
     return column.type === 'boolean' ? yesNoValue(value) : value;
   }
@@ -92,6 +94,17 @@
   // Add plain text, a stored website URL, or a generated coordinate map link.
   function appendValue(container, row, column) {
     const value = displayValue(row, column);
+    if (column.encrypted && row[column.key] && typeof row[column.key] === 'object') {
+      container.classList.add('cam-table__encrypted--locked');
+      const placeholder = document.createElement('span');
+      placeholder.className = 'cam-table__encrypted-placeholder';
+      placeholder.textContent = 'Encrypted…';
+      container.append(placeholder);
+      return;
+    }
+    if (column.encrypted && !container.classList.contains('cam-table__encrypted--locked')) {
+      container.classList.add('cam-table__encrypted--unlocked');
+    }
     const url = column.type === 'url' ? safeWebUrl(value)
       : column.type === 'map-link' ? coordinateMapUrl(row, column) : '';
     if (url) {
@@ -239,11 +252,14 @@
       });
     };
     clear.addEventListener('click', () => {
+      filter.resetSelections();
+      refresh();
+    });
+    filter.resetSelections = () => {
       selectedValues.clear();
       choices.querySelectorAll('input[type="checkbox"]').forEach((checkbox) => { checkbox.checked = false; });
       updateSummary();
-      refresh();
-    });
+    };
     updateSummary();
     return filter;
   }
@@ -270,7 +286,7 @@
 
   // Create one reusable dialog that displays a selected row vertically and
   // navigates through the table's complete current filtered-and-sorted list.
-  function createRecordDialog(columns, getRecords) {
+  function createRecordDialog(columns, getRecords, isLocked = () => false) {
     dialogNumber += 1;
     const dialog = document.createElement('dialog');
     dialog.className = 'cam-record-dialog';
@@ -314,7 +330,13 @@
       details.replaceChildren();
       columns.forEach((column) => {
         const label = document.createElement('dt'); label.textContent = column.label;
-        const value = document.createElement('dd'); appendValue(value, record, column);
+        const value = document.createElement('dd');
+        if (column.encrypted) {
+          const stateClass = isLocked() ? 'cam-table__encrypted--locked' : 'cam-table__encrypted--unlocked';
+          label.classList.add(stateClass);
+          value.classList.add(stateClass);
+        }
+        appendValue(value, record, column);
         details.append(label, value);
       });
       details.scrollTop = 0;
@@ -352,7 +374,7 @@
       }
     });
 
-    return (record) => {
+    const open = (record) => {
       currentRecords = getRecords();
       currentIndex = currentRecords.indexOf(record);
       // Map callers normally pass the same record objects as the table. Keep a
@@ -363,6 +385,62 @@
       // Make Close the initial keyboard action, rather than Print Record.
       close.focus({ preventScroll: true });
     };
+    // Relocking a protected table also removes previously shown plaintext
+    // from this reusable dialog and its temporary print copy.
+    open.clear = () => {
+      closeDialog();
+      currentRecords = [];
+      currentIndex = -1;
+      details.replaceChildren();
+      printSheet.replaceChildren();
+    };
+    return open;
+  }
+
+  // Decode an encrypted JSON field only after a user supplies the shared key.
+  // The secret and derived CryptoKey remain in memory, never in browser storage.
+  function base64Bytes(value) {
+    return Uint8Array.from(atob(value), (character) => character.charCodeAt(0));
+  }
+
+  async function decryptRecords(records, metadata, passphrase) {
+    if (!window.crypto || !window.crypto.subtle || metadata.version !== 1
+      || metadata.algorithm !== 'AES-256-GCM' || metadata.kdf !== 'PBKDF2-SHA-256'
+      || !Number.isInteger(metadata.iterations) || metadata.iterations < 100000
+      || metadata.iterations > 1000000) {
+      throw new Error('Unsupported encrypted data format');
+    }
+    const keyMaterial = await window.crypto.subtle.importKey(
+      'raw', new TextEncoder().encode(passphrase), 'PBKDF2', false, ['deriveKey']
+    );
+    const key = await window.crypto.subtle.deriveKey(
+      { name: 'PBKDF2', salt: base64Bytes(metadata.salt), iterations: metadata.iterations, hash: 'SHA-256' },
+      keyMaterial, { name: 'AES-GCM', length: 256 }, false, ['decrypt']
+    );
+    const decoder = new TextDecoder('utf-8', { fatal: true });
+    const encoder = new TextEncoder();
+    const check = await window.crypto.subtle.decrypt(
+      { name: 'AES-GCM', iv: base64Bytes(metadata.check.nonce), additionalData: encoder.encode(metadata.context) },
+      key, base64Bytes(metadata.check.ciphertext)
+    );
+    if (decoder.decode(check) !== 'cam-data-unlock-v1') throw new Error('Incorrect key');
+    const unlocked = [];
+    for (const [index, record] of records.entries()) {
+      const copy = { ...record };
+      for (const column of metadata.columns) {
+        const field = record[column];
+        if (field === null) continue;
+        if (!field || typeof field !== 'object') throw new Error('Invalid encrypted field');
+        const context = encoder.encode(`${metadata.context}:${column}:${index}`);
+        const plaintext = await window.crypto.subtle.decrypt(
+          { name: 'AES-GCM', iv: base64Bytes(field.nonce), additionalData: context },
+          key, base64Bytes(field.ciphertext)
+        );
+        copy[column] = decoder.decode(plaintext);
+      }
+      unlocked.push(copy);
+    }
+    return unlocked;
   }
 
   // Create the Leaflet dialog used by any table with map configuration.
@@ -751,21 +829,35 @@
     const printButton = root.querySelector('[data-cam-table-print]');
     const csvButton = root.querySelector('[data-cam-table-csv]');
     const mapButton = root.querySelector('[data-cam-table-map]');
+    const keyInput = root.querySelector('[data-cam-table-key]');
+    const keyGroup = root.querySelector('[data-cam-table-key-group]');
+    const unlockButton = root.querySelector('[data-cam-table-unlock]');
+    const keyStatus = root.querySelector('[data-cam-table-key-status]');
+    const encryptedColumns = columns.filter((column) => column.encrypted).map((column) => column.key);
+    if (encryptedColumns.length && (!keyInput || !unlockButton || !keyStatus)) {
+      root.textContent = 'This protected table is not configured correctly.';
+      return;
+    }
     const filters = new Map();
-    const openRecordDialog = createRecordDialog(columns, sortedRows);
+    const openRecordDialog = createRecordDialog(columns, sortedRows, () => locked);
     const openMapDialog = mapButton ? createMapDialog(openRecordDialog, config.map) : null;
-    let rows = []; let currentPage = 1; let printing = false;
+    let rows = []; let encryptedRows = []; let encryptionMetadata = null;
+    let locked = encryptedColumns.length > 0;
+    let currentPage = 1; let printing = false;
     // Each newly selected column becomes the primary key. Older selections stay
     // in order as tie-breakers, enabling secondary-first, primary-second sorting.
-    let sortCriteria = [{ key: columns[0].key, direction: 'asc' }];
+    const initialSortColumn = columns.find((column) => !column.encrypted && column.sortable !== false);
+    let sortCriteria = initialSortColumn ? [{ key: initialSortColumn.key, direction: 'asc' }] : [];
 
     // Apply the global search and every active column filter simultaneously.
     function filteredRows() {
       const globalTerm = normalise(search.value);
       return rows.filter((row) => {
-        if (globalTerm && !columns.some((column) => normalise(displayValue(row, column)).includes(globalTerm))) return false;
+        if (globalTerm && !columns.some((column) => !(locked && column.encrypted)
+          && normalise(displayValue(row, column)).includes(globalTerm))) return false;
         return [...filters].every(([key, filter]) => {
           const column = columns.find((item) => item.key === key);
+          if (locked && column.encrypted) return true;
           if (filter.matchesValue) return filter.matchesValue(displayValue(row, column));
           const filterValue = normalise(filter.value);
           return !filterValue || normalise(displayValue(row, column)).includes(filterValue);
@@ -807,7 +899,11 @@
           const icon = document.createElement('span'); icon.setAttribute('aria-hidden', 'true'); icon.textContent = '👁';
           const label = document.createElement('span'); label.className = 'cam-table__view-label'; label.textContent = 'View Record';
           viewButton.append(icon, label); viewButton.addEventListener('click', () => openRecordDialog(item)); actionCell.append(viewButton); row.append(actionCell);
-          columns.forEach((column) => { const cell = document.createElement('td'); appendValue(cell, item, column); row.append(cell); });
+          columns.forEach((column) => {
+            const cell = document.createElement('td');
+            if (column.encrypted) cell.classList.add(locked ? 'cam-table__encrypted--locked' : 'cam-table__encrypted--unlocked');
+            appendValue(cell, item, column); row.append(cell);
+          });
           body.append(row);
         });
       }
@@ -815,6 +911,7 @@
       // Show every active sort key and its priority. aria-sort identifies only
       // the primary key, while the button label describes all tie-breakers.
       head.querySelectorAll('button[data-sort-key]').forEach((button) => {
+        button.disabled = locked && encryptedColumns.includes(button.dataset.sortKey);
         const priority = sortCriteria.findIndex((criterion) => criterion.key === button.dataset.sortKey);
         if (priority < 0) {
           button.setAttribute('aria-sort', 'none');
@@ -848,6 +945,7 @@
     const actionHeader = document.createElement('th'); actionHeader.scope = 'col'; actionHeader.textContent = 'View Record'; headerRow.append(actionHeader);
     columns.forEach((column) => {
       const cell = document.createElement('th'); cell.scope = 'col';
+      if (column.encrypted) cell.classList.add(locked ? 'cam-table__encrypted--locked' : 'cam-table__encrypted--unlocked');
       if (column.sortable === false) {
         const label = document.createElement('span'); label.className = 'cam-table__column-label'; label.textContent = column.label; cell.append(label);
       } else {
@@ -871,6 +969,7 @@
       }
       if (column.filter !== false) {
         const filter = createFilter(column, refreshFromFirstPage); filters.set(column.key, filter); cell.append(filter);
+        if (column.encrypted && locked) filter.hidden = true;
       }
       headerRow.append(cell);
     });
@@ -879,9 +978,72 @@
     // Map, CSV, and print actions all operate on the current filtered records.
     if (mapButton) mapButton.addEventListener('click', () => openMapDialog(filteredRows()));
     if (csvButton) csvButton.addEventListener('click', () => {
-      const csvColumns = columns.filter((column) => column.includeInCsv !== false);
+      // Locked columns are omitted altogether, never exported as ciphertext.
+      const csvColumns = columns.filter((column) => column.includeInCsv !== false && !(locked && column.encrypted));
       downloadCsv(sortedRows(), csvColumns, config.csvFilename || 'table.csv');
     });
+    if (encryptedColumns.length && keyInput && unlockButton && keyStatus) {
+      unlockButton.addEventListener('click', async () => {
+        if (!locked) {
+          openRecordDialog.clear();
+          rows = encryptedRows;
+          locked = true;
+          search.value = '';
+          sortCriteria = sortCriteria.filter((criterion) => !encryptedColumns.includes(criterion.key));
+          columns.forEach((column) => {
+            if (column.encrypted) {
+              const filter = filters.get(column.key);
+              if (filter) {
+                filter.hidden = true;
+                if (filter.resetSelections) filter.resetSelections();
+                if (filter.populateOptions) filter.populateOptions([]);
+                else filter.value = '';
+              }
+            }
+          });
+          head.querySelectorAll('th').forEach((cell, index) => {
+            cell.classList.toggle('cam-table__encrypted--locked', Boolean(columns[index - 1]?.encrypted));
+            cell.classList.remove('cam-table__encrypted--unlocked');
+          });
+          if (keyGroup) keyGroup.hidden = false;
+          unlockButton.textContent = 'Unlock sensitive data';
+          keyStatus.textContent = 'Sensitive data is locked.';
+          refreshFromFirstPage();
+          return;
+        }
+        const passphrase = keyInput.value;
+        keyInput.value = '';
+        if (!passphrase) { keyStatus.textContent = 'Enter the decryption key first.'; return; }
+        unlockButton.disabled = true;
+        keyStatus.textContent = 'Unlocking sensitive data…';
+        try {
+          const decrypted = await decryptRecords(encryptedRows, encryptionMetadata, passphrase);
+          rows = decrypted;
+          locked = false;
+          columns.forEach((column) => {
+            if (column.encrypted) {
+              const filter = filters.get(column.key);
+              if (filter) { filter.hidden = false; if (filter.populateOptions) filter.populateOptions(rows); }
+            }
+          });
+          head.querySelectorAll('th').forEach((cell, index) => {
+            cell.classList.remove('cam-table__encrypted--locked');
+            cell.classList.toggle('cam-table__encrypted--unlocked', Boolean(columns[index - 1]?.encrypted));
+          });
+          if (keyGroup) keyGroup.hidden = true;
+          unlockButton.textContent = 'Lock sensitive data';
+          keyStatus.textContent = 'Sensitive data is unlocked for this page only.';
+          refreshFromFirstPage();
+        } catch (_) {
+          keyStatus.textContent = 'Unable to unlock data—check the key.';
+        } finally {
+          unlockButton.disabled = false;
+        }
+      });
+      keyInput.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter') { event.preventDefault(); unlockButton.click(); }
+      });
+    }
     if (printButton) {
       printButton.addEventListener('click', () => {
         printing = true;
@@ -900,9 +1062,29 @@
       .then((response) => response.ok ? response.json() : Promise.reject(new Error(`HTTP ${response.status}`)))
       .then((payload) => {
         const records = Array.isArray(payload) ? payload : payload.records;
-        rows = Array.isArray(records) ? records : [];
+        if (encryptedColumns.length) {
+          const metadata = payload.encryption;
+          if (!metadata || !Array.isArray(metadata.columns)
+            || metadata.columns.length !== encryptedColumns.length
+            || !encryptedColumns.every((key) => metadata.columns.includes(key))
+            || !Array.isArray(records)
+            || !records.every((record) => encryptedColumns.every((key) => {
+              const field = record[key];
+              return field === null || (field && typeof field === 'object'
+                && typeof field.nonce === 'string' && typeof field.ciphertext === 'string');
+            }))) {
+            throw new Error('Encrypted column configuration mismatch');
+          }
+          encryptionMetadata = metadata;
+          encryptedRows = records;
+          rows = encryptedRows;
+          if (keyStatus) keyStatus.textContent = 'Sensitive data is locked.';
+          if (unlockButton) unlockButton.disabled = false;
+        } else rows = Array.isArray(records) ? records : [];
         // Multi-select options come from the complete JSON dataset.
-        filters.forEach((filter) => { if (filter.populateOptions) filter.populateOptions(rows); });
+        filters.forEach((filter, key) => {
+          if (filter.populateOptions && !(locked && encryptedColumns.includes(key))) filter.populateOptions(rows);
+        });
         render();
       })
       .catch(() => { summary.textContent = 'The table data is temporarily unavailable.'; });

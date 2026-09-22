@@ -122,6 +122,31 @@ Hub-name labels and Captain and Lieutenant details. The Hub Areas checkbox
 controls only the green boundary outlines and starts enabled. The Trees and
 Sites maps open with Hub Areas disabled and enabled, respectively.
 
+## Shared-key encrypted test export
+
+`database-tables/test-data.md` displays `public_test_data` with `user_name`
+visible and `phone_number` encrypted. The nightly Action reads the
+`CHESTNUT_CHASERS_DECRYPTION_KEY` secret only during export; the secret is not
+embedded in the site or JSON. A visitor must enter the same key separately to
+unlock the phone column in that browser tab. Use dummy phone numbers until the
+first complete export and unlock test has passed.
+
+Protected exports are opt-in. For a future table, add an export entry with its
+view, `columns`, `encrypted_columns`, `encryption_key_env`, output, and sort
+order in `scripts/export_public_data.py`; provide the named secret to the Action;
+mark the same columns `"encrypted":true` in the table include; and add the new
+JSON path to the Action's staged export list. The shared JavaScript handles the
+unlock/lock controls, red locked headings/cells, short `Encrypted…` placeholders,
+and black unlocked values. While locked, protected columns cannot be searched,
+filtered, sorted, or downloaded in CSV; after unlocking they behave normally.
+
+Encryption uses a fresh salt for each export, PBKDF2-SHA-256 to derive an
+AES-256-GCM key, and a fresh nonce for each non-NULL protected cell. Choose a
+long, randomly generated secret and deliver it to users out of band. The key
+is not saved by our code in browser storage. Anyone who knows a key can decrypt exports
+made with that key, including older versions in Git history. This shared-key
+scheme is a scraping deterrent, not per-user authorization.
+
 ## New data request forms
 
 Pages under `new-data-requests/` use the shared `_includes/data_request_form.html`

@@ -19,6 +19,7 @@ refreshed each morning, usually between the hours of 3 and 6am.
 - <a href="https://camtrees.github.io/database-tables/site-visit.html">**Site Visit**</a> – A subset of the columns in the CAM Trees table useful to print and
 carry with you on a site visit
 - <a href="https://camtrees.github.io/database-tables/sites-in-hubs.html">**Sites in Hubs**</a> – To which Hub each of the Sites 'belongs'
+- <a href="{{ '/database-tables/test-data.html' | relative_url }}">**Test Data**</a> – Shared-key encrypted phone-number test
 
 Within each table, you can:
 

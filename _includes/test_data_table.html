@@ -1,0 +1,44 @@
+<!-- Test export: the phone column stays encrypted in the downloaded JSON. -->
+<section class="cam-table" data-cam-table data-source="{{ '/data/test_data.json' | relative_url }}">
+  <div class="cam-table__controls">
+    <label>
+      Search all test records
+      <input type="search" autocomplete="off" data-cam-table-search>
+    </label>
+    <!-- The key exists only in the user's browser memory during an unlock. -->
+    <label data-cam-table-key-group>
+      Decryption key
+      <input type="password" autocomplete="off" spellcheck="false" data-cam-table-key>
+    </label>
+    <button type="button" data-cam-table-unlock disabled>Unlock sensitive data</button>
+    <span role="status" aria-live="polite" data-cam-table-key-status>Sensitive data is locked.</span>
+    <button type="button" data-cam-table-print>Print filtered test records</button>
+    <button type="button" data-cam-table-csv>Export as CSV</button>
+    <p aria-live="polite" data-cam-table-summary></p>
+  </div>
+
+  <div class="cam-table__scroll" tabindex="0">
+    <table data-cam-table-table>
+      <caption class="sr-only">Test Data</caption>
+      <thead></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+  <nav class="cam-table__pagination" aria-label="Test Data table pages" data-cam-table-pagination></nav>
+
+  <!-- Mark future protected columns with encrypted:true here and list the
+       same names in the exporter's encrypted_columns setting. -->
+  <script type="application/json" data-cam-table-config>
+    {
+      "pageSize": 1000,
+      "csvFilename": "test-data.csv",
+      "columns": [
+        {"key":"user_name","label":"User Name","type":"text"},
+        {"key":"phone_number","label":"Phone Number","type":"text","encrypted":true}
+      ]
+    }
+  </script>
+</section>
+
+<link rel="stylesheet" href="{{ '/assets/css/cam-tables.css' | relative_url }}?v=20260921-encrypted-test-1">
+<script defer src="{{ '/assets/js/cam-tables.js' | relative_url }}?v=20260921-encrypted-test-1"></script>

@@ -94,18 +94,20 @@ jobs:
       - name: Export public data
         env:
           CAMTREES_READ_URL: ${{ secrets.CAMTREES_READ_URL }}
+          CHESTNUT_CHASERS_DECRYPTION_KEY: ${{ secrets.CHESTNUT_CHASERS_DECRYPTION_KEY }}
         run: python scripts/export_public_data.py
 
       - name: Commit refreshed public data
         run: |
           # Keep this list synchronized with the outputs in export_public_data.py.
-          if git diff --quiet -- data/cam_trees.json data/cam_sites.json data/cam_orgs.json data/cam_hubs.json data/site_visit.json data/parent_trees.json data/sites_hubs.json; then
+          # Stage first so the initial, previously untracked test export counts.
+          git add data/cam_trees.json data/cam_sites.json data/cam_orgs.json data/cam_hubs.json data/site_visit.json data/parent_trees.json data/sites_hubs.json data/test_data.json
+          if git diff --cached --quiet; then
             echo "No public data changes to commit."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/cam_trees.json data/cam_sites.json data/cam_orgs.json data/cam_hubs.json data/site_visit.json data/parent_trees.json data/sites_hubs.json
           git commit -m "chore: refresh public CAM data"
           git push
 
