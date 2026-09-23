@@ -550,7 +550,7 @@
         const popup = document.createElement('div');
         const popupTitle = document.createElement('strong'); popupTitle.textContent = rawValue(point.record, popupTitleKey) || `Unknown ${singular}`;
         const detailButton = document.createElement('button');
-        detailButton.type = 'button'; detailButton.className = 'cam-map-dialog__record-button'; detailButton.textContent = 'View full record';
+        detailButton.type = 'button'; detailButton.className = 'cam-map-dialog__record-button'; detailButton.textContent = 'View Full Record';
         detailButton.addEventListener('click', () => {
           map.closePopup();
           openRecordDialog(point.record);
