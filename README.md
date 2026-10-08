@@ -9,18 +9,19 @@ Tables pages. Those use a 'nil' layout so the html table is as large as possible
 
 The public table pages fetch only static JSON files in `data/`. Those files are
 refreshed nightly by GitHub Actions from the PostgreSQL views
-`public_cam_trees`, `public_cam_sites`, `public_cam_orgs`, and
-`public_cam_hubs`, `public_site_visit`, and `public_sites_hubs`; browsers never
-connect to Neon and never receive the database URL. `public_parent_trees` is
-exported through the same pipeline.
+`public_cam_trees`, `public_cam_sites`, `public_cam_orgs`, `public_cam_hubs`,
+`public_cam_volunteers`, `public_site_visit`, and `public_sites_hubs`; browsers
+never connect to Neon and never receive the database URL. `public_parent_trees`
+is exported through the same pipeline.
 
 ## Setup
 
 1. In the repository’s GitHub Actions secrets, create `CAMTREES_READ_URL` with
    the read-replica Neon PostgreSQL connection URL and `CAMTREES_WRITE_URL`
    with the writable Neon connection URL. Also create `MAINT_CLIENT_SECRET`
-   and `RAIN_CLIENT_SECRET` with the two EpiCollect API client secrets. Do not
-   add any of these values to site files or Jekyll configuration.
+   and `RAIN_CLIENT_SECRET` with the two EpiCollect API client secrets, plus
+   `CAM_DECRYPTION_KEY` for protected exports. Do not add any of
+   these values to site files or Jekyll configuration.
 2. Ensure the database views exist with the columns expected by the export
    allow-list. The CAM Trees view begins with `site`, `tree_id`, `town`, `hub`,
    and `cam_org` in that order.
@@ -28,8 +29,8 @@ exported through the same pipeline.
    already allowed. Run **Export public CAMTREES data** once from the Actions
    tab to create the first populated JSON export.
 4. Add the appropriate table include to a normal Just the Docs page, or use
-   the included `cam-trees.md`, `cam-sites.md`, `cam-orgs.md`, or
-   `cam-hubs.md`, or `site-visit.md` page. Each include loads data with
+   the included `cam-trees.md`, `cam-sites.md`, `cam-orgs.md`, `cam-hubs.md`,
+   `cam-volunteers.md`, or `site-visit.md` page. Each include loads data with
    Jekyll’s `relative_url` filter, so it supports a project-site base path.
    `parent-trees.md` is available for the Parent Trees table, and
    `sites-in-hubs.md` is available for Sites in Hubs.
@@ -122,11 +123,17 @@ Hub-name labels and Captain and Lieutenant details. The Hub Areas checkbox
 controls only the green boundary outlines and starts enabled. The Trees and
 Sites maps open with Hub Areas disabled and enabled, respectively.
 
-## Shared-key encrypted test export
+## Shared-key encrypted exports
+
+`database-tables/cam-volunteers.md` displays `public_cam_volunteers`. Last Name,
+Volunteer, Email, Cell Phone, Work Phone, and Home Phone remain encrypted until
+the shared key is supplied in the page. Every column has a text filter except
+Status, whose multi-select choices are populated from the exported records.
+There is no map action because this view has no coordinates.
 
 `database-tables/test-data.md` displays `public_test_data` with `user_name`
 visible and `phone_number` encrypted. The nightly Action reads the
-`CHESTNUT_CHASERS_DECRYPTION_KEY` secret only during export; the secret is not
+`CAM_DECRYPTION_KEY` secret only during export; the secret is not
 embedded in the site or JSON. A visitor must enter the same key separately to
 unlock the phone column in that browser tab. Use dummy phone numbers until the
 first complete export and unlock test has passed.

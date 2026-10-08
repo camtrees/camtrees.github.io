@@ -1,0 +1,60 @@
+<!-- CAM Volunteers shell; selected contact columns remain encrypted in JSON. -->
+<section class="cam-table" data-cam-table data-source="{{ '/data/cam_volunteers.json' | relative_url }}">
+  <div class="cam-table__controls cam-table__controls--protected">
+    <!-- Keep unlock controls on a separate row above the normal table actions. -->
+    <div class="cam-table__control-row">
+      <!-- The key exists only in the visitor's browser memory during an unlock. -->
+      <label data-cam-table-key-group>
+        Decryption key
+        <input type="password" autocomplete="off" spellcheck="false" data-cam-table-key>
+      </label>
+      <button type="button" data-cam-table-unlock disabled>Unlock sensitive data</button>
+      <span role="status" aria-live="polite" data-cam-table-key-status>Sensitive data is locked.</span>
+    </div>
+    <div class="cam-table__control-row">
+      <label>
+        Search all volunteers
+        <input type="search" autocomplete="off" data-cam-table-search>
+      </label>
+      <button type="button" data-cam-table-print>Print filtered volunteers</button>
+      <button type="button" data-cam-table-csv>Export as CSV</button>
+      <p aria-live="polite" data-cam-table-summary></p>
+    </div>
+  </div>
+
+  <div class="cam-table__scroll" tabindex="0">
+    <table data-cam-table-table>
+      <caption class="sr-only">CAM Volunteers</caption>
+      <thead></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+  <nav class="cam-table__pagination" aria-label="CAM Volunteers table pages" data-cam-table-pagination></nav>
+
+  <!-- encrypted:true must match encrypted_columns in export_public_data.py.
+       Status choices are populated from the complete downloaded dataset. -->
+  <script type="application/json" data-cam-table-config>
+    {
+      "pageSize": 1000,
+      "csvFilename": "cam-volunteers.csv",
+      "columns": [
+        {"key":"first_name","label":"First Name","type":"text"},
+        {"key":"last_name","label":"Last Name","type":"text","encrypted":true},
+        {"key":"volunteer","label":"Volunteer","type":"text","encrypted":true},
+        {"key":"email","label":"Email","type":"text","encrypted":true},
+        {"key":"title","label":"Title","type":"text"},
+        {"key":"status","label":"Status","type":"text","filter":"multi"},
+        {"key":"cell_phone","label":"Cell Phone","type":"text","encrypted":true},
+        {"key":"work_phone","label":"Work Phone","type":"text","encrypted":true},
+        {"key":"home_phone","label":"Home Phone","type":"text","encrypted":true},
+        {"key":"town","label":"Town","type":"text"},
+        {"key":"state","label":"State","type":"text"},
+        {"key":"state_name","label":"State Name","type":"text"}
+      ]
+    }
+  </script>
+</section>
+
+<!-- Shared assets; query values prevent stale browser caches. -->
+<link rel="stylesheet" href="{{ '/assets/css/cam-tables.css' | relative_url }}?v=20260921-protected-controls-1">
+<script defer src="{{ '/assets/js/cam-tables.js' | relative_url }}?v=20260921-encrypted-test-1"></script>
