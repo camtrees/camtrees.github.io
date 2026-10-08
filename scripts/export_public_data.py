@@ -94,6 +94,30 @@ CAM_HUB_COLUMNS = (
     "longitude",
 )
 
+CAM_VOLUNTEER_COLUMNS = (
+    "first_name",
+    "last_name",
+    "volunteer",
+    "email",
+    "title",
+    "status",
+    "cell_phone",
+    "work_phone",
+    "home_phone",
+    "town",
+    "state",
+    "state_name",
+)
+
+CAM_VOLUNTEER_ENCRYPTED_COLUMNS = (
+    "last_name",
+    "volunteer",
+    "email",
+    "cell_phone",
+    "work_phone",
+    "home_phone",
+)
+
 SITE_VISIT_COLUMNS = (
     "Site",
     "Tree ID",
@@ -152,6 +176,17 @@ EXPORTS = (
         "order_by": '"hub"',
     },
     {
+        # Contact details are written only as authenticated ciphertext. The
+        # browser unlocks them after the visitor supplies the shared key.
+        "name": "cam_volunteers",
+        "view": "public_cam_volunteers",
+        "columns": CAM_VOLUNTEER_COLUMNS,
+        "encrypted_columns": CAM_VOLUNTEER_ENCRYPTED_COLUMNS,
+        "encryption_key_env": "CAM_DECRYPTION_KEY",
+        "output": ROOT / "data" / "cam_volunteers.json",
+        "order_by": '"first_name", "last_name"',
+    },
+    {
         "name": "site_visit",
         "view": "public_site_visit",
         "columns": SITE_VISIT_COLUMNS,
@@ -180,7 +215,7 @@ EXPORTS = (
         "view": "public_test_data",
         "columns": ("user_name", "phone_number"),
         "encrypted_columns": ("phone_number",),
-        "encryption_key_env": "CHESTNUT_CHASERS_DECRYPTION_KEY",
+        "encryption_key_env": "CAM_DECRYPTION_KEY",
         "output": ROOT / "data" / "test_data.json",
         "order_by": '"user_name"',
     },
