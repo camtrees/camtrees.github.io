@@ -101,7 +101,7 @@ jobs:
         run: |
           # Keep this list synchronized with the outputs in export_public_data.py.
           # Stage first so a new, previously untracked export is included.
-          git add data/cam_trees.json data/cam_sites.json data/cam_orgs.json data/cam_hubs.json data/cam_volunteers.json data/site_visit.json data/parent_trees.json data/sites_hubs.json data/test_data.json
+          git add data/cam_trees.json data/cam_sites.json data/cam_orgs.json data/cam_hubs.json data/cam_volunteers.json data/site_visit.json data/parent_trees.json data/sites_hubs.json
           if git diff --cached --quiet; then
             echo "No public data changes to commit."
             exit 0

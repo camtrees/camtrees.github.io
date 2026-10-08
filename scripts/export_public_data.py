@@ -208,17 +208,6 @@ EXPORTS = (
         "output": ROOT / "data" / "sites_hubs.json",
         "order_by": '"site", "hub"',
     },
-    {
-        # Add future protected exports here and list every column requiring
-        # encryption. The corresponding table configuration marks them encrypted.
-        "name": "test_data",
-        "view": "public_test_data",
-        "columns": ("user_name", "phone_number"),
-        "encrypted_columns": ("phone_number",),
-        "encryption_key_env": "CAM_DECRYPTION_KEY",
-        "output": ROOT / "data" / "test_data.json",
-        "order_by": '"user_name"',
-    },
 )
 
 

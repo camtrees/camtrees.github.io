@@ -130,13 +130,9 @@ Volunteer, Email, Cell Phone, Work Phone, and Home Phone remain encrypted until
 the shared key is supplied in the page. Every column has a text filter except
 Status, whose multi-select choices are populated from the exported records.
 There is no map action because this view has no coordinates.
-
-`database-tables/test-data.md` displays `public_test_data` with `user_name`
-visible and `phone_number` encrypted. The nightly Action reads the
-`CAM_DECRYPTION_KEY` secret only during export; the secret is not
-embedded in the site or JSON. A visitor must enter the same key separately to
-unlock the phone column in that browser tab. Use dummy phone numbers until the
-first complete export and unlock test has passed.
+The nightly Action reads the `CAM_DECRYPTION_KEY` secret only during export;
+the secret is not embedded in the site or JSON. A visitor must receive and enter
+the same key separately to unlock protected columns in that browser tab.
 
 Protected exports are opt-in. For a future table, add an export entry with its
 view, `columns`, `encrypted_columns`, `encryption_key_env`, output, and sort
@@ -150,8 +146,8 @@ filtered, sorted, or downloaded in CSV; after unlocking they behave normally.
 Encryption uses a fresh salt for each export, PBKDF2-SHA-256 to derive an
 AES-256-GCM key, and a fresh nonce for each non-NULL protected cell. Choose a
 long, randomly generated secret and deliver it to users out of band. The key
-is not saved by our code in browser storage. Anyone who knows a key can decrypt exports
-made with that key, including older versions in Git history. This shared-key
+is not saved by our code in browser storage. Anyone who knows a key can decrypt
+exports made with that key, including older versions in Git history. This shared-key
 scheme is a scraping deterrent, not per-user authorization.
 
 ## New data request forms
