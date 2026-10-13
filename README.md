@@ -85,6 +85,13 @@ Every public table can download all currently filtered records as a UTF-8 CSV
 file in the table's current sort order. CSV exports contain the configured data
 columns but not the View Record action column.
 
+CAM Trees provides a Choose columns dialog. All columns begin visible; View
+Record, Site, and Tree ID cannot be hidden. Hiding a column clears its active
+filter and sort and removes it from the displayed table, printed table, global
+search, and CSV export. Hidden fields remain in the in-memory records used by
+maps and Record Details, so Latest Health, Nuts Present, Latitude, and Longitude
+may safely be hidden without disabling mapping.
+
 Table headings support ordered multi-column sorting. Each newly clicked heading
 becomes the primary key while earlier selections remain lower-priority
 tie-breakers, allowing users to click the secondary key first and primary key

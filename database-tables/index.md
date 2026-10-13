@@ -35,6 +35,9 @@ Hub and secondarily by Site. The number beside each sort arrow shows its priorit
 - **Refresh the webpage** to clear all filters and search terms.
 
 You can also:
+- On the CAM Trees table, click **"Choose columns"** to hide optional columns. Site,
+Tree ID, and View Record always remain visible. Hidden columns are also omitted from
+printed tables and CSV exports, but remain available to maps and Record Details.
 - Click the **"Print filtered ..."** button to print the table records. Most tables will print
 best using landscape mode.
 - Click the **"Export as CSV"** button to export the table as a CSV file. Once downloaded you

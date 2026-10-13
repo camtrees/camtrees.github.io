@@ -829,6 +829,7 @@
     const printButton = root.querySelector('[data-cam-table-print]');
     const csvButton = root.querySelector('[data-cam-table-csv]');
     const mapButton = root.querySelector('[data-cam-table-map]');
+    const columnsButton = root.querySelector('[data-cam-table-columns]');
     const keyInput = root.querySelector('[data-cam-table-key]');
     const keyGroup = root.querySelector('[data-cam-table-key-group]');
     const unlockButton = root.querySelector('[data-cam-table-unlock]');
@@ -844,6 +845,10 @@
     let rows = []; let encryptedRows = []; let encryptionMetadata = null;
     let locked = encryptedColumns.length > 0;
     let currentPage = 1; let printing = false;
+    // Column visibility affects the table, printing, global search, and CSV,
+    // but records passed to maps and Record Details retain every field.
+    const visibleColumnKeys = new Set(columns.map((column) => column.key));
+    const visibleColumns = () => columns.filter((column) => visibleColumnKeys.has(column.key));
     // Each newly selected column becomes the primary key. Older selections stay
     // in order as tie-breakers, enabling secondary-first, primary-second sorting.
     const initialSortColumn = columns.find((column) => !column.encrypted && column.sortable !== false);
@@ -853,10 +858,11 @@
     function filteredRows() {
       const globalTerm = normalise(search.value);
       return rows.filter((row) => {
-        if (globalTerm && !columns.some((column) => !(locked && column.encrypted)
+        if (globalTerm && !visibleColumns().some((column) => !(locked && column.encrypted)
           && normalise(displayValue(row, column)).includes(globalTerm))) return false;
         return [...filters].every(([key, filter]) => {
           const column = columns.find((item) => item.key === key);
+          if (!visibleColumnKeys.has(key)) return true;
           if (locked && column.encrypted) return true;
           if (filter.matchesValue) return filter.matchesValue(displayValue(row, column));
           const filterValue = normalise(filter.value);
@@ -888,7 +894,7 @@
 
       body.replaceChildren();
       if (!shown.length) {
-        const cell = document.createElement('td'); cell.colSpan = columns.length + 1; cell.className = 'cam-table__empty'; cell.textContent = 'No records match the current filters.';
+        const cell = document.createElement('td'); cell.colSpan = visibleColumns().length + 1; cell.className = 'cam-table__empty'; cell.textContent = 'No records match the current filters.';
         const row = document.createElement('tr'); row.append(cell); body.append(row);
       } else {
         shown.forEach((item) => {
@@ -899,7 +905,7 @@
           const icon = document.createElement('span'); icon.setAttribute('aria-hidden', 'true'); icon.textContent = '👁';
           const label = document.createElement('span'); label.className = 'cam-table__view-label'; label.textContent = 'View Record';
           viewButton.append(icon, label); viewButton.addEventListener('click', () => openRecordDialog(item)); actionCell.append(viewButton); row.append(actionCell);
-          columns.forEach((column) => {
+          visibleColumns().forEach((column) => {
             const cell = document.createElement('td');
             if (column.encrypted) cell.classList.add(locked ? 'cam-table__encrypted--locked' : 'cam-table__encrypted--unlocked');
             appendValue(cell, item, column); row.append(cell);
@@ -944,7 +950,7 @@
     const headerRow = document.createElement('tr');
     const actionHeader = document.createElement('th'); actionHeader.scope = 'col'; actionHeader.textContent = 'View Record'; headerRow.append(actionHeader);
     columns.forEach((column) => {
-      const cell = document.createElement('th'); cell.scope = 'col';
+      const cell = document.createElement('th'); cell.scope = 'col'; cell.dataset.columnKey = column.key;
       if (column.encrypted) cell.classList.add(locked ? 'cam-table__encrypted--locked' : 'cam-table__encrypted--unlocked');
       if (column.sortable === false) {
         const label = document.createElement('span'); label.className = 'cam-table__column-label'; label.textContent = column.label; cell.append(label);
@@ -975,11 +981,67 @@
     });
     head.append(headerRow); search.addEventListener('input', refreshFromFirstPage);
 
+    // Build an optional reusable column chooser. The action column and any
+    // hideable:false data columns remain visible and explain why via disabled checks.
+    if (columnsButton) {
+      const dialog = document.createElement('dialog');
+      dialog.className = 'cam-column-dialog';
+      const title = document.createElement('h2'); title.textContent = 'Choose Columns';
+      const intro = document.createElement('p'); intro.textContent = 'Select the columns to display, print, and export.';
+      const choices = document.createElement('div'); choices.className = 'cam-column-dialog__choices';
+      const actionChoice = document.createElement('label');
+      const actionCheckbox = document.createElement('input');
+      actionCheckbox.type = 'checkbox'; actionCheckbox.checked = true; actionCheckbox.disabled = true;
+      actionChoice.append(actionCheckbox, document.createTextNode('View Record'));
+      choices.append(actionChoice);
+      const checkboxes = new Map();
+      columns.forEach((column) => {
+        const label = document.createElement('label');
+        const checkbox = document.createElement('input');
+        checkbox.type = 'checkbox'; checkbox.checked = true; checkbox.disabled = column.hideable === false;
+        checkbox.addEventListener('change', () => {
+          if (checkbox.checked) visibleColumnKeys.add(column.key);
+          else {
+            visibleColumnKeys.delete(column.key);
+            sortCriteria = sortCriteria.filter((criterion) => criterion.key !== column.key);
+            const filter = filters.get(column.key);
+            if (filter) {
+              if (filter.open) filter.open = false;
+              if (filter.resetSelections) filter.resetSelections();
+              else filter.value = '';
+            }
+          }
+          const heading = head.querySelector(`th[data-column-key="${CSS.escape(column.key)}"]`);
+          if (heading) heading.hidden = !checkbox.checked;
+          refreshFromFirstPage();
+        });
+        label.append(checkbox, document.createTextNode(column.label));
+        choices.append(label); checkboxes.set(column.key, checkbox);
+      });
+      const showAll = document.createElement('button');
+      showAll.type = 'button'; showAll.textContent = 'Show All';
+      showAll.addEventListener('click', () => {
+        columns.forEach((column) => {
+          visibleColumnKeys.add(column.key);
+          checkboxes.get(column.key).checked = true;
+          const heading = head.querySelector(`th[data-column-key="${CSS.escape(column.key)}"]`);
+          if (heading) heading.hidden = false;
+        });
+        refreshFromFirstPage();
+      });
+      const close = document.createElement('button'); close.type = 'button'; close.textContent = 'Close';
+      close.addEventListener('click', () => dialog.close());
+      const footer = document.createElement('div'); footer.className = 'cam-column-dialog__footer'; footer.append(showAll, close);
+      dialog.append(title, intro, choices, footer); document.body.append(dialog);
+      columnsButton.addEventListener('click', () => { showDialog(dialog); close.focus({ preventScroll: true }); });
+      dialog.addEventListener('click', (event) => { if (event.target === dialog) dialog.close(); });
+    }
+
     // Map, CSV, and print actions all operate on the current filtered records.
     if (mapButton) mapButton.addEventListener('click', () => openMapDialog(filteredRows()));
     if (csvButton) csvButton.addEventListener('click', () => {
       // Locked columns are omitted altogether, never exported as ciphertext.
-      const csvColumns = columns.filter((column) => column.includeInCsv !== false && !(locked && column.encrypted));
+      const csvColumns = visibleColumns().filter((column) => column.includeInCsv !== false && !(locked && column.encrypted));
       downloadCsv(sortedRows(), csvColumns, config.csvFilename || 'table.csv');
     });
     if (encryptedColumns.length && keyInput && unlockButton && keyStatus) {
