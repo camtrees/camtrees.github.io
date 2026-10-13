@@ -995,24 +995,35 @@
       actionChoice.append(actionCheckbox, document.createTextNode('View Record'));
       choices.append(actionChoice);
       const checkboxes = new Map();
+
+      // Apply the same cleanup whether one checkbox or a footer shortcut hides a column.
+      const setColumnVisibility = (column, visible) => {
+        const checkbox = checkboxes.get(column.key);
+        if (checkbox) checkbox.checked = visible;
+
+        if (visible) {
+          visibleColumnKeys.add(column.key);
+        } else {
+          visibleColumnKeys.delete(column.key);
+          sortCriteria = sortCriteria.filter((criterion) => criterion.key !== column.key);
+          const filter = filters.get(column.key);
+          if (filter) {
+            if (filter.open) filter.open = false;
+            if (filter.resetSelections) filter.resetSelections();
+            else filter.value = '';
+          }
+        }
+
+        const heading = head.querySelector(`th[data-column-key="${CSS.escape(column.key)}"]`);
+        if (heading) heading.hidden = !visible;
+      };
+
       columns.forEach((column) => {
         const label = document.createElement('label');
         const checkbox = document.createElement('input');
         checkbox.type = 'checkbox'; checkbox.checked = true; checkbox.disabled = column.hideable === false;
         checkbox.addEventListener('change', () => {
-          if (checkbox.checked) visibleColumnKeys.add(column.key);
-          else {
-            visibleColumnKeys.delete(column.key);
-            sortCriteria = sortCriteria.filter((criterion) => criterion.key !== column.key);
-            const filter = filters.get(column.key);
-            if (filter) {
-              if (filter.open) filter.open = false;
-              if (filter.resetSelections) filter.resetSelections();
-              else filter.value = '';
-            }
-          }
-          const heading = head.querySelector(`th[data-column-key="${CSS.escape(column.key)}"]`);
-          if (heading) heading.hidden = !checkbox.checked;
+          setColumnVisibility(column, checkbox.checked);
           refreshFromFirstPage();
         });
         label.append(checkbox, document.createTextNode(column.label));
@@ -1021,17 +1032,20 @@
       const showAll = document.createElement('button');
       showAll.type = 'button'; showAll.textContent = 'Show All';
       showAll.addEventListener('click', () => {
-        columns.forEach((column) => {
-          visibleColumnKeys.add(column.key);
-          checkboxes.get(column.key).checked = true;
-          const heading = head.querySelector(`th[data-column-key="${CSS.escape(column.key)}"]`);
-          if (heading) heading.hidden = false;
-        });
+        columns.forEach((column) => setColumnVisibility(column, true));
+        refreshFromFirstPage();
+      });
+      const hideOptional = document.createElement('button');
+      hideOptional.type = 'button'; hideOptional.textContent = 'Hide All';
+      hideOptional.addEventListener('click', () => {
+        columns
+          .filter((column) => column.hideable !== false)
+          .forEach((column) => setColumnVisibility(column, false));
         refreshFromFirstPage();
       });
       const close = document.createElement('button'); close.type = 'button'; close.textContent = 'Close';
       close.addEventListener('click', () => dialog.close());
-      const footer = document.createElement('div'); footer.className = 'cam-column-dialog__footer'; footer.append(showAll, close);
+      const footer = document.createElement('div'); footer.className = 'cam-column-dialog__footer'; footer.append(showAll, hideOptional, close);
       dialog.append(title, intro, choices, footer); document.body.append(dialog);
       columnsButton.addEventListener('click', () => { showDialog(dialog); close.focus({ preventScroll: true }); });
       dialog.addEventListener('click', (event) => { if (event.target === dialog) dialog.close(); });

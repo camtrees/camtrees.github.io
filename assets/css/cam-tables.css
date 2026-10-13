@@ -213,7 +213,7 @@
 .cam-column-dialog__choices label { display: flex; align-items: flex-start; gap: .45rem; }
 .cam-column-dialog__choices input { flex: 0 0 auto; margin-top: .2rem; }
 .cam-column-dialog__choices label:has(input:disabled) { font-weight: 600; }
-.cam-column-dialog__footer { display: flex; justify-content: space-between; gap: 1rem; padding: .75rem 1rem; background: #e8f5e9; border-top: 1px solid #c8ddc9; }
+.cam-column-dialog__footer { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; padding: .75rem 1rem; background: #e8f5e9; border-top: 1px solid #c8ddc9; }
 .cam-column-dialog__footer button { padding: .35rem .65rem; color: inherit; font: inherit; background: #fff; border: 1px solid #5b765c; border-radius: .25rem; cursor: pointer; }
 .cam-column-dialog__footer button:hover, .cam-column-dialog__footer button:focus { background: #d5ebd6; }
 
