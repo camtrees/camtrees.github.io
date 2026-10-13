@@ -264,9 +264,100 @@
     return filter;
   }
 
+  // Build a searchable dialog for columns whose large number of values would
+  // make an ordinary dropdown cumbersome, such as Mother Tree and Father Tree.
+  function createDialogMultiFilter(column, refresh) {
+    const openButton = document.createElement('button');
+    openButton.type = 'button'; openButton.className = 'cam-table__dialog-filter';
+    const dialog = document.createElement('dialog');
+    dialog.className = 'cam-filter-dialog';
+    const title = document.createElement('h2'); title.textContent = `Filter ${column.label}`;
+    const intro = document.createElement('p'); intro.textContent = 'Select one or more values to display.';
+    const searchLabel = document.createElement('label'); searchLabel.className = 'cam-filter-dialog__search';
+    searchLabel.append(document.createTextNode(`Search ${column.label} values`));
+    const search = document.createElement('input'); search.type = 'search'; search.autocomplete = 'off';
+    searchLabel.append(search);
+    const choices = document.createElement('div'); choices.className = 'cam-filter-dialog__choices';
+    const selectedValues = new Set();
+    const availableValues = new Map();
+
+    const updateSummary = () => {
+      let text = `${selectedValues.size} selected`;
+      if (selectedValues.size === availableValues.size) text = 'All';
+      else if (!selectedValues.size) text = 'None';
+      openButton.textContent = text;
+      openButton.setAttribute('aria-label', `Filter ${column.label}: ${text}`);
+    };
+
+    const renderChoices = () => {
+      const term = normalise(search.value);
+      choices.replaceChildren();
+      [...availableValues]
+        .filter(([, labelText]) => !term || normalise(labelText).includes(term))
+        .sort((left, right) => left[1].localeCompare(right[1], undefined, { sensitivity: 'base' }))
+        .forEach(([value, labelText]) => {
+          const label = document.createElement('label');
+          const checkbox = document.createElement('input');
+          checkbox.type = 'checkbox'; checkbox.value = value; checkbox.checked = selectedValues.has(value);
+          checkbox.addEventListener('change', () => {
+            if (checkbox.checked) selectedValues.add(value);
+            else selectedValues.delete(value);
+            updateSummary();
+            refresh();
+          });
+          label.append(checkbox, document.createTextNode(labelText));
+          choices.append(label);
+        });
+      if (!choices.childElementCount) {
+        const empty = document.createElement('p'); empty.textContent = 'No values match this search.'; choices.append(empty);
+      }
+    };
+
+    const showAll = document.createElement('button'); showAll.type = 'button'; showAll.textContent = 'Show All';
+    showAll.addEventListener('click', () => {
+      availableValues.forEach((_, value) => selectedValues.add(value));
+      renderChoices(); updateSummary(); refresh();
+    });
+    const hideAll = document.createElement('button'); hideAll.type = 'button'; hideAll.textContent = 'Hide All';
+    hideAll.addEventListener('click', () => {
+      selectedValues.clear(); renderChoices(); updateSummary(); refresh();
+    });
+    const close = document.createElement('button'); close.type = 'button'; close.textContent = 'Close';
+    close.addEventListener('click', () => dialog.close());
+    const footerActions = document.createElement('div'); footerActions.className = 'cam-filter-dialog__footer-actions'; footerActions.append(showAll, hideAll);
+    const footer = document.createElement('div'); footer.className = 'cam-filter-dialog__footer'; footer.append(footerActions, close);
+    dialog.append(title, intro, searchLabel, choices, footer); document.body.append(dialog);
+
+    search.addEventListener('input', renderChoices);
+    openButton.addEventListener('click', () => {
+      search.value = ''; renderChoices(); showDialog(dialog); close.focus({ preventScroll: true });
+    });
+    dialog.addEventListener('click', (event) => { if (event.target === dialog) dialog.close(); });
+    openButton.matchesValue = (value) => selectedValues.has(normalise(value));
+    openButton.populateOptions = (records) => {
+      availableValues.clear();
+      records.forEach((record) => {
+        const displayed = displayValue(record, column);
+        const value = normalise(displayed);
+        if (!availableValues.has(value)) availableValues.set(value, displayed || '(Blank)');
+      });
+      selectedValues.clear();
+      availableValues.forEach((_, value) => selectedValues.add(value));
+      renderChoices(); updateSummary();
+    };
+    openButton.resetSelections = () => {
+      selectedValues.clear();
+      availableValues.forEach((_, value) => selectedValues.add(value));
+      search.value = ''; renderChoices(); updateSummary();
+    };
+    updateSummary();
+    return openButton;
+  }
+
   // Boolean fields use All/Yes/No, configured multi-filters use checkboxes,
   // and all remaining columns use a normal search box.
   function createFilter(column, refresh) {
+    if (column.filter === 'dialog-multi') return createDialogMultiFilter(column, refresh);
     if (column.filter === 'multi') return createMultiFilter(column, refresh);
     if (column.type === 'boolean') {
       const filter = document.createElement('select');
