@@ -213,15 +213,20 @@
 .cam-column-dialog__choices label { display: flex; align-items: flex-start; gap: .45rem; }
 .cam-column-dialog__choices input { flex: 0 0 auto; margin-top: .2rem; }
 .cam-column-dialog__choices label:has(input:disabled) { font-weight: 600; }
-.cam-column-dialog__footer { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; min-height: 3.75rem; padding: 1rem; background: #e8f5e9; border-top: 1px solid #c8ddc9; box-sizing: border-box; }
-/* Reset theme button spacing so every chooser action sits at the footer's true vertical center. */
-.cam-column-dialog__footer button { align-self: center; margin: 0 !important; padding: .35rem .65rem; color: inherit; font: inherit; line-height: 1.25; background: #fff; border: 1px solid #5b765c; border-radius: .25rem; cursor: pointer; }
+.cam-column-dialog__footer { display: grid; grid-template-columns: auto auto 1fr; align-items: center; gap: .5rem; height: 4.25rem; padding: 0 1rem; background: #e8f5e9; border-top: 1px solid #c8ddc9; box-sizing: border-box; }
+/* Explicit grid placement prevents theme button styles from pulling actions downward. */
+.cam-column-dialog__footer button { display: inline-flex; align-items: center; justify-content: center; align-self: center; height: 2rem; margin: 0 !important; padding: 0 .65rem; color: inherit; font: inherit; line-height: 1; background: #fff; border: 1px solid #5b765c; border-radius: .25rem; cursor: pointer; }
+.cam-column-dialog__footer button:first-child { justify-self: start; }
+.cam-column-dialog__footer button:nth-child(2) { justify-self: start; }
+.cam-column-dialog__footer button:last-child { justify-self: end; }
 .cam-column-dialog__footer button:hover, .cam-column-dialog__footer button:focus { background: #d5ebd6; }
 
 @media (max-width: 34rem) {
   .cam-record-dialog__footer { grid-template-columns: 1fr 1fr; }
   .cam-record-dialog__position { grid-column: 1 / -1; grid-row: 1; }
   .cam-column-dialog__choices { grid-template-columns: 1fr; }
+  .cam-column-dialog__footer { gap: .5rem; padding-inline: .5rem; }
+  .cam-column-dialog__footer button { padding-inline: .45rem; }
 }
 
 /* Large modal dialog that contains the Leaflet map. */
