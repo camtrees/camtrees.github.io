@@ -1045,7 +1045,8 @@
       });
       const close = document.createElement('button'); close.type = 'button'; close.textContent = 'Close';
       close.addEventListener('click', () => dialog.close());
-      const footer = document.createElement('div'); footer.className = 'cam-column-dialog__footer'; footer.append(showAll, hideOptional, close);
+      const footerActions = document.createElement('div'); footerActions.className = 'cam-column-dialog__footer-actions'; footerActions.append(showAll, hideOptional);
+      const footer = document.createElement('div'); footer.className = 'cam-column-dialog__footer'; footer.append(footerActions, close);
       dialog.append(title, intro, choices, footer); document.body.append(dialog);
       columnsButton.addEventListener('click', () => { showDialog(dialog); close.focus({ preventScroll: true }); });
       dialog.addEventListener('click', (event) => { if (event.target === dialog) dialog.close(); });
