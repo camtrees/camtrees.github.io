@@ -180,7 +180,8 @@
       const gap = 4;
       const edge = 8;
       const summaryRect = summary.getBoundingClientRect();
-      const menuWidth = Math.min(Math.max(summaryRect.width, 176), window.innerWidth - (edge * 2));
+      // Give long choices room to display while still fitting narrow screens.
+      const menuWidth = Math.min(Math.max(summaryRect.width, 352), window.innerWidth - (edge * 2));
       const roomBelow = window.innerHeight - summaryRect.bottom - gap - edge;
       const roomAbove = summaryRect.top - gap - edge;
       const placeBelow = roomBelow >= Math.min(256, roomAbove);
@@ -208,6 +209,7 @@
       if (filter.open) {
         document.body.append(options);
         options.classList.add('cam-table__multi-filter-options--portal');
+        options.scrollLeft = 0;
         positionOptions();
       } else restoreOptions();
     });
