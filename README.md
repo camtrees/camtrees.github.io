@@ -76,8 +76,8 @@ The CAM Sites table renders `site_url` as a Visit Website link that opens in a
 new tab. Only `http:` and `https:` addresses are made clickable.
 
 The CAM Tree Photos table exports `public_cam_tree_photos`. Site uses the
-searchable selection dialog, while Tree ID, Date, and Tag Photo use text
-filters. Photo URL is displayed as a View Tree Photo link that opens in a new
+searchable selection dialog; Tag Photo uses a populated multi-select dropdown;
+and Tree ID, Date, and Photo URL use text filters. Photo URL is displayed as a View Tree Photo link that opens in a new
 tab. Visitors must already be signed in to EpiCollect in that browser to see
 the protected media; otherwise EpiCollect displays an authorization error.
 
