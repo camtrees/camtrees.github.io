@@ -53,6 +53,8 @@
  ### Website Content
  - Added CAM Volunteer Database table with Encrypted sensitive data
  - Deleted 'Test Data' Database Table
+ - Added 'Choose column' button to the CAM Trees Database Table
+ - Now using the new 'searchable selection dialog' to filter columns with many values
  
  </details>
  
