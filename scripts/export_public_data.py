@@ -118,6 +118,15 @@ CAM_VOLUNTEER_ENCRYPTED_COLUMNS = (
     "home_phone",
 )
 
+# Column names retain the view's quoted, reader-friendly aliases.
+CAM_TREE_PHOTO_COLUMNS = (
+    "Site",
+    "Tree ID",
+    "Date",
+    "Tag Photo",
+    "Photo URL",
+)
+
 SITE_VISIT_COLUMNS = (
     "Site",
     "Tree ID",
@@ -185,6 +194,13 @@ EXPORTS = (
         "encryption_key_env": "CAM_DECRYPTION_KEY",
         "output": ROOT / "data" / "cam_volunteers.json",
         "order_by": '"first_name", "last_name"',
+    },
+    {
+        "name": "cam_tree_photos",
+        "view": "public_cam_tree_photos",
+        "columns": CAM_TREE_PHOTO_COLUMNS,
+        "output": ROOT / "data" / "cam_tree_photos.json",
+        "order_by": '"Site", "Tree ID", "Date"',
     },
     {
         "name": "site_visit",

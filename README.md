@@ -9,8 +9,8 @@ Tables pages. Those use a 'nil' layout so the html table is as large as possible
 
 The public table pages fetch only static JSON files in `data/`. Those files are
 refreshed nightly by GitHub Actions from the PostgreSQL views
-`public_cam_trees`, `public_cam_sites`, `public_cam_orgs`, `public_cam_hubs`,
-`public_cam_volunteers`, `public_site_visit`, and `public_sites_hubs`; browsers
+`public_cam_trees`, `public_cam_tree_photos`, `public_cam_sites`, `public_cam_orgs`,
+`public_cam_hubs`, `public_cam_volunteers`, `public_site_visit`, and `public_sites_hubs`; browsers
 never connect to Neon and never receive the database URL. `public_parent_trees`
 is exported through the same pipeline.
 
@@ -30,7 +30,7 @@ is exported through the same pipeline.
    tab to create the first populated JSON export.
 4. Add the appropriate table include to a normal Just the Docs page, or use
    the included `cam-trees.md`, `cam-sites.md`, `cam-orgs.md`, `cam-hubs.md`,
-   `cam-volunteers.md`, or `site-visit.md` page. Each include loads data with
+   `cam-tree-photos.md`, `cam-volunteers.md`, or `site-visit.md` page. Each include loads data with
    Jekyll’s `relative_url` filter, so it supports a project-site base path.
    `parent-trees.md` is available for the Parent Trees table, and
    `sites-in-hubs.md` is available for Sites in Hubs.
@@ -74,6 +74,12 @@ popup.
 
 The CAM Sites table renders `site_url` as a Visit Website link that opens in a
 new tab. Only `http:` and `https:` addresses are made clickable.
+
+The CAM Tree Photos table exports `public_cam_tree_photos`. Site uses the
+searchable selection dialog, while Tree ID, Date, and Tag Photo use text
+filters. Photo URL is displayed as a View Tree Photo link that opens in a new
+tab. Visitors must already be signed in to EpiCollect in that browser to see
+the protected media; otherwise EpiCollect displays an authorization error.
 
 CAM Trees map markers are color-coded by `latest_health`: Good is green,
 Dormant is blue, Poor is yellow, and Dead is red. Unrecognized health values
