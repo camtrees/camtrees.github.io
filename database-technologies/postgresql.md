@@ -228,11 +228,12 @@ These tables are also Lookup Tables
 <details markdown="1">
 <summary markdown="span"><strong>'Public' Views - Sanitized (no email addresses) and reduced columns</strong></summary>
 
-- **public_cam_hubs** - The public cam_hubs view
-- **public_cam_orgs** - The public cam_organizations view
-- **public_cam_sites** - The public cam_trees view
-- **public_cam_trees** - The public cam_sites view
-- **public_cam_volunteers** - The public cam_volunteers view
+- **public_cam_hubs** - The public view of the hub table
+- **public_cam_orgs** - The public view of the organization table
+- **public_cam_sites** - The public view of the tree table
+- **public_cam_trees** - The public view of the site table
+- **public_cam_tree_photos** - The public view of the tree_photo table
+- **public_cam_volunteers** - The public view of the volunteer table
 - **public_parent_trees** - A list of all possible parent (mother and father) trees
 - **public_site_visit** - A view showing Tree data useful to have printed when performing a site visit
 
