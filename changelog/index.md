@@ -55,6 +55,7 @@
  - Deleted 'Test Data' Database Table
  - Added 'Choose column' button to the CAM Trees Database Table
  - Now using the new 'searchable selection dialog' to filter columns with many values
+ - Created new 'CAM Tree Photos' Database Table with "View Tree Photo" button
  
  </details>
  
