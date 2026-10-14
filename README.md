@@ -72,8 +72,9 @@ control uses the same map component and base-map choices, while displaying
 the Site name, Town, Hub, Organization code, and Organization in each marker
 popup.
 
-The CAM Sites table renders `site_url` as a Visit Website link that opens in a
-new tab. Only `http:` and `https:` addresses are made clickable.
+The CAM Sites table renders `site_url` without a column filter as a Visit
+Website link that opens in a new tab. Only `http:` and `https:` addresses are
+made clickable.
 
 The CAM Tree Photos table exports `public_cam_tree_photos`. Site uses the
 searchable selection dialog; Tag Photo uses a populated multi-select dropdown;
