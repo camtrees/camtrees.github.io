@@ -204,7 +204,7 @@ def process_epicollect_hub_record(row):
         sql_command = f"SELECT site from cam_sites_hubs where hub = '{rainHub}' ;"
         sites_in_hub = execute_query(sql_command)
         if not sites_in_hub:
-            return
+            continue
 
         # ------------------------------------------------------------------------------------------
         # Convert sites_in_hub (a list of single-element tuples) into a comma-separated string
