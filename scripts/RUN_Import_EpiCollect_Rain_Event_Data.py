@@ -19,6 +19,7 @@
 ##            2026-06-06 <hkr> Allow for EpiCollect MAP_INDEX
 ##            2026-07-09 Use .env file to load EpiCollect access tokens
 ##            2026-07-22 Changes for using config.py file
+##            2026-10-15 Ignore HUB entries which don't contain any sites
 ###############################################################################
 
 # Python libraries
@@ -202,6 +203,8 @@ def process_epicollect_hub_record(row):
         # ------------------------------------------------------------------------------------------
         sql_command = f"SELECT site from cam_sites_hubs where hub = '{rainHub}' ;"
         sites_in_hub = execute_query(sql_command)
+        if not sites_in_hub:
+            return
 
         # ------------------------------------------------------------------------------------------
         # Convert sites_in_hub (a list of single-element tuples) into a comma-separated string
