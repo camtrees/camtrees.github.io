@@ -20,6 +20,7 @@
 ##            2026-07-09 Use .env file to load EpiCollect access tokens
 ##            2026-07-22 Changes for using config.py file
 ##            2026-10-15 Ignore HUB entries which don't contain any sites
+##            2026-10-19 New LIVE or TEST EpiCollect question
 ###############################################################################
 
 # Python libraries
@@ -146,6 +147,13 @@ def epicollect_process_data(data):
     # Iterate through the EpiCollect records using itertuples()
     #------------------------------------------------------------------------------------------
     for row in df.itertuples():
+        # ------------------------------------------------------------------------------------------
+        # Skip EpiCollect TEST records
+        # ------------------------------------------------------------------------------------------
+        if row.LIVE_or_TEST == 'TEST':
+            print_with_separator_line(f"***** Processing EpiCollect Record {row.Index}. Hubs: {row.rainHubs} Sites: {row.rainSites}")
+            print(f"\t ***** NOTE *****: Skipping EpiCollect TEST entry.")
+            continue # Skip to next record
         match row.selectBY:
             case 'Site':
                 process_epicollect_site_record(row)
@@ -159,10 +167,6 @@ def process_epicollect_site_record(row):
     """
     Process a SITE Epicollect record.
     """
-    if "TEST - Choose this when testing the EpiCollect App" in row.rainSites:
-        print_with_separator_line(f"Ignoring EpiCollect TEST entry for Sites: {row.rainSites}")
-        return
-
     print_with_separator_line(
         f"Processing EpiCollect SITE Record {row.Index}..."
         f"\n\t Sites: {row.rainSites}"
@@ -188,10 +192,6 @@ def process_epicollect_hub_record(row):
     """
     Process a HUB Epicollect record.
     """
-    if "TEST - Choose this when testing the EpiCollect App" in row.rainHubs:
-        print_with_separator_line(f"Ignoring EpiCollect TEST entry for Hubs: {row.rainHubs}")
-        return
-
     print_with_separator_line(
         f"Processing EpiCollect HUB Record {row.Index}..."
         f"\n\t Hubs: {row.rainHubs}"
