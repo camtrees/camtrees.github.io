@@ -50,6 +50,14 @@ Each entry is grouped by month. Within each month, changes are organized by area
 <details markdown="1">
 <summary markdown="span"><strong>2026 October</strong></summary>
 
+### EpiCollect
+- Copied WILD Trees data from CAM Tree Maintenance to CAM Chestnut Chasers project
+- Removed the WILD CAM and WILD TACF pathways through the CAM Tree Maintenance project
+
+### Python
+- Removed WILD tree processing from RUN_Import_EpiCollect_Tree_Maint_Data.py
+- Added new LIVE/TEST code to both RUN_Import (Tree Maint and Rain Event) programs
+
 ### Website Content
 - Added CAM Volunteer Database table with Encrypted sensitive data
 - Deleted 'Test Data' Database Table
