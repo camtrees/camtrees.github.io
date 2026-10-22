@@ -58,7 +58,7 @@ The color of the SQL tables' headers in the ER Diagram indicates the type and pu
 <details markdown="1">
 <summary markdown="span"><strong>Green Tables — The four main tables containing tree related data</strong></summary>
 
-- **tree** — All the CAM planted trees or Wild trees under observation
+- **tree** — All the CAM planted trees under observation
 - **tree_photo** — Photos of the trees. The actual photos are stored in EpiCollect. We compute the URL necessary to view the tree. NOTE: You MUST BE LOGGED INTO EpiCOllect to view the photos.
 - **tree_care_action** — Care actions performed on trees
 - **tree_health_assessment** — Tree measurements and observations to assess the health of the tree
@@ -131,6 +131,7 @@ These tables are also Lookup Tables
 - **cam_tree_latest_height** - Show latest tree_height
 - **cam_tree_latest_nuts** - Show latest tree_nuts
 - **cam_tree_latest_water** - Show most recent date trees have been watered
+- **cam_tree_latest_fertilize** - Show most recent date trees have been fertilized
 - **cam_tree_photos_earliest_photos** - Show all photos from the first date on which a tree had any photos taken
 - **cam_tree_photos_latest_photos** - Show all photos from the latest date on which a tree had any photos taken
 
