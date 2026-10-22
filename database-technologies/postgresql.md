@@ -151,7 +151,7 @@ These tables are also Lookup Tables
 - **cam_tree_photos** - Photos of the trees. The actual photos are stored in EpiCollect. We compute the URL necessary to view the tree. NOTE: You MUST BE LOGGED INTO EpiCOllect to view the photos.
 - **cam_tree_photos_with_tags** - Tree photos showing a closeup of the tree's tag
 - **cam_tree_photos_without_tags** - Tree photos excluding photos of the tree's tags
-- **cam_trees** - CAM planted trees or Wild trees under observation
+- **cam_trees** - CAM planted trees under observation
 - **cam_volunteer_interests** - Volunteer's interests. Like watering trees or being available for special events.
 - **cam_volunteer_phone_numbers** - Phone numbers at which volunteers can be reached
 - **cam_volunteers** - Volunteers. All persons referenced in any table must appear in this table.
