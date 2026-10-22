@@ -39,6 +39,12 @@ The exporter has a small allow-list in `scripts/export_public_data.py`. Add a
 new entry there for each future public view so additional datasets follow the
 same private-export/public-JSON pattern.
 
+For a local export, install `scripts/requirements-export.txt` and define
+`CAMTREES_READ_URL` in either `.env` at the repository root or `scripts/.env`.
+The exporter loads those files without replacing environment variables that
+are already set. Both `.env` locations are excluded from Git. GitHub Actions
+continues to supply `CAMTREES_READ_URL` from the repository secret.
+
 The nightly export workflow also builds and deploys the Jekyll site in the same
 workflow: GitHub does not start a second workflow from the data commit created
 with its built-in `GITHUB_TOKEN`. The build installs the repository's Gemfile
@@ -59,9 +65,10 @@ private EpiCollect record details, the workflow stores them as a downloadable
 GitHub Actions artifact for 30 days instead of committing them to the public
 repository. Logs are uploaded even when a maintenance step fails.
 
-The CAM Trees export includes the site's `town` plus `longitude` and `latitude`
-from `public_cam_trees`. The Map filtered trees control uses those static JSON
-coordinates in the browser; it does not connect to Neon. Its layer selector
+The CAM Trees export includes the site's `town`, `latest_fertilize_date`,
+`longitude`, and `latitude` from `public_cam_trees`. The Map filtered trees
+control uses those static JSON coordinates in the browser; it does not connect
+to Neon. Its layer selector
 offers OpenStreetMap Street and the USGS Satellite, Topographic, and Satellite
 + Labels base maps.
 

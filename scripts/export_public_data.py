@@ -20,11 +20,17 @@ import psycopg
 from cryptography.hazmat.primitives.ciphers.aead import AESGCM
 from cryptography.hazmat.primitives.hashes import SHA256
 from cryptography.hazmat.primitives.kdf.pbkdf2 import PBKDF2HMAC
+from dotenv import load_dotenv
 from psycopg.rows import dict_row
 
 
 ROOT = Path(__file__).resolve().parents[1]
 KEY_DERIVATION_ITERATIONS = 310_000
+
+# Local runs may keep secrets in either repository-root .env or scripts/.env.
+# Existing process variables—including GitHub Actions secrets—take precedence.
+load_dotenv(ROOT / ".env")
+load_dotenv(Path(__file__).resolve().with_name(".env"))
 
 CAM_TREE_COLUMNS = (
     "site",
@@ -42,6 +48,7 @@ CAM_TREE_COLUMNS = (
     "latest_height",
     "latest_height_date",
     "latest_water_date",
+    "latest_fertilize_date",
     # These fields drive the CAM Trees table column and Nuts Present map theme.
     "nuts_present",
     "latest_nuts_date",
@@ -311,7 +318,10 @@ def export_data(database_url: str, export: dict[str, Any]) -> None:
 def main() -> None:
     database_url = os.environ.get("CAMTREES_READ_URL")
     if not database_url:
-        raise SystemExit("CAMTREES_READ_URL is required (configure it as a GitHub Actions secret).")
+        raise SystemExit(
+            "CAMTREES_READ_URL is required. Configure it as a GitHub Actions "
+            "secret or add it to .env for a local run."
+        )
 
     for export in EXPORTS:
         export_data(database_url, export)
