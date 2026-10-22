@@ -7,7 +7,7 @@ nav_order: 98
 <img src="../assets/images/website/changelog.png" alt="CAMTREE Volunteer consulting a day planner showing the ChangeLog" height="512" width="828">
 
 # {{ page.title }}
-_Version: October 8 edit # 1_
+_Version: October 22 edit # 1_
 
 <!-- This content will not appear in the rendered Markdown 
 <details markdown="1">
@@ -57,6 +57,12 @@ Each entry is grouped by month. Within each month, changes are organized by area
 ### Python
 - Removed WILD tree processing from RUN_Import_EpiCollect_Tree_Maint_Data.py
 - Added new LIVE/TEST code to both RUN_Import (Tree Maint and Rain Event) programs
+- export_public_data updated for new latest_fertilize_date in tables
+- Updated python files to allow loading of local .env file in addition to using GitHub secrets
+
+### SQL
+- Added latest_fertilize_date view
+- Added latest_fertilize_date column to the cam_trees and public_cam_trees views
 
 ### Website Content
 - Added CAM Volunteer Database table with Encrypted sensitive data
@@ -64,6 +70,7 @@ Each entry is grouped by month. Within each month, changes are organized by area
 - Added 'Choose column' button to the CAM Trees Database Table
 - Now using the new 'searchable selection dialog' to filter columns with many values
 - Created new 'CAM Tree Photos' Database Table with "View Tree Photo" button
+- Added latest_fertilize_date column to the CAM Trees Database Table
 
 </details>
 
