@@ -29,6 +29,7 @@ outputs/nightly/*.log
 #Ignore Python and PyCharm items
 /scripts/__pycache__
 /scripts/.env
+/.env
 /scripts/.idea
 
 # Ignore automatically generated Python bytecode and extension files
