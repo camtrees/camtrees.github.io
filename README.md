@@ -124,6 +124,10 @@ and remain combined with all other column filters. Boolean values such as Wire
 Fence are displayed as Yes and No. Map legends show only the marker categories
 actually plotted after filtering and coordinate checks.
 
+Columns with many choices use the searchable selection-dialog variant. This
+includes Site, Hub, CAM Organization, Planted By, Primary Caretaker, Mother
+Tree, and Father Tree in CAM Trees, plus Site in the Site Visit table.
+
 The CAM Trees and CAM Sites maps load `data/hub-areas.geojson` as a Hub Areas
 overlay in the Leaflet layer control. It opens enabled on CAM Sites and disabled
 on CAM Trees, and is drawn beneath the record markers without tooltips or
