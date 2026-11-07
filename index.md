@@ -52,3 +52,7 @@ support:
 >they live in Maine. We intend to build communities around groves of chestnuts where
 >Mainers will gather in common cause to benefit the ecological and social wealth of their
 >communities.
+
+{: .note}
+This documentation provides comprehensive guidance for CAM staff, volunteers, and database
+administrators, focusing exclusively on the CAMTREES database.

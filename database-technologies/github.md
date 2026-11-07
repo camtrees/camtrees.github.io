@@ -52,15 +52,20 @@ The CAMTREES website uses the
 theme, which provides a clean, organized layout that works well on both desktop computers
 and mobile devices.
 
+This repository also houses various GitHub Actions:
+- Three actions to generate the CAMTREES Database website.
+- An action called 'Nightly CAM maintenance and public export' which imports EpiCollect
+data into our PostgreSQL database tables, and exports the SQL  public data into json
+files used to display the Database Tables on this website.
+
+
 ---
 
 ## Repository #2: `camtrees/github-actions`
 
 This repository contains the
 <a href="https://github.com/features/actions" target="_blank">GitHub Actions</a>
-used to automate CAMTREES maintenance tasks.
-
-Currently, there is one active workflow:
+used to backup the CAMTREES database.
 
 **Create Neon Twin**
 
@@ -69,13 +74,6 @@ database hosted by
 <a href="https://neon.com" target="_blank">Neon</a>.
 The name "Create Neon Twin" refers to the creation of this duplicate database copy.
 
-Future GitHub Actions may automate additional tasks, including importing EpiCollect data
-into the CAMTREES Database.
-
-Currently, the EpiCollect import process requires running Python programs manually on the
-database administrator's computer. Once these processes are converted into GitHub Actions,
-they could be initiated remotely through GitHub rather than requiring direct access to a
-local computer.
 
 ---
 

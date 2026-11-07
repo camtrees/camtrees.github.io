@@ -72,11 +72,21 @@ PyCharm offers several advantages:
 
 ## Storing Python Source Code in GitHub
 
-The Python programs used by CAMTREES are maintained in our <a href="https://github.com/camtrees/codebase" target="_blank">camtrees/codebase</a> GitHub repository.
+The Python programs used by CAMTREES are maintained in our <a href="https://github.com/camtrees/camtrees.github.io/tree/main/scripts" target="_blank">GitHub repository</a>.
 
 GitHub provides version control, allowing database administrators to track changes, review previous versions, and maintain a central collection of the project's source code.
 
 Keeping these programs in GitHub also helps ensure that future database administrators can access and maintain the software without depending on files stored on an individual's computer.
+
+## Automation with GitHub Actions
+
+Python programs are automated to run each morning using <a href="https://github.com/features/actions" target="_blank">GitHub Actions</a>.
+
+Having our various Python programs run as an automated GitHub Actions, allows for:
+
+- Running data imports nightly.
+- Executing programs without relying on the administrator's personal computer.
+- Maintaining a centralized history of program executions.
 
 ## Protecting Database Credentials
 
@@ -84,22 +94,11 @@ Our Python programs require credentials to connect to EpiCollect5 and the Postgr
 
 For security, these credentials are not embedded directly in the Python source code.
 
-Instead, they are stored in a separate `.env` file containing the private connection information required by the programs.
-
-This file is kept private and is not included in the public GitHub repository. Access is limited to authorized CAM staff.
+Instead, they are stored in two separate locations:
+- For running programs on demand (via a database administrator's computer) private data is stored in a local `.env` file. This file is kept private and is not included in the public GitHub repository. Access is limited to authorized CAM staff.
+- For running programs automatically via a GitHub Action, private data is stored in <a href="https://docs.github.com/en/actions/how-tos/write-workflows/choose-what-workflows-do/use-secrets" target="_blank">GitHub Action Secrets</a>.
 
 Separating credentials from source code allows the programs to be shared and maintained without exposing sensitive account information.
-
-## Automation with GitHub Actions
-
-Python programs are automated using <a href="https://github.com/features/actions" target="_blank">GitHub Actions</a>.
-
-Having our various Python programs run as an automated GitHub Actions, allows for:
-
-- Running data imports nightly.
-- Executing programs without relying on the administrator's personal computer.
-- Maintaining a centralized history of program executions.
-- Storing required credentials securely using encrypted GitHub Secrets and a local '.env' file to facilitate running programs on demand.
 
 ## Why Python?
 
