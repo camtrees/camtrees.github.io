@@ -98,23 +98,7 @@ Will assist users to help fill gaps in the data.
 
 <details markdown="1">
 <summary markdown="span">
-SQL: Document how CAM volunteers and staff can access the CAMTREES database using DBeaver
-</summary>
-
-**Purpose:**
-Plan to have a Zoom call to demo the use of DBeaver to access the Neon Read Replica
-CAMTREES Database.
-
-**Notes:**
-Refer to the staff-dbeaver-access-to-SQL web page for details.
-
-</details>
-
-<!--------------------------------------------------------------------------------------->
-
-<details markdown="1">
-<summary markdown="span">
-Website: Document the process for adding a new CAMorgs, Sites, Hubs, Volunteers, etc
+EpiCollect: Document the process for adding new CAMorgs, Sites, Hubs, Volunteers, etc
 </summary>
 
 **CAM organization (CAMorg):**
@@ -367,37 +351,6 @@ Perhaps 3 views:
 
 
 
-## On the Horizon (7–9 months)
-
-<details markdown="1">
-<summary markdown="span">
-Python: Evaluate cloud-based solutions (such as GitHub Actions) for running Python scripts
-</summary>
-
-**Purpose:**
-The Python programs that import records from EpiCollect to the CAMTREES Database are
-currently run on the database administrator's personal computer. This is quite undesirable
-since it does not meet with having a good continuity plan in place for when personnel
-change. 
-
-**Tasks:**
-- Could create a schedule for running programs automatically but maybe it would be
-  better to have a human run the programs on demand.
-- An undesirable fallback option to a cloud solution would be for a user to run
-  the programs using PyCharm (or a similar environment) on their personal computer as
-  is done now. 
-
-</details>
-
-<!--------------------------------------------------------------------------------------->
-
-<p></p>
-
-* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
-
-
-
-
 ## Future Vision (10–12 months)
 
 <details markdown="1">
@@ -429,28 +382,6 @@ Would allow users to view photos outside a web browser without having to be logg
 ## Exploring - Ideas & Possibilities (no estimated timeline)
 
 <details markdown="1">
-<summary markdown="span">SQL: CAM staff needs web access to the CAMTREES database</summary>
-
-**Purpose:**
-Having done a very short prototype using SoftR.io, we see just how useful a web interface
-to the CAMTREES Database would be. So much cleaner and easier to use than DBeaver.
-
-**Tasks:**
-- Use softr.io? (NOT FREE)
-	- Has really nice Mapping capabilities (but might cost more $ for Google maps!)
-	- Has nice filtering capabilities of tables (dropdown menus or text filtering)
-	- Quite easy to create a website in very little time
-- Given $$ constraints, research these
-	- <a href="https://www.nocobase.com/en/blog/6-no-code-tools-supporting-postgresql" target="_blank">6 Best No-Code Tools for PostgreSQL</a>
-	- <a href="https://www.appsmith.com" target="_blank">Appsmith</a>
-	- <a href="https://teable.ai" target="_blank">Teable</a>
-	- <a href="https://www.youtube.com/watch?v=wE_Oafo1bx0_" target="_blank">UI Bakery</a>
-
-</details>
-
-<!--------------------------------------------------------------------------------------->
-
-<details markdown="1">
 <summary markdown="span">
 SQL: Selected CAM staff members should have controlled write access to database tables
 </summary>
@@ -459,18 +390,11 @@ SQL: Selected CAM staff members should have controlled write access to database 
 CAM staff needs write access to some CAMTREES Database data.
 
 **Tasks:**
-- Would be most helpful to do this through a web browser versus DBeaver or any other
-  database management tool.
-	- CAM staff will not need to have DELETE capabilities. But they will need UPDATE
-	  and possibly INSERT.
-		- For example, marking a volunteer as 'inactive'
-		- Changing (and removing) volunteers from the list of Hub Captains
+- Perhaps most helpful to do this through EpiCollect
+	- CAM staff will not need to have DELETE capabilities. But they will need INSERT
+	  and possibly UPDATE.
 
 **Notes:**
-- This would likely require changing from using 'ken.rosenberry@gmail.com' Neon
-  as the master to using the camorgdatabase@gmail.com as the master
-	- We could then mirror the database from camorgdatabase to ken.rosenberry
-  	  instead of our current method
 - Need list of write access capabilities
 	- Create new Volunteers, CAMorgs, Sites, Hubs
 	- Update contact persons in CAMorgs and Sites
