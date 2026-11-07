@@ -7,7 +7,7 @@ nav_order: 98
 <img src="../assets/images/website/changelog.png" alt="CAMTREE Volunteer consulting a day planner showing the ChangeLog" height="512" width="828">
 
 # {{ page.title }}
-_Version: November 5 edit # 1_
+_Version: November 7 edit # 1_
 
 <!-- This content will not appear in the rendered Markdown 
 <details markdown="1">
@@ -49,6 +49,12 @@ Each entry is grouped by month. Within each month, changes are organized by area
 
 <details markdown="1">
 <summary markdown="span"><strong>2026 November</strong></summary>
+
+### Python
+- Changes necessitated since changing the 'number' column to 'tag_id' in the SQL 'tree' table
+
+### SQL
+- Changed the 'number' column to 'tag_id' in the 'tree' table
 
 ### Website Content
 - Changed some Database Table Filter Types to use the searchable selection dialogs filter
