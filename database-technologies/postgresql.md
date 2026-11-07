@@ -162,7 +162,7 @@ These tables are also Lookup Tables
 <details markdown="1">
 <summary markdown="span"><strong>'Count' Views - Frequency counts of various values</strong></summary>
 
-- **data_count_next_tree_number_for_planting** - Show the NEXT CamOrg tree number to be used when planting new trees
+- **data_count_next_tree_tag_id_for_planting** - Show the NEXT CamOrg tag id to be used when planting new trees
 - **data_count_tree_care_action_by_volunteer** - Frequency count of how many times volunteers have attended to trees by type of care_action
 - **data_count_trees_by_health** - Frequency count of trees by the tree health
 - **data_count_trees_by_primary_caretaker** - Frequency count of how many trees each primary caretaker is responsible for
