@@ -23,7 +23,7 @@ is exported through the same pipeline.
    `CAM_DECRYPTION_KEY` for protected exports. Do not add any of
    these values to site files or Jekyll configuration.
 2. Ensure the database views exist with the columns expected by the export
-   allow-list. The CAM Trees view begins with `site`, `tree_id`, `town`, `hub`,
+   allow-list. The CAM Trees view begins with `site`, `tag_id`, `town`, `hub`,
    and `cam_org` in that order.
 3. Enable GitHub Actions write permissions for the repository if they are not
    already allowed. Run **Export public CAMTREES data** once from the Actions
@@ -85,7 +85,7 @@ made clickable.
 
 The CAM Tree Photos table exports `public_cam_tree_photos`. Site uses the
 searchable selection dialog; Tag Photo uses a populated multi-select dropdown;
-and Tree ID and Date use text filters. Photo URL has no column filter and is
+and Tag ID and Date use text filters. Photo URL has no column filter and is
 displayed as a View Tree Photo link that opens in a new
 tab. Visitors must already be signed in to EpiCollect in that browser to see
 the protected media; otherwise EpiCollect displays an authorization error.
@@ -101,7 +101,7 @@ file in the table's current sort order. CSV exports contain the configured data
 columns but not the View Record action column.
 
 CAM Trees provides a Choose columns dialog. All columns begin visible; View
-Record, Site, and Tree ID cannot be hidden. Hiding a column clears its active
+Record, Site, and Tag ID cannot be hidden. Hiding a column clears its active
 filter and sort and removes it from the displayed table, printed table, global
 search, and CSV export. Hidden fields remain in the in-memory records used by
 maps and Record Details, so Latest Health, Nuts Present, Latitude, and Longitude

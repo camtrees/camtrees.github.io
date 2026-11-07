@@ -34,7 +34,7 @@ load_dotenv(Path(__file__).resolve().with_name(".env"))
 
 CAM_TREE_COLUMNS = (
     "site",
-    "tree_id",
+    "tag_id",
     "town",
     "hub",
     "cam_org",
@@ -128,7 +128,7 @@ CAM_VOLUNTEER_ENCRYPTED_COLUMNS = (
 # Column names retain the view's quoted, reader-friendly aliases.
 CAM_TREE_PHOTO_COLUMNS = (
     "Site",
-    "Tree ID",
+    "Tag ID",
     "Date",
     "Tag Photo",
     "Photo URL",
@@ -136,7 +136,7 @@ CAM_TREE_PHOTO_COLUMNS = (
 
 SITE_VISIT_COLUMNS = (
     "Site",
-    "Tree ID",
+    "Tag ID",
     "Date Planted",
     "Health",
     "Access Path",
@@ -168,7 +168,7 @@ EXPORTS = (
         "view": "public_cam_trees",
         "columns": CAM_TREE_COLUMNS,
         "output": ROOT / "data" / "cam_trees.json",
-        "order_by": '"site", "tree_id"',
+        "order_by": '"site", "tag_id"',
     },
     {
         "name": "cam_sites",
@@ -207,14 +207,14 @@ EXPORTS = (
         "view": "public_cam_tree_photos",
         "columns": CAM_TREE_PHOTO_COLUMNS,
         "output": ROOT / "data" / "cam_tree_photos.json",
-        "order_by": '"Site", "Tree ID", "Date"',
+        "order_by": '"Site", "Tag ID", "Date"',
     },
     {
         "name": "site_visit",
         "view": "public_site_visit",
         "columns": SITE_VISIT_COLUMNS,
         "output": ROOT / "data" / "site_visit.json",
-        "order_by": '"Site", "Tree ID"',
+        "order_by": '"Site", "Tag ID"',
     },
     {
         "name": "parent_trees",

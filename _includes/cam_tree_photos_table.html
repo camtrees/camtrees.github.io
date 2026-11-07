@@ -15,7 +15,7 @@
     <p aria-live="polite" data-cam-table-summary></p>
   </div>
 
-  <!-- The shared styling freezes View Record, Site, and Tree ID. -->
+  <!-- The shared styling freezes View Record, Site, and Tag ID. -->
   <div class="cam-table__scroll" tabindex="0">
     <table data-cam-table-table>
       <caption class="sr-only">CAM Tree Photos</caption>
@@ -34,7 +34,7 @@
       "csvFilename": "cam-tree-photos.csv",
       "columns": [
         {"key":"Site","label":"Site","type":"text","filter":"dialog-multi"},
-        {"key":"Tree ID","label":"Tree ID","type":"text"},
+        {"key":"Tag ID","label":"Tag ID","type":"text"},
         {"key":"Date","label":"Date","type":"date"},
         {"key":"Tag Photo","label":"Tag Photo","type":"text","filter":"multi"},
         {"key":"Photo URL","label":"Tree Photo","type":"url","linkLabel":"View Tree Photo","filter":false}
@@ -45,4 +45,4 @@
 
 <!-- Shared assets; query values prevent stale browser caches. -->
 <link rel="stylesheet" href="{{ '/assets/css/cam-tables.css' | relative_url }}?v=20261014-tree-photos-1">
-<script defer src="{{ '/assets/js/cam-tables.js' | relative_url }}?v=20261013-parent-filter-2"></script>
+<script defer src="{{ '/assets/js/cam-tables.js' | relative_url }}?v=20261107-tag-id-1"></script>

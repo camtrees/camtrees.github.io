@@ -39,7 +39,7 @@
         ],
         "popupTitleKey": "site",
         "popupFields": [
-          {"key":"tree_id","label":"Tree ID"},
+          {"key":"tag_id","label":"Tag ID"},
           {"key":"latest_health","label":"Health"},
           {"key":"nuts_present","label":"Nuts Present"}
         ],
@@ -73,7 +73,7 @@
       },
       "columns": [
         {"key":"site","label":"Site","type":"text","filter":"dialog-multi","hideable":false},
-        {"key":"tree_id","label":"Tree ID","type":"text","hideable":false},
+        {"key":"tag_id","label":"Tag ID","type":"text","hideable":false},
         {"key":"town","label":"Town","type":"text"},
         {"key":"hub","label":"Hub","type":"text","filter":"dialog-multi"},
         {"key":"cam_org","label":"CAM Organization","type":"text","filter":"dialog-multi"},
@@ -90,8 +90,8 @@
         {"key":"latest_fertilize_date","label":"Latest Fertilize Date","type":"date"},
         {"key":"nuts_present","label":"Nuts Present","type":"text","filter":"multi"},
         {"key":"latest_nuts_date","label":"Latest Nuts Date","type":"date"},
-        {"key":"google_maps","label":"Google Maps","type":"map-link","provider":"google","linkLabel":"Google Maps","locationLabelKeys":["site","tree_id"],"sortable":false,"filter":false,"includeInCsv":false},
-        {"key":"apple_maps","label":"Apple Maps","type":"map-link","provider":"apple","linkLabel":"Apple Maps","locationLabelKeys":["site","tree_id"],"sortable":false,"filter":false,"includeInCsv":false},
+        {"key":"google_maps","label":"Google Maps","type":"map-link","provider":"google","linkLabel":"Google Maps","locationLabelKeys":["site","tag_id"],"sortable":false,"filter":false,"includeInCsv":false},
+        {"key":"apple_maps","label":"Apple Maps","type":"map-link","provider":"apple","linkLabel":"Apple Maps","locationLabelKeys":["site","tag_id"],"sortable":false,"filter":false,"includeInCsv":false},
         {"key":"latitude","label":"Latitude","type":"number"},
         {"key":"longitude","label":"Longitude","type":"number"},
         {"key":"elevation_in_feet","label":"Elevation","type":"number"},
@@ -118,4 +118,4 @@
 <!-- Shared table assets; the query value prevents stale browser caches. -->
 <link rel="stylesheet" href="{{ '/assets/css/cam-tables.css' | relative_url }}?v=20261014-tree-photos-1">
 <script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-<script defer src="{{ '/assets/js/cam-tables.js' | relative_url }}?v=20261013-parent-filter-2"></script>
+<script defer src="{{ '/assets/js/cam-tables.js' | relative_url }}?v=20261107-tag-id-1"></script>

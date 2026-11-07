@@ -41,7 +41,7 @@
       || Math.abs(latitude) > 90 || Math.abs(longitude) > 180) return '';
 
     const coordinates = `${latitudeValue},${longitudeValue}`;
-    const label = (column.locationLabelKeys || ['site', 'tree_id'])
+    const label = (column.locationLabelKeys || ['site', 'tag_id'])
       .map((key) => rawValue(row, key)).filter(Boolean).join(' – ');
     if (column.provider === 'google') {
       const url = new URL('https://www.google.com/maps/search/');
@@ -130,7 +130,7 @@
     let comparison;
     if (column.type === 'number') comparison = Number(a) - Number(b);
     else if (column.type === 'date') comparison = Date.parse(a) - Date.parse(b);
-    // Tree ID is explicitly text, so numeric collation is intentionally disabled.
+    // Tag ID is explicitly text, so numeric collation is intentionally disabled.
     else comparison = a.localeCompare(b, undefined, { numeric: false, sensitivity: 'base' });
     return direction === 'asc' ? comparison : -comparison;
   }
@@ -544,7 +544,7 @@
     const overlayConfigs = Array.isArray(mapConfig.overlays) ? mapConfig.overlays : [];
     const popupTitleKey = mapConfig.popupTitleKey || 'site';
     const popupFields = mapConfig.popupFields || [
-      { key: 'tree_id', label: 'Tree ID' },
+      { key: 'tag_id', label: 'Tag ID' },
       { key: 'latest_health', label: 'Health' }
     ];
 

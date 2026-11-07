@@ -95,7 +95,7 @@ The following sections describe the information collected through each EpiCollec
 Used when recording information about a newly planted tree.
 
 - **CAMorg-Site** — The CAM Organization and Site where the tree lives.
-- **Tree Number** — The tree's three-digit identifier with leading zeroes.
+- **Tag ID** — The tree's tag identifier. Old format is 3 digits with leading zeroes. New format is three letters, a dash, and four digits with leading zeroes.
 - **Mother Tree** — The tree's mother.
 - **Mother Tree Other** — A mother tree not included in the EpiCollect selection list.
 - **Father Tree** — The tree's father.
@@ -121,7 +121,7 @@ Used when recording information about a newly planted tree.
 Used when recording or updating the GPS location of an existing tree.
 
 - **CAMorg-Site** — The CAM Organization and Site where the tree lives.
-- **Tree Number** — The tree's three-digit identifier with leading zeroes.
+- **Tag ID** — The tree's tag identifier. Old format is 3 digits with leading zeroes. New format is three letters, a dash, and four digits with leading zeroes.
 - **Tree GPS Location** — The tree's GPS coordinates.
 - **Additional Info** — Information helpful for locating the tree.
 
@@ -135,7 +135,7 @@ Used when recording or updating the GPS location of an existing tree.
 Used when recording health information or performing care actions on one tree.
 
 - **CAMorg-Site** — The CAM Organization and Site where the tree lives.
-- **Tree Number** — The tree's three-digit identifier with leading zeroes.
+- **Tag ID** — The tree's tag identifier. Old format is 3 digits with leading zeroes. New format is three letters, a dash, and four digits with leading zeroes.
 - **Health** — Good, Poor, or Dead.
 - **Height** — Tree height measured in feet and inches.
 - **Diameter** — Tree diameter measured at breast height.
@@ -199,7 +199,7 @@ Used when recording information about a wild chestnut tree not previously known 
 
 Used when recording information about a wild tree already known to TACF.
 
-- **Tree ID** — The TACF identifier (for example, ME-XX###).
+- **Tag ID** — The TACF identifier (for example, ME-XX###).
 All other information collected for a WildCAM tree.
 
 </details>
