@@ -2,7 +2,7 @@
   "records": [
     {
       "site": "Arundel Municipal Building",
-      "tree_id": "001",
+      "tag_id": "001",
       "town": "Arundel",
       "hub": "Sanford",
       "cam_org": "Arundel",
@@ -38,7 +38,7 @@
     },
     {
       "site": "Arundel Municipal Building",
-      "tree_id": "002",
+      "tag_id": "002",
       "town": "Arundel",
       "hub": "Sanford",
       "cam_org": "Arundel",
@@ -74,7 +74,7 @@
     },
     {
       "site": "Arundel Municipal Building",
-      "tree_id": "003",
+      "tag_id": "003",
       "town": "Arundel",
       "hub": "Sanford",
       "cam_org": "Arundel",
@@ -110,7 +110,7 @@
     },
     {
       "site": "Arundel Municipal Building",
-      "tree_id": "004",
+      "tag_id": "004",
       "town": "Arundel",
       "hub": "Sanford",
       "cam_org": "Arundel",
@@ -146,7 +146,7 @@
     },
     {
       "site": "BaldPate",
-      "tree_id": "031",
+      "tag_id": "031",
       "town": "Bridgton",
       "hub": "Bridgton",
       "cam_org": "LELT",
@@ -182,7 +182,7 @@
     },
     {
       "site": "BaldPate",
-      "tree_id": "032",
+      "tag_id": "032",
       "town": "Bridgton",
       "hub": "Bridgton",
       "cam_org": "LELT",
@@ -218,7 +218,7 @@
     },
     {
       "site": "BaldPate",
-      "tree_id": "034",
+      "tag_id": "034",
       "town": "Bridgton",
       "hub": "Bridgton",
       "cam_org": "LELT",
@@ -254,7 +254,7 @@
     },
     {
       "site": "BaldPate",
-      "tree_id": "035",
+      "tag_id": "035",
       "town": "Bridgton",
       "hub": "Bridgton",
       "cam_org": "LELT",
@@ -290,7 +290,7 @@
     },
     {
       "site": "BaldPate",
-      "tree_id": "036",
+      "tag_id": "036",
       "town": "Bridgton",
       "hub": "Bridgton",
       "cam_org": "LELT",
@@ -326,7 +326,7 @@
     },
     {
       "site": "Bangor High School",
-      "tree_id": "001",
+      "tag_id": "001",
       "town": "Bangor",
       "hub": "Orono",
       "cam_org": "BHSSEC",
@@ -362,7 +362,7 @@
     },
     {
       "site": "Bangor High School",
-      "tree_id": "002",
+      "tag_id": "002",
       "town": "Bangor",
       "hub": "Orono",
       "cam_org": "BHSSEC",
@@ -398,7 +398,7 @@
     },
     {
       "site": "Bangor High School",
-      "tree_id": "003",
+      "tag_id": "003",
       "town": "Bangor",
       "hub": "Orono",
       "cam_org": "BHSSEC",
@@ -434,7 +434,7 @@
     },
     {
       "site": "Bangor High School",
-      "tree_id": "004",
+      "tag_id": "004",
       "town": "Bangor",
       "hub": "Orono",
       "cam_org": "BHSSEC",
@@ -470,7 +470,7 @@
     },
     {
       "site": "Bangor High School",
-      "tree_id": "005",
+      "tag_id": "005",
       "town": "Bangor",
       "hub": "Orono",
       "cam_org": "BHSSEC",
@@ -506,7 +506,7 @@
     },
     {
       "site": "BBA Chestnut Orchard",
-      "tree_id": "001",
+      "tag_id": "001",
       "town": "Hollis",
       "hub": "Manchester NH",
       "cam_org": "BBA",
@@ -542,7 +542,7 @@
     },
     {
       "site": "BBA Chestnut Orchard",
-      "tree_id": "002",
+      "tag_id": "002",
       "town": "Hollis",
       "hub": "Manchester NH",
       "cam_org": "BBA",
@@ -578,7 +578,7 @@
     },
     {
       "site": "BBA Chestnut Orchard",
-      "tree_id": "003",
+      "tag_id": "003",
       "town": "Hollis",
       "hub": "Manchester NH",
       "cam_org": "BBA",
@@ -614,7 +614,7 @@
     },
     {
       "site": "Biddeford Community Garden at Rotary Park",
-      "tree_id": "001",
+      "tag_id": "001",
       "town": "Biddeford",
       "hub": "Sanford",
       "cam_org": "EGP",
@@ -650,7 +650,7 @@
     },
     {
       "site": "Biddeford Community Garden at Rotary Park",
-      "tree_id": "002",
+      "tag_id": "002",
       "town": "Biddeford",
       "hub": "Sanford",
       "cam_org": "EGP",
@@ -686,7 +686,7 @@
     },
     {
       "site": "Biddeford Community Garden at Rotary Park",
-      "tree_id": "004",
+      "tag_id": "004",
       "town": "Biddeford",
       "hub": "Sanford",
       "cam_org": "EGP",
@@ -722,7 +722,7 @@
     },
     {
       "site": "Biddeford Community Garden at Rotary Park",
-      "tree_id": "005",
+      "tag_id": "005",
       "town": "Biddeford",
       "hub": "Sanford",
       "cam_org": "EGP",
@@ -758,7 +758,7 @@
     },
     {
       "site": "Blueberry Cove 4-H Camp",
-      "tree_id": "001",
+      "tag_id": "001",
       "town": "St. George",
       "hub": "Warren",
       "cam_org": "BC4H",
@@ -794,7 +794,7 @@
     },
     {
       "site": "Blueberry Cove 4-H Camp",
-      "tree_id": "002",
+      "tag_id": "002",
       "town": "St. George",
       "hub": "Warren",
       "cam_org": "BC4H",
@@ -830,7 +830,7 @@
     },
     {
       "site": "Blueberry Cove 4-H Camp",
-      "tree_id": "003",
+      "tag_id": "003",
       "town": "St. George",
       "hub": "Warren",
       "cam_org": "BC4H",
@@ -866,7 +866,7 @@
     },
     {
       "site": "Blueberry Cove 4-H Camp",
-      "tree_id": "004",
+      "tag_id": "004",
       "town": "St. George",
       "hub": "Warren",
       "cam_org": "BC4H",
@@ -902,7 +902,7 @@
     },
     {
       "site": "Blueberry Cove 4-H Camp",
-      "tree_id": "005",
+      "tag_id": "005",
       "town": "St. George",
       "hub": "Warren",
       "cam_org": "BC4H",
@@ -938,7 +938,7 @@
     },
     {
       "site": "Brewer Community School",
-      "tree_id": "007",
+      "tag_id": "007",
       "town": "Brewer",
       "hub": "Orono",
       "cam_org": "BLTBrewer",
@@ -974,7 +974,7 @@
     },
     {
       "site": "Brewer Community School",
-      "tree_id": "008",
+      "tag_id": "008",
       "town": "Brewer",
       "hub": "Orono",
       "cam_org": "BLTBrewer",
@@ -1010,7 +1010,7 @@
     },
     {
       "site": "Brewer Community School",
-      "tree_id": "009",
+      "tag_id": "009",
       "town": "Brewer",
       "hub": "Orono",
       "cam_org": "BLTBrewer",
@@ -1046,7 +1046,7 @@
     },
     {
       "site": "Brewer Community School",
-      "tree_id": "010",
+      "tag_id": "010",
       "town": "Brewer",
       "hub": "Orono",
       "cam_org": "BLTBrewer",
@@ -1082,7 +1082,7 @@
     },
     {
       "site": "Brewer Municipal Pool and Playground",
-      "tree_id": "005",
+      "tag_id": "005",
       "town": "Brewer",
       "hub": "Orono",
       "cam_org": "BLTBrewer",
@@ -1118,7 +1118,7 @@
     },
     {
       "site": "Brewer Municipal Pool and Playground",
-      "tree_id": "006",
+      "tag_id": "006",
       "town": "Brewer",
       "hub": "Orono",
       "cam_org": "BLTBrewer",
@@ -1154,7 +1154,7 @@
     },
     {
       "site": "Brewer Municipal Pool and Playground",
-      "tree_id": "013",
+      "tag_id": "013",
       "town": "Brewer",
       "hub": "Orono",
       "cam_org": "BLTBrewer",
@@ -1190,7 +1190,7 @@
     },
     {
       "site": "Brewer Municipal Pool and Playground",
-      "tree_id": "014",
+      "tag_id": "014",
       "town": "Brewer",
       "hub": "Orono",
       "cam_org": "BLTBrewer",
@@ -1226,7 +1226,7 @@
     },
     {
       "site": "Brewer Municipal Pool and Playground",
-      "tree_id": "015",
+      "tag_id": "015",
       "town": "Brewer",
       "hub": "Orono",
       "cam_org": "BLTBrewer",
@@ -1262,7 +1262,7 @@
     },
     {
       "site": "Brewer Municipal Pool and Playground",
-      "tree_id": "017",
+      "tag_id": "017",
       "town": "Brewer",
       "hub": "Orono",
       "cam_org": "BLTBrewer",
@@ -1298,7 +1298,7 @@
     },
     {
       "site": "Brewer Public Safety",
-      "tree_id": "018",
+      "tag_id": "018",
       "town": "Brewer",
       "hub": "Orono",
       "cam_org": "BLTBrewer",
@@ -1334,7 +1334,7 @@
     },
     {
       "site": "Brewer Public Safety",
-      "tree_id": "019",
+      "tag_id": "019",
       "town": "Brewer",
       "hub": "Orono",
       "cam_org": "BLTBrewer",
@@ -1370,7 +1370,7 @@
     },
     {
       "site": "Brewer Public Safety",
-      "tree_id": "020",
+      "tag_id": "020",
       "town": "Brewer",
       "hub": "Orono",
       "cam_org": "BLTBrewer",
@@ -1406,7 +1406,7 @@
     },
     {
       "site": "Brewer Public Safety",
-      "tree_id": "021",
+      "tag_id": "021",
       "town": "Brewer",
       "hub": "Orono",
       "cam_org": "BLTBrewer",
@@ -1442,7 +1442,7 @@
     },
     {
       "site": "Camp Pondicherry",
-      "tree_id": "001",
+      "tag_id": "001",
       "town": "Bridgton",
       "hub": "Bridgton",
       "cam_org": "POND",
@@ -1478,7 +1478,7 @@
     },
     {
       "site": "Camp Pondicherry",
-      "tree_id": "002",
+      "tag_id": "002",
       "town": "Bridgton",
       "hub": "Bridgton",
       "cam_org": "POND",
@@ -1514,7 +1514,7 @@
     },
     {
       "site": "Camp Pondicherry",
-      "tree_id": "003",
+      "tag_id": "003",
       "town": "Bridgton",
       "hub": "Bridgton",
       "cam_org": "POND",
@@ -1550,7 +1550,7 @@
     },
     {
       "site": "Camp Pondicherry",
-      "tree_id": "004",
+      "tag_id": "004",
       "town": "Bridgton",
       "hub": "Bridgton",
       "cam_org": "POND",
@@ -1586,7 +1586,7 @@
     },
     {
       "site": "Camp Pondicherry",
-      "tree_id": "005",
+      "tag_id": "005",
       "town": "Bridgton",
       "hub": "Bridgton",
       "cam_org": "POND",
@@ -1622,7 +1622,7 @@
     },
     {
       "site": "Campus",
-      "tree_id": "001",
+      "tag_id": "001",
       "town": "Gorham",
       "hub": "Sanford",
       "cam_org": "UMG",
@@ -1658,7 +1658,7 @@
     },
     {
       "site": "Campus",
-      "tree_id": "002",
+      "tag_id": "002",
       "town": "Gorham",
       "hub": "Sanford",
       "cam_org": "UMG",
@@ -1694,7 +1694,7 @@
     },
     {
       "site": "Campus",
-      "tree_id": "003",
+      "tag_id": "003",
       "town": "Gorham",
       "hub": "Sanford",
       "cam_org": "UMG",
@@ -1730,7 +1730,7 @@
     },
     {
       "site": "Campus",
-      "tree_id": "004",
+      "tag_id": "004",
       "town": "Gorham",
       "hub": "Sanford",
       "cam_org": "UMG",
@@ -1766,7 +1766,7 @@
     },
     {
       "site": "Campus",
-      "tree_id": "005",
+      "tag_id": "005",
       "town": "Gorham",
       "hub": "Sanford",
       "cam_org": "UMG",
@@ -1802,7 +1802,7 @@
     },
     {
       "site": "Chadbourne Field",
-      "tree_id": "000",
+      "tag_id": "000",
       "town": "South Berwick",
       "hub": "Sanford",
       "cam_org": "GWRLT",
@@ -1838,7 +1838,7 @@
     },
     {
       "site": "Chadbourne Field",
-      "tree_id": "001",
+      "tag_id": "001",
       "town": "South Berwick",
       "hub": "Sanford",
       "cam_org": "GWRLT",
@@ -1874,7 +1874,7 @@
     },
     {
       "site": "Chadbourne Field",
-      "tree_id": "002",
+      "tag_id": "002",
       "town": "South Berwick",
       "hub": "Sanford",
       "cam_org": "GWRLT",
@@ -1910,7 +1910,7 @@
     },
     {
       "site": "Chadbourne Field",
-      "tree_id": "003",
+      "tag_id": "003",
       "town": "South Berwick",
       "hub": "Sanford",
       "cam_org": "GWRLT",
@@ -1946,7 +1946,7 @@
     },
     {
       "site": "Chadbourne Field",
-      "tree_id": "004",
+      "tag_id": "004",
       "town": "South Berwick",
       "hub": "Sanford",
       "cam_org": "GWRLT",
@@ -1982,7 +1982,7 @@
     },
     {
       "site": "Chadbourne Field",
-      "tree_id": "005",
+      "tag_id": "005",
       "town": "South Berwick",
       "hub": "Sanford",
       "cam_org": "GWRLT",
@@ -2018,7 +2018,7 @@
     },
     {
       "site": "Chadbourne Field",
-      "tree_id": "006",
+      "tag_id": "006",
       "town": "South Berwick",
       "hub": "Sanford",
       "cam_org": "GWRLT",
@@ -2054,7 +2054,7 @@
     },
     {
       "site": "Chadbourne Field",
-      "tree_id": "007",
+      "tag_id": "007",
       "town": "South Berwick",
       "hub": "Sanford",
       "cam_org": "GWRLT",
@@ -2090,7 +2090,7 @@
     },
     {
       "site": "Chadbourne Field",
-      "tree_id": "222",
+      "tag_id": "222",
       "town": "South Berwick",
       "hub": "Sanford",
       "cam_org": "GWRLT",
@@ -2126,7 +2126,7 @@
     },
     {
       "site": "Chestnut Street Park",
-      "tree_id": "001",
+      "tag_id": "001",
       "town": "Auburn",
       "hub": "Freeport",
       "cam_org": "CAUB",
@@ -2162,7 +2162,7 @@
     },
     {
       "site": "Chestnut Street Park",
-      "tree_id": "002",
+      "tag_id": "002",
       "town": "Auburn",
       "hub": "Freeport",
       "cam_org": "CAUB",
@@ -2198,7 +2198,7 @@
     },
     {
       "site": "Chestnut Street Park",
-      "tree_id": "003",
+      "tag_id": "003",
       "town": "Auburn",
       "hub": "Freeport",
       "cam_org": "CAUB",
@@ -2234,7 +2234,7 @@
     },
     {
       "site": "Chestnut Street Park",
-      "tree_id": "004",
+      "tag_id": "004",
       "town": "Auburn",
       "hub": "Freeport",
       "cam_org": "CAUB",
@@ -2270,7 +2270,7 @@
     },
     {
       "site": "Chestnut Street Park",
-      "tree_id": "005",
+      "tag_id": "005",
       "town": "Auburn",
       "hub": "Freeport",
       "cam_org": "CAUB",
@@ -2306,7 +2306,7 @@
     },
     {
       "site": "Chestnut Street Park",
-      "tree_id": "006",
+      "tag_id": "006",
       "town": "Auburn",
       "hub": "Freeport",
       "cam_org": "CAUB",
@@ -2342,7 +2342,7 @@
     },
     {
       "site": "Chestnut Street Park",
-      "tree_id": "007",
+      "tag_id": "007",
       "town": "Auburn",
       "hub": "Freeport",
       "cam_org": "CAUB",
@@ -2378,7 +2378,7 @@
     },
     {
       "site": "Chestnut Street Park",
-      "tree_id": "008",
+      "tag_id": "008",
       "town": "Auburn",
       "hub": "Freeport",
       "cam_org": "CAUB",
@@ -2414,7 +2414,7 @@
     },
     {
       "site": "Chestnut Street Park",
-      "tree_id": "009",
+      "tag_id": "009",
       "town": "Auburn",
       "hub": "Freeport",
       "cam_org": "CAUB",
@@ -2450,7 +2450,7 @@
     },
     {
       "site": "Chestnut Street Park",
-      "tree_id": "010",
+      "tag_id": "010",
       "town": "Auburn",
       "hub": "Freeport",
       "cam_org": "CAUB",
@@ -2486,7 +2486,7 @@
     },
     {
       "site": "Corinna Village Green",
-      "tree_id": "001",
+      "tag_id": "001",
       "town": "Corinna",
       "hub": "Hartland",
       "cam_org": "CORINNA",
@@ -2522,7 +2522,7 @@
     },
     {
       "site": "Corinna Village Green",
-      "tree_id": "002",
+      "tag_id": "002",
       "town": "Corinna",
       "hub": "Hartland",
       "cam_org": "CORINNA",
@@ -2558,7 +2558,7 @@
     },
     {
       "site": "Corinna Village Green",
-      "tree_id": "003",
+      "tag_id": "003",
       "town": "Corinna",
       "hub": "Hartland",
       "cam_org": "CORINNA",
@@ -2594,7 +2594,7 @@
     },
     {
       "site": "Corinna Village Green",
-      "tree_id": "004",
+      "tag_id": "004",
       "town": "Corinna",
       "hub": "Hartland",
       "cam_org": "CORINNA",
@@ -2630,7 +2630,7 @@
     },
     {
       "site": "Corinna Village Green",
-      "tree_id": "005",
+      "tag_id": "005",
       "town": "Corinna",
       "hub": "Hartland",
       "cam_org": "CORINNA",
@@ -2666,7 +2666,7 @@
     },
     {
       "site": "Corinna Village Green",
-      "tree_id": "006",
+      "tag_id": "006",
       "town": "Corinna",
       "hub": "Hartland",
       "cam_org": "CORINNA",
@@ -2702,7 +2702,7 @@
     },
     {
       "site": "Cornerspring Montessori School",
-      "tree_id": "001",
+      "tag_id": "001",
       "town": "Belfast",
       "hub": "Searsport",
       "cam_org": "CSMS",
@@ -2738,7 +2738,7 @@
     },
     {
       "site": "Cornerspring Montessori School",
-      "tree_id": "002",
+      "tag_id": "002",
       "town": "Belfast",
       "hub": "Searsport",
       "cam_org": "CSMS",
@@ -2774,7 +2774,7 @@
     },
     {
       "site": "Cousins River Fields & Marsh Preserve",
-      "tree_id": "001",
+      "tag_id": "001",
       "town": "Yarmouth",
       "hub": "Freeport",
       "cam_org": "MCHT",
@@ -2810,7 +2810,7 @@
     },
     {
       "site": "Cousins River Fields & Marsh Preserve",
-      "tree_id": "002",
+      "tag_id": "002",
       "town": "Yarmouth",
       "hub": "Freeport",
       "cam_org": "MCHT",
@@ -2846,7 +2846,7 @@
     },
     {
       "site": "Cousins River Fields & Marsh Preserve",
-      "tree_id": "003",
+      "tag_id": "003",
       "town": "Yarmouth",
       "hub": "Freeport",
       "cam_org": "MCHT",
@@ -2882,7 +2882,7 @@
     },
     {
       "site": "Cousins River Fields & Marsh Preserve",
-      "tree_id": "004",
+      "tag_id": "004",
       "town": "Yarmouth",
       "hub": "Freeport",
       "cam_org": "MCHT",
@@ -2918,7 +2918,7 @@
     },
     {
       "site": "Cousins River Fields & Marsh Preserve",
-      "tree_id": "005",
+      "tag_id": "005",
       "town": "Yarmouth",
       "hub": "Freeport",
       "cam_org": "MCHT",
@@ -2954,7 +2954,7 @@
     },
     {
       "site": "Cousins River Fields & Marsh Preserve",
-      "tree_id": "006",
+      "tag_id": "006",
       "town": "Yarmouth",
       "hub": "Freeport",
       "cam_org": "MCHT",
@@ -2990,7 +2990,7 @@
     },
     {
       "site": "Cousins River Fields & Marsh Preserve",
-      "tree_id": "007",
+      "tag_id": "007",
       "town": "Yarmouth",
       "hub": "Freeport",
       "cam_org": "MCHT",
@@ -3026,7 +3026,7 @@
     },
     {
       "site": "Cousins River Fields & Marsh Preserve",
-      "tree_id": "008",
+      "tag_id": "008",
       "town": "Yarmouth",
       "hub": "Freeport",
       "cam_org": "MCHT",
@@ -3062,7 +3062,7 @@
     },
     {
       "site": "Cousins River Fields & Marsh Preserve",
-      "tree_id": "009",
+      "tag_id": "009",
       "town": "Yarmouth",
       "hub": "Freeport",
       "cam_org": "MCHT",
@@ -3098,7 +3098,7 @@
     },
     {
       "site": "Cousins River Fields & Marsh Preserve",
-      "tree_id": "010",
+      "tag_id": "010",
       "town": "Yarmouth",
       "hub": "Freeport",
       "cam_org": "MCHT",
@@ -3134,7 +3134,7 @@
     },
     {
       "site": "Cousins River Fields & Marsh Preserve",
-      "tree_id": "011",
+      "tag_id": "011",
       "town": "Yarmouth",
       "hub": "Freeport",
       "cam_org": "MCHT",
@@ -3170,7 +3170,7 @@
     },
     {
       "site": "Cousins River Fields & Marsh Preserve",
-      "tree_id": "012",
+      "tag_id": "012",
       "town": "Yarmouth",
       "hub": "Freeport",
       "cam_org": "MCHT",
@@ -3206,7 +3206,7 @@
     },
     {
       "site": "Cousins River Fields & Marsh Preserve",
-      "tree_id": "013",
+      "tag_id": "013",
       "town": "Yarmouth",
       "hub": "Freeport",
       "cam_org": "MCHT",
@@ -3242,7 +3242,7 @@
     },
     {
       "site": "Crooked River Forest",
-      "tree_id": "016",
+      "tag_id": "016",
       "town": "Harrison",
       "hub": "Bridgton",
       "cam_org": "LELT",
@@ -3278,7 +3278,7 @@
     },
     {
       "site": "Crooked River Forest",
-      "tree_id": "024",
+      "tag_id": "024",
       "town": "Harrison",
       "hub": "Bridgton",
       "cam_org": "LELT",
@@ -3314,7 +3314,7 @@
     },
     {
       "site": "Crooked River Forest",
-      "tree_id": "026",
+      "tag_id": "026",
       "town": "Harrison",
       "hub": "Bridgton",
       "cam_org": "LELT",
@@ -3350,7 +3350,7 @@
     },
     {
       "site": "Crooked River Forest",
-      "tree_id": "027",
+      "tag_id": "027",
       "town": "Harrison",
       "hub": "Bridgton",
       "cam_org": "LELT",
@@ -3386,7 +3386,7 @@
     },
     {
       "site": "Crooked River Forest",
-      "tree_id": "029",
+      "tag_id": "029",
       "town": "Harrison",
       "hub": "Bridgton",
       "cam_org": "LELT",
@@ -3422,7 +3422,7 @@
     },
     {
       "site": "Crooked River Forest",
-      "tree_id": "030",
+      "tag_id": "030",
       "town": "Harrison",
       "hub": "Bridgton",
       "cam_org": "LELT",
@@ -3458,7 +3458,7 @@
     },
     {
       "site": "Dead River Trailhead Capstone Trail",
-      "tree_id": "007",
+      "tag_id": "007",
       "town": "Orland",
       "hub": "Ellsworth",
       "cam_org": "GPMLT",
@@ -3494,7 +3494,7 @@
     },
     {
       "site": "Dead River Trailhead Capstone Trail",
-      "tree_id": "008",
+      "tag_id": "008",
       "town": "Orland",
       "hub": "Ellsworth",
       "cam_org": "GPMLT",
@@ -3530,7 +3530,7 @@
     },
     {
       "site": "Dead River Trailhead Capstone Trail",
-      "tree_id": "009",
+      "tag_id": "009",
       "town": "Orland",
       "hub": "Ellsworth",
       "cam_org": "GPMLT",
@@ -3566,7 +3566,7 @@
     },
     {
       "site": "Dead River Trailhead Capstone Trail",
-      "tree_id": "010",
+      "tag_id": "010",
       "town": "Orland",
       "hub": "Ellsworth",
       "cam_org": "GPMLT",
@@ -3602,7 +3602,7 @@
     },
     {
       "site": "Dead River Trailhead Capstone Trail",
-      "tree_id": "013",
+      "tag_id": "013",
       "town": "Orland",
       "hub": "Ellsworth",
       "cam_org": "GPMLT",
@@ -3638,7 +3638,7 @@
     },
     {
       "site": "Dead River Trailhead Log Landing",
-      "tree_id": "001",
+      "tag_id": "001",
       "town": "Orland",
       "hub": "Ellsworth",
       "cam_org": "GPMLT",
@@ -3674,7 +3674,7 @@
     },
     {
       "site": "Dead River Trailhead Log Landing",
-      "tree_id": "002",
+      "tag_id": "002",
       "town": "Orland",
       "hub": "Ellsworth",
       "cam_org": "GPMLT",
@@ -3710,7 +3710,7 @@
     },
     {
       "site": "Dead River Trailhead Log Landing",
-      "tree_id": "003",
+      "tag_id": "003",
       "town": "Orland",
       "hub": "Ellsworth",
       "cam_org": "GPMLT",
@@ -3746,7 +3746,7 @@
     },
     {
       "site": "Dead River Trailhead Log Landing",
-      "tree_id": "004",
+      "tag_id": "004",
       "town": "Orland",
       "hub": "Ellsworth",
       "cam_org": "GPMLT",
@@ -3782,7 +3782,7 @@
     },
     {
       "site": "Dead River Trailhead Log Landing",
-      "tree_id": "005",
+      "tag_id": "005",
       "town": "Orland",
       "hub": "Ellsworth",
       "cam_org": "GPMLT",
@@ -3818,7 +3818,7 @@
     },
     {
       "site": "Dead River Trailhead Log Landing",
-      "tree_id": "006",
+      "tag_id": "006",
       "town": "Orland",
       "hub": "Ellsworth",
       "cam_org": "GPMLT",
@@ -3854,7 +3854,7 @@
     },
     {
       "site": "Dead River Trailhead Log Landing",
-      "tree_id": "011",
+      "tag_id": "011",
       "town": "Orland",
       "hub": "Ellsworth",
       "cam_org": "GPMLT",
@@ -3890,7 +3890,7 @@
     },
     {
       "site": "Dead River Trailhead Log Landing",
-      "tree_id": "012",
+      "tag_id": "012",
       "town": "Orland",
       "hub": "Ellsworth",
       "cam_org": "GPMLT",
@@ -3926,7 +3926,7 @@
     },
     {
       "site": "Erickson Fields Preserve",
-      "tree_id": "001",
+      "tag_id": "001",
       "town": "Rockport",
       "hub": "Searsport",
       "cam_org": "MCHT",
@@ -3962,7 +3962,7 @@
     },
     {
       "site": "Erickson Fields Preserve",
-      "tree_id": "002",
+      "tag_id": "002",
       "town": "Rockport",
       "hub": "Searsport",
       "cam_org": "MCHT",
@@ -3998,7 +3998,7 @@
     },
     {
       "site": "Erickson Fields Preserve",
-      "tree_id": "003",
+      "tag_id": "003",
       "town": "Rockport",
       "hub": "Searsport",
       "cam_org": "MCHT",
@@ -4034,7 +4034,7 @@
     },
     {
       "site": "Erickson Fields Preserve",
-      "tree_id": "004",
+      "tag_id": "004",
       "town": "Rockport",
       "hub": "Searsport",
       "cam_org": "MCHT",
@@ -4070,7 +4070,7 @@
     },
     {
       "site": "Erickson Fields Preserve",
-      "tree_id": "005",
+      "tag_id": "005",
       "town": "Rockport",
       "hub": "Searsport",
       "cam_org": "MCHT",
@@ -4106,7 +4106,7 @@
     },
     {
       "site": "Field NE of Main Building",
-      "tree_id": "004",
+      "tag_id": "004",
       "town": "Holden",
       "hub": "Orono",
       "cam_org": "MAFP",
@@ -4142,7 +4142,7 @@
     },
     {
       "site": "Field NE of Main Building",
-      "tree_id": "005",
+      "tag_id": "005",
       "town": "Holden",
       "hub": "Orono",
       "cam_org": "MAFP",
@@ -4178,7 +4178,7 @@
     },
     {
       "site": "Field NE of Main Building",
-      "tree_id": "006",
+      "tag_id": "006",
       "town": "Holden",
       "hub": "Orono",
       "cam_org": "MAFP",
@@ -4214,7 +4214,7 @@
     },
     {
       "site": "Field NE of Main Building",
-      "tree_id": "007",
+      "tag_id": "007",
       "town": "Holden",
       "hub": "Orono",
       "cam_org": "MAFP",
@@ -4250,7 +4250,7 @@
     },
     {
       "site": "Field NE of Main Building",
-      "tree_id": "008",
+      "tag_id": "008",
       "town": "Holden",
       "hub": "Orono",
       "cam_org": "MAFP",
@@ -4286,7 +4286,7 @@
     },
     {
       "site": "Field NE of Main Building",
-      "tree_id": "009",
+      "tag_id": "009",
       "town": "Holden",
       "hub": "Orono",
       "cam_org": "MAFP",
@@ -4322,7 +4322,7 @@
     },
     {
       "site": "Field NE of Main Building",
-      "tree_id": "015",
+      "tag_id": "015",
       "town": "Holden",
       "hub": "Orono",
       "cam_org": "MAFP",
@@ -4358,7 +4358,7 @@
     },
     {
       "site": "Field NE of Main Building",
-      "tree_id": "016",
+      "tag_id": "016",
       "town": "Holden",
       "hub": "Orono",
       "cam_org": "MAFP",
@@ -4394,7 +4394,7 @@
     },
     {
       "site": "Field NE of Main Building",
-      "tree_id": "017",
+      "tag_id": "017",
       "town": "Holden",
       "hub": "Orono",
       "cam_org": "MAFP",
@@ -4430,7 +4430,7 @@
     },
     {
       "site": "Field NE of Main Building",
-      "tree_id": "018",
+      "tag_id": "018",
       "town": "Holden",
       "hub": "Orono",
       "cam_org": "MAFP",
@@ -4466,7 +4466,7 @@
     },
     {
       "site": "Field NE of Main Building",
-      "tree_id": "019",
+      "tag_id": "019",
       "town": "Holden",
       "hub": "Orono",
       "cam_org": "MAFP",
@@ -4502,7 +4502,7 @@
     },
     {
       "site": "Field NE of Main Building",
-      "tree_id": "020",
+      "tag_id": "020",
       "town": "Holden",
       "hub": "Orono",
       "cam_org": "MAFP",
@@ -4538,7 +4538,7 @@
     },
     {
       "site": "Field NE of Main Building",
-      "tree_id": "021",
+      "tag_id": "021",
       "town": "Holden",
       "hub": "Orono",
       "cam_org": "MAFP",
@@ -4574,7 +4574,7 @@
     },
     {
       "site": "Field NE of Main Building",
-      "tree_id": "022",
+      "tag_id": "022",
       "town": "Holden",
       "hub": "Orono",
       "cam_org": "MAFP",
@@ -4610,7 +4610,7 @@
     },
     {
       "site": "Field NE of Main Building",
-      "tree_id": "023",
+      "tag_id": "023",
       "town": "Holden",
       "hub": "Orono",
       "cam_org": "MAFP",
@@ -4646,7 +4646,7 @@
     },
     {
       "site": "Field NE of Main Building",
-      "tree_id": "025",
+      "tag_id": "025",
       "town": "Holden",
       "hub": "Orono",
       "cam_org": "MAFP",
@@ -4682,7 +4682,7 @@
     },
     {
       "site": "Field NE of Main Building",
-      "tree_id": "026",
+      "tag_id": "026",
       "town": "Holden",
       "hub": "Orono",
       "cam_org": "MAFP",
@@ -4718,7 +4718,7 @@
     },
     {
       "site": "Field NE of Main Building",
-      "tree_id": "027",
+      "tag_id": "027",
       "town": "Holden",
       "hub": "Orono",
       "cam_org": "MAFP",
@@ -4754,7 +4754,7 @@
     },
     {
       "site": "Field NE of Main Building",
-      "tree_id": "028",
+      "tag_id": "028",
       "town": "Holden",
       "hub": "Orono",
       "cam_org": "MAFP",
@@ -4790,7 +4790,7 @@
     },
     {
       "site": "Field NE of Main Building",
-      "tree_id": "029",
+      "tag_id": "029",
       "town": "Holden",
       "hub": "Orono",
       "cam_org": "MAFP",
@@ -4826,7 +4826,7 @@
     },
     {
       "site": "Field NE of Main Building",
-      "tree_id": "030",
+      "tag_id": "030",
       "town": "Holden",
       "hub": "Orono",
       "cam_org": "MAFP",
@@ -4862,7 +4862,7 @@
     },
     {
       "site": "Field NE of Main Building",
-      "tree_id": "031",
+      "tag_id": "031",
       "town": "Holden",
       "hub": "Orono",
       "cam_org": "MAFP",
@@ -4898,7 +4898,7 @@
     },
     {
       "site": "Field NE of Main Building",
-      "tree_id": "032",
+      "tag_id": "032",
       "town": "Holden",
       "hub": "Orono",
       "cam_org": "MAFP",
@@ -4934,7 +4934,7 @@
     },
     {
       "site": "Field NE of Main Building",
-      "tree_id": "033",
+      "tag_id": "033",
       "town": "Holden",
       "hub": "Orono",
       "cam_org": "MAFP",
@@ -4970,7 +4970,7 @@
     },
     {
       "site": "Field NE of Main Building",
-      "tree_id": "034",
+      "tag_id": "034",
       "town": "Holden",
       "hub": "Orono",
       "cam_org": "MAFP",
@@ -5006,7 +5006,7 @@
     },
     {
       "site": "Field NE of Main Building",
-      "tree_id": "035",
+      "tag_id": "035",
       "town": "Holden",
       "hub": "Orono",
       "cam_org": "MAFP",
@@ -5042,7 +5042,7 @@
     },
     {
       "site": "Field NE of Main Building",
-      "tree_id": "036",
+      "tag_id": "036",
       "town": "Holden",
       "hub": "Orono",
       "cam_org": "MAFP",
@@ -5078,7 +5078,7 @@
     },
     {
       "site": "Fort Point State Park",
-      "tree_id": "001",
+      "tag_id": "001",
       "town": "Stockton Springs",
       "hub": "Searsport",
       "cam_org": "FTPTSP",
@@ -5114,7 +5114,7 @@
     },
     {
       "site": "Fort Point State Park",
-      "tree_id": "002",
+      "tag_id": "002",
       "town": "Stockton Springs",
       "hub": "Searsport",
       "cam_org": "FTPTSP",
@@ -5150,7 +5150,7 @@
     },
     {
       "site": "Fort Point State Park",
-      "tree_id": "003",
+      "tag_id": "003",
       "town": "Stockton Springs",
       "hub": "Searsport",
       "cam_org": "FTPTSP",
@@ -5186,7 +5186,7 @@
     },
     {
       "site": "Fort Point State Park",
-      "tree_id": "004",
+      "tag_id": "004",
       "town": "Stockton Springs",
       "hub": "Searsport",
       "cam_org": "FTPTSP",
@@ -5222,7 +5222,7 @@
     },
     {
       "site": "Fort Point State Park",
-      "tree_id": "005",
+      "tag_id": "005",
       "town": "Stockton Springs",
       "hub": "Searsport",
       "cam_org": "FTPTSP",
@@ -5258,7 +5258,7 @@
     },
     {
       "site": "Fort Point State Park",
-      "tree_id": "006",
+      "tag_id": "006",
       "town": "Stockton Springs",
       "hub": "Searsport",
       "cam_org": "FTPTSP",
@@ -5294,7 +5294,7 @@
     },
     {
       "site": "Fort Point State Park",
-      "tree_id": "007",
+      "tag_id": "007",
       "town": "Stockton Springs",
       "hub": "Searsport",
       "cam_org": "FTPTSP",
@@ -5330,7 +5330,7 @@
     },
     {
       "site": "Fort Point State Park",
-      "tree_id": "008",
+      "tag_id": "008",
       "town": "Stockton Springs",
       "hub": "Searsport",
       "cam_org": "FTPTSP",
@@ -5366,7 +5366,7 @@
     },
     {
       "site": "Fort Point State Park",
-      "tree_id": "009",
+      "tag_id": "009",
       "town": "Stockton Springs",
       "hub": "Searsport",
       "cam_org": "FTPTSP",
@@ -5402,7 +5402,7 @@
     },
     {
       "site": "Fort Point State Park",
-      "tree_id": "010",
+      "tag_id": "010",
       "town": "Stockton Springs",
       "hub": "Searsport",
       "cam_org": "FTPTSP",
@@ -5438,7 +5438,7 @@
     },
     {
       "site": "Franklin Pasture",
-      "tree_id": "001",
+      "tag_id": "001",
       "town": "Lewiston",
       "hub": "Freeport",
       "cam_org": "CLEW",
@@ -5474,7 +5474,7 @@
     },
     {
       "site": "Franklin Pasture",
-      "tree_id": "002",
+      "tag_id": "002",
       "town": "Lewiston",
       "hub": "Freeport",
       "cam_org": "CLEW",
@@ -5510,7 +5510,7 @@
     },
     {
       "site": "Franklin Pasture",
-      "tree_id": "003",
+      "tag_id": "003",
       "town": "Lewiston",
       "hub": "Freeport",
       "cam_org": "CLEW",
@@ -5546,7 +5546,7 @@
     },
     {
       "site": "Franklin Pasture",
-      "tree_id": "004",
+      "tag_id": "004",
       "town": "Lewiston",
       "hub": "Freeport",
       "cam_org": "CLEW",
@@ -5582,7 +5582,7 @@
     },
     {
       "site": "Franklin Pasture",
-      "tree_id": "005",
+      "tag_id": "005",
       "town": "Lewiston",
       "hub": "Freeport",
       "cam_org": "CLEW",
@@ -5618,7 +5618,7 @@
     },
     {
       "site": "Franklin Pasture",
-      "tree_id": "006",
+      "tag_id": "006",
       "town": "Lewiston",
       "hub": "Freeport",
       "cam_org": "CLEW",
@@ -5654,7 +5654,7 @@
     },
     {
       "site": "Franklin Pasture",
-      "tree_id": "007",
+      "tag_id": "007",
       "town": "Lewiston",
       "hub": "Freeport",
       "cam_org": "CLEW",
@@ -5690,7 +5690,7 @@
     },
     {
       "site": "Franklin Pasture",
-      "tree_id": "008",
+      "tag_id": "008",
       "town": "Lewiston",
       "hub": "Freeport",
       "cam_org": "CLEW",
@@ -5726,7 +5726,7 @@
     },
     {
       "site": "Franklin Pasture",
-      "tree_id": "009",
+      "tag_id": "009",
       "town": "Lewiston",
       "hub": "Freeport",
       "cam_org": "CLEW",
@@ -5762,7 +5762,7 @@
     },
     {
       "site": "Franklin Pasture",
-      "tree_id": "010",
+      "tag_id": "010",
       "town": "Lewiston",
       "hub": "Freeport",
       "cam_org": "CLEW",
@@ -5798,7 +5798,7 @@
     },
     {
       "site": "Hackers Hill",
-      "tree_id": "011",
+      "tag_id": "011",
       "town": "Casco",
       "hub": "Bridgton",
       "cam_org": "LELT",
@@ -5834,7 +5834,7 @@
     },
     {
       "site": "Hackers Hill",
-      "tree_id": "023",
+      "tag_id": "023",
       "town": "Casco",
       "hub": "Bridgton",
       "cam_org": "LELT",
@@ -5870,7 +5870,7 @@
     },
     {
       "site": "Hackers Hill",
-      "tree_id": "025",
+      "tag_id": "025",
       "town": "Casco",
       "hub": "Bridgton",
       "cam_org": "LELT",
@@ -5906,7 +5906,7 @@
     },
     {
       "site": "Hebron Station School",
-      "tree_id": "001",
+      "tag_id": "001",
       "town": "Hebron",
       "hub": "Bridgton",
       "cam_org": "HSS",
@@ -5942,7 +5942,7 @@
     },
     {
       "site": "Hebron Station School",
-      "tree_id": "002",
+      "tag_id": "002",
       "town": "Hebron",
       "hub": "Bridgton",
       "cam_org": "HSS",
@@ -5978,7 +5978,7 @@
     },
     {
       "site": "Hebron Station School",
-      "tree_id": "003",
+      "tag_id": "003",
       "town": "Hebron",
       "hub": "Bridgton",
       "cam_org": "HSS",
@@ -6014,7 +6014,7 @@
     },
     {
       "site": "Hurricane Valley Farm",
-      "tree_id": "001",
+      "tag_id": "001",
       "town": "Falmouth",
       "hub": "Freeport",
       "cam_org": "FLT",
@@ -6050,7 +6050,7 @@
     },
     {
       "site": "Hurricane Valley Farm",
-      "tree_id": "002",
+      "tag_id": "002",
       "town": "Falmouth",
       "hub": "Freeport",
       "cam_org": "FLT",
@@ -6086,7 +6086,7 @@
     },
     {
       "site": "Hurricane Valley Farm",
-      "tree_id": "003",
+      "tag_id": "003",
       "town": "Falmouth",
       "hub": "Freeport",
       "cam_org": "FLT",
@@ -6122,7 +6122,7 @@
     },
     {
       "site": "Hurricane Valley Farm",
-      "tree_id": "004",
+      "tag_id": "004",
       "town": "Falmouth",
       "hub": "Freeport",
       "cam_org": "FLT",
@@ -6158,7 +6158,7 @@
     },
     {
       "site": "Hurricane Valley Farm",
-      "tree_id": "005",
+      "tag_id": "005",
       "town": "Falmouth",
       "hub": "Freeport",
       "cam_org": "FLT",
@@ -6194,7 +6194,7 @@
     },
     {
       "site": "Hurricane Valley Farm",
-      "tree_id": "006",
+      "tag_id": "006",
       "town": "Falmouth",
       "hub": "Freeport",
       "cam_org": "FLT",
@@ -6230,7 +6230,7 @@
     },
     {
       "site": "Indian Trail Park",
-      "tree_id": "001",
+      "tag_id": "001",
       "town": "Brewer",
       "hub": "Orono",
       "cam_org": "BLTBrewer",
@@ -6266,7 +6266,7 @@
     },
     {
       "site": "Indian Trail Park",
-      "tree_id": "002",
+      "tag_id": "002",
       "town": "Brewer",
       "hub": "Orono",
       "cam_org": "BLTBrewer",
@@ -6302,7 +6302,7 @@
     },
     {
       "site": "Indian Trail Park",
-      "tree_id": "003",
+      "tag_id": "003",
       "town": "Brewer",
       "hub": "Orono",
       "cam_org": "BLTBrewer",
@@ -6338,7 +6338,7 @@
     },
     {
       "site": "Indian Trail Park",
-      "tree_id": "004",
+      "tag_id": "004",
       "town": "Brewer",
       "hub": "Orono",
       "cam_org": "BLTBrewer",
@@ -6374,7 +6374,7 @@
     },
     {
       "site": "Indian Trail Park",
-      "tree_id": "011",
+      "tag_id": "011",
       "town": "Brewer",
       "hub": "Orono",
       "cam_org": "BLTBrewer",
@@ -6410,7 +6410,7 @@
     },
     {
       "site": "Indian Trail Park",
-      "tree_id": "012",
+      "tag_id": "012",
       "town": "Brewer",
       "hub": "Orono",
       "cam_org": "BLTBrewer",
@@ -6446,7 +6446,7 @@
     },
     {
       "site": "Lowd Environmental Reserve",
-      "tree_id": "007",
+      "tag_id": "007",
       "town": "Ogunquit",
       "hub": "Sanford",
       "cam_org": "SSMWLT",
@@ -6482,7 +6482,7 @@
     },
     {
       "site": "Lowd Environmental Reserve",
-      "tree_id": "008",
+      "tag_id": "008",
       "town": "Ogunquit",
       "hub": "Sanford",
       "cam_org": "SSMWLT",
@@ -6518,7 +6518,7 @@
     },
     {
       "site": "Lowd Environmental Reserve",
-      "tree_id": "009",
+      "tag_id": "009",
       "town": "Ogunquit",
       "hub": "Sanford",
       "cam_org": "SSMWLT",
@@ -6554,7 +6554,7 @@
     },
     {
       "site": "Lowd Environmental Reserve",
-      "tree_id": "010",
+      "tag_id": "010",
       "town": "Ogunquit",
       "hub": "Sanford",
       "cam_org": "SSMWLT",
@@ -6590,7 +6590,7 @@
     },
     {
       "site": "Maine Youth Fish and Game Club",
-      "tree_id": "001",
+      "tag_id": "001",
       "town": "Milford",
       "hub": "Orono",
       "cam_org": "MYFGC",
@@ -6626,7 +6626,7 @@
     },
     {
       "site": "Maine Youth Fish and Game Club",
-      "tree_id": "002",
+      "tag_id": "002",
       "town": "Milford",
       "hub": "Orono",
       "cam_org": "MYFGC",
@@ -6662,7 +6662,7 @@
     },
     {
       "site": "Maine Youth Fish and Game Club",
-      "tree_id": "003",
+      "tag_id": "003",
       "town": "Milford",
       "hub": "Orono",
       "cam_org": "MYFGC",
@@ -6698,7 +6698,7 @@
     },
     {
       "site": "Maine Youth Fish and Game Club",
-      "tree_id": "004",
+      "tag_id": "004",
       "town": "Milford",
       "hub": "Orono",
       "cam_org": "MYFGC",
@@ -6734,7 +6734,7 @@
     },
     {
       "site": "Maine Youth Fish and Game Club",
-      "tree_id": "005",
+      "tag_id": "005",
       "town": "Milford",
       "hub": "Orono",
       "cam_org": "MYFGC",
@@ -6770,7 +6770,7 @@
     },
     {
       "site": "Maine Youth Fish and Game Club",
-      "tree_id": "006",
+      "tag_id": "006",
       "town": "Milford",
       "hub": "Orono",
       "cam_org": "MYFGC",
@@ -6806,7 +6806,7 @@
     },
     {
       "site": "Maine Youth Fish and Game Club",
-      "tree_id": "007",
+      "tag_id": "007",
       "town": "Milford",
       "hub": "Orono",
       "cam_org": "MYFGC",
@@ -6842,7 +6842,7 @@
     },
     {
       "site": "Maine Youth Fish and Game Club",
-      "tree_id": "008",
+      "tag_id": "008",
       "town": "Milford",
       "hub": "Orono",
       "cam_org": "MYFGC",
@@ -6878,7 +6878,7 @@
     },
     {
       "site": "Maine Youth Fish and Game Club",
-      "tree_id": "009",
+      "tag_id": "009",
       "town": "Milford",
       "hub": "Orono",
       "cam_org": "MYFGC",
@@ -6914,7 +6914,7 @@
     },
     {
       "site": "Maine Youth Fish and Game Club",
-      "tree_id": "010",
+      "tag_id": "010",
       "town": "Milford",
       "hub": "Orono",
       "cam_org": "MYFGC",
@@ -6950,7 +6950,7 @@
     },
     {
       "site": "Mary Snow School",
-      "tree_id": "001",
+      "tag_id": "001",
       "town": "Bangor",
       "hub": "Orono",
       "cam_org": "MAFP",
@@ -6986,7 +6986,7 @@
     },
     {
       "site": "Mary Snow School",
-      "tree_id": "002",
+      "tag_id": "002",
       "town": "Bangor",
       "hub": "Orono",
       "cam_org": "MAFP",
@@ -7022,7 +7022,7 @@
     },
     {
       "site": "Mary Snow School",
-      "tree_id": "003",
+      "tag_id": "003",
       "town": "Bangor",
       "hub": "Orono",
       "cam_org": "MAFP",
@@ -7058,7 +7058,7 @@
     },
     {
       "site": "Mayberry Hill",
-      "tree_id": "007",
+      "tag_id": "007",
       "town": "Casco",
       "hub": "Bridgton",
       "cam_org": "LELT",
@@ -7094,7 +7094,7 @@
     },
     {
       "site": "Mayberry Hill",
-      "tree_id": "008",
+      "tag_id": "008",
       "town": "Casco",
       "hub": "Bridgton",
       "cam_org": "LELT",
@@ -7130,7 +7130,7 @@
     },
     {
       "site": "Mayberry Hill",
-      "tree_id": "009",
+      "tag_id": "009",
       "town": "Casco",
       "hub": "Bridgton",
       "cam_org": "LELT",
@@ -7166,7 +7166,7 @@
     },
     {
       "site": "Mayberry Hill",
-      "tree_id": "010",
+      "tag_id": "010",
       "town": "Casco",
       "hub": "Bridgton",
       "cam_org": "LELT",
@@ -7202,7 +7202,7 @@
     },
     {
       "site": "Mayberry Hill",
-      "tree_id": "012",
+      "tag_id": "012",
       "town": "Casco",
       "hub": "Bridgton",
       "cam_org": "LELT",
@@ -7238,7 +7238,7 @@
     },
     {
       "site": "Mayberry Hill",
-      "tree_id": "013",
+      "tag_id": "013",
       "town": "Casco",
       "hub": "Bridgton",
       "cam_org": "LELT",
@@ -7274,7 +7274,7 @@
     },
     {
       "site": "Mayberry Hill",
-      "tree_id": "014",
+      "tag_id": "014",
       "town": "Casco",
       "hub": "Bridgton",
       "cam_org": "LELT",
@@ -7310,7 +7310,7 @@
     },
     {
       "site": "Mayberry Hill",
-      "tree_id": "015",
+      "tag_id": "015",
       "town": "Casco",
       "hub": "Bridgton",
       "cam_org": "LELT",
@@ -7346,7 +7346,7 @@
     },
     {
       "site": "Mayberry Hill",
-      "tree_id": "017",
+      "tag_id": "017",
       "town": "Casco",
       "hub": "Bridgton",
       "cam_org": "LELT",
@@ -7382,7 +7382,7 @@
     },
     {
       "site": "Mayberry Hill",
-      "tree_id": "018",
+      "tag_id": "018",
       "town": "Casco",
       "hub": "Bridgton",
       "cam_org": "LELT",
@@ -7418,7 +7418,7 @@
     },
     {
       "site": "Mayberry Hill",
-      "tree_id": "019",
+      "tag_id": "019",
       "town": "Casco",
       "hub": "Bridgton",
       "cam_org": "LELT",
@@ -7454,7 +7454,7 @@
     },
     {
       "site": "Mayberry Hill",
-      "tree_id": "020",
+      "tag_id": "020",
       "town": "Casco",
       "hub": "Bridgton",
       "cam_org": "LELT",
@@ -7490,7 +7490,7 @@
     },
     {
       "site": "Mayberry Hill",
-      "tree_id": "022",
+      "tag_id": "022",
       "town": "Casco",
       "hub": "Bridgton",
       "cam_org": "LELT",
@@ -7526,7 +7526,7 @@
     },
     {
       "site": "Mayberry Hill",
-      "tree_id": "028",
+      "tag_id": "028",
       "town": "Casco",
       "hub": "Bridgton",
       "cam_org": "LELT",
@@ -7562,7 +7562,7 @@
     },
     {
       "site": "Mt Joy Community Orchard",
-      "tree_id": "001",
+      "tag_id": "001",
       "town": "Portland",
       "hub": "Freeport",
       "cam_org": "MJCO",
@@ -7598,7 +7598,7 @@
     },
     {
       "site": "Mt Joy Community Orchard",
-      "tree_id": "002",
+      "tag_id": "002",
       "town": "Portland",
       "hub": "Freeport",
       "cam_org": "MJCO",
@@ -7634,7 +7634,7 @@
     },
     {
       "site": "Mt Joy Community Orchard",
-      "tree_id": "003",
+      "tag_id": "003",
       "town": "Portland",
       "hub": "Freeport",
       "cam_org": "MJCO",
@@ -7670,7 +7670,7 @@
     },
     {
       "site": "Mt Joy Community Orchard",
-      "tree_id": "004",
+      "tag_id": "004",
       "town": "Portland",
       "hub": "Freeport",
       "cam_org": "MJCO",
@@ -7706,7 +7706,7 @@
     },
     {
       "site": "Mt Joy Community Orchard",
-      "tree_id": "005",
+      "tag_id": "005",
       "town": "Portland",
       "hub": "Freeport",
       "cam_org": "MJCO",
@@ -7742,7 +7742,7 @@
     },
     {
       "site": "Mt Joy Community Orchard",
-      "tree_id": "006",
+      "tag_id": "006",
       "town": "Portland",
       "hub": "Freeport",
       "cam_org": "MJCO",
@@ -7778,7 +7778,7 @@
     },
     {
       "site": "Mt Joy Community Orchard",
-      "tree_id": "007",
+      "tag_id": "007",
       "town": "Portland",
       "hub": "Freeport",
       "cam_org": "MJCO",
@@ -7814,7 +7814,7 @@
     },
     {
       "site": "Mt Joy Community Orchard",
-      "tree_id": "008",
+      "tag_id": "008",
       "town": "Portland",
       "hub": "Freeport",
       "cam_org": "MJCO",
@@ -7850,7 +7850,7 @@
     },
     {
       "site": "Murray Point Road",
-      "tree_id": "001",
+      "tag_id": "001",
       "town": "Baileyville",
       "hub": "Princeton",
       "cam_org": "MLLT",
@@ -7886,7 +7886,7 @@
     },
     {
       "site": "Murray Point Road",
-      "tree_id": "003",
+      "tag_id": "003",
       "town": "Baileyville",
       "hub": "Princeton",
       "cam_org": "MLLT",
@@ -7922,7 +7922,7 @@
     },
     {
       "site": "Murray Point Road",
-      "tree_id": "004",
+      "tag_id": "004",
       "town": "Baileyville",
       "hub": "Princeton",
       "cam_org": "MLLT",
@@ -7958,7 +7958,7 @@
     },
     {
       "site": "Murray Point Road",
-      "tree_id": "005",
+      "tag_id": "005",
       "town": "Baileyville",
       "hub": "Princeton",
       "cam_org": "MLLT",
@@ -7994,7 +7994,7 @@
     },
     {
       "site": "Murray Point Road",
-      "tree_id": "006",
+      "tag_id": "006",
       "town": "Baileyville",
       "hub": "Princeton",
       "cam_org": "MLLT",
@@ -8030,7 +8030,7 @@
     },
     {
       "site": "Murray Point Road",
-      "tree_id": "007",
+      "tag_id": "007",
       "town": "Baileyville",
       "hub": "Princeton",
       "cam_org": "MLLT",
@@ -8066,7 +8066,7 @@
     },
     {
       "site": "Murray Point Road",
-      "tree_id": "008",
+      "tag_id": "008",
       "town": "Baileyville",
       "hub": "Princeton",
       "cam_org": "MLLT",
@@ -8102,7 +8102,7 @@
     },
     {
       "site": "Murray Point Road",
-      "tree_id": "009",
+      "tag_id": "009",
       "town": "Baileyville",
       "hub": "Princeton",
       "cam_org": "MLLT",
@@ -8138,7 +8138,7 @@
     },
     {
       "site": "Murray Point Road",
-      "tree_id": "010",
+      "tag_id": "010",
       "town": "Baileyville",
       "hub": "Princeton",
       "cam_org": "MLLT",
@@ -8174,7 +8174,7 @@
     },
     {
       "site": "Murray Point Road",
-      "tree_id": "011",
+      "tag_id": "011",
       "town": "Baileyville",
       "hub": "Princeton",
       "cam_org": "MLLT",
@@ -8210,7 +8210,7 @@
     },
     {
       "site": "Murray Point Road",
-      "tree_id": "012",
+      "tag_id": "012",
       "town": "Baileyville",
       "hub": "Princeton",
       "cam_org": "MLLT",
@@ -8246,7 +8246,7 @@
     },
     {
       "site": "Murray Point Road",
-      "tree_id": "013",
+      "tag_id": "013",
       "town": "Baileyville",
       "hub": "Princeton",
       "cam_org": "MLLT",
@@ -8282,7 +8282,7 @@
     },
     {
       "site": "Murray Point Road",
-      "tree_id": "014",
+      "tag_id": "014",
       "town": "Baileyville",
       "hub": "Princeton",
       "cam_org": "MLLT",
@@ -8318,7 +8318,7 @@
     },
     {
       "site": "Murray Point Road",
-      "tree_id": "015",
+      "tag_id": "015",
       "town": "Baileyville",
       "hub": "Princeton",
       "cam_org": "MLLT",
@@ -8354,7 +8354,7 @@
     },
     {
       "site": "Murray Point Road",
-      "tree_id": "016",
+      "tag_id": "016",
       "town": "Baileyville",
       "hub": "Princeton",
       "cam_org": "MLLT",
@@ -8390,7 +8390,7 @@
     },
     {
       "site": "Murray Point Road",
-      "tree_id": "017",
+      "tag_id": "017",
       "town": "Baileyville",
       "hub": "Princeton",
       "cam_org": "MLLT",
@@ -8426,7 +8426,7 @@
     },
     {
       "site": "Murray Point Road",
-      "tree_id": "018",
+      "tag_id": "018",
       "town": "Baileyville",
       "hub": "Princeton",
       "cam_org": "MLLT",
@@ -8462,7 +8462,7 @@
     },
     {
       "site": "Murray Point Road",
-      "tree_id": "019",
+      "tag_id": "019",
       "town": "Baileyville",
       "hub": "Princeton",
       "cam_org": "MLLT",
@@ -8498,7 +8498,7 @@
     },
     {
       "site": "Murray Point Road",
-      "tree_id": "020",
+      "tag_id": "020",
       "town": "Baileyville",
       "hub": "Princeton",
       "cam_org": "MLLT",
@@ -8534,7 +8534,7 @@
     },
     {
       "site": "Murray Point Road",
-      "tree_id": "021",
+      "tag_id": "021",
       "town": "Baileyville",
       "hub": "Princeton",
       "cam_org": "MLLT",
@@ -8570,7 +8570,7 @@
     },
     {
       "site": "Murray Point Road",
-      "tree_id": "022",
+      "tag_id": "022",
       "town": "Baileyville",
       "hub": "Princeton",
       "cam_org": "MLLT",
@@ -8606,7 +8606,7 @@
     },
     {
       "site": "Murray Point Road",
-      "tree_id": "024",
+      "tag_id": "024",
       "town": "Baileyville",
       "hub": "Princeton",
       "cam_org": "MLLT",
@@ -8642,7 +8642,7 @@
     },
     {
       "site": "Murray Point Road",
-      "tree_id": "025",
+      "tag_id": "025",
       "town": "Baileyville",
       "hub": "Princeton",
       "cam_org": "MLLT",
@@ -8678,7 +8678,7 @@
     },
     {
       "site": "Murray Point Road",
-      "tree_id": "027",
+      "tag_id": "027",
       "town": "Baileyville",
       "hub": "Princeton",
       "cam_org": "MLLT",
@@ -8714,7 +8714,7 @@
     },
     {
       "site": "Murray Point Road",
-      "tree_id": "028",
+      "tag_id": "028",
       "town": "Baileyville",
       "hub": "Princeton",
       "cam_org": "MLLT",
@@ -8750,7 +8750,7 @@
     },
     {
       "site": "Murray Point Road",
-      "tree_id": "029",
+      "tag_id": "029",
       "town": "Baileyville",
       "hub": "Princeton",
       "cam_org": "MLLT",
@@ -8786,7 +8786,7 @@
     },
     {
       "site": "Murray Point Road",
-      "tree_id": "030",
+      "tag_id": "030",
       "town": "Baileyville",
       "hub": "Princeton",
       "cam_org": "MLLT",
@@ -8822,7 +8822,7 @@
     },
     {
       "site": "North Shore Preserve",
-      "tree_id": "001",
+      "tag_id": "001",
       "town": "North Haven",
       "hub": "Warren",
       "cam_org": "NHCP",
@@ -8858,7 +8858,7 @@
     },
     {
       "site": "North Shore Preserve",
-      "tree_id": "002",
+      "tag_id": "002",
       "town": "North Haven",
       "hub": "Warren",
       "cam_org": "NHCP",
@@ -8894,7 +8894,7 @@
     },
     {
       "site": "North Shore Preserve",
-      "tree_id": "003",
+      "tag_id": "003",
       "town": "North Haven",
       "hub": "Warren",
       "cam_org": "NHCP",
@@ -8930,7 +8930,7 @@
     },
     {
       "site": "North Shore Preserve",
-      "tree_id": "004",
+      "tag_id": "004",
       "town": "North Haven",
       "hub": "Warren",
       "cam_org": "NHCP",
@@ -8966,7 +8966,7 @@
     },
     {
       "site": "North Shore Preserve",
-      "tree_id": "005",
+      "tag_id": "005",
       "town": "North Haven",
       "hub": "Warren",
       "cam_org": "NHCP",
@@ -9002,7 +9002,7 @@
     },
     {
       "site": "North Shore Preserve",
-      "tree_id": "006",
+      "tag_id": "006",
       "town": "North Haven",
       "hub": "Warren",
       "cam_org": "NHCP",
@@ -9038,7 +9038,7 @@
     },
     {
       "site": "North Shore Preserve",
-      "tree_id": "007",
+      "tag_id": "007",
       "town": "North Haven",
       "hub": "Warren",
       "cam_org": "NHCP",
@@ -9074,7 +9074,7 @@
     },
     {
       "site": "North Shore Preserve",
-      "tree_id": "008",
+      "tag_id": "008",
       "town": "North Haven",
       "hub": "Warren",
       "cam_org": "NHCP",
@@ -9110,7 +9110,7 @@
     },
     {
       "site": "North Shore Preserve",
-      "tree_id": "009",
+      "tag_id": "009",
       "town": "North Haven",
       "hub": "Warren",
       "cam_org": "NHCP",
@@ -9146,7 +9146,7 @@
     },
     {
       "site": "North Shore Preserve",
-      "tree_id": "010",
+      "tag_id": "010",
       "town": "North Haven",
       "hub": "Warren",
       "cam_org": "NHCP",
@@ -9182,7 +9182,7 @@
     },
     {
       "site": "Orono High School",
-      "tree_id": "001",
+      "tag_id": "001",
       "town": "Orono",
       "hub": "Orono",
       "cam_org": "ORONO",
@@ -9218,7 +9218,7 @@
     },
     {
       "site": "Orono High School",
-      "tree_id": "002",
+      "tag_id": "002",
       "town": "Orono",
       "hub": "Orono",
       "cam_org": "ORONO",
@@ -9254,7 +9254,7 @@
     },
     {
       "site": "Orono High School",
-      "tree_id": "003",
+      "tag_id": "003",
       "town": "Orono",
       "hub": "Orono",
       "cam_org": "ORONO",
@@ -9290,7 +9290,7 @@
     },
     {
       "site": "Orono High School",
-      "tree_id": "004",
+      "tag_id": "004",
       "town": "Orono",
       "hub": "Orono",
       "cam_org": "ORONO",
@@ -9326,7 +9326,7 @@
     },
     {
       "site": "Orono High School",
-      "tree_id": "005",
+      "tag_id": "005",
       "town": "Orono",
       "hub": "Orono",
       "cam_org": "ORONO",
@@ -9362,7 +9362,7 @@
     },
     {
       "site": "Orono High School",
-      "tree_id": "006",
+      "tag_id": "006",
       "town": "Orono",
       "hub": "Orono",
       "cam_org": "ORONO",
@@ -9398,7 +9398,7 @@
     },
     {
       "site": "Orono High School",
-      "tree_id": "007",
+      "tag_id": "007",
       "town": "Orono",
       "hub": "Orono",
       "cam_org": "ORONO",
@@ -9434,7 +9434,7 @@
     },
     {
       "site": "Orono High School",
-      "tree_id": "008",
+      "tag_id": "008",
       "town": "Orono",
       "hub": "Orono",
       "cam_org": "ORONO",
@@ -9470,7 +9470,7 @@
     },
     {
       "site": "Orono High School",
-      "tree_id": "009",
+      "tag_id": "009",
       "town": "Orono",
       "hub": "Orono",
       "cam_org": "ORONO",
@@ -9506,7 +9506,7 @@
     },
     {
       "site": "Orono High School",
-      "tree_id": "010",
+      "tag_id": "010",
       "town": "Orono",
       "hub": "Orono",
       "cam_org": "ORONO",
@@ -9542,7 +9542,7 @@
     },
     {
       "site": "Peabody Fitch Woods",
-      "tree_id": "001",
+      "tag_id": "001",
       "town": "Bridgton",
       "hub": "Bridgton",
       "cam_org": "LELT",
@@ -9578,7 +9578,7 @@
     },
     {
       "site": "Peabody Fitch Woods",
-      "tree_id": "002",
+      "tag_id": "002",
       "town": "Bridgton",
       "hub": "Bridgton",
       "cam_org": "LELT",
@@ -9614,7 +9614,7 @@
     },
     {
       "site": "Peabody Fitch Woods",
-      "tree_id": "003",
+      "tag_id": "003",
       "town": "Bridgton",
       "hub": "Bridgton",
       "cam_org": "LELT",
@@ -9650,7 +9650,7 @@
     },
     {
       "site": "Peabody Fitch Woods",
-      "tree_id": "004",
+      "tag_id": "004",
       "town": "Bridgton",
       "hub": "Bridgton",
       "cam_org": "LELT",
@@ -9686,7 +9686,7 @@
     },
     {
       "site": "Peabody Fitch Woods",
-      "tree_id": "005",
+      "tag_id": "005",
       "town": "Bridgton",
       "hub": "Bridgton",
       "cam_org": "LELT",
@@ -9722,7 +9722,7 @@
     },
     {
       "site": "Peabody Fitch Woods",
-      "tree_id": "006",
+      "tag_id": "006",
       "town": "Bridgton",
       "hub": "Bridgton",
       "cam_org": "LELT",
@@ -9758,7 +9758,7 @@
     },
     {
       "site": "Peabody Fitch Woods",
-      "tree_id": "021",
+      "tag_id": "021",
       "town": "Bridgton",
       "hub": "Bridgton",
       "cam_org": "LELT",
@@ -9794,7 +9794,7 @@
     },
     {
       "site": "PVT FAR Moosehorn",
-      "tree_id": "001",
+      "tag_id": "001",
       "town": "Lee",
       "hub": "Lincoln",
       "cam_org": "PVT FAR",
@@ -9830,7 +9830,7 @@
     },
     {
       "site": "PVT FAR Moosehorn",
-      "tree_id": "002",
+      "tag_id": "002",
       "town": "Lee",
       "hub": "Lincoln",
       "cam_org": "PVT FAR",
@@ -9866,7 +9866,7 @@
     },
     {
       "site": "PVT FAR Moosehorn",
-      "tree_id": "003",
+      "tag_id": "003",
       "town": "Lee",
       "hub": "Lincoln",
       "cam_org": "PVT FAR",
@@ -9902,7 +9902,7 @@
     },
     {
       "site": "PVT FAR Moosehorn",
-      "tree_id": "004",
+      "tag_id": "004",
       "town": "Lee",
       "hub": "Lincoln",
       "cam_org": "PVT FAR",
@@ -9938,7 +9938,7 @@
     },
     {
       "site": "PVT FAR Moosehorn",
-      "tree_id": "005",
+      "tag_id": "005",
       "town": "Lee",
       "hub": "Lincoln",
       "cam_org": "PVT FAR",
@@ -9974,7 +9974,7 @@
     },
     {
       "site": "PVT FAR Moosehorn",
-      "tree_id": "006",
+      "tag_id": "006",
       "town": "Lee",
       "hub": "Lincoln",
       "cam_org": "PVT FAR",
@@ -10010,7 +10010,7 @@
     },
     {
       "site": "PVT FAR Moosehorn",
-      "tree_id": "007",
+      "tag_id": "007",
       "town": "Lee",
       "hub": "Lincoln",
       "cam_org": "PVT FAR",
@@ -10046,7 +10046,7 @@
     },
     {
       "site": "PVT FAR Moosehorn",
-      "tree_id": "008",
+      "tag_id": "008",
       "town": "Lee",
       "hub": "Lincoln",
       "cam_org": "PVT FAR",
@@ -10082,7 +10082,7 @@
     },
     {
       "site": "PVT FAR Moosehorn",
-      "tree_id": "009",
+      "tag_id": "009",
       "town": "Lee",
       "hub": "Lincoln",
       "cam_org": "PVT FAR",
@@ -10118,7 +10118,7 @@
     },
     {
       "site": "PVT KLC House",
-      "tree_id": "001",
+      "tag_id": "001",
       "town": "Sebago",
       "hub": "Bridgton",
       "cam_org": "PVT KLC",
@@ -10154,7 +10154,7 @@
     },
     {
       "site": "PVT KLC House",
-      "tree_id": "002",
+      "tag_id": "002",
       "town": "Sebago",
       "hub": "Bridgton",
       "cam_org": "PVT KLC",
@@ -10190,7 +10190,7 @@
     },
     {
       "site": "PVT KLC House",
-      "tree_id": "003",
+      "tag_id": "003",
       "town": "Sebago",
       "hub": "Bridgton",
       "cam_org": "PVT KLC",
@@ -10226,7 +10226,7 @@
     },
     {
       "site": "PVT KLC House",
-      "tree_id": "004",
+      "tag_id": "004",
       "town": "Sebago",
       "hub": "Bridgton",
       "cam_org": "PVT KLC",
@@ -10262,7 +10262,7 @@
     },
     {
       "site": "PVT KLC House",
-      "tree_id": "005",
+      "tag_id": "005",
       "town": "Sebago",
       "hub": "Bridgton",
       "cam_org": "PVT KLC",
@@ -10298,7 +10298,7 @@
     },
     {
       "site": "PVT KLC House",
-      "tree_id": "006",
+      "tag_id": "006",
       "town": "Sebago",
       "hub": "Bridgton",
       "cam_org": "PVT KLC",
@@ -10334,7 +10334,7 @@
     },
     {
       "site": "PVT KLC House",
-      "tree_id": "007",
+      "tag_id": "007",
       "town": "Sebago",
       "hub": "Bridgton",
       "cam_org": "PVT KLC",
@@ -10370,7 +10370,7 @@
     },
     {
       "site": "PVT KLC House",
-      "tree_id": "008",
+      "tag_id": "008",
       "town": "Sebago",
       "hub": "Bridgton",
       "cam_org": "PVT KLC",
@@ -10406,7 +10406,7 @@
     },
     {
       "site": "PVT KLC House",
-      "tree_id": "009",
+      "tag_id": "009",
       "town": "Sebago",
       "hub": "Bridgton",
       "cam_org": "PVT KLC",
@@ -10442,7 +10442,7 @@
     },
     {
       "site": "PVT KLC House",
-      "tree_id": "010",
+      "tag_id": "010",
       "town": "Sebago",
       "hub": "Bridgton",
       "cam_org": "PVT KLC",
@@ -10478,7 +10478,7 @@
     },
     {
       "site": "PVT KLC House",
-      "tree_id": "011",
+      "tag_id": "011",
       "town": "Sebago",
       "hub": "Bridgton",
       "cam_org": "PVT KLC",
@@ -10514,7 +10514,7 @@
     },
     {
       "site": "PVT KLC House",
-      "tree_id": "012",
+      "tag_id": "012",
       "town": "Sebago",
       "hub": "Bridgton",
       "cam_org": "PVT KLC",
@@ -10550,7 +10550,7 @@
     },
     {
       "site": "PVT KLC House",
-      "tree_id": "013",
+      "tag_id": "013",
       "town": "Sebago",
       "hub": "Bridgton",
       "cam_org": "PVT KLC",
@@ -10586,7 +10586,7 @@
     },
     {
       "site": "PVT RWB Parkland",
-      "tree_id": "001",
+      "tag_id": "001",
       "town": "Swanville",
       "hub": "Bridgton",
       "cam_org": "PVT RWB",
@@ -10622,7 +10622,7 @@
     },
     {
       "site": "PVT RWB Parkland",
-      "tree_id": "002",
+      "tag_id": "002",
       "town": "Swanville",
       "hub": "Bridgton",
       "cam_org": "PVT RWB",
@@ -10658,7 +10658,7 @@
     },
     {
       "site": "PVT RWB Parkland",
-      "tree_id": "003",
+      "tag_id": "003",
       "town": "Swanville",
       "hub": "Bridgton",
       "cam_org": "PVT RWB",
@@ -10694,7 +10694,7 @@
     },
     {
       "site": "PVT RWB Parkland",
-      "tree_id": "004",
+      "tag_id": "004",
       "town": "Swanville",
       "hub": "Bridgton",
       "cam_org": "PVT RWB",
@@ -10730,7 +10730,7 @@
     },
     {
       "site": "PVT RWB Parkland",
-      "tree_id": "005",
+      "tag_id": "005",
       "town": "Swanville",
       "hub": "Bridgton",
       "cam_org": "PVT RWB",
@@ -10766,7 +10766,7 @@
     },
     {
       "site": "PVT RWB Parkland",
-      "tree_id": "006",
+      "tag_id": "006",
       "town": "Swanville",
       "hub": "Bridgton",
       "cam_org": "PVT RWB",
@@ -10802,7 +10802,7 @@
     },
     {
       "site": "Shepard’s Farm Preserve",
-      "tree_id": "001",
+      "tag_id": "001",
       "town": "Norway",
       "hub": "Bethel",
       "cam_org": "WFLT",
@@ -10838,7 +10838,7 @@
     },
     {
       "site": "Shepard’s Farm Preserve",
-      "tree_id": "002",
+      "tag_id": "002",
       "town": "Norway",
       "hub": "Bethel",
       "cam_org": "WFLT",
@@ -10874,7 +10874,7 @@
     },
     {
       "site": "Shepard’s Farm Preserve",
-      "tree_id": "003",
+      "tag_id": "003",
       "town": "Norway",
       "hub": "Bethel",
       "cam_org": "WFLT",
@@ -10910,7 +10910,7 @@
     },
     {
       "site": "SLSP Boat Ramp",
-      "tree_id": "013",
+      "tag_id": "013",
       "town": "Casco",
       "hub": "Bridgton",
       "cam_org": "SLSP",
@@ -10946,7 +10946,7 @@
     },
     {
       "site": "SLSP Boat Ramp",
-      "tree_id": "014",
+      "tag_id": "014",
       "town": "Casco",
       "hub": "Bridgton",
       "cam_org": "SLSP",
@@ -10982,7 +10982,7 @@
     },
     {
       "site": "SLSP Boat Ramp",
-      "tree_id": "018",
+      "tag_id": "018",
       "town": "Casco",
       "hub": "Bridgton",
       "cam_org": "SLSP",
@@ -11018,7 +11018,7 @@
     },
     {
       "site": "SLSP Boat Ramp",
-      "tree_id": "020",
+      "tag_id": "020",
       "town": "Casco",
       "hub": "Bridgton",
       "cam_org": "SLSP",
@@ -11054,7 +11054,7 @@
     },
     {
       "site": "SLSP New Gate",
-      "tree_id": "001",
+      "tag_id": "001",
       "town": "Casco",
       "hub": "Bridgton",
       "cam_org": "SLSP",
@@ -11090,7 +11090,7 @@
     },
     {
       "site": "SLSP New Gate",
-      "tree_id": "002",
+      "tag_id": "002",
       "town": "Casco",
       "hub": "Bridgton",
       "cam_org": "SLSP",
@@ -11126,7 +11126,7 @@
     },
     {
       "site": "SLSP New Gate",
-      "tree_id": "003",
+      "tag_id": "003",
       "town": "Casco",
       "hub": "Bridgton",
       "cam_org": "SLSP",
@@ -11162,7 +11162,7 @@
     },
     {
       "site": "SLSP New Gate",
-      "tree_id": "004",
+      "tag_id": "004",
       "town": "Casco",
       "hub": "Bridgton",
       "cam_org": "SLSP",
@@ -11198,7 +11198,7 @@
     },
     {
       "site": "SLSP New Gate",
-      "tree_id": "005",
+      "tag_id": "005",
       "town": "Casco",
       "hub": "Bridgton",
       "cam_org": "SLSP",
@@ -11234,7 +11234,7 @@
     },
     {
       "site": "SLSP New Gate",
-      "tree_id": "006",
+      "tag_id": "006",
       "town": "Casco",
       "hub": "Bridgton",
       "cam_org": "SLSP",
@@ -11270,7 +11270,7 @@
     },
     {
       "site": "SLSP New Gate",
-      "tree_id": "007",
+      "tag_id": "007",
       "town": "Casco",
       "hub": "Bridgton",
       "cam_org": "SLSP",
@@ -11306,7 +11306,7 @@
     },
     {
       "site": "SLSP New Gate",
-      "tree_id": "008",
+      "tag_id": "008",
       "town": "Casco",
       "hub": "Bridgton",
       "cam_org": "SLSP",
@@ -11342,7 +11342,7 @@
     },
     {
       "site": "SLSP New Gate",
-      "tree_id": "009",
+      "tag_id": "009",
       "town": "Casco",
       "hub": "Bridgton",
       "cam_org": "SLSP",
@@ -11378,7 +11378,7 @@
     },
     {
       "site": "SLSP New Gate",
-      "tree_id": "010",
+      "tag_id": "010",
       "town": "Casco",
       "hub": "Bridgton",
       "cam_org": "SLSP",
@@ -11414,7 +11414,7 @@
     },
     {
       "site": "SLSP New Gate",
-      "tree_id": "011",
+      "tag_id": "011",
       "town": "Casco",
       "hub": "Bridgton",
       "cam_org": "SLSP",
@@ -11450,7 +11450,7 @@
     },
     {
       "site": "SLSP New Gate",
-      "tree_id": "012",
+      "tag_id": "012",
       "town": "Casco",
       "hub": "Bridgton",
       "cam_org": "SLSP",
@@ -11486,7 +11486,7 @@
     },
     {
       "site": "SLSP New Gate",
-      "tree_id": "015",
+      "tag_id": "015",
       "town": "Casco",
       "hub": "Bridgton",
       "cam_org": "SLSP",
@@ -11522,7 +11522,7 @@
     },
     {
       "site": "SLSP New Gate",
-      "tree_id": "016",
+      "tag_id": "016",
       "town": "Casco",
       "hub": "Bridgton",
       "cam_org": "SLSP",
@@ -11558,7 +11558,7 @@
     },
     {
       "site": "SLSP New Gate",
-      "tree_id": "017",
+      "tag_id": "017",
       "town": "Casco",
       "hub": "Bridgton",
       "cam_org": "SLSP",
@@ -11594,7 +11594,7 @@
     },
     {
       "site": "SLSP New Gate",
-      "tree_id": "019",
+      "tag_id": "019",
       "town": "Casco",
       "hub": "Bridgton",
       "cam_org": "SLSP",
@@ -11630,7 +11630,7 @@
     },
     {
       "site": "Tidal Falls Preserve",
-      "tree_id": "001",
+      "tag_id": "001",
       "town": "Hancock",
       "hub": "Ellsworth",
       "cam_org": "FBCLT",
@@ -11666,7 +11666,7 @@
     },
     {
       "site": "Tidal Falls Preserve",
-      "tree_id": "002",
+      "tag_id": "002",
       "town": "Hancock",
       "hub": "Ellsworth",
       "cam_org": "FBCLT",
@@ -11702,7 +11702,7 @@
     },
     {
       "site": "Tidal Falls Preserve",
-      "tree_id": "003",
+      "tag_id": "003",
       "town": "Hancock",
       "hub": "Ellsworth",
       "cam_org": "FBCLT",
@@ -11738,7 +11738,7 @@
     },
     {
       "site": "Tidal Falls Preserve",
-      "tree_id": "004",
+      "tag_id": "004",
       "town": "Hancock",
       "hub": "Ellsworth",
       "cam_org": "FBCLT",
@@ -11774,7 +11774,7 @@
     },
     {
       "site": "Tidal Falls Preserve",
-      "tree_id": "005",
+      "tag_id": "005",
       "town": "Hancock",
       "hub": "Ellsworth",
       "cam_org": "FBCLT",
@@ -11810,7 +11810,7 @@
     },
     {
       "site": "Tidal Falls Preserve",
-      "tree_id": "006",
+      "tag_id": "006",
       "town": "Hancock",
       "hub": "Ellsworth",
       "cam_org": "FBCLT",
@@ -11846,7 +11846,7 @@
     },
     {
       "site": "Tidal Falls Preserve",
-      "tree_id": "007",
+      "tag_id": "007",
       "town": "Hancock",
       "hub": "Ellsworth",
       "cam_org": "FBCLT",
@@ -11882,7 +11882,7 @@
     },
     {
       "site": "Tidal Falls Preserve",
-      "tree_id": "008",
+      "tag_id": "008",
       "town": "Hancock",
       "hub": "Ellsworth",
       "cam_org": "FBCLT",
@@ -11918,7 +11918,7 @@
     },
     {
       "site": "Tidal Waters Preserve",
-      "tree_id": "008",
+      "tag_id": "008",
       "town": "South Berwick",
       "hub": "Sanford",
       "cam_org": "GWRLT",
@@ -11954,7 +11954,7 @@
     },
     {
       "site": "Tidal Waters Preserve",
-      "tree_id": "009",
+      "tag_id": "009",
       "town": "South Berwick",
       "hub": "Sanford",
       "cam_org": "GWRLT",
@@ -11990,7 +11990,7 @@
     },
     {
       "site": "Tidal Waters Preserve",
-      "tree_id": "010",
+      "tag_id": "010",
       "town": "South Berwick",
       "hub": "Sanford",
       "cam_org": "GWRLT",
@@ -12026,7 +12026,7 @@
     },
     {
       "site": "Virginia Morin Field",
-      "tree_id": "001",
+      "tag_id": "001",
       "town": "Sanford",
       "hub": "Sanford",
       "cam_org": "SSMWLT",
@@ -12062,7 +12062,7 @@
     },
     {
       "site": "Virginia Morin Field",
-      "tree_id": "002",
+      "tag_id": "002",
       "town": "Sanford",
       "hub": "Sanford",
       "cam_org": "SSMWLT",
@@ -12098,7 +12098,7 @@
     },
     {
       "site": "Virginia Morin Field",
-      "tree_id": "003",
+      "tag_id": "003",
       "town": "Sanford",
       "hub": "Sanford",
       "cam_org": "SSMWLT",
@@ -12134,7 +12134,7 @@
     },
     {
       "site": "Virginia Morin Field",
-      "tree_id": "004",
+      "tag_id": "004",
       "town": "Sanford",
       "hub": "Sanford",
       "cam_org": "SSMWLT",
@@ -12170,7 +12170,7 @@
     },
     {
       "site": "Virginia Morin Field",
-      "tree_id": "005",
+      "tag_id": "005",
       "town": "Sanford",
       "hub": "Sanford",
       "cam_org": "SSMWLT",
@@ -12206,7 +12206,7 @@
     },
     {
       "site": "Virginia Morin Field",
-      "tree_id": "006",
+      "tag_id": "006",
       "town": "Sanford",
       "hub": "Sanford",
       "cam_org": "SSMWLT",
@@ -12242,7 +12242,7 @@
     },
     {
       "site": "Virginia Morin Field",
-      "tree_id": "011",
+      "tag_id": "011",
       "town": "Sanford",
       "hub": "Sanford",
       "cam_org": "SSMWLT",
@@ -12278,7 +12278,7 @@
     },
     {
       "site": "Virginia Morin Field",
-      "tree_id": "012",
+      "tag_id": "012",
       "town": "Sanford",
       "hub": "Sanford",
       "cam_org": "SSMWLT",
@@ -12314,7 +12314,7 @@
     },
     {
       "site": "Virginia Morin Field",
-      "tree_id": "013",
+      "tag_id": "013",
       "town": "Sanford",
       "hub": "Sanford",
       "cam_org": "SSMWLT",
@@ -12350,7 +12350,7 @@
     },
     {
       "site": "West of Main Building",
-      "tree_id": "001",
+      "tag_id": "001",
       "town": "Holden",
       "hub": "Orono",
       "cam_org": "MAFP",
@@ -12386,7 +12386,7 @@
     },
     {
       "site": "West of Main Building",
-      "tree_id": "002",
+      "tag_id": "002",
       "town": "Holden",
       "hub": "Orono",
       "cam_org": "MAFP",
@@ -12422,7 +12422,7 @@
     },
     {
       "site": "West of Main Building",
-      "tree_id": "003",
+      "tag_id": "003",
       "town": "Holden",
       "hub": "Orono",
       "cam_org": "MAFP",
@@ -12458,7 +12458,7 @@
     },
     {
       "site": "West of Main Building",
-      "tree_id": "012",
+      "tag_id": "012",
       "town": "Holden",
       "hub": "Orono",
       "cam_org": "MAFP",
@@ -12494,7 +12494,7 @@
     },
     {
       "site": "West of Main Building",
-      "tree_id": "013",
+      "tag_id": "013",
       "town": "Holden",
       "hub": "Orono",
       "cam_org": "MAFP",
@@ -12530,7 +12530,7 @@
     },
     {
       "site": "West of Main Building",
-      "tree_id": "014",
+      "tag_id": "014",
       "town": "Holden",
       "hub": "Orono",
       "cam_org": "MAFP",
@@ -12566,7 +12566,7 @@
     },
     {
       "site": "Wild tree KNOWN to TACF",
-      "tree_id": "ME-BR004",
+      "tag_id": "ME-BR004",
       "town": null,
       "hub": null,
       "cam_org": "WildTACF",
@@ -12602,7 +12602,7 @@
     },
     {
       "site": "Wild tree KNOWN to TACF",
-      "tree_id": "ME-FP001",
+      "tag_id": "ME-FP001",
       "town": null,
       "hub": null,
       "cam_org": "WildTACF",
@@ -12638,7 +12638,7 @@
     },
     {
       "site": "Wild tree KNOWN to TACF",
-      "tree_id": "ME-FP002",
+      "tag_id": "ME-FP002",
       "town": null,
       "hub": null,
       "cam_org": "WildTACF",
@@ -12674,7 +12674,7 @@
     },
     {
       "site": "Wild tree KNOWN to TACF",
-      "tree_id": "ME-HA111",
+      "tag_id": "ME-HA111",
       "town": null,
       "hub": null,
       "cam_org": "WildTACF",
@@ -12710,7 +12710,7 @@
     },
     {
       "site": "Wild tree KNOWN to TACF",
-      "tree_id": "ME-HA222",
+      "tag_id": "ME-HA222",
       "town": null,
       "hub": null,
       "cam_org": "WildTACF",
@@ -12746,7 +12746,7 @@
     },
     {
       "site": "Wild tree KNOWN to TACF",
-      "tree_id": "ME-RD001",
+      "tag_id": "ME-RD001",
       "town": null,
       "hub": null,
       "cam_org": "WildTACF",
@@ -12782,7 +12782,7 @@
     },
     {
       "site": "Wild tree UNKNOWN to TACF",
-      "tree_id": "-70.716516 43.997666",
+      "tag_id": "-70.716516 43.997666",
       "town": null,
       "hub": null,
       "cam_org": "WildCAM",
@@ -12818,7 +12818,7 @@
     },
     {
       "site": "Wolfe's Neck Center for Ag & Env",
-      "tree_id": "001",
+      "tag_id": "001",
       "town": "Freeport",
       "hub": "Freeport",
       "cam_org": "WNC",
@@ -12854,7 +12854,7 @@
     },
     {
       "site": "Wolfe's Neck Center for Ag & Env",
-      "tree_id": "002",
+      "tag_id": "002",
       "town": "Freeport",
       "hub": "Freeport",
       "cam_org": "WNC",
@@ -12890,7 +12890,7 @@
     },
     {
       "site": "Wolfe's Neck Center for Ag & Env",
-      "tree_id": "003",
+      "tag_id": "003",
       "town": "Freeport",
       "hub": "Freeport",
       "cam_org": "WNC",
@@ -12926,7 +12926,7 @@
     },
     {
       "site": "Wolfe's Neck Center for Ag & Env",
-      "tree_id": "004",
+      "tag_id": "004",
       "town": "Freeport",
       "hub": "Freeport",
       "cam_org": "WNC",
@@ -12962,7 +12962,7 @@
     },
     {
       "site": "Wolfe's Neck Center for Ag & Env",
-      "tree_id": "005",
+      "tag_id": "005",
       "town": "Freeport",
       "hub": "Freeport",
       "cam_org": "WNC",
