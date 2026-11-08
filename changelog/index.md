@@ -7,7 +7,7 @@ nav_order: 98
 <img src="../assets/images/website/changelog.png" alt="CAMTREE Volunteer consulting a day planner showing the ChangeLog" height="512" width="828">
 
 # {{ page.title }}
-_Version: November 7 edit # 3_
+_Version: November 7 edit # 4_
 
 <!-- This content will not appear in the rendered Markdown 
 <details markdown="1">
@@ -61,6 +61,7 @@ Each entry is grouped by month. Within each month, changes are organized by area
 - Added Python content under the Database Technologies section
 - Added EpiCollect content under the Database Technologies section
 - Updated Web Server content under the Database Technologies section
+- Removed Undeer Construction page
 
 </details>
 
