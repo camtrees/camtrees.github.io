@@ -41,6 +41,13 @@ The general process is:
 
 This approach eliminates much of the manual effort that would otherwise be required to transfer field observations into the CAMTREES Database.
 
+
+### How field data flows
+
+<img src="../assets/images/website/field-data-flow.png" alt="Field Data Flow" height="512" width="828">
+
+Volunteers submit field observations through EpiCollect5. Python retrieves and prepares those observations, then imports them into the CAMTREES Database hosted by Neon. The stored records provide the data for reports and maps.
+
 ## Database Processing and Maintenance
 
 In addition to importing field observations, Python provides a flexible way to perform database processing and maintenance tasks.
@@ -56,6 +63,13 @@ This makes Python useful for tasks such as:
 - Exporting database information for use by other applications.
 
 Although many database operations can be performed directly using SQL, Python is particularly valuable when a task requires multiple processing steps or interaction with an external service.
+
+
+## Publishing Database Information to the Website
+
+CAMTREES uses Python to generate JSON files from selected tree data in PostgreSQL. The export reads the records intended for the website and writes them in JSON, a structured format the website can read.
+
+GitHub Pages serves the generated files alongside the website. The tree data pages load those files so visitors can search the published records and sort the results in their browser. The website displays the data from the published export. To show changes from PostgreSQL, CAMTREES regenerates and publishes the JSON files each morning.
 
 ## Developing Python Programs with PyCharm
 
