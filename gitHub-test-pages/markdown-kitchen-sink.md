@@ -186,11 +186,11 @@ Some text
 
 ### Small image
 
-![Small Image](../../assets/images/small-image.jpg)
+![Small Image](../../assets/images/website/small-image.jpg)
 
 ### Large image
 
-![Large Image](../../assets/images/large-image.jpg)
+![Large Image](../../assets/images/website/large-image.jpg)
 
 "[Wroclaw University Library digitizing rare archival texts](https://www.flickr.com/photos/97810305@N08/9401451269)" by [j_cadmus](https://www.flickr.com/photos/97810305@N08) is marked with [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/?ref=openverse).
 
