@@ -19,14 +19,6 @@ ecosystem.
 	* Hosts the source code and documentation for the CAMTREES project.
 	* GitHub Actions automatically perform a nightly backup of the CAMTREES Database.
 	* GitHub Pages hosts this website.
-- **PostgreSQL**
-	* Serves as the primary relational database for the CAMTREES project.
-	* The database is hosted by Neon, a cloud-based PostgreSQL hosting service.
-- **Python**
-	* Python programs import data collected by EpiCollect into the CAMTREES Database
-	* Development is performed using the PyCharm integrated development environment (IDE)
-- **Web Server**
-	* GitHub Pages hosts this website.
 - **Google Services**
 	* Gmail provides the shared account used to access the project's cloud services.
 	* Google Groups provides a shared email address and facilitates collaboration among volunteers.
@@ -36,7 +28,14 @@ ecosystem.
 	  querying geospatial data.
 	* Google My Maps provides a publicly accessible map of CAM tree locations across Maine.
 	* DBeaver allows database administrators to display selected tree locations directly from the database.
+- **PostgreSQL**
+	* Serves as the primary relational database for the CAMTREES project.
+	* The database is hosted by Neon, a cloud-based PostgreSQL hosting service.
+- **Python**
+	* Python programs import data collected by EpiCollect into the CAMTREES Database
+	* Development is performed using the PyCharm integrated development environment (IDE)
+- **Web Server**
+	* GitHub Pages hosts this website.
 
-Additional information about each of these technologies is available throughout the Info
-for Database Admins section of this website.
+Additional information about each of these technologies is available via the links below.
 
