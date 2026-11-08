@@ -75,8 +75,6 @@ You will then select one of the following six pathways depending on the activity
 | **GPS**      | Recording the GPS location of an existing tree                           |
 | **ONE**      | Recording health information or performing care actions on a single tree |
 | **ALL**      | Recording care actions performed on all trees at a site                  |
-| **WildCAM**  | Recording information about a wild tree not previously known to TACF     |
-| **WildTACF** | Recording information about a wild tree already known to TACF            |
 
 Kim Colson has created the comprehensive
 <a href="https://camtrees.github.io/assets/cam-epicollect5-quick-reference-guide-1.0.pdf" target="_blank">CAM EpiCollect5 Quick Reference Guide</a>,
@@ -165,41 +163,3 @@ Used when recording care actions performed on all trees at a site.
 
 </details>
 
-
-<details markdown="1">
-<summary markdown="span"><strong>WildCAM — Recording a Newly Discovered Wild Tree</strong></summary>
-
-
-Used when recording information about a wild chestnut tree not previously known to TACF.
-
-- **Tree GPS Location** — The tree's GPS coordinates.
-- **Access Path** — Wheelchair-accessible trail, hiking trail, auto road, etc.
-- **Access Level** — Easy, Moderate, or Difficult.
-- **Access Note** — Additional information regarding accessibility.
-- **Health** — Good, Poor, or Dead.
-- **Height** — Tree height measured in feet and inches.
-- **Diameter** — Tree diameter measured at breast height.
-- **Blight** — Whether the tree shows signs of blight.
-- **Form** — Straight or Branching.
-- **Stump Sprouting** — Whether stump sprouts are present.
-- **Catkins** — Whether catkins are present.
-- **Blossoms** — Whether blossoms are present.
-- **Nut Production** — None, Some, or Many.
-- **Access Method** — Equipment required for harvesting or pollination.
-- **Tree Photos** — Two photos of the tree.
-- **Care Actions** — Actions performed.
-- **Additional Info** — Any additional information about the wild tree.
-
-</details>
-
-
-<details markdown="1">
-<summary markdown="span"><strong>WildTACF — Recording a Known TACF Wild Tree</strong></summary>
-
-
-Used when recording information about a wild tree already known to TACF.
-
-- **Tag ID** — The TACF identifier (for example, ME-XX###).
-All other information collected for a WildCAM tree.
-
-</details>
