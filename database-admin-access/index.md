@@ -1,7 +1,7 @@
 ---
 title: Database Admin Access
 layout: default
-nav_order: 7
+nav_order: 6
 ---
 
 <img src="../assets/images/website/staff-meeting.png" alt="CAM Staff Meeting" height="512" width="828">
