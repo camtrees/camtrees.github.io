@@ -11,5 +11,5 @@ nav_order: 3
 Use the **Project Roadmap** page to see an overview of planned enhancements, upcoming
 work, and the future direction of the CAMTREES Database system.
 
-Use the **New Data Requests** pages to link the EpiCollect project to request data to be added into the CAMTREES database.
+Use the **New Data Requests** page to access the EpiCollect project to request data to be added into the CAMTREES database.
 
