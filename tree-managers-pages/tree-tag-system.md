@@ -39,7 +39,7 @@ A license plate contains only a unique combination of letters and numbers. When 
 needs additional information about a vehicle, such as its owner, make, model, or
 registration, they simply look up the license plate in a database.
 
-The proposed tree-tagging system works the same way.
+The 2027 Tree TAG System works the same way.
 
 The physical tag contains only the minimum information needed to uniquely identify the
 tree. All additional information, such as the tree's mother, father, planting history,
@@ -225,13 +225,13 @@ Ideally, each tag would contain only:
 - The TAG-ID
 - The year the tree was planted
 
-The illustration above shows an example of this proposed tag design.
+The illustration above shows an example of the 2027 Tree TAG System design.
 
 ## Frequently Asked Questions
 
 ### Why are the Tree Manager's initials included in the TAG-ID?
 
-Including the Tree Manager's initials is fundamental to this proposal.
+Including the Tree Manager's initials is fundamental to the 2027 Tree TAG System
 
 It allows multiple Tree Managers to create TAG-IDs independently without any possibility
 of duplicate identifiers.
