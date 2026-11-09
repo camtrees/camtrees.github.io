@@ -1,5 +1,5 @@
 ---
-title: Proposed Tree Tagging System
+title: Tree TAG System
 layout: default
 parent: Tree Managers Pages
 ---
@@ -9,18 +9,20 @@ parent: Tree Managers Pages
 # {{ page.title }}
 
 {: .warning }
-This proposal does **not** describe the current tree-tagging process. It outlines a
-proposed methodology for assigning tree tags beginning with the 2027 planting season.
+This document outlines the method used to assign Tree TAGs beginning with the 2027 planting season.
 
 <p></p>
 
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
 
+If you already know all about the 2027 Tree TAG System, you can Jump to the 
+[How Tree Managers Create Tree TAGs](#how-tree-managers-create-tree-tags) section.
+
 
 ## Goal
 
 
-The goal of this proposal is to simplify the process of assigning every tree a unique
+The goal of the 2027 Tree TAG system is to simplify the process of assigning every tree a unique
 identifier (UID).
 
 For this project, the unique identifier is called the **TAG-ID**. Each TAG-ID is assigned
@@ -81,7 +83,7 @@ For purposes of this discussion, however, these responsibilities are treated as 
 roles.
 
 
-## How the Proposed Tree Tag System Would Work
+## How Tree Managers Create Tree TAGs
 
 Suppose Mark, a Tree Manager, receives 20 seedlings from TACF (or another supplier). Each
 seedling already has a white vinyl tag identifying its mother and father.
@@ -136,16 +138,11 @@ Use EpiCollect to record the following information:
 - Mother tree
 - Father tree
 
-A demonstration EpiCollect project has been created so Tree Managers can practice the
-process before using the production project.
-
-To try the test project:
-
 1. Launch the EpiCollect app on your phone.
 2. If necessary, return to the **Projects** screen.
 3. Tap **+ Add Project**.
-4. Enter **hkr** in the **Search for a project** field.
-5. Select **HKR Tree TAG** to install the project.
+4. Enter **cam** in the **Search for a project** field.
+5. Select **CAM Tree TAG** to install the project.
 6. Open the project and tap **+ Add Entry** to record a sample tree.
 
 Testing shows that recording a new tree typically takes **25 to 30 seconds**.
@@ -184,7 +181,7 @@ Use:
 *Click the disclosure triangles above for additional details about each step.*
 
 
-## Advantages of the New System
+## Advantages of the 2027 Tree TAG System
 
 Each Tree Manager can create tree tags completely independently.
 
@@ -217,7 +214,7 @@ and follows the same tagging process.
 
 ## Final Thoughts
 
-This proposal is intended solely to provide a simple and reliable method for assigning a
+The 2027 Tree TAG System is intended solely to provide a simple and reliable method for assigning a
 permanent, unique identifier to every tree.
 
 It does **not** limit the amount of information that could be engraved on a tree tag.
@@ -260,10 +257,10 @@ need to keep a separate written record.
 
 No.
 
-In fact, that is often **not** true today (August 2026), even though some sites happen to
+In fact, that is often **not** true today (2026), even though some sites happen to
 have sequential tree numbers.
 
-Under the current system, numbering is sequential within a CAM Organization — not within
+Under the previous system, numbering is sequential within a CAM Organization — not within
 an individual planting site. Whether trees at a particular site have consecutive numbers
 is simply a coincidence.
 
