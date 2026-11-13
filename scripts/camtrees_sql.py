@@ -16,6 +16,7 @@
 ##          : 2026-07-11 <hkr> Add return statements at end of all functions
 ##                             even if there is an earlier return
 ##          : 2026-09-05 <hkr> Fix Added Row output in sql_camtrees_add_tree_initial_health
+##          : 2026-11-12 <hkr> Add 'sql_camtrees_add_tree_tag'
 ###############################################################################
 
 # Python libraries
@@ -330,6 +331,54 @@ def sql_camtrees_add_tree_photo(record_type, site, tree_number, date, created_by
     print(f"\t +++++ Added tree_photo_id {tree_photo_id[0][0]} to the 'tree_photo' table.")
 
     return  ## END FUNCTION: sql_camtrees_add_tree_photo
+
+
+def sql_camtrees_add_tree_tag(row, tree_manager_initials):
+    """
+    Add a TAG to the SQL 'tree_tag' table.
+    """
+    # ------------------------------------------------------------------------------------------
+    # Verify tree_manager_initials and tree_manager_email is a valid combination
+    # ------------------------------------------------------------------------------------------
+	valid_combinations = {
+		("ENE", "ericevans45@gmail.com"),
+		("ESB", "eva.maineacf@gmail.com"),
+		("HKR", "ken.rosenberry@gmail.com"),
+		("KLC", "kimcolson.sebago@gmail.com"),
+		("KLS", "k.lea.sewell@gmail.com"),
+		("MAM", "markmccollough25@gmail.com")
+	}
+	# Verify membership
+	if (tree_manager_initials, row.created_by) not in valid_combinations:
+		print(f"Invalid combination. tree_manager_initials = {tree_manager_initials} tree_manager_email={row.created_by}")
+    	return
+    
+	tree_tag_id = f"{tree_manager_initials} - {row.tag_number}"
+
+    # ------------------------------------------------------------------------------------------
+    # Create SQL command
+    # ------------------------------------------------------------------------------------------
+    sql_command = f"""
+        select camtrees_add_tree_tag(
+            p_tag_id                 => '{tree_tag_id}'           ,
+            p_date                   => '{row.created_at}'        ,
+            p_volunteer_email        => '{row.created_by}'        ,
+            p_mother_tree            => '{row.mother_tree}'       ,
+            p_mother_tree_other      => '{row.mother_tree_other}' ,
+            p_father_tree            => '{row.Father_Tree}'       ,
+            p_father_tree_other      => '{row.father_tree_other}' ,
+            p_parent_tree_note       => '{row.parent_tree_note}' 
+            );
+            """
+    print(f"\t SQL: {sql_command}")
+
+    # ------------------------------------------------------------------------------------------
+    # Execute the SQL command
+    # ------------------------------------------------------------------------------------------
+    id = execute_query(sql_command)
+    print(f"\t +++++ Added tag id#:{id[0][0]} tag_id:{row.tag_id} to the 'tree_tag' table.")
+
+    return  ## END FUNCTION: sql_camtrees_add_tree_tag
 
 
 def sql_camtrees_get_distance_to_closest_wildcam_tree(longitude, latitude):

@@ -22,7 +22,7 @@ load_dotenv()
 #------------------------------------------------------------------------------------------
 # Set to true so we can import any of Kenster's EpiCollect data from TODAY!
 #------------------------------------------------------------------------------------------
-KR_TESTING = False
+KR_TESTING = True
 
 #------------------------------------------------------------------------------------------
 # Connect to the CAMTREES database? If not, connect to the KENSTER backup database.
@@ -47,9 +47,12 @@ else:
     DB_HOST_READ  = os.getenv("KENSTER_READ_URL")
 
 
-MAINT_CLIENT_SECRET    = os.getenv("MAINT_CLIENT_SECRET")
-
-RAIN_CLIENT_SECRET     = os.getenv("RAIN_CLIENT_SECRET")
+# ------------------------------------------------------------------------------------------
+# Extract secret database globals for the various EpiCollect projects
+# ------------------------------------------------------------------------------------------
+MAINT_CLIENT_SECRET = os.getenv("MAINT_CLIENT_SECRET")
+RAIN_CLIENT_SECRET  = os.getenv("RAIN_CLIENT_SECRET")
+TAG_CLIENT_SECRET   = os.getenv("TAG_CLIENT_SECRET")
 
 
 # ------------------------------------------------------------------------------------------
@@ -68,4 +71,10 @@ MAINT_PROJECT_SLUG  = 'cam-tree-maintenance'
 RAIN_CLIENT_ID     = '7571'
 RAIN_PROJECT_NAME  = 'CAM_Tree_Rain_Event'
 RAIN_PROJECT_SLUG  = 'cam-tree-rain-event'
+# ------------------------------------------------------------------------------------------
+# EpiCollect CAM TREE TAG project "API" and "Apps" data from project dashboard
+# ------------------------------------------------------------------------------------------
+TAG_CLIENT_ID     = '8628'
+TAG_PROJECT_NAME  = 'CAM_TREE_TAG'
+TAG_PROJECT_SLUG  = 'cam-tree-tag'
 
