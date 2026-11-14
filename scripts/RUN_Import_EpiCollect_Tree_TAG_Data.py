@@ -15,131 +15,40 @@
 ## Author   : Ken Rosenberry <ken.rosenberry@gmail.com>
 ##
 ## Revised  : 2026-11-13 <hkr> Initial Version
+##            2026-11-14 Use the shared EpiCollect import runner
 ###############################################################################
-
-# Python libraries
-from datetime import date, timedelta
-import pandas as pd
-from tabulate import tabulate
 
 # load globals from config.py file
 from config import *
 
 # Kenster libraries
 from camtrees_sql import *
-from epicollect_api import *
-from execute_query import execute_query
+from epicollect_import_runner import EpicollectImportConfig, run_epicollect_import
 from print_functions import *
 
 # import sys
 # sys.exit()
 
-#------------------------------------------------------------------------------------------
-# From which EpiCollect Project will we process records
-#------------------------------------------------------------------------------------------
-EPICOLLECT_PROJECT = 'tag'
+IMPORT_CONFIG = EpicollectImportConfig(
+    project_key="tag",
+    client_id=TAG_CLIENT_ID,
+    client_secret=TAG_CLIENT_SECRET,
+    project_name=TAG_PROJECT_NAME,
+    project_slug=TAG_PROJECT_SLUG,
+    token_file="epicollect_cam_tree_tag_access_token",
+    map_index=1,
+    string_columns=(
+        "mother_tree_other",
+        "father_tree_other",
+        "parent_tree_note",
+    ),
+)
 
 
-def initialize_python_library_settings():
+def epicollect_process_data(df):
     """
-    Set vars used with python libraries.
+    Process the prepared EpiCollect Tree TAG DataFrame.
     """
-    #------------------------------------------------------------------------------------------
-    # Set Pandas to Print all columns
-    #------------------------------------------------------------------------------------------
-    pd.set_option('display.max_columns', None)
-
-    return ## END FUNCTION: initialize_python_library_settings
-
-
-def epicollect_configure_attribs(filter_from, filter_to):
-    """
-    Define EpiCollect attributes needed to access the EpiCollect private project data.
-    """
-
-    epicollect_attribs = {
-        # ------------------------------------------------------------------------------------------
-        # Get EpiCollect project access tokens
-        # ------------------------------------------------------------------------------------------
-        'CLIENT_ID'     : TAG_CLIENT_ID,
-        'CLIENT_SECRET' : TAG_CLIENT_SECRET,
-        'PROJECT_NAME'  : TAG_PROJECT_NAME,
-        'PROJECT_SLUG'  : TAG_PROJECT_SLUG,
-        # ------------------------------------------------------------------------------------------
-        # These are user specified to control which records will be returned
-        # ------------------------------------------------------------------------------------------
-        'FILTER_BY'     : 'uploaded_at',
-        'FILTER_FROM'   : filter_from,
-        'FILTER_TO'     : filter_to,
-        'MAP_INDEX'     : 1,
-        # ------------------------------------------------------------------------------------------
-        # File that stores our access_token
-        # ------------------------------------------------------------------------------------------
-        'TOKEN_FILE'    : 'epicollect_cam_tree_tag_access_token'
-        }
-
-    print(f"\nFILTER_BY   : {epicollect_attribs['FILTER_BY']}"
-          f"\nFILTER_FROM : {epicollect_attribs['FILTER_FROM']}"
-          f"\nFILTER_TO   : {epicollect_attribs['FILTER_TO']}")
-
-    return epicollect_attribs ## END FUNCTION: epicollect_configure_attribs
-
-
-def epicollect_process_data(data):
-    """
-    Process the EpiCollect private project data.
-    """
-    #------------------------------------------------------------------------------------------
-    # Put the EpiCollect data into a Pandas DataFrame
-    #------------------------------------------------------------------------------------------
-    df = pd.DataFrame(data)
-
-    #------------------------------------------------------------------------------------------
-    # Print the DataFrame before any modifications
-    #------------------------------------------------------------------------------------------
-    print('\nThe DataFrame as received from EpiCollect...')
-    print(tabulate(df, headers='keys', tablefmt='psql'))
-
-    #------------------------------------------------------------------------------------------
-    # If Kenster is testing, keep only data created by him
-    #------------------------------------------------------------------------------------------
-    if KR_TESTING:
-        print('\nKenster is TESTING. The DataFrame with only Kenster data...')
-        df.drop(df[df['created_by'] != 'ken.rosenberry@gmail.com'].index, inplace=True)
-        print(tabulate(df, headers='keys', tablefmt='psql'))
-
-    #------------------------------------------------------------------------------------------
-    # Sort the DataFrame by the 'created_at' column (before we convert it into just a date)
-    #------------------------------------------------------------------------------------------
-    df.sort_values(by='created_at', ascending=True, inplace=True)
-
-    #------------------------------------------------------------------------------------------
-    # Print the sorted DataFrame
-    #------------------------------------------------------------------------------------------
-    print("\nThe DataFrame sorted by the 'created_at' column...")
-    print(tabulate(df, headers='keys', tablefmt='psql'))
-
-    # ------------------------------------------------------------------------------------------
-    # Convert Zulu datetime values to a Eastern
-    # ------------------------------------------------------------------------------------------
-    df = zulu_to_eastern(df)
-
-    # ------------------------------------------------------------------------------------------
-    # Prepare strings entered by EpiCollect volunteers for SQL
-    # 1. Strip spaces.
-    # 2. Replace single quotes with side-by-side single quotes ('').
-    # 3. If empty string set to 'NULL'.
-    # ------------------------------------------------------------------------------------------
-    df['mother_tree_other'] = prepare_string_for_sql(df['mother_tree_other'])
-    df['father_tree_other'] = prepare_string_for_sql(df['father_tree_other'])
-    df['parent_tree_note'] = prepare_string_for_sql(df['parent_tree_note'])
-
-    #------------------------------------------------------------------------------------------
-    # Print the DataFrame ready to be processed
-    #------------------------------------------------------------------------------------------
-    print('\nThe DataFrame NOW READY to be processed...')
-    print(tabulate(df, headers='keys', tablefmt='psql'))
-
     #------------------------------------------------------------------------------------------
     # Iterate through the EpiCollect records using itertuples()
     #------------------------------------------------------------------------------------------
@@ -188,50 +97,8 @@ def epicollect_process_data(data):
 
 
 if __name__ == "__main__":
-    # initialize_constants()
-    initialize_python_library_settings()
-
-    #------------------------------------------------------------------------------------------
-    # Set EpiCollect FILTER_FROM and FILTER_TO dates
-    #------------------------------------------------------------------------------------------
-    if KR_TESTING:
-        filter_from = date.today()  # Set to Today to allow testing of today's EpiCollect data
-        filter_to   = date.today() + timedelta(days=1) # Tomorrow
-    else:
-        filter_from = sql_get_epicollect_last_import_date(EPICOLLECT_PROJECT)
-        filter_to = date.today() - timedelta(days=1) # Yesterday
-
-    #------------------------------------------------------------------------------------------
-    # Set EpiCollect attributes needed to access the EpiCollect private project data
-    #------------------------------------------------------------------------------------------
-    epicollect_attribs = epicollect_configure_attribs(filter_from, filter_to)
-
-    #------------------------------------------------------------------------------------------
-    # Get our EpiCollect Access Token from a file. Get a new token if necessary.
-    #------------------------------------------------------------------------------------------
-    access_token = epicollect_get_access_token(epicollect_attribs)
-
-    # epicollect_print_project_info(epicollect_attribs)
-    # epicollect_print_detailed_project_info(epicollect_attribs, access_token)
-
-    #------------------------------------------------------------------------------------------
-    # Get the EpiCollect private project data
-    #------------------------------------------------------------------------------------------
-    data = epicollect_get_project_data(epicollect_attribs, access_token)
-    if not data:
-        print('***** No data to process')
-    else:
-        epicollect_process_data(data)
-
-    #------------------------------------------------------------------------------------------
-    # Save the date we last processed EpiCollect entries into the epicollect_import_date table
-    #------------------------------------------------------------------------------------------
-    if not KR_TESTING:
-        # ------------------------------------------------------------------------------------------
-        # The FILTER_TO date as a string - so we can at end of program update the date in SQL
-        # ------------------------------------------------------------------------------------------
-        filter_to_as_str = f"{filter_to.strftime('%Y-%m-%d')}"
-
-        updated_rows = execute_query(f"UPDATE epicollect_import_date SET date = '{filter_to_as_str}' WHERE epicollect_project = '{EPICOLLECT_PROJECT}';")
-        print(f"\n{LINE_SEP}")
-        print(f"***** Updated {updated_rows} row(s) in the epicollect_import_date table.")
+    run_epicollect_import(
+        config=IMPORT_CONFIG,
+        process_dataframe=epicollect_process_data,
+        testing=KR_TESTING,
+    )

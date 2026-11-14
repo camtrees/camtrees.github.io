@@ -62,16 +62,6 @@ jobs:
           python -u scripts/RUN_Import_EpiCollect_Tree_TAG_Data.py
           > "outputs/nightly/${{ steps.nightly.outputs.timestamp }}_tree-tag.log" 2>&1
 
-      - name: Import EpiCollect rain-event data
-        env:
-          CAMTREES_WRITE_URL: ${{ secrets.CAMTREES_WRITE_URL }}
-          RAIN_CLIENT_SECRET: ${{ secrets.RAIN_CLIENT_SECRET }}
-          USE_CAMTREES_DATABASE: 'true'
-          EPICOLLECT_TOKEN_DIR: ${{ runner.temp }}/epicollect-tokens
-        run: >-
-          python -u scripts/RUN_Import_EpiCollect_Rain_Event_Data.py
-          > "outputs/nightly/${{ steps.nightly.outputs.timestamp }}_rain-event.log" 2>&1
-
       - name: Import EpiCollect tree-maintenance data
         env:
           CAMTREES_WRITE_URL: ${{ secrets.CAMTREES_WRITE_URL }}
@@ -81,6 +71,16 @@ jobs:
         run: >-
           python -u scripts/RUN_Import_EpiCollect_Tree_Maint_Data.py
           > "outputs/nightly/${{ steps.nightly.outputs.timestamp }}_tree-maintenance.log" 2>&1
+
+      - name: Import EpiCollect rain-event data
+        env:
+          CAMTREES_WRITE_URL: ${{ secrets.CAMTREES_WRITE_URL }}
+          RAIN_CLIENT_SECRET: ${{ secrets.RAIN_CLIENT_SECRET }}
+          USE_CAMTREES_DATABASE: 'true'
+          EPICOLLECT_TOKEN_DIR: ${{ runner.temp }}/epicollect-tokens
+        run: >-
+          python -u scripts/RUN_Import_EpiCollect_Rain_Event_Data.py
+          > "outputs/nightly/${{ steps.nightly.outputs.timestamp }}_rain-event.log" 2>&1
 
       - name: Set missing tree elevations
         env:

@@ -55,11 +55,17 @@ to repair or repeat a previous failed deployment. Its GitHub-maintained action
 versions target the current Node.js 24 Actions runtime.
 
 Before exporting public data, the nightly workflow imports EpiCollect Tree TAG
-data, imports EpiCollect rain-event data, imports EpiCollect tree-maintenance data,
+data, imports EpiCollect tree-maintenance data, imports EpiCollect rain-event data,
 and fills missing tree elevations, in that order. It explicitly selects the
 writable CAMTREES database for these four programs. EpiCollect tokens are
 requested only when the runner has no valid cached token; their temporary cache
 is never committed or copied into the site.
+
+The three EpiCollect RUN programs remain separate entry points with independent
+GitHub Actions steps and logs. They share `scripts/epicollect_import_runner.py`,
+which owns project configuration, date windows, token and download orchestration,
+common DataFrame preparation, and successful-run checkpoint updates. Each RUN
+program retains its own record validation and database-update logic.
 
 Each maintenance program writes a timestamped log. Because those logs can include
 private EpiCollect record details, the workflow stores them as a downloadable
