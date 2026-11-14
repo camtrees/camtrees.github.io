@@ -1,5 +1,5 @@
 ###############################################################################
-## Program  : RUN_Import_EpiCollect_Tree_TAG.py
+## Program  : RUN_Import_EpiCollect_Tree_TAG_Data.py
 ##
 ## Purpose  : Get data from EpiCollect CAM TREE TAG project
 ##

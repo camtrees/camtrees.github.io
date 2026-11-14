@@ -59,7 +59,7 @@ jobs:
           USE_CAMTREES_DATABASE: 'true'
           EPICOLLECT_TOKEN_DIR: ${{ runner.temp }}/epicollect-tokens
         run: >-
-          python -u scripts/RUN_Import_EpiCollect_Tree_TAG.py
+          python -u scripts/RUN_Import_EpiCollect_Tree_TAG_Data.py
           > "outputs/nightly/${{ steps.nightly.outputs.timestamp }}_tree-tag.log" 2>&1
 
       - name: Import EpiCollect rain-event data
