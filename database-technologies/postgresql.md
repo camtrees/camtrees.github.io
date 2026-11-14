@@ -62,6 +62,7 @@ The color of the SQL tables' headers in the ER Diagram indicates the type and pu
 - **tree_photo** — Photos of the trees. The actual photos are stored in EpiCollect. We compute the URL necessary to view the tree. NOTE: You MUST BE LOGGED INTO EpiCOllect to view the photos.
 - **tree_care_action** — Care actions performed on trees
 - **tree_health_assessment** — Tree measurements and observations to assess the health of the tree
+- **tree_tag** — CAM Tree TAGs and their associated mother and father trees
 
 </details>
 
@@ -270,6 +271,7 @@ These tables are also Lookup Tables
 - **camtrees_add_tree_initial_health** - Add a new initial tree_health_assessment from EpiCollect 'PLANT' record
 - **camtrees_add_tree_photo** - Add a new tree photo
 - **camtrees_add_tree** - Add a new tree
+- **camtrees_add_tree_tag_** - Add a new tree TAG
 
 </details>
 
@@ -304,6 +306,7 @@ These tables are also Lookup Tables
 
 - **camtrees_tree_exists** - Determine if a tree already exists in the 'tree' table
 - **camtrees_tree_gps_locked** - Get tree's gps_locked value
+- **camtrees_tree_tag_exists** - Determine if a tree TAG already exists in the 'tree_tag' table
 
 </details>
 
