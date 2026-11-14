@@ -175,6 +175,10 @@ def process_epicollect_plant(row, site):
         print(f"\t ***** ERROR *****: Tree number = '{tree_number}' at Site = '{site}' ALREADY exists.")
         return ## EARLY EXIT
 
+    if not sql_tree_tag_exists(tree_number):
+        print(f"\t ***** ERROR *****: Tree TAG = '{tree_number}' does NOT exist.")
+        return ## EARLY EXIT
+
     sql_camtrees_add_tree(row, record_type, site, tree_number)
 
     sql_camtrees_add_tree_initial_health(row, record_type, site, tree_number)
