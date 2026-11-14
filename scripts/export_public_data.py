@@ -134,6 +134,17 @@ CAM_TREE_PHOTO_COLUMNS = (
     "Photo URL",
 )
 
+CAM_TREE_TAG_COLUMNS = (
+    "tag_id",
+    "created_by",
+    "date_tag_created",
+    "mother_tree",
+    "mother_tree_other",
+    "father_tree",
+    "father_tree_other",
+    "parent_tree_note",
+)
+
 SITE_VISIT_COLUMNS = (
     "Site",
     "Tag ID",
@@ -208,6 +219,13 @@ EXPORTS = (
         "columns": CAM_TREE_PHOTO_COLUMNS,
         "output": ROOT / "data" / "cam_tree_photos.json",
         "order_by": '"Site", "Tag ID", "Date"',
+    },
+    {
+        "name": "cam_tree_tags",
+        "view": "public_cam_tree_tags",
+        "columns": CAM_TREE_TAG_COLUMNS,
+        "output": ROOT / "data" / "cam_tree_tags.json",
+        "order_by": '"tag_id"',
     },
     {
         "name": "site_visit",

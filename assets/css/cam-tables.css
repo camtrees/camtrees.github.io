@@ -100,6 +100,10 @@
   --cam-table-first-column-width: 24rem;
 }
 
+/* Tag identifiers are much shorter than Site names, so the first frozen data
+   column in Tree TAGs does not need the shared 24rem Site-column width. */
+.cam-table--tree-tags .cam-table__scroll { --cam-table-first-column-width: 12rem; }
+
 /* Freeze the column headings at the top of the scrolling table. */
 .cam-table__scroll th {
   position: sticky;

@@ -9,7 +9,7 @@ Tables pages. Those use a 'nil' layout so the html table is as large as possible
 
 The public table pages fetch only static JSON files in `data/`. Those files are
 refreshed nightly by GitHub Actions from the PostgreSQL views
-`public_cam_trees`, `public_cam_tree_photos`, `public_cam_sites`, `public_cam_orgs`,
+`public_cam_trees`, `public_cam_tree_photos`, `public_cam_tree_tags`, `public_cam_sites`, `public_cam_orgs`,
 `public_cam_hubs`, `public_cam_volunteers`, `public_site_visit`, and `public_sites_hubs`; browsers
 never connect to Neon and never receive the database URL. `public_parent_trees`
 is exported through the same pipeline.
@@ -18,9 +18,9 @@ is exported through the same pipeline.
 
 1. In the repository’s GitHub Actions secrets, create `CAMTREES_READ_URL` with
    the read-replica Neon PostgreSQL connection URL and `CAMTREES_WRITE_URL`
-   with the writable Neon connection URL. Also create `MAINT_CLIENT_SECRET`
-   and `RAIN_CLIENT_SECRET` with the two EpiCollect API client secrets, plus
-   `CAM_DECRYPTION_KEY` for protected exports. Do not add any of
+   with the writable Neon connection URL. Also create `MAINT_CLIENT_SECRET`,
+   `RAIN_CLIENT_SECRET`, and `TAG_CLIENT_SECRET` with the three EpiCollect API
+   client secrets, plus `CAM_DECRYPTION_KEY` for protected exports. Do not add any of
    these values to site files or Jekyll configuration.
 2. Ensure the database views exist with the columns expected by the export
    allow-list. The CAM Trees view begins with `site`, `tag_id`, `town`, `hub`,
@@ -30,7 +30,7 @@ is exported through the same pipeline.
    tab to create the first populated JSON export.
 4. Add the appropriate table include to a normal Just the Docs page, or use
    the included `cam-trees.md`, `cam-sites.md`, `cam-orgs.md`, `cam-hubs.md`,
-   `cam-tree-photos.md`, `cam-volunteers.md`, or `site-visit.md` page. Each include loads data with
+   `cam-tree-photos.md`, `tree-tags.md`, `cam-volunteers.md`, or `site-visit.md` page. Each include loads data with
    Jekyll’s `relative_url` filter, so it supports a project-site base path.
    `parent-trees.md` is available for the Parent Trees table, and
    `sites-in-hubs.md` is available for Sites in Hubs.
@@ -54,11 +54,12 @@ The Pages build runs even when no exported data changes, allowing a manual run
 to repair or repeat a previous failed deployment. Its GitHub-maintained action
 versions target the current Node.js 24 Actions runtime.
 
-Before exporting public data, the nightly workflow imports EpiCollect rain-event
-data, imports EpiCollect tree-maintenance data, and fills missing tree elevations,
-in that order. It explicitly selects the writable CAMTREES database for these
-three programs. EpiCollect tokens are requested only when the runner has no valid
-cached token; their temporary cache is never committed or copied into the site.
+Before exporting public data, the nightly workflow imports EpiCollect Tree TAG
+data, imports EpiCollect rain-event data, imports EpiCollect tree-maintenance data,
+and fills missing tree elevations, in that order. It explicitly selects the
+writable CAMTREES database for these four programs. EpiCollect tokens are
+requested only when the runner has no valid cached token; their temporary cache
+is never committed or copied into the site.
 
 Each maintenance program writes a timestamped log. Because those logs can include
 private EpiCollect record details, the workflow stores them as a downloadable
@@ -89,6 +90,12 @@ and Tag ID and Date use text filters. Photo URL has no column filter and is
 displayed as a View Tree Photo link that opens in a new
 tab. Visitors must already be signed in to EpiCollect in that browser to see
 the protected media; otherwise EpiCollect displays an authorization error.
+
+The Tree TAGs table exports `public_cam_tree_tags`. TAG-ID and Created By are
+the two frozen data columns. Created By uses the compact populated multi-select;
+Mother Tree and Father Tree use searchable selection dialogs; and the remaining
+columns use text filters. The table supports printing and CSV export but does
+not provide map or column-chooser actions.
 
 CAM Trees map markers are color-coded by `latest_health`: Good is green,
 Dormant is blue, Poor is yellow, and Dead is red. Unrecognized health values
