@@ -91,7 +91,7 @@ displayed as a View Tree Photo link that opens in a new
 tab. Visitors must already be signed in to EpiCollect in that browser to see
 the protected media; otherwise EpiCollect displays an authorization error.
 
-The Tree TAGs table exports `public_cam_tree_tags`. TAG-ID and Created By are
+The CAM Tree TAGs table exports `public_cam_tree_tags`. TAG-ID and Created By are
 the two frozen data columns. Created By uses the compact populated multi-select;
 Mother Tree and Father Tree use searchable selection dialogs; and the remaining
 columns use text filters. The table supports printing and CSV export but does
