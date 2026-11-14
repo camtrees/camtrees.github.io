@@ -21,6 +21,7 @@
 ##            2026-07-22 Changes for using config.py file
 ##            2026-10-15 Ignore HUB entries which don't contain any sites
 ##            2026-10-19 New LIVE or TEST EpiCollect question
+##            2026-11-14 Mods for new Tree TAG System
 ###############################################################################
 
 # Python libraries
@@ -184,7 +185,7 @@ def process_epicollect_site_record(row):
         # ------------------------------------------------------------------------------------------
         # Add water event via SQL
         # ------------------------------------------------------------------------------------------
-        sql_camtrees_add_care_action('rain', 'water', '001', '999', row.rainDate, row.created_by, site, row.Note)
+        sql_camtrees_add_care_action('rain', 'water', '000', 'ZZZ-9999', row.rainDate, row.created_by, site, row.Note)
     return
 
 
@@ -215,7 +216,7 @@ def process_epicollect_hub_record(row):
         # ------------------------------------------------------------------------------------------
         # Add water event via SQL
         # ------------------------------------------------------------------------------------------
-        sql_camtrees_add_care_action('rain', 'water', '001', '999', row.rainDate, row.created_by, sites, row.Note)
+        sql_camtrees_add_care_action('rain', 'water', '001', 'ZZZ-9999', row.rainDate, row.created_by, sites, row.Note)
     return
 
 

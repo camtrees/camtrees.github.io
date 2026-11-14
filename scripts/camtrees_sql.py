@@ -36,7 +36,7 @@ def check_for_care_actions(row, record_type, site, tree_number):
     if record_type == 'ALL':
         # Set min and max to include ALL trees at the given site
         tree_number_min = '000'
-        tree_number_max = '999'
+        tree_number_max = 'ZZZ-9999'
     else:
         # Set min and max to include just ONE tree at the given site
         tree_number_min = tree_number
@@ -378,7 +378,7 @@ def sql_camtrees_get_distance_to_closest_wildcam_tree(longitude, latitude):
         """
     result = execute_query(sql_command)[0] # result will be a tuple with (distance_in_feet, closest_tree_id, longitude, latitude)
 
-    return result ## END FUNCTION: sql_tree_exists
+    return result ## END FUNCTION: sql_camtrees_get_distance_to_closest_wildcam_tree
 
 
 def sql_get_epicollect_last_import_date(epicollect_project):
@@ -416,7 +416,7 @@ def sql_tree_exists(site, tree_number):
     """
     sql_command = f"""
         SELECT camtrees_tree_exists(
-            p_tag_id   => '{site}' ,
+            p_site_name   => '{site}' ,
             p_tree_number => '{tree_number}'
             );
         """
