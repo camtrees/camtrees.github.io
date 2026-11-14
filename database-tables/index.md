@@ -76,4 +76,4 @@ so only one page for now.
 
 {: .note }
 For security, this website will never connect directly to the CAMTREES Database. Rather, a
-secure Python script will (soon!) regenerate the necessary tables each night.
+secure Python script regenerates the necessary tables each morning (usually before 7am).
