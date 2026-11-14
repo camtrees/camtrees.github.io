@@ -340,7 +340,7 @@ def sql_camtrees_add_tree_tag(row, tree_manager_initials):
     # ------------------------------------------------------------------------------------------
     # Verify tree_manager_initials and tree_manager_email is a valid combination
     # ------------------------------------------------------------------------------------------
-	valid_combinations = {
+    valid_combinations = {
 		("ENE", "ericevans45@gmail.com"),
 		("ESB", "eva.maineacf@gmail.com"),
 		("HKR", "ken.rosenberry@gmail.com"),
@@ -348,12 +348,12 @@ def sql_camtrees_add_tree_tag(row, tree_manager_initials):
 		("KLS", "k.lea.sewell@gmail.com"),
 		("MAM", "markmccollough25@gmail.com")
 	}
-	# Verify membership
-	if (tree_manager_initials, row.created_by) not in valid_combinations:
-		print(f"Invalid combination. tree_manager_initials = {tree_manager_initials} tree_manager_email={row.created_by}")
-    	return
+    # Verify membership
+    if (tree_manager_initials, row.created_by) not in valid_combinations:
+        print(f"Invalid combination. tree_manager_initials = {tree_manager_initials} tree_manager_email={row.created_by}")
+        return
     
-	tree_tag_id = f"{tree_manager_initials} - {row.tag_number}"
+    tree_tag_id = f"{tree_manager_initials} - {row.tag_number}"
 
     # ------------------------------------------------------------------------------------------
     # Create SQL command
