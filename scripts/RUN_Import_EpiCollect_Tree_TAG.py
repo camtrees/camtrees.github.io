@@ -14,7 +14,7 @@
 ##
 ## Author   : Ken Rosenberry <ken.rosenberry@gmail.com>
 ##
-## Revised  : 2026-11-12 <hkr> Initial Version
+## Revised  : 2026-11-13 <hkr> Initial Version
 ###############################################################################
 
 # Python libraries
@@ -148,18 +148,41 @@ def epicollect_process_data(data):
         # Split the Tree Manager into initials and name
         # ------------------------------------------------------------------------------------------
         tree_manager_initials, tree_manager_name = row.tree_manager.split(' - ', 1)
+        tag_id = f"{tree_manager_initials} - {row.tag_number}"
+        print_with_separator_line(f"***** Processing EpiCollect Record {row.Index}. Tree TAG = {tag_id}")
 
         # ------------------------------------------------------------------------------------------
         # Skip EpiCollect TEST records
         # ------------------------------------------------------------------------------------------
         if tree_manager_initials == 'TST':
-            print_with_separator_line(f"***** Processing EpiCollect Record {row.Index}. tag_id = {tree_manager_initials} - {row.tag_number}")
             print(f"\t ***** NOTE *****: Skipping EpiCollect TST entry.")
             continue # Skip to next record
 
-	    print_with_separator_line(f"***** Processing EpiCollect Record {row.Index}. tag_id = {row.tag_id}")
+        # ------------------------------------------------------------------------------------------
+        # Verify tree_manager_initials and tree_manager_email is a valid combination
+        # ------------------------------------------------------------------------------------------
+        valid_combinations = {
+            ("ENE", "ericevans45@gmail.com"),
+            ("ESB", "eva.maineacf@gmail.com"),
+            ("HKR", "ken.rosenberry@gmail.com"),
+            ("KLC", "kimcolson.sebago@gmail.com"),
+            ("KLS", "k.lea.sewell@gmail.com"),
+            ("MAM", "markmccollough25@gmail.com")
+        }
+        # Verify membership
+        if (tree_manager_initials, row.created_by) not in valid_combinations:
+            print(
+                f"\t ***** ERROR *****: Invalid Tree Manager Initials and Email combination. Initials={tree_manager_initials} Email = {row.created_by}")
+            continue # Skip to next record
 
-    	sql_camtrees_add_tree_tag(row, tree_manager_initials)
+        # ------------------------------------------------------------------------------------------
+        # Skip TAGs that already exist. Perhaps user entered the incorrect tag number?
+        # ------------------------------------------------------------------------------------------
+        if sql_tree_tag_exists(tag_id):
+            print(f"\t ***** ERROR *****: Tree TAG = '{tag_id}' ALREADY EXISTS.")
+            continue # Skip to next record
+
+        sql_camtrees_add_tree_tag(row, tree_manager_initials)
 
     return ## END FUNCTION: epicollect_process_data
 

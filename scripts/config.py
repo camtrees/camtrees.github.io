@@ -22,7 +22,7 @@ load_dotenv()
 #------------------------------------------------------------------------------------------
 # Set to true so we can import any of Kenster's EpiCollect data from TODAY!
 #------------------------------------------------------------------------------------------
-KR_TESTING = True
+KR_TESTING = False
 
 #------------------------------------------------------------------------------------------
 # Connect to the CAMTREES database? If not, connect to the KENSTER backup database.

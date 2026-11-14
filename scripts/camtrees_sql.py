@@ -17,6 +17,7 @@
 ##                             even if there is an earlier return
 ##          : 2026-09-05 <hkr> Fix Added Row output in sql_camtrees_add_tree_initial_health
 ##          : 2026-11-12 <hkr> Add 'sql_camtrees_add_tree_tag'
+##          : 2026-11-13 <hkr> Changes to support CAM TREE TAG EpiCollect Project
 ###############################################################################
 
 # Python libraries
@@ -337,22 +338,6 @@ def sql_camtrees_add_tree_tag(row, tree_manager_initials):
     """
     Add a TAG to the SQL 'tree_tag' table.
     """
-    # ------------------------------------------------------------------------------------------
-    # Verify tree_manager_initials and tree_manager_email is a valid combination
-    # ------------------------------------------------------------------------------------------
-    valid_combinations = {
-		("ENE", "ericevans45@gmail.com"),
-		("ESB", "eva.maineacf@gmail.com"),
-		("HKR", "ken.rosenberry@gmail.com"),
-		("KLC", "kimcolson.sebago@gmail.com"),
-		("KLS", "k.lea.sewell@gmail.com"),
-		("MAM", "markmccollough25@gmail.com")
-	}
-    # Verify membership
-    if (tree_manager_initials, row.created_by) not in valid_combinations:
-        print(f"Invalid combination. tree_manager_initials = {tree_manager_initials} tree_manager_email={row.created_by}")
-        return
-    
     tree_tag_id = f"{tree_manager_initials} - {row.tag_number}"
 
     # ------------------------------------------------------------------------------------------
@@ -365,7 +350,7 @@ def sql_camtrees_add_tree_tag(row, tree_manager_initials):
             p_volunteer_email        => '{row.created_by}'        ,
             p_mother_tree            => '{row.mother_tree}'       ,
             p_mother_tree_other      => '{row.mother_tree_other}' ,
-            p_father_tree            => '{row.Father_Tree}'       ,
+            p_father_tree            => '{row.father_tree}'       ,
             p_father_tree_other      => '{row.father_tree_other}' ,
             p_parent_tree_note       => '{row.parent_tree_note}' 
             );
@@ -376,7 +361,7 @@ def sql_camtrees_add_tree_tag(row, tree_manager_initials):
     # Execute the SQL command
     # ------------------------------------------------------------------------------------------
     id = execute_query(sql_command)
-    print(f"\t +++++ Added tag id#:{id[0][0]} tag_id:{row.tag_id} to the 'tree_tag' table.")
+    print(f"\t +++++ Added tag id#:{id[0][0]} tag_id:{tree_tag_id} to the 'tree_tag' table.")
 
     return  ## END FUNCTION: sql_camtrees_add_tree_tag
 
@@ -431,7 +416,7 @@ def sql_tree_exists(site, tree_number):
     """
     sql_command = f"""
         SELECT camtrees_tree_exists(
-            p_site_name   => '{site}' ,
+            p_tag_id   => '{site}' ,
             p_tree_number => '{tree_number}'
             );
         """
@@ -442,6 +427,24 @@ def sql_tree_exists(site, tree_number):
         return False ## END FUNCTION: sql_tree_exists
 
     return  ## END FUNCTION: sql_tree_exists
+
+
+def sql_tree_tag_exists(tag_id):
+    """
+    Does the TREE TAG already exist in the SQL 'tree_tag' table?
+    """
+    sql_command = f"""
+        SELECT camtrees_tree_tag_exists(
+            p_tag_id => '{tag_id}'
+            );
+        """
+    rc = execute_query(sql_command)
+    if rc[0][0]:
+        return True ## END FUNCTION: sql_tree_tag_exists
+    else:
+        return False ## END FUNCTION: sql_tree_tag_exists
+
+    return  ## END FUNCTION: sql_tree_tag_exists
 
 
 def sql_update_gps(site, tree_number, longitude, latitude, note):
