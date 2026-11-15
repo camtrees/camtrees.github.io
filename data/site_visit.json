@@ -265,9 +265,9 @@
       "GPS Locked": true,
       "Planting Method": "short tube",
       "Wire Fence": true,
-      "Mother Tree": null,
-      "Father Tree": null,
-      "Parent Tree Note": null,
+      "Mother Tree": "Belfast Grove Cemetery #1",
+      "Father Tree": "Open Pollination",
+      "Parent Tree Note": "A sample tree tag to jumpstart the SQL tree_tag table",
       "Note": null
     },
     {
