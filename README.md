@@ -65,7 +65,11 @@ The three EpiCollect RUN programs remain separate entry points with independent
 GitHub Actions steps and logs. They share `scripts/epicollect_import_runner.py`,
 which owns project configuration, date windows, token and download orchestration,
 common DataFrame preparation, and successful-run checkpoint updates. Each RUN
-program retains its own record validation and database-update logic.
+program retains its own record validation and database-update logic. The runner
+prints identifying start and finish banners in every log. If a same-day rerun
+has already advanced a project's checkpoint through yesterday, it reports that
+there are no completed dates to process and exits without contacting EpiCollect
+or changing the checkpoint.
 
 Each maintenance program writes a timestamped log. Because those logs can include
 private EpiCollect record details, the workflow stores them as a downloadable

@@ -3,6 +3,8 @@
 ##
 ## Purpose  : Shared orchestration and DataFrame preparation for the nightly
 ##            EpiCollect import programs.
+##
+## Revised  : 2026-11-15 Add run banners and skip an empty date range
 ###############################################################################
 
 from dataclasses import dataclass
@@ -22,6 +24,9 @@ from execute_query import execute_query
 from print_functions import LINE_SEP
 
 
+BANNER_LINE = "=" * len(LINE_SEP)
+
+
 @dataclass(frozen=True)
 class EpicollectImportConfig:
     """Values that differ between EpiCollect projects."""
@@ -35,6 +40,30 @@ class EpicollectImportConfig:
     map_index: int
     string_columns: tuple[str, ...] = ()
     filter_by: str = "uploaded_at"
+
+
+def print_run_header(config: EpicollectImportConfig, testing: bool) -> None:
+    """Identify the RUN program clearly at the beginning of its log."""
+    mode = "TEST" if testing else "PRODUCTION"
+    display_name = config.project_name.replace("_", " ")
+    print(f"\n{BANNER_LINE}")
+    print(f"STARTING EPICOLLECT IMPORT: {display_name}")
+    print(f"PROJECT KEY: {config.project_key} | MODE: {mode}")
+    print(BANNER_LINE)
+
+
+def print_run_footer(
+    config: EpicollectImportConfig,
+    testing: bool,
+    status: str,
+) -> None:
+    """Identify the RUN program and its outcome at the end of its log."""
+    mode = "TEST" if testing else "PRODUCTION"
+    display_name = config.project_name.replace("_", " ")
+    print(f"\n{BANNER_LINE}")
+    print(f"FINISHED EPICOLLECT IMPORT: {display_name}")
+    print(f"PROJECT KEY: {config.project_key} | MODE: {mode} | STATUS: {status}")
+    print(BANNER_LINE)
 
 
 def build_epicollect_attributes(
@@ -102,40 +131,64 @@ def run_epicollect_import(
     testing: bool = False,
 ) -> None:
     """Download, prepare, process, and checkpoint one EpiCollect project."""
-    pd.set_option("display.max_columns", None)
+    print_run_header(config, testing)
+    run_status = "FAILED"
 
-    if testing:
-        filter_from = date.today()
-        filter_to = date.today() + timedelta(days=1)
-    else:
-        filter_from = sql_get_epicollect_last_import_date(config.project_key)
-        filter_to = date.today() - timedelta(days=1)
+    try:
+        pd.set_option("display.max_columns", None)
 
-    attributes = build_epicollect_attributes(config, filter_from, filter_to)
-    access_token = epicollect_get_access_token(attributes)
-    data = epicollect_get_project_data(attributes, access_token)
+        if testing:
+            filter_from = date.today()
+            filter_to = date.today() + timedelta(days=1)
+        else:
+            filter_from = sql_get_epicollect_last_import_date(config.project_key)
+            filter_to = date.today() - timedelta(days=1)
 
-    if not data:
-        print("***** No data to process")
-    else:
-        dataframe = prepare_epicollect_dataframe(
-            data,
-            string_columns=config.string_columns,
-            testing=testing,
-        )
-        process_dataframe(dataframe)
+        # A same-day rerun may have already advanced the checkpoint through
+        # yesterday. Do not send an inverted date range to EpiCollect.
+        if filter_from > filter_to:
+            print(
+                "\n***** WARNING ***** No completed EpiCollect dates are waiting "
+                "to be imported."
+                f"\nFILTER_FROM : {filter_from}"
+                f"\nFILTER_TO   : {filter_to}"
+                "\nThe import will exit without contacting EpiCollect or changing "
+                "the checkpoint."
+            )
+            run_status = "SKIPPED - NO COMPLETED DATES TO PROCESS"
+            return
 
-    # Preserve the existing behavior: test runs never advance the checkpoint,
-    # while successful production runs advance it even when no rows were found.
-    if not testing:
-        filter_to_as_str = filter_to.strftime("%Y-%m-%d")
-        updated_rows = execute_query(
-            "UPDATE epicollect_import_date "
-            f"SET date = '{filter_to_as_str}' "
-            f"WHERE epicollect_project = '{config.project_key}';"
-        )
-        print(f"\n{LINE_SEP}")
-        print(
-            f"***** Updated {updated_rows} row(s) in the "
-            "epicollect_import_date table."
-        )
+        attributes = build_epicollect_attributes(config, filter_from, filter_to)
+        access_token = epicollect_get_access_token(attributes)
+        data = epicollect_get_project_data(attributes, access_token)
+
+        if not data:
+            print("***** No data to process")
+        else:
+            dataframe = prepare_epicollect_dataframe(
+                data,
+                string_columns=config.string_columns,
+                testing=testing,
+            )
+            process_dataframe(dataframe)
+
+        # Preserve the existing behavior: test runs never advance the checkpoint,
+        # while successful production runs advance it even when no rows were found.
+        if not testing:
+            filter_to_as_str = filter_to.strftime("%Y-%m-%d")
+            updated_rows = execute_query(
+                "UPDATE epicollect_import_date "
+                f"SET date = '{filter_to_as_str}' "
+                f"WHERE epicollect_project = '{config.project_key}';"
+            )
+            print(f"\n{LINE_SEP}")
+            print(
+                f"***** Updated {updated_rows} row(s) in the "
+                "epicollect_import_date table."
+            )
+
+        run_status = "COMPLETED SUCCESSFULLY"
+    finally:
+        # The footer is also printed when an exception propagates to GitHub
+        # Actions, making it clear which RUN program produced the failed log.
+        print_run_footer(config, testing, run_status)
