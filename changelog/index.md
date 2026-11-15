@@ -7,7 +7,7 @@ nav_order: 98
 <img src="../assets/images/website/changelog.png" alt="CAMTREE Volunteer consulting a day planner showing the ChangeLog" height="512" width="828">
 
 # {{ page.title }}
-_Version: November 14 edit # 2_
+_Version: November 14 edit # 3_
 
 <!-- This content will not appear in the rendered Markdown 
 <details markdown="1">
@@ -53,6 +53,7 @@ Each entry is grouped by month. Within each month, changes are organized by area
 ### Python
 - Changes necessitated since changing the 'number' column to 'tag_id' in the SQL 'tree' table
 - Created import programs to support the 2027 Tree TAG system
+- Added batch lookup, validation, and failure reporting to RUN_Set_Tree_Elevation_Data script
 
 ### SQL
 - Changed the 'number' column to 'tag_id' in the 'tree' table
