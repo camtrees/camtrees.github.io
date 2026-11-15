@@ -18,6 +18,7 @@
 ##            2026-09-04 Changes for using updated config.py and .env files
 ##            2026-09-04 Using psycopg (version 3) vs psycopg2
 ##            2026-11-14 Add batch lookup, validation, and failure reporting
+##            2026-11-15 Add identifying log header and footer banners
 ##########################################################################################
 
 from dataclasses import dataclass
@@ -31,9 +32,26 @@ from config import DB_HOST_WRITE
 
 
 METERS_TO_FEET = 3.280839895
+BANNER_LINE = "=" * 133
 
 # SRTM elevation files use -32768 to indicate a location with no elevation data.
 SRTM_VOID_ELEVATION_METERS = -32768
+
+
+def print_run_header():
+    """Identify the elevation-maintenance program at the start of its log."""
+    print(f"\n{BANNER_LINE}")
+    print("STARTING NIGHTLY MAINTENANCE: SET MISSING TREE ELEVATIONS")
+    print("PROGRAM: RUN_Set_Tree_Elevation_Data.py")
+    print(BANNER_LINE)
+
+
+def print_run_footer(status):
+    """Identify the elevation-maintenance program and outcome at log end."""
+    print(f"\n{BANNER_LINE}")
+    print("FINISHED NIGHTLY MAINTENANCE: SET MISSING TREE ELEVATIONS")
+    print(f"PROGRAM: RUN_Set_Tree_Elevation_Data.py | STATUS: {status}")
+    print(BANNER_LINE)
 
 
 @dataclass(frozen=True)
@@ -203,7 +221,8 @@ def update_tree_elevations(cursor, trees, elevations):
     return trees_updated, concurrently_skipped, database_failures
 
 
-def main():
+def run_elevation_maintenance():
+    """Find trees with missing elevations and update every valid candidate."""
     if not DB_HOST_WRITE:
         raise RuntimeError(
             "A writable database URL is required. Configure CAMTREES_WRITE_URL "
@@ -221,7 +240,7 @@ def main():
                     "\n## No trees found with NULL elevation and GPS coordinates provided. ##"
                     "\n######################################################################"
                 )
-                return
+                return "COMPLETED - NO TREES TO UPDATE"
 
             print(
                 "\n###########################################################################"
@@ -252,6 +271,20 @@ def main():
         raise RuntimeError(
             f"Elevation maintenance completed with {total_failures} failure(s)."
         )
+
+    return "COMPLETED SUCCESSFULLY"
+
+
+def main():
+    """Print consistent log banners while preserving every original exception."""
+    print_run_header()
+    run_status = "FAILED"
+
+    try:
+        run_status = run_elevation_maintenance()
+    finally:
+        # The footer still appears when an exception propagates to GitHub Actions.
+        print_run_footer(run_status)
 
 
 if __name__ == "__main__":
